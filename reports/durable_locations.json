@@ -78,6 +78,10 @@
     {
       "run_id": "anomaly-dynamics-report-v2-01",
       "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/tree/d1321d88bb2f7029b41dccd7e6d99f75429dc9c8/experiments/runs/anomaly-dynamics-report-v2-01"
+    },
+    {
+      "run_id": "peer-cluster-review-01",
+      "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/tree/07c5a7a34f243849f576821186fa855951071865/experiments/runs/peer-cluster-review-01"
     }
   ],
   "remote_reads": [
@@ -296,9 +300,21 @@
       "file": "COMPLETED",
       "git_blob_sha": "9b468a65ae34023c649af171e7b8be7409534c75",
       "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/d1321d88bb2f7029b41dccd7e6d99f75429dc9c8/experiments/runs/anomaly-dynamics-report-v2-01/COMPLETED"
+    },
+    {
+      "run_id": "peer-cluster-review-01",
+      "file": "artifact_checksums.json",
+      "git_blob_sha": "1407be08fe823aa9a282ada61ad72f82c25169c1",
+      "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/07c5a7a34f243849f576821186fa855951071865/experiments/runs/peer-cluster-review-01/artifact_checksums.json"
+    },
+    {
+      "run_id": "peer-cluster-review-01",
+      "file": "COMPLETED",
+      "git_blob_sha": "d6069d469e719194f1151c56ea2d2ce24c1ee815",
+      "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/07c5a7a34f243849f576821186fa855951071865/experiments/runs/peer-cluster-review-01/COMPLETED"
     }
   ],
-  "remote_manifest_and_marker_comparison": "passed: all 36 remote Git blob SHAs match local exact bytes",
+  "remote_manifest_and_marker_comparison": "passed: all 38 remote Git blob SHAs match local exact bytes",
   "review_package_commit": "febe3b2694502378c0c1d057aab34ec8854b00ff",
   "orion_supplement_commit": "ededd0106c75c61f2fb5fe4c769be1d98c6e17b3",
   "orion_checklist": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/ededd0106c75c61f2fb5fe4c769be1d98c6e17b3/docs/orion_methods_results_checklist.md",
@@ -325,5 +341,8 @@
   "anomaly_dynamics_reporting_commit": "d1321d88bb2f7029b41dccd7e6d99f75429dc9c8",
   "anomaly_dynamics_reporting_run": "https://github.com/mygitAN/JSE-Top-40-Clustering/tree/d1321d88bb2f7029b41dccd7e6d99f75429dc9c8/experiments/runs/anomaly-dynamics-report-v2-01",
   "anomaly_dynamics_reporting_example": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/d1321d88bb2f7029b41dccd7e6d99f75429dc9c8/reports/anomaly_dynamics_reporting_example.md",
-  "anomaly_dynamics_reporting_protocol": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/d1321d88bb2f7029b41dccd7e6d99f75429dc9c8/docs/reporting_direction.md"
+  "anomaly_dynamics_reporting_protocol": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/d1321d88bb2f7029b41dccd7e6d99f75429dc9c8/docs/reporting_direction.md",
+  "peer_cluster_review_commit": "07c5a7a34f243849f576821186fa855951071865",
+  "peer_cluster_review_run": "https://github.com/mygitAN/JSE-Top-40-Clustering/tree/07c5a7a34f243849f576821186fa855951071865/experiments/runs/peer-cluster-review-01",
+  "peer_cluster_review": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/07c5a7a34f243849f576821186fa855951071865/reports/notebook_cluster_review.md"
 }

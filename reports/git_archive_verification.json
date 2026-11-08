@@ -1,5 +1,5 @@
 {
-  "results_commit": "d1321d88bb2f7029b41dccd7e6d99f75429dc9c8",
+  "results_commit": "07c5a7a34f243849f576821186fa855951071865",
   "method": "git archive bytes, every manifest entry and completion marker",
   "runs": [
     {
@@ -90,6 +90,11 @@
     {
       "run_id": "anomaly-dynamics-report-v2-01",
       "verified_artifacts": 53,
+      "status": "passed"
+    },
+    {
+      "run_id": "peer-cluster-review-01",
+      "verified_artifacts": 112,
       "status": "passed"
     }
   ]
