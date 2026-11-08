@@ -4,8 +4,8 @@
   "pull_request": "https://github.com/mygitAN/JSE-Top-40-Clustering/pull/1",
   "results_commit": "65f121fb944e406896ff0172b630597e9b7af7ea",
   "retention": "Complete bundles stored in Git history; no dependency on expiring Actions artifacts",
-  "reviewer_guide": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/febe3b2694502378c0c1d057aab34ec8854b00ff/reports/reviewer_guide.md",
-  "registry": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/febe3b2694502378c0c1d057aab34ec8854b00ff/experiments/registry.csv",
+  "reviewer_guide": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/51d7862b140183dcf1e54d40a4266f44dffa5b01/reports/reviewer_guide.md",
+  "registry": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/51d7862b140183dcf1e54d40a4266f44dffa5b01/experiments/registry.csv",
   "bundles": [
     {
       "run_id": "audit-full-42",
@@ -46,6 +46,22 @@
     {
       "run_id": "fixed-umap-001-01",
       "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/tree/ca36b3b07cd0d9d02654deaff31dfbf54cd2b355/experiments/runs/fixed-umap-001-01"
+    },
+    {
+      "run_id": "three-cross-section-study-01",
+      "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/tree/51d7862b140183dcf1e54d40a4266f44dffa5b01/experiments/runs/three-cross-section-study-01"
+    },
+    {
+      "run_id": "three-cross-section-study-02",
+      "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/tree/51d7862b140183dcf1e54d40a4266f44dffa5b01/experiments/runs/three-cross-section-study-02"
+    },
+    {
+      "run_id": "three-cross-section-cli-check-01",
+      "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/tree/51d7862b140183dcf1e54d40a4266f44dffa5b01/experiments/runs/three-cross-section-cli-check-01"
+    },
+    {
+      "run_id": "three-cross-section-k8-01",
+      "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/tree/51d7862b140183dcf1e54d40a4266f44dffa5b01/experiments/runs/three-cross-section-k8-01"
     }
   ],
   "remote_reads": [
@@ -168,9 +184,57 @@
       "file": "COMPLETED",
       "git_blob_sha": "8c4c6c2bd0833cba40f390cc86f5d59ba7abfbbc",
       "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/ca36b3b07cd0d9d02654deaff31dfbf54cd2b355/experiments/runs/fixed-umap-001-01/COMPLETED"
+    },
+    {
+      "run_id": "three-cross-section-study-01",
+      "file": "artifact_checksums.json",
+      "git_blob_sha": "986270a60c1a203ad2e76259039f4650b0590cac",
+      "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/51d7862b140183dcf1e54d40a4266f44dffa5b01/experiments/runs/three-cross-section-study-01/artifact_checksums.json"
+    },
+    {
+      "run_id": "three-cross-section-study-01",
+      "file": "COMPLETED",
+      "git_blob_sha": "ca5207271b1d1db98cdc194f2939f17cc266c611",
+      "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/51d7862b140183dcf1e54d40a4266f44dffa5b01/experiments/runs/three-cross-section-study-01/COMPLETED"
+    },
+    {
+      "run_id": "three-cross-section-study-02",
+      "file": "artifact_checksums.json",
+      "git_blob_sha": "8504c6dc7a85de34d938ac5d26251d20c5aa4846",
+      "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/51d7862b140183dcf1e54d40a4266f44dffa5b01/experiments/runs/three-cross-section-study-02/artifact_checksums.json"
+    },
+    {
+      "run_id": "three-cross-section-study-02",
+      "file": "COMPLETED",
+      "git_blob_sha": "19571bff795eb225c0d4ba35aae6bc41a023e76e",
+      "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/51d7862b140183dcf1e54d40a4266f44dffa5b01/experiments/runs/three-cross-section-study-02/COMPLETED"
+    },
+    {
+      "run_id": "three-cross-section-cli-check-01",
+      "file": "artifact_checksums.json",
+      "git_blob_sha": "f23f33547e0fd3ed014cbb9123f5bd2d576e19b1",
+      "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/51d7862b140183dcf1e54d40a4266f44dffa5b01/experiments/runs/three-cross-section-cli-check-01/artifact_checksums.json"
+    },
+    {
+      "run_id": "three-cross-section-cli-check-01",
+      "file": "COMPLETED",
+      "git_blob_sha": "31e32b129313c836059aa5d79e3df7ad565ef254",
+      "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/51d7862b140183dcf1e54d40a4266f44dffa5b01/experiments/runs/three-cross-section-cli-check-01/COMPLETED"
+    },
+    {
+      "run_id": "three-cross-section-k8-01",
+      "file": "artifact_checksums.json",
+      "git_blob_sha": "e794f58d934bed5782c043b6f4c26c3a7e2812af",
+      "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/51d7862b140183dcf1e54d40a4266f44dffa5b01/experiments/runs/three-cross-section-k8-01/artifact_checksums.json"
+    },
+    {
+      "run_id": "three-cross-section-k8-01",
+      "file": "COMPLETED",
+      "git_blob_sha": "61d9891a5790c9a045e9540c3d54737b596fbfbd",
+      "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/51d7862b140183dcf1e54d40a4266f44dffa5b01/experiments/runs/three-cross-section-k8-01/COMPLETED"
     }
   ],
-  "remote_manifest_and_marker_comparison": "passed: all twenty remote Git blob SHAs match local exact bytes",
+  "remote_manifest_and_marker_comparison": "passed: all 28 remote Git blob SHAs match local exact bytes",
   "review_package_commit": "febe3b2694502378c0c1d057aab34ec8854b00ff",
   "orion_supplement_commit": "ededd0106c75c61f2fb5fe4c769be1d98c6e17b3",
   "orion_checklist": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/ededd0106c75c61f2fb5fe4c769be1d98c6e17b3/docs/orion_methods_results_checklist.md",
@@ -180,5 +244,9 @@
   "user_umap_grid_commit": "4f210ac6f2d950f9034a3e86e099e5852d73f886",
   "user_umap_grid_results": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/4f210ac6f2d950f9034a3e86e099e5852d73f886/reports/user_umap_grid_results.md",
   "fixed_umap_commit": "ca36b3b07cd0d9d02654deaff31dfbf54cd2b355",
-  "fixed_umap_results": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/ca36b3b07cd0d9d02654deaff31dfbf54cd2b355/reports/fixed_umap_001_results.md"
+  "fixed_umap_results": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/ca36b3b07cd0d9d02654deaff31dfbf54cd2b355/reports/fixed_umap_001_results.md",
+  "study_workflow_commit": "51d7862b140183dcf1e54d40a4266f44dffa5b01",
+  "study_notebook": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/51d7862b140183dcf1e54d40a4266f44dffa5b01/notebooks/three_cross_section_study.ipynb",
+  "executed_study_notebook": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/51d7862b140183dcf1e54d40a4266f44dffa5b01/reports/three_cross_section_study_executed.ipynb",
+  "study_run": "https://github.com/mygitAN/JSE-Top-40-Clustering/tree/51d7862b140183dcf1e54d40a4266f44dffa5b01/experiments/runs/three-cross-section-k8-01"
 }
