@@ -148,7 +148,8 @@ Python 3.11.14; [full environment lock](../configs/environment-windows-py311.txt
 The local Python 3.12 download failed, and temporary-fixture tests required execution
 with normal Windows file permissions. Both Windows/3.11 and Ubuntu/3.12 CI jobs
 subsequently passed tests and all-date baseline end-to-end execution for the
-results commit. `ci_status.json` records observed check URLs/states. Check the
+results commit and final code commit `ad0ab73c1461d650b2baaae5b2943225df5663bc`.
+`ci_status.json` records observed check URLs/states. Check the
 PR for later commit outcomes; a previous pass is not a claim about a pending run.
 
 No known unresolved local test or end-to-end failure remains. Review is still

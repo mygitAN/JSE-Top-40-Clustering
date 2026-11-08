@@ -4,8 +4,8 @@
   "pull_request": "https://github.com/mygitAN/JSE-Top-40-Clustering/pull/1",
   "results_commit": "65f121fb944e406896ff0172b630597e9b7af7ea",
   "retention": "Complete bundles stored in Git history; no dependency on expiring Actions artifacts",
-  "reviewer_guide": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/65f121fb944e406896ff0172b630597e9b7af7ea/reports/reviewer_guide.md",
-  "registry": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/65f121fb944e406896ff0172b630597e9b7af7ea/experiments/registry.csv",
+  "reviewer_guide": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/ad0ab73c1461d650b2baaae5b2943225df5663bc/reports/reviewer_guide.md",
+  "registry": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/ad0ab73c1461d650b2baaae5b2943225df5663bc/experiments/registry.csv",
   "bundles": [
     {
       "run_id": "audit-full-42",
@@ -18,6 +18,10 @@
     {
       "run_id": "repeat-full-42",
       "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/tree/65f121fb944e406896ff0172b630597e9b7af7ea/experiments/runs/repeat-full-42"
+    },
+    {
+      "run_id": "tracker-check-42",
+      "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/tree/ad0ab73c1461d650b2baaae5b2943225df5663bc/experiments/runs/tracker-check-42"
     }
   ],
   "remote_reads": [
@@ -56,7 +60,20 @@
       "file": "COMPLETED",
       "git_blob_sha": "e2535ee0934996a7bb62e5960bae2c4e07321ee3",
       "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/65f121fb944e406896ff0172b630597e9b7af7ea/experiments/runs/repeat-full-42/COMPLETED"
+    },
+    {
+      "run_id": "tracker-check-42",
+      "file": "artifact_checksums.json",
+      "git_blob_sha": "8379fad6e9c0a08eb6303b3be35e0dec92aa1f58",
+      "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/ad0ab73c1461d650b2baaae5b2943225df5663bc/experiments/runs/tracker-check-42/artifact_checksums.json"
+    },
+    {
+      "run_id": "tracker-check-42",
+      "file": "COMPLETED",
+      "git_blob_sha": "7368c7c76b5bffe4361c9c7c7f1aa1aa4f48d4f1",
+      "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/ad0ab73c1461d650b2baaae5b2943225df5663bc/experiments/runs/tracker-check-42/COMPLETED"
     }
   ],
-  "remote_manifest_and_marker_comparison": "passed: all six remote Git blob SHAs match local exact bytes"
+  "remote_manifest_and_marker_comparison": "passed: all eight remote Git blob SHAs match local exact bytes",
+  "review_package_commit": "ad0ab73c1461d650b2baaae5b2943225df5663bc"
 }

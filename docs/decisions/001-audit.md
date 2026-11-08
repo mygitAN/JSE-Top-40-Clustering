@@ -45,7 +45,8 @@ Windows with CPython 3.11.14. The requested Python 3.12 download failed with a
 gateway timeout. `configs/environment-windows-py311.txt` records the complete
 installed dependency set. Linux/Python 3.12 and Windows/Python 3.11 CI jobs are
 configured. Subsequent remote jobs passed on both platforms for the results
-commit; observed job URLs/states are recorded in `reports/ci_status.json`.
+commit and final code commit `ad0ab73c1461d650b2baaae5b2943225df5663bc`;
+observed job URLs/states are recorded in `reports/ci_status.json`.
 
 Windows sandbox ACLs blocked Python TemporaryDirectory fixtures, including
 directories inside the workspace. Tests were run with normal temporary-file

@@ -1,25 +1,48 @@
 {
-  "observed_for_results_commit": "65f121fb944e406896ff0172b630597e9b7af7ea",
-  "checks": [
+  "headRefOid": "ad0ab73c1461d650b2baaae5b2943225df5663bc",
+  "isDraft": true,
+  "statusCheckRollup": [
     {
-      "link": "https://github.com/mygitAN/JSE-Top-40-Clustering/actions/runs/42466806726/job/128688093409",
+      "__typename": "CheckRun",
+      "completedAt": "2026-11-08T09:25:20Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/mygitAN/JSE-Top-40-Clustering/actions/runs/42467049522/job/128688861702",
       "name": "validate (ubuntu-latest, 3.12)",
-      "state": "IN_PROGRESS"
+      "startedAt": "2026-11-08T09:24:27Z",
+      "status": "COMPLETED",
+      "workflowName": "Validate data"
     },
     {
-      "link": "https://github.com/mygitAN/JSE-Top-40-Clustering/actions/runs/42466806726/job/128688093296",
-      "name": "validate (windows-latest, 3.11)",
-      "state": "IN_PROGRESS"
-    },
-    {
-      "link": "https://github.com/mygitAN/JSE-Top-40-Clustering/actions/runs/42466693025/job/128687750726",
+      "__typename": "CheckRun",
+      "completedAt": "2026-11-08T09:25:06Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/mygitAN/JSE-Top-40-Clustering/actions/runs/42467045056/job/128688847941",
       "name": "validate (ubuntu-latest, 3.12)",
-      "state": "SUCCESS"
+      "startedAt": "2026-11-08T09:24:23Z",
+      "status": "COMPLETED",
+      "workflowName": "Validate data"
     },
     {
-      "link": "https://github.com/mygitAN/JSE-Top-40-Clustering/actions/runs/42466693025/job/128687750869",
+      "__typename": "CheckRun",
+      "completedAt": "2026-11-08T09:25:36Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/mygitAN/JSE-Top-40-Clustering/actions/runs/42467049522/job/128688861489",
       "name": "validate (windows-latest, 3.11)",
-      "state": "SUCCESS"
+      "startedAt": "2026-11-08T09:24:27Z",
+      "status": "COMPLETED",
+      "workflowName": "Validate data"
+    },
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-11-08T09:25:51Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/mygitAN/JSE-Top-40-Clustering/actions/runs/42467045056/job/128688847749",
+      "name": "validate (windows-latest, 3.11)",
+      "startedAt": "2026-11-08T09:24:23Z",
+      "status": "COMPLETED",
+      "workflowName": "Validate data"
     }
-  ]
+  ],
+  "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/pull/1",
+  "observed_utc": "2026-11-08T09:26:54.029178+00:00"
 }

@@ -1,5 +1,5 @@
 {
-  "results_commit": "65f121fb944e406896ff0172b630597e9b7af7ea",
+  "results_commit": "ad0ab73c1461d650b2baaae5b2943225df5663bc",
   "method": "git archive bytes, every manifest entry and completion marker",
   "runs": [
     {
@@ -15,6 +15,11 @@
     {
       "run_id": "repeat-full-42",
       "verified_artifacts": 123,
+      "status": "passed"
+    },
+    {
+      "run_id": "tracker-check-42",
+      "verified_artifacts": 90,
       "status": "passed"
     }
   ]

@@ -6,8 +6,9 @@ Clustering research using historical FTSE/JSE Top 40 cross-sections.
 
 Use Python 3.11 or 3.12 in VS Code or a terminal. Windows Python 3.11.14
 was executed locally with every pinned top-level dependency; see the
-[full environment lock](configs/environment-windows-py311.txt). Python 3.12
-and Linux are configured in CI and require their own successful CI evidence.
+[full environment lock](configs/environment-windows-py311.txt). Windows/3.11 and
+Ubuntu/3.12 CI also passed for the final code commit; see
+[recorded check evidence](reports/ci_status.json).
 
 ```bash
 python -m venv .venv
