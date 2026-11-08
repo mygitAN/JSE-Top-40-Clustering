@@ -4,7 +4,7 @@
 
 ## Optimisation evidence
 
-Run `paper-exhaustive-k8-01` completed all **3,268 configurations ? five seeds = 16,340 selection fits**. It reused 430 fitted representations across clustering settings. All 86 reduction configurations were evaluated. Three invalid Ward/non-Euclidean linkage pairs were excluded before fitting. There were 10,083 valid-score trials and 6,257 unestimable-score trials; all are retained. The latter generally contain one/no non-noise clusters, rather than silently disappearing from the search.
+Run `paper-exhaustive-k8-01` completed all **3,268 configurations x five seeds = 16,340 selection fits**. It reused 430 fitted representations across clustering settings. All 86 reduction configurations were evaluated. Three invalid Ward/non-Euclidean linkage pairs were excluded before fitting. There were 10,083 valid-score trials and 6,257 unestimable-score trials; all are retained. The latter generally contain one/no non-noise clusters, rather than silently disappearing from the search.
 
 The declared full-coverage/all-seed eligibility rule admitted 1,343 configurations. The overall paper rankings additionally require exactly eight clusters. Eighteen distinct family/criterion/reference selections were refitted at three dates and five seeds: **270 follow-up fits**. Sector labels did not select any parameter. These are finite-grid exploratory optima, and later dates were already examined previously; they are not untouched predictive validation.
 
@@ -14,7 +14,7 @@ The declared full-coverage/all-seed eligibility rule admitted 1,343 configuratio
 - **embedding_k8**: umap `{"metric": "cosine", "min_dist": 0.01, "n_components": 2, "n_jobs": 1, "n_neighbors": 3}`; kmeans `{"n_clusters": 8, "n_init": 20}`.
 - **baseline**: tsne `{"init": "random", "learning_rate": 10, "max_iter": 300, "metric": "euclidean", "n_components": 2, "n_jobs": 1, "perplexity": 5}`; hierarchical `{"linkage": "average", "metric": "manhattan", "n_clusters": 8}`.
 
-PCA95 retained seven components in June 2025; each date?s resolved dimension and variance ratios are saved. Its distance screen/maps use only the first two coordinates, whereas the hierarchy uses all retained components. The common-feature optimum and a within-family joint-rank winner can differ because ranks are recomputed within each ranking cohort. They are labelled separately. No single model is best under every geometry or interpretability criterion.
+PCA95 retained seven components in June 2025; each date's resolved dimension and variance ratios are saved. Its distance screen/maps use only the first two coordinates, whereas the hierarchy uses all retained components. The common-feature optimum and a within-family joint-rank winner can differ because ranks are recomputed within each ranking cohort. They are labelled separately. No single model is best under every geometry or interpretability criterion.
 
 | Criterion/model | Date | Feature silhouette | Feature DB | Embedding silhouette | Embedding DB | Singleton clusters | Sector ARI |
 | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: |
@@ -42,25 +42,25 @@ MTN changes at the intermediate snapshot and returns to its aligned baseline clu
 
 ## Hotelling-style candidates and attributes
 
-The individual D? screen is compared with a descriptive F reference, with no n multiplier and no calibrated individual significance claim. An internal Beta reference is saved as a sensitivity. The primary model flags:
+The individual D^2 screen is compared with a descriptive F reference, with no n multiplier and no calibrated individual significance claim. An internal Beta reference is saved as a sensitivity. The primary model flags:
 
-- **2025-06-30, ANH:** D?=10.944; distance-surrogate leading attributes: market_cap_zar; shares_outstanding; return_1y.
-- **2025-06-30, BHG:** D?=7.434; distance-surrogate leading attributes: market_cap_zar; shares_outstanding; return_1y.
-- **2025-12-31, GLN:** D?=32.187; distance-surrogate leading attributes: shares_outstanding; revenue_zar_model; return_1y.
-- **2025-12-31, SSW:** D?=10.890; distance-surrogate leading attributes: return_1y; shares_outstanding; revenue_zar_model.
-- **2026-06-30, GLN:** D?=32.013; distance-surrogate leading attributes: shares_outstanding; revenue_zar_model; return_1y.
+- **2025-06-30, ANH:** D^2=10.944; distance-surrogate leading attributes: market_cap_zar; shares_outstanding; return_1y.
+- **2025-06-30, BHG:** D^2=7.434; distance-surrogate leading attributes: market_cap_zar; shares_outstanding; return_1y.
+- **2025-12-31, GLN:** D^2=32.187; distance-surrogate leading attributes: shares_outstanding; revenue_zar_model; return_1y.
+- **2025-12-31, SSW:** D^2=10.890; distance-surrogate leading attributes: return_1y; shares_outstanding; revenue_zar_model.
+- **2026-06-30, GLN:** D^2=32.013; distance-surrogate leading attributes: shares_outstanding; revenue_zar_model; return_1y.
 
 These are five instrument-date flags across four securities. ANH and BHG have resolving supported-screen histories; SSW is transient. GLN is flagged in both observed later snapshots, but was not a member in June 2025: do not call it a three-date persistent outlier or fabricate a 2025 feature-shift explanation. PCA/full-SVD hierarchical fits are deterministic, so identical results over five seeds are not five independent confirmations.
 
 **Confirmed outliers: none established by this modelling exercise.** In particular, unverified shares/market-cap reconstruction could produce size extremes. The attributes below are surrogate associations and must be checked against source evidence before an economic explanation is asserted.
 
-| Date | Distance surrogate train R? | OOF R? | OOF MAE |
+| Date | Distance surrogate train R^2 | OOF R^2 | OOF MAE |
 | --- | ---: | ---: | ---: |
 | 2025-06-30 | 0.982 | 0.461 | 1.187 |
 | 2025-12-31 | 0.998 | 0.088 | 1.260 |
 | 2026-06-30 | 0.998 | -0.019 | 1.298 |
 
-The latest negative OOF R? means that distance-surrogate generalisation is poor despite excellent training fit. Its SHAP bars are therefore an exploratory description of that fitted surrogate, not a reliable confirmed explanation of outliers. The notebook retains these adverse results.
+The latest negative OOF R^2 means that distance-surrogate generalisation is poor despite excellent training fit. Its SHAP bars are therefore an exploratory description of that fitted surrogate, not a reliable confirmed explanation of outliers. The notebook retains these adverse results.
 
 ## Sector divergence and temporal SHAP
 

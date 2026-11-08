@@ -4,7 +4,7 @@ The newer [full experiment workflow](paper_experiments_guide.md) adds an explici
 finite-grid search, actual-tree dendrograms, Jaccard histories, a specified
 **descriptive** 2D distance/F-reference screen, supported-screen history taxonomy,
 sector context and separate cluster/distance/frozen-2025 SHAP targets. Historical
-?pending? statements below describe the earlier reporting package; the new
+'pending' statements below describe the earlier reporting package; the new
 workflow is a separately versioned exploratory extension, not a retroactive
 claim about old runs. No screen establishes a confirmed outlier.
 
@@ -146,31 +146,34 @@ Singleton and imputation-sensitive profiles are labelled explicitly. Differences
 between multivariate surrogate importance and univariate deviations are expected
 and should be discussed rather than treated as proof that either is correct.
 
-## 8. Proposed 2D Hotelling T² descriptive screen: pending specification
+## 8. Specified 2D Hotelling-style descriptive screen
 
-Update after receiving the SACJ manuscript: page 11 supplies n=40, p=2, 5% and
-an approximate cutoff 6.66 for its original sample. Those historical details are
-now available. The individual-distance statistic/reference calibration and its
-use with the new 41-instrument learned embeddings still need to be explicit.
-See `decisions/003-silhouette-db-search.md`; no Hotelling run is implied here.
+The new `paper-exhaustive-k8-01` workflow implements the previously pending
+extension separately from the original baseline/reporting runs. It computes
+individual squared Mahalanobis distances from the same-date mean in the first
+two representation coordinates, with unbiased sample covariance and **no n
+multiplier**. PCA95 clustering may use more dimensions than this 2D screen.
+Singular/ill-conditioned covariance is not estimable; no ordinary flag is assigned.
 
-The checklist now requests this extension, but no recovered implementation or
-calibration has been established. Do not describe it as already reported in v4
-or attach an invented F cutoff. Before execution record the 2D coordinate system,
-reference population, centre, covariance estimator/regularization, statistic,
-finite-sample F-reference mapping and cutoff level. A same-sample individual
-distance is not automatically the sample-mean Hotelling statistic. NIST treats
-[mean-vector T²](https://www.itl.nist.gov/div898/handbook/pmc/section5/pmc543.htm)
-and [individual-observation control charts](https://itl.nist.gov/div898/software/dataplot/refman1/auxillar/hotell.htm)
-separately, with calibration depending on the setup.
+The paper-style reference is p(n-1)/(n-p) times the 95th percentile of F(p,n-p),
+with p=2 and the actual n=41. This is a descriptive reference, not an individual
+null distribution or a confirmed significance test. The internal-distance Beta
+reference is an additional sensitivity, and learned manifold coordinates do not
+establish its assumptions either. Distinguish NIST's
+[mean-vector T-squared](https://www.itl.nist.gov/div898/handbook/pmc/section5/pmc543.htm)
+from [individual-observation control charts](https://www.itl.nist.gov/div898/software/dataplot/refman1/auxillar/hotell.htm).
 
-If an F-reference cutoff is chosen for data-adaptive t-SNE coordinates, label it
-an explicitly specified **descriptive reference threshold**, not a confirmed
-significance test, false-positive guarantee or calibrated investment-risk test.
-An extreme geometric distance, sector divergence and a one-instrument cluster
-are distinct flags. A singleton does not establish that the firm is an outlier,
-and disagreement with a legacy sector label does not prove misclassification.
-No Hotelling values, exceedance counts or confirmed outlier claims are exported yet.
+A multi-seed-supported candidate is flagged at seed 42 and at least three of
+five estimable seeds. Deterministic PCA/hierarchical seed repeats are not
+independent confirmations. Screen histories require all relevant observations;
+see the exact emerging/persistent/transient/resolving/recurring definitions in
+[the experiment protocol](paper_experiments_guide.md). Entries/exits remain separate.
+
+An extreme distance, sector divergence and singleton cluster are distinct flags.
+The full experiment exports distances, thresholds and exceedance histories;
+**no substantively confirmed outlier is established**. Cluster SHAP, distance
+surrogate SHAP and frozen-2025 feature-change contrasts have separate targets
+and fidelity checks. Read [the actual results and limitations](../reports/paper_experiment_results.md).
 
 ## 9. Alignment and observation eligibility
 
@@ -189,7 +192,8 @@ dates. Three-date histories are eligible for 39 instruments, adjacent-pair
 histories for 40 each. Any later emerging/persistent/transient/resolving label
 must identify its underlying binary screen and relevant observation window.
 Absent membership is missing observation, not a negative flag or a resolution.
-No taxonomy is assigned until those flag definitions and windows are specified.
+The old supplemental runs assign no taxonomy; the new full experiment uses
+the explicitly documented supported-screen taxonomy with missing-observation guards.
 Display Top 40 entry/exit separately, and carry imputation sensitivity into any
 interpretation. Never interpret raw cluster IDs or independently fitted t-SNE
 coordinates as persistent economic identities/shared axes.
@@ -200,10 +204,13 @@ Completed: baseline and comparison experiments; seed/k diagnostics; evidence
 accounting; membership-aware descriptive transitions; surrogate fidelity and
 SHAP exports; supplementary Jaccard and univariate association reporting.
 
-Pending: the alternative P/E sensitivity protocol, an explicit Hotelling
-statistic/F-reference/cutoff, and definitions/windows for temporal screening
-flags. Source-backed archived shares/capitalization, sector history and market
-series validation remain the blocker for submission-grade empirical findings.
+The full experiment additionally completes the explicit descriptive screen,
+observation-aware flag histories, exhaustive finite-grid search, actual-tree
+dendrograms and separate temporal/distance SHAP targets.
+
+Pending: the alternative P/E sensitivity protocol and substantive outlier
+confirmation. Source-backed archived shares/capitalization, sector history and
+market-series validation remain the blocker for submission-grade empirical findings.
 No full v4 output is certified PIT, and no paper-readiness claim is made.
 
 Reproduce supplementary reports with:

@@ -59,5 +59,7 @@
     "errors": 0
   },
   "review_notebook_mode": "Explicit read-only replay of the completed run; archive verified unchanged after replay",
-  "tests": 60
+  "tests": 60,
+  "review_source_matches_clean_notebook": true,
+  "latest_replay_archive_reverification": "passed"
 }

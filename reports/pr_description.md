@@ -3,7 +3,7 @@ historical cross-sections: 40 company groups / 41 securities per date, including
 both Investec DLC lines. The new guided notebook evaluates every valid combination
 in a declared finite grid of reductions, metrics, linkages and clustering settings:
 3,268 configurations over five seeds (16,340 fits). Both silhouette and
-Davies?Bouldin, exact parameters, all trial outcomes, coverage, seed stability,
+Davies-Bouldin, exact parameters, all trial outcomes, coverage, seed stability,
 Pareto fronts and nine-family comparisons are retained. Hierarchical/K-Means fix
 k=8; sector labels never tune the models.
 
@@ -15,7 +15,7 @@ cluster/distance surrogate SHAP and additive frozen-2025 attribute contrasts.
 The common-feature optimum is PCA95 + average/Euclidean hierarchy; the embedding
 optimum is UMAP(3, 0.01, cosine) + K-Means. These are criterion-dependent finite-grid
 optima, not a universal best model. The PCA choice creates singletons and cannot
-provide stratified OOF classifier fidelity; its latest distance-surrogate OOF R?
+provide stratified OOF classifier fidelity; its latest distance-surrogate OOF R^2
 is negative. These adverse results are displayed rather than omitted.
 
 Validation: 60 passing tests; 1,186 checksum-verified run artifacts; complete
