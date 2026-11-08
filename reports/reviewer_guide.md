@@ -1,12 +1,19 @@
 # Reviewer guide
 
+The current reporting direction is [structural-signal dynamics](anomaly_dynamics_reporting_example.md).
+The [reporting protocol](../docs/reporting_direction.md) keeps k=8 primary, adds
+495 varying-k sensitivity fits and versions the refined taxonomy after the
+initial results were examined. `anomaly-dynamics-report-v2-01` adds 53 verified
+artifacts; all 64 current tests pass. Primary results and old archives are unchanged.
+
+
 The latest entry point is the [full experiment notebook](../notebooks/paper_experiments.ipynb):
 EDA, 16,340 finite-grid selection fits, 270 frozen follow-up fits, actual dendrograms,
 named Jaccard histories, descriptive screens, sector context and separate SHAP targets.
 Read [the results and limitations](paper_experiment_results.md),
 [executed review notebook](paper_experiments_executed.ipynb),
 [fresh execution record](paper_experiments_fresh_executed.ipynb) and
-[verification](paper_experiment_verification.json). All 60 tests pass; the completed
+[verification](paper_experiment_verification.json). The original experiment passed 60 tests; the completed
 `paper-exhaustive-k8-01` archive contains 1,186 verified artifacts. The review
 notebook can reuse this verified archive without refitting. Previous packages
 below remain historical; their fixed-comparison and pending-extension statements

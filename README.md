@@ -3,6 +3,13 @@
 An EDA-to-SHAP workflow extending the original single-window SACJ study to three
 historical FTSE/JSE Top 40 cross-sections.
 
+The paper's reporting direction is **structural-signal dynamics**: emerging,
+persistent, resolving and related histories, with cluster shifts, geometric
+screening and sector divergence kept separate. Read the
+[working reporting example](reports/anomaly_dynamics_reporting_example.md) and
+[reporting protocol](docs/reporting_direction.md). The primary design keeps k=8;
+the separate varying-k sensitivity and revised taxonomy preserve all old outputs.
+
 ## Start here: EDA, experimentation and optimisation
 
 Open **[notebooks/paper_experiments.ipynb](notebooks/paper_experiments.ipynb)**

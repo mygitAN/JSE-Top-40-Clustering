@@ -1,5 +1,10 @@
 # Full experiment: results and interpretation
 
+This is the original experiment report. Its earlier screen-history wording is
+preserved. The [new reporting example](anomaly_dynamics_reporting_example.md)
+uses the v2 taxonomy, distinguishes resolved from resolving, and adds a separate
+varying-k sensitivity while retaining k=8 primary.
+
 [Open the executed review notebook](paper_experiments_executed.ipynb), [fresh execution record](paper_experiments_fresh_executed.ipynb), or [full protocol](../docs/paper_experiments_guide.md).
 
 ## Optimisation evidence

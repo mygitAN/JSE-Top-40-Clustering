@@ -1,5 +1,10 @@
 # ORiON methods-to-results checklist
 
+The [reporting amendment](reporting_direction.md) now separates geometric,
+sector-divergence and joint signal histories; refines resolved/resolving and
+emerging/sustained labels; and adds k=2..12 sensitivity. K=8 stays primary.
+The refinement is explicitly post hoc for the existing data.
+
 The newer [full experiment workflow](paper_experiments_guide.md) adds an explicit
 finite-grid search, actual-tree dendrograms, Jaccard histories, a specified
 **descriptive** 2D distance/F-reference screen, supported-screen history taxonomy,

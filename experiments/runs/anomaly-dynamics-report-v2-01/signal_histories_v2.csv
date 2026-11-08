@@ -1,0 +1,388 @@
+role,ticker,channel,2025-06-30,2025-12-31,2026-06-30,classification,confirmed_outlier
+common_features_k8,ABG,geometric_screen,False,False,False,never flagged,False
+common_features_k8,ABG,sector_divergence,False,False,False,never flagged,False
+common_features_k8,ABG,joint_agreement,False,False,False,never flagged,False
+common_features_k8,AGL,geometric_screen,False,False,False,never flagged,False
+common_features_k8,AGL,sector_divergence,True,True,True,persistent,False
+common_features_k8,AGL,joint_agreement,False,False,False,never flagged,False
+common_features_k8,ANG,geometric_screen,False,False,False,never flagged,False
+common_features_k8,ANG,sector_divergence,True,False,False,resolved,False
+common_features_k8,ANG,joint_agreement,False,False,False,never flagged,False
+common_features_k8,ANH,geometric_screen,True,False,False,resolved,False
+common_features_k8,ANH,sector_divergence,,,False,not eligible: missing observation or unestimable signal,False
+common_features_k8,ANH,joint_agreement,,,False,not eligible: missing observation or unestimable signal,False
+common_features_k8,APN,geometric_screen,False,,,not eligible: missing observation or unestimable signal,False
+common_features_k8,APN,sector_divergence,True,,,not eligible: missing observation or unestimable signal,False
+common_features_k8,APN,joint_agreement,False,,,not eligible: missing observation or unestimable signal,False
+common_features_k8,BHG,geometric_screen,True,False,False,resolved,False
+common_features_k8,BHG,sector_divergence,True,True,,not eligible: missing observation or unestimable signal,False
+common_features_k8,BHG,joint_agreement,True,False,,not eligible: missing observation or unestimable signal,False
+common_features_k8,BID,geometric_screen,False,False,False,never flagged,False
+common_features_k8,BID,sector_divergence,True,True,True,persistent,False
+common_features_k8,BID,joint_agreement,False,False,False,never flagged,False
+common_features_k8,BTI,geometric_screen,False,False,False,never flagged,False
+common_features_k8,BTI,sector_divergence,,,False,not eligible: missing observation or unestimable signal,False
+common_features_k8,BTI,joint_agreement,,,False,not eligible: missing observation or unestimable signal,False
+common_features_k8,BVT,geometric_screen,False,False,False,never flagged,False
+common_features_k8,BVT,sector_divergence,True,True,True,persistent,False
+common_features_k8,BVT,joint_agreement,False,False,False,never flagged,False
+common_features_k8,CFR,geometric_screen,False,False,False,never flagged,False
+common_features_k8,CFR,sector_divergence,True,True,False,resolving,False
+common_features_k8,CFR,joint_agreement,False,False,False,never flagged,False
+common_features_k8,CLS,geometric_screen,False,False,False,never flagged,False
+common_features_k8,CLS,sector_divergence,True,True,True,persistent,False
+common_features_k8,CLS,joint_agreement,False,False,False,never flagged,False
+common_features_k8,CPI,geometric_screen,False,False,False,never flagged,False
+common_features_k8,CPI,sector_divergence,False,False,False,never flagged,False
+common_features_k8,CPI,joint_agreement,False,False,False,never flagged,False
+common_features_k8,DSY,geometric_screen,False,False,False,never flagged,False
+common_features_k8,DSY,sector_divergence,False,False,False,never flagged,False
+common_features_k8,DSY,joint_agreement,False,False,False,never flagged,False
+common_features_k8,FSR,geometric_screen,False,False,False,never flagged,False
+common_features_k8,FSR,sector_divergence,False,False,False,never flagged,False
+common_features_k8,FSR,joint_agreement,False,False,False,never flagged,False
+common_features_k8,GFI,geometric_screen,False,False,False,never flagged,False
+common_features_k8,GFI,sector_divergence,True,False,False,resolved,False
+common_features_k8,GFI,joint_agreement,False,False,False,never flagged,False
+common_features_k8,GLN,geometric_screen,,True,True,not eligible: missing observation or unestimable signal,False
+common_features_k8,GLN,sector_divergence,,,,not eligible: missing observation or unestimable signal,False
+common_features_k8,GLN,joint_agreement,,,,not eligible: missing observation or unestimable signal,False
+common_features_k8,GRT,geometric_screen,False,False,False,never flagged,False
+common_features_k8,GRT,sector_divergence,False,False,False,never flagged,False
+common_features_k8,GRT,joint_agreement,False,False,False,never flagged,False
+common_features_k8,HAR,geometric_screen,False,False,False,never flagged,False
+common_features_k8,HAR,sector_divergence,True,False,False,resolved,False
+common_features_k8,HAR,joint_agreement,False,False,False,never flagged,False
+common_features_k8,IMP,geometric_screen,False,False,False,never flagged,False
+common_features_k8,IMP,sector_divergence,True,False,False,resolved,False
+common_features_k8,IMP,joint_agreement,False,False,False,never flagged,False
+common_features_k8,INL,geometric_screen,False,False,False,never flagged,False
+common_features_k8,INL,sector_divergence,False,False,False,never flagged,False
+common_features_k8,INL,joint_agreement,False,False,False,never flagged,False
+common_features_k8,INP,geometric_screen,False,False,False,never flagged,False
+common_features_k8,INP,sector_divergence,False,False,False,never flagged,False
+common_features_k8,INP,joint_agreement,False,False,False,never flagged,False
+common_features_k8,MNP,geometric_screen,False,False,,not eligible: missing observation or unestimable signal,False
+common_features_k8,MNP,sector_divergence,True,True,,not eligible: missing observation or unestimable signal,False
+common_features_k8,MNP,joint_agreement,False,False,,not eligible: missing observation or unestimable signal,False
+common_features_k8,MRP,geometric_screen,False,False,False,never flagged,False
+common_features_k8,MRP,sector_divergence,True,True,True,persistent,False
+common_features_k8,MRP,joint_agreement,False,False,False,never flagged,False
+common_features_k8,MTN,geometric_screen,False,False,False,never flagged,False
+common_features_k8,MTN,sector_divergence,True,True,True,persistent,False
+common_features_k8,MTN,joint_agreement,False,False,False,never flagged,False
+common_features_k8,NED,geometric_screen,False,False,False,never flagged,False
+common_features_k8,NED,sector_divergence,False,False,False,never flagged,False
+common_features_k8,NED,joint_agreement,False,False,False,never flagged,False
+common_features_k8,NPH,geometric_screen,False,False,False,never flagged,False
+common_features_k8,NPH,sector_divergence,True,False,False,resolved,False
+common_features_k8,NPH,joint_agreement,False,False,False,never flagged,False
+common_features_k8,NPN,geometric_screen,False,False,False,never flagged,False
+common_features_k8,NPN,sector_divergence,,True,True,not eligible: missing observation or unestimable signal,False
+common_features_k8,NPN,joint_agreement,,False,False,not eligible: missing observation or unestimable signal,False
+common_features_k8,NRP,geometric_screen,False,False,False,never flagged,False
+common_features_k8,NRP,sector_divergence,False,False,False,never flagged,False
+common_features_k8,NRP,joint_agreement,False,False,False,never flagged,False
+common_features_k8,OMU,geometric_screen,False,False,False,never flagged,False
+common_features_k8,OMU,sector_divergence,False,False,False,never flagged,False
+common_features_k8,OMU,joint_agreement,False,False,False,never flagged,False
+common_features_k8,OUT,geometric_screen,False,False,False,never flagged,False
+common_features_k8,OUT,sector_divergence,False,False,False,never flagged,False
+common_features_k8,OUT,joint_agreement,False,False,False,never flagged,False
+common_features_k8,PAN,geometric_screen,,,False,not eligible: missing observation or unestimable signal,False
+common_features_k8,PAN,sector_divergence,,,False,not eligible: missing observation or unestimable signal,False
+common_features_k8,PAN,joint_agreement,,,False,not eligible: missing observation or unestimable signal,False
+common_features_k8,PPH,geometric_screen,False,False,False,never flagged,False
+common_features_k8,PPH,sector_divergence,True,True,True,persistent,False
+common_features_k8,PPH,joint_agreement,False,False,False,never flagged,False
+common_features_k8,PRX,geometric_screen,False,False,False,never flagged,False
+common_features_k8,PRX,sector_divergence,True,True,True,persistent,False
+common_features_k8,PRX,joint_agreement,False,False,False,never flagged,False
+common_features_k8,REM,geometric_screen,False,False,False,never flagged,False
+common_features_k8,REM,sector_divergence,False,False,False,never flagged,False
+common_features_k8,REM,joint_agreement,False,False,False,never flagged,False
+common_features_k8,RNI,geometric_screen,False,False,False,never flagged,False
+common_features_k8,RNI,sector_divergence,False,False,False,never flagged,False
+common_features_k8,RNI,joint_agreement,False,False,False,never flagged,False
+common_features_k8,SBK,geometric_screen,False,False,False,never flagged,False
+common_features_k8,SBK,sector_divergence,False,False,False,never flagged,False
+common_features_k8,SBK,joint_agreement,False,False,False,never flagged,False
+common_features_k8,SHP,geometric_screen,False,False,False,never flagged,False
+common_features_k8,SHP,sector_divergence,True,True,True,persistent,False
+common_features_k8,SHP,joint_agreement,False,False,False,never flagged,False
+common_features_k8,SLM,geometric_screen,False,False,False,never flagged,False
+common_features_k8,SLM,sector_divergence,False,False,False,never flagged,False
+common_features_k8,SLM,joint_agreement,False,False,False,never flagged,False
+common_features_k8,SOL,geometric_screen,False,False,False,never flagged,False
+common_features_k8,SOL,sector_divergence,,True,,not eligible: missing observation or unestimable signal,False
+common_features_k8,SOL,joint_agreement,,False,,not eligible: missing observation or unestimable signal,False
+common_features_k8,SSW,geometric_screen,False,True,False,transient,False
+common_features_k8,SSW,sector_divergence,,,,not eligible: missing observation or unestimable signal,False
+common_features_k8,SSW,joint_agreement,,,,not eligible: missing observation or unestimable signal,False
+common_features_k8,VAL,geometric_screen,False,False,False,never flagged,False
+common_features_k8,VAL,sector_divergence,,False,False,not eligible: missing observation or unestimable signal,False
+common_features_k8,VAL,joint_agreement,,False,False,not eligible: missing observation or unestimable signal,False
+common_features_k8,VOD,geometric_screen,False,False,False,never flagged,False
+common_features_k8,VOD,sector_divergence,True,True,True,persistent,False
+common_features_k8,VOD,joint_agreement,False,False,False,never flagged,False
+common_features_k8,WHL,geometric_screen,False,False,False,never flagged,False
+common_features_k8,WHL,sector_divergence,True,True,True,persistent,False
+common_features_k8,WHL,joint_agreement,False,False,False,never flagged,False
+embedding_k8,ABG,geometric_screen,False,False,False,never flagged,False
+embedding_k8,ABG,sector_divergence,False,False,False,never flagged,False
+embedding_k8,ABG,joint_agreement,False,False,False,never flagged,False
+embedding_k8,AGL,geometric_screen,False,False,False,never flagged,False
+embedding_k8,AGL,sector_divergence,True,True,,not eligible: missing observation or unestimable signal,False
+embedding_k8,AGL,joint_agreement,False,False,,not eligible: missing observation or unestimable signal,False
+embedding_k8,ANG,geometric_screen,False,False,False,never flagged,False
+embedding_k8,ANG,sector_divergence,False,False,False,never flagged,False
+embedding_k8,ANG,joint_agreement,False,False,False,never flagged,False
+embedding_k8,ANH,geometric_screen,False,False,False,never flagged,False
+embedding_k8,ANH,sector_divergence,False,True,,not eligible: missing observation or unestimable signal,False
+embedding_k8,ANH,joint_agreement,False,False,,not eligible: missing observation or unestimable signal,False
+embedding_k8,APN,geometric_screen,False,,,not eligible: missing observation or unestimable signal,False
+embedding_k8,APN,sector_divergence,,,,not eligible: missing observation or unestimable signal,False
+embedding_k8,APN,joint_agreement,,,,not eligible: missing observation or unestimable signal,False
+embedding_k8,BHG,geometric_screen,False,False,False,never flagged,False
+embedding_k8,BHG,sector_divergence,True,True,True,persistent,False
+embedding_k8,BHG,joint_agreement,False,False,False,never flagged,False
+embedding_k8,BID,geometric_screen,False,False,False,never flagged,False
+embedding_k8,BID,sector_divergence,,False,True,not eligible: missing observation or unestimable signal,False
+embedding_k8,BID,joint_agreement,,False,False,not eligible: missing observation or unestimable signal,False
+embedding_k8,BTI,geometric_screen,False,False,False,never flagged,False
+embedding_k8,BTI,sector_divergence,False,True,,not eligible: missing observation or unestimable signal,False
+embedding_k8,BTI,joint_agreement,False,False,,not eligible: missing observation or unestimable signal,False
+embedding_k8,BVT,geometric_screen,False,False,False,never flagged,False
+embedding_k8,BVT,sector_divergence,,True,True,not eligible: missing observation or unestimable signal,False
+embedding_k8,BVT,joint_agreement,,False,False,not eligible: missing observation or unestimable signal,False
+embedding_k8,CFR,geometric_screen,False,False,False,never flagged,False
+embedding_k8,CFR,sector_divergence,False,True,,not eligible: missing observation or unestimable signal,False
+embedding_k8,CFR,joint_agreement,False,False,,not eligible: missing observation or unestimable signal,False
+embedding_k8,CLS,geometric_screen,False,False,False,never flagged,False
+embedding_k8,CLS,sector_divergence,True,False,,not eligible: missing observation or unestimable signal,False
+embedding_k8,CLS,joint_agreement,False,False,,not eligible: missing observation or unestimable signal,False
+embedding_k8,CPI,geometric_screen,False,False,False,never flagged,False
+embedding_k8,CPI,sector_divergence,False,False,False,never flagged,False
+embedding_k8,CPI,joint_agreement,False,False,False,never flagged,False
+embedding_k8,DSY,geometric_screen,False,False,False,never flagged,False
+embedding_k8,DSY,sector_divergence,False,False,False,never flagged,False
+embedding_k8,DSY,joint_agreement,False,False,False,never flagged,False
+embedding_k8,FSR,geometric_screen,False,False,False,never flagged,False
+embedding_k8,FSR,sector_divergence,False,,False,not eligible: missing observation or unestimable signal,False
+embedding_k8,FSR,joint_agreement,False,,False,not eligible: missing observation or unestimable signal,False
+embedding_k8,GFI,geometric_screen,False,False,False,never flagged,False
+embedding_k8,GFI,sector_divergence,False,False,False,never flagged,False
+embedding_k8,GFI,joint_agreement,False,False,False,never flagged,False
+embedding_k8,GLN,geometric_screen,,False,False,not eligible: missing observation or unestimable signal,False
+embedding_k8,GLN,sector_divergence,,True,True,not eligible: missing observation or unestimable signal,False
+embedding_k8,GLN,joint_agreement,,False,False,not eligible: missing observation or unestimable signal,False
+embedding_k8,GRT,geometric_screen,False,False,False,never flagged,False
+embedding_k8,GRT,sector_divergence,False,False,False,never flagged,False
+embedding_k8,GRT,joint_agreement,False,False,False,never flagged,False
+embedding_k8,HAR,geometric_screen,False,False,False,never flagged,False
+embedding_k8,HAR,sector_divergence,False,False,False,never flagged,False
+embedding_k8,HAR,joint_agreement,False,False,False,never flagged,False
+embedding_k8,IMP,geometric_screen,False,False,False,never flagged,False
+embedding_k8,IMP,sector_divergence,False,False,False,never flagged,False
+embedding_k8,IMP,joint_agreement,False,False,False,never flagged,False
+embedding_k8,INL,geometric_screen,False,False,False,never flagged,False
+embedding_k8,INL,sector_divergence,False,False,False,never flagged,False
+embedding_k8,INL,joint_agreement,False,False,False,never flagged,False
+embedding_k8,INP,geometric_screen,False,False,False,never flagged,False
+embedding_k8,INP,sector_divergence,False,False,False,never flagged,False
+embedding_k8,INP,joint_agreement,False,False,False,never flagged,False
+embedding_k8,MNP,geometric_screen,False,False,,not eligible: missing observation or unestimable signal,False
+embedding_k8,MNP,sector_divergence,True,True,,not eligible: missing observation or unestimable signal,False
+embedding_k8,MNP,joint_agreement,False,False,,not eligible: missing observation or unestimable signal,False
+embedding_k8,MRP,geometric_screen,False,False,False,never flagged,False
+embedding_k8,MRP,sector_divergence,True,True,,not eligible: missing observation or unestimable signal,False
+embedding_k8,MRP,joint_agreement,False,False,,not eligible: missing observation or unestimable signal,False
+embedding_k8,MTN,geometric_screen,False,False,False,never flagged,False
+embedding_k8,MTN,sector_divergence,True,True,True,persistent,False
+embedding_k8,MTN,joint_agreement,False,False,False,never flagged,False
+embedding_k8,NED,geometric_screen,False,False,False,never flagged,False
+embedding_k8,NED,sector_divergence,False,False,False,never flagged,False
+embedding_k8,NED,joint_agreement,False,False,False,never flagged,False
+embedding_k8,NPH,geometric_screen,False,False,False,never flagged,False
+embedding_k8,NPH,sector_divergence,False,False,False,never flagged,False
+embedding_k8,NPH,joint_agreement,False,False,False,never flagged,False
+embedding_k8,NPN,geometric_screen,False,False,False,never flagged,False
+embedding_k8,NPN,sector_divergence,True,True,False,resolving,False
+embedding_k8,NPN,joint_agreement,False,False,False,never flagged,False
+embedding_k8,NRP,geometric_screen,False,False,False,never flagged,False
+embedding_k8,NRP,sector_divergence,False,False,False,never flagged,False
+embedding_k8,NRP,joint_agreement,False,False,False,never flagged,False
+embedding_k8,OMU,geometric_screen,False,False,False,never flagged,False
+embedding_k8,OMU,sector_divergence,False,,False,not eligible: missing observation or unestimable signal,False
+embedding_k8,OMU,joint_agreement,False,,False,not eligible: missing observation or unestimable signal,False
+embedding_k8,OUT,geometric_screen,False,False,False,never flagged,False
+embedding_k8,OUT,sector_divergence,False,False,True,emerging,False
+embedding_k8,OUT,joint_agreement,False,False,False,never flagged,False
+embedding_k8,PAN,geometric_screen,,,False,not eligible: missing observation or unestimable signal,False
+embedding_k8,PAN,sector_divergence,,,False,not eligible: missing observation or unestimable signal,False
+embedding_k8,PAN,joint_agreement,,,False,not eligible: missing observation or unestimable signal,False
+embedding_k8,PPH,geometric_screen,False,False,False,never flagged,False
+embedding_k8,PPH,sector_divergence,True,True,True,persistent,False
+embedding_k8,PPH,joint_agreement,False,False,False,never flagged,False
+embedding_k8,PRX,geometric_screen,False,False,False,never flagged,False
+embedding_k8,PRX,sector_divergence,True,True,False,resolving,False
+embedding_k8,PRX,joint_agreement,False,False,False,never flagged,False
+embedding_k8,REM,geometric_screen,False,False,False,never flagged,False
+embedding_k8,REM,sector_divergence,False,False,False,never flagged,False
+embedding_k8,REM,joint_agreement,False,False,False,never flagged,False
+embedding_k8,RNI,geometric_screen,False,False,False,never flagged,False
+embedding_k8,RNI,sector_divergence,False,False,False,never flagged,False
+embedding_k8,RNI,joint_agreement,False,False,False,never flagged,False
+embedding_k8,SBK,geometric_screen,False,False,False,never flagged,False
+embedding_k8,SBK,sector_divergence,False,False,True,emerging,False
+embedding_k8,SBK,joint_agreement,False,False,False,never flagged,False
+embedding_k8,SHP,geometric_screen,False,False,False,never flagged,False
+embedding_k8,SHP,sector_divergence,,False,True,not eligible: missing observation or unestimable signal,False
+embedding_k8,SHP,joint_agreement,,False,False,not eligible: missing observation or unestimable signal,False
+embedding_k8,SLM,geometric_screen,False,False,False,never flagged,False
+embedding_k8,SLM,sector_divergence,False,False,True,emerging,False
+embedding_k8,SLM,joint_agreement,False,False,False,never flagged,False
+embedding_k8,SOL,geometric_screen,False,False,False,never flagged,False
+embedding_k8,SOL,sector_divergence,False,False,,not eligible: missing observation or unestimable signal,False
+embedding_k8,SOL,joint_agreement,False,False,,not eligible: missing observation or unestimable signal,False
+embedding_k8,SSW,geometric_screen,False,False,False,never flagged,False
+embedding_k8,SSW,sector_divergence,False,False,False,never flagged,False
+embedding_k8,SSW,joint_agreement,False,False,False,never flagged,False
+embedding_k8,VAL,geometric_screen,False,False,False,never flagged,False
+embedding_k8,VAL,sector_divergence,True,False,False,resolved,False
+embedding_k8,VAL,joint_agreement,False,False,False,never flagged,False
+embedding_k8,VOD,geometric_screen,False,False,False,never flagged,False
+embedding_k8,VOD,sector_divergence,True,True,True,persistent,False
+embedding_k8,VOD,joint_agreement,False,False,False,never flagged,False
+embedding_k8,WHL,geometric_screen,False,False,False,never flagged,False
+embedding_k8,WHL,sector_divergence,True,False,,not eligible: missing observation or unestimable signal,False
+embedding_k8,WHL,joint_agreement,False,False,,not eligible: missing observation or unestimable signal,False
+baseline,ABG,geometric_screen,False,False,False,never flagged,False
+baseline,ABG,sector_divergence,False,False,False,never flagged,False
+baseline,ABG,joint_agreement,False,False,False,never flagged,False
+baseline,AGL,geometric_screen,False,False,False,never flagged,False
+baseline,AGL,sector_divergence,False,True,,not eligible: missing observation or unestimable signal,False
+baseline,AGL,joint_agreement,False,False,,not eligible: missing observation or unestimable signal,False
+baseline,ANG,geometric_screen,False,False,False,never flagged,False
+baseline,ANG,sector_divergence,False,False,False,never flagged,False
+baseline,ANG,joint_agreement,False,False,False,never flagged,False
+baseline,ANH,geometric_screen,False,False,False,never flagged,False
+baseline,ANH,sector_divergence,False,,,not eligible: missing observation or unestimable signal,False
+baseline,ANH,joint_agreement,False,,,not eligible: missing observation or unestimable signal,False
+baseline,APN,geometric_screen,False,,,not eligible: missing observation or unestimable signal,False
+baseline,APN,sector_divergence,True,,,not eligible: missing observation or unestimable signal,False
+baseline,APN,joint_agreement,False,,,not eligible: missing observation or unestimable signal,False
+baseline,BHG,geometric_screen,False,False,False,never flagged,False
+baseline,BHG,sector_divergence,True,True,True,persistent,False
+baseline,BHG,joint_agreement,False,False,False,never flagged,False
+baseline,BID,geometric_screen,False,False,False,never flagged,False
+baseline,BID,sector_divergence,True,False,True,recurring,False
+baseline,BID,joint_agreement,False,False,False,never flagged,False
+baseline,BTI,geometric_screen,False,False,False,never flagged,False
+baseline,BTI,sector_divergence,False,,,not eligible: missing observation or unestimable signal,False
+baseline,BTI,joint_agreement,False,,,not eligible: missing observation or unestimable signal,False
+baseline,BVT,geometric_screen,False,False,False,never flagged,False
+baseline,BVT,sector_divergence,True,True,,not eligible: missing observation or unestimable signal,False
+baseline,BVT,joint_agreement,False,False,,not eligible: missing observation or unestimable signal,False
+baseline,CFR,geometric_screen,False,False,False,never flagged,False
+baseline,CFR,sector_divergence,False,,,not eligible: missing observation or unestimable signal,False
+baseline,CFR,joint_agreement,False,,,not eligible: missing observation or unestimable signal,False
+baseline,CLS,geometric_screen,False,False,False,never flagged,False
+baseline,CLS,sector_divergence,True,False,True,recurring,False
+baseline,CLS,joint_agreement,False,False,False,never flagged,False
+baseline,CPI,geometric_screen,False,False,False,never flagged,False
+baseline,CPI,sector_divergence,True,False,True,recurring,False
+baseline,CPI,joint_agreement,False,False,False,never flagged,False
+baseline,DSY,geometric_screen,False,False,False,never flagged,False
+baseline,DSY,sector_divergence,,False,True,not eligible: missing observation or unestimable signal,False
+baseline,DSY,joint_agreement,,False,False,not eligible: missing observation or unestimable signal,False
+baseline,FSR,geometric_screen,False,False,False,never flagged,False
+baseline,FSR,sector_divergence,False,False,False,never flagged,False
+baseline,FSR,joint_agreement,False,False,False,never flagged,False
+baseline,GFI,geometric_screen,False,False,False,never flagged,False
+baseline,GFI,sector_divergence,False,False,False,never flagged,False
+baseline,GFI,joint_agreement,False,False,False,never flagged,False
+baseline,GLN,geometric_screen,,False,False,not eligible: missing observation or unestimable signal,False
+baseline,GLN,sector_divergence,,True,True,not eligible: missing observation or unestimable signal,False
+baseline,GLN,joint_agreement,,False,False,not eligible: missing observation or unestimable signal,False
+baseline,GRT,geometric_screen,False,False,False,never flagged,False
+baseline,GRT,sector_divergence,False,False,False,never flagged,False
+baseline,GRT,joint_agreement,False,False,False,never flagged,False
+baseline,HAR,geometric_screen,False,False,False,never flagged,False
+baseline,HAR,sector_divergence,False,False,False,never flagged,False
+baseline,HAR,joint_agreement,False,False,False,never flagged,False
+baseline,IMP,geometric_screen,False,False,False,never flagged,False
+baseline,IMP,sector_divergence,False,False,False,never flagged,False
+baseline,IMP,joint_agreement,False,False,False,never flagged,False
+baseline,INL,geometric_screen,False,False,False,never flagged,False
+baseline,INL,sector_divergence,False,False,False,never flagged,False
+baseline,INL,joint_agreement,False,False,False,never flagged,False
+baseline,INP,geometric_screen,False,False,False,never flagged,False
+baseline,INP,sector_divergence,False,False,False,never flagged,False
+baseline,INP,joint_agreement,False,False,False,never flagged,False
+baseline,MNP,geometric_screen,False,False,,not eligible: missing observation or unestimable signal,False
+baseline,MNP,sector_divergence,True,True,,not eligible: missing observation or unestimable signal,False
+baseline,MNP,joint_agreement,False,False,,not eligible: missing observation or unestimable signal,False
+baseline,MRP,geometric_screen,False,False,False,never flagged,False
+baseline,MRP,sector_divergence,,True,True,not eligible: missing observation or unestimable signal,False
+baseline,MRP,joint_agreement,,False,False,not eligible: missing observation or unestimable signal,False
+baseline,MTN,geometric_screen,False,False,False,never flagged,False
+baseline,MTN,sector_divergence,True,,True,not eligible: missing observation or unestimable signal,False
+baseline,MTN,joint_agreement,False,,False,not eligible: missing observation or unestimable signal,False
+baseline,NED,geometric_screen,False,False,False,never flagged,False
+baseline,NED,sector_divergence,False,False,False,never flagged,False
+baseline,NED,joint_agreement,False,False,False,never flagged,False
+baseline,NPH,geometric_screen,False,False,False,never flagged,False
+baseline,NPH,sector_divergence,False,False,False,never flagged,False
+baseline,NPH,joint_agreement,False,False,False,never flagged,False
+baseline,NPN,geometric_screen,False,False,False,never flagged,False
+baseline,NPN,sector_divergence,,True,False,not eligible: missing observation or unestimable signal,False
+baseline,NPN,joint_agreement,,False,False,not eligible: missing observation or unestimable signal,False
+baseline,NRP,geometric_screen,False,False,False,never flagged,False
+baseline,NRP,sector_divergence,False,False,False,never flagged,False
+baseline,NRP,joint_agreement,False,False,False,never flagged,False
+baseline,OMU,geometric_screen,False,False,False,never flagged,False
+baseline,OMU,sector_divergence,False,False,False,never flagged,False
+baseline,OMU,joint_agreement,False,False,False,never flagged,False
+baseline,OUT,geometric_screen,False,False,False,never flagged,False
+baseline,OUT,sector_divergence,,False,False,not eligible: missing observation or unestimable signal,False
+baseline,OUT,joint_agreement,,False,False,not eligible: missing observation or unestimable signal,False
+baseline,PAN,geometric_screen,,,False,not eligible: missing observation or unestimable signal,False
+baseline,PAN,sector_divergence,,,False,not eligible: missing observation or unestimable signal,False
+baseline,PAN,joint_agreement,,,False,not eligible: missing observation or unestimable signal,False
+baseline,PPH,geometric_screen,False,False,False,never flagged,False
+baseline,PPH,sector_divergence,True,True,True,persistent,False
+baseline,PPH,joint_agreement,False,False,False,never flagged,False
+baseline,PRX,geometric_screen,False,False,False,never flagged,False
+baseline,PRX,sector_divergence,True,True,False,resolving,False
+baseline,PRX,joint_agreement,False,False,False,never flagged,False
+baseline,REM,geometric_screen,False,False,False,never flagged,False
+baseline,REM,sector_divergence,True,False,True,recurring,False
+baseline,REM,joint_agreement,False,False,False,never flagged,False
+baseline,RNI,geometric_screen,False,False,False,never flagged,False
+baseline,RNI,sector_divergence,True,False,True,recurring,False
+baseline,RNI,joint_agreement,False,False,False,never flagged,False
+baseline,SBK,geometric_screen,False,False,False,never flagged,False
+baseline,SBK,sector_divergence,False,False,False,never flagged,False
+baseline,SBK,joint_agreement,False,False,False,never flagged,False
+baseline,SHP,geometric_screen,False,False,False,never flagged,False
+baseline,SHP,sector_divergence,True,False,True,recurring,False
+baseline,SHP,joint_agreement,False,False,False,never flagged,False
+baseline,SLM,geometric_screen,False,False,False,never flagged,False
+baseline,SLM,sector_divergence,False,False,False,never flagged,False
+baseline,SLM,joint_agreement,False,False,False,never flagged,False
+baseline,SOL,geometric_screen,False,False,False,never flagged,False
+baseline,SOL,sector_divergence,False,True,,not eligible: missing observation or unestimable signal,False
+baseline,SOL,joint_agreement,False,False,,not eligible: missing observation or unestimable signal,False
+baseline,SSW,geometric_screen,False,False,False,never flagged,False
+baseline,SSW,sector_divergence,False,False,False,never flagged,False
+baseline,SSW,joint_agreement,False,False,False,never flagged,False
+baseline,VAL,geometric_screen,False,False,False,never flagged,False
+baseline,VAL,sector_divergence,True,False,False,resolved,False
+baseline,VAL,joint_agreement,False,False,False,never flagged,False
+baseline,VOD,geometric_screen,False,False,False,never flagged,False
+baseline,VOD,sector_divergence,True,True,True,persistent,False
+baseline,VOD,joint_agreement,False,False,False,never flagged,False
+baseline,WHL,geometric_screen,False,False,False,never flagged,False
+baseline,WHL,sector_divergence,,False,True,not eligible: missing observation or unestimable signal,False
+baseline,WHL,joint_agreement,,False,False,not eligible: missing observation or unestimable signal,False
