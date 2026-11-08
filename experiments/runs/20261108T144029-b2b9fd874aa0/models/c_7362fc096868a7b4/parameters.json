@@ -1,0 +1,24 @@
+{
+  "representation": {
+    "name": "tsne",
+    "params": {
+      "n_components": 2,
+      "perplexity": 10,
+      "learning_rate": 10,
+      "max_iter": 300,
+      "metric": "euclidean",
+      "init": "random",
+      "n_jobs": 1
+    },
+    "representation_id": "r_cf99830e94994666"
+  },
+  "clustering": {
+    "algorithm": "hierarchical",
+    "params": {
+      "n_clusters": 8,
+      "linkage": "single",
+      "metric": "chebyshev"
+    }
+  },
+  "candidate_id": "c_7362fc096868a7b4"
+}

@@ -1,0 +1,150 @@
+diff --git a/README.md b/README.md
+index 3afb608..26799cd 100644
+--- a/README.md
++++ b/README.md
+@@ -32,6 +32,8 @@ natural cluster/noise count as a separate comparator.
+ See the [step-by-step study guide](docs/study_guide.md) for setup, file locations
+ and the meaning of the plots.
+ 
++Each snapshot contains **40 company groups represented by 41 listed instruments**. Investec Limited (INL) and Investec plc (INP) are separate securities in one dual-listed company (DLC) group; both remain in the instrument-level analysis. Exited members are excluded at subsequent dates until an effective re-entry. See [the population audit](reports/population_count_audit.md) for sources and scope.
++
+ Study claim: a repeated, interpretable cross-sectional investment-screening
+ process. See the [ORiON methods-to-results checklist](docs/orion_methods_results_checklist.md)
+ for the evidence matrix, ten-feature variant, implemented results and pending
+diff --git a/docs/analysis_method.md b/docs/analysis_method.md
+index 9a3bb23..671ff70 100644
+--- a/docs/analysis_method.md
++++ b/docs/analysis_method.md
+@@ -38,6 +38,8 @@ promoted through `experiments/baseline.json`; execution never changes that point
+ 
+ ## Inputs and preprocessing
+ 
++Each snapshot contains **40 company groups represented by 41 listed instruments**. Investec Limited (INL) and Investec plc (INP) are separate securities in one dual-listed company (DLC) group; both remain in the instrument-level analysis. Exited members are excluded at subsequent dates until an effective re-entry. See [the population audit](../reports/population_count_audit.md) for sources and scope.
++
+ All 123 rows (41/date, 43 unique tickers) remain, including RNI. The ten numeric
+ inputs are return, average volume, market cap, beta, shares, revenue, EPS,
+ annualised volatility, dividend yield and clipped earnings yield. Unavailable
+diff --git a/docs/orion_methods_results_checklist.md b/docs/orion_methods_results_checklist.md
+index e530efc..4a7b3f5 100644
+--- a/docs/orion_methods_results_checklist.md
++++ b/docs/orion_methods_results_checklist.md
+@@ -25,6 +25,8 @@ the entire data set is not a balanced independently sampled panel. The 41
+ instruments must not be silently reduced to 40 or described as 41 independent
+ economic firms. Index eligibility determines inclusion, including unresolved RNI.
+ 
++Each snapshot contains **40 company groups represented by 41 listed instruments**. Investec Limited (INL) and Investec plc (INP) are separate securities in one dual-listed company (DLC) group; both remain in the instrument-level analysis. Exited members are excluded at subsequent dates until an effective re-entry. See [the population audit](../reports/population_count_audit.md) for sources and scope.
++
+ ## 2. Evidence matrix and strict PIT claims
+ 
+ | Layer | Recorded evidence | Coverage | Permitted interpretation / remaining work |
+diff --git a/docs/study_guide.md b/docs/study_guide.md
+index 8e04958..9cb4ee6 100644
+--- a/docs/study_guide.md
++++ b/docs/study_guide.md
+@@ -42,6 +42,8 @@ is needed. Never reuse a run ID to overwrite previous results.
+ | 5. SHAP | Global/per-cluster bars, class distribution plot, feature deviations, class mapping and additivity | Which original variables influence the surrogate's cluster-membership margins? |
+ | 6. Fidelity and time | In-sample versus OOF fidelity, pairwise seed ARI/NMI, continuing-member transitions and entry/exit events | Are descriptions sensitive to seeds, surrogate fitting or changing index membership? |
+ 
++Each snapshot contains **40 company groups represented by 41 listed instruments**. Investec Limited (INL) and Investec plc (INP) are separate securities in one dual-listed company (DLC) group; both remain in the instrument-level analysis. Exited members are excluded at subsequent dates until an effective re-entry. See [the population audit](../reports/population_count_audit.md) for sources and scope.
++
+ The dates are 2025-06-30, 2025-12-31 and 2026-06-30. Each adjacent pair has 40
+ continuing instruments. Only 39 are observed at all three dates. These are
+ overlapping historical populations, not 123 independent firms.
+diff --git a/experiments/registry.csv b/experiments/registry.csv
+index 8c96bc1..dadd45a 100644
+--- a/experiments/registry.csv
++++ b/experiments/registry.csv
+@@ -14,3 +14,5 @@ three-cross-section-study-02,completed,2026-11-08T11:13:38.805665+00:00,2026-11-
+ three-cross-section-cli-check-01,completed,2026-11-08T11:15:47.743146+00:00,2026-11-08T11:16:34.061336+00:00,three-cross-section-study-walkthrough,"Guided three-cross-section revision: EDA, model comparisons, plots, SHAP and temporal interpretation",27144bbd0d235741bca2f0dfc1117f3e63af9171,True,46.32799999997951,runs/three-cross-section-cli-check-01,
+ 20261108T135356-303a1dcda854,running,2026-11-08T13:53:56.795519+00:00,,three-cross-section-study-walkthrough,"Guided three-cross-section revision: EDA, model comparisons, plots, SHAP and temporal interpretation",,,,runs/20261108T135356-303a1dcda854,
+ three-cross-section-k8-01,completed,2026-11-08T13:56:07.592371+00:00,2026-11-08T13:56:55.763364+00:00,three-cross-section-study-walkthrough,"Guided three-cross-section revision: EDA, model comparisons, plots, SHAP and temporal interpretation",27144bbd0d235741bca2f0dfc1117f3e63af9171,True,48.15599999995902,runs/three-cross-section-k8-01,
++20261108T140306-4655372d1765,completed,2026-11-08T14:03:06.173177+00:00,2026-11-08T14:04:29.810978+00:00,three-cross-section-study-walkthrough,"Guided three-cross-section revision: EDA, model comparisons, plots, SHAP and temporal interpretation",51d7862b140183dcf1e54d40a4266f44dffa5b01,True,83.64099999994505,runs/20261108T140306-4655372d1765,
++20261108T140738-f85c1110a0cc,running,2026-11-08T14:07:38.410169+00:00,,three-cross-section-study-walkthrough,"Guided three-cross-section revision: EDA, model comparisons, plots, SHAP and temporal interpretation",,,,runs/20261108T140738-f85c1110a0cc,
+diff --git a/notebooks/three_cross_section_study.ipynb b/notebooks/three_cross_section_study.ipynb
+index 02d194e..7585caa 100644
+--- a/notebooks/three_cross_section_study.ipynb
++++ b/notebooks/three_cross_section_study.ipynb
+@@ -70,7 +70,9 @@
+     "\n",
+     "Inspect the population, raw missing cases, model-only imputations, distributions and correlations **before fitting clusters**. June 2025 supplies the fixed imputation/clipping/scaling information. Later MinMax-transformed values can exceed [0,1]. Sector labels are retained as context, not numeric model features.\n",
+     "\n",
+-    "Raw financial definitions, ZAc/ZAR conventions and reconstruction limitations are documented in `docs/orion_methods_results_checklist.md`. The plots include flagged model-only imputations; those values are not reported issuer fundamentals."
++    "Raw financial definitions, ZAc/ZAR conventions and reconstruction limitations are documented in `docs/orion_methods_results_checklist.md`. The plots include flagged model-only imputations; those values are not reported issuer fundamentals.",
++    "\n",
++    "**Population unit:** 40 company groups are represented by 41 listed instruments at each date. Investec Limited (INL) and Investec plc (INP) are separate securities in one dual-listed company (DLC) group. Both are retained in this instrument-level analysis; they are not independent firms. Membership is date-specific: exits remain absent until an effective re-entry. See `reports/population_count_audit.md` for evidence.\n"
+    ]
+   },
+   {
+diff --git a/scripts/study_eda.py b/scripts/study_eda.py
+index 1b1fc85..ca8b279 100644
+--- a/scripts/study_eda.py
++++ b/scripts/study_eda.py
+@@ -12,6 +12,11 @@ def eda_tables(frame,features,scaler):
+     population=frame.groupby('decision_date').agg(instruments=('ticker','size'),
+         distinct_tickers=('ticker','nunique'),fundamental_imputations=('fundamentals_imputed','sum'),
+         volume_imputations=('volume_imputed','sum')).reset_index()
++    # Count the approved Investec DLC as one economic group, while retaining
++    # both legally distinct securities in the instrument-level model inputs.
++    groups=frame.assign(economic_group=frame.ticker.replace({'INL':'INVESTEC_DLC','INP':'INVESTEC_DLC'}))
++    population['economic_groups']=population.decision_date.map(
++        groups.groupby('decision_date').economic_group.nunique())
+     presence=pd.crosstab(frame.ticker,frame.decision_date).reindex(columns=dates,fill_value=0).astype(bool)
+     missing=[]
+     for date,sub in frame.groupby('decision_date',sort=True):
+@@ -59,15 +64,22 @@ def explore(frame,features,scaler,out):
+         'volume_imputed or fundamentals_imputed').to_csv(out/'imputed_observations.csv',index=False)
+     dates=list(tables['population'].decision_date)
+     fig,axes=plt.subplots(1,2,figsize=(12,4))
+-    axes[0].bar(dates,tables['population'].instruments,color='steelblue')
+-    axes[0].set_ylabel('Historically eligible instruments');axes[0].set_ylim(0,46)
+-    for i,n in enumerate(tables['population'].instruments):axes[0].text(i,n+.5,str(n),ha='center')
++    positions=np.arange(len(dates));width=.36
++    for offset,column,label,color in [(-width/2,'economic_groups','Company groups','#2e765e'),
++                                      (width/2,'instruments','Listed instruments','steelblue')]:
++        bars=axes[0].bar(positions+offset,tables['population'][column],width,label=label,color=color)
++        axes[0].bar_label(bars,padding=3)
++    axes[0].set_xticks(positions,dates)
++    axes[0].set_ylabel('Count at each snapshot');axes[0].set_ylim(0,49)
++    axes[0].legend(fontsize=8,loc='upper left')
+     sectors=pd.crosstab(frame.decision_date,frame.sector_label).reindex(dates)
+     sectors.plot.bar(stacked=True,ax=axes[1],rot=0,cmap='tab10')
+     axes[1].set_ylabel('Instruments');axes[1].set_xlabel('Snapshot')
+     axes[1].legend(fontsize=7,title='Legacy sector context',bbox_to_anchor=(1,1))
+     fig.suptitle('Population and sector context: repeated, overlapping cross-sections')
+-    fig.tight_layout();fig.savefig(out/'population_and_sectors.png',dpi=150);plt.close(fig)
++    fig.text(.5,.01,'40 company groups / 41 listed instruments: Investec Limited (INL) and Investec plc (INP) form one DLC group.',
++             ha='center',fontsize=8)
++    fig.tight_layout(rect=(0,.06,1,1));fig.savefig(out/'population_and_sectors.png',dpi=150);plt.close(fig)
+     presence=tables['presence']
+     fig,ax=plt.subplots(figsize=(8,12))
+     ax.imshow(presence.to_numpy(dtype=int),cmap=ListedColormap(['#eeeeee','#276d9b']),vmin=0,vmax=1,aspect='auto')
+diff --git a/scripts/study_reporting.py b/scripts/study_reporting.py
+index 19ded59..a08741e 100644
+--- a/scripts/study_reporting.py
++++ b/scripts/study_reporting.py
+@@ -73,8 +73,11 @@ def write_study_summary(study):
+         shap_completed=True, promotion=False, configuration=study.config,
+         validation=study.validation, interpretation='Repeated descriptive cross-sections; not return prediction or 123 independent firms'))
+     lines = ['# Three-cross-section study: results and reading order', '',
+-             f'Run ID: `{study.run.meta["run_id"]}`. Each date retains 41 instruments; 123 records, 43 distinct tickers, '
++             f'Run ID: `{study.run.meta["run_id"]}`. Each date retains 41 instruments representing 40 company groups; 123 records, 43 distinct tickers, '
+              '39 observed at all three dates. These are overlapping historical cross-sections.', '',
++             'Investec Limited (INL) and Investec plc (INP) are distinct securities in one dual-listed company (DLC) group. '
++             'Both remain separate rows in this instrument-level analysis. Membership is determined independently at each date; '
++             'an exited instrument is absent until its re-entry takes effect. Group counts do not imply independent observations.', '',
+              '## 1. Start with EDA', '',
+              '- `eda/population.csv`: population counts and flagged imputations.',
+              '- `eda/evidence.csv` and `eda/missingness.csv`: evidence/missing-case accounting.',
+diff --git a/tests/test_study.py b/tests/test_study.py
+index c4433be..f0777db 100644
+--- a/tests/test_study.py
++++ b/tests/test_study.py
+@@ -32,6 +32,8 @@ class StudyTests(unittest.TestCase):
+         scaler, _ = prepare(frame)
+         tables = eda_tables(frame, FEATURES, scaler)
+         self.assertEqual(tables['population'].instruments.tolist(), [41, 41, 41])
++        self.assertEqual(tables['population'].economic_groups.tolist(), [40, 40, 40])
++        self.assertEqual(set(tables['scaled'].query('ticker in ["INL", "INP"]').ticker), {'INL', 'INP'})
+         self.assertEqual(int(tables['presence'].all(axis=1).sum()), 39)
+         self.assertEqual(int(tables['missingness'].model_missing.sum()), 0)
+         self.assertEqual(int(tables['missingness'].query('feature == "revenue_zar_model"').raw_missing.sum()), 3)

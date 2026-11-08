@@ -1,0 +1,9 @@
+cluster,n,fundamental_imputations,volume_imputations,interpretation
+0,6,0,0,small-sample descriptive
+1,7,1,1,small-sample descriptive
+2,6,0,0,small-sample descriptive
+3,7,0,0,small-sample descriptive
+4,5,0,0,small-sample descriptive
+5,5,0,0,small-sample descriptive
+6,4,0,0,small-sample descriptive
+7,1,0,0,singleton: descriptive only

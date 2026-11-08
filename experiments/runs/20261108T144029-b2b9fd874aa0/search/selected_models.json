@@ -1,0 +1,412 @@
+{
+  "common_features_k8": {
+    "representation": {
+      "name": "pca",
+      "params": {
+        "n_components": 0.95,
+        "svd_solver": "full"
+      },
+      "representation_id": "r_81b710484643a5c4"
+    },
+    "clustering": {
+      "algorithm": "hierarchical",
+      "params": {
+        "n_clusters": 8,
+        "linkage": "average",
+        "metric": "euclidean"
+      }
+    },
+    "candidate_id": "c_073540362ecaaa17"
+  },
+  "features_pca_hierarchical": {
+    "representation": {
+      "name": "pca",
+      "params": {
+        "n_components": 0.95,
+        "svd_solver": "full"
+      },
+      "representation_id": "r_81b710484643a5c4"
+    },
+    "clustering": {
+      "algorithm": "hierarchical",
+      "params": {
+        "n_clusters": 8,
+        "linkage": "average",
+        "metric": "chebyshev"
+      }
+    },
+    "candidate_id": "c_270de6df6144c04c"
+  },
+  "features_pca_kmeans": {
+    "representation": {
+      "name": "pca",
+      "params": {
+        "n_components": 0.95,
+        "svd_solver": "full"
+      },
+      "representation_id": "r_81b710484643a5c4"
+    },
+    "clustering": {
+      "algorithm": "kmeans",
+      "params": {
+        "n_clusters": 8,
+        "n_init": 20
+      }
+    },
+    "candidate_id": "c_7d1d69927f9f3bf0"
+  },
+  "features_tsne_dbscan": {
+    "representation": {
+      "name": "tsne",
+      "params": {
+        "n_components": 2,
+        "perplexity": 10,
+        "learning_rate": 10,
+        "max_iter": 300,
+        "metric": "euclidean",
+        "init": "random",
+        "n_jobs": 1
+      },
+      "representation_id": "r_cf99830e94994666"
+    },
+    "clustering": {
+      "algorithm": "dbscan",
+      "params": {
+        "eps": 0.8,
+        "min_samples": 3,
+        "metric": "euclidean"
+      }
+    },
+    "candidate_id": "c_79448941048b352e"
+  },
+  "features_tsne_hierarchical": {
+    "representation": {
+      "name": "tsne",
+      "params": {
+        "n_components": 2,
+        "perplexity": 10,
+        "learning_rate": 10,
+        "max_iter": 300,
+        "metric": "euclidean",
+        "init": "random",
+        "n_jobs": 1
+      },
+      "representation_id": "r_cf99830e94994666"
+    },
+    "clustering": {
+      "algorithm": "hierarchical",
+      "params": {
+        "n_clusters": 8,
+        "linkage": "single",
+        "metric": "chebyshev"
+      }
+    },
+    "candidate_id": "c_7362fc096868a7b4"
+  },
+  "features_tsne_kmeans": {
+    "representation": {
+      "name": "tsne",
+      "params": {
+        "n_components": 2,
+        "perplexity": 20,
+        "learning_rate": 10,
+        "max_iter": 1000,
+        "metric": "euclidean",
+        "init": "random",
+        "n_jobs": 1
+      },
+      "representation_id": "r_bed70ca2a60338a3"
+    },
+    "clustering": {
+      "algorithm": "kmeans",
+      "params": {
+        "n_clusters": 8,
+        "n_init": 20
+      }
+    },
+    "candidate_id": "c_81df66beccbdd3bc"
+  },
+  "features_umap_dbscan": {
+    "representation": {
+      "name": "umap",
+      "params": {
+        "n_components": 2,
+        "n_neighbors": 20,
+        "min_dist": 0.0,
+        "metric": "cosine",
+        "n_jobs": 1
+      },
+      "representation_id": "r_3cc0350cc1503268"
+    },
+    "clustering": {
+      "algorithm": "dbscan",
+      "params": {
+        "eps": 0.8,
+        "min_samples": 3,
+        "metric": "manhattan"
+      }
+    },
+    "candidate_id": "c_ecdf1240e2435ac4"
+  },
+  "features_umap_hierarchical": {
+    "representation": {
+      "name": "umap",
+      "params": {
+        "n_components": 2,
+        "n_neighbors": 3,
+        "min_dist": 0.0,
+        "metric": "euclidean",
+        "n_jobs": 1
+      },
+      "representation_id": "r_82280a6eb317e0d1"
+    },
+    "clustering": {
+      "algorithm": "hierarchical",
+      "params": {
+        "n_clusters": 8,
+        "linkage": "single",
+        "metric": "chebyshev"
+      }
+    },
+    "candidate_id": "c_c31a5a00879f0102"
+  },
+  "features_umap_kmeans": {
+    "representation": {
+      "name": "umap",
+      "params": {
+        "n_components": 2,
+        "n_neighbors": 3,
+        "min_dist": 0.5,
+        "metric": "euclidean",
+        "n_jobs": 1
+      },
+      "representation_id": "r_08973367e2e8f338"
+    },
+    "clustering": {
+      "algorithm": "kmeans",
+      "params": {
+        "n_clusters": 8,
+        "n_init": 20
+      }
+    },
+    "candidate_id": "c_e42e8f91feb4c6b9"
+  },
+  "embedding_k8": {
+    "representation": {
+      "name": "umap",
+      "params": {
+        "n_components": 2,
+        "n_neighbors": 3,
+        "min_dist": 0.01,
+        "metric": "cosine",
+        "n_jobs": 1
+      },
+      "representation_id": "r_deca05f82c54a9d1"
+    },
+    "clustering": {
+      "algorithm": "kmeans",
+      "params": {
+        "n_clusters": 8,
+        "n_init": 20
+      }
+    },
+    "candidate_id": "c_152cbd6e85993337"
+  },
+  "embedding_pca_hierarchical": {
+    "representation": {
+      "name": "pca",
+      "params": {
+        "n_components": 2,
+        "svd_solver": "full"
+      },
+      "representation_id": "r_e2de281ef0e1a70b"
+    },
+    "clustering": {
+      "algorithm": "hierarchical",
+      "params": {
+        "n_clusters": 8,
+        "linkage": "average",
+        "metric": "chebyshev"
+      }
+    },
+    "candidate_id": "c_ff49c0c2566f2b76"
+  },
+  "embedding_pca_kmeans": {
+    "representation": {
+      "name": "pca",
+      "params": {
+        "n_components": 2,
+        "svd_solver": "full"
+      },
+      "representation_id": "r_e2de281ef0e1a70b"
+    },
+    "clustering": {
+      "algorithm": "kmeans",
+      "params": {
+        "n_clusters": 8,
+        "n_init": 20
+      }
+    },
+    "candidate_id": "c_feeeb5a431fab19e"
+  },
+  "embedding_tsne_dbscan": {
+    "representation": {
+      "name": "tsne",
+      "params": {
+        "n_components": 2,
+        "perplexity": 5,
+        "learning_rate": 10,
+        "max_iter": 300,
+        "metric": "cosine",
+        "init": "random",
+        "n_jobs": 1
+      },
+      "representation_id": "r_3d7eac92f885d72e"
+    },
+    "clustering": {
+      "algorithm": "dbscan",
+      "params": {
+        "eps": 0.5,
+        "min_samples": 3,
+        "metric": "euclidean"
+      }
+    },
+    "candidate_id": "c_ff86aac25ddcaaf4"
+  },
+  "embedding_tsne_hierarchical": {
+    "representation": {
+      "name": "tsne",
+      "params": {
+        "n_components": 2,
+        "perplexity": 5,
+        "learning_rate": 10,
+        "max_iter": 300,
+        "metric": "euclidean",
+        "init": "random",
+        "n_jobs": 1
+      },
+      "representation_id": "r_d1e78423e380b893"
+    },
+    "clustering": {
+      "algorithm": "hierarchical",
+      "params": {
+        "n_clusters": 8,
+        "linkage": "average",
+        "metric": "euclidean"
+      }
+    },
+    "candidate_id": "c_563dcace192c2c9c"
+  },
+  "embedding_tsne_kmeans": {
+    "representation": {
+      "name": "tsne",
+      "params": {
+        "n_components": 2,
+        "perplexity": 5,
+        "learning_rate": 10,
+        "max_iter": 300,
+        "metric": "euclidean",
+        "init": "random",
+        "n_jobs": 1
+      },
+      "representation_id": "r_d1e78423e380b893"
+    },
+    "clustering": {
+      "algorithm": "kmeans",
+      "params": {
+        "n_clusters": 8,
+        "n_init": 20
+      }
+    },
+    "candidate_id": "c_4189645cd001d44c"
+  },
+  "embedding_umap_dbscan": {
+    "representation": {
+      "name": "umap",
+      "params": {
+        "n_components": 2,
+        "n_neighbors": 3,
+        "min_dist": 0.01,
+        "metric": "euclidean",
+        "n_jobs": 1
+      },
+      "representation_id": "r_d2af83cc44d234dc"
+    },
+    "clustering": {
+      "algorithm": "dbscan",
+      "params": {
+        "eps": 0.5,
+        "min_samples": 3,
+        "metric": "euclidean"
+      }
+    },
+    "candidate_id": "c_a2fdce037adde186"
+  },
+  "embedding_umap_hierarchical": {
+    "representation": {
+      "name": "umap",
+      "params": {
+        "n_components": 2,
+        "n_neighbors": 3,
+        "min_dist": 0.01,
+        "metric": "cosine",
+        "n_jobs": 1
+      },
+      "representation_id": "r_deca05f82c54a9d1"
+    },
+    "clustering": {
+      "algorithm": "hierarchical",
+      "params": {
+        "n_clusters": 8,
+        "linkage": "complete",
+        "metric": "euclidean"
+      }
+    },
+    "candidate_id": "c_190352ea0dd7b2c1"
+  },
+  "embedding_umap_kmeans": {
+    "representation": {
+      "name": "umap",
+      "params": {
+        "n_components": 2,
+        "n_neighbors": 3,
+        "min_dist": 0.01,
+        "metric": "cosine",
+        "n_jobs": 1
+      },
+      "representation_id": "r_deca05f82c54a9d1"
+    },
+    "clustering": {
+      "algorithm": "kmeans",
+      "params": {
+        "n_clusters": 8,
+        "n_init": 20
+      }
+    },
+    "candidate_id": "c_152cbd6e85993337"
+  },
+  "baseline": {
+    "representation": {
+      "name": "tsne",
+      "params": {
+        "n_components": 2,
+        "perplexity": 5,
+        "learning_rate": 10,
+        "max_iter": 300,
+        "metric": "euclidean",
+        "init": "random",
+        "n_jobs": 1
+      },
+      "representation_id": "r_d1e78423e380b893"
+    },
+    "clustering": {
+      "algorithm": "hierarchical",
+      "params": {
+        "n_clusters": 8,
+        "linkage": "average",
+        "metric": "manhattan"
+      }
+    },
+    "candidate_id": "c_4f80a40f7dda0468"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "in_sample_r2": 0.953236742289884,
+  "oof_r2": 0.19803631289673007,
+  "oof_mae": 0.8276272606716225,
+  "interpretation": "Associations with full-snapshot learned-coordinate screen; OOF fidelity does not validate outlier calibration"
+}

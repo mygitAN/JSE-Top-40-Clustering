@@ -1,0 +1,27 @@
+{
+  "representations": 86,
+  "configurations": 3268,
+  "selection_fits": 16340,
+  "reused_representation_fits": 430,
+  "skipped_invalid_linkage_pairs": [
+    {
+      "linkage": "ward",
+      "metric": "manhattan",
+      "reason": "Ward requires Euclidean distance"
+    },
+    {
+      "linkage": "ward",
+      "metric": "chebyshev",
+      "reason": "Ward requires Euclidean distance"
+    },
+    {
+      "linkage": "ward",
+      "metric": "cosine",
+      "reason": "Ward requires Euclidean distance"
+    }
+  ],
+  "selection_date": "2025-06-30",
+  "score_geometry": "Euclidean silhouette and centroid DB in representation and common June-scaled features",
+  "dbscan": "Axis-standardized representation before fitting; scores on unstandardized representation and common features; noise excluded and coverage explicit",
+  "exhaustive_scope": "Exhaustive within this finite grid, not all possible real-valued parameters or a global optimum. Later dates already examined: descriptive follow-ups, not untouched validation."
+}

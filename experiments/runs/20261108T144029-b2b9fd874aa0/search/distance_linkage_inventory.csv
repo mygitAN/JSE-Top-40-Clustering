@@ -1,0 +1,120 @@
+representation,algorithm,linkage,distance,reduction_distance,configurations,eligible,best_feature_silhouette,lowest_feature_db
+pca,dbscan,not applicable,cosine,Euclidean linear projection,16,0,0.42925906622033905,0.817041379797168
+pca,dbscan,not applicable,euclidean,Euclidean linear projection,16,0,0.5362050846399314,0.5692751610915376
+pca,dbscan,not applicable,manhattan,Euclidean linear projection,16,0,0.07425850949144289,2.482767258167197
+pca,hierarchical,average,chebyshev,Euclidean linear projection,2,2,0.2925872440406768,0.720015442882147
+pca,hierarchical,average,cosine,Euclidean linear projection,2,2,0.1665556837980805,0.9882941922791
+pca,hierarchical,average,euclidean,Euclidean linear projection,2,2,0.2592347868099345,0.6839576576940788
+pca,hierarchical,average,manhattan,Euclidean linear projection,2,2,0.24833455199312784,0.6431582579288185
+pca,hierarchical,complete,chebyshev,Euclidean linear projection,2,2,0.2581453682710248,0.9013232944711327
+pca,hierarchical,complete,cosine,Euclidean linear projection,2,2,0.23134424388328387,1.017956208404375
+pca,hierarchical,complete,euclidean,Euclidean linear projection,2,2,0.24536588517965324,0.8621217986933465
+pca,hierarchical,complete,manhattan,Euclidean linear projection,2,2,0.2185986391229875,1.0567803185081726
+pca,hierarchical,single,chebyshev,Euclidean linear projection,2,2,0.19568479402720923,0.624090202843287
+pca,hierarchical,single,cosine,Euclidean linear projection,2,2,0.13570662705417016,0.7714951967297735
+pca,hierarchical,single,euclidean,Euclidean linear projection,2,2,0.1901698026160274,0.6112476430311504
+pca,hierarchical,single,manhattan,Euclidean linear projection,2,2,0.17663381602267822,0.4889208657364053
+pca,hierarchical,ward,euclidean,Euclidean linear projection,2,2,0.2389856163400394,0.8740184082940201
+pca,kmeans,not applicable,Euclidean objective,Euclidean linear projection,2,2,0.24612818489822694,0.8959379193212789
+tsne,dbscan,not applicable,cosine,cosine,96,0,0.2454613639599801,1.7678764319103648
+tsne,dbscan,not applicable,cosine,euclidean,96,0,0.28492239472176406,1.6318612516701467
+tsne,dbscan,not applicable,cosine,manhattan,96,0,0.1553239870981795,1.9665917013363388
+tsne,dbscan,not applicable,euclidean,cosine,96,14,0.564777286932841,0.5289634895091753
+tsne,dbscan,not applicable,euclidean,euclidean,96,7,0.5124775464848231,0.5649988846454598
+tsne,dbscan,not applicable,euclidean,manhattan,96,0,0.5206649079495669,0.5789369746023679
+tsne,dbscan,not applicable,manhattan,cosine,96,11,0.6639576117457655,0.42454084837122497
+tsne,dbscan,not applicable,manhattan,euclidean,96,7,0.6696293388180977,0.37082329049542956
+tsne,dbscan,not applicable,manhattan,manhattan,96,1,0.6655726732542766,0.407598098986388
+tsne,hierarchical,average,chebyshev,cosine,12,12,0.20723147730197708,1.0549282661421862
+tsne,hierarchical,average,chebyshev,euclidean,12,12,0.24220701259859215,0.9131191925408292
+tsne,hierarchical,average,chebyshev,manhattan,12,12,0.2250197029434337,1.064010891465371
+tsne,hierarchical,average,cosine,cosine,12,12,0.06893888497214298,1.3029357681963574
+tsne,hierarchical,average,cosine,euclidean,12,12,0.09605270836991857,1.2604469143710524
+tsne,hierarchical,average,cosine,manhattan,12,12,0.0696384561752641,1.3449591458539056
+tsne,hierarchical,average,euclidean,cosine,12,12,0.22102642521345425,1.0247577125735112
+tsne,hierarchical,average,euclidean,euclidean,12,12,0.24146412882185983,0.9291676759102708
+tsne,hierarchical,average,euclidean,manhattan,12,12,0.22898622338483604,1.045523420114147
+tsne,hierarchical,average,manhattan,cosine,12,12,0.20996694573890484,1.0547802135016784
+tsne,hierarchical,average,manhattan,euclidean,12,12,0.24234416190140723,0.9576604622343285
+tsne,hierarchical,average,manhattan,manhattan,12,12,0.2263517085728298,1.059145446989905
+tsne,hierarchical,complete,chebyshev,cosine,12,12,0.17751985152613056,1.243914208293617
+tsne,hierarchical,complete,chebyshev,euclidean,12,12,0.19729973259097794,1.1466983149472025
+tsne,hierarchical,complete,chebyshev,manhattan,12,12,0.18605449435390964,1.2298405861338915
+tsne,hierarchical,complete,cosine,cosine,12,12,0.08229422819820101,1.3524978831323415
+tsne,hierarchical,complete,cosine,euclidean,12,12,0.08556177220756597,1.4083741174230793
+tsne,hierarchical,complete,cosine,manhattan,12,12,0.0708483628184817,1.4297679747370657
+tsne,hierarchical,complete,euclidean,cosine,12,12,0.1813673301116506,1.219845352323528
+tsne,hierarchical,complete,euclidean,euclidean,12,12,0.2078627724469911,1.1602435449565054
+tsne,hierarchical,complete,euclidean,manhattan,12,12,0.2118506584811557,1.1981600496951537
+tsne,hierarchical,complete,manhattan,cosine,12,12,0.17280690791829004,1.2289218635998829
+tsne,hierarchical,complete,manhattan,euclidean,12,12,0.20027768063815193,1.148663561653597
+tsne,hierarchical,complete,manhattan,manhattan,12,12,0.19030453390018648,1.2253306368054475
+tsne,hierarchical,single,chebyshev,cosine,12,12,0.19683968274086058,0.7595068811395744
+tsne,hierarchical,single,chebyshev,euclidean,12,12,0.22407243845582844,0.7090834565807127
+tsne,hierarchical,single,chebyshev,manhattan,12,12,0.19446757262230524,0.7880885850804631
+tsne,hierarchical,single,cosine,cosine,12,12,0.01890423797298227,1.1582166549626756
+tsne,hierarchical,single,cosine,euclidean,12,12,0.09993120092505943,1.1033038162730875
+tsne,hierarchical,single,cosine,manhattan,12,12,0.03271120520079502,1.2108319225372903
+tsne,hierarchical,single,euclidean,cosine,12,12,0.20940609822469133,0.7716320060761765
+tsne,hierarchical,single,euclidean,euclidean,12,12,0.2193868143243069,0.7068831748315285
+tsne,hierarchical,single,euclidean,manhattan,12,12,0.18629371090274924,0.7710130639912999
+tsne,hierarchical,single,manhattan,cosine,12,12,0.13692116443185484,0.8326283940499966
+tsne,hierarchical,single,manhattan,euclidean,12,12,0.19993311547142692,0.6996228767768745
+tsne,hierarchical,single,manhattan,manhattan,12,12,0.15838654998581464,0.7651455612471757
+tsne,hierarchical,ward,euclidean,cosine,12,12,0.17398258225956864,1.2372272936634245
+tsne,hierarchical,ward,euclidean,euclidean,12,12,0.2136939269594665,1.0995059256102302
+tsne,hierarchical,ward,euclidean,manhattan,12,12,0.21063563219450715,1.1736919507612114
+tsne,kmeans,not applicable,Euclidean objective,cosine,12,12,0.17250422138232363,1.2285911791261666
+tsne,kmeans,not applicable,Euclidean objective,euclidean,12,12,0.20279864558085214,1.0769748340214211
+tsne,kmeans,not applicable,Euclidean objective,manhattan,12,12,0.1879475112337545,1.1918467428322068
+umap,dbscan,not applicable,cosine,cosine,128,5,0.34490738927795467,1.1424356758527923
+umap,dbscan,not applicable,cosine,euclidean,128,11,0.17635757285880946,1.8088469857429832
+umap,dbscan,not applicable,cosine,manhattan,128,2,0.23054528254165008,1.3772122959916013
+umap,dbscan,not applicable,euclidean,cosine,128,13,0.5828511619763066,0.508159254179865
+umap,dbscan,not applicable,euclidean,euclidean,128,19,0.6666838013686716,0.3965201679069822
+umap,dbscan,not applicable,euclidean,manhattan,128,7,0.6538075718923607,0.4126107331448212
+umap,dbscan,not applicable,manhattan,cosine,128,15,0.6352526469707932,0.43287228113414883
+umap,dbscan,not applicable,manhattan,euclidean,128,22,0.6156545938417787,0.4634644131505823
+umap,dbscan,not applicable,manhattan,manhattan,128,5,0.6215859200413282,0.44478458433082985
+umap,hierarchical,average,chebyshev,cosine,16,16,0.1345638363163738,1.175443634556454
+umap,hierarchical,average,chebyshev,euclidean,16,16,0.18186093696916442,1.1345899362850327
+umap,hierarchical,average,chebyshev,manhattan,16,16,0.16704202296785575,1.1510449886274032
+umap,hierarchical,average,cosine,cosine,16,16,0.09649399971238118,1.4614105082487325
+umap,hierarchical,average,cosine,euclidean,16,16,0.11907173985676014,1.284607124758912
+umap,hierarchical,average,cosine,manhattan,16,16,0.08342040082825967,1.6485332213149468
+umap,hierarchical,average,euclidean,cosine,16,16,0.1315943429796655,1.1797741834535802
+umap,hierarchical,average,euclidean,euclidean,16,16,0.1820858626543299,1.1471950106203832
+umap,hierarchical,average,euclidean,manhattan,16,16,0.1588433034720244,1.1484379187061844
+umap,hierarchical,average,manhattan,cosine,16,16,0.1315943429796655,1.1456994731900851
+umap,hierarchical,average,manhattan,euclidean,16,16,0.18050452015388535,1.1285171978545547
+umap,hierarchical,average,manhattan,manhattan,16,16,0.16628927455735237,1.1156973924340978
+umap,hierarchical,complete,chebyshev,cosine,16,16,0.13791959134316953,1.222552193904696
+umap,hierarchical,complete,chebyshev,euclidean,16,16,0.1738115298415231,1.1570560822109375
+umap,hierarchical,complete,chebyshev,manhattan,16,16,0.1703500810199567,1.2694763207108901
+umap,hierarchical,complete,cosine,cosine,16,16,0.09795673758389527,1.4754488157520018
+umap,hierarchical,complete,cosine,euclidean,16,16,0.11464651182184907,1.316538586783818
+umap,hierarchical,complete,cosine,manhattan,16,16,0.08365342288552627,1.6112142919214676
+umap,hierarchical,complete,euclidean,cosine,16,16,0.14067730996186587,1.2357327122549204
+umap,hierarchical,complete,euclidean,euclidean,16,16,0.15460610257331137,1.154090255502251
+umap,hierarchical,complete,euclidean,manhattan,16,16,0.16030510025942035,1.258417419028176
+umap,hierarchical,complete,manhattan,cosine,16,16,0.1352429852407392,1.2503592065942393
+umap,hierarchical,complete,manhattan,euclidean,16,16,0.16995611113436437,1.157211847596382
+umap,hierarchical,complete,manhattan,manhattan,16,16,0.1505451305852458,1.2568336301172007
+umap,hierarchical,single,chebyshev,cosine,16,16,0.12859809968293306,0.9579911552550687
+umap,hierarchical,single,chebyshev,euclidean,16,16,0.17041856326833454,1.0440270515793093
+umap,hierarchical,single,chebyshev,manhattan,16,16,0.15528859218655683,1.0250615991684615
+umap,hierarchical,single,cosine,cosine,16,16,0.1094505145579187,1.2643826866897545
+umap,hierarchical,single,cosine,euclidean,16,16,0.09631783548030697,1.2319322057743298
+umap,hierarchical,single,cosine,manhattan,16,16,0.07104015567002683,1.1984826892705134
+umap,hierarchical,single,euclidean,cosine,16,16,0.12859809968293306,1.0154206411314874
+umap,hierarchical,single,euclidean,euclidean,16,16,0.1769699554235132,1.056776304299262
+umap,hierarchical,single,euclidean,manhattan,16,16,0.15528859218655683,0.990599246248839
+umap,hierarchical,single,manhattan,cosine,16,16,0.12859809968293306,1.0279959652878374
+umap,hierarchical,single,manhattan,euclidean,16,16,0.16909776940753454,1.0395843949397228
+umap,hierarchical,single,manhattan,manhattan,16,16,0.15528859218655683,0.9826781534423817
+umap,hierarchical,ward,euclidean,cosine,16,16,0.14900649719301823,1.2189432758048655
+umap,hierarchical,ward,euclidean,euclidean,16,16,0.18641700153950175,1.1510433779364821
+umap,hierarchical,ward,euclidean,manhattan,16,16,0.17054362761764874,1.1629315454369644
+umap,kmeans,not applicable,Euclidean objective,cosine,16,16,0.1430887196353303,1.2552548419659768
+umap,kmeans,not applicable,Euclidean objective,euclidean,16,16,0.17607942362694842,1.1738352757001653
+umap,kmeans,not applicable,Euclidean objective,manhattan,16,16,0.17272589874119731,1.2443400402290241

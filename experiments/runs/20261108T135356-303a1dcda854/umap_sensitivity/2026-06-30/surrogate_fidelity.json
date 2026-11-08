@@ -1,0 +1,21 @@
+{
+  "in_sample_accuracy": 1.0,
+  "oof_accuracy": 0.8292682926829268,
+  "minimum_cluster_size": 5,
+  "oof_status": "estimated",
+  "meaning": "surrogate fidelity to full-snapshot pseudo-labels, not predictive validity",
+  "class_mapping": {
+    "0": 0,
+    "1": 1,
+    "2": 2,
+    "3": 3,
+    "4": 4
+  },
+  "shap_shape": [
+    41,
+    10,
+    5
+  ],
+  "shap_max_additivity_error": 1.430511474609375e-06,
+  "shap_additivity_atol": 0.0001
+}

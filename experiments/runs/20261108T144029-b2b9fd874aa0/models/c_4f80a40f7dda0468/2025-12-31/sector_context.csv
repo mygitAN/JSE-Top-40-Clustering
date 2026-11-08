@@ -1,0 +1,42 @@
+ticker,cluster,sector_label,other_member_majority,sector_divergence,sector_status,cluster_size,singleton,decision_date
+ABG,4,Financials,Financials,False,contextual comparison,5,False,2025-12-31
+AGL,1,Basic Materials,Financials,True,contextual comparison,7,False,2025-12-31
+ANG,3,Basic Materials,Basic Materials,False,contextual comparison,7,False,2025-12-31
+ANH,2,Consumer Goods,Basic Materials; Consumer Goods,,ambiguous: tied majority,6,False,2025-12-31
+BHG,2,Basic Materials,Consumer Goods,True,contextual comparison,6,False,2025-12-31
+BID,5,Consumer Services,Consumer Services,False,contextual comparison,5,False,2025-12-31
+BTI,2,Consumer Goods,Basic Materials; Consumer Goods,,ambiguous: tied majority,6,False,2025-12-31
+BVT,5,Industrials,Consumer Services,True,contextual comparison,5,False,2025-12-31
+CFR,2,Consumer Goods,Basic Materials; Consumer Goods,,ambiguous: tied majority,6,False,2025-12-31
+CLS,5,Consumer Services,Consumer Services,False,contextual comparison,5,False,2025-12-31
+CPI,1,Financials,Financials,False,contextual comparison,7,False,2025-12-31
+DSY,1,Financials,Financials,False,contextual comparison,7,False,2025-12-31
+FSR,6,Financials,Financials,False,contextual comparison,4,False,2025-12-31
+GFI,3,Basic Materials,Basic Materials,False,contextual comparison,7,False,2025-12-31
+GLN,2,Basic Materials,Consumer Goods,True,contextual comparison,6,False,2025-12-31
+GRT,6,Financials,Financials,False,contextual comparison,4,False,2025-12-31
+HAR,3,Basic Materials,Basic Materials,False,contextual comparison,7,False,2025-12-31
+IMP,3,Basic Materials,Basic Materials,False,contextual comparison,7,False,2025-12-31
+INL,0,Financials,Financials,False,contextual comparison,6,False,2025-12-31
+INP,0,Financials,Financials,False,contextual comparison,6,False,2025-12-31
+MNP,0,Basic Materials,Financials,True,contextual comparison,6,False,2025-12-31
+MRP,0,Consumer Services,Financials,True,contextual comparison,6,False,2025-12-31
+MTN,7,Telecommunications,,,not estimable: singleton,1,True,2025-12-31
+NED,0,Financials,Financials,False,contextual comparison,6,False,2025-12-31
+NPH,3,Basic Materials,Basic Materials,False,contextual comparison,7,False,2025-12-31
+NPN,1,Technology,Financials,True,contextual comparison,7,False,2025-12-31
+NRP,0,Financials,Financials,False,contextual comparison,6,False,2025-12-31
+OMU,6,Financials,Financials,False,contextual comparison,4,False,2025-12-31
+OUT,4,Financials,Financials,False,contextual comparison,5,False,2025-12-31
+PPH,6,Consumer Services,Financials,True,contextual comparison,4,False,2025-12-31
+PRX,2,Technology,Consumer Goods,True,contextual comparison,6,False,2025-12-31
+REM,1,Financials,Financials,False,contextual comparison,7,False,2025-12-31
+RNI,1,Financials,Financials,False,contextual comparison,7,False,2025-12-31
+SBK,4,Financials,Financials,False,contextual comparison,5,False,2025-12-31
+SHP,5,Consumer Services,Consumer Services,False,contextual comparison,5,False,2025-12-31
+SLM,4,Financials,Financials,False,contextual comparison,5,False,2025-12-31
+SOL,1,Basic Materials,Financials,True,contextual comparison,7,False,2025-12-31
+SSW,3,Basic Materials,Basic Materials,False,contextual comparison,7,False,2025-12-31
+VAL,3,Basic Materials,Basic Materials,False,contextual comparison,7,False,2025-12-31
+VOD,4,Telecommunications,Financials,True,contextual comparison,5,False,2025-12-31
+WHL,5,Consumer Services,Consumer Services,False,contextual comparison,5,False,2025-12-31

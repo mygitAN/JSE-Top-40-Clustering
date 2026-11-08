@@ -1,0 +1,8 @@
+{
+  "total_rows": 123,
+  "distinct_tickers": 43,
+  "observed_all_three": 39,
+  "raw_missingness_source": "RNI raw fields and validated volume/fundamental imputation flags",
+  "evidence": "Recorded flags, not fresh external certification",
+  "interpretation": "Three overlapping index cross-sections; not 123 independent firms"
+}

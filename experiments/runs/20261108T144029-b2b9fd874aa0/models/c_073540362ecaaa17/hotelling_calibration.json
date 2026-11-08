@@ -1,0 +1,375 @@
+{
+  "specification": {
+    "dimensions": 2,
+    "alpha": 0.05,
+    "statistic": "individual squared Mahalanobis distance from same-snapshot mean, unbiased sample covariance, no n multiplier",
+    "f_reference": "p*(n-1)/(n-p) * F.ppf(1-alpha,p,n-p); descriptive paper-style reference, not an individual-distance null calibration",
+    "singular_covariance": "no threshold flag; report not estimable",
+    "seed_support_fraction": 0.6,
+    "confirmed_outliers": "None confirmed solely by screens, seed agreement, singleton status or SHAP; external substantive validation required"
+  },
+  "per_fit": [
+    {
+      "decision_date": "2025-06-30",
+      "seed": 42,
+      "n": 41,
+      "p": 2,
+      "alpha": 0.05,
+      "f_reference": 6.6422484823780374,
+      "internal_beta_reference": 5.692429397550963,
+      "status": "descriptive only; no calibrated individual significance test",
+      "center": [
+        9.139030995390008e-17,
+        2.978647139238225e-17
+      ],
+      "covariance": [
+        [
+          0.1657140031445099,
+          6.096997716036055e-17
+        ],
+        [
+          6.096997716036055e-17,
+          0.13293159701594237
+        ]
+      ]
+    },
+    {
+      "decision_date": "2025-06-30",
+      "seed": 43,
+      "n": 41,
+      "p": 2,
+      "alpha": 0.05,
+      "f_reference": 6.6422484823780374,
+      "internal_beta_reference": 5.692429397550963,
+      "status": "descriptive only; no calibrated individual significance test",
+      "center": [
+        9.139030995390008e-17,
+        2.978647139238225e-17
+      ],
+      "covariance": [
+        [
+          0.1657140031445099,
+          6.096997716036055e-17
+        ],
+        [
+          6.096997716036055e-17,
+          0.13293159701594237
+        ]
+      ]
+    },
+    {
+      "decision_date": "2025-06-30",
+      "seed": 44,
+      "n": 41,
+      "p": 2,
+      "alpha": 0.05,
+      "f_reference": 6.6422484823780374,
+      "internal_beta_reference": 5.692429397550963,
+      "status": "descriptive only; no calibrated individual significance test",
+      "center": [
+        9.139030995390008e-17,
+        2.978647139238225e-17
+      ],
+      "covariance": [
+        [
+          0.1657140031445099,
+          6.096997716036055e-17
+        ],
+        [
+          6.096997716036055e-17,
+          0.13293159701594237
+        ]
+      ]
+    },
+    {
+      "decision_date": "2025-06-30",
+      "seed": 45,
+      "n": 41,
+      "p": 2,
+      "alpha": 0.05,
+      "f_reference": 6.6422484823780374,
+      "internal_beta_reference": 5.692429397550963,
+      "status": "descriptive only; no calibrated individual significance test",
+      "center": [
+        9.139030995390008e-17,
+        2.978647139238225e-17
+      ],
+      "covariance": [
+        [
+          0.1657140031445099,
+          6.096997716036055e-17
+        ],
+        [
+          6.096997716036055e-17,
+          0.13293159701594237
+        ]
+      ]
+    },
+    {
+      "decision_date": "2025-06-30",
+      "seed": 46,
+      "n": 41,
+      "p": 2,
+      "alpha": 0.05,
+      "f_reference": 6.6422484823780374,
+      "internal_beta_reference": 5.692429397550963,
+      "status": "descriptive only; no calibrated individual significance test",
+      "center": [
+        9.139030995390008e-17,
+        2.978647139238225e-17
+      ],
+      "covariance": [
+        [
+          0.1657140031445099,
+          6.096997716036055e-17
+        ],
+        [
+          6.096997716036055e-17,
+          0.13293159701594237
+        ]
+      ]
+    },
+    {
+      "decision_date": "2025-12-31",
+      "seed": 42,
+      "n": 41,
+      "p": 2,
+      "alpha": 0.05,
+      "f_reference": 6.6422484823780374,
+      "internal_beta_reference": 5.692429397550963,
+      "status": "descriptive only; no calibrated individual significance test",
+      "center": [
+        4.06179155350667e-17,
+        -8.12358310701334e-18
+      ],
+      "covariance": [
+        [
+          0.5543320123740586,
+          1.2149453276672896e-16
+        ],
+        [
+          1.2149453276672896e-16,
+          0.4440588780331578
+        ]
+      ]
+    },
+    {
+      "decision_date": "2025-12-31",
+      "seed": 43,
+      "n": 41,
+      "p": 2,
+      "alpha": 0.05,
+      "f_reference": 6.6422484823780374,
+      "internal_beta_reference": 5.692429397550963,
+      "status": "descriptive only; no calibrated individual significance test",
+      "center": [
+        4.06179155350667e-17,
+        -8.12358310701334e-18
+      ],
+      "covariance": [
+        [
+          0.5543320123740586,
+          1.2149453276672896e-16
+        ],
+        [
+          1.2149453276672896e-16,
+          0.4440588780331578
+        ]
+      ]
+    },
+    {
+      "decision_date": "2025-12-31",
+      "seed": 44,
+      "n": 41,
+      "p": 2,
+      "alpha": 0.05,
+      "f_reference": 6.6422484823780374,
+      "internal_beta_reference": 5.692429397550963,
+      "status": "descriptive only; no calibrated individual significance test",
+      "center": [
+        4.06179155350667e-17,
+        -8.12358310701334e-18
+      ],
+      "covariance": [
+        [
+          0.5543320123740586,
+          1.2149453276672896e-16
+        ],
+        [
+          1.2149453276672896e-16,
+          0.4440588780331578
+        ]
+      ]
+    },
+    {
+      "decision_date": "2025-12-31",
+      "seed": 45,
+      "n": 41,
+      "p": 2,
+      "alpha": 0.05,
+      "f_reference": 6.6422484823780374,
+      "internal_beta_reference": 5.692429397550963,
+      "status": "descriptive only; no calibrated individual significance test",
+      "center": [
+        4.06179155350667e-17,
+        -8.12358310701334e-18
+      ],
+      "covariance": [
+        [
+          0.5543320123740586,
+          1.2149453276672896e-16
+        ],
+        [
+          1.2149453276672896e-16,
+          0.4440588780331578
+        ]
+      ]
+    },
+    {
+      "decision_date": "2025-12-31",
+      "seed": 46,
+      "n": 41,
+      "p": 2,
+      "alpha": 0.05,
+      "f_reference": 6.6422484823780374,
+      "internal_beta_reference": 5.692429397550963,
+      "status": "descriptive only; no calibrated individual significance test",
+      "center": [
+        4.06179155350667e-17,
+        -8.12358310701334e-18
+      ],
+      "covariance": [
+        [
+          0.5543320123740586,
+          1.2149453276672896e-16
+        ],
+        [
+          1.2149453276672896e-16,
+          0.4440588780331578
+        ]
+      ]
+    },
+    {
+      "decision_date": "2026-06-30",
+      "seed": 42,
+      "n": 41,
+      "p": 2,
+      "alpha": 0.05,
+      "f_reference": 6.6422484823780374,
+      "internal_beta_reference": 5.692429397550963,
+      "status": "descriptive only; no calibrated individual significance test",
+      "center": [
+        5.415722071342227e-17,
+        2.3693784062122243e-17
+      ],
+      "covariance": [
+        [
+          0.5117149175535453,
+          -7.463904812168974e-17
+        ],
+        [
+          -7.463904812168974e-17,
+          0.22407912111793005
+        ]
+      ]
+    },
+    {
+      "decision_date": "2026-06-30",
+      "seed": 43,
+      "n": 41,
+      "p": 2,
+      "alpha": 0.05,
+      "f_reference": 6.6422484823780374,
+      "internal_beta_reference": 5.692429397550963,
+      "status": "descriptive only; no calibrated individual significance test",
+      "center": [
+        5.415722071342227e-17,
+        2.3693784062122243e-17
+      ],
+      "covariance": [
+        [
+          0.5117149175535453,
+          -7.463904812168974e-17
+        ],
+        [
+          -7.463904812168974e-17,
+          0.22407912111793005
+        ]
+      ]
+    },
+    {
+      "decision_date": "2026-06-30",
+      "seed": 44,
+      "n": 41,
+      "p": 2,
+      "alpha": 0.05,
+      "f_reference": 6.6422484823780374,
+      "internal_beta_reference": 5.692429397550963,
+      "status": "descriptive only; no calibrated individual significance test",
+      "center": [
+        5.415722071342227e-17,
+        2.3693784062122243e-17
+      ],
+      "covariance": [
+        [
+          0.5117149175535453,
+          -7.463904812168974e-17
+        ],
+        [
+          -7.463904812168974e-17,
+          0.22407912111793005
+        ]
+      ]
+    },
+    {
+      "decision_date": "2026-06-30",
+      "seed": 45,
+      "n": 41,
+      "p": 2,
+      "alpha": 0.05,
+      "f_reference": 6.6422484823780374,
+      "internal_beta_reference": 5.692429397550963,
+      "status": "descriptive only; no calibrated individual significance test",
+      "center": [
+        5.415722071342227e-17,
+        2.3693784062122243e-17
+      ],
+      "covariance": [
+        [
+          0.5117149175535453,
+          -7.463904812168974e-17
+        ],
+        [
+          -7.463904812168974e-17,
+          0.22407912111793005
+        ]
+      ]
+    },
+    {
+      "decision_date": "2026-06-30",
+      "seed": 46,
+      "n": 41,
+      "p": 2,
+      "alpha": 0.05,
+      "f_reference": 6.6422484823780374,
+      "internal_beta_reference": 5.692429397550963,
+      "status": "descriptive only; no calibrated individual significance test",
+      "center": [
+        5.415722071342227e-17,
+        2.3693784062122243e-17
+      ],
+      "covariance": [
+        [
+          0.5117149175535453,
+          -7.463904812168974e-17
+        ],
+        [
+          -7.463904812168974e-17,
+          0.22407912111793005
+        ]
+      ]
+    }
+  ],
+  "coordinates": "First two representation coordinates; PCA95 clustering may use more dimensions",
+  "caveat": "Individual D\u00b2 is not n times the distance, and a mean-T\u00b2 F threshold is only an illustrative reference here. Beta internal-distance reference is an additional descriptive sensitivity; manifold assumptions unverified."
+}

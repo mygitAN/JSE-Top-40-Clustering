@@ -1,0 +1,180 @@
+{
+  "config": {
+    "experiment": "paper-eda-exhaustive-grid-and-longitudinal-v1",
+    "selection_date": "2025-06-30",
+    "dates": [
+      "2025-06-30",
+      "2025-12-31",
+      "2026-06-30"
+    ],
+    "seeds": [
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
+    "pca_components": [
+      2,
+      0.95
+    ],
+    "tsne_perplexities": [
+      5,
+      10,
+      20
+    ],
+    "tsne_learning_rates": [
+      10,
+      "auto"
+    ],
+    "tsne_iterations": [
+      300,
+      1000
+    ],
+    "reduction_metrics": [
+      "euclidean",
+      "manhattan",
+      "cosine"
+    ],
+    "umap_neighbors": [
+      3,
+      5,
+      10,
+      20
+    ],
+    "umap_min_dist": [
+      0.0,
+      0.01,
+      0.1,
+      0.5
+    ],
+    "linkages": [
+      "single",
+      "complete",
+      "average",
+      "ward"
+    ],
+    "clustering_metrics": [
+      "euclidean",
+      "manhattan",
+      "chebyshev",
+      "cosine"
+    ],
+    "k": 8,
+    "k_diagnostics": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "kmeans_n_init": 20,
+    "dbscan_eps": [
+      0.3,
+      0.5,
+      0.8,
+      1.2
+    ],
+    "dbscan_min_samples": [
+      3,
+      5
+    ],
+    "dbscan_metrics": [
+      "euclidean",
+      "manhattan",
+      "cosine"
+    ],
+    "maximum_representations": 86,
+    "maximum_configurations": 3268,
+    "maximum_selection_fits": 16340,
+    "primary_selection": "common_features_k8",
+    "selection_rule": "Full coverage and valid scores on every seed; exactly 8 clusters. Minimize mean-silhouette descending rank plus mean-DB ascending rank in common June-scaled features. Tie-break by pairwise seed ARI, feature silhouette, candidate ID. Embedding-space ranking is an explicit alternative. Sector labels never select models.",
+    "hotelling": {
+      "dimensions": 2,
+      "alpha": 0.05,
+      "statistic": "individual squared Mahalanobis distance from same-snapshot mean, unbiased sample covariance, no n multiplier",
+      "f_reference": "p*(n-1)/(n-p) * F.ppf(1-alpha,p,n-p); descriptive paper-style reference, not an individual-distance null calibration",
+      "singular_covariance": "no threshold flag; report not estimable",
+      "seed_support_fraction": 0.6,
+      "confirmed_outliers": "None confirmed solely by screens, seed agreement, singleton status or SHAP; external substantive validation required"
+    },
+    "temporal_alignment": "Hungarian maximum Jaccard on common members, sorted labels, deterministic solver; reject zero-overlap matches; fresh IDs never reused; compare overlap objective and direct baseline alignment",
+    "promotion": false,
+    "scope": "Exhaustive within this finite grid, not all possible real-valued parameters or a global optimum. Later dates already examined: descriptive follow-ups, not untouched validation."
+  },
+  "validation": {
+    "derived_constants": {
+      "volume": 1534909.228915663,
+      "revenue": 98244535964.16383,
+      "eps": 12.7715,
+      "earnings_yield": 0.051361404520658835,
+      "lower": -0.5889019129867248,
+      "upper": 0.14636747615529913
+    },
+    "workbook_reconciled": true
+  },
+  "search_configurations": 3268,
+  "selection_fits": 16340,
+  "selected_roles": {
+    "common_features_k8": "c_073540362ecaaa17",
+    "features_pca_hierarchical": "c_270de6df6144c04c",
+    "features_pca_kmeans": "c_7d1d69927f9f3bf0",
+    "features_tsne_dbscan": "c_79448941048b352e",
+    "features_tsne_hierarchical": "c_7362fc096868a7b4",
+    "features_tsne_kmeans": "c_81df66beccbdd3bc",
+    "features_umap_dbscan": "c_ecdf1240e2435ac4",
+    "features_umap_hierarchical": "c_c31a5a00879f0102",
+    "features_umap_kmeans": "c_e42e8f91feb4c6b9",
+    "embedding_k8": "c_152cbd6e85993337",
+    "embedding_pca_hierarchical": "c_ff49c0c2566f2b76",
+    "embedding_pca_kmeans": "c_feeeb5a431fab19e",
+    "embedding_tsne_dbscan": "c_ff86aac25ddcaaf4",
+    "embedding_tsne_hierarchical": "c_563dcace192c2c9c",
+    "embedding_tsne_kmeans": "c_4189645cd001d44c",
+    "embedding_umap_dbscan": "c_a2fdce037adde186",
+    "embedding_umap_hierarchical": "c_190352ea0dd7b2c1",
+    "embedding_umap_kmeans": "c_152cbd6e85993337",
+    "baseline": "c_4f80a40f7dda0468"
+  },
+  "selected_followup_fits": 270,
+  "scaler_fit_on": "2025-06-30",
+  "scaler_min": [
+    -0.4878487848784878,
+    168133.2289156627,
+    45447156720.81,
+    -0.1264415552843601,
+    115822554.0,
+    14401000000.0,
+    -69.94,
+    0.1614513320132679,
+    0.0,
+    -0.5889019129867248
+  ],
+  "scaler_max": [
+    0.750908890602622,
+    17620954.96787149,
+    2407281215110.81,
+    2.386626480843885,
+    5594357851.0,
+    1062824969965.8704,
+    529.385279010239,
+    0.6100828187958385,
+    0.0907871594690691,
+    0.1463674761552991
+  ],
+  "confirmed_outliers": 0,
+  "promotion": false,
+  "limitations": [
+    "Finite-grid exploratory selection, not universal optimum",
+    "Sector labels are historically unverified external context",
+    "F-reference screens and seed support do not confirm outliers",
+    "Surrogates describe associations; frozen 2025 contrast decomposition does not causally explain refitted clusters",
+    "Source certification blockers remain"
+  ]
+}
