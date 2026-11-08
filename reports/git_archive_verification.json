@@ -1,5 +1,5 @@
 {
-  "results_commit": "febe3b2694502378c0c1d057aab34ec8854b00ff",
+  "results_commit": "4f210ac6f2d950f9034a3e86e099e5852d73f886",
   "method": "git archive bytes, every manifest entry and completion marker",
   "runs": [
     {
@@ -40,6 +40,11 @@
     {
       "run_id": "silhouette-db-search-01",
       "verified_artifacts": 209,
+      "status": "passed"
+    },
+    {
+      "run_id": "user-umap-grid-01",
+      "verified_artifacts": 20,
       "status": "passed"
     }
   ]
