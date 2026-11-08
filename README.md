@@ -4,7 +4,10 @@ Clustering research using historical FTSE/JSE Top 40 cross-sections.
 
 ## Run the analysis
 
-Use Python 3.12 in VS Code or a terminal:
+Use Python 3.11 or 3.12 in VS Code or a terminal. Windows Python 3.11.14
+was executed locally with every pinned top-level dependency; see the
+[full environment lock](configs/environment-windows-py311.txt). Python 3.12
+and Linux are configured in CI and require their own successful CI evidence.
 
 ```bash
 python -m venv .venv
@@ -12,13 +15,45 @@ python -m venv .venv
 python -m pip install -r requirements.txt
 python scripts/validate_data.py
 python -m unittest discover -s tests -v
-python scripts/run_analysis.py
+python scripts/run_analysis.py --mode baseline --experiment baseline
+# Full comparisons, five seeds (42–46), k=2–10, and SHAP on every date:
+python scripts/run_analysis.py --mode full --experiment fixed-suite
 ```
 
-Outputs go to `outputs/three_cross_sections/`: three sets of cluster plots,
-SHAP plots and values, model comparisons, cluster profiles, seed stability,
-cluster-count sensitivity, and membership-aware temporal comparisons. Choose
-a new `--output` folder for another run. See [analysis method](docs/analysis_method.md)
+Outputs go to unique immutable `experiments/runs/<run_id>/` directories. Each run
+has a status, diagnostic log, exact configuration, code snapshot, input hashes,
+environment, artifacts and checksums. `experiments/registry.csv` has one record
+per run. A `COMPLETED` marker is written only after required outputs, checksums
+and registry updates succeed. Failed runs are retained. Never reuse a run ID.
+`--output` changes the registry root, not a reusable run directory.
+`--skip-shap` explicitly requests an incomplete smoke test and is recorded in
+configuration. `--mode baseline` still exports k/seed sensitivity diagnostics.
+
+The [review package](reports/reviewer_guide.md) links saved results. Full bundles,
+including plots, models and SHAP arrays, are small enough to commit in Git.
+No expiring Actions artifact is the sole archive. `experiments/baseline.json`
+holds the specification pointer and an intentionally unpromoted results pointer.
+
+Verify and reproduce a saved run (replace the IDs with those in the registry):
+
+```bash
+python scripts/verify_run.py experiments/runs/final-full-42
+python scripts/run_analysis.py --mode full --seed 42 --stability-runs 5 --experiment fixed-suite --purpose "All three dates; nine combinations; seeds 42-46; k=2-10; SHAP" --run-id my-reproduction
+python scripts/compare_runs.py experiments/runs/final-full-42 experiments/runs/my-reproduction --report reports/my-reproduction.json
+```
+
+Use the matching code commit recorded in `status.json`, or extract its
+`source_snapshot.zip` into a separate clean directory for dirty-worktree runs.
+Install the archived environment lock there for the closest local reproduction.
+`resolved_config.json` records overrides. Comparison checks CSVs, numerical NPZ
+contents and deterministic model/manifest JSON with rtol=1e-7, atol=1e-6 for
+tables/arrays. Images and archive timestamps need not have identical bytes.
+Run IDs, purposes and timestamps differ and are excluded from numerical checks.
+
+Registry updates use an exclusive lock and atomic replacement. After a killed
+process, inspect the owner in `.registry.lock` before removing an abandoned lock.
+A stale `running` record or a directory without `COMPLETED` is not a successful run.
+See [analysis method](docs/analysis_method.md)
 for recovered historical settings, explicit new implementation choices, and
 interpretation limits. The primary baseline is t-SNE + hierarchical clustering,
 with sector held out for external comparison.

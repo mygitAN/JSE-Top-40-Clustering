@@ -5,3 +5,6 @@ __pycache__/
 .DS_Store
 .ipynb_checkpoints/
 outputs/
+.uv-cache/
+.uv-python/
+.runtime/

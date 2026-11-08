@@ -19,6 +19,11 @@ baseline, not an optimum or a requirement imposed by sector labels; a k=2–10
 sensitivity table accompanies it. Do not select settings using June 2026 scores
 then describe June 2026 as an untouched test.
 
+The machine-readable implementation contract is `configs/baseline.json`.
+Audit repairs, environment differences and open decisions are recorded in
+`docs/decisions/001-audit.md`. Results are review candidates until explicitly
+promoted through `experiments/baseline.json`; execution never changes that pointer.
+
 ## Inputs and preprocessing
 
 All 123 rows (41/date, 43 unique tickers) remain, including RNI. The ten numeric
