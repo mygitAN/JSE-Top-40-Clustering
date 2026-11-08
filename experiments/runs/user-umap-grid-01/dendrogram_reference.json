@@ -1,0 +1,8 @@
+{
+  "k": 4,
+  "lower_merge": 4.790573243583951,
+  "upper_merge": 13.111085557937622,
+  "color_threshold": 8.950829400760787,
+  "tied_heights": false,
+  "note": "Tied merge heights may make a horizontal tree cut ambiguous; exact labels are exported separately"
+}

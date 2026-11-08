@@ -1,0 +1,22 @@
+{
+  "assignments_2025-06-30.csv": "6e8781a94d5937308818d91aa4adfd0841cd291264628637f4d0ddb659628f0e",
+  "assignments_2025-12-31.csv": "aa05cb9f2c95c05bbb4dd0880eabe06f7dddee0a110b908e58b830e79d3571d1",
+  "assignments_2026-06-30.csv": "d7335905c5d1031677dc6b285341032030079e9c0c8fd1a5a871579aa6bf1fec",
+  "best_parameters.json": "3dad8af9dcd841883a126a7de8b7567e65e2bb32f7295b1af7dc9c48bd0846a2",
+  "cluster_count_scores.csv": "6d82504a2b79f81c10b40dcac5644964fdce6674caaa825894780d92ee8ef963",
+  "cluster_count_scores.png": "e90924480b87213c8ce8141b17aef9875e64e374b2f1a136b56cc1348604d4c3",
+  "dendrogram.png": "7128216be7ea793169d3586473e4f73b34b83710f1db667f3cfbfe099fb79e7e",
+  "dendrogram_reference.json": "6d850b1b0ea7b47abcfe7f9cff6bce90042ea23041725619d21b1e32315a9b07",
+  "frozen_followup_scores.csv": "abbecfd6ef240a22d0f1c5e2c1f812c37a05b1568b92a01d0c9a5214d5cc1af6",
+  "grid_results.csv": "a836c53110f3d35007515c902585025389bf0cb67bceece8dd30cf2daa834ef6",
+  "linkage_matrix.npy": "318228fc4e8e4d7e78bbf9dff8e74c649f530bbceaae00265fb992ddd455fcd0",
+  "metric_champions.json": "ae975c08df0251974b3759c103f926b1adab3b32e13d391f2886c71d3762cd13",
+  "resolved_config.json": "2a65d09e989704e86eda0ad15f635493c1b9e4c4aa7d51f520f816f6aa4b32a0",
+  "run.log": "1516a8f1863e9cf354dd0728b80819e44901f8d057d1edfb09f030b30b1d12d0",
+  "selected_arrays.npz": "88b345786ec46a6405d62c6a8d392eee5ca2fe5ac2a7add46dc350a8b7ecfa2f",
+  "selection_assignments.csv": "6e8781a94d5937308818d91aa4adfd0841cd291264628637f4d0ddb659628f0e",
+  "source_snapshot.zip": "3d5b89015a4f0590e32b451f4a61d3c7f3dd871288be95fa31fa0a3cf895ae91",
+  "status.json": "0fed9f3daed1c94dfd9773630b600058c5661e25454f5d61f538843946ea9e2a",
+  "tuning_manifest.json": "c431e91d6c0a768aa7a24d86a361492587a6b6291201bba3b7d89eb9bbe494e1",
+  "worktree.patch": "68d87b5aa85229302b5d38e011dcb487724ed447596cf63e349e6e90b1712308"
+}

@@ -1,0 +1,67 @@
+diff --git a/experiments/registry.csv b/experiments/registry.csv
+index aa5e6dd..137b27c 100644
+--- a/experiments/registry.csv
++++ b/experiments/registry.csv
+@@ -7,3 +7,4 @@ orion-report-01,completed,2026-11-08T09:34:05.328063+00:00,2026-11-08T09:34:07.0
+ user-full-20261108,completed,2026-11-08T09:59:13.307249+00:00,2026-11-08T09:59:34.631204+00:00,fixed-suite,User-requested full rerun with saved ORiON reporting,32825ff94263f5bcfc1e7a52ceffdf1c93cbccf1,True,21.32799999997951,runs/user-full-20261108,
+ user-orion-20261108,completed,2026-11-08T09:59:53.962256+00:00,2026-11-08T09:59:55.901706+00:00,orion-methods-results-check,Descriptive associations and label-alignment audit of saved baseline; no promotion,32825ff94263f5bcfc1e7a52ceffdf1c93cbccf1,True,1.937999999965541,runs/user-orion-20261108,
+ silhouette-db-search-01,completed,2026-11-08T10:12:57.725090+00:00,2026-11-08T10:16:57.811414+00:00,silhouette-db-bounded-search-v1,User-requested finite-grid joint silhouette/DB optimisation; no promotion,e37cc418372a10e70d1dfb2a1c0d4f8bafacd4d3,True,240.09399999992456,runs/silhouette-db-search-01,
++user-umap-grid-01,running,2026-11-08T10:33:23.289977+00:00,,user-umap-average-manhattan-grid-v1,"Correct and execute user-supplied UMAP grid, print winners/parameters and plot hierarchy",,,,runs/user-umap-grid-01,
+diff --git a/reports/test_results.txt b/reports/test_results.txt
+index 3b85386..e69de29 100644
+--- a/reports/test_results.txt
++++ b/reports/test_results.txt
+@@ -1,53 +0,0 @@
+-COMMAND: ['C:\\Users\\HP\\Documents\\GitHub\\JSE-Top-40-Clustering\\.venv\\Scripts\\python.exe', '-O', 'C:\\Users\\HP\\Documents\\GitHub\\JSE-Top-40-Clustering\\scripts\\validate_data.py']
+-RETURN CODE: 0
+-PASS: 123 rows; 41 per date; 43 tickers; 3 RNI rows retained; 2 volume imputations; model features complete.
+-
+-COMMAND: ['C:\\Users\\HP\\Documents\\GitHub\\JSE-Top-40-Clustering\\.venv\\Scripts\\python.exe', '-m', 'unittest', 'discover', '-s', 'tests', '-v']
+-RETURN CODE: 0
+-test_duplicate_and_missing_features_fail (test_analysis.AnalysisTests.test_duplicate_and_missing_features_fail) ... ok
+-test_entries_and_exits_are_not_cluster_changes (test_analysis.AnalysisTests.test_entries_and_exits_are_not_cluster_changes) ... ok
+-test_future_values_do_not_change_scaler (test_analysis.AnalysisTests.test_future_values_do_not_change_scaler) ... ok
+-test_noise_has_no_fake_silhouette (test_analysis.AnalysisTests.test_noise_has_no_fake_silhouette) ... ok
+-test_permuted_labels_align (test_analysis.AnalysisTests.test_permuted_labels_align) ... ok
+-test_retains_all_members_and_rni (test_analysis.AnalysisTests.test_retains_all_members_and_rni) ... ok
+-test_same_seed_and_row_order (test_analysis.AnalysisTests.test_same_seed_and_row_order) ... ok
+-test_shap_class_mapping_singleton_and_additivity (test_analysis.AnalysisTests.test_shap_class_mapping_singleton_and_additivity) ... ok
+-test_shap_oof_estimable (test_analysis.AnalysisTests.test_shap_oof_estimable) ... ok
+-test_temporal_metrics_ignore_label_permutation (test_analysis.AnalysisTests.test_temporal_metrics_ignore_label_permutation) ... ok
+-test_unmatched_and_disjoint_clusters (test_analysis.AnalysisTests.test_unmatched_and_disjoint_clusters) ... ok
+-test_complete_validation_and_workbook_reconciliation (test_data.DataTests.test_complete_validation_and_workbook_reconciliation) ... ok
+-test_constants_use_only_june_2025 (test_data.DataTests.test_constants_use_only_june_2025) ... ok
+-test_corrupt_flags_and_model_values_fail (test_data.DataTests.test_corrupt_flags_and_model_values_fail) ... ok
+-test_missing_required_data_fails (test_data.DataTests.test_missing_required_data_fails) ... ok
+-test_validation_checks_survive_optimization (test_data.DataTests.test_validation_checks_survive_optimization) ... ok
+-test_both_metrics_and_noise_accounting (test_optimization.OptimizationTests.test_both_metrics_and_noise_accounting) ... ok
+-test_dbscan_stability_excludes_noise_and_reports_common_coverage (test_optimization.OptimizationTests.test_dbscan_stability_excludes_noise_and_reports_common_coverage) ... ok
+-test_exact_budget_and_preserved_baseline (test_optimization.OptimizationTests.test_exact_budget_and_preserved_baseline) ... ok
+-test_joint_selection_filters_population_and_uses_db (test_optimization.OptimizationTests.test_joint_selection_filters_population_and_uses_db) ... ok
+-test_pareto_and_deterministic_hierarchical_fit (test_optimization.OptimizationTests.test_pareto_and_deterministic_hierarchical_fit) ... ok
+-test_alignment_ignores_input_order_and_entry_only_clusters (test_orion_review.OrionTests.test_alignment_ignores_input_order_and_entry_only_clusters) ... ok
+-test_all_date_observation_population (test_orion_review.OrionTests.test_all_date_observation_population) ... ok
+-test_deviation_definition_and_singleton (test_orion_review.OrionTests.test_deviation_definition_and_singleton) ... ok
+-test_jaccard_is_not_overlap_objective (test_orion_review.OrionTests.test_jaccard_is_not_overlap_objective) ... ok
+-test_permutation_unmatched_and_membership_events (test_orion_review.OrionTests.test_permutation_unmatched_and_membership_events) ... ok
+-test_saved_objectives_disagree_on_four_instruments (test_orion_review.OrionTests.test_saved_objectives_disagree_on_four_instruments) ... ok
+-test_completion_collision_and_manifest (test_tracking.TrackingTests.test_completion_collision_and_manifest) ... ok
+-test_completion_marker_io_failure_marks_registry_failed (test_tracking.TrackingTests.test_completion_marker_io_failure_marks_registry_failed) ... ok
+-test_concurrent_registry_updates_and_finalization (test_tracking.TrackingTests.test_concurrent_registry_updates_and_finalization) ... ok
+-test_dependency_failure_tracked_before_heavy_imports (test_tracking.TrackingTests.test_dependency_failure_tracked_before_heavy_imports) ... ok
+-test_failed_runs_preserve_diagnostics (test_tracking.TrackingTests.test_failed_runs_preserve_diagnostics) ... Traceback (most recent call last):
+-  File "C:\Users\HP\Documents\GitHub\JSE-Top-40-Clustering\tests\test_tracking.py", line 32, in test_failed_runs_preserve_diagnostics
+-    raise RuntimeError('synthetic failure')
+-RuntimeError: synthetic failure
+-ok
+-test_finalization_failure_never_completes (test_tracking.TrackingTests.test_finalization_failure_never_completes) ... ok
+-test_invalid_run_id (test_tracking.TrackingTests.test_invalid_run_id) ... ok
+-test_registry_rejects_invalid_status (test_tracking.TrackingTests.test_registry_rejects_invalid_status) ... ok
+-test_registry_serializes_independent_processes (test_tracking.TrackingTests.test_registry_serializes_independent_processes) ... ok
+-
+-----------------------------------------------------------------------
+-Ran 36 tests in 5.853s
+-
+-OK
+-PASS: 123 rows; 41 per date; 43 tickers; 3 RNI rows retained; 2 volume imputations; model features complete.
+-

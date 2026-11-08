@@ -1,7 +1,7 @@
 The previous pipeline lacked durable run provenance and had gaps in preprocessing
 derivation checks, temporal alignment and surrogate exports. This preserves the
 documented baseline, reconciles all 123 observations to the supplied workbook,
-adds immutable local tracking, and expands verification to 36 passing tests.
+adds immutable local tracking, and expands verification to 40 passing tests.
 
 Complete suites `final-full-42` and `repeat-full-42` include all three dates,
 nine model combinations per date, five seeds, k=2–10 and SHAP. All 89 deterministic
@@ -41,3 +41,10 @@ common-feature criterion but creates singleton groups. Both silhouette and DB,
 individual metric champions, Pareto trade-offs, coverage and seed stability are
 reported. These are new-data exploratory optima within the declared grid, not
 an exact reproduction or automatic replacement of the original paper results.
+
+The user's UMAP snippet is also repaired and executed as `user-umap-grid-01`:
+36 supplied combinations, followed by k=2–15 on the winning embedding. It prints
+separate silhouette/DB champions, the joint winner and exact parameters, and
+offers a verified print-only command for saved runs. Score curves and a matching
+average/Manhattan dendrogram are archived. The seed-42 four-cluster result is
+explicitly an exploratory sensitivity and does not replace the baseline.

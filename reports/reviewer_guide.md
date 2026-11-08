@@ -1,5 +1,9 @@
 # Reviewer guide
 
+The supplied UMAP snippet is now a tested executable with saved best-parameter
+printing, score curves and a matching dendrogram. See
+[the results and commands](user_umap_grid_results.md) for run `user-umap-grid-01`.
+
 Latest follow-up: [paper review](paper_review.md) and
 [joint silhouette/DB optimisation](optimization_results.md). Run
 `silhouette-db-search-01` evaluates 1,426 configurations over five selection-date
@@ -26,7 +30,7 @@ The paper specification/results have not been promoted for publication.
    `59795b348a6ab447ca41219efb66ab4eddd93dce`. Implementation commit:
    `89c2cce42096ce3d2d4ee0def3b42d71a16c4c4b`.
 2. Run `python scripts/checks.py`. The saved [actual test log](test_results.txt)
-   records successful optimized-mode data validation and 36 passing tests,
+   records successful optimized-mode data validation and 40 passing tests,
    including the ORiON reporting checks added after the original analysis audit.
    Expected synthetic failure tracebacks inside passing tracking tests are intentional.
 3. Verify `python scripts/verify_run.py experiments/runs/final-full-42` and

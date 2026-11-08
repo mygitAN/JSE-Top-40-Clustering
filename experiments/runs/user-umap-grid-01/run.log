@@ -1,0 +1,37 @@
+PASS: 123 rows; 41 per date; 43 tickers; 3 RNI rows retained; 2 volume imputations; model features complete.
+
+Your 36-combination grid
+highest_silhouette: n_neighbors=3, min_dist=0.1, n_clusters=7, silhouette=0.748599, DB=0.259814
+lowest_db: n_neighbors=3, min_dist=0.1, n_clusters=7, silhouette=0.748599, DB=0.259814
+joint: n_neighbors=3, min_dist=0.1, n_clusters=7, silhouette=0.748599, DB=0.259814
+
+k sweep on the selected embedding
+highest_silhouette: n_neighbors=3, min_dist=0.1, n_clusters=4, silhouette=0.876566, DB=0.143483
+lowest_db: n_neighbors=3, min_dist=0.1, n_clusters=4, silhouette=0.876566, DB=0.143483
+joint: n_neighbors=3, min_dist=0.1, n_clusters=4, silhouette=0.876566, DB=0.143483
+
+Final parameters:
+{
+  "n_neighbors": 3,
+  "min_dist": 0.1,
+  "n_components": 2,
+  "umap_metric": "euclidean",
+  "n_clusters": 4,
+  "clustering_metric": "manhattan",
+  "linkage": "average",
+  "random_state": 42,
+  "n_jobs": 1
+}
+
+Top 10 grid rows (joint silhouette/DB ranking):
+ n_neighbors  min_dist  n_clusters  Silhouette  Davies_Bouldin  joint_rank_sum
+           3      0.10           7    0.748599        0.259814             2.0
+           3      0.04           7    0.736819        0.308574             4.0
+           3      0.01           7    0.735458        0.310729             6.0
+           5      0.01           7    0.655892        0.362343             8.0
+           3      0.10          10    0.632429        0.380282            13.0
+           3      0.01          12    0.630455        0.388706            15.0
+           3      0.10          12    0.640923        0.407176            17.0
+           3      0.01          10    0.649326        0.427369            18.0
+           3      0.04          10    0.640201        0.407915            19.0
+           3      0.10          11    0.626121        0.402824            19.0

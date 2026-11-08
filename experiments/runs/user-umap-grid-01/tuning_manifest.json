@@ -1,0 +1,30 @@
+{
+  "selection_date": "2025-06-30",
+  "seed": 42,
+  "grid_combinations": 36,
+  "cluster_sweep_fits": 14,
+  "umap_grid_fits": 9,
+  "scope": "36 grid combinations, then k=2..15 on the selected grid embedding; not a full 9x14 joint search",
+  "features": [
+    "return_1y",
+    "average_daily_volume_1y_model",
+    "market_cap_zar",
+    "beta_1y",
+    "shares_outstanding",
+    "revenue_zar_model",
+    "eps_zar_model",
+    "annualised_volatility_1y",
+    "dividend_yield",
+    "earnings_yield_model_clipped"
+  ],
+  "scaling_fit_on": "2025-06-30",
+  "silhouette_geometry": "Euclidean embedding distances",
+  "db_geometry": "Euclidean embedding centroids",
+  "linkage_geometry": "average/Manhattan",
+  "baseline_promoted": false,
+  "warnings": [
+    "Single-seed exploratory result, not five-seed stability evidence",
+    "Two-stage search is not a complete 9x14 search",
+    "Later snapshots are descriptive frozen-parameter refits; source evidence limitations unchanged"
+  ]
+}

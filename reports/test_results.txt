@@ -44,9 +44,13 @@ test_finalization_failure_never_completes (test_tracking.TrackingTests.test_fina
 test_invalid_run_id (test_tracking.TrackingTests.test_invalid_run_id) ... ok
 test_registry_rejects_invalid_status (test_tracking.TrackingTests.test_registry_rejects_invalid_status) ... ok
 test_registry_serializes_independent_processes (test_tracking.TrackingTests.test_registry_serializes_independent_processes) ... ok
+test_both_scores_print_separate_champions (test_tune_umap.UserUmapTests.test_both_scores_print_separate_champions) ... ok
+test_dendrogram_tree_matches_same_clustering_geometry (test_tune_umap.UserUmapTests.test_dendrogram_tree_matches_same_clustering_geometry) ... ok
+test_grid_reuses_fits_and_sweeps_best_not_last_embedding (test_tune_umap.UserUmapTests.test_grid_reuses_fits_and_sweeps_best_not_last_embedding) ... ok
+test_invalid_input_fails_instead_of_skipping (test_tune_umap.UserUmapTests.test_invalid_input_fails_instead_of_skipping) ... ok
 
 ----------------------------------------------------------------------
-Ran 36 tests in 5.853s
+Ran 40 tests in 5.686s
 
 OK
 PASS: 123 rows; 41 per date; 43 tickers; 3 RNI rows retained; 2 volume imputations; model features complete.

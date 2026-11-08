@@ -29,6 +29,10 @@ python scripts/run_analysis.py --mode full --experiment fixed-suite
 python scripts/optimize_models.py
 # Build the compact results/plots using the completed run ID:
 python scripts/summarize_optimization.py silhouette-db-search-01
+# Print the supplied UMAP grid's saved winners and parameters without refitting:
+python scripts/tune_umap.py --print-run user-umap-grid-01
+# Run that 36-combination grid and its selected-embedding k sweep again:
+python scripts/tune_umap.py
 ```
 
 Outputs go to unique immutable `experiments/runs/<run_id>/` directories. Each run
