@@ -1,0 +1,40 @@
+{
+  "policy": "Retrospective public-source reconstruction, not point-in-time investor-observable backtest. Later restatements permitted by research design, though this extract retains the original issuer values already present in v4.",
+  "source_workbook": "Top40_PIT_Verification_v4.xlsx",
+  "population": {
+    "total": 123,
+    "per_snapshot": 41,
+    "excluded": "none; every historically eligible Top 40 instrument remains",
+    "imputed_volume_rows": 2,
+    "imputed_fundamental_rows": 3
+  },
+  "features": "Original 11-feature concept except analyst ratings absent and P/E replaced by earnings yield; sector retained as categorical, do not ordinal-code; selected numeric fields preserve native units. Revenue/EPS may not have cross-sector uniform accounting meaning.",
+  "split": {
+    "2025-06-30": "train",
+    "2025-12-31": "validation",
+    "2026-06-30": "test"
+  },
+  "preprocessing_fit_on": "2025-06-30 only",
+  "volume_imputation": {
+    "method": "training median",
+    "value": 1534909.228915663,
+    "missing_indicator": "volume_imputed"
+  },
+  "fundamental_imputation": {
+    "method": "training medians for modelling features only; raw values remain blank",
+    "revenue_zar": 98244535964.16383,
+    "eps_zar": 12.7715,
+    "earnings_yield": 0.051361404520658835,
+    "missing_indicator": "fundamentals_imputed",
+    "affected": "RNI at all three snapshots; do not interpret imputed values as reported figures or as an ordinary cluster transition"
+  },
+  "earnings_yield_clipping": {
+    "method": "training 1st/99th empirical percentiles, linear interpolation",
+    "lower": -0.5889019129867248,
+    "upper": 0.14636747615529913
+  },
+  "sector": "Legacy Listcorp labels; eight categories, historically unverified. Categorical feature retained per user; do not call current official 11-industry ICB.",
+  "shares_and_cap": "All shares are unverified Yahoo-era historical reconstruction; cap reconciles as close times shares. No guarantee this share basis was available at snapshot.",
+  "market": "Retrospective Yahoo daily history with repairs documented in PIT Market, not an archived as-of vendor extract.",
+  "permitted_use": "Exploratory clustering, sensitivity analysis, pipeline development. Not no-look-ahead headline portfolio performance."
+}
