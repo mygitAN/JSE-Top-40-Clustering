@@ -1,0 +1,10 @@
+,2025-06-30,2025-12-31,2026-06-30
+Firms,41,41,41
+"Silhouette, t-SNE map",0.5709050893783569,0.5980584025382996,0.6414365768432617
+"Davies–Bouldin, t-SNE map",0.429116040498579,0.4472298681725992,0.40711855686175324
+"Silhouette, 10-feature space",0.18174852638305625,0.17672695482714054,0.22298313486650712
+"Seed ARI, mean (min)",0.73 (0.53),0.92 (0.88),0.93 (0.84)
+Sector ARI / NMI (mean of seeds),0.22 / 0.52,0.26 / 0.55,0.30 / 0.60
+Robust sector-divergent firms,6,9,6
+"T² outliers, feature space",3,1,2
+Surrogate OOF accuracy,0.54,—,0.73
