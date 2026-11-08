@@ -1,0 +1,4 @@
+date,clusters,smallest_cluster,in_sample_accuracy,oof_accuracy,oof_status
+2025-06-30,8,2,1.0,0.5365853658536586,estimated
+2025-12-31,8,1,1.0,,not estimable: a singleton cluster prevents stratified cross-validation
+2026-06-30,8,2,1.0,0.7317073170731707,estimated

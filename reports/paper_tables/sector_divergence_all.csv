@@ -1,0 +1,124 @@
+date,ticker,sector,divergent_share,usual_cluster_sector,singleton_share,imputation_sensitive
+2025-06-30,ABG,Financials,0.0,,0.0,False
+2025-06-30,AGL,Basic Materials,0.2,Consumer Services,0.0,True
+2025-06-30,ANG,Basic Materials,0.0,,0.0,False
+2025-06-30,ANH,Consumer Goods,0.0,,0.0,False
+2025-06-30,APN,Health Care,0.8,Consumer Services,0.0,False
+2025-06-30,BHG,Basic Materials,1.0,Consumer Goods,0.0,False
+2025-06-30,BID,Consumer Services,0.2,Financials,0.0,False
+2025-06-30,BTI,Consumer Goods,0.0,,0.0,False
+2025-06-30,BVT,Industrials,0.8,Consumer Services,0.0,False
+2025-06-30,CFR,Consumer Goods,0.2,Financials,0.0,False
+2025-06-30,CLS,Consumer Services,0.2,Financials,0.0,False
+2025-06-30,CPI,Financials,0.0,,0.0,False
+2025-06-30,DSY,Financials,0.0,,0.0,False
+2025-06-30,FSR,Financials,0.0,,0.0,False
+2025-06-30,GFI,Basic Materials,0.0,,0.0,False
+2025-06-30,GRT,Financials,0.0,,0.0,False
+2025-06-30,HAR,Basic Materials,0.0,,0.0,False
+2025-06-30,IMP,Basic Materials,0.0,,0.0,False
+2025-06-30,INL,Financials,0.0,,0.0,False
+2025-06-30,INP,Financials,0.0,,0.0,False
+2025-06-30,MNP,Basic Materials,0.6,Consumer Services,0.0,False
+2025-06-30,MRP,Consumer Services,0.2,Basic Materials,0.0,False
+2025-06-30,MTN,Telecommunications,0.6,Basic Materials,0.0,False
+2025-06-30,NED,Financials,0.0,,0.0,False
+2025-06-30,NPH,Basic Materials,0.0,,0.0,False
+2025-06-30,NPN,Technology,0.6,Financials,0.0,False
+2025-06-30,NRP,Financials,0.0,,0.0,False
+2025-06-30,OMU,Financials,0.0,,0.0,False
+2025-06-30,OUT,Financials,0.0,,0.0,False
+2025-06-30,PPH,Consumer Services,0.6,Basic Materials,0.0,False
+2025-06-30,PRX,Technology,1.0,Consumer Goods,0.0,False
+2025-06-30,REM,Financials,0.4,Consumer Services,0.0,False
+2025-06-30,RNI,Financials,0.4,Consumer Services,0.0,True
+2025-06-30,SBK,Financials,0.0,,0.0,False
+2025-06-30,SHP,Consumer Services,0.0,,0.0,False
+2025-06-30,SLM,Financials,0.0,,0.0,False
+2025-06-30,SOL,Basic Materials,0.2,Consumer Services,0.0,False
+2025-06-30,SSW,Basic Materials,0.0,,0.0,False
+2025-06-30,VAL,Basic Materials,1.0,Financials,0.0,False
+2025-06-30,VOD,Telecommunications,0.8,Financials,0.0,False
+2025-06-30,WHL,Consumer Services,0.2,Basic Materials,0.0,False
+2025-12-31,ABG,Financials,0.0,,0.0,False
+2025-12-31,AGL,Basic Materials,0.4,Financials,0.0,True
+2025-12-31,ANG,Basic Materials,0.0,,0.0,False
+2025-12-31,ANH,Consumer Goods,0.0,,0.0,False
+2025-12-31,BHG,Basic Materials,1.0,Consumer Goods,0.0,False
+2025-12-31,BID,Consumer Services,0.0,,0.0,False
+2025-12-31,BTI,Consumer Goods,0.0,,0.0,False
+2025-12-31,BVT,Industrials,1.0,Consumer Services,0.0,False
+2025-12-31,CFR,Consumer Goods,0.0,,0.0,False
+2025-12-31,CLS,Consumer Services,0.0,,0.0,False
+2025-12-31,CPI,Financials,0.2,Basic Materials,0.0,False
+2025-12-31,DSY,Financials,0.0,,0.0,False
+2025-12-31,FSR,Financials,0.0,,0.0,False
+2025-12-31,GFI,Basic Materials,0.0,,0.0,False
+2025-12-31,GLN,Basic Materials,1.0,Consumer Goods,0.0,False
+2025-12-31,GRT,Financials,0.0,,0.0,False
+2025-12-31,HAR,Basic Materials,0.0,,0.0,False
+2025-12-31,IMP,Basic Materials,0.0,,0.0,False
+2025-12-31,INL,Financials,0.0,,0.0,False
+2025-12-31,INP,Financials,0.0,,0.0,False
+2025-12-31,MNP,Basic Materials,1.0,Financials,0.0,False
+2025-12-31,MRP,Consumer Services,1.0,Financials,0.0,False
+2025-12-31,MTN,Telecommunications,0.6,Basic Materials,0.4,False
+2025-12-31,NED,Financials,0.0,,0.0,False
+2025-12-31,NPH,Basic Materials,0.0,,0.0,False
+2025-12-31,NPN,Technology,1.0,Financials,0.0,False
+2025-12-31,NRP,Financials,0.0,,0.0,False
+2025-12-31,OMU,Financials,0.0,,0.0,False
+2025-12-31,OUT,Financials,0.0,,0.0,False
+2025-12-31,PPH,Consumer Services,1.0,Financials,0.0,False
+2025-12-31,PRX,Technology,1.0,Consumer Goods,0.0,False
+2025-12-31,REM,Financials,0.0,,0.0,False
+2025-12-31,RNI,Financials,0.0,,0.0,True
+2025-12-31,SBK,Financials,0.0,,0.0,False
+2025-12-31,SHP,Consumer Services,0.0,,0.0,False
+2025-12-31,SLM,Financials,0.0,,0.0,False
+2025-12-31,SOL,Basic Materials,0.4,Financials,0.0,False
+2025-12-31,SSW,Basic Materials,0.0,,0.0,False
+2025-12-31,VAL,Basic Materials,0.0,,0.0,False
+2025-12-31,VOD,Telecommunications,1.0,Financials,0.0,False
+2025-12-31,WHL,Consumer Services,0.0,,0.0,False
+2026-06-30,ABG,Financials,0.0,,0.0,False
+2026-06-30,AGL,Basic Materials,0.0,,0.0,True
+2026-06-30,ANG,Basic Materials,0.0,,0.0,False
+2026-06-30,ANH,Consumer Goods,0.0,,0.0,False
+2026-06-30,BHG,Basic Materials,1.0,Consumer Goods,0.0,False
+2026-06-30,BID,Consumer Services,0.2,Financials,0.0,False
+2026-06-30,BTI,Consumer Goods,0.0,,0.0,False
+2026-06-30,BVT,Industrials,0.2,Financials,0.0,False
+2026-06-30,CFR,Consumer Goods,0.0,,0.0,False
+2026-06-30,CLS,Consumer Services,0.0,,0.0,False
+2026-06-30,CPI,Financials,0.0,,0.0,False
+2026-06-30,DSY,Financials,0.0,,0.0,False
+2026-06-30,FSR,Financials,0.0,,0.0,False
+2026-06-30,GFI,Basic Materials,0.0,,0.0,False
+2026-06-30,GLN,Basic Materials,1.0,Consumer Goods,0.0,False
+2026-06-30,GRT,Financials,0.0,,0.0,False
+2026-06-30,HAR,Basic Materials,0.0,,0.0,False
+2026-06-30,IMP,Basic Materials,0.0,,0.0,False
+2026-06-30,INL,Financials,0.0,,0.0,False
+2026-06-30,INP,Financials,0.0,,0.0,False
+2026-06-30,MRP,Consumer Services,0.0,,0.0,False
+2026-06-30,MTN,Telecommunications,1.0,Basic Materials,0.0,False
+2026-06-30,NED,Financials,0.0,,0.0,False
+2026-06-30,NPH,Basic Materials,0.0,,0.0,False
+2026-06-30,NPN,Technology,0.0,,0.0,False
+2026-06-30,NRP,Financials,0.0,,0.0,False
+2026-06-30,OMU,Financials,0.0,,0.0,False
+2026-06-30,OUT,Financials,0.2,Consumer Services,0.0,False
+2026-06-30,PAN,Basic Materials,0.0,,0.0,False
+2026-06-30,PPH,Consumer Services,1.0,Financials,0.0,False
+2026-06-30,PRX,Technology,0.0,,0.0,False
+2026-06-30,REM,Financials,0.0,,0.0,False
+2026-06-30,RNI,Financials,0.0,,0.0,True
+2026-06-30,SBK,Financials,0.2,Basic Materials,0.0,False
+2026-06-30,SHP,Consumer Services,0.2,Financials,0.0,False
+2026-06-30,SLM,Financials,0.2,Consumer Services,0.0,False
+2026-06-30,SOL,Basic Materials,0.0,,0.0,False
+2026-06-30,SSW,Basic Materials,0.0,,0.0,False
+2026-06-30,VAL,Basic Materials,0.0,,0.0,False
+2026-06-30,VOD,Telecommunications,1.0,Financials,0.0,False
+2026-06-30,WHL,Consumer Services,0.8,Financials,0.0,False
