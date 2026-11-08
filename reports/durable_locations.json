@@ -1,0 +1,62 @@
+{
+  "repository": "https://github.com/mygitAN/JSE-Top-40-Clustering",
+  "branch": "research/reproducible-review",
+  "pull_request": "https://github.com/mygitAN/JSE-Top-40-Clustering/pull/1",
+  "results_commit": "65f121fb944e406896ff0172b630597e9b7af7ea",
+  "retention": "Complete bundles stored in Git history; no dependency on expiring Actions artifacts",
+  "reviewer_guide": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/65f121fb944e406896ff0172b630597e9b7af7ea/reports/reviewer_guide.md",
+  "registry": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/65f121fb944e406896ff0172b630597e9b7af7ea/experiments/registry.csv",
+  "bundles": [
+    {
+      "run_id": "audit-full-42",
+      "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/tree/65f121fb944e406896ff0172b630597e9b7af7ea/experiments/runs/audit-full-42"
+    },
+    {
+      "run_id": "final-full-42",
+      "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/tree/65f121fb944e406896ff0172b630597e9b7af7ea/experiments/runs/final-full-42"
+    },
+    {
+      "run_id": "repeat-full-42",
+      "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/tree/65f121fb944e406896ff0172b630597e9b7af7ea/experiments/runs/repeat-full-42"
+    }
+  ],
+  "remote_reads": [
+    {
+      "run_id": "audit-full-42",
+      "file": "artifact_checksums.json",
+      "git_blob_sha": "0701569a1c025b29b7496706014ef9c19ada96fa",
+      "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/65f121fb944e406896ff0172b630597e9b7af7ea/experiments/runs/audit-full-42/artifact_checksums.json"
+    },
+    {
+      "run_id": "audit-full-42",
+      "file": "COMPLETED",
+      "git_blob_sha": "353e321853c0adbad3c33b3a53f74e8825b6e550",
+      "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/65f121fb944e406896ff0172b630597e9b7af7ea/experiments/runs/audit-full-42/COMPLETED"
+    },
+    {
+      "run_id": "final-full-42",
+      "file": "artifact_checksums.json",
+      "git_blob_sha": "8f60daa0dd1ce1ed3e0b943f33161bbd37a4c242",
+      "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/65f121fb944e406896ff0172b630597e9b7af7ea/experiments/runs/final-full-42/artifact_checksums.json"
+    },
+    {
+      "run_id": "final-full-42",
+      "file": "COMPLETED",
+      "git_blob_sha": "9e4490a6787c9abc0baa2edeea80fbc60da0ff3d",
+      "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/65f121fb944e406896ff0172b630597e9b7af7ea/experiments/runs/final-full-42/COMPLETED"
+    },
+    {
+      "run_id": "repeat-full-42",
+      "file": "artifact_checksums.json",
+      "git_blob_sha": "d843fa63aeb6ecf3210069a87d64164ebccae6c4",
+      "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/65f121fb944e406896ff0172b630597e9b7af7ea/experiments/runs/repeat-full-42/artifact_checksums.json"
+    },
+    {
+      "run_id": "repeat-full-42",
+      "file": "COMPLETED",
+      "git_blob_sha": "e2535ee0934996a7bb62e5960bae2c4e07321ee3",
+      "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/65f121fb944e406896ff0172b630597e9b7af7ea/experiments/runs/repeat-full-42/COMPLETED"
+    }
+  ],
+  "remote_manifest_and_marker_comparison": "passed: all six remote Git blob SHAs match local exact bytes"
+}

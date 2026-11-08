@@ -21,6 +21,7 @@ test_corrupt_flags_and_model_values_fail (test_data.DataTests.test_corrupt_flags
 test_missing_required_data_fails (test_data.DataTests.test_missing_required_data_fails) ... ok
 test_validation_checks_survive_optimization (test_data.DataTests.test_validation_checks_survive_optimization) ... ok
 test_completion_collision_and_manifest (test_tracking.TrackingTests.test_completion_collision_and_manifest) ... ok
+test_completion_marker_io_failure_marks_registry_failed (test_tracking.TrackingTests.test_completion_marker_io_failure_marks_registry_failed) ... ok
 test_concurrent_registry_updates_and_finalization (test_tracking.TrackingTests.test_concurrent_registry_updates_and_finalization) ... ok
 test_dependency_failure_tracked_before_heavy_imports (test_tracking.TrackingTests.test_dependency_failure_tracked_before_heavy_imports) ... ok
 test_failed_runs_preserve_diagnostics (test_tracking.TrackingTests.test_failed_runs_preserve_diagnostics) ... Traceback (most recent call last):
@@ -34,7 +35,7 @@ test_registry_rejects_invalid_status (test_tracking.TrackingTests.test_registry_
 test_registry_serializes_independent_processes (test_tracking.TrackingTests.test_registry_serializes_independent_processes) ... ok
 
 ----------------------------------------------------------------------
-Ran 24 tests in 9.641s
+Ran 25 tests in 6.293s
 
 OK
 PASS: 123 rows; 41 per date; 43 tickers; 3 RNI rows retained; 2 volume imputations; model features complete.

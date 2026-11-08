@@ -59,7 +59,7 @@ def registry_lock(base, timeout=15):
         lock.unlink()
 
 
-def register(base, record):
+def register(base, record, *, finalization_recovery=False):
     base = Path(base)
     with registry_lock(base):
         path = base / 'registry.csv'
@@ -70,8 +70,13 @@ def register(base, record):
         if record.get('status') not in {'running', 'completed', 'failed'}:
             raise ValueError('Invalid registry status')
         matches = [r for r in records if r['run_id'] == record['run_id']]
-        if matches and (matches[0]['status'] != 'running' or record['status'] == 'running'):
-            raise FileExistsError('Registry run ID already used or finalized')
+        if matches:
+            transition = matches[0]['status'] == 'running' and record['status'] in {'completed', 'failed'}
+            recovery = (finalization_recovery and matches[0]['status'] == 'completed' and
+                        record['status'] == 'failed' and
+                        not (base/'runs'/record['run_id']/'COMPLETED').exists())
+            if not (transition or recovery):
+                raise FileExistsError('Registry run ID already used or finalized')
         records = [r for r in records if r['run_id'] != record['run_id']]
         records.append({k: record.get(k, '') for k in FIELDS})
         buf = io.StringIO(newline='')
@@ -179,7 +184,7 @@ class Run:
             self.meta.update(status='failed', error=f'Finalization failed: {error}')
             (self.out/'finalization_error.txt').write_text(traceback.format_exc(), encoding='utf-8')
             try:
-                register(self.base, self.meta)
+                register(self.base, self.meta, finalization_recovery=True)
             except Exception as registry_error:
                 # A locked/corrupt registry must not conceal local failure evidence.
                 self.meta['registry_error'] = str(registry_error)

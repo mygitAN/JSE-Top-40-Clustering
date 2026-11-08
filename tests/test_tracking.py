@@ -74,6 +74,23 @@ class TrackingTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError, 'status'):
                 register(tmp, {'run_id': 'bad', 'status': 'success-ish'})
 
+    def test_completion_marker_io_failure_marks_registry_failed(self):
+        from unittest.mock import patch
+        original = Path.write_text
+        def write(path, *args, **kwargs):
+            if path.name == 'COMPLETED':
+                raise OSError('synthetic marker IO failure')
+            return original(path, *args, **kwargs)
+        with tempfile.TemporaryDirectory() as tmp:
+            with self.assertRaisesRegex(OSError, 'marker IO failure'):
+                with patch.object(Path, 'write_text', write):
+                    with Run(tmp, {}, 'test', 'marker failure', 'marker-failed') as run:
+                        pass
+            self.assertFalse((run.out/'COMPLETED').exists())
+            self.assertEqual(json.loads((run.out/'status.json').read_text())['status'], 'failed')
+            with (Path(tmp)/'registry.csv').open() as stream:
+                self.assertEqual(list(csv.DictReader(stream))[0]['status'], 'failed')
+
     def test_registry_serializes_independent_processes(self):
         with tempfile.TemporaryDirectory() as tmp:
             code = ('import sys; sys.path.insert(0, sys.argv[1]); '

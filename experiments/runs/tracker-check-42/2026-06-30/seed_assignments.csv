@@ -1,0 +1,42 @@
+ticker,sector_label,seed_42,seed_43
+ABG,Financials,4,3
+AGL,Basic Materials,5,6
+ANG,Basic Materials,3,1
+ANH,Consumer Goods,6,4
+BHG,Basic Materials,6,4
+BID,Consumer Services,0,0
+BTI,Consumer Goods,6,4
+BVT,Industrials,0,0
+CFR,Consumer Goods,6,4
+CLS,Consumer Services,0,0
+CPI,Financials,0,0
+DSY,Financials,0,0
+FSR,Financials,2,5
+GFI,Basic Materials,3,1
+GLN,Basic Materials,6,4
+GRT,Financials,2,5
+HAR,Basic Materials,3,1
+IMP,Basic Materials,3,1
+INL,Financials,4,3
+INP,Financials,4,3
+MRP,Consumer Services,0,0
+MTN,Telecommunications,5,6
+NED,Financials,4,3
+NPH,Basic Materials,3,1
+NPN,Technology,7,7
+NRP,Financials,4,3
+OMU,Financials,2,5
+OUT,Financials,1,2
+PAN,Basic Materials,3,1
+PPH,Consumer Services,2,5
+PRX,Technology,7,7
+REM,Financials,0,0
+RNI,Financials,0,0
+SBK,Financials,1,2
+SHP,Consumer Services,0,0
+SLM,Financials,1,2
+SOL,Basic Materials,5,6
+SSW,Basic Materials,3,1
+VAL,Basic Materials,3,1
+VOD,Telecommunications,1,2
+WHL,Consumer Services,1,2

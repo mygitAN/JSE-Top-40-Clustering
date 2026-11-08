@@ -1,0 +1,25 @@
+{
+  "observed_for_results_commit": "65f121fb944e406896ff0172b630597e9b7af7ea",
+  "checks": [
+    {
+      "link": "https://github.com/mygitAN/JSE-Top-40-Clustering/actions/runs/42466806726/job/128688093409",
+      "name": "validate (ubuntu-latest, 3.12)",
+      "state": "IN_PROGRESS"
+    },
+    {
+      "link": "https://github.com/mygitAN/JSE-Top-40-Clustering/actions/runs/42466806726/job/128688093296",
+      "name": "validate (windows-latest, 3.11)",
+      "state": "IN_PROGRESS"
+    },
+    {
+      "link": "https://github.com/mygitAN/JSE-Top-40-Clustering/actions/runs/42466693025/job/128687750726",
+      "name": "validate (ubuntu-latest, 3.12)",
+      "state": "SUCCESS"
+    },
+    {
+      "link": "https://github.com/mygitAN/JSE-Top-40-Clustering/actions/runs/42466693025/job/128687750869",
+      "name": "validate (windows-latest, 3.11)",
+      "state": "SUCCESS"
+    }
+  ]
+}

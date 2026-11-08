@@ -11,7 +11,7 @@ The paper specification/results have not been promoted for publication.
    `59795b348a6ab447ca41219efb66ab4eddd93dce`. Implementation commit:
    `89c2cce42096ce3d2d4ee0def3b42d71a16c4c4b`.
 2. Run `python scripts/checks.py`. The saved [actual test log](test_results.txt)
-   records successful optimized-mode data validation and 24 passing tests.
+   records successful optimized-mode data validation and 25 passing tests.
    Expected synthetic failure tracebacks inside passing tracking tests are intentional.
 3. Verify `python scripts/verify_run.py experiments/runs/final-full-42` and
    the corresponding repeat run. Each checksum manifest covers every artifact
@@ -33,12 +33,13 @@ The paper specification/results have not been promoted for publication.
 | audit-full-42 | Development end-to-end audit before final export/plot additions | completed |
 | final-full-42 | Fixed baseline on all dates, nine combinations/date, five seeds/date, k=2–10, SHAP | completed |
 | repeat-full-42 | Identical-config complete execution and numerical comparison | completed |
+| tracker-check-42 | All-date baseline/SHAP check after completion-marker failure recovery repair | completed |
 
 [Registry](../experiments/registry.csv), [specification](../configs/baseline.json),
 and [unpromoted baseline pointer](../experiments/baseline.json) are versioned.
-All three complete bundles are committed under `experiments/runs/`, including
+All four complete bundles are committed under `experiments/runs/`, including
 configuration, logs, source ZIP, package versions, arrays, models, plots and
-checksums. Their combined uncompressed size is approximately 12 MB; Git compresses
+checksums. Their combined uncompressed size is approximately 16 MB; Git compresses
 and deduplicates them. A release asset or expiring CI artifact is unnecessary at
 this size. `.gitattributes` preserves the exact experiment bytes on every platform.
 See `durable_locations.json` for verified remote identifiers once uploaded.
@@ -48,6 +49,10 @@ because uncommitted result/documentation files were present. Both preserve their
 actual source snapshots and tracked patches. The development run records the
 original starting commit plus its actual uncommitted implementation snapshot.
 Do not mistake a commit identifier alone for the full code of a dirty run.
+The additional tracker check records the results commit plus a patch/source
+snapshot for a final recovery repair: if writing the completion marker itself
+fails, both local status and the already-updated registry must become failed.
+A dedicated synthetic I/O failure test verifies that terminal recovery.
 
 ## Baseline findings
 
@@ -140,9 +145,11 @@ review exports, expanded tests and selectable CI experiments.
 
 The complete analysis ran locally with all pinned top-level packages on Windows
 Python 3.11.14; [full environment lock](../configs/environment-windows-py311.txt).
-Python 3.12 download failed, and temporary-fixture tests required execution with
-normal Windows file permissions. CI is configured on Windows/3.11 and Ubuntu/3.12.
-Check the PR for actual remote CI outcomes; configuration alone is not a pass.
+The local Python 3.12 download failed, and temporary-fixture tests required execution
+with normal Windows file permissions. Both Windows/3.11 and Ubuntu/3.12 CI jobs
+subsequently passed tests and all-date baseline end-to-end execution for the
+results commit. `ci_status.json` records observed check URLs/states. Check the
+PR for later commit outcomes; a previous pass is not a claim about a pending run.
 
 No known unresolved local test or end-to-end failure remains. Review is still
 needed for the short t-SNE optimization, k=8, correlated size inputs, sensitivity

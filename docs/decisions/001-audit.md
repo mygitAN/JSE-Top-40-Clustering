@@ -44,7 +44,8 @@ All eight top-level versions in requirements.txt were installed and executed on
 Windows with CPython 3.11.14. The requested Python 3.12 download failed with a
 gateway timeout. `configs/environment-windows-py311.txt` records the complete
 installed dependency set. Linux/Python 3.12 and Windows/Python 3.11 CI jobs are
-configured, but local success does not establish their remote success.
+configured. Subsequent remote jobs passed on both platforms for the results
+commit; observed job URLs/states are recorded in `reports/ci_status.json`.
 
 Windows sandbox ACLs blocked Python TemporaryDirectory fixtures, including
 directories inside the workspace. Tests were run with normal temporary-file
@@ -52,6 +53,11 @@ access after preserving the failures during development. A genuine lock race
 also occurred: Windows can return PermissionError during another owner's lock
 close/unlink. Bounded retries and explicit closing of registry readers fixed it.
 The tests exercise threads and independent processes.
+
+A final failure-mode audit added recovery from a completion-marker I/O failure
+after the registry had already recorded completion. Such an uncommitted terminal
+state may be changed to failed only while the completion marker is absent.
+A synthetic test and a further all-date baseline/SHAP execution verify this repair.
 
 ## Open questions for the methodological reviewer
 

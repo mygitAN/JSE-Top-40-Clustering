@@ -1,0 +1,21 @@
+{
+  "results_commit": "65f121fb944e406896ff0172b630597e9b7af7ea",
+  "method": "git archive bytes, every manifest entry and completion marker",
+  "runs": [
+    {
+      "run_id": "audit-full-42",
+      "verified_artifacts": 104,
+      "status": "passed"
+    },
+    {
+      "run_id": "final-full-42",
+      "verified_artifacts": 123,
+      "status": "passed"
+    },
+    {
+      "run_id": "repeat-full-42",
+      "verified_artifacts": 123,
+      "status": "passed"
+    }
+  ]
+}

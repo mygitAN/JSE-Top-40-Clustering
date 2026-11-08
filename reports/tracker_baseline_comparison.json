@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "left": "final-full-42",
+  "right": "tracker-check-42",
+  "rtol": 1e-07,
+  "atol": 1e-06,
+  "compared": [
+    "2025-06-30/baseline_arrays.npz",
+    "2025-06-30/shap_values.npz",
+    "2025-12-31/baseline_arrays.npz",
+    "2025-12-31/shap_values.npz",
+    "2026-06-30/baseline_arrays.npz",
+    "2026-06-30/shap_values.npz",
+    "assignments.csv",
+    "cluster_count_sensitivity.csv",
+    "temporal_agreement.csv",
+    "temporal_label_alignment.csv",
+    "membership_and_cluster_transitions.csv"
+  ]
+}
