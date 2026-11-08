@@ -1,0 +1,4 @@
+decision_date,model,n_clusters,noise_count,coverage,silhouette_metric,davies_bouldin_geometry,silhouette_embedding,silhouette_features,davies_bouldin_embedding,sector_ari,sector_nmi,clustering_geometry
+2025-06-30,tsne_hierarchical,8,0,1.0,euclidean,euclidean embedding centroids,0.5709050893783569,0.1817485263830562,0.429116040498579,0.2363896848137535,0.5234601337228466,manhattan embedding
+2025-12-31,tsne_hierarchical,8,0,1.0,euclidean,euclidean embedding centroids,0.5980584025382996,0.1767269548271405,0.4472298681725992,0.2479854067273383,0.5417107866997781,manhattan embedding
+2026-06-30,tsne_hierarchical,8,0,1.0,euclidean,euclidean embedding centroids,0.6414365768432617,0.2229831348665071,0.4071185568617532,0.3064321468848307,0.60130288684451,manhattan embedding

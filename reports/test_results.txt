@@ -1,0 +1,41 @@
+COMMAND: ['C:\\Users\\HP\\Documents\\GitHub\\JSE-Top-40-Clustering\\.venv\\Scripts\\python.exe', '-O', 'C:\\Users\\HP\\Documents\\GitHub\\JSE-Top-40-Clustering\\scripts\\validate_data.py']
+RETURN CODE: 0
+PASS: 123 rows; 41 per date; 43 tickers; 3 RNI rows retained; 2 volume imputations; model features complete.
+
+COMMAND: ['C:\\Users\\HP\\Documents\\GitHub\\JSE-Top-40-Clustering\\.venv\\Scripts\\python.exe', '-m', 'unittest', 'discover', '-s', 'tests', '-v']
+RETURN CODE: 0
+test_duplicate_and_missing_features_fail (test_analysis.AnalysisTests.test_duplicate_and_missing_features_fail) ... ok
+test_entries_and_exits_are_not_cluster_changes (test_analysis.AnalysisTests.test_entries_and_exits_are_not_cluster_changes) ... ok
+test_future_values_do_not_change_scaler (test_analysis.AnalysisTests.test_future_values_do_not_change_scaler) ... ok
+test_noise_has_no_fake_silhouette (test_analysis.AnalysisTests.test_noise_has_no_fake_silhouette) ... ok
+test_permuted_labels_align (test_analysis.AnalysisTests.test_permuted_labels_align) ... ok
+test_retains_all_members_and_rni (test_analysis.AnalysisTests.test_retains_all_members_and_rni) ... ok
+test_same_seed_and_row_order (test_analysis.AnalysisTests.test_same_seed_and_row_order) ... ok
+test_shap_class_mapping_singleton_and_additivity (test_analysis.AnalysisTests.test_shap_class_mapping_singleton_and_additivity) ... ok
+test_shap_oof_estimable (test_analysis.AnalysisTests.test_shap_oof_estimable) ... ok
+test_temporal_metrics_ignore_label_permutation (test_analysis.AnalysisTests.test_temporal_metrics_ignore_label_permutation) ... ok
+test_unmatched_and_disjoint_clusters (test_analysis.AnalysisTests.test_unmatched_and_disjoint_clusters) ... ok
+test_complete_validation_and_workbook_reconciliation (test_data.DataTests.test_complete_validation_and_workbook_reconciliation) ... ok
+test_constants_use_only_june_2025 (test_data.DataTests.test_constants_use_only_june_2025) ... ok
+test_corrupt_flags_and_model_values_fail (test_data.DataTests.test_corrupt_flags_and_model_values_fail) ... ok
+test_missing_required_data_fails (test_data.DataTests.test_missing_required_data_fails) ... ok
+test_validation_checks_survive_optimization (test_data.DataTests.test_validation_checks_survive_optimization) ... ok
+test_completion_collision_and_manifest (test_tracking.TrackingTests.test_completion_collision_and_manifest) ... ok
+test_concurrent_registry_updates_and_finalization (test_tracking.TrackingTests.test_concurrent_registry_updates_and_finalization) ... ok
+test_dependency_failure_tracked_before_heavy_imports (test_tracking.TrackingTests.test_dependency_failure_tracked_before_heavy_imports) ... ok
+test_failed_runs_preserve_diagnostics (test_tracking.TrackingTests.test_failed_runs_preserve_diagnostics) ... Traceback (most recent call last):
+  File "C:\Users\HP\Documents\GitHub\JSE-Top-40-Clustering\tests\test_tracking.py", line 32, in test_failed_runs_preserve_diagnostics
+    raise RuntimeError('synthetic failure')
+RuntimeError: synthetic failure
+ok
+test_finalization_failure_never_completes (test_tracking.TrackingTests.test_finalization_failure_never_completes) ... ok
+test_invalid_run_id (test_tracking.TrackingTests.test_invalid_run_id) ... ok
+test_registry_rejects_invalid_status (test_tracking.TrackingTests.test_registry_rejects_invalid_status) ... ok
+test_registry_serializes_independent_processes (test_tracking.TrackingTests.test_registry_serializes_independent_processes) ... ok
+
+----------------------------------------------------------------------
+Ran 24 tests in 9.641s
+
+OK
+PASS: 123 rows; 41 per date; 43 tickers; 3 RNI rows retained; 2 volume imputations; model features complete.
+

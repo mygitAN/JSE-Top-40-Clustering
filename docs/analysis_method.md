@@ -34,6 +34,13 @@ Sector labels are retained as external descriptive labels, not ordinal codes
 or model inputs. Sector ARI/NMI are agreement statistics, not ground-truth
 accuracy. This keeps the clustering unsupervised with respect to sectors.
 
+Units are preserved from the supplied workbook: return, beta, volatility and
+dividend/earnings yields are numeric ratios; volume is average daily shares;
+shares outstanding is a count; capitalization and revenue are ZAR; EPS and close
+are ZAR per share. The workbook describes return as split-adjusted price return,
+excluding cash dividends. These labels do not remove differing revenue/EPS
+accounting definitions across sectors or certify historical share bases.
+
 The audited CSV already holds separate model-only imputation columns and flags,
 with constants and E/P clipping fitted on June 2025 only. It is not overwritten.
 MinMax scaling is fitted once on June 2025 and reused without clipping; later
