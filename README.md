@@ -8,6 +8,23 @@ for the evidence matrix, ten-feature variant, implemented results and pending
 screening specifications. Reconstructed inputs do not become certified PIT
 observations through modelling.
 
+## Paper notebook (start here)
+
+[notebooks/JSE_Top40_three_cross_sections.ipynb](notebooks/JSE_Top40_three_cross_sections.ipynb)
+walks through the whole study in paper order: data checks, EDA, preprocessing,
+the nine-combination model comparison, the t-SNE + hierarchical baseline (maps,
+dendrograms, cluster profiles), choice of k, seed stability, sector-divergent
+firms, Hotelling's T², changes over time, and SHAP explanations. It reuses
+`scripts/analysis.py`, so its numbers match the archived runs.
+
+```bash
+python -m pip install -r requirements-notebook.txt
+# Open the notebook in VS Code and choose "Run All", or run it headless:
+python -m jupyter nbconvert --to notebook --execute --inplace notebooks/JSE_Top40_three_cross_sections.ipynb
+```
+
+Figures are written to `reports/figures/` and tables to `reports/paper_tables/`.
+
 ## Run the analysis
 
 Use Python 3.11 or 3.12 in VS Code or a terminal. Windows Python 3.11.14
