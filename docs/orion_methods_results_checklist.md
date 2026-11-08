@@ -25,6 +25,8 @@ the entire data set is not a balanced independently sampled panel. The 41
 instruments must not be silently reduced to 40 or described as 41 independent
 economic firms. Index eligibility determines inclusion, including unresolved RNI.
 
+Each snapshot contains **40 company groups represented by 41 listed instruments**. Investec Limited (INL) and Investec plc (INP) are separate securities in one dual-listed company (DLC) group; both remain in the instrument-level analysis. Exited members are excluded at subsequent dates until an effective re-entry. See [the population audit](../reports/population_count_audit.md) for sources and scope.
+
 ## 2. Evidence matrix and strict PIT claims
 
 | Layer | Recorded evidence | Coverage | Permitted interpretation / remaining work |

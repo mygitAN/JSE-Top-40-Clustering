@@ -2,8 +2,10 @@
 
 Start with the [guided notebook](../notebooks/three_cross_section_study.ipynb) or
 [executed notebook](three_cross_section_study_executed.ipynb). The completed
-`three-cross-section-k8-01` run covers EDA, all-date model comparisons, plots,
-SHAP and temporal comparisons. Hierarchical/K-Means models fix k=8; other k
+`three-cross-section-population-clarified-02` run covers EDA, all-date model comparisons, plots,
+SHAP and temporal comparisons. The EDA distinguishes 40 company groups from
+41 instruments: INL and INP are the two Investec DLC securities. See the
+[population audit](population_count_audit.md). Hierarchical/K-Means models fix k=8; other k
 values are sensitivity diagnostics. See [verification](study_walkthrough_verification.json)
 and [the study guide](../docs/study_guide.md). Earlier k=5 walkthrough runs are
 retained development history, superseded by this k=8 walkthrough.

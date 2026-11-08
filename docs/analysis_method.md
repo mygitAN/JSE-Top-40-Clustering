@@ -38,6 +38,8 @@ promoted through `experiments/baseline.json`; execution never changes that point
 
 ## Inputs and preprocessing
 
+Each snapshot contains **40 company groups represented by 41 listed instruments**. Investec Limited (INL) and Investec plc (INP) are separate securities in one dual-listed company (DLC) group; both remain in the instrument-level analysis. Exited members are excluded at subsequent dates until an effective re-entry. See [the population audit](../reports/population_count_audit.md) for sources and scope.
+
 All 123 rows (41/date, 43 unique tickers) remain, including RNI. The ten numeric
 inputs are return, average volume, market cap, beta, shares, revenue, EPS,
 annualised volatility, dividend yield and clipped earnings yield. Unavailable

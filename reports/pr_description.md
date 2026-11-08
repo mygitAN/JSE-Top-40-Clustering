@@ -1,3 +1,10 @@
+The population clarification retains both Investec securities: INL and INP are
+separate listed entities in one DLC group. The EDA now shows 40 company groups
+and 41 instruments at each date. Date-specific membership controls are unchanged;
+exited members are absent until effective re-entry. The population audit records
+official dated count evidence, entry/exit checks and the limits of that audit.
+The refreshed notebook is archived as `three-cross-section-population-clarified-02`.
+
 The revised study now has a guided notebook and equivalent one-command workflow:
 validation and EDA, modelling, plots, SHAP, seed stability and temporal comparisons
 for three cross-sections of 41 instruments each. Hierarchical and K-Means models

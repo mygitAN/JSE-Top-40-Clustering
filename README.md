@@ -32,6 +32,8 @@ natural cluster/noise count as a separate comparator.
 See the [step-by-step study guide](docs/study_guide.md) for setup, file locations
 and the meaning of the plots.
 
+Each snapshot contains **40 company groups represented by 41 listed instruments**. Investec Limited (INL) and Investec plc (INP) are separate securities in one dual-listed company (DLC) group; both remain in the instrument-level analysis. Exited members are excluded at subsequent dates until an effective re-entry. See [the population audit](reports/population_count_audit.md) for sources and scope.
+
 Study claim: a repeated, interpretable cross-sectional investment-screening
 process. See the [ORiON methods-to-results checklist](docs/orion_methods_results_checklist.md)
 for the evidence matrix, ten-feature variant, implemented results and pending

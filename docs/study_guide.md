@@ -42,6 +42,8 @@ is needed. Never reuse a run ID to overwrite previous results.
 | 5. SHAP | Global/per-cluster bars, class distribution plot, feature deviations, class mapping and additivity | Which original variables influence the surrogate's cluster-membership margins? |
 | 6. Fidelity and time | In-sample versus OOF fidelity, pairwise seed ARI/NMI, continuing-member transitions and entry/exit events | Are descriptions sensitive to seeds, surrogate fitting or changing index membership? |
 
+Each snapshot contains **40 company groups represented by 41 listed instruments**. Investec Limited (INL) and Investec plc (INP) are separate securities in one dual-listed company (DLC) group; both remain in the instrument-level analysis. Exited members are excluded at subsequent dates until an effective re-entry. See [the population audit](../reports/population_count_audit.md) for sources and scope.
+
 The dates are 2025-06-30, 2025-12-31 and 2026-06-30. Each adjacent pair has 40
 continuing instruments. Only 39 are observed at all three dates. These are
 overlapping historical populations, not 123 independent firms.

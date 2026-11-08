@@ -1,0 +1,79 @@
+{
+  "checked_on": "2026-11-08",
+  "scope": "Population count and selected entry/exit controls; not a certification of all historical constituents or model inputs",
+  "count_explanation": "INL and INP are separate listed securities in the same Investec DLC economic group",
+  "snapshots": [
+    {
+      "decision_date": "2025-06-30",
+      "instruments": 41,
+      "economic_groups_with_investec_dlc_mapping": 40,
+      "investec_lines": [
+        "INL",
+        "INP"
+      ]
+    },
+    {
+      "decision_date": "2025-12-31",
+      "instruments": 41,
+      "economic_groups_with_investec_dlc_mapping": 40,
+      "investec_lines": [
+        "INL",
+        "INP"
+      ]
+    },
+    {
+      "decision_date": "2026-06-30",
+      "instruments": 41,
+      "economic_groups_with_investec_dlc_mapping": 40,
+      "investec_lines": [
+        "INL",
+        "INP"
+      ]
+    }
+  ],
+  "selected_membership_presence": {
+    "APN": {
+      "2025-06-30": true,
+      "2025-12-31": false,
+      "2026-06-30": false
+    },
+    "GLN": {
+      "2025-06-30": false,
+      "2025-12-31": true,
+      "2026-06-30": true
+    },
+    "NPH": {
+      "2025-06-30": true,
+      "2025-12-31": true,
+      "2026-06-30": true
+    },
+    "MNP": {
+      "2025-06-30": true,
+      "2025-12-31": true,
+      "2026-06-30": false
+    },
+    "PAN": {
+      "2025-06-30": false,
+      "2025-12-31": false,
+      "2026-06-30": true
+    },
+    "INL": {
+      "2025-06-30": true,
+      "2025-12-31": true,
+      "2026-06-30": true
+    },
+    "INP": {
+      "2025-06-30": true,
+      "2025-12-31": true,
+      "2026-06-30": true
+    }
+  },
+  "official_dated_count": {
+    "date": "2025-12-31",
+    "instruments": 41,
+    "source": "https://research.ftserussell.com/Analytics/FactSheets/temp/6d2fd834-bec7-4529-b91e-a2f70aee27b8.pdf",
+    "locator": "Page 2: Number of constituents and sector breakdown total"
+  },
+  "rule_caveat": "Current rules checked are v9.3 September 2026, after study dates; the December 2025 factsheet is dated contemporary evidence.",
+  "model_action": "User confirmed retaining both Investec securities; explain 40 economic groups / 41 instruments. EDA counts clarified; model inputs and scores unchanged."
+}

@@ -73,8 +73,11 @@ def write_study_summary(study):
         shap_completed=True, promotion=False, configuration=study.config,
         validation=study.validation, interpretation='Repeated descriptive cross-sections; not return prediction or 123 independent firms'))
     lines = ['# Three-cross-section study: results and reading order', '',
-             f'Run ID: `{study.run.meta["run_id"]}`. Each date retains 41 instruments; 123 records, 43 distinct tickers, '
+             f'Run ID: `{study.run.meta["run_id"]}`. Each date retains 41 instruments representing 40 company groups; 123 records, 43 distinct tickers, '
              '39 observed at all three dates. These are overlapping historical cross-sections.', '',
+             'Investec Limited (INL) and Investec plc (INP) are distinct securities in one dual-listed company (DLC) group. '
+             'Both remain separate rows in this instrument-level analysis. Membership is determined independently at each date; '
+             'an exited instrument is absent until its re-entry takes effect. Group counts do not imply independent observations.', '',
              '## 1. Start with EDA', '',
              '- `eda/population.csv`: population counts and flagged imputations.',
              '- `eda/evidence.csv` and `eda/missingness.csv`: evidence/missing-case accounting.',

@@ -32,6 +32,8 @@ class StudyTests(unittest.TestCase):
         scaler, _ = prepare(frame)
         tables = eda_tables(frame, FEATURES, scaler)
         self.assertEqual(tables['population'].instruments.tolist(), [41, 41, 41])
+        self.assertEqual(tables['population'].economic_groups.tolist(), [40, 40, 40])
+        self.assertEqual(set(tables['scaled'].query('ticker in ["INL", "INP"]').ticker), {'INL', 'INP'})
         self.assertEqual(int(tables['presence'].all(axis=1).sum()), 39)
         self.assertEqual(int(tables['missingness'].model_missing.sum()), 0)
         self.assertEqual(int(tables['missingness'].query('feature == "revenue_zar_model"').raw_missing.sum()), 3)

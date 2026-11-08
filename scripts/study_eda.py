@@ -12,6 +12,11 @@ def eda_tables(frame,features,scaler):
     population=frame.groupby('decision_date').agg(instruments=('ticker','size'),
         distinct_tickers=('ticker','nunique'),fundamental_imputations=('fundamentals_imputed','sum'),
         volume_imputations=('volume_imputed','sum')).reset_index()
+    # Count the approved Investec DLC as one economic group, while retaining
+    # both legally distinct securities in the instrument-level model inputs.
+    groups=frame.assign(economic_group=frame.ticker.replace({'INL':'INVESTEC_DLC','INP':'INVESTEC_DLC'}))
+    population['economic_groups']=population.decision_date.map(
+        groups.groupby('decision_date').economic_group.nunique())
     presence=pd.crosstab(frame.ticker,frame.decision_date).reindex(columns=dates,fill_value=0).astype(bool)
     missing=[]
     for date,sub in frame.groupby('decision_date',sort=True):
@@ -59,15 +64,22 @@ def explore(frame,features,scaler,out):
         'volume_imputed or fundamentals_imputed').to_csv(out/'imputed_observations.csv',index=False)
     dates=list(tables['population'].decision_date)
     fig,axes=plt.subplots(1,2,figsize=(12,4))
-    axes[0].bar(dates,tables['population'].instruments,color='steelblue')
-    axes[0].set_ylabel('Historically eligible instruments');axes[0].set_ylim(0,46)
-    for i,n in enumerate(tables['population'].instruments):axes[0].text(i,n+.5,str(n),ha='center')
+    positions=np.arange(len(dates));width=.36
+    for offset,column,label,color in [(-width/2,'economic_groups','Company groups','#2e765e'),
+                                      (width/2,'instruments','Listed instruments','steelblue')]:
+        bars=axes[0].bar(positions+offset,tables['population'][column],width,label=label,color=color)
+        axes[0].bar_label(bars,padding=3)
+    axes[0].set_xticks(positions,dates)
+    axes[0].set_ylabel('Count at each snapshot');axes[0].set_ylim(0,55)
+    axes[0].legend(fontsize=8,loc='upper left')
     sectors=pd.crosstab(frame.decision_date,frame.sector_label).reindex(dates)
     sectors.plot.bar(stacked=True,ax=axes[1],rot=0,cmap='tab10')
     axes[1].set_ylabel('Instruments');axes[1].set_xlabel('Snapshot')
     axes[1].legend(fontsize=7,title='Legacy sector context',bbox_to_anchor=(1,1))
     fig.suptitle('Population and sector context: repeated, overlapping cross-sections')
-    fig.tight_layout();fig.savefig(out/'population_and_sectors.png',dpi=150);plt.close(fig)
+    fig.text(.5,.01,'40 company groups / 41 listed instruments: Investec Limited (INL) and Investec plc (INP) form one DLC group.',
+             ha='center',fontsize=8)
+    fig.tight_layout(rect=(0,.06,1,1));fig.savefig(out/'population_and_sectors.png',dpi=150);plt.close(fig)
     presence=tables['presence']
     fig,ax=plt.subplots(figsize=(8,12))
     ax.imshow(presence.to_numpy(dtype=int),cmap=ListedColormap(['#eeeeee','#276d9b']),vmin=0,vmax=1,aspect='auto')
