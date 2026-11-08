@@ -1,5 +1,5 @@
 {
-  "results_commit": "51d7862b140183dcf1e54d40a4266f44dffa5b01",
+  "results_commit": "25567135cd36b0764845b1de02211df0443ddee7",
   "method": "git archive bytes, every manifest entry and completion marker",
   "runs": [
     {
@@ -39,6 +39,16 @@
     },
     {
       "run_id": "three-cross-section-k8-01",
+      "verified_artifacts": 289,
+      "status": "passed"
+    },
+    {
+      "run_id": "three-cross-section-population-clarified-01",
+      "verified_artifacts": 289,
+      "status": "passed"
+    },
+    {
+      "run_id": "three-cross-section-population-clarified-02",
       "verified_artifacts": 289,
       "status": "passed"
     },
