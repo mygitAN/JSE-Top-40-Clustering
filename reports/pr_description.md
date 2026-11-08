@@ -1,84 +1,33 @@
-The population clarification retains both Investec securities: INL and INP are
-separate listed entities in one DLC group. The EDA now shows 40 company groups
-and 41 instruments at each date. Date-specific membership controls are unchanged;
-exited members are absent until effective re-entry. The population audit records
-official dated count evidence, entry/exit checks and the limits of that audit.
-The refreshed notebook is archived as `three-cross-section-population-clarified-02`.
+The study now exposes the complete EDA-to-experimentation workflow for three
+historical cross-sections: 40 company groups / 41 securities per date, including
+both Investec DLC lines. The new guided notebook evaluates every valid combination
+in a declared finite grid of reductions, metrics, linkages and clustering settings:
+3,268 configurations over five seeds (16,340 fits). Both silhouette and
+Davies?Bouldin, exact parameters, all trial outcomes, coverage, seed stability,
+Pareto fronts and nine-family comparisons are retained. Hierarchical/K-Means fix
+k=8; sector labels never tune the models.
 
-The revised study now has a guided notebook and equivalent one-command workflow:
-validation and EDA, modelling, plots, SHAP, seed stability and temporal comparisons
-for three cross-sections of 41 instruments each. Hierarchical and K-Means models
-fix k=8 as requested; sector labels are contextual comparators. Both silhouette
-and Davies?Bouldin are reported in embedding and original scaled feature spaces.
-DBSCAN retains its naturally found cluster/noise count.
+June-selected settings are frozen for 270 follow-up fits across 18 distinct
+models and three dates. Results include actual fitted-tree dendrograms,
+Hungarian/Jaccard stable/shifted instrument lists, entry/exit events, alignment
+sensitivity, descriptive 2D distance/F-reference screens, sector context,
+cluster/distance surrogate SHAP and additive frozen-2025 attribute contrasts.
+The common-feature optimum is PCA95 + average/Euclidean hierarchy; the embedding
+optimum is UMAP(3, 0.01, cosine) + K-Means. These are criterion-dependent finite-grid
+optima, not a universal best model. The PCA choice creates singletons and cannot
+provide stratified OOF classifier fidelity; its latest distance-surrogate OOF R?
+is negative. These adverse results are displayed rather than omitted.
 
-The executed notebook completed all 11 code cells without errors in run
-`three-cross-section-k8-01`. Its 289 artifacts pass checksum verification, and
-baseline saved arrays reproduce `final-full-42` at every date. All 49 tests pass.
-The notebook extras have a separate requirements file and Windows environment
-snapshot. Both entry points share the same staged implementation.
+Validation: 60 passing tests; 1,186 checksum-verified run artifacts; complete
+candidate/seed coverage and selection reproduction; all SHAP additivity checks;
+fresh and read-only review notebooks each executed 14 code cells without errors.
+The read-only review mode verifies the completed archive and changes no run or
+registry files. The full experiment is an optional workflow_dispatch CI job;
+normal CI retains the shorter end-to-end study. Check current remote CI separately.
 
-Three overlapping populations do not constitute 123 independent firms. SHAP
-explains surrogate associations with cluster membership; perfect in-sample
-fidelity does not imply out-of-sample fidelity. Historical shares, market cap,
-sector history and daily-source evidence still block submission-grade empirical
-claims. No baseline promotion or automatic merge. New remote CI must be assessed
-separately from earlier recorded CI evidence.
-
-Earlier work and exploratory searches remain archived below.
-
-The previous pipeline lacked durable run provenance and had gaps in preprocessing
-derivation checks, temporal alignment and surrogate exports. This preserves the
-documented baseline, reconciles all 123 observations to the supplied workbook,
-adds immutable local tracking, and originally expanded verification to 42 passing tests.
-
-Complete suites `final-full-42` and `repeat-full-42` include all three dates,
-nine model combinations per date, five seeds, k=2–10 and SHAP. All 89 deterministic
-artifacts compared successfully. Complete bundles and checksums are stored in Git.
-The results pointer remains unpromoted.
-An additional all-date baseline/SHAP run verifies final completion-marker I/O
-failure recovery. Both configured CI platforms passed for the results commit.
-
-Common-feature silhouettes are 0.182/0.177/0.223; mean seed ARI is 0.727/0.920/0.934.
-Surrogate OOF accuracy is 0.537/not estimable (singleton)/0.732 despite perfect
-in-sample accuracy. These results do not establish economic usefulness.
-
-See [the reviewer guide](https://github.com/mygitAN/JSE-Top-40-Clustering/blob/research/reproducible-review/reports/reviewer_guide.md).
-Validation: `python scripts/checks.py`, complete end-to-end suites, artifact
-verification and repeated numerical comparison. Executed on Windows CPython
-3.11.14 with all pinned top-level dependencies. Check remote CI separately.
-Review questions include k=8, short t-SNE optimization, correlated size inputs,
-imputation sensitivity and unverified historical shares/sectors. No data values,
-licence or visibility changed. Do not merge automatically.
-
-The ORiON follow-up adds an evidence matrix, ten-feature variant/units/missingness
-definitions and explicit claim boundaries. Separately tracked `orion-report-01`
-compares univariate median deviations with SHAP and maximum-Jaccard with
-maximum-overlap alignment. Aggregate transition counts agree, but the objectives
-disagree for AGL, MTN, NPN and SOL in the second date pair. Only 39 instruments
-are observed at all three dates. The Hotelling F-reference screen, temporal flag
-taxonomy and alternative P/E sensitivity remain pending explicit specifications.
-Archived share/capitalization, sector-history and market-source evidence remains
-the submission-grade empirical blocker.
-
-The supplied SACJ paper has now been reviewed, including its nine-combination
-silhouette/DB table. A separately archived bounded search evaluates 1,426
-configurations over five June-2025 seeds (7,130 fits) and freezes the joint-score
-choices for later descriptive refits. UMAP/complete-Manhattan wins the declared
-eight-cluster embedding-score compromise; PCA95/average-Euclidean wins the
-common-feature criterion but creates singleton groups. Both silhouette and DB,
-individual metric champions, Pareto trade-offs, coverage and seed stability are
-reported. These are new-data exploratory optima within the declared grid, not
-an exact reproduction or automatic replacement of the original paper results.
-
-The user's UMAP snippet is also repaired and executed as `user-umap-grid-01`:
-36 supplied combinations, followed by k=2–15 on the winning embedding. It prints
-separate silhouette/DB champions, the joint winner and exact parameters, and
-offers a verified print-only command for saved runs. Score curves and a matching
-average/Manhattan dendrogram are archived. The seed-42 four-cluster result is
-explicitly an exploratory sensitivity and does not replace the baseline.
-
-The subsequent fixed UMAP request (neighbors=3, min_dist=0.01, k=2–12) is archived
-as `fixed-umap-001-01`, with every k printed and a dual-axis silhouette/DB plot.
-The silhouette winner is k=5 and DB winner k=2; the declared joint rule selects
-k=5. The implementation no longer depends on undefined location-specific globals.
+Read [the full results and limitations](https://github.com/mygitAN/JSE-Top-40-Clustering/blob/research/reproducible-review/reports/paper_experiment_results.md)
+and [the protocol](https://github.com/mygitAN/JSE-Top-40-Clustering/blob/research/reproducible-review/docs/paper_experiments_guide.md).
+Geometric screens, seed agreement, sector divergence and SHAP do not confirm
+outliers or establish causes. Historical shares/market cap, sector history and
+vendor-series evidence remain unresolved. Later dates were previously examined
+and are descriptive follow-ups. No baseline promotion or automatic merge.

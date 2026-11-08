@@ -1,0 +1,63 @@
+{
+  "run_id": "paper-exhaustive-k8-01",
+  "verified_artifacts": 1186,
+  "representations": 86,
+  "configurations": 3268,
+  "selection_fits": 16340,
+  "frozen_followup_fits": 270,
+  "invalid_ward_combinations": 3,
+  "selected_roles": {
+    "common_features_k8": "c_073540362ecaaa17",
+    "features_pca_hierarchical": "c_270de6df6144c04c",
+    "features_pca_kmeans": "c_7d1d69927f9f3bf0",
+    "features_tsne_dbscan": "c_79448941048b352e",
+    "features_tsne_hierarchical": "c_7362fc096868a7b4",
+    "features_tsne_kmeans": "c_81df66beccbdd3bc",
+    "features_umap_dbscan": "c_ecdf1240e2435ac4",
+    "features_umap_hierarchical": "c_c31a5a00879f0102",
+    "features_umap_kmeans": "c_e42e8f91feb4c6b9",
+    "embedding_k8": "c_152cbd6e85993337",
+    "embedding_pca_hierarchical": "c_ff49c0c2566f2b76",
+    "embedding_pca_kmeans": "c_feeeb5a431fab19e",
+    "embedding_tsne_dbscan": "c_ff86aac25ddcaaf4",
+    "embedding_tsne_hierarchical": "c_563dcace192c2c9c",
+    "embedding_tsne_kmeans": "c_4189645cd001d44c",
+    "embedding_umap_dbscan": "c_a2fdce037adde186",
+    "embedding_umap_hierarchical": "c_190352ea0dd7b2c1",
+    "embedding_umap_kmeans": "c_152cbd6e85993337",
+    "baseline": "c_4f80a40f7dda0468"
+  },
+  "reviewed_model_counts": {
+    "c_073540362ecaaa17": {
+      "stable": 29,
+      "shifted": 10,
+      "screened_candidates": 5,
+      "confirmed_outliers": 0
+    },
+    "c_152cbd6e85993337": {
+      "stable": 19,
+      "shifted": 20,
+      "screened_candidates": 0,
+      "confirmed_outliers": 0
+    },
+    "c_4f80a40f7dda0468": {
+      "stable": 21,
+      "shifted": 18,
+      "screened_candidates": 0,
+      "confirmed_outliers": 0
+    }
+  },
+  "max_cluster_shap_additivity_error": 2.6226043701171875e-06,
+  "status": "passed",
+  "certifies_historical_source_values": false,
+  "paper_experiments_fresh_executed.ipynb": {
+    "executed_code_cells": 14,
+    "errors": 0
+  },
+  "paper_experiments_executed.ipynb": {
+    "executed_code_cells": 14,
+    "errors": 0
+  },
+  "review_notebook_mode": "Explicit read-only replay of the completed run; archive verified unchanged after replay",
+  "tests": 60
+}

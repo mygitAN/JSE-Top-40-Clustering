@@ -1,0 +1,22 @@
+{
+  "representation": {
+    "name": "umap",
+    "params": {
+      "n_components": 2,
+      "n_neighbors": 3,
+      "min_dist": 0.0,
+      "metric": "euclidean",
+      "n_jobs": 1
+    },
+    "representation_id": "r_82280a6eb317e0d1"
+  },
+  "clustering": {
+    "algorithm": "hierarchical",
+    "params": {
+      "n_clusters": 8,
+      "linkage": "single",
+      "metric": "chebyshev"
+    }
+  },
+  "candidate_id": "c_c31a5a00879f0102"
+}

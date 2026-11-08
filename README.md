@@ -3,7 +3,20 @@
 An EDA-to-SHAP workflow extending the original single-window SACJ study to three
 historical FTSE/JSE Top 40 cross-sections.
 
-## Start here: the complete study
+## Start here: EDA, experimentation and optimisation
+
+Open **[notebooks/paper_experiments.ipynb](notebooks/paper_experiments.ipynb)**
+with the project `.venv` kernel and choose **Run All**. It shows EDA first, all
+3,268 declared parameter combinations over five seeds, joint silhouette/DB
+selection, exact winning parameters, all-date dendrograms, named stable/shifted
+instrument lists, Hotelling descriptive screens, sector divergence and SHAP
+attribute reviews. See the [experiment guide](docs/paper_experiments_guide.md).
+
+```bash
+python scripts/paper_experiments.py
+```
+
+## Fixed-comparison walkthrough
 
 Open **[notebooks/three_cross_section_study.ipynb](notebooks/three_cross_section_study.ipynb)**
 in VS Code, select the project `.venv` kernel and choose **Run All**.

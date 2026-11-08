@@ -1,5 +1,17 @@
 # Reviewer guide
 
+The latest entry point is the [full experiment notebook](../notebooks/paper_experiments.ipynb):
+EDA, 16,340 finite-grid selection fits, 270 frozen follow-up fits, actual dendrograms,
+named Jaccard histories, descriptive screens, sector context and separate SHAP targets.
+Read [the results and limitations](paper_experiment_results.md),
+[executed review notebook](paper_experiments_executed.ipynb),
+[fresh execution record](paper_experiments_fresh_executed.ipynb) and
+[verification](paper_experiment_verification.json). All 60 tests pass; the completed
+`paper-exhaustive-k8-01` archive contains 1,186 verified artifacts. The review
+notebook can reuse this verified archive without refitting. Previous packages
+below remain historical; their fixed-comparison and pending-extension statements
+do not supersede the new protocol in `docs/paper_experiments_guide.md`.
+
 Start with the [guided notebook](../notebooks/three_cross_section_study.ipynb) or
 [executed notebook](three_cross_section_study_executed.ipynb). The completed
 `three-cross-section-population-clarified-02` run covers EDA, all-date model comparisons, plots,
@@ -44,7 +56,7 @@ The paper specification/results have not been promoted for publication.
    `59795b348a6ab447ca41219efb66ab4eddd93dce`. Implementation commit:
    `89c2cce42096ce3d2d4ee0def3b42d71a16c4c4b`.
 2. Run `python scripts/checks.py`. The saved [actual test log](test_results.txt)
-   records successful optimized-mode data validation and 49 passing tests,
+   records successful optimized-mode data validation and 60 passing tests,
    including the ORiON reporting checks added after the original analysis audit.
    Expected synthetic failure tracebacks inside passing tracking tests are intentional.
 3. Verify `python scripts/verify_run.py experiments/runs/final-full-42` and

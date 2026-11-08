@@ -1,5 +1,14 @@
 # ORiON methods-to-results checklist
 
+The newer [full experiment workflow](paper_experiments_guide.md) adds an explicit
+finite-grid search, actual-tree dendrograms, Jaccard histories, a specified
+**descriptive** 2D distance/F-reference screen, supported-screen history taxonomy,
+sector context and separate cluster/distance/frozen-2025 SHAP targets. Historical
+?pending? statements below describe the earlier reporting package; the new
+workflow is a separately versioned exploratory extension, not a retroactive
+claim about old runs. No screen establishes a confirmed outlier.
+
+
 Study claim: a repeated, interpretable, cross-sectional investment-screening
 process. The outputs describe associations and candidate screening structure.
 They do not demonstrate strategy-return prediction, a profitable strategy or

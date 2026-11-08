@@ -1,0 +1,22 @@
+{
+  "representation": {
+    "name": "umap",
+    "params": {
+      "n_components": 2,
+      "n_neighbors": 20,
+      "min_dist": 0.0,
+      "metric": "cosine",
+      "n_jobs": 1
+    },
+    "representation_id": "r_3cc0350cc1503268"
+  },
+  "clustering": {
+    "algorithm": "dbscan",
+    "params": {
+      "eps": 0.8,
+      "min_samples": 3,
+      "metric": "manhattan"
+    }
+  },
+  "candidate_id": "c_ecdf1240e2435ac4"
+}

@@ -31,27 +31,33 @@ test_deviation_definition_and_singleton (test_orion_review.OrionTests.test_devia
 test_jaccard_is_not_overlap_objective (test_orion_review.OrionTests.test_jaccard_is_not_overlap_objective) ... ok
 test_permutation_unmatched_and_membership_events (test_orion_review.OrionTests.test_permutation_unmatched_and_membership_events) ... ok
 test_saved_objectives_disagree_on_four_instruments (test_orion_review.OrionTests.test_saved_objectives_disagree_on_four_instruments) ... ok
+test_declared_grid_complete_unique_and_invalid_ward_excluded (test_paper_experiments.PaperExperimentTests.test_declared_grid_complete_unique_and_invalid_ward_excluded) ... ok
+test_f_reference_formula_is_saved_without_claiming_individual_test (test_paper_experiments.PaperExperimentTests.test_f_reference_formula_is_saved_without_claiming_individual_test) ... ok
+test_frozen_contrast_attributions_sum_to_same_model_margin_change (test_paper_experiments.PaperExperimentTests.test_frozen_contrast_attributions_sum_to_same_model_margin_change) ... ok
+test_individual_distance_no_n_multiplier_and_affine_invariance (test_paper_experiments.PaperExperimentTests.test_individual_distance_no_n_multiplier_and_affine_invariance) ... ok
+test_permuted_clusters_stable_entries_not_shifts (test_paper_experiments.PaperExperimentTests.test_permuted_clusters_stable_entries_not_shifts) ... ok
+test_saved_notebook_replay_is_read_only (test_paper_experiments.PaperExperimentTests.test_saved_notebook_replay_is_read_only) ... PASS: 123 rows; 41 per date; 43 tickers; 3 RNI rows retained; 2 volume imputations; model features complete.
+READ-ONLY saved results: C:\Users\HP\AppData\Local\Temp\tmpduhbqdrb\experiments\runs\saved; no experiment is rerun
+ok
+test_saved_replay_rejects_unfinished_runs_and_path_ids (test_paper_experiments.PaperExperimentTests.test_saved_replay_rejects_unfinished_runs_and_path_ids) ... ok
+test_screen_rejects_missing_or_non_2d_input (test_paper_experiments.PaperExperimentTests.test_screen_rejects_missing_or_non_2d_input) ... ok
+test_screen_taxonomy_requires_observation_and_handles_recurrence (test_paper_experiments.PaperExperimentTests.test_screen_taxonomy_requires_observation_and_handles_recurrence) ... ok
+test_sector_context_does_not_label_singletons_or_ties_as_divergent (test_paper_experiments.PaperExperimentTests.test_sector_context_does_not_label_singletons_or_ties_as_divergent) ... ok
+test_singular_screen_unestimable_not_zero_distance (test_paper_experiments.PaperExperimentTests.test_singular_screen_unestimable_not_zero_distance) ... ok
 test_clean_notebook_cells_have_valid_python (test_study.StudyTests.test_clean_notebook_cells_have_valid_python) ... ok
 test_eda_does_not_refit_scaler_on_future (test_study.StudyTests.test_eda_does_not_refit_scaler_on_future) ... ok
 test_eda_population_missingness_and_evidence (test_study.StudyTests.test_eda_population_missingness_and_evidence) ... ok
 test_missing_required_outputs_fail_completion (test_study.StudyTests.test_missing_required_outputs_fail_completion) ... ok
 test_paper_workflow_requires_eight_clusters (test_study.StudyTests.test_paper_workflow_requires_eight_clusters) ... ok
-test_stage_order_cannot_bypass_eda (test_study.StudyTests.test_stage_order_cannot_bypass_eda) ... warning: in the working copy of 'scripts/study_eda.py', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'scripts/study_reporting.py', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'tests/test_study.py', LF will be replaced by CRLF the next time Git touches it
-PASS: 123 rows; 41 per date; 43 tickers; 3 RNI rows retained; 2 volume imputations; model features complete.
-Study run: bad-order
-Artifacts: C:\Users\HP\AppData\Local\Temp\tmpav30ul06\runs\bad-order
+test_stage_order_cannot_bypass_eda (test_study.StudyTests.test_stage_order_cannot_bypass_eda) ... Study run: bad-order
+Artifacts: C:\Users\HP\AppData\Local\Temp\tmp5j_bi1cl\runs\bad-order
 Traceback (most recent call last):
   File "C:\Users\HP\Documents\GitHub\JSE-Top-40-Clustering\scripts\study_workflow.py", line 59, in _step
     raise RuntimeError(f'Run stages in order: expected {expected}, found {self.state}')
 RuntimeError: Run stages in order: expected explored, found started
 ok
-test_study_failure_is_tracked_and_not_completed (test_study.StudyTests.test_study_failure_is_tracked_and_not_completed) ... warning: in the working copy of 'scripts/study_eda.py', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'scripts/study_reporting.py', LF will be replaced by CRLF the next time Git touches it
-warning: in the working copy of 'tests/test_study.py', LF will be replaced by CRLF the next time Git touches it
-Study run: eda-failure
-Artifacts: C:\Users\HP\AppData\Local\Temp\tmp9_1w9oyq\runs\eda-failure
+test_study_failure_is_tracked_and_not_completed (test_study.StudyTests.test_study_failure_is_tracked_and_not_completed) ... Study run: eda-failure
+Artifacts: C:\Users\HP\AppData\Local\Temp\tmp7r8kppis\runs\eda-failure
 
 1. Validate and load all historical observations
 PASS: 123 rows; 41 per date; 43 tickers; 3 RNI rows retained; 2 volume imputations; model features complete.
@@ -95,7 +101,7 @@ test_grid_reuses_fits_and_sweeps_best_not_last_embedding (test_tune_umap.UserUma
 test_invalid_input_fails_instead_of_skipping (test_tune_umap.UserUmapTests.test_invalid_input_fails_instead_of_skipping) ... ok
 
 ----------------------------------------------------------------------
-Ran 49 tests in 6.275s
+Ran 60 tests in 15.900s
 
 OK
 
