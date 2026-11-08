@@ -1,5 +1,14 @@
 # Reviewer guide
 
+Follow-up: the [ORiON methods-to-results checklist](../docs/orion_methods_results_checklist.md)
+separates completed outputs from the pending Hotelling, P/E-sensitivity and
+temporal-flag specifications. `scripts/orion_review.py` generates separately
+tracked univariate/SHAP and Jaccard-alignment checks from the saved baseline.
+The original baseline and certification limitations remain in force. Supplementary
+outputs are saved under `experiments/runs/orion-report-01/`: 240 cluster-feature
+comparisons, overlap/Jaccard alignment, observation eligibility and P/E diagnostics.
+See [the follow-up decision log](../docs/decisions/002-orion-checklist.md).
+
 This package reconstructs the documented descriptive baseline. It does not reproduce
 an unavailable historical notebook or certify investor-observable point-in-time data.
 The paper specification/results have not been promoted for publication.
@@ -11,7 +20,8 @@ The paper specification/results have not been promoted for publication.
    `59795b348a6ab447ca41219efb66ab4eddd93dce`. Implementation commit:
    `89c2cce42096ce3d2d4ee0def3b42d71a16c4c4b`.
 2. Run `python scripts/checks.py`. The saved [actual test log](test_results.txt)
-   records successful optimized-mode data validation and 25 passing tests.
+   records successful optimized-mode data validation and 31 passing tests,
+   including the ORiON reporting checks added after the original analysis audit.
    Expected synthetic failure tracebacks inside passing tracking tests are intentional.
 3. Verify `python scripts/verify_run.py experiments/runs/final-full-42` and
    the corresponding repeat run. Each checksum manifest covers every artifact
@@ -34,12 +44,14 @@ The paper specification/results have not been promoted for publication.
 | final-full-42 | Fixed baseline on all dates, nine combinations/date, five seeds/date, k=2–10, SHAP | completed |
 | repeat-full-42 | Identical-config complete execution and numerical comparison | completed |
 | tracker-check-42 | All-date baseline/SHAP check after completion-marker failure recovery repair | completed |
+| orion-report-01 | Supplementary ORiON SHAP/univariate, Jaccard and missing-case reporting | completed |
 
 [Registry](../experiments/registry.csv), [specification](../configs/baseline.json),
 and [unpromoted baseline pointer](../experiments/baseline.json) are versioned.
-All four complete bundles are committed under `experiments/runs/`, including
+All five bundles are committed under `experiments/runs/`, including
 configuration, logs, source ZIP, package versions, arrays, models, plots and
-checksums. Their combined uncompressed size is approximately 16 MB; Git compresses
+checksums. The reporting extension fits alongside the approximately 16 MB of
+analysis bundles; Git compresses
 and deduplicates them. A release asset or expiring CI artifact is unnecessary at
 this size. `.gitattributes` preserves the exact experiment bytes on every platform.
 See `durable_locations.json` for verified remote identifiers once uploaded.

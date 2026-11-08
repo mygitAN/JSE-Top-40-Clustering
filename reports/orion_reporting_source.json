@@ -1,0 +1,7 @@
+{
+  "run_id": "orion-report-01",
+  "source_manifest_sha256": "950fd4ff18bf321d2b4fbb14fd1acf198766475a794ed123b4cb05d5686b5d0d",
+  "baseline_source": "final-full-42",
+  "alignment_differences": 4,
+  "models_refitted": false
+}

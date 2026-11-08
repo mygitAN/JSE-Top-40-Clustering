@@ -1,7 +1,7 @@
 The previous pipeline lacked durable run provenance and had gaps in preprocessing
 derivation checks, temporal alignment and surrogate exports. This preserves the
 documented baseline, reconciles all 123 observations to the supplied workbook,
-adds immutable local tracking, and expands verification to 25 passing tests.
+adds immutable local tracking, and expands verification to 31 passing tests.
 
 Complete suites `final-full-42` and `repeat-full-42` include all three dates,
 nine model combinations per date, five seeds, k=2–10 and SHAP. All 89 deterministic
@@ -21,3 +21,13 @@ verification and repeated numerical comparison. Executed on Windows CPython
 Review questions include k=8, short t-SNE optimization, correlated size inputs,
 imputation sensitivity and unverified historical shares/sectors. No data values,
 licence or visibility changed. Do not merge automatically.
+
+The ORiON follow-up adds an evidence matrix, ten-feature variant/units/missingness
+definitions and explicit claim boundaries. Separately tracked `orion-report-01`
+compares univariate median deviations with SHAP and maximum-Jaccard with
+maximum-overlap alignment. Aggregate transition counts agree, but the objectives
+disagree for AGL, MTN, NPN and SOL in the second date pair. Only 39 instruments
+are observed at all three dates. The Hotelling F-reference screen, temporal flag
+taxonomy and alternative P/E sensitivity remain pending explicit specifications.
+Archived share/capitalization, sector-history and market-source evidence remains
+the submission-grade empirical blocker.

@@ -1,0 +1,92 @@
+diff --git a/README.md b/README.md
+index cde1ad6..7c1596d 100644
+--- a/README.md
++++ b/README.md
+@@ -2,6 +2,12 @@
+ 
+ Clustering research using historical FTSE/JSE Top 40 cross-sections.
+ 
++Study claim: a repeated, interpretable cross-sectional investment-screening
++process. See the [ORiON methods-to-results checklist](docs/orion_methods_results_checklist.md)
++for the evidence matrix, ten-feature variant, implemented results and pending
++screening specifications. Reconstructed inputs do not become certified PIT
++observations through modelling.
++
+ ## Run the analysis
+ 
+ Use Python 3.11 or 3.12 in VS Code or a terminal. Windows Python 3.11.14
+diff --git a/docs/analysis_method.md b/docs/analysis_method.md
+index ebbe4c8..9c7d984 100644
+--- a/docs/analysis_method.md
++++ b/docs/analysis_method.md
+@@ -1,5 +1,10 @@
+ # Three-cross-section analysis
+ 
++The [ORiON checklist](orion_methods_results_checklist.md) defines the paper's
++claim boundary and evidence layers. The current ten-feature historic-consensus-
++excluded variant differs from the original 11-feature experiment. Supplementary
++Jaccard alignment and SHAP/univariate checks do not replace saved baseline results.
++
+ ## Recovered baseline and explicit implementation choices
+ 
+ The historical conversation of 8 October 2024 records MinMax scaling, t-SNE
+diff --git a/experiments/registry.csv b/experiments/registry.csv
+index e13e2bb..cb16476 100644
+--- a/experiments/registry.csv
++++ b/experiments/registry.csv
+@@ -3,3 +3,4 @@ audit-full-42,completed,2026-11-08T09:08:00.036755+00:00,2026-11-08T09:08:36.984
+ final-full-42,completed,2026-11-08T09:15:06.204426+00:00,2026-11-08T09:15:37.708765+00:00,fixed-suite,All three dates; nine combinations; seeds 42-46; k=2-10; SHAP,89c2cce42096ce3d2d4ee0def3b42d71a16c4c4b,True,31.5,runs/final-full-42,
+ repeat-full-42,completed,2026-11-08T09:16:10.571968+00:00,2026-11-08T09:16:40.814005+00:00,fixed-suite,All three dates; nine combinations; seeds 42-46; k=2-10; SHAP,89c2cce42096ce3d2d4ee0def3b42d71a16c4c4b,True,30.25,runs/repeat-full-42,
+ tracker-check-42,completed,2026-11-08T09:23:05.093567+00:00,2026-11-08T09:23:21.075363+00:00,final-tracker-check,All-date baseline and SHAP after completion-marker I/O recovery fix,65f121fb944e406896ff0172b630597e9b7af7ea,True,15.968999999924563,runs/tracker-check-42,
++orion-report-01,running,2026-11-08T09:34:05.328063+00:00,,orion-methods-results-check,Descriptive associations and label-alignment audit of saved baseline; no promotion,,,,runs/orion-report-01,
+diff --git a/reports/reviewer_guide.md b/reports/reviewer_guide.md
+index 8c6e208..2545fb2 100644
+--- a/reports/reviewer_guide.md
++++ b/reports/reviewer_guide.md
+@@ -1,5 +1,11 @@
+ # Reviewer guide
+ 
++Follow-up: the [ORiON methods-to-results checklist](../docs/orion_methods_results_checklist.md)
++separates completed outputs from the pending Hotelling, P/E-sensitivity and
++temporal-flag specifications. `scripts/orion_review.py` generates separately
++tracked univariate/SHAP and Jaccard-alignment checks from the saved baseline.
++The original baseline and certification limitations remain in force.
++
+ This package reconstructs the documented descriptive baseline. It does not reproduce
+ an unavailable historical notebook or certify investor-observable point-in-time data.
+ The paper specification/results have not been promoted for publication.
+@@ -11,7 +17,8 @@ The paper specification/results have not been promoted for publication.
+    `59795b348a6ab447ca41219efb66ab4eddd93dce`. Implementation commit:
+    `89c2cce42096ce3d2d4ee0def3b42d71a16c4c4b`.
+ 2. Run `python scripts/checks.py`. The saved [actual test log](test_results.txt)
+-   records successful optimized-mode data validation and 25 passing tests.
++   records successful optimized-mode data validation and 30 passing tests,
++   including the ORiON reporting checks added after the original analysis audit.
+    Expected synthetic failure tracebacks inside passing tracking tests are intentional.
+ 3. Verify `python scripts/verify_run.py experiments/runs/final-full-42` and
+    the corresponding repeat run. Each checksum manifest covers every artifact
+diff --git a/reports/test_results.txt b/reports/test_results.txt
+index 57a6836..afbb252 100644
+--- a/reports/test_results.txt
++++ b/reports/test_results.txt
+@@ -20,6 +20,11 @@ test_constants_use_only_june_2025 (test_data.DataTests.test_constants_use_only_j
+ test_corrupt_flags_and_model_values_fail (test_data.DataTests.test_corrupt_flags_and_model_values_fail) ... ok
+ test_missing_required_data_fails (test_data.DataTests.test_missing_required_data_fails) ... ok
+ test_validation_checks_survive_optimization (test_data.DataTests.test_validation_checks_survive_optimization) ... ok
++test_alignment_ignores_input_order_and_entry_only_clusters (test_orion_review.OrionTests.test_alignment_ignores_input_order_and_entry_only_clusters) ... ok
++test_all_date_observation_population (test_orion_review.OrionTests.test_all_date_observation_population) ... ok
++test_deviation_definition_and_singleton (test_orion_review.OrionTests.test_deviation_definition_and_singleton) ... ok
++test_jaccard_is_not_overlap_objective (test_orion_review.OrionTests.test_jaccard_is_not_overlap_objective) ... ok
++test_permutation_unmatched_and_membership_events (test_orion_review.OrionTests.test_permutation_unmatched_and_membership_events) ... ok
+ test_completion_collision_and_manifest (test_tracking.TrackingTests.test_completion_collision_and_manifest) ... ok
+ test_completion_marker_io_failure_marks_registry_failed (test_tracking.TrackingTests.test_completion_marker_io_failure_marks_registry_failed) ... ok
+ test_concurrent_registry_updates_and_finalization (test_tracking.TrackingTests.test_concurrent_registry_updates_and_finalization) ... ok
+@@ -35,7 +40,7 @@ test_registry_rejects_invalid_status (test_tracking.TrackingTests.test_registry_
+ test_registry_serializes_independent_processes (test_tracking.TrackingTests.test_registry_serializes_independent_processes) ... ok
+ 
+ ----------------------------------------------------------------------
+-Ran 25 tests in 6.293s
++Ran 30 tests in 8.984s
+ 
+ OK
+ PASS: 123 rows; 41 per date; 43 tickers; 3 RNI rows retained; 2 volume imputations; model features complete.

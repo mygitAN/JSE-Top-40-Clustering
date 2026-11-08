@@ -1,0 +1,10 @@
+decision_date,pe_status,n
+2025-06-30,nonpositive EPS: P/E nonmeaningful,5
+2025-06-30,positive EPS,35
+2025-06-30,unresolved raw EPS,1
+2025-12-31,nonpositive EPS: P/E nonmeaningful,4
+2025-12-31,positive EPS,36
+2025-12-31,unresolved raw EPS,1
+2026-06-30,nonpositive EPS: P/E nonmeaningful,2
+2026-06-30,positive EPS,38
+2026-06-30,unresolved raw EPS,1

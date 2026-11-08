@@ -2,6 +2,12 @@
 
 Clustering research using historical FTSE/JSE Top 40 cross-sections.
 
+Study claim: a repeated, interpretable cross-sectional investment-screening
+process. See the [ORiON methods-to-results checklist](docs/orion_methods_results_checklist.md)
+for the evidence matrix, ten-feature variant, implemented results and pending
+screening specifications. Reconstructed inputs do not become certified PIT
+observations through modelling.
+
 ## Run the analysis
 
 Use Python 3.11 or 3.12 in VS Code or a terminal. Windows Python 3.11.14

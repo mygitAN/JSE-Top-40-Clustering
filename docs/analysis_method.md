@@ -1,5 +1,10 @@
 # Three-cross-section analysis
 
+The [ORiON checklist](orion_methods_results_checklist.md) defines the paper's
+claim boundary and evidence layers. The current ten-feature historic-consensus-
+excluded variant differs from the original 11-feature experiment. Supplementary
+Jaccard alignment and SHAP/univariate checks do not replace saved baseline results.
+
 ## Recovered baseline and explicit implementation choices
 
 The historical conversation of 8 October 2024 records MinMax scaling, t-SNE
