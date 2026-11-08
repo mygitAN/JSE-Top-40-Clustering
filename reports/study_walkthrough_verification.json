@@ -1,0 +1,19 @@
+{
+  "run": "three-cross-section-k8-01",
+  "verified_artifacts": {
+    "three-cross-section-study-01": 277,
+    "three-cross-section-study-02": 280,
+    "three-cross-section-cli-check-01": 172,
+    "three-cross-section-k8-01": 289
+  },
+  "executed_code_cells": 11,
+  "notebook_errors": 0,
+  "baseline_reproduction": {
+    "2025-06-30": "all saved arrays agree",
+    "2025-12-31": "all saved arrays agree",
+    "2026-06-30": "all saved arrays agree"
+  },
+  "tests": 49,
+  "k": 8,
+  "limitations": "Historical source certification remains unresolved; earlier k=5 walkthroughs are development history, superseded by the k=8 run."
+}

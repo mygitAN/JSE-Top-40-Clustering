@@ -1,0 +1,85 @@
+before,after,ticker,membership_event,cluster_before,cluster_after,raw_cluster_before,raw_cluster_after,sector_before,sector_after,cluster_changed,interpretation
+2025-06-30,2025-12-31,ABG,continuing,1.0,1.0,1.0,0.0,Financials,Financials,False,descriptive
+2025-06-30,2025-12-31,AGL,continuing,0.0,5.0,0.0,2.0,Basic Materials,Basic Materials,True,imputation-sensitive
+2025-06-30,2025-12-31,ANG,continuing,2.0,2.0,2.0,4.0,Basic Materials,Basic Materials,False,descriptive
+2025-06-30,2025-12-31,ANH,continuing,4.0,4.0,4.0,3.0,Consumer Goods,Consumer Goods,False,descriptive
+2025-06-30,2025-12-31,APN,exit,0.0,,0.0,,Health Care,,,descriptive
+2025-06-30,2025-12-31,BHG,continuing,4.0,4.0,4.0,3.0,Basic Materials,Basic Materials,False,descriptive
+2025-06-30,2025-12-31,BID,continuing,0.0,0.0,0.0,1.0,Consumer Services,Consumer Services,False,descriptive
+2025-06-30,2025-12-31,BTI,continuing,4.0,4.0,4.0,3.0,Consumer Goods,Consumer Goods,False,descriptive
+2025-06-30,2025-12-31,BVT,continuing,0.0,0.0,0.0,1.0,Industrials,Industrials,False,descriptive
+2025-06-30,2025-12-31,CFR,continuing,4.0,4.0,4.0,3.0,Consumer Goods,Consumer Goods,False,descriptive
+2025-06-30,2025-12-31,CLS,continuing,0.0,0.0,0.0,1.0,Consumer Services,Consumer Services,False,descriptive
+2025-06-30,2025-12-31,CPI,continuing,0.0,5.0,0.0,2.0,Financials,Financials,True,descriptive
+2025-06-30,2025-12-31,DSY,continuing,2.0,5.0,2.0,2.0,Financials,Financials,True,descriptive
+2025-06-30,2025-12-31,FSR,continuing,3.0,1.0,3.0,0.0,Financials,Financials,True,descriptive
+2025-06-30,2025-12-31,GFI,continuing,2.0,2.0,2.0,4.0,Basic Materials,Basic Materials,False,descriptive
+2025-06-30,2025-12-31,GLN,entry,,4.0,,3.0,,Basic Materials,,descriptive
+2025-06-30,2025-12-31,GRT,continuing,3.0,1.0,3.0,0.0,Financials,Financials,True,descriptive
+2025-06-30,2025-12-31,HAR,continuing,2.0,2.0,2.0,4.0,Basic Materials,Basic Materials,False,descriptive
+2025-06-30,2025-12-31,IMP,continuing,2.0,2.0,2.0,4.0,Basic Materials,Basic Materials,False,descriptive
+2025-06-30,2025-12-31,INL,continuing,1.0,1.0,1.0,0.0,Financials,Financials,False,descriptive
+2025-06-30,2025-12-31,INP,continuing,1.0,1.0,1.0,0.0,Financials,Financials,False,descriptive
+2025-06-30,2025-12-31,MNP,continuing,0.0,0.0,0.0,1.0,Basic Materials,Basic Materials,False,descriptive
+2025-06-30,2025-12-31,MRP,continuing,0.0,0.0,0.0,1.0,Consumer Services,Consumer Services,False,descriptive
+2025-06-30,2025-12-31,MTN,continuing,2.0,1.0,2.0,0.0,Telecommunications,Telecommunications,True,descriptive
+2025-06-30,2025-12-31,NED,continuing,1.0,1.0,1.0,0.0,Financials,Financials,False,descriptive
+2025-06-30,2025-12-31,NPH,continuing,2.0,2.0,2.0,4.0,Basic Materials,Basic Materials,False,descriptive
+2025-06-30,2025-12-31,NPN,continuing,0.0,5.0,0.0,2.0,Technology,Technology,True,descriptive
+2025-06-30,2025-12-31,NRP,continuing,1.0,1.0,1.0,0.0,Financials,Financials,False,descriptive
+2025-06-30,2025-12-31,OMU,continuing,3.0,1.0,3.0,0.0,Financials,Financials,True,descriptive
+2025-06-30,2025-12-31,OUT,continuing,2.0,1.0,2.0,0.0,Financials,Financials,True,descriptive
+2025-06-30,2025-12-31,PPH,continuing,2.0,1.0,2.0,0.0,Consumer Services,Consumer Services,True,descriptive
+2025-06-30,2025-12-31,PRX,continuing,4.0,4.0,4.0,3.0,Technology,Technology,False,descriptive
+2025-06-30,2025-12-31,REM,continuing,0.0,5.0,0.0,2.0,Financials,Financials,True,descriptive
+2025-06-30,2025-12-31,RNI,continuing,0.0,5.0,0.0,2.0,Financials,Financials,True,imputation-sensitive
+2025-06-30,2025-12-31,SBK,continuing,1.0,1.0,1.0,0.0,Financials,Financials,False,descriptive
+2025-06-30,2025-12-31,SHP,continuing,0.0,0.0,0.0,1.0,Consumer Services,Consumer Services,False,descriptive
+2025-06-30,2025-12-31,SLM,continuing,1.0,1.0,1.0,0.0,Financials,Financials,False,descriptive
+2025-06-30,2025-12-31,SOL,continuing,0.0,5.0,0.0,2.0,Basic Materials,Basic Materials,True,descriptive
+2025-06-30,2025-12-31,SSW,continuing,2.0,2.0,2.0,4.0,Basic Materials,Basic Materials,False,descriptive
+2025-06-30,2025-12-31,VAL,continuing,1.0,2.0,1.0,4.0,Basic Materials,Basic Materials,True,descriptive
+2025-06-30,2025-12-31,VOD,continuing,2.0,1.0,2.0,0.0,Telecommunications,Telecommunications,True,descriptive
+2025-06-30,2025-12-31,WHL,continuing,0.0,0.0,0.0,1.0,Consumer Services,Consumer Services,False,descriptive
+2025-12-31,2026-06-30,ABG,continuing,1.0,6.0,0.0,3.0,Financials,Financials,True,descriptive
+2025-12-31,2026-06-30,AGL,continuing,5.0,1.0,2.0,0.0,Basic Materials,Basic Materials,True,imputation-sensitive
+2025-12-31,2026-06-30,ANG,continuing,2.0,2.0,4.0,2.0,Basic Materials,Basic Materials,False,descriptive
+2025-12-31,2026-06-30,ANH,continuing,4.0,4.0,3.0,4.0,Consumer Goods,Consumer Goods,False,descriptive
+2025-12-31,2026-06-30,BHG,continuing,4.0,4.0,3.0,4.0,Basic Materials,Basic Materials,False,descriptive
+2025-12-31,2026-06-30,BID,continuing,0.0,0.0,1.0,1.0,Consumer Services,Consumer Services,False,descriptive
+2025-12-31,2026-06-30,BTI,continuing,4.0,4.0,3.0,4.0,Consumer Goods,Consumer Goods,False,descriptive
+2025-12-31,2026-06-30,BVT,continuing,0.0,0.0,1.0,1.0,Industrials,Industrials,False,descriptive
+2025-12-31,2026-06-30,CFR,continuing,4.0,4.0,3.0,4.0,Consumer Goods,Consumer Goods,False,descriptive
+2025-12-31,2026-06-30,CLS,continuing,0.0,0.0,1.0,1.0,Consumer Services,Consumer Services,False,descriptive
+2025-12-31,2026-06-30,CPI,continuing,5.0,0.0,2.0,1.0,Financials,Financials,True,descriptive
+2025-12-31,2026-06-30,DSY,continuing,5.0,0.0,2.0,1.0,Financials,Financials,True,descriptive
+2025-12-31,2026-06-30,FSR,continuing,1.0,1.0,0.0,0.0,Financials,Financials,False,descriptive
+2025-12-31,2026-06-30,GFI,continuing,2.0,2.0,4.0,2.0,Basic Materials,Basic Materials,False,descriptive
+2025-12-31,2026-06-30,GLN,continuing,4.0,4.0,3.0,4.0,Basic Materials,Basic Materials,False,descriptive
+2025-12-31,2026-06-30,GRT,continuing,1.0,1.0,0.0,0.0,Financials,Financials,False,descriptive
+2025-12-31,2026-06-30,HAR,continuing,2.0,2.0,4.0,2.0,Basic Materials,Basic Materials,False,descriptive
+2025-12-31,2026-06-30,IMP,continuing,2.0,2.0,4.0,2.0,Basic Materials,Basic Materials,False,descriptive
+2025-12-31,2026-06-30,INL,continuing,1.0,6.0,0.0,3.0,Financials,Financials,True,descriptive
+2025-12-31,2026-06-30,INP,continuing,1.0,6.0,0.0,3.0,Financials,Financials,True,descriptive
+2025-12-31,2026-06-30,MNP,exit,0.0,,1.0,,Basic Materials,,,descriptive
+2025-12-31,2026-06-30,MRP,continuing,0.0,0.0,1.0,1.0,Consumer Services,Consumer Services,False,descriptive
+2025-12-31,2026-06-30,MTN,continuing,1.0,1.0,0.0,0.0,Telecommunications,Telecommunications,False,descriptive
+2025-12-31,2026-06-30,NED,continuing,1.0,6.0,0.0,3.0,Financials,Financials,True,descriptive
+2025-12-31,2026-06-30,NPH,continuing,2.0,2.0,4.0,2.0,Basic Materials,Basic Materials,False,descriptive
+2025-12-31,2026-06-30,NPN,continuing,5.0,4.0,2.0,4.0,Technology,Technology,True,descriptive
+2025-12-31,2026-06-30,NRP,continuing,1.0,6.0,0.0,3.0,Financials,Financials,True,descriptive
+2025-12-31,2026-06-30,OMU,continuing,1.0,1.0,0.0,0.0,Financials,Financials,False,descriptive
+2025-12-31,2026-06-30,OUT,continuing,1.0,1.0,0.0,0.0,Financials,Financials,False,descriptive
+2025-12-31,2026-06-30,PAN,entry,,2.0,,2.0,,Basic Materials,,descriptive
+2025-12-31,2026-06-30,PPH,continuing,1.0,1.0,0.0,0.0,Consumer Services,Consumer Services,False,descriptive
+2025-12-31,2026-06-30,PRX,continuing,4.0,4.0,3.0,4.0,Technology,Technology,False,descriptive
+2025-12-31,2026-06-30,REM,continuing,5.0,0.0,2.0,1.0,Financials,Financials,True,descriptive
+2025-12-31,2026-06-30,RNI,continuing,5.0,0.0,2.0,1.0,Financials,Financials,True,imputation-sensitive
+2025-12-31,2026-06-30,SBK,continuing,1.0,1.0,0.0,0.0,Financials,Financials,False,descriptive
+2025-12-31,2026-06-30,SHP,continuing,0.0,0.0,1.0,1.0,Consumer Services,Consumer Services,False,descriptive
+2025-12-31,2026-06-30,SLM,continuing,1.0,1.0,0.0,0.0,Financials,Financials,False,descriptive
+2025-12-31,2026-06-30,SOL,continuing,5.0,1.0,2.0,0.0,Basic Materials,Basic Materials,True,descriptive
+2025-12-31,2026-06-30,SSW,continuing,2.0,2.0,4.0,2.0,Basic Materials,Basic Materials,False,descriptive
+2025-12-31,2026-06-30,VAL,continuing,2.0,2.0,4.0,2.0,Basic Materials,Basic Materials,False,descriptive
+2025-12-31,2026-06-30,VOD,continuing,1.0,1.0,0.0,0.0,Telecommunications,Telecommunications,False,descriptive
+2025-12-31,2026-06-30,WHL,continuing,0.0,0.0,1.0,1.0,Consumer Services,Consumer Services,False,descriptive

@@ -1,6 +1,36 @@
 # JSE Top 40 Clustering
 
-Clustering research using historical FTSE/JSE Top 40 cross-sections.
+An EDA-to-SHAP workflow extending the original single-window SACJ study to three
+historical FTSE/JSE Top 40 cross-sections.
+
+## Start here: the complete study
+
+Open **[notebooks/three_cross_section_study.ipynb](notebooks/three_cross_section_study.ipynb)**
+in VS Code, select the project `.venv` kernel and choose **Run All**.
+
+The notebook walks through:
+
+1. Validate and load all 123 instrument-date observations.
+2. **EDA:** population, missing cases, imputations, distributions, correlations and sector context.
+3. **Modelling:** PCA/t-SNE/UMAP with hierarchical clustering, K-Means and DBSCAN at every date.
+4. **Plots and scores:** silhouette **and** Davies-Bouldin in embedding/common-feature space, maps, profiles and dendrograms.
+5. **SHAP:** gradient-boosted surrogate explanations, class mapping, additivity and in-sample/OOF fidelity.
+6. **Temporal comparisons:** continuing members, index entries/exits and aligned transition tables.
+
+The command-line equivalent runs the same stages:
+
+```bash
+python scripts/run_study.py
+```
+
+Each execution creates a new tracked `experiments/runs/<run_id>/` folder.
+Start reading its **`study_summary.md`**. The original t-SNE baseline and the frozen
+UMAP sensitivity are labelled separately; settings are not retuned on later dates.
+The paper's hierarchical/K-Means models use **k=8**, matching the original
+eight-sector design. Other k values remain diagnostics; DBSCAN reports its
+natural cluster/noise count as a separate comparator.
+See the [step-by-step study guide](docs/study_guide.md) for setup, file locations
+and the meaning of the plots.
 
 Study claim: a repeated, interpretable cross-sectional investment-screening
 process. See the [ORiON methods-to-results checklist](docs/orion_methods_results_checklist.md)
@@ -8,18 +38,30 @@ for the evidence matrix, ten-feature variant, implemented results and pending
 screening specifications. Reconstructed inputs do not become certified PIT
 observations through modelling.
 
-## Run the analysis
+## Install dependencies
 
 Use Python 3.11 or 3.12 in VS Code or a terminal. Windows Python 3.11.14
 was executed locally with every pinned top-level dependency; see the
 [full environment lock](configs/environment-windows-py311.txt). Windows/3.11 and
-Ubuntu/3.12 CI also passed for the final code commit; see
+Ubuntu/3.12 CI passed for the earlier recorded commit; see
 [recorded check evidence](reports/ci_status.json).
 
 ```bash
 python -m venv .venv
 # Activate .venv (Windows: .venv\Scripts\activate; macOS/Linux: source .venv/bin/activate)
 python -m pip install -r requirements.txt
+# For the interactive notebook, install the notebook support as well:
+python -m pip install -r requirements-notebook.txt
+python scripts/run_study.py
+```
+
+The notebook and command-line workflow use the same tested Python modules.
+The supporting scripts below remain available for individual experiments.
+
+<details>
+<summary>Advanced: validation, individual experiments and saved-result printing</summary>
+
+```bash
 python scripts/validate_data.py
 python -m unittest discover -s tests -v
 python scripts/run_analysis.py --mode baseline --experiment baseline
@@ -37,6 +79,8 @@ python scripts/tune_umap.py
 python scripts/tune_umap.py --config configs/umap_fixed_001.json
 python scripts/tune_umap.py --print-run fixed-umap-001-01
 ```
+
+</details>
 
 Outputs go to unique immutable `experiments/runs/<run_id>/` directories. Each run
 has a status, diagnostic log, exact configuration, code snapshot, input hashes,

@@ -153,9 +153,11 @@ class Run:
         (self.out / 'worktree.patch').write_text(git('diff', '--binary', 'HEAD'), encoding='utf-8')
         # Includes untracked implementation files, excludes result trees, caches and credentials.
         paths = []
-        for folder in ['scripts', 'tests', 'configs', 'docs', 'data', '.github']:
+        for folder in ['scripts', 'tests', 'configs', 'docs', 'data', '.github', 'notebooks']:
             paths += [p for p in (ROOT / folder).rglob('*') if p.is_file() and '__pycache__' not in p.parts]
         paths += [ROOT / p for p in ['README.md', 'requirements.txt', '.gitignore']]
+        if (ROOT/'requirements-notebook.txt').is_file():
+            paths.append(ROOT/'requirements-notebook.txt')
         with zipfile.ZipFile(self.out / 'source_snapshot.zip', 'w', zipfile.ZIP_DEFLATED) as archive:
             for p in sorted(paths):
                 archive.write(p, p.relative_to(ROOT).as_posix())

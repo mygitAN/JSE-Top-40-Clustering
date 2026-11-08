@@ -31,6 +31,45 @@ test_deviation_definition_and_singleton (test_orion_review.OrionTests.test_devia
 test_jaccard_is_not_overlap_objective (test_orion_review.OrionTests.test_jaccard_is_not_overlap_objective) ... ok
 test_permutation_unmatched_and_membership_events (test_orion_review.OrionTests.test_permutation_unmatched_and_membership_events) ... ok
 test_saved_objectives_disagree_on_four_instruments (test_orion_review.OrionTests.test_saved_objectives_disagree_on_four_instruments) ... ok
+test_clean_notebook_cells_have_valid_python (test_study.StudyTests.test_clean_notebook_cells_have_valid_python) ... ok
+test_eda_does_not_refit_scaler_on_future (test_study.StudyTests.test_eda_does_not_refit_scaler_on_future) ... ok
+test_eda_population_missingness_and_evidence (test_study.StudyTests.test_eda_population_missingness_and_evidence) ... ok
+test_missing_required_outputs_fail_completion (test_study.StudyTests.test_missing_required_outputs_fail_completion) ... ok
+test_paper_workflow_requires_eight_clusters (test_study.StudyTests.test_paper_workflow_requires_eight_clusters) ... ok
+test_stage_order_cannot_bypass_eda (test_study.StudyTests.test_stage_order_cannot_bypass_eda) ... warning: in the working copy of 'scripts/tracking.py', LF will be replaced by CRLF the next time Git touches it
+PASS: 123 rows; 41 per date; 43 tickers; 3 RNI rows retained; 2 volume imputations; model features complete.
+Study run: bad-order
+Artifacts: C:\Users\HP\AppData\Local\Temp\tmppsyzm797\runs\bad-order
+Traceback (most recent call last):
+  File "C:\Users\HP\Documents\GitHub\JSE-Top-40-Clustering\scripts\study_workflow.py", line 59, in _step
+    raise RuntimeError(f'Run stages in order: expected {expected}, found {self.state}')
+RuntimeError: Run stages in order: expected explored, found started
+ok
+test_study_failure_is_tracked_and_not_completed (test_study.StudyTests.test_study_failure_is_tracked_and_not_completed) ... warning: in the working copy of 'scripts/tracking.py', LF will be replaced by CRLF the next time Git touches it
+Study run: eda-failure
+Artifacts: C:\Users\HP\AppData\Local\Temp\tmp6s2jcyef\runs\eda-failure
+
+1. Validate and load all historical observations
+PASS: 123 rows; 41 per date; 43 tickers; 3 RNI rows retained; 2 volume imputations; model features complete.
+
+2. Exploratory data analysis across all three dates
+Traceback (most recent call last):
+  File "C:\Users\HP\Documents\GitHub\JSE-Top-40-Clustering\scripts\study_workflow.py", line 61, in _step
+    result = action()
+             ^^^^^^^^
+  File "C:\Users\HP\Documents\GitHub\JSE-Top-40-Clustering\scripts\study_workflow.py", line 88, in action
+    self.eda = explore(self.data, self.features, self.scaler, self.out/'eda')
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Documents\GitHub\hierarchical-marl-equity-rotation\.uv-python\cpython-3.11.14-windows-x86_64-none\Lib\unittest\mock.py", line 1124, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Documents\GitHub\hierarchical-marl-equity-rotation\.uv-python\cpython-3.11.14-windows-x86_64-none\Lib\unittest\mock.py", line 1128, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Documents\GitHub\hierarchical-marl-equity-rotation\.uv-python\cpython-3.11.14-windows-x86_64-none\Lib\unittest\mock.py", line 1183, in _execute_mock_call
+    raise effect
+RuntimeError: synthetic EDA failure
+ok
 test_completion_collision_and_manifest (test_tracking.TrackingTests.test_completion_collision_and_manifest) ... ok
 test_completion_marker_io_failure_marks_registry_failed (test_tracking.TrackingTests.test_completion_marker_io_failure_marks_registry_failed) ... ok
 test_concurrent_registry_updates_and_finalization (test_tracking.TrackingTests.test_concurrent_registry_updates_and_finalization) ... ok
@@ -52,8 +91,7 @@ test_grid_reuses_fits_and_sweeps_best_not_last_embedding (test_tune_umap.UserUma
 test_invalid_input_fails_instead_of_skipping (test_tune_umap.UserUmapTests.test_invalid_input_fails_instead_of_skipping) ... ok
 
 ----------------------------------------------------------------------
-Ran 42 tests in 3.925s
+Ran 49 tests in 5.909s
 
 OK
-PASS: 123 rows; 41 per date; 43 tickers; 3 RNI rows retained; 2 volume imputations; model features complete.
 

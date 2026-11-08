@@ -1,0 +1,4 @@
+decision_date,instruments,distinct_tickers,fundamental_imputations,volume_imputations
+2025-06-30,41,41,1,1
+2025-12-31,41,41,1,1
+2026-06-30,41,41,1,0

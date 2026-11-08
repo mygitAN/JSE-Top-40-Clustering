@@ -1,7 +1,29 @@
+The revised study now has a guided notebook and equivalent one-command workflow:
+validation and EDA, modelling, plots, SHAP, seed stability and temporal comparisons
+for three cross-sections of 41 instruments each. Hierarchical and K-Means models
+fix k=8 as requested; sector labels are contextual comparators. Both silhouette
+and Davies?Bouldin are reported in embedding and original scaled feature spaces.
+DBSCAN retains its naturally found cluster/noise count.
+
+The executed notebook completed all 11 code cells without errors in run
+`three-cross-section-k8-01`. Its 289 artifacts pass checksum verification, and
+baseline saved arrays reproduce `final-full-42` at every date. All 49 tests pass.
+The notebook extras have a separate requirements file and Windows environment
+snapshot. Both entry points share the same staged implementation.
+
+Three overlapping populations do not constitute 123 independent firms. SHAP
+explains surrogate associations with cluster membership; perfect in-sample
+fidelity does not imply out-of-sample fidelity. Historical shares, market cap,
+sector history and daily-source evidence still block submission-grade empirical
+claims. No baseline promotion or automatic merge. New remote CI must be assessed
+separately from earlier recorded CI evidence.
+
+Earlier work and exploratory searches remain archived below.
+
 The previous pipeline lacked durable run provenance and had gaps in preprocessing
 derivation checks, temporal alignment and surrogate exports. This preserves the
 documented baseline, reconciles all 123 observations to the supplied workbook,
-adds immutable local tracking, and expands verification to 42 passing tests.
+adds immutable local tracking, and originally expanded verification to 42 passing tests.
 
 Complete suites `final-full-42` and `repeat-full-42` include all three dates,
 nine model combinations per date, five seeds, k=2–10 and SHAP. All 89 deterministic

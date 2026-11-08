@@ -1,5 +1,13 @@
 # Reviewer guide
 
+Start with the [guided notebook](../notebooks/three_cross_section_study.ipynb) or
+[executed notebook](three_cross_section_study_executed.ipynb). The completed
+`three-cross-section-k8-01` run covers EDA, all-date model comparisons, plots,
+SHAP and temporal comparisons. Hierarchical/K-Means models fix k=8; other k
+values are sensitivity diagnostics. See [verification](study_walkthrough_verification.json)
+and [the study guide](../docs/study_guide.md). Earlier k=5 walkthrough runs are
+retained development history, superseded by this k=8 walkthrough.
+
 The latest fixed-neighbor/min_dist snippet has a separate
 [k=2–12 score sweep and dual-axis plot](fixed_umap_001_results.md), run
 `fixed-umap-001-01`. It preserves min_dist=0.01 rather than substituting 0.1.
@@ -34,7 +42,7 @@ The paper specification/results have not been promoted for publication.
    `59795b348a6ab447ca41219efb66ab4eddd93dce`. Implementation commit:
    `89c2cce42096ce3d2d4ee0def3b42d71a16c4c4b`.
 2. Run `python scripts/checks.py`. The saved [actual test log](test_results.txt)
-   records successful optimized-mode data validation and 42 passing tests,
+   records successful optimized-mode data validation and 49 passing tests,
    including the ORiON reporting checks added after the original analysis audit.
    Expected synthetic failure tracebacks inside passing tracking tests are intentional.
 3. Verify `python scripts/verify_run.py experiments/runs/final-full-42` and
