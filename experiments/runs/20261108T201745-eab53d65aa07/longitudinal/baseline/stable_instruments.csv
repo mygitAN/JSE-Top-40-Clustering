@@ -1,0 +1,22 @@
+ticker,2025-06-30,2025-12-31,2026-06-30,observed_all_three,stability_status,baseline_to_current_changed,direct_baseline_to_current_changed
+ANG,0.0,0.0,0.0,True,stable all three,False,False
+ANH,1.0,1.0,1.0,True,stable all three,False,False
+BHG,1.0,1.0,1.0,True,stable all three,False,False
+BTI,1.0,1.0,1.0,True,stable all three,False,False
+BVT,3.0,3.0,3.0,True,stable all three,False,True
+CFR,1.0,1.0,1.0,True,stable all three,False,False
+FSR,4.0,4.0,4.0,True,stable all three,False,False
+GFI,0.0,0.0,0.0,True,stable all three,False,False
+GRT,4.0,4.0,4.0,True,stable all three,False,False
+HAR,0.0,0.0,0.0,True,stable all three,False,False
+IMP,0.0,0.0,0.0,True,stable all three,False,False
+INL,2.0,2.0,2.0,True,stable all three,False,False
+INP,2.0,2.0,2.0,True,stable all three,False,False
+NED,2.0,2.0,2.0,True,stable all three,False,False
+NPH,0.0,0.0,0.0,True,stable all three,False,False
+NPN,5.0,5.0,5.0,True,stable all three,False,True
+NRP,2.0,2.0,2.0,True,stable all three,False,False
+OMU,4.0,4.0,4.0,True,stable all three,False,False
+OUT,6.0,6.0,6.0,True,stable all three,False,False
+SSW,0.0,0.0,0.0,True,stable all three,False,False
+VOD,6.0,6.0,6.0,True,stable all three,False,False

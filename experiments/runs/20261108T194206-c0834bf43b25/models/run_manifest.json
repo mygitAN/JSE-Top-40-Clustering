@@ -1,0 +1,212 @@
+{
+  "seed": 42,
+  "stability_runs": 5,
+  "features": [
+    "return_1y",
+    "average_daily_volume_1y_model",
+    "market_cap_zar",
+    "beta_1y",
+    "shares_outstanding",
+    "revenue_zar_model",
+    "eps_zar_model",
+    "annualised_volatility_1y",
+    "dividend_yield",
+    "earnings_yield_model_clipped"
+  ],
+  "primary": "tsne_hierarchical",
+  "source_sha256": "fe6abb616fc826ea973f74bac62902fc77d4309e449ae8af5119df750f061b95",
+  "scaling_fit_on": "2025-06-30",
+  "scaler_min": [
+    -0.4878487848784878,
+    168133.2289156627,
+    45447156720.81,
+    -0.1264415552843601,
+    115822554.0,
+    14401000000.0,
+    -69.94,
+    0.1614513320132679,
+    0.0,
+    -0.5889019129867248
+  ],
+  "scaler_max": [
+    0.750908890602622,
+    17620954.96787149,
+    2407281215110.81,
+    2.386626480843885,
+    5594357851.0,
+    1062824969965.8704,
+    529.385279010239,
+    0.6100828187958385,
+    0.0907871594690691,
+    0.1463674761552991
+  ],
+  "shap_completed": true,
+  "versions": {
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scikit-learn": "1.6.1",
+    "scipy": "1.17.0",
+    "matplotlib": "3.10.8",
+    "umap-learn": "0.5.12",
+    "xgboost": "2.1.4",
+    "shap": "0.49.1"
+  },
+  "settings": {
+    "tsne_perplexity": 5,
+    "tsne_learning_rate": 10,
+    "tsne_max_iter": 300,
+    "tsne_init": "random",
+    "hierarchical_linkage": "average",
+    "hierarchical_metric": "manhattan",
+    "k": 8,
+    "umap_neighbors": 10,
+    "umap_min_dist": 0.1,
+    "dbscan_eps": 0.5,
+    "dbscan_min_samples": 3
+  },
+  "interpretation": "Independent descriptive refits, not out-of-sample predictions; membership transitions separate",
+  "data_validation": {
+    "derived_constants": {
+      "volume": 1534909.228915663,
+      "revenue": 98244535964.16383,
+      "eps": 12.7715,
+      "earnings_yield": 0.051361404520658835,
+      "lower": -0.5889019129867248,
+      "upper": 0.14636747615529913
+    },
+    "workbook_reconciled": true
+  },
+  "population_counts": {
+    "2025-06-30": 41,
+    "2025-12-31": 41,
+    "2026-06-30": 41
+  },
+  "distinct_tickers": 43,
+  "imputation_counts": {
+    "fundamentals_imputed": 3,
+    "volume_imputed": 2
+  },
+  "preprocessing_method": {
+    "policy": "Retrospective public-source reconstruction, not point-in-time investor-observable backtest. Later restatements permitted by research design, though this extract retains the original issuer values already present in v4.",
+    "source_workbook": "Top40_PIT_Verification_v4.xlsx",
+    "population": {
+      "total": 123,
+      "per_snapshot": 41,
+      "excluded": "none; every historically eligible Top 40 instrument remains",
+      "imputed_volume_rows": 2,
+      "imputed_fundamental_rows": 3
+    },
+    "features": "Original 11-feature concept except analyst ratings absent and P/E replaced by earnings yield; sector retained as categorical, do not ordinal-code; selected numeric fields preserve native units. Revenue/EPS may not have cross-sector uniform accounting meaning.",
+    "split": {
+      "2025-06-30": "train",
+      "2025-12-31": "validation",
+      "2026-06-30": "test"
+    },
+    "preprocessing_fit_on": "2025-06-30 only",
+    "volume_imputation": {
+      "method": "training median",
+      "value": 1534909.228915663,
+      "missing_indicator": "volume_imputed"
+    },
+    "fundamental_imputation": {
+      "method": "training medians for modelling features only; raw values remain blank",
+      "revenue_zar": 98244535964.16383,
+      "eps_zar": 12.7715,
+      "earnings_yield": 0.051361404520658835,
+      "missing_indicator": "fundamentals_imputed",
+      "affected": "RNI at all three snapshots; do not interpret imputed values as reported figures or as an ordinary cluster transition"
+    },
+    "earnings_yield_clipping": {
+      "method": "training 1st/99th empirical percentiles, linear interpolation",
+      "lower": -0.5889019129867248,
+      "upper": 0.14636747615529913
+    },
+    "sector": "Legacy Listcorp labels; eight categories, historically unverified. Categorical feature retained per user; do not call current official 11-industry ICB.",
+    "shares_and_cap": "All shares are unverified Yahoo-era historical reconstruction; cap reconciles as close times shares. No guarantee this share basis was available at snapshot.",
+    "market": "Retrospective Yahoo daily history with repairs documented in PIT Market, not an archived as-of vendor extract.",
+    "permitted_use": "Exploratory clustering, sensitivity analysis, pipeline development. Not no-look-ahead headline portfolio performance."
+  },
+  "resolved_specification": {
+    "method_version": "reconstructed-baseline-v2-audit",
+    "data_version": "Top40_Retrospective_Model_Inputs_v1",
+    "primary": "tsne_hierarchical",
+    "features": [
+      "return_1y",
+      "average_daily_volume_1y_model",
+      "market_cap_zar",
+      "beta_1y",
+      "shares_outstanding",
+      "revenue_zar_model",
+      "eps_zar_model",
+      "annualised_volatility_1y",
+      "dividend_yield",
+      "earnings_yield_model_clipped"
+    ],
+    "fit_date": "2025-06-30",
+    "scaler": "MinMaxScaler(clip=False)",
+    "pca": {
+      "n_components": 2,
+      "svd_solver": "full"
+    },
+    "tsne": {
+      "n_components": 2,
+      "perplexity": 5,
+      "learning_rate": 10,
+      "max_iter": 300,
+      "init": "random",
+      "n_jobs": 1
+    },
+    "umap": {
+      "n_components": 2,
+      "n_neighbors": 10,
+      "min_dist": 0.1,
+      "n_jobs": 1
+    },
+    "hierarchical": {
+      "n_clusters": 8,
+      "linkage": "average",
+      "metric": "manhattan"
+    },
+    "kmeans": {
+      "n_clusters": 8,
+      "n_init": 20
+    },
+    "dbscan": {
+      "eps": 0.5,
+      "min_samples": 3
+    },
+    "dbscan_preprocessing": "per-snapshot embedding standardization, ddof=0",
+    "surrogate": {
+      "n_estimators": 150,
+      "max_depth": 2,
+      "learning_rate": 0.05,
+      "subsample": 1,
+      "colsample_bytree": 1,
+      "n_jobs": 1,
+      "objective": "multi:softprob",
+      "eval_metric": "mlogloss"
+    },
+    "seed": 42,
+    "stability_runs": 5,
+    "sensitivity_k": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+    ],
+    "silhouette_metric": "euclidean",
+    "davies_bouldin_metric": "euclidean embedding centroids",
+    "selection_policy": "fixed descriptive comparisons; no score-based promotion"
+  },
+  "warnings": [
+    "Historical shares/sectors unverified",
+    "Independent t-SNE coordinates have no shared axes",
+    "Seed sensitivity is not bootstrap uncertainty",
+    "OOF pseudo-label fidelity does not validate discovery"
+  ]
+}
