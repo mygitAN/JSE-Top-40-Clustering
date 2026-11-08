@@ -9,6 +9,6 @@
   "primary_k": 8,
   "primary_outputs_unchanged": true,
   "reporting_amendment_posthoc": true,
-  "reporting_example_sha256": "dc936dc2f5335cca3ce2dc36f0fc1a613954c9de036d8a34b0b30f4087e32d1e",
-  "narrative_case_source": "paper-exhaustive-k8-01/models/c_073540362ecaaa17/frozen_2025_shift_shap.csv: NPN, 2025-12-31; reconstructed inputs, not newly verified issuer data"
+  "narrative_case_source": "paper-exhaustive-k8-01/models/c_073540362ecaaa17/frozen_2025_shift_shap.csv: NPN, 2025-12-31; reconstructed inputs, not newly verified issuer data",
+  "reporting_example_utf8_lf_sha256": "e3db2c47b00173f207730318359819563a52a56010a46b99480ea30d4557242b"
 }
