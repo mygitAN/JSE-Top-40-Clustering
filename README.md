@@ -33,6 +33,9 @@ python scripts/summarize_optimization.py silhouette-db-search-01
 python scripts/tune_umap.py --print-run user-umap-grid-01
 # Run that 36-combination grid and its selected-embedding k sweep again:
 python scripts/tune_umap.py
+# Fixed UMAP from the latest snippet: neighbors=3, min_dist=0.01, k=2..12:
+python scripts/tune_umap.py --config configs/umap_fixed_001.json
+python scripts/tune_umap.py --print-run fixed-umap-001-01
 ```
 
 Outputs go to unique immutable `experiments/runs/<run_id>/` directories. Each run

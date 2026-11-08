@@ -1,7 +1,7 @@
 The previous pipeline lacked durable run provenance and had gaps in preprocessing
 derivation checks, temporal alignment and surrogate exports. This preserves the
 documented baseline, reconciles all 123 observations to the supplied workbook,
-adds immutable local tracking, and expands verification to 40 passing tests.
+adds immutable local tracking, and expands verification to 42 passing tests.
 
 Complete suites `final-full-42` and `repeat-full-42` include all three dates,
 nine model combinations per date, five seeds, k=2–10 and SHAP. All 89 deterministic
@@ -48,3 +48,8 @@ separate silhouette/DB champions, the joint winner and exact parameters, and
 offers a verified print-only command for saved runs. Score curves and a matching
 average/Manhattan dendrogram are archived. The seed-42 four-cluster result is
 explicitly an exploratory sensitivity and does not replace the baseline.
+
+The subsequent fixed UMAP request (neighbors=3, min_dist=0.01, k=2–12) is archived
+as `fixed-umap-001-01`, with every k printed and a dual-axis silhouette/DB plot.
+The silhouette winner is k=5 and DB winner k=2; the declared joint rule selects
+k=5. The implementation no longer depends on undefined location-specific globals.

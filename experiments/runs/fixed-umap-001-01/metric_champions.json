@@ -1,0 +1,84 @@
+{
+  "grid": {
+    "highest_silhouette": {
+      "n_neighbors": 3.0,
+      "min_dist": 0.01,
+      "n_clusters": 5.0,
+      "Silhouette": 0.8019043803215027,
+      "Davies_Bouldin": 0.24301380502978503,
+      "silhouette_features": 0.2202936623117341,
+      "davies_bouldin_features": 1.2017655682191628,
+      "singleton_clusters": 0.0,
+      "silhouette_rank": 1.0,
+      "db_rank": 2.0,
+      "joint_rank_sum": 3.0
+    },
+    "lowest_db": {
+      "n_neighbors": 3.0,
+      "min_dist": 0.01,
+      "n_clusters": 2.0,
+      "Silhouette": 0.7366597056388855,
+      "Davies_Bouldin": 0.2303056372336294,
+      "silhouette_features": 0.34490738927795467,
+      "davies_bouldin_features": 1.1424356758527923,
+      "singleton_clusters": 0.0,
+      "silhouette_rank": 4.0,
+      "db_rank": 1.0,
+      "joint_rank_sum": 5.0
+    },
+    "joint": {
+      "n_neighbors": 3.0,
+      "min_dist": 0.01,
+      "n_clusters": 5.0,
+      "Silhouette": 0.8019043803215027,
+      "Davies_Bouldin": 0.24301380502978503,
+      "silhouette_features": 0.2202936623117341,
+      "davies_bouldin_features": 1.2017655682191628,
+      "singleton_clusters": 0.0,
+      "silhouette_rank": 1.0,
+      "db_rank": 2.0,
+      "joint_rank_sum": 3.0
+    }
+  },
+  "sweep": {
+    "highest_silhouette": {
+      "n_neighbors": 3.0,
+      "min_dist": 0.01,
+      "n_clusters": 5.0,
+      "Silhouette": 0.8019043803215027,
+      "Davies_Bouldin": 0.24301380502978503,
+      "silhouette_features": 0.2202936623117341,
+      "davies_bouldin_features": 1.2017655682191628,
+      "singleton_clusters": 0.0,
+      "silhouette_rank": 1.0,
+      "db_rank": 2.0,
+      "joint_rank_sum": 3.0
+    },
+    "lowest_db": {
+      "n_neighbors": 3.0,
+      "min_dist": 0.01,
+      "n_clusters": 2.0,
+      "Silhouette": 0.7366597056388855,
+      "Davies_Bouldin": 0.2303056372336294,
+      "silhouette_features": 0.34490738927795467,
+      "davies_bouldin_features": 1.1424356758527923,
+      "singleton_clusters": 0.0,
+      "silhouette_rank": 4.0,
+      "db_rank": 1.0,
+      "joint_rank_sum": 5.0
+    },
+    "joint": {
+      "n_neighbors": 3.0,
+      "min_dist": 0.01,
+      "n_clusters": 5.0,
+      "Silhouette": 0.8019043803215027,
+      "Davies_Bouldin": 0.24301380502978503,
+      "silhouette_features": 0.2202936623117341,
+      "davies_bouldin_features": 1.2017655682191628,
+      "singleton_clusters": 0.0,
+      "silhouette_rank": 1.0,
+      "db_rank": 2.0,
+      "joint_rank_sum": 3.0
+    }
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "assignments_2025-06-30.csv": "17984a9ee9e4091ecd3afdc1df219b0390f8cd8b6edb771dba277575d6de5e3c",
+  "assignments_2025-12-31.csv": "862400423423fd4b6319c7f69a4c20d0ebc849a6684c42efec5d932a86589a75",
+  "assignments_2026-06-30.csv": "0924b79518dc7123ead977e01e7710620a5720494cbc79d7465dd8df67a6e36c",
+  "best_parameters.json": "6a772b97a86200448dd2005c6f7f805a4070642f3b3b6ccd7a6c239f77d1151e",
+  "cluster_count_scores.csv": "0eb2c8db75d59e156d6d5031a1d8882da32f9a608245f647921115fce89e5c83",
+  "cluster_count_scores.png": "e70e24b534de823130bf8a43426c269efc5da22872b346785d18a05bb06c23d2",
+  "dendrogram.png": "8bc4060d6c91a8484f34082ad96193728a6f4a0e99bc29c22c5ce3aeae95acd5",
+  "dendrogram_reference.json": "d24af0a29f1de6a600e6d3a709e360d491186d965153306c13c54b043c296d07",
+  "frozen_followup_scores.csv": "1cd1baa69c06e796606c10d094843b532468f7eb8a3502bf57f5befbe9ac8fde",
+  "grid_results.csv": "555b56d0c04059d4269d75971fed668b23027e7c5f978c60f64f7e119b6f3e0f",
+  "linkage_matrix.npy": "fceb7ef187a1c8aa0860ae563d7f3e21b1153c116904a63097211d65bd551487",
+  "metric_champions.json": "56c4a8cc08ca6a9302e9b5a4de4d455c9e5725c6639ae171cf892252eb075e14",
+  "resolved_config.json": "5f22c00071e31c88f036aeb866e57c2277d4bf3c4d828e3ecf098bc832d7cb58",
+  "run.log": "642db7fe05d18acfcc493a1185f298b0beebb74ae220bbd003989a7da400c904",
+  "selected_arrays.npz": "a44b01b0788cfc39ef0e8f7b6c02703a542477cebaf24bd1ebb1d84f7efd5fd5",
+  "selection_assignments.csv": "17984a9ee9e4091ecd3afdc1df219b0390f8cd8b6edb771dba277575d6de5e3c",
+  "source_snapshot.zip": "ccaf8c907f7c909e9eb2a9f3413de081b07fbd1eac0910e570d8d0c6081c5723",
+  "status.json": "dc13d53dcdbcee5e35e8075f7c951b42e77b84130cd1d8b29e531d51400c6a88",
+  "tuning_manifest.json": "0270613320e4364316f4acbcfff60005f3fbf4718eeaa602445352345e290764",
+  "umap_embedding.csv": "7c9d0537e65ea3c53f5823f55258ed6de7f355c8859a88aea0c03ecabe161a51",
+  "worktree.patch": "0cabd685826b99e3f40f881e1634b18a8977f76d6b75ae3004c06cd574048af4"
+}

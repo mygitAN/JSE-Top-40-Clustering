@@ -1,5 +1,9 @@
 # Reviewer guide
 
+The latest fixed-neighbor/min_dist snippet has a separate
+[k=2–12 score sweep and dual-axis plot](fixed_umap_001_results.md), run
+`fixed-umap-001-01`. It preserves min_dist=0.01 rather than substituting 0.1.
+
 The supplied UMAP snippet is now a tested executable with saved best-parameter
 printing, score curves and a matching dendrogram. See
 [the results and commands](user_umap_grid_results.md) for run `user-umap-grid-01`.
@@ -30,7 +34,7 @@ The paper specification/results have not been promoted for publication.
    `59795b348a6ab447ca41219efb66ab4eddd93dce`. Implementation commit:
    `89c2cce42096ce3d2d4ee0def3b42d71a16c4c4b`.
 2. Run `python scripts/checks.py`. The saved [actual test log](test_results.txt)
-   records successful optimized-mode data validation and 40 passing tests,
+   records successful optimized-mode data validation and 42 passing tests,
    including the ORiON reporting checks added after the original analysis audit.
    Expected synthetic failure tracebacks inside passing tracking tests are intentional.
 3. Verify `python scripts/verify_run.py experiments/runs/final-full-42` and

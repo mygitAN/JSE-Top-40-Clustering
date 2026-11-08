@@ -95,6 +95,16 @@ def tune_umap(scaled_data,config=None):
 
 
 def print_results(result):
+    if result.get('mode')=='fixed_embedding':
+        print('\nFixed UMAP: scores for every k (embedding-space silhouette and DB)')
+        for row in result['cluster_sweep'].sort_values('n_clusters').itertuples():
+            print(f'For k={int(row.n_clusters)}: Silhouette={row.Silhouette:.6f}, DB={row.Davies_Bouldin:.6f}')
+        print('\nBest choices:')
+        for criterion,row in result['sweep_champions'].items():
+            print(f'{criterion}: k={int(row["n_clusters"])}, Silhouette={row["Silhouette"]:.6f}, DB={row["Davies_Bouldin"]:.6f}')
+        print('\nFinal parameters:')
+        print(json.dumps(result['best_parameters'],indent=2))
+        return
     for stage,key in [(f'Your {len(result["grid_results"])}-combination grid','grid_champions'),('k sweep on the selected embedding','sweep_champions')]:
         print('\n'+stage)
         for criterion,row in result[key].items():
@@ -105,6 +115,33 @@ def print_results(result):
     print('\nTop 10 grid rows (joint silhouette/DB ranking):')
     print(result['grid_results'][['n_neighbors','min_dist','n_clusters','Silhouette','Davies_Bouldin','joint_rank_sum']]
           .head(10).to_string(index=False))
+
+
+def sweep_fixed_umap(scaled_data,config):
+    """Fit the requested single embedding once, then score all requested k."""
+    import numpy as np
+    import pandas as pd
+    x=np.asarray(scaled_data,dtype=float)
+    if x.ndim!=2 or not np.isfinite(x).all():
+        raise ValueError('scaled_data must be a finite 2D numeric feature matrix')
+    if len(config['n_neighbors'])!=1 or len(config['min_dist'])!=1:
+        raise ValueError('Fixed-embedding mode requires exactly one neighbor/min_dist pair')
+    ks=config['cluster_sweep']; neighbors=config['n_neighbors'][0]; distance=config['min_dist'][0]
+    if not ks or min(ks)<2 or max(ks)>=len(x) or not 2<=neighbors<len(x):
+        raise ValueError('Invalid cluster counts or UMAP neighbors for the observation count')
+    z=fit_umap(x,neighbors,distance,config)
+    rows=[];labels_by_k={}
+    for k in ks:
+        labels_by_k[k],scores=score_fit(x,z,k,config)
+        rows.append(dict(n_neighbors=neighbors,min_dist=distance,n_clusters=k,**scores))
+    table=rank_results(pd.DataFrame(rows));k=int(table.iloc[0].n_clusters)
+    champions=metric_champions(table)
+    params=dict(n_neighbors=neighbors,min_dist=distance,n_components=config['n_components'],
+                umap_metric=config['umap_metric'],n_clusters=k,clustering_metric=config['clustering_metric'],
+                linkage=config['linkage'],random_state=config['seed'],n_jobs=config['n_jobs'])
+    return dict(mode='fixed_embedding',grid_results=table,cluster_sweep=table,
+                grid_champions=champions,sweep_champions=champions,best_parameters=params,
+                embedding=z,labels=labels_by_k[k])
 
 
 def hierarchy_matrix(z,config):
@@ -124,12 +161,23 @@ def plot_results(result,frame,out,config):
     from scipy.cluster.hierarchy import dendrogram
     sweep=result['cluster_sweep'].sort_values('n_clusters')
     k=result['best_parameters']['n_clusters']
-    fig,axes=plt.subplots(1,2,figsize=(12,4))
-    for ax,column,title in zip(axes,['Silhouette','Davies_Bouldin'],['Silhouette (higher better)','Davies-Bouldin (lower better)']):
-        ax.plot(sweep.n_clusters,sweep[column],marker='o')
-        best=sweep[sweep.n_clusters==k].iloc[0]
-        ax.scatter([k],[best[column]],marker='*',s=140,color='red',zorder=3,label='Joint choice')
-        ax.set_xlabel('Number of clusters');ax.set_ylabel(title);ax.grid(alpha=.25);ax.legend()
+    if config.get('plot_style')=='dual_axis':
+        fig,ax=plt.subplots(figsize=(10,6)); other=ax.twinx()
+        ax.plot(sweep.n_clusters,sweep.Silhouette,marker='o',color='tab:blue',label='Silhouette (higher better)')
+        other.plot(sweep.n_clusters,sweep.Davies_Bouldin,marker='s',color='tab:red',label='DB (lower better)')
+        ax.set_xlabel('Number of clusters (k)'); ax.set_xticks(sweep.n_clusters)
+        ax.set_ylabel('Silhouette score',color='tab:blue'); ax.tick_params(axis='y',labelcolor='tab:blue')
+        other.set_ylabel('Davies-Bouldin score',color='tab:red'); other.tick_params(axis='y',labelcolor='tab:red')
+        ax.axvline(k,color='grey',linestyle='--',alpha=.6,label=f'Joint choice: k={k}')
+        handles,labels=ax.get_legend_handles_labels(); h2,l2=other.get_legend_handles_labels()
+        ax.legend(handles+h2,labels+l2,loc='upper center'); ax.grid(alpha=.2)
+    else:
+        fig,axes=plt.subplots(1,2,figsize=(12,4))
+        for ax,column,title in zip(axes,['Silhouette','Davies_Bouldin'],['Silhouette (higher better)','Davies-Bouldin (lower better)']):
+            ax.plot(sweep.n_clusters,sweep[column],marker='o')
+            best=sweep[sweep.n_clusters==k].iloc[0]
+            ax.scatter([k],[best[column]],marker='*',s=140,color='red',zorder=3,label='Joint choice')
+            ax.set_xlabel('Number of clusters');ax.set_ylabel(title);ax.grid(alpha=.25);ax.legend()
     fig.suptitle(f'Selected UMAP embedding; seed {config["seed"]}, {config["selection_date"]}')
     fig.tight_layout();fig.savefig(out/'cluster_count_scores.png',dpi=160);plt.close(fig)
     matrix=hierarchy_matrix(result['embedding'],config)
@@ -161,7 +209,7 @@ def execute(config,out):
     scaler,snapshots=prepare(frame)
     first=snapshots[config['selection_date']]
     x=scaler.transform(numeric_matrix(first))
-    result=tune_umap(x,config)
+    result=sweep_fixed_umap(x,config) if config.get('mode')=='fixed_embedding' else tune_umap(x,config)
     print_results(result)
     result['grid_results'].to_csv(out/'grid_results.csv',index=False)
     result['cluster_sweep'].sort_values('n_clusters').to_csv(out/'cluster_count_scores.csv',index=False)
@@ -170,6 +218,10 @@ def execute(config,out):
     np.savez_compressed(out/'selected_arrays.npz',scaled_features=x,embedding=result['embedding'],
                         labels=result['labels'],tickers=first.ticker.to_numpy(dtype=str),features=np.array(FEATURES))
     output=first.copy();output['cluster']=result['labels'];output.to_csv(out/'selection_assignments.csv',index=False)
+    embedding_frame=pd.DataFrame(result['embedding'],columns=['UMAP_1','UMAP_2'])
+    for column in ['ticker','company','sector_label','fundamentals_imputed','volume_imputed']:
+        embedding_frame[column]=first[column].to_numpy()
+    embedding_frame['cluster']=result['labels'];embedding_frame.to_csv(out/'umap_embedding.csv',index=False)
     plot_results(result,first,out,config)
     followup=[]
     for date,sub in snapshots.items():
@@ -189,7 +241,7 @@ def execute(config,out):
                silhouette_geometry='Euclidean embedding distances',db_geometry='Euclidean embedding centroids',
                linkage_geometry='average/Manhattan',baseline_promoted=False,
                warnings=['Single-seed exploratory result, not five-seed stability evidence',
-                         'Two-stage search is not a complete 9x14 search',
+                         config['scope'],
                          'Later snapshots are descriptive frozen-parameter refits; source evidence limitations unchanged']))
 
 
@@ -213,7 +265,9 @@ def main():
         source=ROOT/'experiments/runs'/args.print_run
         verify_completed(source)
         champs=json.loads((source/'metric_champions.json').read_text(encoding='utf-8'))
-        print_results(dict(grid_results=pd.read_csv(source/'grid_results.csv'),
+        saved_config=json.loads((source/'resolved_config.json').read_text(encoding='utf-8'))
+        print_results(dict(mode=saved_config.get('mode','grid'),grid_results=pd.read_csv(source/'grid_results.csv'),
+                           cluster_sweep=pd.read_csv(source/'cluster_count_scores.csv'),
                            grid_champions=champs['grid'],sweep_champions=champs['sweep'],
                            best_parameters=json.loads((source/'best_parameters.json').read_text(encoding='utf-8'))))
         return

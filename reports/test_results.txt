@@ -46,11 +46,13 @@ test_registry_rejects_invalid_status (test_tracking.TrackingTests.test_registry_
 test_registry_serializes_independent_processes (test_tracking.TrackingTests.test_registry_serializes_independent_processes) ... ok
 test_both_scores_print_separate_champions (test_tune_umap.UserUmapTests.test_both_scores_print_separate_champions) ... ok
 test_dendrogram_tree_matches_same_clustering_geometry (test_tune_umap.UserUmapTests.test_dendrogram_tree_matches_same_clustering_geometry) ... ok
+test_fixed_embedding_is_fit_once_and_prints_every_k (test_tune_umap.UserUmapTests.test_fixed_embedding_is_fit_once_and_prints_every_k) ... ok
+test_fixed_mode_rejects_ambiguous_grid (test_tune_umap.UserUmapTests.test_fixed_mode_rejects_ambiguous_grid) ... ok
 test_grid_reuses_fits_and_sweeps_best_not_last_embedding (test_tune_umap.UserUmapTests.test_grid_reuses_fits_and_sweeps_best_not_last_embedding) ... ok
 test_invalid_input_fails_instead_of_skipping (test_tune_umap.UserUmapTests.test_invalid_input_fails_instead_of_skipping) ... ok
 
 ----------------------------------------------------------------------
-Ran 40 tests in 5.686s
+Ran 42 tests in 3.925s
 
 OK
 PASS: 123 rows; 41 per date; 43 tickers; 3 RNI rows retained; 2 volume imputations; model features complete.

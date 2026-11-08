@@ -63,3 +63,24 @@ class UserUmapTests(unittest.TestCase):
             tune_umap(np.full((20,3),np.nan),self.config)
         with self.assertRaisesRegex(ValueError,'cluster counts'):
             tune_umap(np.ones((10,3)),self.config)
+
+    def test_fixed_embedding_is_fit_once_and_prints_every_k(self):
+        import io
+        from contextlib import redirect_stdout
+        from tune_umap import sweep_fixed_umap,print_results
+        config=json.loads((ROOT/'configs/umap_fixed_001.json').read_text())
+        z=np.random.default_rng(42).normal(size=(20,2))
+        with patch('tune_umap.fit_umap',return_value=z) as fitting:
+            result=sweep_fixed_umap(np.ones((20,3)),config)
+        self.assertEqual(fitting.call_count,1)
+        self.assertEqual(set(result['cluster_sweep'].n_clusters),set(range(2,13)))
+        self.assertEqual(result['best_parameters']['min_dist'],.01)
+        with redirect_stdout(io.StringIO()) as output:
+            print_results(result)
+        self.assertEqual(output.getvalue().count('For k='),11)
+        self.assertIn('DB=',output.getvalue())
+
+    def test_fixed_mode_rejects_ambiguous_grid(self):
+        from tune_umap import sweep_fixed_umap
+        with self.assertRaisesRegex(ValueError,'exactly one'):
+            sweep_fixed_umap(np.ones((20,3)),self.config)
