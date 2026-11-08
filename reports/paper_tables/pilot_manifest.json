@@ -1,0 +1,36 @@
+{
+ "run_id": "pilot-notebook-20261108T185611",
+ "status": "PILOT / exploratory (v1 reconstructed data)",
+ "protocol": "protocol-v1.2",
+ "git_commit": "cd645963236eb5c2c08501a8354d99e1612cb9c3",
+ "git_dirty": true,
+ "data_file": "data/processed/Top40_Retrospective_Model_Inputs_v1.csv",
+ "data_sha256": "fe6abb616fc826ea973f74bac62902fc77d4309e449ae8af5119df750f061b95",
+ "grid_sha256": "0fc9a637499f0b2979fcaff1f144aecd8cdc80abda25cd6256252389a7538f17",
+ "all_fits_sha256": "3fe2e67027e9ce8c6537ebb78c110175437005ac995d0fca31c48af2c04121c1",
+ "perturbation_runs_sha256": "4cb5a74efc432e6a632a811702280828f32ab924c20a3a1b438ede5af5b78c9e",
+ "selected_method": "Selected: No reduction + hierarchical ward/euclidean, k = 8",
+ "selection_rule": {
+  "min_coverage": 0.95,
+  "min_seed_ari": 0.8,
+  "max_singletons": 1,
+  "max_largest_share": 0.5
+ },
+ "perturbation": {
+  "B": 100,
+  "rng": 20251108,
+  "robust": 0.8,
+  "min_runs": 20
+ },
+ "match_threshold": 0.3,
+ "python": "3.11.14",
+ "packages": {
+  "numpy": "2.3.5",
+  "pandas": "2.2.3",
+  "sklearn": "1.6.1",
+  "scipy": "1.17.0",
+  "umap": "0.5.12",
+  "xgboost": "2.1.4",
+  "shap": "0.49.1"
+ }
+}

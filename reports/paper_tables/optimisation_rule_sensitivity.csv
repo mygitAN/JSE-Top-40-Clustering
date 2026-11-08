@@ -1,0 +1,28 @@
+max_singletons,max_largest_share,min_seed_ari,eligible,winner
+0,0.4,0.7,109,"t-SNE (perp=5, lr=auto, iter=1000, dist=euclidean) + hierarchical average/cityblock"
+0,0.4,0.8,54,"t-SNE (perp=5, lr=auto, iter=1000, dist=euclidean) + hierarchical average/cityblock"
+0,0.4,0.9,15,"t-SNE (perp=5, lr=auto, iter=1000, dist=euclidean) + hierarchical average/euclidean"
+0,0.5,0.7,109,"t-SNE (perp=5, lr=auto, iter=1000, dist=euclidean) + hierarchical average/cityblock"
+0,0.5,0.8,54,"t-SNE (perp=5, lr=auto, iter=1000, dist=euclidean) + hierarchical average/cityblock"
+0,0.5,0.9,15,"t-SNE (perp=5, lr=auto, iter=1000, dist=euclidean) + hierarchical average/euclidean"
+0,0.6,0.7,109,"t-SNE (perp=5, lr=auto, iter=1000, dist=euclidean) + hierarchical average/cityblock"
+0,0.6,0.8,54,"t-SNE (perp=5, lr=auto, iter=1000, dist=euclidean) + hierarchical average/cityblock"
+0,0.6,0.9,15,"t-SNE (perp=5, lr=auto, iter=1000, dist=euclidean) + hierarchical average/euclidean"
+1,0.4,0.7,138,No reduction + hierarchical ward/euclidean
+1,0.4,0.8,70,No reduction + hierarchical ward/euclidean
+1,0.4,0.9,20,No reduction + hierarchical ward/euclidean
+1,0.5,0.7,138,No reduction + hierarchical ward/euclidean
+1,0.5,0.8,70,No reduction + hierarchical ward/euclidean
+1,0.5,0.9,20,No reduction + hierarchical ward/euclidean
+1,0.6,0.7,138,No reduction + hierarchical ward/euclidean
+1,0.6,0.8,70,No reduction + hierarchical ward/euclidean
+1,0.6,0.9,20,No reduction + hierarchical ward/euclidean
+2,0.4,0.7,150,PCA (comp=0.95) + k-means
+2,0.4,0.8,75,No reduction + hierarchical ward/euclidean
+2,0.4,0.9,24,No reduction + hierarchical ward/euclidean
+2,0.5,0.7,152,PCA (comp=0.95) + hierarchical complete/euclidean
+2,0.5,0.8,77,PCA (comp=0.95) + hierarchical complete/euclidean
+2,0.5,0.9,26,PCA (comp=0.95) + hierarchical complete/euclidean
+2,0.6,0.7,153,No reduction + hierarchical complete/euclidean
+2,0.6,0.8,78,No reduction + hierarchical complete/euclidean
+2,0.6,0.9,27,No reduction + hierarchical complete/euclidean

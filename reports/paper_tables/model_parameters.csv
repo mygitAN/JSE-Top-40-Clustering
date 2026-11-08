@@ -1,0 +1,7 @@
+,baseline,tuned
+Scaling,"MinMax, fitted on June 2025 only","MinMax, fitted on June 2025 only"
+Features,10 (Section 2),10 (Section 2)
+Dimension reduction,"t-SNE (perp=5, lr=10, iter=300, dist=euclidean)",No reduction
+Clustering,hierarchical average/cityblock,hierarchical ward/euclidean
+Number of clusters,8,8
+Selection,SACJ historical settings (replication baseline),"Protocol rule (Section 4.5), June 2025 only"

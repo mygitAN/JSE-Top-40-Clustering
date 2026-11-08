@@ -1,0 +1,38 @@
+later_date,ticker,sector,why_in_focus,base_cluster_2025,current_cluster,destination_2025_cluster,destination_reference,associated_with_leaving_base,associated_with_joining_destination,change_in_base_score,change_in_destination_score,outside_training_range,weak_fidelity_2025,imputation_sensitive
+2025-12-31,AGL,Basic Materials,robust move + S1 + S2,0,4,7,accepted match,"1y return, Div. yield, Shares out","Div. yield, Avg volume, Volatility",-1.9794939,0.35676658,,False,True
+2025-12-31,ANH,Consumer Goods,S2,4,3,4,accepted match,(same cluster),(same cluster),0.0,0.0,,False,False
+2025-12-31,BHG,Basic Materials,S1 + S2,4,3,4,accepted match,(same cluster),(same cluster),0.0,0.0,Market cap,False,False
+2025-12-31,BTI,Consumer Goods,S2,4,3,4,accepted match,(same cluster),(same cluster),-3.5251734,-3.5251734,Beta,False,False
+2025-12-31,BVT,Industrials,S1,0,1,0,accepted match,(same cluster),(same cluster),3.7252903e-08,3.7252903e-08,,False,False
+2025-12-31,CPI,Financials,S2,0,1,0,accepted match,(same cluster),(same cluster),-0.32566822,-0.32566822,Shares out,False,False
+2025-12-31,MNP,Basic Materials,S1,0,0,1,accepted match,"Div. yield, Volatility, 1y return","Earnings yield, 1y return, Avg volume",-1.4358472,-0.4584151,,False,False
+2025-12-31,MRP,Consumer Services,S1,0,0,1,accepted match,"Div. yield, Shares out, Volatility","Div. yield, Shares out, Earnings yield",-1.410567,0.88118994,Market cap,False,False
+2025-12-31,MTN,Telecommunications,robust move + S1,3,4,7,accepted match,"Market cap, EPS, Revenue","1y return, Avg volume, Market cap",0.6856409,0.0,1y return,False,False
+2025-12-31,NPN,Technology,robust move + S2,5,1,0,accepted match,"Market cap, Beta, Avg volume","1y return, Beta, Market cap",-1.6563075,-0.22384903,,False,False
+2025-12-31,OMU,Financials,S2,6,5,6,accepted match,(same cluster),(same cluster),-0.49456328,-0.49456328,Avg volume,False,False
+2025-12-31,OUT,Financials,robust move,3,0,1,accepted match,"1y return, EPS, Beta","Avg volume, 1y return, Market cap",-3.815906,-1.2293458e-07,,False,False
+2025-12-31,PPH,Consumer Services,robust move + S1,3,5,6,accepted match,"1y return, Revenue, Earnings yield","1y return, Market cap, Avg volume",-3.1869643,0.10109714,,False,False
+2025-12-31,PRX,Technology,S1 + S2,5,3,4,accepted match,"EPS, Beta, Avg volume","1y return, Avg volume, Market cap",-2.4453986,0.0,,False,False
+2025-12-31,SOL,Basic Materials,S2 + S3,7,4,7,accepted match,(same cluster),(same cluster),-0.82332176,-0.82332176,,False,False
+2025-12-31,SSW,Basic Materials,S2 + S3,2,7,2,isolated: surrogate assignment,(same cluster),(same cluster),0.07636505,0.07636505,"1y return, Avg volume, Volatility",False,False
+2025-12-31,VAL,Basic Materials,S2,2,2,2,accepted match,(same cluster),(same cluster),0.94420266,0.94420266,1y return,False,False
+2025-12-31,VOD,Telecommunications,S1,1,0,1,accepted match,(same cluster),(same cluster),-1.0304558,-1.0304558,,False,False
+2025-12-31,WHL,Consumer Services,S1,0,1,0,accepted match,(same cluster),(same cluster),-0.13799351,-0.13799351,,False,False
+2026-06-30,AGL,Basic Materials,robust move + S1 + S2,0,0,0,accepted match,(same cluster),(same cluster),-3.1195385,-3.1195385,,False,True
+2026-06-30,ANH,Consumer Goods,S2,4,3,4,accepted match,(same cluster),(same cluster),0.0,0.0,Market cap,False,False
+2026-06-30,BHG,Basic Materials,S1 + S2,4,3,4,accepted match,(same cluster),(same cluster),0.0,0.0,Market cap,False,False
+2026-06-30,BTI,Consumer Goods,S2,4,3,4,accepted match,(same cluster),(same cluster),-3.5251734,-3.5251734,Beta,False,False
+2026-06-30,BVT,Industrials,S1,0,0,0,accepted match,(same cluster),(same cluster),-0.14648798,-0.14648798,,False,False
+2026-06-30,CPI,Financials,S2,0,0,0,accepted match,(same cluster),(same cluster),-0.32566822,-0.32566822,,False,False
+2026-06-30,MRP,Consumer Services,S1,0,0,0,accepted match,(same cluster),(same cluster),-1.410567,-1.410567,,False,False
+2026-06-30,MTN,Telecommunications,robust move + S1,3,0,0,accepted match,"EPS, Earnings yield, Shares out","Beta, Avg volume, 1y return",0.34745347,0.16578764,,False,False
+2026-06-30,NPN,Technology,robust move + S2,5,0,0,accepted match,"Market cap, Beta, Avg volume","1y return, Beta, Market cap",-1.7051018,1.2181621,,False,False
+2026-06-30,OMU,Financials,S2,6,4,6,accepted match,(same cluster),(same cluster),-0.39248013,-0.39248013,Avg volume,False,False
+2026-06-30,OUT,Financials,robust move,3,1,1,accepted match,"1y return, EPS, Beta","Avg volume, 1y return, Market cap",-3.815906,-1.2293458e-07,,False,False
+2026-06-30,PPH,Consumer Services,robust move + S1,3,4,6,accepted match,"1y return, Revenue, Earnings yield","1y return, Earnings yield, Market cap",-3.1869643,0.16394079,Avg volume,False,False
+2026-06-30,PRX,Technology,S1 + S2,5,0,0,accepted match,"EPS, Beta, Avg volume","1y return, Shares out, Div. yield",-2.4453986,2.582056,,False,False
+2026-06-30,SOL,Basic Materials,S2 + S3,7,6,7,accepted match,(same cluster),(same cluster),-1.2606244,-1.2606244,"1y return, Beta, Volatility",False,False
+2026-06-30,SSW,Basic Materials,S2 + S3,2,7,2,isolated: surrogate assignment,(same cluster),(same cluster),-2.3202195,-2.3202195,"Beta, Volatility",False,False
+2026-06-30,VAL,Basic Materials,S2,2,2,2,accepted match,(same cluster),(same cluster),-0.33516952,-0.33516952,Beta,False,False
+2026-06-30,VOD,Telecommunications,S1,1,1,1,accepted match,(same cluster),(same cluster),0.0,0.0,,False,False
+2026-06-30,WHL,Consumer Services,S1,0,1,1,accepted match,"1y return, Shares out, Earnings yield","1y return, Avg volume, Market cap",-1.1372551,0.0,Market cap,False,False

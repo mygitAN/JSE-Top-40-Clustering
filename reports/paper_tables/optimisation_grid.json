@@ -1,0 +1,399 @@
+{
+ "reductions": {
+  "none": [
+   {}
+  ],
+  "pca": [
+   {
+    "n_components": 2
+   },
+   {
+    "n_components": 0.95
+   }
+  ],
+  "tsne": [
+   {
+    "perplexity": 5,
+    "learning_rate": 10,
+    "max_iter": 300,
+    "metric": "euclidean"
+   },
+   {
+    "perplexity": 5,
+    "learning_rate": 10,
+    "max_iter": 300,
+    "metric": "manhattan"
+   },
+   {
+    "perplexity": 5,
+    "learning_rate": 10,
+    "max_iter": 1000,
+    "metric": "euclidean"
+   },
+   {
+    "perplexity": 5,
+    "learning_rate": 10,
+    "max_iter": 1000,
+    "metric": "manhattan"
+   },
+   {
+    "perplexity": 5,
+    "learning_rate": "auto",
+    "max_iter": 300,
+    "metric": "euclidean"
+   },
+   {
+    "perplexity": 5,
+    "learning_rate": "auto",
+    "max_iter": 300,
+    "metric": "manhattan"
+   },
+   {
+    "perplexity": 5,
+    "learning_rate": "auto",
+    "max_iter": 1000,
+    "metric": "euclidean"
+   },
+   {
+    "perplexity": 5,
+    "learning_rate": "auto",
+    "max_iter": 1000,
+    "metric": "manhattan"
+   },
+   {
+    "perplexity": 10,
+    "learning_rate": 10,
+    "max_iter": 300,
+    "metric": "euclidean"
+   },
+   {
+    "perplexity": 10,
+    "learning_rate": 10,
+    "max_iter": 300,
+    "metric": "manhattan"
+   },
+   {
+    "perplexity": 10,
+    "learning_rate": 10,
+    "max_iter": 1000,
+    "metric": "euclidean"
+   },
+   {
+    "perplexity": 10,
+    "learning_rate": 10,
+    "max_iter": 1000,
+    "metric": "manhattan"
+   },
+   {
+    "perplexity": 10,
+    "learning_rate": "auto",
+    "max_iter": 300,
+    "metric": "euclidean"
+   },
+   {
+    "perplexity": 10,
+    "learning_rate": "auto",
+    "max_iter": 300,
+    "metric": "manhattan"
+   },
+   {
+    "perplexity": 10,
+    "learning_rate": "auto",
+    "max_iter": 1000,
+    "metric": "euclidean"
+   },
+   {
+    "perplexity": 10,
+    "learning_rate": "auto",
+    "max_iter": 1000,
+    "metric": "manhattan"
+   },
+   {
+    "perplexity": 20,
+    "learning_rate": 10,
+    "max_iter": 300,
+    "metric": "euclidean"
+   },
+   {
+    "perplexity": 20,
+    "learning_rate": 10,
+    "max_iter": 300,
+    "metric": "manhattan"
+   },
+   {
+    "perplexity": 20,
+    "learning_rate": 10,
+    "max_iter": 1000,
+    "metric": "euclidean"
+   },
+   {
+    "perplexity": 20,
+    "learning_rate": 10,
+    "max_iter": 1000,
+    "metric": "manhattan"
+   },
+   {
+    "perplexity": 20,
+    "learning_rate": "auto",
+    "max_iter": 300,
+    "metric": "euclidean"
+   },
+   {
+    "perplexity": 20,
+    "learning_rate": "auto",
+    "max_iter": 300,
+    "metric": "manhattan"
+   },
+   {
+    "perplexity": 20,
+    "learning_rate": "auto",
+    "max_iter": 1000,
+    "metric": "euclidean"
+   },
+   {
+    "perplexity": 20,
+    "learning_rate": "auto",
+    "max_iter": 1000,
+    "metric": "manhattan"
+   }
+  ],
+  "umap": [
+   {
+    "n_neighbors": 3,
+    "min_dist": 0.0,
+    "metric": "euclidean"
+   },
+   {
+    "n_neighbors": 3,
+    "min_dist": 0.0,
+    "metric": "manhattan"
+   },
+   {
+    "n_neighbors": 3,
+    "min_dist": 0.1,
+    "metric": "euclidean"
+   },
+   {
+    "n_neighbors": 3,
+    "min_dist": 0.1,
+    "metric": "manhattan"
+   },
+   {
+    "n_neighbors": 3,
+    "min_dist": 0.5,
+    "metric": "euclidean"
+   },
+   {
+    "n_neighbors": 3,
+    "min_dist": 0.5,
+    "metric": "manhattan"
+   },
+   {
+    "n_neighbors": 5,
+    "min_dist": 0.0,
+    "metric": "euclidean"
+   },
+   {
+    "n_neighbors": 5,
+    "min_dist": 0.0,
+    "metric": "manhattan"
+   },
+   {
+    "n_neighbors": 5,
+    "min_dist": 0.1,
+    "metric": "euclidean"
+   },
+   {
+    "n_neighbors": 5,
+    "min_dist": 0.1,
+    "metric": "manhattan"
+   },
+   {
+    "n_neighbors": 5,
+    "min_dist": 0.5,
+    "metric": "euclidean"
+   },
+   {
+    "n_neighbors": 5,
+    "min_dist": 0.5,
+    "metric": "manhattan"
+   },
+   {
+    "n_neighbors": 10,
+    "min_dist": 0.0,
+    "metric": "euclidean"
+   },
+   {
+    "n_neighbors": 10,
+    "min_dist": 0.0,
+    "metric": "manhattan"
+   },
+   {
+    "n_neighbors": 10,
+    "min_dist": 0.1,
+    "metric": "euclidean"
+   },
+   {
+    "n_neighbors": 10,
+    "min_dist": 0.1,
+    "metric": "manhattan"
+   },
+   {
+    "n_neighbors": 10,
+    "min_dist": 0.5,
+    "metric": "euclidean"
+   },
+   {
+    "n_neighbors": 10,
+    "min_dist": 0.5,
+    "metric": "manhattan"
+   },
+   {
+    "n_neighbors": 20,
+    "min_dist": 0.0,
+    "metric": "euclidean"
+   },
+   {
+    "n_neighbors": 20,
+    "min_dist": 0.0,
+    "metric": "manhattan"
+   },
+   {
+    "n_neighbors": 20,
+    "min_dist": 0.1,
+    "metric": "euclidean"
+   },
+   {
+    "n_neighbors": 20,
+    "min_dist": 0.1,
+    "metric": "manhattan"
+   },
+   {
+    "n_neighbors": 20,
+    "min_dist": 0.5,
+    "metric": "euclidean"
+   },
+   {
+    "n_neighbors": 20,
+    "min_dist": 0.5,
+    "metric": "manhattan"
+   }
+  ]
+ },
+ "hierarchical": [
+  [
+   "ward",
+   "euclidean"
+  ],
+  [
+   "single",
+   "euclidean"
+  ],
+  [
+   "single",
+   "cityblock"
+  ],
+  [
+   "single",
+   "cosine"
+  ],
+  [
+   "complete",
+   "euclidean"
+  ],
+  [
+   "complete",
+   "cityblock"
+  ],
+  [
+   "complete",
+   "cosine"
+  ],
+  [
+   "average",
+   "euclidean"
+  ],
+  [
+   "average",
+   "cityblock"
+  ],
+  [
+   "average",
+   "cosine"
+  ]
+ ],
+ "k": [
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10
+ ],
+ "kmeans_n_init": 20,
+ "dbscan": [
+  [
+   0.3,
+   2
+  ],
+  [
+   0.3,
+   3
+  ],
+  [
+   0.3,
+   5
+  ],
+  [
+   0.5,
+   2
+  ],
+  [
+   0.5,
+   3
+  ],
+  [
+   0.5,
+   5
+  ],
+  [
+   0.8,
+   2
+  ],
+  [
+   0.8,
+   3
+  ],
+  [
+   0.8,
+   5
+  ],
+  [
+   1.2,
+   2
+  ],
+  [
+   1.2,
+   3
+  ],
+  [
+   1.2,
+   5
+  ]
+ ],
+ "seeds": [
+  42,
+  43,
+  44,
+  45,
+  46
+ ],
+ "dates": [
+  "2025-06-30",
+  "2025-12-31",
+  "2026-06-30"
+ ]
+}

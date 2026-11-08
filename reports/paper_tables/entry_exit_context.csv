@@ -1,5 +1,5 @@
 event,ticker,sector,date_observed,cluster,cluster_peers
-entry,GLN,Basic Materials,2025-12-31,2,"ANH, BHG, BTI, CFR, PRX"
-exit,APN,Health Care,2025-06-30,3,"BVT, MNP, MRP, WHL"
-entry,PAN,Basic Materials,2026-06-30,3,"ANG, GFI, HAR, IMP, NPH, SSW, VAL"
-exit,MNP,Basic Materials,2025-12-31,0,"INL, INP, MRP, NED, NRP"
+entry,GLN,Basic Materials,2025-12-31,6,
+exit,APN,Health Care,2025-06-30,0,"AGL, BID, BVT, CLS, CPI, MNP, MRP, REM, RNI, SHP, WHL"
+entry,PAN,Basic Materials,2026-06-30,2,"ANG, GFI, HAR, IMP, NPH, VAL"
+exit,MNP,Basic Materials,2025-12-31,0,"ABG, GRT, INL, INP, MRP, NED, NRP, OUT, SBK, SLM, VOD"

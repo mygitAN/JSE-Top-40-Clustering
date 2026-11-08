@@ -1,0 +1,60 @@
+model,transition,side,cluster,size,event,best_J,split_into,profile_match,profile_agrees
+baseline,2025-06-30 → 2025-12-31,from,C0,8,matched → C3,0.4,"C3, C4",C3,True
+baseline,2025-06-30 → 2025-12-31,from,C1,8,matched → C1,0.6666666666666666,,C1,True
+baseline,2025-06-30 → 2025-12-31,from,C2,7,matched → C0,0.4,"C0, C5",C0,True
+baseline,2025-06-30 → 2025-12-31,from,C3,5,matched → C2,1.0,,C2,True
+baseline,2025-06-30 → 2025-12-31,from,C4,5,dissolved,0.2857142857142857,,C5,
+baseline,2025-06-30 → 2025-12-31,from,C5,3,matched → C4,0.3333333333333333,,C4,True
+baseline,2025-06-30 → 2025-12-31,from,C6,3,matched → C6,0.75,,C6,True
+baseline,2025-06-30 → 2025-12-31,from,C7,2,dissolved,0.2857142857142857,,C7,
+baseline,2025-06-30 → 2025-12-31,to,C5,5,new,0.3333333333333333,,,
+baseline,2025-06-30 → 2025-12-31,to,C7,1,new,0.125,,,
+baseline,2025-06-30 → 2025-12-31,to,C4,5,"merge of C0, C5",0.3333333333333333,,,
+baseline,2025-12-31 → 2026-06-30,from,C0,7,dissolved,0.3333333333333333,,C7,
+baseline,2025-12-31 → 2026-06-30,from,C1,7,matched → C1,1.0,,C1,True
+baseline,2025-12-31 → 2026-06-30,from,C2,6,matched → C3,0.8333333333333334,,C3,True
+baseline,2025-12-31 → 2026-06-30,from,C3,6,matched → C2,0.6666666666666666,,C2,True
+baseline,2025-12-31 → 2026-06-30,from,C4,5,matched → C4,0.6666666666666666,,C4,True
+baseline,2025-12-31 → 2026-06-30,from,C5,5,matched → C0,0.4,,C0,True
+baseline,2025-12-31 → 2026-06-30,from,C6,4,matched → C5,1.0,,C5,True
+baseline,2025-12-31 → 2026-06-30,from,C7,1,matched → C6,0.3333333333333333,,C6,True
+baseline,2025-12-31 → 2026-06-30,to,C7,2,new,0.14285714285714285,,,
+baseline,2025-12-31 → 2026-06-30,to,C0,9,"merge of C0, C5",0.4,,,
+baseline,2025-06-30 → 2026-06-30,from,C0,8,matched → C2,0.625,,C2,True
+baseline,2025-06-30 → 2026-06-30,from,C1,8,matched → C1,0.6666666666666666,,C1,True
+baseline,2025-06-30 → 2026-06-30,from,C2,7,matched → C0,0.6,,C0,True
+baseline,2025-06-30 → 2026-06-30,from,C3,5,matched → C3,0.8,,C3,True
+baseline,2025-06-30 → 2026-06-30,from,C4,5,dissolved,0.2,,C4,
+baseline,2025-06-30 → 2026-06-30,from,C5,3,matched → C4,0.3333333333333333,,C6,False
+baseline,2025-06-30 → 2026-06-30,from,C6,3,matched → C5,0.75,,C5,True
+baseline,2025-06-30 → 2026-06-30,from,C7,2,matched → C6,0.6666666666666666,,C7,False
+baseline,2025-06-30 → 2026-06-30,to,C7,2,new,0.16666666666666666,,,
+tuned,2025-06-30 → 2025-12-31,from,C0,12,matched → C1,0.6153846153846154,,C1,True
+tuned,2025-06-30 → 2025-12-31,from,C1,8,matched → C0,0.6666666666666666,,C0,True
+tuned,2025-06-30 → 2025-12-31,from,C2,7,matched → C2,0.8571428571428571,,C2,True
+tuned,2025-06-30 → 2025-12-31,from,C3,4,dissolved,0.16666666666666666,,C7,
+tuned,2025-06-30 → 2025-12-31,from,C4,3,matched → C3,0.6,,C6,False
+tuned,2025-06-30 → 2025-12-31,from,C5,3,dissolved,0.3333333333333333,,C3,
+tuned,2025-06-30 → 2025-12-31,from,C6,3,matched → C5,0.5,,C5,True
+tuned,2025-06-30 → 2025-12-31,from,C7,1,matched → C4,0.3333333333333333,,C4,True
+tuned,2025-06-30 → 2025-12-31,to,C6,1,new (entrants only),,,,
+tuned,2025-06-30 → 2025-12-31,to,C7,1,new,0.14285714285714285,,,
+tuned,2025-06-30 → 2025-12-31,to,C3,5,"merge of C4, C5",0.6,,,
+tuned,2025-12-31 → 2026-06-30,from,C0,12,matched → C1,0.6666666666666666,,C1,True
+tuned,2025-12-31 → 2026-06-30,from,C1,10,matched → C0,0.6,,C0,True
+tuned,2025-12-31 → 2026-06-30,from,C2,6,matched → C2,1.0,,C6,False
+tuned,2025-12-31 → 2026-06-30,from,C3,5,matched → C3,0.8,,C3,True
+tuned,2025-12-31 → 2026-06-30,from,C4,3,matched → C6,0.3333333333333333,,C2,False
+tuned,2025-12-31 → 2026-06-30,from,C5,3,matched → C4,0.75,,C4,True
+tuned,2025-12-31 → 2026-06-30,from,C6,1,matched → C5,1.0,,C5,True
+tuned,2025-12-31 → 2026-06-30,from,C7,1,matched → C7,1.0,,C7,True
+tuned,2025-06-30 → 2026-06-30,from,C0,12,matched → C0,0.6,,C0,True
+tuned,2025-06-30 → 2026-06-30,from,C1,8,matched → C1,0.7,,C1,True
+tuned,2025-06-30 → 2026-06-30,from,C2,7,matched → C2,0.8571428571428571,,C2,True
+tuned,2025-06-30 → 2026-06-30,from,C3,4,dissolved,0.14285714285714285,,C6,
+tuned,2025-06-30 → 2026-06-30,from,C4,3,matched → C3,0.75,,C5,False
+tuned,2025-06-30 → 2026-06-30,from,C5,3,dissolved,0.16666666666666666,,C3,
+tuned,2025-06-30 → 2026-06-30,from,C6,3,matched → C4,0.75,,C4,True
+tuned,2025-06-30 → 2026-06-30,from,C7,1,matched → C6,1.0,,C7,False
+tuned,2025-06-30 → 2026-06-30,to,C5,1,new (entrants only),,,,
+tuned,2025-06-30 → 2026-06-30,to,C7,1,new,0.14285714285714285,,,

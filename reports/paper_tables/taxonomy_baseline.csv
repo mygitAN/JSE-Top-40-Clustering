@@ -1,0 +1,44 @@
+ticker,sector,imputation_sensitive,S1_states,S1,S2_states,S2,S3_states,S3,S_any_states,S_any,S2_borderline_dates,robust_moves
+ABG,Financials,False,NNN,No signal,NNN,No signal,NNN,No signal,NNN,No signal,,2025-12-31 → 2026-06-30
+AGL,Basic Materials,True,NNN,No signal,NAA,Emerging and sustained,NNN,No signal,NAA,Emerging and sustained,2026-06-30,
+ANG,Basic Materials,False,NNN,No signal,NNN,No signal,NNN,No signal,NNN,No signal,,
+ANH,Consumer Goods,False,NNN,No signal,ANN,Resolved,NNN,No signal,ANN,Resolved,,
+APN,Health Care,False,N··,partial history,A··,partial history,N··,partial history,A··,partial history,2025-06-30,
+BHG,Basic Materials,False,ANN,Resolved,AAA,Persistent,NNN,No signal,AAA,Persistent,2025-12-31,
+BID,Consumer Services,False,NNN,No signal,NNN,No signal,NNN,No signal,NNN,No signal,,
+BTI,Consumer Goods,False,NNN,No signal,ANN,Resolved,NNN,No signal,ANN,Resolved,2025-06-30,
+BVT,Industrials,False,NAA,Emerging and sustained,NNN,No signal,NNN,No signal,NAA,Emerging and sustained,,2025-06-30 → 2026-06-30
+CFR,Consumer Goods,False,NNN,No signal,NNN,No signal,NNN,No signal,NNN,No signal,,
+CLS,Consumer Services,False,NNN,No signal,NNN,No signal,NNN,No signal,NNN,No signal,,
+CPI,Financials,False,NNN,No signal,NAA,Emerging and sustained,NNN,No signal,NAA,Emerging and sustained,,
+DSY,Financials,False,NNN,No signal,NNN,No signal,NNN,No signal,NNN,No signal,,2025-06-30 → 2026-06-30
+FSR,Financials,False,NNN,No signal,NNN,No signal,NNN,No signal,NNN,No signal,,
+GFI,Basic Materials,False,NNN,No signal,NNN,No signal,NNN,No signal,NNN,No signal,,
+GLN,Basic Materials,False,·NN,partial history,·AA,partial history,·NN,partial history,·AA,partial history,,
+GRT,Financials,False,NNN,No signal,NNN,No signal,NNN,No signal,NNN,No signal,,
+HAR,Basic Materials,False,NNN,No signal,NNN,No signal,NNN,No signal,NNN,No signal,,
+IMP,Basic Materials,False,NNN,No signal,NNN,No signal,NNN,No signal,NNN,No signal,,
+INL,Financials,False,NNN,No signal,NNN,No signal,NNN,No signal,NNN,No signal,,
+INP,Financials,False,NNN,No signal,NNN,No signal,NNN,No signal,NNN,No signal,,
+MNP,Basic Materials,False,NA·,partial history,NN·,partial history,NN·,partial history,NA·,partial history,,
+MRP,Consumer Services,False,NAN,Transient,NNN,No signal,NNN,No signal,NAN,Transient,,2025-12-31 → 2026-06-30
+MTN,Telecommunications,False,NNA,Emerging,NNN,No signal,NNN,No signal,NNA,Emerging,,"2025-06-30 → 2025-12-31, 2025-06-30 → 2026-06-30"
+NED,Financials,False,NNN,No signal,NNN,No signal,NNN,No signal,NNN,No signal,,
+NPH,Basic Materials,False,NNN,No signal,NNN,No signal,NNN,No signal,NNN,No signal,,
+NPN,Technology,False,NAN,Transient,ANN,Resolved,NNN,No signal,AAN,Resolving,,2025-12-31 → 2026-06-30
+NRP,Financials,False,NNN,No signal,NNN,No signal,NNN,No signal,NNN,No signal,,
+OMU,Financials,False,NNN,No signal,NNA,Emerging,NNN,No signal,NNA,Emerging,2026-06-30,
+OUT,Financials,False,NNN,No signal,NNN,No signal,NNN,No signal,NNN,No signal,,
+PAN,Basic Materials,False,··N,partial history,··N,partial history,··N,partial history,··N,partial history,,
+PPH,Consumer Services,False,NAA,Emerging and sustained,NNN,No signal,NNN,No signal,NAA,Emerging and sustained,,"2025-06-30 → 2025-12-31, 2025-06-30 → 2026-06-30"
+PRX,Technology,False,ANN,Resolved,ANN,Resolved,NNN,No signal,ANN,Resolved,,
+REM,Financials,False,NNN,No signal,NNN,No signal,NNN,No signal,NNN,No signal,,
+RNI,Financials,True,NNN,No signal,NNN,No signal,NNN,No signal,NNN,No signal,,
+SBK,Financials,False,NNN,No signal,NNN,No signal,NNN,No signal,NNN,No signal,,2025-06-30 → 2026-06-30
+SHP,Consumer Services,False,NNN,No signal,NNN,No signal,NNN,No signal,NNN,No signal,,
+SLM,Financials,False,NNN,No signal,NNN,No signal,NNN,No signal,NNN,No signal,,2025-06-30 → 2026-06-30
+SOL,Basic Materials,False,NNN,No signal,AAA,Persistent,NNN,No signal,AAA,Persistent,,
+SSW,Basic Materials,False,NNN,No signal,AAA,Persistent,NNN,No signal,AAA,Persistent,,
+VAL,Basic Materials,False,ANN,Resolved,ANN,Resolved,NNN,No signal,ANN,Resolved,2025-06-30,"2025-06-30 → 2025-12-31, 2025-06-30 → 2026-06-30"
+VOD,Telecommunications,False,AAA,Persistent,NNN,No signal,NNN,No signal,AAA,Persistent,,
+WHL,Consumer Services,False,NNN,No signal,NNN,No signal,NNN,No signal,NNN,No signal,,"2025-12-31 → 2026-06-30, 2025-06-30 → 2026-06-30"
