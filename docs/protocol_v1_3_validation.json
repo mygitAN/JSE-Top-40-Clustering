@@ -1,0 +1,303 @@
+{
+  "status": "passed documentation consistency and arithmetic",
+  "sections": 12,
+  "primary_k": 8,
+  "beta_cutoff": 16.355911372368496,
+  "beta_bonferroni": 22.591688539162188,
+  "preserved_minimum_runs": 20,
+  "preserved_condition_limit": 100000000.0,
+  "preserved_fallback": true,
+  "no_models_or_data_run": true,
+  "no_new_frozen_tag": true,
+  "signal_truth_table_combinations": 27,
+  "structural_na_examples": [
+    {
+      "signals": [
+        null,
+        0,
+        1
+      ],
+      "structural_s1": true,
+      "s_or": 1,
+      "multi": 0
+    },
+    {
+      "signals": [
+        null,
+        1,
+        1
+      ],
+      "structural_s1": true,
+      "s_or": 1,
+      "multi": 1
+    },
+    {
+      "signals": [
+        null,
+        null,
+        1
+      ],
+      "structural_s1": true,
+      "s_or": 1,
+      "multi": null
+    }
+  ],
+  "truth_table_status": "passed diagnostic checks; not production signal implementation",
+  "draft_sha256": "2ffcb7b4d0b334678741a7c81e690d8e84c3d91bb2674d16ec9df59e9f99696a",
+  "review_date": "2026-11-08",
+  "source_protocol_tag": "protocol-v1.2",
+  "source_protocol_commit": "cd645963236eb5c2c08501a8354d99e1612cb9c3",
+  "source_protocol_git_blob": "aa504e15fc936bca47a7f6ba433f8ebc5a8688a3",
+  "preserved_tag_objects": {
+    "protocol-v1": "dbb24f6ee49ab7140f468756ca6845e47507bfd1",
+    "protocol-v1.1": "f6f322ddd236d3f7b88dae68d98a9b95e0bf2a1b",
+    "protocol-v1.2": "b5561c3877355f7b72068a354c2db85474af847a"
+  },
+  "active_frozen_protocol_unchanged": true,
+  "validation_scope": "Documentation/reference arithmetic and illustrative signal logic only; no production-code or empirical-data validation",
+  "signal_truth_table": [
+    {
+      "signals": [
+        0,
+        0,
+        0
+      ],
+      "s_or": 0,
+      "multi": 0
+    },
+    {
+      "signals": [
+        0,
+        0,
+        1
+      ],
+      "s_or": 1,
+      "multi": 0
+    },
+    {
+      "signals": [
+        0,
+        0,
+        null
+      ],
+      "s_or": null,
+      "multi": 0
+    },
+    {
+      "signals": [
+        0,
+        1,
+        0
+      ],
+      "s_or": 1,
+      "multi": 0
+    },
+    {
+      "signals": [
+        0,
+        1,
+        1
+      ],
+      "s_or": 1,
+      "multi": 1
+    },
+    {
+      "signals": [
+        0,
+        1,
+        null
+      ],
+      "s_or": 1,
+      "multi": null
+    },
+    {
+      "signals": [
+        0,
+        null,
+        0
+      ],
+      "s_or": null,
+      "multi": 0
+    },
+    {
+      "signals": [
+        0,
+        null,
+        1
+      ],
+      "s_or": 1,
+      "multi": null
+    },
+    {
+      "signals": [
+        0,
+        null,
+        null
+      ],
+      "s_or": null,
+      "multi": null
+    },
+    {
+      "signals": [
+        1,
+        0,
+        0
+      ],
+      "s_or": 1,
+      "multi": 0
+    },
+    {
+      "signals": [
+        1,
+        0,
+        1
+      ],
+      "s_or": 1,
+      "multi": 1
+    },
+    {
+      "signals": [
+        1,
+        0,
+        null
+      ],
+      "s_or": 1,
+      "multi": null
+    },
+    {
+      "signals": [
+        1,
+        1,
+        0
+      ],
+      "s_or": 1,
+      "multi": 1
+    },
+    {
+      "signals": [
+        1,
+        1,
+        1
+      ],
+      "s_or": 1,
+      "multi": 1
+    },
+    {
+      "signals": [
+        1,
+        1,
+        null
+      ],
+      "s_or": 1,
+      "multi": 1
+    },
+    {
+      "signals": [
+        1,
+        null,
+        0
+      ],
+      "s_or": 1,
+      "multi": null
+    },
+    {
+      "signals": [
+        1,
+        null,
+        1
+      ],
+      "s_or": 1,
+      "multi": 1
+    },
+    {
+      "signals": [
+        1,
+        null,
+        null
+      ],
+      "s_or": 1,
+      "multi": null
+    },
+    {
+      "signals": [
+        null,
+        0,
+        0
+      ],
+      "s_or": null,
+      "multi": 0
+    },
+    {
+      "signals": [
+        null,
+        0,
+        1
+      ],
+      "s_or": 1,
+      "multi": null
+    },
+    {
+      "signals": [
+        null,
+        0,
+        null
+      ],
+      "s_or": null,
+      "multi": null
+    },
+    {
+      "signals": [
+        null,
+        1,
+        0
+      ],
+      "s_or": 1,
+      "multi": null
+    },
+    {
+      "signals": [
+        null,
+        1,
+        1
+      ],
+      "s_or": 1,
+      "multi": 1
+    },
+    {
+      "signals": [
+        null,
+        1,
+        null
+      ],
+      "s_or": 1,
+      "multi": null
+    },
+    {
+      "signals": [
+        null,
+        null,
+        0
+      ],
+      "s_or": null,
+      "multi": null
+    },
+    {
+      "signals": [
+        null,
+        null,
+        1
+      ],
+      "s_or": 1,
+      "multi": null
+    },
+    {
+      "signals": [
+        null,
+        null,
+        null
+      ],
+      "s_or": null,
+      "multi": null
+    }
+  ]
+}
