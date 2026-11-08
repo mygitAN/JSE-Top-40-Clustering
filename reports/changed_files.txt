@@ -835,8 +835,10 @@ reports/durable_locations.json
 reports/git_archive_verification.json
 reports/membership_events.csv
 reports/model_comparison.csv
+reports/optimization_ci_status.json
 reports/optimization_dbscan_nonnoise_stability.csv
 reports/optimization_metric_champions.csv
+reports/optimization_replay_verification.json
 reports/optimization_report_source.json
 reports/optimization_results.md
 reports/optimization_silhouette_db.png

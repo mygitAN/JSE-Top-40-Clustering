@@ -37,6 +37,28 @@ def build(run_id):
     std=all_scores.groupby(['scenario','decision_date'])[numeric].std().add_suffix('_std').reset_index()
     table=means.merge(std,on=['scenario','decision_date'])
     table.to_csv(report/'optimized_model_scores.csv',index=False)
+    # The search independently refits its four frozen choices on June again.
+    # Check those actual replays instead of assuming stochastic reproducibility.
+    replay_count=0
+    assignments=pd.read_csv(source/'selected_model_assignments_all_seeds.csv')
+    search_scores=pd.read_csv(source/'selection_scores_all_seeds.csv').set_index(['candidate_id','seed'])
+    with np.load(source/'selection_assignments.npz',allow_pickle=False) as saved:
+        ids=saved['candidate_ids']; seed_values=saved['seeds']; labels=saved['labels']; tickers=saved['tickers']
+        for scenario,candidate in selected.items():
+            for seed in [42,43,44,45,46]:
+                indices=np.flatnonzero((ids==candidate['candidate_id'])&(seed_values==seed))
+                if len(indices)!=1:
+                    raise ValueError('Missing or duplicated search fit for replay')
+                actual=assignments[(assignments.scenario==scenario)&(assignments.decision_date=='2025-06-30')&
+                                   (assignments.seed==seed)].set_index('ticker').loc[tickers,'cluster'].to_numpy()
+                np.testing.assert_array_equal(labels[indices[0]],actual)
+                initial=search_scores.loc[(candidate['candidate_id'],seed)]
+                replay=all_scores[(all_scores.scenario==scenario)&(all_scores.decision_date=='2025-06-30')&(all_scores.seed==seed)].iloc[0]
+                for metric in numeric[:4]:
+                    np.testing.assert_allclose(initial[metric],replay[metric],rtol=1e-7,atol=1e-6)
+                replay_count+=1
+    write_json(report/'optimization_replay_verification.json',dict(status='passed',source_run=run_id,
+               independent_refits_checked=replay_count,labels='exact',numeric_metrics=4,rtol=1e-7,atol=1e-6))
     champions=[]
     fig,axes=plt.subplots(1,2,figsize=(13,5))
     for i,(scenario,geometry) in enumerate([('paper_style_k8','embedding'),('common_features_k8','features')]):
@@ -128,6 +150,8 @@ def build(run_id):
     lines+=['','## How to read this selection','',
         'The grid contains 1,426 configurations and 7,130 selection fits. Selection used June 2025 only. '
         'Later snapshots are descriptive refits of the chosen settings, not newly tuned configurations or untouched validation.',
+        '',f'All {replay_count} independently refitted June winner/baseline seed fits reproduced exact assignments and '
+        'all four numerical quality metrics within rtol=1e-7, atol=1e-6. See `optimization_replay_verification.json`.',
         '','Both scores enter the declared equal-rank joint rule. Pareto frontiers and individual metric champions '
         'are retained, so a trade-off is visible rather than calling one score alone optimal.',
         '','The paper-style winner optimises scores in each representation. The common-feature winner checks '

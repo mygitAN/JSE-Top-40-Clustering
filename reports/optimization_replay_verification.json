@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "source_run": "silhouette-db-search-01",
+  "independent_refits_checked": 20,
+  "labels": "exact",
+  "numeric_metrics": 4,
+  "rtol": 1e-07,
+  "atol": 1e-06
+}

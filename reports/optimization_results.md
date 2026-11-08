@@ -31,6 +31,8 @@ Higher silhouette and lower DB are better. Values below average seeds 42–46.
 
 The grid contains 1,426 configurations and 7,130 selection fits. Selection used June 2025 only. Later snapshots are descriptive refits of the chosen settings, not newly tuned configurations or untouched validation.
 
+All 20 independently refitted June winner/baseline seed fits reproduced exact assignments and all four numerical quality metrics within rtol=1e-7, atol=1e-6. See `optimization_replay_verification.json`.
+
 Both scores enter the declared equal-rank joint rule. Pareto frontiers and individual metric champions are retained, so a trade-off is visible rather than calling one score alone optimal.
 
 The paper-style winner optimises scores in each representation. The common-feature winner checks whether the chosen labels separate in the same financial space. PCA95 may have more than two dimensions.

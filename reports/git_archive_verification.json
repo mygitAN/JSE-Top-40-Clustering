@@ -1,5 +1,5 @@
 {
-  "results_commit": "ededd0106c75c61f2fb5fe4c769be1d98c6e17b3",
+  "results_commit": "febe3b2694502378c0c1d057aab34ec8854b00ff",
   "method": "git archive bytes, every manifest entry and completion marker",
   "runs": [
     {
@@ -25,6 +25,21 @@
     {
       "run_id": "orion-report-01",
       "verified_artifacts": 13,
+      "status": "passed"
+    },
+    {
+      "run_id": "user-full-20261108",
+      "verified_artifacts": 123,
+      "status": "passed"
+    },
+    {
+      "run_id": "user-orion-20261108",
+      "verified_artifacts": 13,
+      "status": "passed"
+    },
+    {
+      "run_id": "silhouette-db-search-01",
+      "verified_artifacts": 209,
       "status": "passed"
     }
   ]
