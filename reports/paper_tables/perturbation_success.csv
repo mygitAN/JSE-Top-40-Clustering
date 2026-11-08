@@ -1,0 +1,7 @@
+model,date,successful,runs
+baseline,2025-06-30,100,100
+baseline,2025-12-31,100,100
+baseline,2026-06-30,100,100
+tuned,2025-06-30,100,100
+tuned,2025-12-31,100,100
+tuned,2026-06-30,100,100

@@ -11,11 +11,14 @@ observations through modelling.
 ## Paper notebook (start here)
 
 [notebooks/JSE_Top40_three_cross_sections.ipynb](notebooks/JSE_Top40_three_cross_sections.ipynb)
-walks through the whole study in paper order: data checks, EDA, preprocessing,
-the nine-combination model comparison, the t-SNE + hierarchical baseline (maps,
-dendrograms, cluster profiles), choice of k, seed stability, sector-divergent
-firms, Hotelling's T², changes over time, and SHAP explanations. It reuses
-`scripts/analysis.py`, so its numbers match the archived runs.
+implements the frozen [research protocol](docs/research_protocol.md) (v1.2, tag
+`protocol-v1.2`) in paper order: data checks, EDA, preprocessing, the full
+optimisation grid and selection rule, the selected method and the SACJ baseline
+(maps, dendrograms over time, cluster profiles), seed and perturbation stability,
+cluster matching and robust firm moves, the S1/S2/S3 signals, the anomaly-dynamics
+taxonomy, and SHAP explanations. On the current v1 reconstructed data its results
+are **pilot / exploratory**; `reports/paper_tables/pilot_manifest.json` records the
+data hash, protocol and package versions of the run.
 
 ```bash
 python -m pip install -r requirements-notebook.txt

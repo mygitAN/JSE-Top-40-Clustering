@@ -1,10 +1,25 @@
-,2025-06-30,2025-12-31,2026-06-30
-Firms,41,41,41
-"Silhouette, t-SNE map",0.5709050893783569,0.5980584025382996,0.6414365768432617
-"Davies–Bouldin, t-SNE map",0.429116040498579,0.4472298681725992,0.40711855686175324
-"Silhouette, 10-feature space",0.18174852638305625,0.17672695482714054,0.22298313486650712
-"Seed ARI, mean (min)",0.73 (0.53),0.92 (0.88),0.93 (0.84)
-Sector ARI / NMI (mean of seeds),0.22 / 0.52,0.26 / 0.55,0.30 / 0.60
-Robust sector-divergent firms,6,9,6
-"T² outliers, feature space",3,1,2
-Surrogate OOF accuracy,0.54,—,0.73
+,,2025-06-30,2025-12-31,2026-06-30
+baseline,"Silhouette, 10-feature space",0.16640540370031737,0.19424169801607166,0.22395504163564137
+baseline,"Davies–Bouldin, 10-feature space",1.177656767796783,1.0389977589847406,1.113888052256541
+baseline,Seed ARI (mean),0.7274304909082923,0.920173805230073,0.9342385442880452
+baseline,Singleton clusters (structural observation),0,1,0
+baseline,Free-k diagnostic (best eligible k),—,—,—
+baseline,Sector ARI / NMI,0.22 / 0.52,0.26 / 0.55,0.30 / 0.60
+baseline,S1 = 1,4,6,4
+baseline,S2 = 1 (Beta reference),9,6,7
+baseline,S3 = 1,0,0,0
+baseline,Multi-signal,3,0,0
+baseline,Robust moves since June 2025,—,3,8
+baseline,Stay with matched cluster since June 2025,—,24,28
+tuned,"Silhouette, 10-feature space",0.2418547365898422,0.2846678740901894,0.253006314363738
+tuned,"Davies–Bouldin, 10-feature space",0.9661262083146059,0.7742000575517103,0.7424574361765235
+tuned,Seed ARI (mean),1.0,1.0,1.0
+tuned,Singleton clusters (structural observation),1,2,3
+tuned,Free-k diagnostic (best eligible k),7,—,—
+tuned,Sector ARI / NMI,0.26 / 0.56,0.26 / 0.50,0.20 / 0.48
+tuned,S1 = 1,8,6,4
+tuned,S2 = 1 (Beta reference),9,6,7
+tuned,S3 = 1,1,2,3
+tuned,Multi-signal,3,3,3
+tuned,Robust moves since June 2025,—,4,3
+tuned,Stay with matched cluster since June 2025,—,28,29

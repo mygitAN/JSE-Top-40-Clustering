@@ -1,0 +1,6 @@
+,rep_label,cl_label,k,n_clusters,silhouette_features,davies_bouldin_features,silhouette_embedding,davies_bouldin_embedding,seed_ari_mean,singletons_max,largest_share_max
+Baseline (SACJ),"t-SNE (perp=5, lr=10, iter=300, dist=euclidean)",hierarchical average/cityblock,8,8.0,0.16640540370031737,1.177656767796783,0.5501078009605408,0.504606661008967,0.7274304909082923,0,0.1951219512195122
+"Tuned, k = 8 (main)",No reduction,hierarchical ward/euclidean,8,8.0,0.2418547365898422,0.9661262083146059,0.2418547365898422,0.9661262083146059,1.0,1,0.2926829268292683
+"Tuned, free k",No reduction,hierarchical complete/cityblock,6,6.0,0.3167391613541994,0.9521638019149068,0.3167391613541994,0.9521638019149068,1.0,1,0.4878048780487805
+"Best 2-D map, k = 8 (feature-space rule)","t-SNE (perp=5, lr=auto, iter=1000, dist=euclidean)",hierarchical average/cityblock,8,8.0,0.18933731872253573,1.13205875710187,0.5275611639022827,0.5157325024172807,0.8278750927167511,0,0.2195121951219512
+"Best 2-D map, k = 8 (embedding-score rule, paper style)","UMAP (nn=3, min_dist=0.0, dist=euclidean)",hierarchical ward/euclidean,8,8.0,0.16559347442589042,1.20238435664663,0.7251331090927124,0.3312466995566309,0.8533596271172776,0,0.2195121951219512

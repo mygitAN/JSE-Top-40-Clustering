@@ -1,0 +1,247 @@
+model,date,ticker,sector,full_sample_status,divergence_stability,isolation_stability,evaluable_runs,S1,S1_reason,S3,imputation_sensitive,S2,ratio,borderline,S_any,applicable,n_signals,multi_signal
+baseline,2025-06-30,ABG,Financials,aligned,0.0,0.0,94,0.0,aligned,0,False,0,0.34543596073752625,False,0,3,0,False
+baseline,2025-06-30,AGL,Basic Materials,aligned,0.23863636363636365,0.011363636363636364,88,0.0,aligned,0,True,0,0.4709368190387546,False,0,3,0,False
+baseline,2025-06-30,ANG,Basic Materials,aligned,0.011494252873563218,0.0,87,0.0,aligned,0,False,0,0.4231410538142968,False,0,3,0,False
+baseline,2025-06-30,ANH,Consumer Goods,aligned,0.010869565217391304,0.0,92,0.0,aligned,0,False,1,1.2090688577514104,False,1,3,1,False
+baseline,2025-06-30,APN,Health Care,divergent:Consumer Services,0.7011494252873564,0.011494252873563218,87,0.0,not robust,0,False,1,1.0854497850222007,True,1,3,1,False
+baseline,2025-06-30,BHG,Basic Materials,divergent:Consumer Goods,0.8924731182795699,0.010752688172043012,93,1.0,divergent,0,False,1,1.5981203795426273,False,1,3,2,True
+baseline,2025-06-30,BID,Consumer Services,no dominant sector,0.18478260869565216,0.0,92,0.0,no dominant sector,0,False,0,0.23869673575149386,False,0,3,0,False
+baseline,2025-06-30,BTI,Consumer Goods,aligned,0.02197802197802198,0.0,91,0.0,aligned,0,False,1,1.012059414845298,True,1,3,1,False
+baseline,2025-06-30,BVT,Industrials,divergent:Consumer Services,0.7528089887640449,0.0,89,0.0,not robust,0,False,0,0.1888231971101487,False,0,3,0,False
+baseline,2025-06-30,CFR,Consumer Goods,aligned,0.020833333333333332,0.0,96,0.0,aligned,0,False,0,0.7229656235625458,False,0,3,0,False
+baseline,2025-06-30,CLS,Consumer Services,no dominant sector,0.23863636363636365,0.0,88,0.0,no dominant sector,0,False,0,0.23939050683541238,False,0,3,0,False
+baseline,2025-06-30,CPI,Financials,no dominant sector,0.10344827586206896,0.0,87,0.0,no dominant sector,0,False,0,0.2798318629246235,False,0,3,0,False
+baseline,2025-06-30,DSY,Financials,aligned,0.010752688172043012,0.0,93,0.0,aligned,0,False,0,0.34923088228411914,False,0,3,0,False
+baseline,2025-06-30,FSR,Financials,aligned,0.0,0.0,93,0.0,aligned,0,False,0,0.7809332230355631,False,0,3,0,False
+baseline,2025-06-30,GFI,Basic Materials,aligned,0.0,0.0,88,0.0,aligned,0,False,0,0.36849547032304414,False,0,3,0,False
+baseline,2025-06-30,GRT,Financials,aligned,0.0,0.010752688172043012,93,0.0,aligned,0,False,0,0.6443709521925312,False,0,3,0,False
+baseline,2025-06-30,HAR,Basic Materials,aligned,0.0,0.0,85,0.0,aligned,0,False,0,0.562775779244485,False,0,3,0,False
+baseline,2025-06-30,IMP,Basic Materials,aligned,0.0,0.0,88,0.0,aligned,0,False,0,0.6663817773847048,False,0,3,0,False
+baseline,2025-06-30,INL,Financials,aligned,0.0,0.0,88,0.0,aligned,0,False,0,0.14400855492245535,False,0,3,0,False
+baseline,2025-06-30,INP,Financials,aligned,0.0,0.0,91,0.0,aligned,0,False,0,0.12459243848350975,False,0,3,0,False
+baseline,2025-06-30,MNP,Basic Materials,divergent:Consumer Services,0.5581395348837209,0.0,86,0.0,not robust,0,False,0,0.1260801425503727,False,0,3,0,False
+baseline,2025-06-30,MRP,Consumer Services,aligned,0.19767441860465115,0.0,86,0.0,aligned,0,False,0,0.077116395783285,False,0,3,0,False
+baseline,2025-06-30,MTN,Telecommunications,divergent:Basic Materials,0.7640449438202247,0.0,89,0.0,not robust,0,False,0,0.2557919719692722,False,0,3,0,False
+baseline,2025-06-30,NED,Financials,aligned,0.0,0.0,93,0.0,aligned,0,False,0,0.33333207032452783,False,0,3,0,False
+baseline,2025-06-30,NPH,Basic Materials,aligned,0.0,0.0,92,0.0,aligned,0,False,0,0.4650179856439038,False,0,3,0,False
+baseline,2025-06-30,NPN,Technology,no dominant sector,0.5454545454545454,0.09090909090909091,88,0.0,no dominant sector,0,False,1,2.2700749494934622,False,1,3,1,False
+baseline,2025-06-30,NRP,Financials,aligned,0.022222222222222223,0.011111111111111112,90,0.0,aligned,0,False,0,0.27861779779118817,False,0,3,0,False
+baseline,2025-06-30,OMU,Financials,aligned,0.0,0.0,93,0.0,aligned,0,False,0,0.7077885319156666,False,0,3,0,False
+baseline,2025-06-30,OUT,Financials,aligned,0.041666666666666664,0.0,96,0.0,aligned,0,False,0,0.41651570547663547,False,0,3,0,False
+baseline,2025-06-30,PPH,Consumer Services,divergent:Basic Materials,0.7303370786516854,0.033707865168539325,89,0.0,not robust,0,False,0,0.43071612421306826,False,0,3,0,False
+baseline,2025-06-30,PRX,Technology,divergent:Consumer Goods,0.8791208791208791,0.0,91,1.0,divergent,0,False,1,1.7910879915300926,False,1,3,2,True
+baseline,2025-06-30,REM,Financials,no dominant sector,0.3563218390804598,0.0,87,0.0,no dominant sector,0,False,0,0.21088663955387812,False,0,3,0,False
+baseline,2025-06-30,RNI,Financials,no dominant sector,0.34444444444444444,0.0,90,0.0,no dominant sector,0,True,0,0.2653893055084283,False,0,3,0,False
+baseline,2025-06-30,SBK,Financials,aligned,0.0,0.0,85,0.0,aligned,0,False,0,0.14777546272499445,False,0,3,0,False
+baseline,2025-06-30,SHP,Consumer Services,no dominant sector,0.13186813186813187,0.0,91,0.0,no dominant sector,0,False,0,0.21001306354139915,False,0,3,0,False
+baseline,2025-06-30,SLM,Financials,aligned,0.010869565217391304,0.0,92,0.0,aligned,0,False,0,0.1229678079744294,False,0,3,0,False
+baseline,2025-06-30,SOL,Basic Materials,aligned,0.10227272727272728,0.022727272727272728,88,0.0,aligned,0,False,1,2.0984293038298194,False,1,3,1,False
+baseline,2025-06-30,SSW,Basic Materials,aligned,0.010869565217391304,0.05434782608695652,92,0.0,aligned,0,False,1,1.2872448854279341,False,1,3,1,False
+baseline,2025-06-30,VAL,Basic Materials,divergent:Financials,0.925531914893617,0.0425531914893617,94,1.0,divergent,0,False,1,1.062418626676678,True,1,3,2,True
+baseline,2025-06-30,VOD,Telecommunications,divergent:Financials,0.8021978021978022,0.01098901098901099,91,1.0,divergent,0,False,0,0.3081746653440019,False,1,3,1,False
+baseline,2025-06-30,WHL,Consumer Services,aligned,0.22340425531914893,0.0,94,0.0,aligned,0,False,0,0.13584099445009995,False,0,3,0,False
+baseline,2025-12-31,ABG,Financials,aligned,0.0,0.0,91,0.0,aligned,0,False,0,0.3115253640504095,False,0,3,0,False
+baseline,2025-12-31,AGL,Basic Materials,divergent:Financials,0.43333333333333335,0.0,90,0.0,not robust,0,True,1,1.1347938474197368,False,1,3,1,False
+baseline,2025-12-31,ANG,Basic Materials,aligned,0.0,0.0,82,0.0,aligned,0,False,0,0.5821951597110065,False,0,3,0,False
+baseline,2025-12-31,ANH,Consumer Goods,aligned,0.010638297872340425,0.0,94,0.0,aligned,0,False,0,0.8628982269138306,False,0,3,0,False
+baseline,2025-12-31,BHG,Basic Materials,divergent:Consumer Goods,0.7078651685393258,0.0,89,0.0,not robust,0,False,1,1.065812030360097,True,1,3,1,False
+baseline,2025-12-31,BID,Consumer Services,aligned,0.06818181818181818,0.0,88,0.0,aligned,0,False,0,0.279842608454091,False,0,3,0,False
+baseline,2025-12-31,BTI,Consumer Goods,aligned,0.011235955056179775,0.0,89,0.0,aligned,0,False,0,0.9539895291083772,True,0,3,0,False
+baseline,2025-12-31,BVT,Industrials,divergent:Consumer Services,0.9032258064516129,0.0,93,1.0,divergent,0,False,0,0.12900167523449774,False,1,3,1,False
+baseline,2025-12-31,CFR,Consumer Goods,aligned,0.0,0.0,91,0.0,aligned,0,False,0,0.7050887077408852,False,0,3,0,False
+baseline,2025-12-31,CLS,Consumer Services,aligned,0.06976744186046512,0.0,86,0.0,aligned,0,False,0,0.22289829539520445,False,0,3,0,False
+baseline,2025-12-31,CPI,Financials,aligned,0.3,0.0,90,0.0,aligned,0,False,1,1.3481727922836257,False,1,3,1,False
+baseline,2025-12-31,DSY,Financials,aligned,0.06593406593406594,0.0,91,0.0,aligned,0,False,0,0.267927519410891,False,0,3,0,False
+baseline,2025-12-31,FSR,Financials,aligned,0.0,0.0,92,0.0,aligned,0,False,0,0.833087706489207,False,0,3,0,False
+baseline,2025-12-31,GFI,Basic Materials,aligned,0.0,0.0,95,0.0,aligned,0,False,0,0.29010135737506026,False,0,3,0,False
+baseline,2025-12-31,GLN,Basic Materials,divergent:Consumer Goods,0.6631578947368421,0.042105263157894736,95,0.0,not robust,0,False,1,2.312266999966826,False,1,3,1,False
+baseline,2025-12-31,GRT,Financials,aligned,0.0,0.0,93,0.0,aligned,0,False,0,0.48063206645896744,False,0,3,0,False
+baseline,2025-12-31,HAR,Basic Materials,aligned,0.0,0.0,91,0.0,aligned,0,False,0,0.4176432223182645,False,0,3,0,False
+baseline,2025-12-31,IMP,Basic Materials,aligned,0.0,0.0,84,0.0,aligned,0,False,0,0.45640785210628687,False,0,3,0,False
+baseline,2025-12-31,INL,Financials,aligned,0.0,0.0,89,0.0,aligned,0,False,0,0.2584206498875848,False,0,3,0,False
+baseline,2025-12-31,INP,Financials,aligned,0.0,0.0,88,0.0,aligned,0,False,0,0.24174729289425248,False,0,3,0,False
+baseline,2025-12-31,MNP,Basic Materials,divergent:Financials,0.8617021276595744,0.0,94,1.0,divergent,0,False,0,0.6693933468964479,False,1,3,1,False
+baseline,2025-12-31,MRP,Consumer Services,divergent:Financials,0.8131868131868132,0.01098901098901099,91,1.0,divergent,0,False,0,0.3725298606983256,False,1,3,1,False
+baseline,2025-12-31,MTN,Telecommunications,singleton,0.4065934065934066,0.46153846153846156,91,0.0,singleton,0,False,0,0.5393358660587929,False,0,3,0,False
+baseline,2025-12-31,NED,Financials,aligned,0.0,0.0,91,0.0,aligned,0,False,0,0.46026459245400814,False,0,3,0,False
+baseline,2025-12-31,NPH,Basic Materials,aligned,0.0,0.0,90,0.0,aligned,0,False,0,0.5719987559777456,False,0,3,0,False
+baseline,2025-12-31,NPN,Technology,divergent:Financials,0.8651685393258427,0.0,89,1.0,divergent,0,False,0,0.5985968868115943,False,1,3,1,False
+baseline,2025-12-31,NRP,Financials,aligned,0.0,0.0,95,0.0,aligned,0,False,0,0.3362941184039373,False,0,3,0,False
+baseline,2025-12-31,OMU,Financials,aligned,0.0,0.0,91,0.0,aligned,0,False,0,0.8895829998580852,False,0,3,0,False
+baseline,2025-12-31,OUT,Financials,aligned,0.05263157894736842,0.0,95,0.0,aligned,0,False,0,0.23908003609595266,False,0,3,0,False
+baseline,2025-12-31,PPH,Consumer Services,divergent:Financials,0.9333333333333333,0.0,90,1.0,divergent,0,False,0,0.6559924182966272,False,1,3,1,False
+baseline,2025-12-31,PRX,Technology,divergent:Consumer Goods,0.7640449438202247,0.011235955056179775,89,0.0,not robust,0,False,0,0.8545750312656781,False,0,3,0,False
+baseline,2025-12-31,REM,Financials,aligned,0.125,0.0,88,0.0,aligned,0,False,0,0.2090988163308257,False,0,3,0,False
+baseline,2025-12-31,RNI,Financials,aligned,0.02247191011235955,0.0,89,0.0,aligned,0,True,0,0.4101055194128527,False,0,3,0,False
+baseline,2025-12-31,SBK,Financials,aligned,0.011111111111111112,0.0,90,0.0,aligned,0,False,0,0.1481191182399281,False,0,3,0,False
+baseline,2025-12-31,SHP,Consumer Services,aligned,0.012658227848101266,0.0,79,0.0,aligned,0,False,0,0.1625651988700653,False,0,3,0,False
+baseline,2025-12-31,SLM,Financials,aligned,0.0,0.0,95,0.0,aligned,0,False,0,0.21346708166874723,False,0,3,0,False
+baseline,2025-12-31,SOL,Basic Materials,divergent:Financials,0.3764705882352941,0.0,85,0.0,not robust,0,False,1,1.4853657071019408,False,1,3,1,False
+baseline,2025-12-31,SSW,Basic Materials,aligned,0.0,0.03225806451612903,93,0.0,aligned,0,False,1,1.3358959827240422,False,1,3,1,False
+baseline,2025-12-31,VAL,Basic Materials,aligned,0.0,0.0,90,0.0,aligned,0,False,0,0.7186086711812664,False,0,3,0,False
+baseline,2025-12-31,VOD,Telecommunications,divergent:Financials,0.925531914893617,0.0,94,1.0,divergent,0,False,0,0.31063169403354196,False,1,3,1,False
+baseline,2025-12-31,WHL,Consumer Services,aligned,0.1111111111111111,0.0,90,0.0,aligned,0,False,0,0.12003509057038154,False,0,3,0,False
+baseline,2026-06-30,ABG,Financials,aligned,0.0,0.0,85,0.0,aligned,0,False,0,0.3321071631397942,False,0,3,0,False
+baseline,2026-06-30,AGL,Basic Materials,aligned,0.07777777777777778,0.0,90,0.0,aligned,0,True,1,1.002714982122541,True,1,3,1,False
+baseline,2026-06-30,ANG,Basic Materials,aligned,0.0,0.0,87,0.0,aligned,0,False,0,0.5975852651423779,False,0,3,0,False
+baseline,2026-06-30,ANH,Consumer Goods,aligned,0.0,0.0,88,0.0,aligned,0,False,0,0.8939306475538424,False,0,3,0,False
+baseline,2026-06-30,BHG,Basic Materials,divergent:Consumer Goods,0.6966292134831461,0.011235955056179775,89,0.0,not robust,0,False,1,1.3315526802416287,False,1,3,1,False
+baseline,2026-06-30,BID,Consumer Services,no dominant sector,0.5268817204301075,0.0,93,0.0,no dominant sector,0,False,0,0.19764781660583502,False,0,3,0,False
+baseline,2026-06-30,BTI,Consumer Goods,aligned,0.011111111111111112,0.0,90,0.0,aligned,0,False,0,0.5217035612469418,False,0,3,0,False
+baseline,2026-06-30,BVT,Industrials,no dominant sector,0.8229166666666666,0.0,96,1.0,divergent,0,False,0,0.12279635708267721,False,1,3,1,False
+baseline,2026-06-30,CFR,Consumer Goods,aligned,0.01098901098901099,0.0,91,0.0,aligned,0,False,0,0.6611092563582088,False,0,3,0,False
+baseline,2026-06-30,CLS,Consumer Services,no dominant sector,0.10465116279069768,0.0,86,0.0,no dominant sector,0,False,0,0.2953209064441931,False,0,3,0,False
+baseline,2026-06-30,CPI,Financials,no dominant sector,0.17204301075268819,0.0,93,0.0,no dominant sector,0,False,1,1.4288083310156583,False,1,3,1,False
+baseline,2026-06-30,DSY,Financials,no dominant sector,0.1590909090909091,0.0,88,0.0,no dominant sector,0,False,0,0.2724407307786199,False,0,3,0,False
+baseline,2026-06-30,FSR,Financials,aligned,0.0,0.0,88,0.0,aligned,0,False,0,0.8718873065511551,False,0,3,0,False
+baseline,2026-06-30,GFI,Basic Materials,aligned,0.0,0.0,93,0.0,aligned,0,False,0,0.4838129306618994,False,0,3,0,False
+baseline,2026-06-30,GLN,Basic Materials,divergent:Consumer Goods,0.6923076923076923,0.054945054945054944,91,0.0,not robust,0,False,1,2.357959399993594,False,1,3,1,False
+baseline,2026-06-30,GRT,Financials,aligned,0.0,0.0,92,0.0,aligned,0,False,0,0.4063080897878618,False,0,3,0,False
+baseline,2026-06-30,HAR,Basic Materials,aligned,0.0,0.0,90,0.0,aligned,0,False,0,0.5382001967854139,False,0,3,0,False
+baseline,2026-06-30,IMP,Basic Materials,aligned,0.0,0.0,92,0.0,aligned,0,False,0,0.5603282230005507,False,0,3,0,False
+baseline,2026-06-30,INL,Financials,aligned,0.0,0.0,93,0.0,aligned,0,False,0,0.25344278782021484,False,0,3,0,False
+baseline,2026-06-30,INP,Financials,aligned,0.0,0.0,87,0.0,aligned,0,False,0,0.2291080868411914,False,0,3,0,False
+baseline,2026-06-30,MRP,Consumer Services,no dominant sector,0.13829787234042554,0.0,94,0.0,no dominant sector,0,False,0,0.30218655481508316,False,0,3,0,False
+baseline,2026-06-30,MTN,Telecommunications,divergent:Basic Materials,0.8068181818181818,0.0,88,1.0,divergent,0,False,0,0.24046059711762713,False,1,3,1,False
+baseline,2026-06-30,NED,Financials,aligned,0.011363636363636364,0.0,88,0.0,aligned,0,False,0,0.41765938745515196,False,0,3,0,False
+baseline,2026-06-30,NPH,Basic Materials,aligned,0.0,0.0,86,0.0,aligned,0,False,0,0.3162935417160775,False,0,3,0,False
+baseline,2026-06-30,NPN,Technology,aligned,0.1875,0.0,96,0.0,aligned,0,False,0,0.6557188294272258,False,0,3,0,False
+baseline,2026-06-30,NRP,Financials,aligned,0.0,0.0,83,0.0,aligned,0,False,0,0.23622515429300298,False,0,3,0,False
+baseline,2026-06-30,OMU,Financials,aligned,0.0,0.0,92,0.0,aligned,0,False,1,1.089941579137689,True,1,3,1,False
+baseline,2026-06-30,OUT,Financials,aligned,0.08602150537634409,0.0,93,0.0,aligned,0,False,0,0.27941022684039796,False,0,3,0,False
+baseline,2026-06-30,PAN,Basic Materials,aligned,0.0,0.0,89,0.0,aligned,0,False,0,0.7886079748319906,False,0,3,0,False
+baseline,2026-06-30,PPH,Consumer Services,divergent:Financials,0.967032967032967,0.0,91,1.0,divergent,0,False,0,0.8138273825330953,False,1,3,1,False
+baseline,2026-06-30,PRX,Technology,aligned,0.125,0.0,88,0.0,aligned,0,False,0,0.8532904098178171,False,0,3,0,False
+baseline,2026-06-30,REM,Financials,no dominant sector,0.17777777777777778,0.0,90,0.0,no dominant sector,0,False,0,0.2229762426208174,False,0,3,0,False
+baseline,2026-06-30,RNI,Financials,no dominant sector,0.41379310344827586,0.0,87,0.0,no dominant sector,0,True,0,0.2861928296437828,False,0,3,0,False
+baseline,2026-06-30,SBK,Financials,aligned,0.10638297872340426,0.02127659574468085,94,0.0,aligned,0,False,0,0.20836382803486475,False,0,3,0,False
+baseline,2026-06-30,SHP,Consumer Services,no dominant sector,0.4835164835164835,0.0,91,0.0,no dominant sector,0,False,0,0.19013614824365008,False,0,3,0,False
+baseline,2026-06-30,SLM,Financials,aligned,0.03296703296703297,0.0,91,0.0,aligned,0,False,0,0.1331539202587552,False,0,3,0,False
+baseline,2026-06-30,SOL,Basic Materials,aligned,0.043478260869565216,0.03260869565217391,92,0.0,aligned,0,False,1,2.1300905292850234,False,1,3,1,False
+baseline,2026-06-30,SSW,Basic Materials,aligned,0.0,0.010638297872340425,94,0.0,aligned,0,False,1,1.292994694034446,False,1,3,1,False
+baseline,2026-06-30,VAL,Basic Materials,aligned,0.0,0.0,91,0.0,aligned,0,False,0,0.33996795808636066,False,0,3,0,False
+baseline,2026-06-30,VOD,Telecommunications,divergent:Financials,0.9111111111111111,0.0,90,1.0,divergent,0,False,0,0.2113836817255489,False,1,3,1,False
+baseline,2026-06-30,WHL,Consumer Services,divergent:Financials,0.7111111111111111,0.0,90,0.0,not robust,0,False,0,0.0883435074372711,False,0,3,0,False
+tuned,2025-06-30,ABG,Financials,aligned,0.0,0.0,94,0.0,aligned,0,False,0,0.34543596073752625,False,0,3,0,False
+tuned,2025-06-30,AGL,Basic Materials,divergent:Consumer Services,0.9545454545454546,0.0,88,1.0,divergent,0,True,0,0.4709368190387546,False,1,3,1,False
+tuned,2025-06-30,ANG,Basic Materials,aligned,0.011494252873563218,0.0,87,0.0,aligned,0,False,0,0.4231410538142968,False,0,3,0,False
+tuned,2025-06-30,ANH,Consumer Goods,aligned,0.0,0.0,92,0.0,aligned,0,False,1,1.2090688577514104,False,1,3,1,False
+tuned,2025-06-30,APN,Health Care,divergent:Consumer Services,0.9655172413793104,0.0,87,1.0,divergent,0,False,1,1.0854497850222007,True,1,3,2,True
+tuned,2025-06-30,BHG,Basic Materials,divergent:Consumer Goods,0.8387096774193549,0.0,93,1.0,divergent,0,False,1,1.5981203795426273,False,1,3,2,True
+tuned,2025-06-30,BID,Consumer Services,aligned,0.42391304347826086,0.0,92,0.0,aligned,0,False,0,0.23869673575149386,False,0,3,0,False
+tuned,2025-06-30,BTI,Consumer Goods,aligned,0.0,0.0,91,0.0,aligned,0,False,1,1.012059414845298,True,1,3,1,False
+tuned,2025-06-30,BVT,Industrials,divergent:Consumer Services,0.9438202247191011,0.0,89,1.0,divergent,0,False,0,0.1888231971101487,False,1,3,1,False
+tuned,2025-06-30,CFR,Consumer Goods,divergent:Technology,0.7395833333333334,0.0,96,0.0,not robust,0,False,0,0.7229656235625458,False,0,3,0,False
+tuned,2025-06-30,CLS,Consumer Services,aligned,0.4090909090909091,0.0,88,0.0,aligned,0,False,0,0.23939050683541238,False,0,3,0,False
+tuned,2025-06-30,CPI,Financials,divergent:Consumer Services,0.4942528735632184,0.0,87,0.0,not robust,0,False,0,0.2798318629246235,False,0,3,0,False
+tuned,2025-06-30,DSY,Financials,aligned,0.053763440860215055,0.0,93,0.0,aligned,0,False,0,0.34923088228411914,False,0,3,0,False
+tuned,2025-06-30,FSR,Financials,aligned,0.0,0.0,93,0.0,aligned,0,False,0,0.7809332230355631,False,0,3,0,False
+tuned,2025-06-30,GFI,Basic Materials,aligned,0.011363636363636364,0.0,88,0.0,aligned,0,False,0,0.36849547032304414,False,0,3,0,False
+tuned,2025-06-30,GRT,Financials,aligned,0.0,0.0,93,0.0,aligned,0,False,0,0.6443709521925312,False,0,3,0,False
+tuned,2025-06-30,HAR,Basic Materials,aligned,0.0,0.0,85,0.0,aligned,0,False,0,0.562775779244485,False,0,3,0,False
+tuned,2025-06-30,IMP,Basic Materials,aligned,0.0,0.0,88,0.0,aligned,0,False,0,0.6663817773847048,False,0,3,0,False
+tuned,2025-06-30,INL,Financials,aligned,0.0,0.0,88,0.0,aligned,0,False,0,0.14400855492245535,False,0,3,0,False
+tuned,2025-06-30,INP,Financials,aligned,0.0,0.0,91,0.0,aligned,0,False,0,0.12459243848350975,False,0,3,0,False
+tuned,2025-06-30,MNP,Basic Materials,divergent:Consumer Services,0.9418604651162791,0.0,86,1.0,divergent,0,False,0,0.1260801425503727,False,1,3,1,False
+tuned,2025-06-30,MRP,Consumer Services,aligned,0.3953488372093023,0.0,86,0.0,aligned,0,False,0,0.077116395783285,False,0,3,0,False
+tuned,2025-06-30,MTN,Telecommunications,divergent:Financials,0.8426966292134831,0.0,89,1.0,divergent,0,False,0,0.2557919719692722,False,1,3,1,False
+tuned,2025-06-30,NED,Financials,aligned,0.0,0.0,93,0.0,aligned,0,False,0,0.33333207032452783,False,0,3,0,False
+tuned,2025-06-30,NPH,Basic Materials,aligned,0.0,0.0,92,0.0,aligned,0,False,0,0.4650179856439038,False,0,3,0,False
+tuned,2025-06-30,NPN,Technology,aligned,0.011363636363636364,0.125,88,0.0,aligned,0,False,1,2.2700749494934622,False,1,3,1,False
+tuned,2025-06-30,NRP,Financials,aligned,0.0,0.0,90,0.0,aligned,0,False,0,0.27861779779118817,False,0,3,0,False
+tuned,2025-06-30,OMU,Financials,aligned,0.0,0.0,93,0.0,aligned,0,False,0,0.7077885319156666,False,0,3,0,False
+tuned,2025-06-30,OUT,Financials,aligned,0.07291666666666667,0.0,96,0.0,aligned,0,False,0,0.41651570547663547,False,0,3,0,False
+tuned,2025-06-30,PPH,Consumer Services,divergent:Financials,0.898876404494382,0.0,89,1.0,divergent,0,False,0,0.43071612421306826,False,1,3,1,False
+tuned,2025-06-30,PRX,Technology,aligned,0.13186813186813187,0.0,91,0.0,aligned,0,False,1,1.7910879915300926,False,1,3,1,False
+tuned,2025-06-30,REM,Financials,divergent:Consumer Services,0.5747126436781609,0.0,87,0.0,not robust,0,False,0,0.21088663955387812,False,0,3,0,False
+tuned,2025-06-30,RNI,Financials,divergent:Consumer Services,0.5222222222222223,0.0,90,0.0,not robust,0,True,0,0.2653893055084283,False,0,3,0,False
+tuned,2025-06-30,SBK,Financials,aligned,0.0,0.0,85,0.0,aligned,0,False,0,0.14777546272499445,False,0,3,0,False
+tuned,2025-06-30,SHP,Consumer Services,aligned,0.4175824175824176,0.0,91,0.0,aligned,0,False,0,0.21001306354139915,False,0,3,0,False
+tuned,2025-06-30,SLM,Financials,aligned,0.03260869565217391,0.0,92,0.0,aligned,0,False,0,0.1229678079744294,False,0,3,0,False
+tuned,2025-06-30,SOL,Basic Materials,singleton,0.0,1.0,88,,NA: isolated,1,False,1,2.0984293038298194,False,1,2,2,True
+tuned,2025-06-30,SSW,Basic Materials,aligned,0.0,0.6956521739130435,92,0.0,aligned,0,False,1,1.2872448854279341,False,1,3,1,False
+tuned,2025-06-30,VAL,Basic Materials,aligned,0.10638297872340426,0.0851063829787234,94,0.0,aligned,0,False,1,1.062418626676678,True,1,3,1,False
+tuned,2025-06-30,VOD,Telecommunications,divergent:Financials,0.8901098901098901,0.0,91,1.0,divergent,0,False,0,0.3081746653440019,False,1,3,1,False
+tuned,2025-06-30,WHL,Consumer Services,aligned,0.44680851063829785,0.0,94,0.0,aligned,0,False,0,0.13584099445009995,False,0,3,0,False
+tuned,2025-12-31,ABG,Financials,aligned,0.0,0.0,91,0.0,aligned,0,False,0,0.3115253640504095,False,0,3,0,False
+tuned,2025-12-31,AGL,Basic Materials,aligned,0.26666666666666666,0.0,90,0.0,aligned,0,True,1,1.1347938474197368,False,1,3,1,False
+tuned,2025-12-31,ANG,Basic Materials,aligned,0.0,0.0,82,0.0,aligned,0,False,0,0.5821951597110065,False,0,3,0,False
+tuned,2025-12-31,ANH,Consumer Goods,aligned,0.0,0.0,94,0.0,aligned,0,False,0,0.8628982269138306,False,0,3,0,False
+tuned,2025-12-31,BHG,Basic Materials,divergent:Consumer Goods,0.9438202247191011,0.0,89,1.0,divergent,0,False,1,1.065812030360097,True,1,3,2,True
+tuned,2025-12-31,BID,Consumer Services,no dominant sector,0.4772727272727273,0.0,88,0.0,no dominant sector,0,False,0,0.279842608454091,False,0,3,0,False
+tuned,2025-12-31,BTI,Consumer Goods,aligned,0.0,0.0,89,0.0,aligned,0,False,0,0.9539895291083772,True,0,3,0,False
+tuned,2025-12-31,BVT,Industrials,no dominant sector,0.6666666666666666,0.0,93,0.0,no dominant sector,0,False,0,0.12900167523449774,False,0,3,0,False
+tuned,2025-12-31,CFR,Consumer Goods,aligned,0.0,0.0,91,0.0,aligned,0,False,0,0.7050887077408852,False,0,3,0,False
+tuned,2025-12-31,CLS,Consumer Services,no dominant sector,0.46511627906976744,0.0,86,0.0,no dominant sector,0,False,0,0.22289829539520445,False,0,3,0,False
+tuned,2025-12-31,CPI,Financials,no dominant sector,0.16666666666666666,0.0,90,0.0,no dominant sector,0,False,1,1.3481727922836257,False,1,3,1,False
+tuned,2025-12-31,DSY,Financials,no dominant sector,0.13186813186813187,0.0,91,0.0,no dominant sector,0,False,0,0.267927519410891,False,0,3,0,False
+tuned,2025-12-31,FSR,Financials,aligned,0.0,0.0,92,0.0,aligned,0,False,0,0.833087706489207,False,0,3,0,False
+tuned,2025-12-31,GFI,Basic Materials,aligned,0.0,0.0,95,0.0,aligned,0,False,0,0.29010135737506026,False,0,3,0,False
+tuned,2025-12-31,GLN,Basic Materials,singleton,0.0,1.0,95,,NA: isolated,1,False,1,2.312266999966826,False,1,2,2,True
+tuned,2025-12-31,GRT,Financials,aligned,0.0,0.0,93,0.0,aligned,0,False,0,0.48063206645896744,False,0,3,0,False
+tuned,2025-12-31,HAR,Basic Materials,aligned,0.0,0.0,91,0.0,aligned,0,False,0,0.4176432223182645,False,0,3,0,False
+tuned,2025-12-31,IMP,Basic Materials,aligned,0.0,0.0,84,0.0,aligned,0,False,0,0.45640785210628687,False,0,3,0,False
+tuned,2025-12-31,INL,Financials,aligned,0.011235955056179775,0.0,89,0.0,aligned,0,False,0,0.2584206498875848,False,0,3,0,False
+tuned,2025-12-31,INP,Financials,aligned,0.011363636363636364,0.0,88,0.0,aligned,0,False,0,0.24174729289425248,False,0,3,0,False
+tuned,2025-12-31,MNP,Basic Materials,divergent:Financials,0.9893617021276596,0.0,94,1.0,divergent,0,False,0,0.6693933468964479,False,1,3,1,False
+tuned,2025-12-31,MRP,Consumer Services,divergent:Financials,0.945054945054945,0.0,91,1.0,divergent,0,False,0,0.3725298606983256,False,1,3,1,False
+tuned,2025-12-31,MTN,Telecommunications,divergent:Basic Materials,0.7472527472527473,0.0,91,0.0,not robust,0,False,0,0.5393358660587929,False,0,3,0,False
+tuned,2025-12-31,NED,Financials,aligned,0.01098901098901099,0.0,91,0.0,aligned,0,False,0,0.46026459245400814,False,0,3,0,False
+tuned,2025-12-31,NPH,Basic Materials,aligned,0.0,0.0,90,0.0,aligned,0,False,0,0.5719987559777456,False,0,3,0,False
+tuned,2025-12-31,NPN,Technology,no dominant sector,0.6966292134831461,0.0,89,0.0,no dominant sector,0,False,0,0.5985968868115943,False,0,3,0,False
+tuned,2025-12-31,NRP,Financials,aligned,0.010526315789473684,0.0,95,0.0,aligned,0,False,0,0.3362941184039373,False,0,3,0,False
+tuned,2025-12-31,OMU,Financials,aligned,0.0,0.0,91,0.0,aligned,0,False,0,0.8895829998580852,False,0,3,0,False
+tuned,2025-12-31,OUT,Financials,aligned,0.0,0.0,95,0.0,aligned,0,False,0,0.23908003609595266,False,0,3,0,False
+tuned,2025-12-31,PPH,Consumer Services,divergent:Financials,0.9222222222222223,0.011111111111111112,90,1.0,divergent,0,False,0,0.6559924182966272,False,1,3,1,False
+tuned,2025-12-31,PRX,Technology,divergent:Consumer Goods,0.8651685393258427,0.0,89,1.0,divergent,0,False,0,0.8545750312656781,False,1,3,1,False
+tuned,2025-12-31,REM,Financials,no dominant sector,0.11363636363636363,0.0,88,0.0,no dominant sector,0,False,0,0.2090988163308257,False,0,3,0,False
+tuned,2025-12-31,RNI,Financials,no dominant sector,0.0898876404494382,0.0,89,0.0,no dominant sector,0,True,0,0.4101055194128527,False,0,3,0,False
+tuned,2025-12-31,SBK,Financials,aligned,0.0,0.0,90,0.0,aligned,0,False,0,0.1481191182399281,False,0,3,0,False
+tuned,2025-12-31,SHP,Consumer Services,no dominant sector,0.4430379746835443,0.0,79,0.0,no dominant sector,0,False,0,0.1625651988700653,False,0,3,0,False
+tuned,2025-12-31,SLM,Financials,aligned,0.0,0.0,95,0.0,aligned,0,False,0,0.21346708166874723,False,0,3,0,False
+tuned,2025-12-31,SOL,Basic Materials,aligned,0.058823529411764705,0.011764705882352941,85,0.0,aligned,0,False,1,1.4853657071019408,False,1,3,1,False
+tuned,2025-12-31,SSW,Basic Materials,singleton,0.0,1.0,93,,NA: isolated,1,False,1,1.3358959827240422,False,1,2,2,True
+tuned,2025-12-31,VAL,Basic Materials,aligned,0.0,0.0,90,0.0,aligned,0,False,0,0.7186086711812664,False,0,3,0,False
+tuned,2025-12-31,VOD,Telecommunications,divergent:Financials,0.9893617021276596,0.0,94,1.0,divergent,0,False,0,0.31063169403354196,False,1,3,1,False
+tuned,2025-12-31,WHL,Consumer Services,no dominant sector,0.5,0.0,90,0.0,no dominant sector,0,False,0,0.12003509057038154,False,0,3,0,False
+tuned,2026-06-30,ABG,Financials,aligned,0.0,0.0,85,0.0,aligned,0,False,0,0.3321071631397942,False,0,3,0,False
+tuned,2026-06-30,AGL,Basic Materials,divergent:Financials,0.6111111111111112,0.0,90,0.0,not robust,0,True,1,1.002714982122541,True,1,3,1,False
+tuned,2026-06-30,ANG,Basic Materials,aligned,0.0,0.0,87,0.0,aligned,0,False,0,0.5975852651423779,False,0,3,0,False
+tuned,2026-06-30,ANH,Consumer Goods,aligned,0.0,0.0,88,0.0,aligned,0,False,0,0.8939306475538424,False,0,3,0,False
+tuned,2026-06-30,BHG,Basic Materials,divergent:Consumer Goods,0.7640449438202247,0.21348314606741572,89,0.0,not robust,0,False,1,1.3315526802416287,False,1,3,1,False
+tuned,2026-06-30,BID,Consumer Services,divergent:Financials,0.7311827956989247,0.0,93,0.0,not robust,0,False,0,0.19764781660583502,False,0,3,0,False
+tuned,2026-06-30,BTI,Consumer Goods,aligned,0.0,0.0,90,0.0,aligned,0,False,0,0.5217035612469418,False,0,3,0,False
+tuned,2026-06-30,BVT,Industrials,divergent:Financials,0.8541666666666666,0.0,96,1.0,divergent,0,False,0,0.12279635708267721,False,1,3,1,False
+tuned,2026-06-30,CFR,Consumer Goods,aligned,0.01098901098901099,0.0,91,0.0,aligned,0,False,0,0.6611092563582088,False,0,3,0,False
+tuned,2026-06-30,CLS,Consumer Services,divergent:Financials,0.7093023255813954,0.0,86,0.0,not robust,0,False,0,0.2953209064441931,False,0,3,0,False
+tuned,2026-06-30,CPI,Financials,aligned,0.10752688172043011,0.0,93,0.0,aligned,0,False,1,1.4288083310156583,False,1,3,1,False
+tuned,2026-06-30,DSY,Financials,aligned,0.09090909090909091,0.0,88,0.0,aligned,0,False,0,0.2724407307786199,False,0,3,0,False
+tuned,2026-06-30,FSR,Financials,aligned,0.0,0.0,88,0.0,aligned,0,False,0,0.8718873065511551,False,0,3,0,False
+tuned,2026-06-30,GFI,Basic Materials,aligned,0.0,0.0,93,0.0,aligned,0,False,0,0.4838129306618994,False,0,3,0,False
+tuned,2026-06-30,GLN,Basic Materials,singleton,0.0,1.0,91,,NA: isolated,1,False,1,2.357959399993594,False,1,2,2,True
+tuned,2026-06-30,GRT,Financials,aligned,0.0,0.0,92,0.0,aligned,0,False,0,0.4063080897878618,False,0,3,0,False
+tuned,2026-06-30,HAR,Basic Materials,aligned,0.0,0.0,90,0.0,aligned,0,False,0,0.5382001967854139,False,0,3,0,False
+tuned,2026-06-30,IMP,Basic Materials,aligned,0.0,0.0,92,0.0,aligned,0,False,0,0.5603282230005507,False,0,3,0,False
+tuned,2026-06-30,INL,Financials,aligned,0.0,0.0,93,0.0,aligned,0,False,0,0.25344278782021484,False,0,3,0,False
+tuned,2026-06-30,INP,Financials,aligned,0.0,0.0,87,0.0,aligned,0,False,0,0.2291080868411914,False,0,3,0,False
+tuned,2026-06-30,MRP,Consumer Services,divergent:Financials,0.7340425531914894,0.0,94,0.0,not robust,0,False,0,0.30218655481508316,False,0,3,0,False
+tuned,2026-06-30,MTN,Telecommunications,divergent:Financials,0.7613636363636364,0.0,88,0.0,not robust,0,False,0,0.24046059711762713,False,0,3,0,False
+tuned,2026-06-30,NED,Financials,aligned,0.0,0.0,88,0.0,aligned,0,False,0,0.41765938745515196,False,0,3,0,False
+tuned,2026-06-30,NPH,Basic Materials,aligned,0.0,0.0,86,0.0,aligned,0,False,0,0.3162935417160775,False,0,3,0,False
+tuned,2026-06-30,NPN,Technology,divergent:Financials,0.40625,0.0,96,0.0,not robust,0,False,0,0.6557188294272258,False,0,3,0,False
+tuned,2026-06-30,NRP,Financials,aligned,0.0,0.0,83,0.0,aligned,0,False,0,0.23622515429300298,False,0,3,0,False
+tuned,2026-06-30,OMU,Financials,aligned,0.0,0.0,92,0.0,aligned,0,False,1,1.089941579137689,True,1,3,1,False
+tuned,2026-06-30,OUT,Financials,aligned,0.0,0.0,93,0.0,aligned,0,False,0,0.27941022684039796,False,0,3,0,False
+tuned,2026-06-30,PAN,Basic Materials,aligned,0.0,0.0,89,0.0,aligned,0,False,0,0.7886079748319906,False,0,3,0,False
+tuned,2026-06-30,PPH,Consumer Services,divergent:Financials,0.978021978021978,0.0,91,1.0,divergent,0,False,0,0.8138273825330953,False,1,3,1,False
+tuned,2026-06-30,PRX,Technology,divergent:Financials,0.3977272727272727,0.0,88,0.0,not robust,0,False,0,0.8532904098178171,False,0,3,0,False
+tuned,2026-06-30,REM,Financials,aligned,0.05555555555555555,0.0,90,0.0,aligned,0,False,0,0.2229762426208174,False,0,3,0,False
+tuned,2026-06-30,RNI,Financials,aligned,0.10344827586206896,0.0,87,0.0,aligned,0,True,0,0.2861928296437828,False,0,3,0,False
+tuned,2026-06-30,SBK,Financials,aligned,0.13829787234042554,0.0,94,0.0,aligned,0,False,0,0.20836382803486475,False,0,3,0,False
+tuned,2026-06-30,SHP,Consumer Services,divergent:Financials,0.7362637362637363,0.0,91,0.0,not robust,0,False,0,0.19013614824365008,False,0,3,0,False
+tuned,2026-06-30,SLM,Financials,aligned,0.0,0.0,91,0.0,aligned,0,False,0,0.1331539202587552,False,0,3,0,False
+tuned,2026-06-30,SOL,Basic Materials,singleton,0.0,0.8260869565217391,92,,NA: isolated,1,False,1,2.1300905292850234,False,1,2,2,True
+tuned,2026-06-30,SSW,Basic Materials,singleton,0.0,0.9148936170212766,94,,NA: isolated,1,False,1,1.292994694034446,False,1,2,2,True
+tuned,2026-06-30,VAL,Basic Materials,aligned,0.0,0.0,91,0.0,aligned,0,False,0,0.33996795808636066,False,0,3,0,False
+tuned,2026-06-30,VOD,Telecommunications,divergent:Financials,0.9888888888888889,0.0,90,1.0,divergent,0,False,0,0.2113836817255489,False,1,3,1,False
+tuned,2026-06-30,WHL,Consumer Services,divergent:Financials,0.9,0.0,90,1.0,divergent,0,False,0,0.0883435074372711,False,1,3,1,False

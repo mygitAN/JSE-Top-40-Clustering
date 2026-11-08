@@ -1,0 +1,247 @@
+model,decision_date,ticker,company,sector,cluster,imputation_sensitive
+baseline,2025-06-30,ABG,ABSA GROUP LTD,Financials,0,False
+baseline,2025-06-30,AGL,ANGLO AMERICAN PLC,Basic Materials,7,True
+baseline,2025-06-30,ANG,ANGLOGOLD ASHANTI PLC,Basic Materials,1,False
+baseline,2025-06-30,ANH,ANHEUSER-BUSCH INBEV SA/N,Consumer Goods,3,False
+baseline,2025-06-30,APN,ASPEN PHARMACARE HLD,Health Care,4,False
+baseline,2025-06-30,BHG,BHP GROUP LTD,Basic Materials,3,False
+baseline,2025-06-30,BID,BID CORPORATION LIMITED,Consumer Services,2,False
+baseline,2025-06-30,BTI,BRIT AMERICA TOBACO,Consumer Goods,3,False
+baseline,2025-06-30,BVT,BIDVEST GROUP LTD,Industrials,4,False
+baseline,2025-06-30,CFR,COM FINANCE RICHMONT SA,Consumer Goods,3,False
+baseline,2025-06-30,CLS,CLICKS GROUP LTD,Consumer Services,2,False
+baseline,2025-06-30,CPI,CAPITEC BANK HOLDING,Financials,2,False
+baseline,2025-06-30,DSY,DISCOVERY LTD,Financials,5,False
+baseline,2025-06-30,FSR,FIRSTRAND LTD,Financials,6,False
+baseline,2025-06-30,GFI,GOLD FIELDS LIMITED,Basic Materials,1,False
+baseline,2025-06-30,GRT,GROWTHPOINT PROPS LTD,Financials,6,False
+baseline,2025-06-30,HAR,HARMONY GOLD MINING,Basic Materials,1,False
+baseline,2025-06-30,IMP,IMPALA PLATINUM HOLDINGS,Basic Materials,1,False
+baseline,2025-06-30,INL,INVESTEC LIMITED,Financials,0,False
+baseline,2025-06-30,INP,INVESTEC PLC,Financials,0,False
+baseline,2025-06-30,MNP,MONDI PLC,Basic Materials,4,False
+baseline,2025-06-30,MRP,MR PRICE GROUP LTD,Consumer Services,4,False
+baseline,2025-06-30,MTN,MTN GROUP LTD,Telecommunications,1,False
+baseline,2025-06-30,NED,NEDBANK GROUP LTD,Financials,0,False
+baseline,2025-06-30,NPH,NORTHAM PLATINUM HLDG LTD,Basic Materials,1,False
+baseline,2025-06-30,NPN,NASPERS LTD-N SHS,Technology,2,False
+baseline,2025-06-30,NRP,NEPI ROCKCASTLE N.V,Financials,0,False
+baseline,2025-06-30,OMU,OLD MUTUAL LTD,Financials,6,False
+baseline,2025-06-30,OUT,OUTSURANCE GROUP LTD,Financials,5,False
+baseline,2025-06-30,PPH,PEPKOR HOLDINGS LTD,Consumer Services,1,False
+baseline,2025-06-30,PRX,PROSUS,Technology,3,False
+baseline,2025-06-30,REM,REMGRO LIMITED,Financials,2,False
+baseline,2025-06-30,RNI,REINET INVESTMENTS SCA,Financials,2,True
+baseline,2025-06-30,SBK,STANDARD BANK GROUP LTD,Financials,0,False
+baseline,2025-06-30,SHP,SHOPRITE HLDS LTD,Consumer Services,2,False
+baseline,2025-06-30,SLM,SANLAM LIMITED,Financials,0,False
+baseline,2025-06-30,SOL,SASOL LTD,Basic Materials,7,False
+baseline,2025-06-30,SSW,SIBANYE STILLWATER LTD,Basic Materials,1,False
+baseline,2025-06-30,VAL,VALTERRA PLATINUM LTD,Basic Materials,0,False
+baseline,2025-06-30,VOD,VODACOM GROUP,Telecommunications,5,False
+baseline,2025-06-30,WHL,WOOLWORTHS HLDS LTD,Consumer Services,4,False
+baseline,2025-12-31,ABG,ABSA GROUP LTD,Financials,4,False
+baseline,2025-12-31,AGL,ANGLO AMERICAN PLC,Basic Materials,0,True
+baseline,2025-12-31,ANG,ANGLOGOLD ASHANTI PLC,Basic Materials,1,False
+baseline,2025-12-31,ANH,ANHEUSER-BUSCH INBEV SA/N,Consumer Goods,2,False
+baseline,2025-12-31,BHG,BHP GROUP LTD,Basic Materials,2,False
+baseline,2025-12-31,BID,BID CORPORATION LIMITED,Consumer Services,5,False
+baseline,2025-12-31,BTI,BRIT AMERICA TOBACO,Consumer Goods,2,False
+baseline,2025-12-31,BVT,BIDVEST GROUP LTD,Industrials,5,False
+baseline,2025-12-31,CFR,COM FINANCE RICHMONT SA,Consumer Goods,2,False
+baseline,2025-12-31,CLS,CLICKS GROUP LTD,Consumer Services,5,False
+baseline,2025-12-31,CPI,CAPITEC BANK HOLDING,Financials,0,False
+baseline,2025-12-31,DSY,DISCOVERY LTD,Financials,0,False
+baseline,2025-12-31,FSR,FIRSTRAND LTD,Financials,6,False
+baseline,2025-12-31,GFI,GOLD FIELDS LIMITED,Basic Materials,1,False
+baseline,2025-12-31,GLN,GLENCORE XSTRATA PLC,Basic Materials,2,False
+baseline,2025-12-31,GRT,GROWTHPOINT PROPS LTD,Financials,6,False
+baseline,2025-12-31,HAR,HARMONY GOLD MINING,Basic Materials,1,False
+baseline,2025-12-31,IMP,IMPALA PLATINUM HOLDINGS,Basic Materials,1,False
+baseline,2025-12-31,INL,INVESTEC LIMITED,Financials,3,False
+baseline,2025-12-31,INP,INVESTEC PLC,Financials,3,False
+baseline,2025-12-31,MNP,MONDI PLC,Basic Materials,3,False
+baseline,2025-12-31,MRP,MR PRICE GROUP LTD,Consumer Services,3,False
+baseline,2025-12-31,MTN,MTN GROUP LTD,Telecommunications,7,False
+baseline,2025-12-31,NED,NEDBANK GROUP LTD,Financials,3,False
+baseline,2025-12-31,NPH,NORTHAM PLATINUM HLDG LTD,Basic Materials,1,False
+baseline,2025-12-31,NPN,NASPERS LTD-N SHS,Technology,0,False
+baseline,2025-12-31,NRP,NEPI ROCKCASTLE N.V,Financials,3,False
+baseline,2025-12-31,OMU,OLD MUTUAL LTD,Financials,6,False
+baseline,2025-12-31,OUT,OUTSURANCE GROUP LTD,Financials,4,False
+baseline,2025-12-31,PPH,PEPKOR HOLDINGS LTD,Consumer Services,6,False
+baseline,2025-12-31,PRX,PROSUS,Technology,2,False
+baseline,2025-12-31,REM,REMGRO LIMITED,Financials,0,False
+baseline,2025-12-31,RNI,REINET INVESTMENTS SCA,Financials,0,True
+baseline,2025-12-31,SBK,STANDARD BANK GROUP LTD,Financials,4,False
+baseline,2025-12-31,SHP,SHOPRITE HLDS LTD,Consumer Services,5,False
+baseline,2025-12-31,SLM,SANLAM LIMITED,Financials,4,False
+baseline,2025-12-31,SOL,SASOL LTD,Basic Materials,0,False
+baseline,2025-12-31,SSW,SIBANYE STILLWATER LTD,Basic Materials,1,False
+baseline,2025-12-31,VAL,VALTERRA PLATINUM LTD,Basic Materials,1,False
+baseline,2025-12-31,VOD,VODACOM GROUP,Telecommunications,4,False
+baseline,2025-12-31,WHL,WOOLWORTHS HLDS LTD,Consumer Services,5,False
+baseline,2026-06-30,ABG,ABSA GROUP LTD,Financials,2,False
+baseline,2026-06-30,AGL,ANGLO AMERICAN PLC,Basic Materials,6,True
+baseline,2026-06-30,ANG,ANGLOGOLD ASHANTI PLC,Basic Materials,1,False
+baseline,2026-06-30,ANH,ANHEUSER-BUSCH INBEV SA/N,Consumer Goods,3,False
+baseline,2026-06-30,BHG,BHP GROUP LTD,Basic Materials,3,False
+baseline,2026-06-30,BID,BID CORPORATION LIMITED,Consumer Services,0,False
+baseline,2026-06-30,BTI,BRIT AMERICA TOBACO,Consumer Goods,3,False
+baseline,2026-06-30,BVT,BIDVEST GROUP LTD,Industrials,0,False
+baseline,2026-06-30,CFR,COM FINANCE RICHMONT SA,Consumer Goods,3,False
+baseline,2026-06-30,CLS,CLICKS GROUP LTD,Consumer Services,0,False
+baseline,2026-06-30,CPI,CAPITEC BANK HOLDING,Financials,0,False
+baseline,2026-06-30,DSY,DISCOVERY LTD,Financials,0,False
+baseline,2026-06-30,FSR,FIRSTRAND LTD,Financials,5,False
+baseline,2026-06-30,GFI,GOLD FIELDS LIMITED,Basic Materials,1,False
+baseline,2026-06-30,GLN,GLENCORE XSTRATA PLC,Basic Materials,3,False
+baseline,2026-06-30,GRT,GROWTHPOINT PROPS LTD,Financials,5,False
+baseline,2026-06-30,HAR,HARMONY GOLD MINING,Basic Materials,1,False
+baseline,2026-06-30,IMP,IMPALA PLATINUM HOLDINGS,Basic Materials,1,False
+baseline,2026-06-30,INL,INVESTEC LIMITED,Financials,2,False
+baseline,2026-06-30,INP,INVESTEC PLC,Financials,2,False
+baseline,2026-06-30,MRP,MR PRICE GROUP LTD,Consumer Services,0,False
+baseline,2026-06-30,MTN,MTN GROUP LTD,Telecommunications,6,False
+baseline,2026-06-30,NED,NEDBANK GROUP LTD,Financials,2,False
+baseline,2026-06-30,NPH,NORTHAM PLATINUM HLDG LTD,Basic Materials,1,False
+baseline,2026-06-30,NPN,NASPERS LTD-N SHS,Technology,7,False
+baseline,2026-06-30,NRP,NEPI ROCKCASTLE N.V,Financials,2,False
+baseline,2026-06-30,OMU,OLD MUTUAL LTD,Financials,5,False
+baseline,2026-06-30,OUT,OUTSURANCE GROUP LTD,Financials,4,False
+baseline,2026-06-30,PAN,PAN AFRICAN RESOURCE PLC,Basic Materials,1,False
+baseline,2026-06-30,PPH,PEPKOR HOLDINGS LTD,Consumer Services,5,False
+baseline,2026-06-30,PRX,PROSUS,Technology,7,False
+baseline,2026-06-30,REM,REMGRO LIMITED,Financials,0,False
+baseline,2026-06-30,RNI,REINET INVESTMENTS SCA,Financials,0,True
+baseline,2026-06-30,SBK,STANDARD BANK GROUP LTD,Financials,4,False
+baseline,2026-06-30,SHP,SHOPRITE HLDS LTD,Consumer Services,0,False
+baseline,2026-06-30,SLM,SANLAM LIMITED,Financials,4,False
+baseline,2026-06-30,SOL,SASOL LTD,Basic Materials,6,False
+baseline,2026-06-30,SSW,SIBANYE STILLWATER LTD,Basic Materials,1,False
+baseline,2026-06-30,VAL,VALTERRA PLATINUM LTD,Basic Materials,1,False
+baseline,2026-06-30,VOD,VODACOM GROUP,Telecommunications,4,False
+baseline,2026-06-30,WHL,WOOLWORTHS HLDS LTD,Consumer Services,4,False
+tuned,2025-06-30,ABG,ABSA GROUP LTD,Financials,1,False
+tuned,2025-06-30,AGL,ANGLO AMERICAN PLC,Basic Materials,0,True
+tuned,2025-06-30,ANG,ANGLOGOLD ASHANTI PLC,Basic Materials,2,False
+tuned,2025-06-30,ANH,ANHEUSER-BUSCH INBEV SA/N,Consumer Goods,4,False
+tuned,2025-06-30,APN,ASPEN PHARMACARE HLD,Health Care,0,False
+tuned,2025-06-30,BHG,BHP GROUP LTD,Basic Materials,4,False
+tuned,2025-06-30,BID,BID CORPORATION LIMITED,Consumer Services,0,False
+tuned,2025-06-30,BTI,BRIT AMERICA TOBACO,Consumer Goods,4,False
+tuned,2025-06-30,BVT,BIDVEST GROUP LTD,Industrials,0,False
+tuned,2025-06-30,CFR,COM FINANCE RICHMONT SA,Consumer Goods,5,False
+tuned,2025-06-30,CLS,CLICKS GROUP LTD,Consumer Services,0,False
+tuned,2025-06-30,CPI,CAPITEC BANK HOLDING,Financials,0,False
+tuned,2025-06-30,DSY,DISCOVERY LTD,Financials,3,False
+tuned,2025-06-30,FSR,FIRSTRAND LTD,Financials,6,False
+tuned,2025-06-30,GFI,GOLD FIELDS LIMITED,Basic Materials,2,False
+tuned,2025-06-30,GRT,GROWTHPOINT PROPS LTD,Financials,6,False
+tuned,2025-06-30,HAR,HARMONY GOLD MINING,Basic Materials,2,False
+tuned,2025-06-30,IMP,IMPALA PLATINUM HOLDINGS,Basic Materials,2,False
+tuned,2025-06-30,INL,INVESTEC LIMITED,Financials,1,False
+tuned,2025-06-30,INP,INVESTEC PLC,Financials,1,False
+tuned,2025-06-30,MNP,MONDI PLC,Basic Materials,0,False
+tuned,2025-06-30,MRP,MR PRICE GROUP LTD,Consumer Services,0,False
+tuned,2025-06-30,MTN,MTN GROUP LTD,Telecommunications,3,False
+tuned,2025-06-30,NED,NEDBANK GROUP LTD,Financials,1,False
+tuned,2025-06-30,NPH,NORTHAM PLATINUM HLDG LTD,Basic Materials,2,False
+tuned,2025-06-30,NPN,NASPERS LTD-N SHS,Technology,5,False
+tuned,2025-06-30,NRP,NEPI ROCKCASTLE N.V,Financials,1,False
+tuned,2025-06-30,OMU,OLD MUTUAL LTD,Financials,6,False
+tuned,2025-06-30,OUT,OUTSURANCE GROUP LTD,Financials,3,False
+tuned,2025-06-30,PPH,PEPKOR HOLDINGS LTD,Consumer Services,3,False
+tuned,2025-06-30,PRX,PROSUS,Technology,5,False
+tuned,2025-06-30,REM,REMGRO LIMITED,Financials,0,False
+tuned,2025-06-30,RNI,REINET INVESTMENTS SCA,Financials,0,True
+tuned,2025-06-30,SBK,STANDARD BANK GROUP LTD,Financials,1,False
+tuned,2025-06-30,SHP,SHOPRITE HLDS LTD,Consumer Services,0,False
+tuned,2025-06-30,SLM,SANLAM LIMITED,Financials,1,False
+tuned,2025-06-30,SOL,SASOL LTD,Basic Materials,7,False
+tuned,2025-06-30,SSW,SIBANYE STILLWATER LTD,Basic Materials,2,False
+tuned,2025-06-30,VAL,VALTERRA PLATINUM LTD,Basic Materials,2,False
+tuned,2025-06-30,VOD,VODACOM GROUP,Telecommunications,1,False
+tuned,2025-06-30,WHL,WOOLWORTHS HLDS LTD,Consumer Services,0,False
+tuned,2025-12-31,ABG,ABSA GROUP LTD,Financials,0,False
+tuned,2025-12-31,AGL,ANGLO AMERICAN PLC,Basic Materials,4,True
+tuned,2025-12-31,ANG,ANGLOGOLD ASHANTI PLC,Basic Materials,2,False
+tuned,2025-12-31,ANH,ANHEUSER-BUSCH INBEV SA/N,Consumer Goods,3,False
+tuned,2025-12-31,BHG,BHP GROUP LTD,Basic Materials,3,False
+tuned,2025-12-31,BID,BID CORPORATION LIMITED,Consumer Services,1,False
+tuned,2025-12-31,BTI,BRIT AMERICA TOBACO,Consumer Goods,3,False
+tuned,2025-12-31,BVT,BIDVEST GROUP LTD,Industrials,1,False
+tuned,2025-12-31,CFR,COM FINANCE RICHMONT SA,Consumer Goods,3,False
+tuned,2025-12-31,CLS,CLICKS GROUP LTD,Consumer Services,1,False
+tuned,2025-12-31,CPI,CAPITEC BANK HOLDING,Financials,1,False
+tuned,2025-12-31,DSY,DISCOVERY LTD,Financials,1,False
+tuned,2025-12-31,FSR,FIRSTRAND LTD,Financials,5,False
+tuned,2025-12-31,GFI,GOLD FIELDS LIMITED,Basic Materials,2,False
+tuned,2025-12-31,GLN,GLENCORE XSTRATA PLC,Basic Materials,6,False
+tuned,2025-12-31,GRT,GROWTHPOINT PROPS LTD,Financials,0,False
+tuned,2025-12-31,HAR,HARMONY GOLD MINING,Basic Materials,2,False
+tuned,2025-12-31,IMP,IMPALA PLATINUM HOLDINGS,Basic Materials,2,False
+tuned,2025-12-31,INL,INVESTEC LIMITED,Financials,0,False
+tuned,2025-12-31,INP,INVESTEC PLC,Financials,0,False
+tuned,2025-12-31,MNP,MONDI PLC,Basic Materials,0,False
+tuned,2025-12-31,MRP,MR PRICE GROUP LTD,Consumer Services,0,False
+tuned,2025-12-31,MTN,MTN GROUP LTD,Telecommunications,4,False
+tuned,2025-12-31,NED,NEDBANK GROUP LTD,Financials,0,False
+tuned,2025-12-31,NPH,NORTHAM PLATINUM HLDG LTD,Basic Materials,2,False
+tuned,2025-12-31,NPN,NASPERS LTD-N SHS,Technology,1,False
+tuned,2025-12-31,NRP,NEPI ROCKCASTLE N.V,Financials,0,False
+tuned,2025-12-31,OMU,OLD MUTUAL LTD,Financials,5,False
+tuned,2025-12-31,OUT,OUTSURANCE GROUP LTD,Financials,0,False
+tuned,2025-12-31,PPH,PEPKOR HOLDINGS LTD,Consumer Services,5,False
+tuned,2025-12-31,PRX,PROSUS,Technology,3,False
+tuned,2025-12-31,REM,REMGRO LIMITED,Financials,1,False
+tuned,2025-12-31,RNI,REINET INVESTMENTS SCA,Financials,1,True
+tuned,2025-12-31,SBK,STANDARD BANK GROUP LTD,Financials,0,False
+tuned,2025-12-31,SHP,SHOPRITE HLDS LTD,Consumer Services,1,False
+tuned,2025-12-31,SLM,SANLAM LIMITED,Financials,0,False
+tuned,2025-12-31,SOL,SASOL LTD,Basic Materials,4,False
+tuned,2025-12-31,SSW,SIBANYE STILLWATER LTD,Basic Materials,7,False
+tuned,2025-12-31,VAL,VALTERRA PLATINUM LTD,Basic Materials,2,False
+tuned,2025-12-31,VOD,VODACOM GROUP,Telecommunications,0,False
+tuned,2025-12-31,WHL,WOOLWORTHS HLDS LTD,Consumer Services,1,False
+tuned,2026-06-30,ABG,ABSA GROUP LTD,Financials,1,False
+tuned,2026-06-30,AGL,ANGLO AMERICAN PLC,Basic Materials,0,True
+tuned,2026-06-30,ANG,ANGLOGOLD ASHANTI PLC,Basic Materials,2,False
+tuned,2026-06-30,ANH,ANHEUSER-BUSCH INBEV SA/N,Consumer Goods,3,False
+tuned,2026-06-30,BHG,BHP GROUP LTD,Basic Materials,3,False
+tuned,2026-06-30,BID,BID CORPORATION LIMITED,Consumer Services,0,False
+tuned,2026-06-30,BTI,BRIT AMERICA TOBACO,Consumer Goods,3,False
+tuned,2026-06-30,BVT,BIDVEST GROUP LTD,Industrials,0,False
+tuned,2026-06-30,CFR,COM FINANCE RICHMONT SA,Consumer Goods,3,False
+tuned,2026-06-30,CLS,CLICKS GROUP LTD,Consumer Services,0,False
+tuned,2026-06-30,CPI,CAPITEC BANK HOLDING,Financials,0,False
+tuned,2026-06-30,DSY,DISCOVERY LTD,Financials,0,False
+tuned,2026-06-30,FSR,FIRSTRAND LTD,Financials,4,False
+tuned,2026-06-30,GFI,GOLD FIELDS LIMITED,Basic Materials,2,False
+tuned,2026-06-30,GLN,GLENCORE XSTRATA PLC,Basic Materials,5,False
+tuned,2026-06-30,GRT,GROWTHPOINT PROPS LTD,Financials,4,False
+tuned,2026-06-30,HAR,HARMONY GOLD MINING,Basic Materials,2,False
+tuned,2026-06-30,IMP,IMPALA PLATINUM HOLDINGS,Basic Materials,2,False
+tuned,2026-06-30,INL,INVESTEC LIMITED,Financials,1,False
+tuned,2026-06-30,INP,INVESTEC PLC,Financials,1,False
+tuned,2026-06-30,MRP,MR PRICE GROUP LTD,Consumer Services,0,False
+tuned,2026-06-30,MTN,MTN GROUP LTD,Telecommunications,0,False
+tuned,2026-06-30,NED,NEDBANK GROUP LTD,Financials,1,False
+tuned,2026-06-30,NPH,NORTHAM PLATINUM HLDG LTD,Basic Materials,2,False
+tuned,2026-06-30,NPN,NASPERS LTD-N SHS,Technology,0,False
+tuned,2026-06-30,NRP,NEPI ROCKCASTLE N.V,Financials,1,False
+tuned,2026-06-30,OMU,OLD MUTUAL LTD,Financials,4,False
+tuned,2026-06-30,OUT,OUTSURANCE GROUP LTD,Financials,1,False
+tuned,2026-06-30,PAN,PAN AFRICAN RESOURCE PLC,Basic Materials,2,False
+tuned,2026-06-30,PPH,PEPKOR HOLDINGS LTD,Consumer Services,4,False
+tuned,2026-06-30,PRX,PROSUS,Technology,0,False
+tuned,2026-06-30,REM,REMGRO LIMITED,Financials,0,False
+tuned,2026-06-30,RNI,REINET INVESTMENTS SCA,Financials,0,True
+tuned,2026-06-30,SBK,STANDARD BANK GROUP LTD,Financials,0,False
+tuned,2026-06-30,SHP,SHOPRITE HLDS LTD,Consumer Services,0,False
+tuned,2026-06-30,SLM,SANLAM LIMITED,Financials,1,False
+tuned,2026-06-30,SOL,SASOL LTD,Basic Materials,6,False
+tuned,2026-06-30,SSW,SIBANYE STILLWATER LTD,Basic Materials,7,False
+tuned,2026-06-30,VAL,VALTERRA PLATINUM LTD,Basic Materials,2,False
+tuned,2026-06-30,VOD,VODACOM GROUP,Telecommunications,1,False
+tuned,2026-06-30,WHL,WOOLWORTHS HLDS LTD,Consumer Services,1,False
