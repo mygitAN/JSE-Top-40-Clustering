@@ -1,5 +1,5 @@
 {
-  "results_commit": "4f210ac6f2d950f9034a3e86e099e5852d73f886",
+  "results_commit": "ca36b3b07cd0d9d02654deaff31dfbf54cd2b355",
   "method": "git archive bytes, every manifest entry and completion marker",
   "runs": [
     {
@@ -45,6 +45,11 @@
     {
       "run_id": "user-umap-grid-01",
       "verified_artifacts": 20,
+      "status": "passed"
+    },
+    {
+      "run_id": "fixed-umap-001-01",
+      "verified_artifacts": 21,
       "status": "passed"
     }
   ]
