@@ -1,0 +1,10 @@
+{
+  "run_id": "peer-cluster-review-01",
+  "verified_artifacts": 112,
+  "shortlist_fits": 45,
+  "source_comparison_size_rows": 90,
+  "tests": 66,
+  "primary_outputs_unchanged": true,
+  "posthoc_review": true,
+  "promotion": false
+}

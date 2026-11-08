@@ -1,5 +1,11 @@
 # Reviewer guide
 
+The latest [cluster-suitability review](notebook_cluster_review.md) retains the
+EDA/tuning/reporting workflow and examines the selected partitions. It compares
+three June-shortlisted alternatives over 45 all-date seed fits, with size
+distributions, feature geometry, memberships and trees. Its 112 artifacts pass
+verification and all 66 current tests pass. No primary model is replaced.
+
 The current reporting direction is [structural-signal dynamics](anomaly_dynamics_reporting_example.md).
 The [reporting protocol](../docs/reporting_direction.md) keeps k=8 primary, adds
 495 varying-k sensitivity fits and versions the refined taxonomy after the

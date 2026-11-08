@@ -10,6 +10,11 @@ screening and sector divergence kept separate. Read the
 [reporting protocol](docs/reporting_direction.md). The primary design keeps k=8;
 the separate varying-k sensitivity and revised taxonomy preserve all old outputs.
 
+The [cluster-suitability review](reports/notebook_cluster_review.md) examines
+why the score-selected PCA partition creates a large residual group and
+singletons. It preserves the notebook and compares three post hoc alternatives
+at k=8 across all dates and five seeds; no model is promoted by that review.
+
 ## Start here: EDA, experimentation and optimisation
 
 Open **[notebooks/paper_experiments.ipynb](notebooks/paper_experiments.ipynb)**

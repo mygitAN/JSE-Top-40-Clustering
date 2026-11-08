@@ -1,0 +1,17 @@
+before,after,objective,raw_cluster,aligned_cluster,continuing_intersection,continuing_union,jaccard,status
+2025-06-30,2025-12-31,jaccard,0,7,2,7,0.2857142857142857,matched
+2025-06-30,2025-12-31,jaccard,1,6,2,7,0.2857142857142857,matched
+2025-06-30,2025-12-31,jaccard,2,4,3,4,0.75,matched
+2025-06-30,2025-12-31,jaccard,3,3,5,5,1.0,matched
+2025-06-30,2025-12-31,jaccard,4,1,6,9,0.6666666666666666,matched
+2025-06-30,2025-12-31,jaccard,5,0,3,9,0.3333333333333333,matched
+2025-06-30,2025-12-31,jaccard,6,2,4,8,0.5,matched
+2025-06-30,2025-12-31,jaccard,7,5,2,4,0.5,matched
+2025-12-31,2026-06-30,jaccard,0,0,4,10,0.4,matched
+2025-12-31,2026-06-30,jaccard,1,1,7,7,1.0,matched
+2025-12-31,2026-06-30,jaccard,2,6,4,7,0.5714285714285714,matched
+2025-12-31,2026-06-30,jaccard,3,3,5,6,0.8333333333333334,matched
+2025-12-31,2026-06-30,jaccard,4,7,2,8,0.25,matched
+2025-12-31,2026-06-30,jaccard,5,2,4,5,0.8,matched
+2025-12-31,2026-06-30,jaccard,6,4,4,4,1.0,matched
+2025-12-31,2026-06-30,jaccard,7,8,0,2,0.0,unmatched: fresh descriptive ID
