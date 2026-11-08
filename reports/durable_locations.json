@@ -300,9 +300,10 @@
   "population_audit": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/25567135cd36b0764845b1de02211df0443ddee7/reports/population_count_audit.md",
   "paper_experiments_commit": "e0d57e01e2429b9ecb4890378f3340d2a0616199",
   "paper_experiments_run": "https://github.com/mygitAN/JSE-Top-40-Clustering/tree/e0d57e01e2429b9ecb4890378f3340d2a0616199/experiments/runs/paper-exhaustive-k8-01",
-  "paper_experiments_notebook": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/e0d57e01e2429b9ecb4890378f3340d2a0616199/notebooks/paper_experiments.ipynb",
-  "executed_paper_experiments": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/e0d57e01e2429b9ecb4890378f3340d2a0616199/reports/paper_experiments_executed.ipynb",
+  "paper_experiments_notebook": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/571872343b71aeb97f40adfe6553ae223c6467ae/notebooks/paper_experiments.ipynb",
+  "executed_paper_experiments": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/571872343b71aeb97f40adfe6553ae223c6467ae/reports/paper_experiments_executed.ipynb",
   "fresh_executed_paper_experiments": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/e0d57e01e2429b9ecb4890378f3340d2a0616199/reports/paper_experiments_fresh_executed.ipynb",
-  "paper_experiments_results": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/e0d57e01e2429b9ecb4890378f3340d2a0616199/reports/paper_experiment_results.md",
-  "paper_experiments_protocol": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/e0d57e01e2429b9ecb4890378f3340d2a0616199/docs/paper_experiments_guide.md"
+  "paper_experiments_results": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/571872343b71aeb97f40adfe6553ae223c6467ae/reports/paper_experiment_results.md",
+  "paper_experiments_protocol": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/e0d57e01e2429b9ecb4890378f3340d2a0616199/docs/paper_experiments_guide.md",
+  "paper_experiments_review_commit": "571872343b71aeb97f40adfe6553ae223c6467ae"
 }
