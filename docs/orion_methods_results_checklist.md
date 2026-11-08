@@ -137,6 +137,12 @@ and should be discussed rather than treated as proof that either is correct.
 
 ## 8. Proposed 2D Hotelling T² descriptive screen: pending specification
 
+Update after receiving the SACJ manuscript: page 11 supplies n=40, p=2, 5% and
+an approximate cutoff 6.66 for its original sample. Those historical details are
+now available. The individual-distance statistic/reference calibration and its
+use with the new 41-instrument learned embeddings still need to be explicit.
+See `decisions/003-silhouette-db-search.md`; no Hotelling run is implied here.
+
 The checklist now requests this extension, but no recovered implementation or
 calibration has been established. Do not describe it as already reported in v4
 or attach an invented F cutoff. Before execution record the 2D coordinate system,

@@ -1,7 +1,7 @@
 The previous pipeline lacked durable run provenance and had gaps in preprocessing
 derivation checks, temporal alignment and surrogate exports. This preserves the
 documented baseline, reconciles all 123 observations to the supplied workbook,
-adds immutable local tracking, and expands verification to 31 passing tests.
+adds immutable local tracking, and expands verification to 36 passing tests.
 
 Complete suites `final-full-42` and `repeat-full-42` include all three dates,
 nine model combinations per date, five seeds, k=2–10 and SHAP. All 89 deterministic
@@ -31,3 +31,13 @@ are observed at all three dates. The Hotelling F-reference screen, temporal flag
 taxonomy and alternative P/E sensitivity remain pending explicit specifications.
 Archived share/capitalization, sector-history and market-source evidence remains
 the submission-grade empirical blocker.
+
+The supplied SACJ paper has now been reviewed, including its nine-combination
+silhouette/DB table. A separately archived bounded search evaluates 1,426
+configurations over five June-2025 seeds (7,130 fits) and freezes the joint-score
+choices for later descriptive refits. UMAP/complete-Manhattan wins the declared
+eight-cluster embedding-score compromise; PCA95/average-Euclidean wins the
+common-feature criterion but creates singleton groups. Both silhouette and DB,
+individual metric champions, Pareto trade-offs, coverage and seed stability are
+reported. These are new-data exploratory optima within the declared grid, not
+an exact reproduction or automatic replacement of the original paper results.

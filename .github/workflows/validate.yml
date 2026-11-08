@@ -8,6 +8,10 @@ on:
         description: Run nine combinations and five seeds on all dates
         type: boolean
         default: false
+      optimize_models:
+        description: Run the bounded 1426-configuration silhouette/DB search
+        type: boolean
+        default: false
 permissions:
   contents: read
 jobs:
@@ -39,8 +43,12 @@ jobs:
         run: python scripts/run_analysis.py --output outputs/ci --mode baseline --stability-runs 2
       - if: ${{ inputs.full_suite }}
         run: python scripts/run_analysis.py --output outputs/ci --mode full --stability-runs 5
+      - if: ${{ inputs.optimize_models }}
+        run: python scripts/optimize_models.py --run-id ci-optimization-${{ github.run_id }}-${{ matrix.os }}
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: research-${{ matrix.os }}-py${{ matrix.python }}
-          path: outputs/ci/
+          path: |
+            outputs/ci/
+            experiments/runs/ci-optimization-*/

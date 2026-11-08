@@ -1,0 +1,81 @@
+cluster,surrogate_class,n,feature,mean_abs_shap_members,status
+0,0,6,return_1y,1.9952926635742188,small-sample descriptive
+0,0,6,average_daily_volume_1y_model,0.0,small-sample descriptive
+0,0,6,market_cap_zar,0.1374800205230713,small-sample descriptive
+0,0,6,beta_1y,0.11320120841264725,small-sample descriptive
+0,0,6,shares_outstanding,0.1926059126853943,small-sample descriptive
+0,0,6,revenue_zar_model,0.47248366475105286,small-sample descriptive
+0,0,6,eps_zar_model,0.0,small-sample descriptive
+0,0,6,annualised_volatility_1y,0.0,small-sample descriptive
+0,0,6,dividend_yield,0.0,small-sample descriptive
+0,0,6,earnings_yield_model_clipped,0.019755324348807335,small-sample descriptive
+1,1,2,return_1y,0.029941435903310776,small-sample descriptive
+1,1,2,average_daily_volume_1y_model,0.21738821268081665,small-sample descriptive
+1,1,2,market_cap_zar,0.04614671692252159,small-sample descriptive
+1,1,2,beta_1y,0.006259027868509293,small-sample descriptive
+1,1,2,shares_outstanding,0.04469063878059387,small-sample descriptive
+1,1,2,revenue_zar_model,0.8017885684967041,small-sample descriptive
+1,1,2,eps_zar_model,0.0,small-sample descriptive
+1,1,2,annualised_volatility_1y,0.8861814141273499,small-sample descriptive
+1,1,2,dividend_yield,0.0,small-sample descriptive
+1,1,2,earnings_yield_model_clipped,0.051812246441841125,small-sample descriptive
+2,2,4,return_1y,0.0,small-sample descriptive
+2,2,4,average_daily_volume_1y_model,1.7731183767318726,small-sample descriptive
+2,2,4,market_cap_zar,0.10611927509307861,small-sample descriptive
+2,2,4,beta_1y,0.0,small-sample descriptive
+2,2,4,shares_outstanding,0.9624289274215698,small-sample descriptive
+2,2,4,revenue_zar_model,0.06298793852329254,small-sample descriptive
+2,2,4,eps_zar_model,0.0,small-sample descriptive
+2,2,4,annualised_volatility_1y,0.15053428709506989,small-sample descriptive
+2,2,4,dividend_yield,0.05025230720639229,small-sample descriptive
+2,2,4,earnings_yield_model_clipped,0.052856020629405975,small-sample descriptive
+3,3,2,return_1y,0.0,small-sample descriptive
+3,3,2,average_daily_volume_1y_model,0.0,small-sample descriptive
+3,3,2,market_cap_zar,1.5957565307617188,small-sample descriptive
+3,3,2,beta_1y,0.0,small-sample descriptive
+3,3,2,shares_outstanding,0.0,small-sample descriptive
+3,3,2,revenue_zar_model,0.0,small-sample descriptive
+3,3,2,eps_zar_model,1.251950740814209,small-sample descriptive
+3,3,2,annualised_volatility_1y,0.0,small-sample descriptive
+3,3,2,dividend_yield,0.0,small-sample descriptive
+3,3,2,earnings_yield_model_clipped,0.0,small-sample descriptive
+4,4,1,return_1y,0.3614638149738312,singleton: descriptive only
+4,4,1,average_daily_volume_1y_model,0.31624364852905273,singleton: descriptive only
+4,4,1,market_cap_zar,0.011599117890000343,singleton: descriptive only
+4,4,1,beta_1y,0.2504897117614746,singleton: descriptive only
+4,4,1,shares_outstanding,0.44199439883232117,singleton: descriptive only
+4,4,1,revenue_zar_model,0.0,singleton: descriptive only
+4,4,1,eps_zar_model,0.14780616760253906,singleton: descriptive only
+4,4,1,annualised_volatility_1y,0.04797830060124397,singleton: descriptive only
+4,4,1,dividend_yield,0.44145962595939636,singleton: descriptive only
+4,4,1,earnings_yield_model_clipped,0.05214708298444748,singleton: descriptive only
+5,5,3,return_1y,0.0,small-sample descriptive
+5,5,3,average_daily_volume_1y_model,0.09351605176925659,small-sample descriptive
+5,5,3,market_cap_zar,1.107787847518921,small-sample descriptive
+5,5,3,beta_1y,0.0,small-sample descriptive
+5,5,3,shares_outstanding,0.0,small-sample descriptive
+5,5,3,revenue_zar_model,1.3728708028793335,small-sample descriptive
+5,5,3,eps_zar_model,0.0,small-sample descriptive
+5,5,3,annualised_volatility_1y,0.3225114345550537,small-sample descriptive
+5,5,3,dividend_yield,0.17239521443843842,small-sample descriptive
+5,5,3,earnings_yield_model_clipped,0.0,small-sample descriptive
+6,6,22,return_1y,0.2098926454782486,small-sample descriptive
+6,6,22,average_daily_volume_1y_model,0.12074079364538193,small-sample descriptive
+6,6,22,market_cap_zar,0.1567067950963974,small-sample descriptive
+6,6,22,beta_1y,0.0,small-sample descriptive
+6,6,22,shares_outstanding,0.5578470826148987,small-sample descriptive
+6,6,22,revenue_zar_model,0.09703003615140915,small-sample descriptive
+6,6,22,eps_zar_model,0.0,small-sample descriptive
+6,6,22,annualised_volatility_1y,0.5298073291778564,small-sample descriptive
+6,6,22,dividend_yield,0.05845380201935768,small-sample descriptive
+6,6,22,earnings_yield_model_clipped,0.0324484147131443,small-sample descriptive
+7,7,1,return_1y,0.33674347400665283,singleton: descriptive only
+7,7,1,average_daily_volume_1y_model,0.07420419156551361,singleton: descriptive only
+7,7,1,market_cap_zar,0.19098122417926788,singleton: descriptive only
+7,7,1,beta_1y,0.0,singleton: descriptive only
+7,7,1,shares_outstanding,0.406708300113678,singleton: descriptive only
+7,7,1,revenue_zar_model,0.4362194538116455,singleton: descriptive only
+7,7,1,eps_zar_model,0.27217745780944824,singleton: descriptive only
+7,7,1,annualised_volatility_1y,0.0,singleton: descriptive only
+7,7,1,dividend_yield,0.09533271938562393,singleton: descriptive only
+7,7,1,earnings_yield_model_clipped,0.11683553457260132,singleton: descriptive only

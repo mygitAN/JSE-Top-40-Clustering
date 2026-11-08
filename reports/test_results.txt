@@ -20,6 +20,11 @@ test_constants_use_only_june_2025 (test_data.DataTests.test_constants_use_only_j
 test_corrupt_flags_and_model_values_fail (test_data.DataTests.test_corrupt_flags_and_model_values_fail) ... ok
 test_missing_required_data_fails (test_data.DataTests.test_missing_required_data_fails) ... ok
 test_validation_checks_survive_optimization (test_data.DataTests.test_validation_checks_survive_optimization) ... ok
+test_both_metrics_and_noise_accounting (test_optimization.OptimizationTests.test_both_metrics_and_noise_accounting) ... ok
+test_dbscan_stability_excludes_noise_and_reports_common_coverage (test_optimization.OptimizationTests.test_dbscan_stability_excludes_noise_and_reports_common_coverage) ... ok
+test_exact_budget_and_preserved_baseline (test_optimization.OptimizationTests.test_exact_budget_and_preserved_baseline) ... ok
+test_joint_selection_filters_population_and_uses_db (test_optimization.OptimizationTests.test_joint_selection_filters_population_and_uses_db) ... ok
+test_pareto_and_deterministic_hierarchical_fit (test_optimization.OptimizationTests.test_pareto_and_deterministic_hierarchical_fit) ... ok
 test_alignment_ignores_input_order_and_entry_only_clusters (test_orion_review.OrionTests.test_alignment_ignores_input_order_and_entry_only_clusters) ... ok
 test_all_date_observation_population (test_orion_review.OrionTests.test_all_date_observation_population) ... ok
 test_deviation_definition_and_singleton (test_orion_review.OrionTests.test_deviation_definition_and_singleton) ... ok
@@ -41,7 +46,7 @@ test_registry_rejects_invalid_status (test_tracking.TrackingTests.test_registry_
 test_registry_serializes_independent_processes (test_tracking.TrackingTests.test_registry_serializes_independent_processes) ... ok
 
 ----------------------------------------------------------------------
-Ran 31 tests in 3.708s
+Ran 36 tests in 5.853s
 
 OK
 PASS: 123 rows; 41 per date; 43 tickers; 3 RNI rows retained; 2 volume imputations; model features complete.

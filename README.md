@@ -25,6 +25,10 @@ python -m unittest discover -s tests -v
 python scripts/run_analysis.py --mode baseline --experiment baseline
 # Full comparisons, five seeds (42–46), k=2–10, and SHAP on every date:
 python scripts/run_analysis.py --mode full --experiment fixed-suite
+# Explicitly requested finite-grid optimisation: both silhouette and DB:
+python scripts/optimize_models.py
+# Build the compact results/plots using the completed run ID:
+python scripts/summarize_optimization.py silhouette-db-search-01
 ```
 
 Outputs go to unique immutable `experiments/runs/<run_id>/` directories. Each run
@@ -40,6 +44,14 @@ The [review package](reports/reviewer_guide.md) links saved results. Full bundle
 including plots, models and SHAP arrays, are small enough to commit in Git.
 No expiring Actions artifact is the sole archive. `experiments/baseline.json`
 holds the specification pointer and an intentionally unpromoted results pointer.
+
+The [joint silhouette/DB optimisation results](reports/optimization_results.md)
+report both scores, the full nine-family comparison, seed variability and
+Pareto trade-offs. The [paper review](reports/paper_review.md) records differences
+between the supplied SACJ manuscript and the reconstructed baseline. The bounded
+[search protocol](docs/decisions/003-silhouette-db-search.md) uses June 2025 alone
+for selection and preserves the baseline. Expensive optimisation is optional in
+CI through the `optimize_models` workflow-dispatch input.
 
 Verify and reproduce a saved run (replace the IDs with those in the registry):
 

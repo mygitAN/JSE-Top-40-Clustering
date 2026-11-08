@@ -1,5 +1,11 @@
 # Reviewer guide
 
+Latest follow-up: [paper review](paper_review.md) and
+[joint silhouette/DB optimisation](optimization_results.md). Run
+`silhouette-db-search-01` evaluates 1,426 configurations over five selection-date
+seeds, then freezes selected settings for all-date descriptive comparison.
+Both silhouette and DB are shown in embedding and common-feature spaces.
+
 Follow-up: the [ORiON methods-to-results checklist](../docs/orion_methods_results_checklist.md)
 separates completed outputs from the pending Hotelling, P/E-sensitivity and
 temporal-flag specifications. `scripts/orion_review.py` generates separately
@@ -20,7 +26,7 @@ The paper specification/results have not been promoted for publication.
    `59795b348a6ab447ca41219efb66ab4eddd93dce`. Implementation commit:
    `89c2cce42096ce3d2d4ee0def3b42d71a16c4c4b`.
 2. Run `python scripts/checks.py`. The saved [actual test log](test_results.txt)
-   records successful optimized-mode data validation and 31 passing tests,
+   records successful optimized-mode data validation and 36 passing tests,
    including the ORiON reporting checks added after the original analysis audit.
    Expected synthetic failure tracebacks inside passing tracking tests are intentional.
 3. Verify `python scripts/verify_run.py experiments/runs/final-full-42` and
@@ -45,13 +51,17 @@ The paper specification/results have not been promoted for publication.
 | repeat-full-42 | Identical-config complete execution and numerical comparison | completed |
 | tracker-check-42 | All-date baseline/SHAP check after completion-marker failure recovery repair | completed |
 | orion-report-01 | Supplementary ORiON SHAP/univariate, Jaccard and missing-case reporting | completed |
+| user-full-20261108 | Requested complete rerun, matching 89 deterministic baseline artifacts | completed |
+| user-orion-20261108 | Requested ORiON reporting rerun | completed |
+| silhouette-db-search-01 | User-requested bounded joint silhouette/DB search and frozen follow-ups | completed |
 
 [Registry](../experiments/registry.csv), [specification](../configs/baseline.json),
 and [unpromoted baseline pointer](../experiments/baseline.json) are versioned.
-All five bundles are committed under `experiments/runs/`, including
+All eight bundles are committed under `experiments/runs/`, including
 configuration, logs, source ZIP, package versions, arrays, models, plots and
-checksums. The reporting extension fits alongside the approximately 16 MB of
-analysis bundles; Git compresses
+checksums. The bounded search adds approximately 12.6 MB of uncompressed data;
+Git compresses and deduplicates these small research bundles.
+Git also compresses
 and deduplicates them. A release asset or expiring CI artifact is unnecessary at
 this size. `.gitattributes` preserves the exact experiment bytes on every platform.
 See `durable_locations.json` for verified remote identifiers once uploaded.

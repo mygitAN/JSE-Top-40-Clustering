@@ -1,5 +1,12 @@
 # Three-cross-section analysis
 
+The later supplied SACJ manuscript specifies PCA(95% variance) and automatic
+t-SNE learning rate, while the frozen recovered baseline below uses PCA(2) and
+learning rate 10. Both alternatives are evaluated in the separately documented
+[joint silhouette/DB search](decisions/003-silhouette-db-search.md), with
+[saved results](../reports/optimization_results.md). No existing baseline is
+silently relabelled as an exact reproduction of the manuscript.
+
 The [ORiON checklist](orion_methods_results_checklist.md) defines the paper's
 claim boundary and evidence layers. The current ten-feature historic-consensus-
 excluded variant differs from the original 11-feature experiment. Supplementary

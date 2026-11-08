@@ -1,0 +1,35 @@
+{
+  "experiment": "silhouette-db-bounded-search-v1",
+  "selection_date": "2025-06-30",
+  "followup_dates": ["2025-12-31", "2026-06-30"],
+  "seeds": [42,43,44,45,46],
+  "pca_components": [2,0.95],
+  "tsne_perplexities": [5,10,20],
+  "tsne_learning_rates": [10,"auto"],
+  "tsne_iterations": [300,1000],
+  "tsne_init": "random",
+  "umap_neighbors": [5,10,20],
+  "umap_min_dist": [0.0,0.1,0.5],
+  "hierarchical": [
+    {"linkage":"average","metric":"manhattan"},
+    {"linkage":"average","metric":"euclidean"},
+    {"linkage":"complete","metric":"manhattan"},
+    {"linkage":"complete","metric":"euclidean"},
+    {"linkage":"ward","metric":"euclidean"}
+  ],
+  "k": [2,3,4,5,6,7,8,9,10],
+  "kmeans_n_init": 20,
+  "dbscan_eps": [0.3,0.5,0.8,1.2],
+  "dbscan_min_samples": [3,5],
+  "dbscan_scaling": "standardize each embedding axis with population std, same as existing comparison",
+  "maximum_configurations": 1426,
+  "maximum_selection_fits": 7130,
+  "selection_rule": "Among configurations valid and full-coverage on all five seeds, minimize the sum of average ranks for mean silhouette descending and mean Davies-Bouldin ascending. Tie-break by higher pairwise seed ARI, higher mean feature silhouette, then candidate ID.",
+  "selections": {
+    "paper_style_k8": {"geometry":"embedding","clusters":8},
+    "common_features_k8": {"geometry":"features","clusters":8},
+    "common_features_free_k": {"geometry":"features","clusters":null}
+  },
+  "sector_use": "report only, never selection",
+  "promotion": false
+}

@@ -19,11 +19,15 @@ baseline with the stated tolerances. The full suite includes 27 model comparison
 30 pairwise seed comparisons, 27 k-sensitivity rows and three surrogate/SHAP analyses.
 All 123 observations remain, with 41 instruments per date and 43 distinct tickers.
 
-| Date | Embedding silhouette | Feature silhouette | Mean seed ARI | Surrogate OOF accuracy |
-| --- | ---: | ---: | ---: | ---: |
-| 2025-06-30 | 0.571 | 0.182 | 0.727 | 0.537 |
-| 2025-12-31 | 0.598 | 0.177 | 0.920 | Not estimable: singleton |
-| 2026-06-30 | 0.641 | 0.223 | 0.934 | 0.732 |
+| Date | Embedding silhouette | Embedding DB | Feature silhouette | Mean seed ARI | Surrogate OOF accuracy |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| 2025-06-30 | 0.571 | 0.429 | 0.182 | 0.727 | 0.537 |
+| 2025-12-31 | 0.598 | 0.447 | 0.177 | 0.920 | Not estimable: singleton |
+| 2026-06-30 | 0.641 | 0.407 | 0.223 | 0.934 | 0.732 |
+
+Silhouette and DB above use the representative seed 42 fit in Euclidean embedding
+geometry. Both are reported together: higher silhouette and lower DB are better.
+Mean seed ARI uses all five seeds; it is a separate stability diagnostic.
 
 In-sample surrogate accuracy is 1.0 on all dates. Sector ARI is 0.236, 0.248 and
 0.306. Complete precision, Davies–Bouldin, sector NMI and comparison-model scores

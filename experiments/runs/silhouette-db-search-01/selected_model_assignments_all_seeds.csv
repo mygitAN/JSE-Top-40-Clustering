@@ -1,0 +1,2461 @@
+scenario,decision_date,seed,ticker,sector_label,cluster
+baseline,2025-06-30,42,ABG,Financials,2
+baseline,2025-06-30,42,AGL,Basic Materials,7
+baseline,2025-06-30,42,ANG,Basic Materials,0
+baseline,2025-06-30,42,ANH,Consumer Goods,1
+baseline,2025-06-30,42,APN,Health Care,3
+baseline,2025-06-30,42,BHG,Basic Materials,1
+baseline,2025-06-30,42,BID,Consumer Services,5
+baseline,2025-06-30,42,BTI,Consumer Goods,1
+baseline,2025-06-30,42,BVT,Industrials,3
+baseline,2025-06-30,42,CFR,Consumer Goods,1
+baseline,2025-06-30,42,CLS,Consumer Services,5
+baseline,2025-06-30,42,CPI,Financials,5
+baseline,2025-06-30,42,DSY,Financials,6
+baseline,2025-06-30,42,FSR,Financials,4
+baseline,2025-06-30,42,GFI,Basic Materials,0
+baseline,2025-06-30,42,GRT,Financials,4
+baseline,2025-06-30,42,HAR,Basic Materials,0
+baseline,2025-06-30,42,IMP,Basic Materials,0
+baseline,2025-06-30,42,INL,Financials,2
+baseline,2025-06-30,42,INP,Financials,2
+baseline,2025-06-30,42,MNP,Basic Materials,3
+baseline,2025-06-30,42,MRP,Consumer Services,3
+baseline,2025-06-30,42,MTN,Telecommunications,0
+baseline,2025-06-30,42,NED,Financials,2
+baseline,2025-06-30,42,NPH,Basic Materials,0
+baseline,2025-06-30,42,NPN,Technology,5
+baseline,2025-06-30,42,NRP,Financials,2
+baseline,2025-06-30,42,OMU,Financials,4
+baseline,2025-06-30,42,OUT,Financials,6
+baseline,2025-06-30,42,PPH,Consumer Services,0
+baseline,2025-06-30,42,PRX,Technology,1
+baseline,2025-06-30,42,REM,Financials,5
+baseline,2025-06-30,42,RNI,Financials,5
+baseline,2025-06-30,42,SBK,Financials,2
+baseline,2025-06-30,42,SHP,Consumer Services,5
+baseline,2025-06-30,42,SLM,Financials,2
+baseline,2025-06-30,42,SOL,Basic Materials,7
+baseline,2025-06-30,42,SSW,Basic Materials,0
+baseline,2025-06-30,42,VAL,Basic Materials,2
+baseline,2025-06-30,42,VOD,Telecommunications,6
+baseline,2025-06-30,42,WHL,Consumer Services,3
+baseline,2025-06-30,43,ABG,Financials,2
+baseline,2025-06-30,43,AGL,Basic Materials,0
+baseline,2025-06-30,43,ANG,Basic Materials,1
+baseline,2025-06-30,43,ANH,Consumer Goods,4
+baseline,2025-06-30,43,APN,Health Care,0
+baseline,2025-06-30,43,BHG,Basic Materials,4
+baseline,2025-06-30,43,BID,Consumer Services,3
+baseline,2025-06-30,43,BTI,Consumer Goods,4
+baseline,2025-06-30,43,BVT,Industrials,0
+baseline,2025-06-30,43,CFR,Consumer Goods,4
+baseline,2025-06-30,43,CLS,Consumer Services,3
+baseline,2025-06-30,43,CPI,Financials,3
+baseline,2025-06-30,43,DSY,Financials,6
+baseline,2025-06-30,43,FSR,Financials,5
+baseline,2025-06-30,43,GFI,Basic Materials,1
+baseline,2025-06-30,43,GRT,Financials,5
+baseline,2025-06-30,43,HAR,Basic Materials,1
+baseline,2025-06-30,43,IMP,Basic Materials,1
+baseline,2025-06-30,43,INL,Financials,2
+baseline,2025-06-30,43,INP,Financials,2
+baseline,2025-06-30,43,MNP,Basic Materials,0
+baseline,2025-06-30,43,MRP,Consumer Services,0
+baseline,2025-06-30,43,MTN,Telecommunications,1
+baseline,2025-06-30,43,NED,Financials,2
+baseline,2025-06-30,43,NPH,Basic Materials,1
+baseline,2025-06-30,43,NPN,Technology,3
+baseline,2025-06-30,43,NRP,Financials,2
+baseline,2025-06-30,43,OMU,Financials,5
+baseline,2025-06-30,43,OUT,Financials,6
+baseline,2025-06-30,43,PPH,Consumer Services,1
+baseline,2025-06-30,43,PRX,Technology,4
+baseline,2025-06-30,43,REM,Financials,3
+baseline,2025-06-30,43,RNI,Financials,3
+baseline,2025-06-30,43,SBK,Financials,7
+baseline,2025-06-30,43,SHP,Consumer Services,0
+baseline,2025-06-30,43,SLM,Financials,7
+baseline,2025-06-30,43,SOL,Basic Materials,0
+baseline,2025-06-30,43,SSW,Basic Materials,1
+baseline,2025-06-30,43,VAL,Basic Materials,2
+baseline,2025-06-30,43,VOD,Telecommunications,6
+baseline,2025-06-30,43,WHL,Consumer Services,0
+baseline,2025-06-30,44,ABG,Financials,1
+baseline,2025-06-30,44,AGL,Basic Materials,7
+baseline,2025-06-30,44,ANG,Basic Materials,3
+baseline,2025-06-30,44,ANH,Consumer Goods,5
+baseline,2025-06-30,44,APN,Health Care,6
+baseline,2025-06-30,44,BHG,Basic Materials,5
+baseline,2025-06-30,44,BID,Consumer Services,0
+baseline,2025-06-30,44,BTI,Consumer Goods,5
+baseline,2025-06-30,44,BVT,Industrials,6
+baseline,2025-06-30,44,CFR,Consumer Goods,5
+baseline,2025-06-30,44,CLS,Consumer Services,0
+baseline,2025-06-30,44,CPI,Financials,0
+baseline,2025-06-30,44,DSY,Financials,2
+baseline,2025-06-30,44,FSR,Financials,4
+baseline,2025-06-30,44,GFI,Basic Materials,3
+baseline,2025-06-30,44,GRT,Financials,4
+baseline,2025-06-30,44,HAR,Basic Materials,3
+baseline,2025-06-30,44,IMP,Basic Materials,3
+baseline,2025-06-30,44,INL,Financials,1
+baseline,2025-06-30,44,INP,Financials,1
+baseline,2025-06-30,44,MNP,Basic Materials,6
+baseline,2025-06-30,44,MRP,Consumer Services,6
+baseline,2025-06-30,44,MTN,Telecommunications,2
+baseline,2025-06-30,44,NED,Financials,1
+baseline,2025-06-30,44,NPH,Basic Materials,3
+baseline,2025-06-30,44,NPN,Technology,0
+baseline,2025-06-30,44,NRP,Financials,1
+baseline,2025-06-30,44,OMU,Financials,4
+baseline,2025-06-30,44,OUT,Financials,2
+baseline,2025-06-30,44,PPH,Consumer Services,2
+baseline,2025-06-30,44,PRX,Technology,5
+baseline,2025-06-30,44,REM,Financials,0
+baseline,2025-06-30,44,RNI,Financials,0
+baseline,2025-06-30,44,SBK,Financials,1
+baseline,2025-06-30,44,SHP,Consumer Services,0
+baseline,2025-06-30,44,SLM,Financials,1
+baseline,2025-06-30,44,SOL,Basic Materials,7
+baseline,2025-06-30,44,SSW,Basic Materials,3
+baseline,2025-06-30,44,VAL,Basic Materials,1
+baseline,2025-06-30,44,VOD,Telecommunications,2
+baseline,2025-06-30,44,WHL,Consumer Services,6
+baseline,2025-06-30,45,ABG,Financials,5
+baseline,2025-06-30,45,AGL,Basic Materials,0
+baseline,2025-06-30,45,ANG,Basic Materials,1
+baseline,2025-06-30,45,ANH,Consumer Goods,3
+baseline,2025-06-30,45,APN,Health Care,0
+baseline,2025-06-30,45,BHG,Basic Materials,3
+baseline,2025-06-30,45,BID,Consumer Services,6
+baseline,2025-06-30,45,BTI,Consumer Goods,3
+baseline,2025-06-30,45,BVT,Industrials,0
+baseline,2025-06-30,45,CFR,Consumer Goods,3
+baseline,2025-06-30,45,CLS,Consumer Services,6
+baseline,2025-06-30,45,CPI,Financials,2
+baseline,2025-06-30,45,DSY,Financials,2
+baseline,2025-06-30,45,FSR,Financials,4
+baseline,2025-06-30,45,GFI,Basic Materials,1
+baseline,2025-06-30,45,GRT,Financials,4
+baseline,2025-06-30,45,HAR,Basic Materials,1
+baseline,2025-06-30,45,IMP,Basic Materials,1
+baseline,2025-06-30,45,INL,Financials,5
+baseline,2025-06-30,45,INP,Financials,5
+baseline,2025-06-30,45,MNP,Basic Materials,0
+baseline,2025-06-30,45,MRP,Consumer Services,0
+baseline,2025-06-30,45,MTN,Telecommunications,7
+baseline,2025-06-30,45,NED,Financials,5
+baseline,2025-06-30,45,NPH,Basic Materials,1
+baseline,2025-06-30,45,NPN,Technology,2
+baseline,2025-06-30,45,NRP,Financials,5
+baseline,2025-06-30,45,OMU,Financials,4
+baseline,2025-06-30,45,OUT,Financials,2
+baseline,2025-06-30,45,PPH,Consumer Services,7
+baseline,2025-06-30,45,PRX,Technology,3
+baseline,2025-06-30,45,REM,Financials,6
+baseline,2025-06-30,45,RNI,Financials,6
+baseline,2025-06-30,45,SBK,Financials,5
+baseline,2025-06-30,45,SHP,Consumer Services,6
+baseline,2025-06-30,45,SLM,Financials,5
+baseline,2025-06-30,45,SOL,Basic Materials,0
+baseline,2025-06-30,45,SSW,Basic Materials,1
+baseline,2025-06-30,45,VAL,Basic Materials,5
+baseline,2025-06-30,45,VOD,Telecommunications,2
+baseline,2025-06-30,45,WHL,Consumer Services,0
+baseline,2025-06-30,46,ABG,Financials,1
+baseline,2025-06-30,46,AGL,Basic Materials,2
+baseline,2025-06-30,46,ANG,Basic Materials,3
+baseline,2025-06-30,46,ANH,Consumer Goods,5
+baseline,2025-06-30,46,APN,Health Care,6
+baseline,2025-06-30,46,BHG,Basic Materials,5
+baseline,2025-06-30,46,BID,Consumer Services,2
+baseline,2025-06-30,46,BTI,Consumer Goods,5
+baseline,2025-06-30,46,BVT,Industrials,6
+baseline,2025-06-30,46,CFR,Consumer Goods,0
+baseline,2025-06-30,46,CLS,Consumer Services,2
+baseline,2025-06-30,46,CPI,Financials,0
+baseline,2025-06-30,46,DSY,Financials,0
+baseline,2025-06-30,46,FSR,Financials,4
+baseline,2025-06-30,46,GFI,Basic Materials,3
+baseline,2025-06-30,46,GRT,Financials,4
+baseline,2025-06-30,46,HAR,Basic Materials,3
+baseline,2025-06-30,46,IMP,Basic Materials,7
+baseline,2025-06-30,46,INL,Financials,1
+baseline,2025-06-30,46,INP,Financials,1
+baseline,2025-06-30,46,MNP,Basic Materials,6
+baseline,2025-06-30,46,MRP,Consumer Services,6
+baseline,2025-06-30,46,MTN,Telecommunications,3
+baseline,2025-06-30,46,NED,Financials,1
+baseline,2025-06-30,46,NPH,Basic Materials,7
+baseline,2025-06-30,46,NPN,Technology,0
+baseline,2025-06-30,46,NRP,Financials,1
+baseline,2025-06-30,46,OMU,Financials,4
+baseline,2025-06-30,46,OUT,Financials,0
+baseline,2025-06-30,46,PPH,Consumer Services,3
+baseline,2025-06-30,46,PRX,Technology,0
+baseline,2025-06-30,46,REM,Financials,2
+baseline,2025-06-30,46,RNI,Financials,2
+baseline,2025-06-30,46,SBK,Financials,1
+baseline,2025-06-30,46,SHP,Consumer Services,2
+baseline,2025-06-30,46,SLM,Financials,1
+baseline,2025-06-30,46,SOL,Basic Materials,2
+baseline,2025-06-30,46,SSW,Basic Materials,7
+baseline,2025-06-30,46,VAL,Basic Materials,1
+baseline,2025-06-30,46,VOD,Telecommunications,0
+baseline,2025-06-30,46,WHL,Consumer Services,6
+baseline,2025-12-31,42,ABG,Financials,4
+baseline,2025-12-31,42,AGL,Basic Materials,1
+baseline,2025-12-31,42,ANG,Basic Materials,3
+baseline,2025-12-31,42,ANH,Consumer Goods,2
+baseline,2025-12-31,42,BHG,Basic Materials,2
+baseline,2025-12-31,42,BID,Consumer Services,5
+baseline,2025-12-31,42,BTI,Consumer Goods,2
+baseline,2025-12-31,42,BVT,Industrials,5
+baseline,2025-12-31,42,CFR,Consumer Goods,2
+baseline,2025-12-31,42,CLS,Consumer Services,5
+baseline,2025-12-31,42,CPI,Financials,1
+baseline,2025-12-31,42,DSY,Financials,1
+baseline,2025-12-31,42,FSR,Financials,6
+baseline,2025-12-31,42,GFI,Basic Materials,3
+baseline,2025-12-31,42,GLN,Basic Materials,2
+baseline,2025-12-31,42,GRT,Financials,6
+baseline,2025-12-31,42,HAR,Basic Materials,3
+baseline,2025-12-31,42,IMP,Basic Materials,3
+baseline,2025-12-31,42,INL,Financials,0
+baseline,2025-12-31,42,INP,Financials,0
+baseline,2025-12-31,42,MNP,Basic Materials,0
+baseline,2025-12-31,42,MRP,Consumer Services,0
+baseline,2025-12-31,42,MTN,Telecommunications,7
+baseline,2025-12-31,42,NED,Financials,0
+baseline,2025-12-31,42,NPH,Basic Materials,3
+baseline,2025-12-31,42,NPN,Technology,1
+baseline,2025-12-31,42,NRP,Financials,0
+baseline,2025-12-31,42,OMU,Financials,6
+baseline,2025-12-31,42,OUT,Financials,4
+baseline,2025-12-31,42,PPH,Consumer Services,6
+baseline,2025-12-31,42,PRX,Technology,2
+baseline,2025-12-31,42,REM,Financials,1
+baseline,2025-12-31,42,RNI,Financials,1
+baseline,2025-12-31,42,SBK,Financials,4
+baseline,2025-12-31,42,SHP,Consumer Services,5
+baseline,2025-12-31,42,SLM,Financials,4
+baseline,2025-12-31,42,SOL,Basic Materials,1
+baseline,2025-12-31,42,SSW,Basic Materials,3
+baseline,2025-12-31,42,VAL,Basic Materials,3
+baseline,2025-12-31,42,VOD,Telecommunications,4
+baseline,2025-12-31,42,WHL,Consumer Services,5
+baseline,2025-12-31,43,ABG,Financials,6
+baseline,2025-12-31,43,AGL,Basic Materials,0
+baseline,2025-12-31,43,ANG,Basic Materials,2
+baseline,2025-12-31,43,ANH,Consumer Goods,1
+baseline,2025-12-31,43,BHG,Basic Materials,1
+baseline,2025-12-31,43,BID,Consumer Services,5
+baseline,2025-12-31,43,BTI,Consumer Goods,1
+baseline,2025-12-31,43,BVT,Industrials,5
+baseline,2025-12-31,43,CFR,Consumer Goods,1
+baseline,2025-12-31,43,CLS,Consumer Services,5
+baseline,2025-12-31,43,CPI,Financials,7
+baseline,2025-12-31,43,DSY,Financials,7
+baseline,2025-12-31,43,FSR,Financials,3
+baseline,2025-12-31,43,GFI,Basic Materials,2
+baseline,2025-12-31,43,GLN,Basic Materials,1
+baseline,2025-12-31,43,GRT,Financials,3
+baseline,2025-12-31,43,HAR,Basic Materials,2
+baseline,2025-12-31,43,IMP,Basic Materials,2
+baseline,2025-12-31,43,INL,Financials,4
+baseline,2025-12-31,43,INP,Financials,4
+baseline,2025-12-31,43,MNP,Basic Materials,4
+baseline,2025-12-31,43,MRP,Consumer Services,4
+baseline,2025-12-31,43,MTN,Telecommunications,0
+baseline,2025-12-31,43,NED,Financials,4
+baseline,2025-12-31,43,NPH,Basic Materials,2
+baseline,2025-12-31,43,NPN,Technology,0
+baseline,2025-12-31,43,NRP,Financials,4
+baseline,2025-12-31,43,OMU,Financials,3
+baseline,2025-12-31,43,OUT,Financials,6
+baseline,2025-12-31,43,PPH,Consumer Services,3
+baseline,2025-12-31,43,PRX,Technology,1
+baseline,2025-12-31,43,REM,Financials,7
+baseline,2025-12-31,43,RNI,Financials,7
+baseline,2025-12-31,43,SBK,Financials,6
+baseline,2025-12-31,43,SHP,Consumer Services,5
+baseline,2025-12-31,43,SLM,Financials,6
+baseline,2025-12-31,43,SOL,Basic Materials,0
+baseline,2025-12-31,43,SSW,Basic Materials,2
+baseline,2025-12-31,43,VAL,Basic Materials,2
+baseline,2025-12-31,43,VOD,Telecommunications,6
+baseline,2025-12-31,43,WHL,Consumer Services,5
+baseline,2025-12-31,44,ABG,Financials,1
+baseline,2025-12-31,44,AGL,Basic Materials,2
+baseline,2025-12-31,44,ANG,Basic Materials,3
+baseline,2025-12-31,44,ANH,Consumer Goods,0
+baseline,2025-12-31,44,BHG,Basic Materials,0
+baseline,2025-12-31,44,BID,Consumer Services,5
+baseline,2025-12-31,44,BTI,Consumer Goods,0
+baseline,2025-12-31,44,BVT,Industrials,5
+baseline,2025-12-31,44,CFR,Consumer Goods,0
+baseline,2025-12-31,44,CLS,Consumer Services,5
+baseline,2025-12-31,44,CPI,Financials,2
+baseline,2025-12-31,44,DSY,Financials,7
+baseline,2025-12-31,44,FSR,Financials,4
+baseline,2025-12-31,44,GFI,Basic Materials,3
+baseline,2025-12-31,44,GLN,Basic Materials,0
+baseline,2025-12-31,44,GRT,Financials,4
+baseline,2025-12-31,44,HAR,Basic Materials,3
+baseline,2025-12-31,44,IMP,Basic Materials,3
+baseline,2025-12-31,44,INL,Financials,6
+baseline,2025-12-31,44,INP,Financials,6
+baseline,2025-12-31,44,MNP,Basic Materials,6
+baseline,2025-12-31,44,MRP,Consumer Services,6
+baseline,2025-12-31,44,MTN,Telecommunications,2
+baseline,2025-12-31,44,NED,Financials,6
+baseline,2025-12-31,44,NPH,Basic Materials,3
+baseline,2025-12-31,44,NPN,Technology,2
+baseline,2025-12-31,44,NRP,Financials,6
+baseline,2025-12-31,44,OMU,Financials,4
+baseline,2025-12-31,44,OUT,Financials,1
+baseline,2025-12-31,44,PPH,Consumer Services,4
+baseline,2025-12-31,44,PRX,Technology,0
+baseline,2025-12-31,44,REM,Financials,7
+baseline,2025-12-31,44,RNI,Financials,7
+baseline,2025-12-31,44,SBK,Financials,1
+baseline,2025-12-31,44,SHP,Consumer Services,5
+baseline,2025-12-31,44,SLM,Financials,1
+baseline,2025-12-31,44,SOL,Basic Materials,2
+baseline,2025-12-31,44,SSW,Basic Materials,3
+baseline,2025-12-31,44,VAL,Basic Materials,3
+baseline,2025-12-31,44,VOD,Telecommunications,1
+baseline,2025-12-31,44,WHL,Consumer Services,5
+baseline,2025-12-31,45,ABG,Financials,6
+baseline,2025-12-31,45,AGL,Basic Materials,0
+baseline,2025-12-31,45,ANG,Basic Materials,3
+baseline,2025-12-31,45,ANH,Consumer Goods,1
+baseline,2025-12-31,45,BHG,Basic Materials,1
+baseline,2025-12-31,45,BID,Consumer Services,5
+baseline,2025-12-31,45,BTI,Consumer Goods,1
+baseline,2025-12-31,45,BVT,Industrials,5
+baseline,2025-12-31,45,CFR,Consumer Goods,1
+baseline,2025-12-31,45,CLS,Consumer Services,5
+baseline,2025-12-31,45,CPI,Financials,0
+baseline,2025-12-31,45,DSY,Financials,0
+baseline,2025-12-31,45,FSR,Financials,2
+baseline,2025-12-31,45,GFI,Basic Materials,3
+baseline,2025-12-31,45,GLN,Basic Materials,1
+baseline,2025-12-31,45,GRT,Financials,2
+baseline,2025-12-31,45,HAR,Basic Materials,3
+baseline,2025-12-31,45,IMP,Basic Materials,3
+baseline,2025-12-31,45,INL,Financials,4
+baseline,2025-12-31,45,INP,Financials,4
+baseline,2025-12-31,45,MNP,Basic Materials,4
+baseline,2025-12-31,45,MRP,Consumer Services,4
+baseline,2025-12-31,45,MTN,Telecommunications,7
+baseline,2025-12-31,45,NED,Financials,4
+baseline,2025-12-31,45,NPH,Basic Materials,3
+baseline,2025-12-31,45,NPN,Technology,0
+baseline,2025-12-31,45,NRP,Financials,4
+baseline,2025-12-31,45,OMU,Financials,2
+baseline,2025-12-31,45,OUT,Financials,6
+baseline,2025-12-31,45,PPH,Consumer Services,2
+baseline,2025-12-31,45,PRX,Technology,1
+baseline,2025-12-31,45,REM,Financials,0
+baseline,2025-12-31,45,RNI,Financials,0
+baseline,2025-12-31,45,SBK,Financials,6
+baseline,2025-12-31,45,SHP,Consumer Services,5
+baseline,2025-12-31,45,SLM,Financials,6
+baseline,2025-12-31,45,SOL,Basic Materials,0
+baseline,2025-12-31,45,SSW,Basic Materials,3
+baseline,2025-12-31,45,VAL,Basic Materials,3
+baseline,2025-12-31,45,VOD,Telecommunications,6
+baseline,2025-12-31,45,WHL,Consumer Services,5
+baseline,2025-12-31,46,ABG,Financials,2
+baseline,2025-12-31,46,AGL,Basic Materials,7
+baseline,2025-12-31,46,ANG,Basic Materials,3
+baseline,2025-12-31,46,ANH,Consumer Goods,1
+baseline,2025-12-31,46,BHG,Basic Materials,1
+baseline,2025-12-31,46,BID,Consumer Services,6
+baseline,2025-12-31,46,BTI,Consumer Goods,1
+baseline,2025-12-31,46,BVT,Industrials,6
+baseline,2025-12-31,46,CFR,Consumer Goods,1
+baseline,2025-12-31,46,CLS,Consumer Services,6
+baseline,2025-12-31,46,CPI,Financials,5
+baseline,2025-12-31,46,DSY,Financials,5
+baseline,2025-12-31,46,FSR,Financials,4
+baseline,2025-12-31,46,GFI,Basic Materials,3
+baseline,2025-12-31,46,GLN,Basic Materials,1
+baseline,2025-12-31,46,GRT,Financials,4
+baseline,2025-12-31,46,HAR,Basic Materials,3
+baseline,2025-12-31,46,IMP,Basic Materials,3
+baseline,2025-12-31,46,INL,Financials,0
+baseline,2025-12-31,46,INP,Financials,0
+baseline,2025-12-31,46,MNP,Basic Materials,0
+baseline,2025-12-31,46,MRP,Consumer Services,0
+baseline,2025-12-31,46,MTN,Telecommunications,2
+baseline,2025-12-31,46,NED,Financials,0
+baseline,2025-12-31,46,NPH,Basic Materials,3
+baseline,2025-12-31,46,NPN,Technology,5
+baseline,2025-12-31,46,NRP,Financials,0
+baseline,2025-12-31,46,OMU,Financials,4
+baseline,2025-12-31,46,OUT,Financials,2
+baseline,2025-12-31,46,PPH,Consumer Services,4
+baseline,2025-12-31,46,PRX,Technology,1
+baseline,2025-12-31,46,REM,Financials,5
+baseline,2025-12-31,46,RNI,Financials,5
+baseline,2025-12-31,46,SBK,Financials,2
+baseline,2025-12-31,46,SHP,Consumer Services,6
+baseline,2025-12-31,46,SLM,Financials,2
+baseline,2025-12-31,46,SOL,Basic Materials,7
+baseline,2025-12-31,46,SSW,Basic Materials,3
+baseline,2025-12-31,46,VAL,Basic Materials,3
+baseline,2025-12-31,46,VOD,Telecommunications,2
+baseline,2025-12-31,46,WHL,Consumer Services,6
+baseline,2026-06-30,42,ABG,Financials,4
+baseline,2026-06-30,42,AGL,Basic Materials,5
+baseline,2026-06-30,42,ANG,Basic Materials,3
+baseline,2026-06-30,42,ANH,Consumer Goods,6
+baseline,2026-06-30,42,BHG,Basic Materials,6
+baseline,2026-06-30,42,BID,Consumer Services,0
+baseline,2026-06-30,42,BTI,Consumer Goods,6
+baseline,2026-06-30,42,BVT,Industrials,0
+baseline,2026-06-30,42,CFR,Consumer Goods,6
+baseline,2026-06-30,42,CLS,Consumer Services,0
+baseline,2026-06-30,42,CPI,Financials,0
+baseline,2026-06-30,42,DSY,Financials,0
+baseline,2026-06-30,42,FSR,Financials,2
+baseline,2026-06-30,42,GFI,Basic Materials,3
+baseline,2026-06-30,42,GLN,Basic Materials,6
+baseline,2026-06-30,42,GRT,Financials,2
+baseline,2026-06-30,42,HAR,Basic Materials,3
+baseline,2026-06-30,42,IMP,Basic Materials,3
+baseline,2026-06-30,42,INL,Financials,4
+baseline,2026-06-30,42,INP,Financials,4
+baseline,2026-06-30,42,MRP,Consumer Services,0
+baseline,2026-06-30,42,MTN,Telecommunications,5
+baseline,2026-06-30,42,NED,Financials,4
+baseline,2026-06-30,42,NPH,Basic Materials,3
+baseline,2026-06-30,42,NPN,Technology,7
+baseline,2026-06-30,42,NRP,Financials,4
+baseline,2026-06-30,42,OMU,Financials,2
+baseline,2026-06-30,42,OUT,Financials,1
+baseline,2026-06-30,42,PAN,Basic Materials,3
+baseline,2026-06-30,42,PPH,Consumer Services,2
+baseline,2026-06-30,42,PRX,Technology,7
+baseline,2026-06-30,42,REM,Financials,0
+baseline,2026-06-30,42,RNI,Financials,0
+baseline,2026-06-30,42,SBK,Financials,1
+baseline,2026-06-30,42,SHP,Consumer Services,0
+baseline,2026-06-30,42,SLM,Financials,1
+baseline,2026-06-30,42,SOL,Basic Materials,5
+baseline,2026-06-30,42,SSW,Basic Materials,3
+baseline,2026-06-30,42,VAL,Basic Materials,3
+baseline,2026-06-30,42,VOD,Telecommunications,1
+baseline,2026-06-30,42,WHL,Consumer Services,1
+baseline,2026-06-30,43,ABG,Financials,3
+baseline,2026-06-30,43,AGL,Basic Materials,6
+baseline,2026-06-30,43,ANG,Basic Materials,1
+baseline,2026-06-30,43,ANH,Consumer Goods,4
+baseline,2026-06-30,43,BHG,Basic Materials,4
+baseline,2026-06-30,43,BID,Consumer Services,0
+baseline,2026-06-30,43,BTI,Consumer Goods,4
+baseline,2026-06-30,43,BVT,Industrials,0
+baseline,2026-06-30,43,CFR,Consumer Goods,4
+baseline,2026-06-30,43,CLS,Consumer Services,0
+baseline,2026-06-30,43,CPI,Financials,0
+baseline,2026-06-30,43,DSY,Financials,0
+baseline,2026-06-30,43,FSR,Financials,5
+baseline,2026-06-30,43,GFI,Basic Materials,1
+baseline,2026-06-30,43,GLN,Basic Materials,4
+baseline,2026-06-30,43,GRT,Financials,5
+baseline,2026-06-30,43,HAR,Basic Materials,1
+baseline,2026-06-30,43,IMP,Basic Materials,1
+baseline,2026-06-30,43,INL,Financials,3
+baseline,2026-06-30,43,INP,Financials,3
+baseline,2026-06-30,43,MRP,Consumer Services,0
+baseline,2026-06-30,43,MTN,Telecommunications,6
+baseline,2026-06-30,43,NED,Financials,3
+baseline,2026-06-30,43,NPH,Basic Materials,1
+baseline,2026-06-30,43,NPN,Technology,7
+baseline,2026-06-30,43,NRP,Financials,3
+baseline,2026-06-30,43,OMU,Financials,5
+baseline,2026-06-30,43,OUT,Financials,2
+baseline,2026-06-30,43,PAN,Basic Materials,1
+baseline,2026-06-30,43,PPH,Consumer Services,5
+baseline,2026-06-30,43,PRX,Technology,7
+baseline,2026-06-30,43,REM,Financials,0
+baseline,2026-06-30,43,RNI,Financials,0
+baseline,2026-06-30,43,SBK,Financials,2
+baseline,2026-06-30,43,SHP,Consumer Services,0
+baseline,2026-06-30,43,SLM,Financials,2
+baseline,2026-06-30,43,SOL,Basic Materials,6
+baseline,2026-06-30,43,SSW,Basic Materials,1
+baseline,2026-06-30,43,VAL,Basic Materials,1
+baseline,2026-06-30,43,VOD,Telecommunications,2
+baseline,2026-06-30,43,WHL,Consumer Services,2
+baseline,2026-06-30,44,ABG,Financials,4
+baseline,2026-06-30,44,AGL,Basic Materials,2
+baseline,2026-06-30,44,ANG,Basic Materials,1
+baseline,2026-06-30,44,ANH,Consumer Goods,5
+baseline,2026-06-30,44,BHG,Basic Materials,5
+baseline,2026-06-30,44,BID,Consumer Services,6
+baseline,2026-06-30,44,BTI,Consumer Goods,5
+baseline,2026-06-30,44,BVT,Industrials,6
+baseline,2026-06-30,44,CFR,Consumer Goods,5
+baseline,2026-06-30,44,CLS,Consumer Services,0
+baseline,2026-06-30,44,CPI,Financials,6
+baseline,2026-06-30,44,DSY,Financials,6
+baseline,2026-06-30,44,FSR,Financials,3
+baseline,2026-06-30,44,GFI,Basic Materials,1
+baseline,2026-06-30,44,GLN,Basic Materials,5
+baseline,2026-06-30,44,GRT,Financials,3
+baseline,2026-06-30,44,HAR,Basic Materials,1
+baseline,2026-06-30,44,IMP,Basic Materials,1
+baseline,2026-06-30,44,INL,Financials,4
+baseline,2026-06-30,44,INP,Financials,4
+baseline,2026-06-30,44,MRP,Consumer Services,0
+baseline,2026-06-30,44,MTN,Telecommunications,2
+baseline,2026-06-30,44,NED,Financials,4
+baseline,2026-06-30,44,NPH,Basic Materials,1
+baseline,2026-06-30,44,NPN,Technology,7
+baseline,2026-06-30,44,NRP,Financials,4
+baseline,2026-06-30,44,OMU,Financials,3
+baseline,2026-06-30,44,OUT,Financials,0
+baseline,2026-06-30,44,PAN,Basic Materials,1
+baseline,2026-06-30,44,PPH,Consumer Services,3
+baseline,2026-06-30,44,PRX,Technology,7
+baseline,2026-06-30,44,REM,Financials,6
+baseline,2026-06-30,44,RNI,Financials,6
+baseline,2026-06-30,44,SBK,Financials,2
+baseline,2026-06-30,44,SHP,Consumer Services,6
+baseline,2026-06-30,44,SLM,Financials,0
+baseline,2026-06-30,44,SOL,Basic Materials,2
+baseline,2026-06-30,44,SSW,Basic Materials,1
+baseline,2026-06-30,44,VAL,Basic Materials,1
+baseline,2026-06-30,44,VOD,Telecommunications,0
+baseline,2026-06-30,44,WHL,Consumer Services,0
+baseline,2026-06-30,45,ABG,Financials,7
+baseline,2026-06-30,45,AGL,Basic Materials,5
+baseline,2026-06-30,45,ANG,Basic Materials,3
+baseline,2026-06-30,45,ANH,Consumer Goods,2
+baseline,2026-06-30,45,BHG,Basic Materials,2
+baseline,2026-06-30,45,BID,Consumer Services,0
+baseline,2026-06-30,45,BTI,Consumer Goods,2
+baseline,2026-06-30,45,BVT,Industrials,0
+baseline,2026-06-30,45,CFR,Consumer Goods,2
+baseline,2026-06-30,45,CLS,Consumer Services,0
+baseline,2026-06-30,45,CPI,Financials,0
+baseline,2026-06-30,45,DSY,Financials,0
+baseline,2026-06-30,45,FSR,Financials,4
+baseline,2026-06-30,45,GFI,Basic Materials,3
+baseline,2026-06-30,45,GLN,Basic Materials,2
+baseline,2026-06-30,45,GRT,Financials,4
+baseline,2026-06-30,45,HAR,Basic Materials,3
+baseline,2026-06-30,45,IMP,Basic Materials,3
+baseline,2026-06-30,45,INL,Financials,7
+baseline,2026-06-30,45,INP,Financials,7
+baseline,2026-06-30,45,MRP,Consumer Services,0
+baseline,2026-06-30,45,MTN,Telecommunications,5
+baseline,2026-06-30,45,NED,Financials,7
+baseline,2026-06-30,45,NPH,Basic Materials,3
+baseline,2026-06-30,45,NPN,Technology,6
+baseline,2026-06-30,45,NRP,Financials,7
+baseline,2026-06-30,45,OMU,Financials,4
+baseline,2026-06-30,45,OUT,Financials,1
+baseline,2026-06-30,45,PAN,Basic Materials,3
+baseline,2026-06-30,45,PPH,Consumer Services,4
+baseline,2026-06-30,45,PRX,Technology,6
+baseline,2026-06-30,45,REM,Financials,0
+baseline,2026-06-30,45,RNI,Financials,0
+baseline,2026-06-30,45,SBK,Financials,1
+baseline,2026-06-30,45,SHP,Consumer Services,0
+baseline,2026-06-30,45,SLM,Financials,1
+baseline,2026-06-30,45,SOL,Basic Materials,5
+baseline,2026-06-30,45,SSW,Basic Materials,3
+baseline,2026-06-30,45,VAL,Basic Materials,3
+baseline,2026-06-30,45,VOD,Telecommunications,1
+baseline,2026-06-30,45,WHL,Consumer Services,1
+baseline,2026-06-30,46,ABG,Financials,5
+baseline,2026-06-30,46,AGL,Basic Materials,4
+baseline,2026-06-30,46,ANG,Basic Materials,1
+baseline,2026-06-30,46,ANH,Consumer Goods,2
+baseline,2026-06-30,46,BHG,Basic Materials,2
+baseline,2026-06-30,46,BID,Consumer Services,0
+baseline,2026-06-30,46,BTI,Consumer Goods,2
+baseline,2026-06-30,46,BVT,Industrials,0
+baseline,2026-06-30,46,CFR,Consumer Goods,2
+baseline,2026-06-30,46,CLS,Consumer Services,0
+baseline,2026-06-30,46,CPI,Financials,0
+baseline,2026-06-30,46,DSY,Financials,0
+baseline,2026-06-30,46,FSR,Financials,7
+baseline,2026-06-30,46,GFI,Basic Materials,1
+baseline,2026-06-30,46,GLN,Basic Materials,2
+baseline,2026-06-30,46,GRT,Financials,7
+baseline,2026-06-30,46,HAR,Basic Materials,1
+baseline,2026-06-30,46,IMP,Basic Materials,1
+baseline,2026-06-30,46,INL,Financials,5
+baseline,2026-06-30,46,INP,Financials,5
+baseline,2026-06-30,46,MRP,Consumer Services,0
+baseline,2026-06-30,46,MTN,Telecommunications,4
+baseline,2026-06-30,46,NED,Financials,5
+baseline,2026-06-30,46,NPH,Basic Materials,1
+baseline,2026-06-30,46,NPN,Technology,6
+baseline,2026-06-30,46,NRP,Financials,5
+baseline,2026-06-30,46,OMU,Financials,7
+baseline,2026-06-30,46,OUT,Financials,3
+baseline,2026-06-30,46,PAN,Basic Materials,1
+baseline,2026-06-30,46,PPH,Consumer Services,7
+baseline,2026-06-30,46,PRX,Technology,6
+baseline,2026-06-30,46,REM,Financials,0
+baseline,2026-06-30,46,RNI,Financials,0
+baseline,2026-06-30,46,SBK,Financials,3
+baseline,2026-06-30,46,SHP,Consumer Services,0
+baseline,2026-06-30,46,SLM,Financials,3
+baseline,2026-06-30,46,SOL,Basic Materials,4
+baseline,2026-06-30,46,SSW,Basic Materials,1
+baseline,2026-06-30,46,VAL,Basic Materials,1
+baseline,2026-06-30,46,VOD,Telecommunications,3
+baseline,2026-06-30,46,WHL,Consumer Services,3
+paper_style_k8,2025-06-30,42,ABG,Financials,2
+paper_style_k8,2025-06-30,42,AGL,Basic Materials,0
+paper_style_k8,2025-06-30,42,ANG,Basic Materials,7
+paper_style_k8,2025-06-30,42,ANH,Consumer Goods,5
+paper_style_k8,2025-06-30,42,APN,Health Care,0
+paper_style_k8,2025-06-30,42,BHG,Basic Materials,5
+paper_style_k8,2025-06-30,42,BID,Consumer Services,6
+paper_style_k8,2025-06-30,42,BTI,Consumer Goods,5
+paper_style_k8,2025-06-30,42,BVT,Industrials,0
+paper_style_k8,2025-06-30,42,CFR,Consumer Goods,5
+paper_style_k8,2025-06-30,42,CLS,Consumer Services,6
+paper_style_k8,2025-06-30,42,CPI,Financials,4
+paper_style_k8,2025-06-30,42,DSY,Financials,4
+paper_style_k8,2025-06-30,42,FSR,Financials,3
+paper_style_k8,2025-06-30,42,GFI,Basic Materials,7
+paper_style_k8,2025-06-30,42,GRT,Financials,3
+paper_style_k8,2025-06-30,42,HAR,Basic Materials,7
+paper_style_k8,2025-06-30,42,IMP,Basic Materials,7
+paper_style_k8,2025-06-30,42,INL,Financials,2
+paper_style_k8,2025-06-30,42,INP,Financials,2
+paper_style_k8,2025-06-30,42,MNP,Basic Materials,0
+paper_style_k8,2025-06-30,42,MRP,Consumer Services,0
+paper_style_k8,2025-06-30,42,MTN,Telecommunications,1
+paper_style_k8,2025-06-30,42,NED,Financials,2
+paper_style_k8,2025-06-30,42,NPH,Basic Materials,7
+paper_style_k8,2025-06-30,42,NPN,Technology,4
+paper_style_k8,2025-06-30,42,NRP,Financials,2
+paper_style_k8,2025-06-30,42,OMU,Financials,3
+paper_style_k8,2025-06-30,42,OUT,Financials,1
+paper_style_k8,2025-06-30,42,PPH,Consumer Services,1
+paper_style_k8,2025-06-30,42,PRX,Technology,5
+paper_style_k8,2025-06-30,42,REM,Financials,4
+paper_style_k8,2025-06-30,42,RNI,Financials,4
+paper_style_k8,2025-06-30,42,SBK,Financials,2
+paper_style_k8,2025-06-30,42,SHP,Consumer Services,6
+paper_style_k8,2025-06-30,42,SLM,Financials,3
+paper_style_k8,2025-06-30,42,SOL,Basic Materials,0
+paper_style_k8,2025-06-30,42,SSW,Basic Materials,7
+paper_style_k8,2025-06-30,42,VAL,Basic Materials,2
+paper_style_k8,2025-06-30,42,VOD,Telecommunications,3
+paper_style_k8,2025-06-30,42,WHL,Consumer Services,0
+paper_style_k8,2025-06-30,43,ABG,Financials,0
+paper_style_k8,2025-06-30,43,AGL,Basic Materials,1
+paper_style_k8,2025-06-30,43,ANG,Basic Materials,2
+paper_style_k8,2025-06-30,43,ANH,Consumer Goods,5
+paper_style_k8,2025-06-30,43,APN,Health Care,1
+paper_style_k8,2025-06-30,43,BHG,Basic Materials,5
+paper_style_k8,2025-06-30,43,BID,Consumer Services,7
+paper_style_k8,2025-06-30,43,BTI,Consumer Goods,5
+paper_style_k8,2025-06-30,43,BVT,Industrials,1
+paper_style_k8,2025-06-30,43,CFR,Consumer Goods,5
+paper_style_k8,2025-06-30,43,CLS,Consumer Services,7
+paper_style_k8,2025-06-30,43,CPI,Financials,3
+paper_style_k8,2025-06-30,43,DSY,Financials,3
+paper_style_k8,2025-06-30,43,FSR,Financials,4
+paper_style_k8,2025-06-30,43,GFI,Basic Materials,2
+paper_style_k8,2025-06-30,43,GRT,Financials,4
+paper_style_k8,2025-06-30,43,HAR,Basic Materials,2
+paper_style_k8,2025-06-30,43,IMP,Basic Materials,2
+paper_style_k8,2025-06-30,43,INL,Financials,0
+paper_style_k8,2025-06-30,43,INP,Financials,0
+paper_style_k8,2025-06-30,43,MNP,Basic Materials,1
+paper_style_k8,2025-06-30,43,MRP,Consumer Services,1
+paper_style_k8,2025-06-30,43,MTN,Telecommunications,6
+paper_style_k8,2025-06-30,43,NED,Financials,0
+paper_style_k8,2025-06-30,43,NPH,Basic Materials,2
+paper_style_k8,2025-06-30,43,NPN,Technology,3
+paper_style_k8,2025-06-30,43,NRP,Financials,0
+paper_style_k8,2025-06-30,43,OMU,Financials,4
+paper_style_k8,2025-06-30,43,OUT,Financials,6
+paper_style_k8,2025-06-30,43,PPH,Consumer Services,6
+paper_style_k8,2025-06-30,43,PRX,Technology,5
+paper_style_k8,2025-06-30,43,REM,Financials,7
+paper_style_k8,2025-06-30,43,RNI,Financials,7
+paper_style_k8,2025-06-30,43,SBK,Financials,0
+paper_style_k8,2025-06-30,43,SHP,Consumer Services,1
+paper_style_k8,2025-06-30,43,SLM,Financials,4
+paper_style_k8,2025-06-30,43,SOL,Basic Materials,1
+paper_style_k8,2025-06-30,43,SSW,Basic Materials,2
+paper_style_k8,2025-06-30,43,VAL,Basic Materials,0
+paper_style_k8,2025-06-30,43,VOD,Telecommunications,4
+paper_style_k8,2025-06-30,43,WHL,Consumer Services,1
+paper_style_k8,2025-06-30,44,ABG,Financials,3
+paper_style_k8,2025-06-30,44,AGL,Basic Materials,2
+paper_style_k8,2025-06-30,44,ANG,Basic Materials,7
+paper_style_k8,2025-06-30,44,ANH,Consumer Goods,5
+paper_style_k8,2025-06-30,44,APN,Health Care,2
+paper_style_k8,2025-06-30,44,BHG,Basic Materials,5
+paper_style_k8,2025-06-30,44,BID,Consumer Services,1
+paper_style_k8,2025-06-30,44,BTI,Consumer Goods,5
+paper_style_k8,2025-06-30,44,BVT,Industrials,2
+paper_style_k8,2025-06-30,44,CFR,Consumer Goods,5
+paper_style_k8,2025-06-30,44,CLS,Consumer Services,1
+paper_style_k8,2025-06-30,44,CPI,Financials,4
+paper_style_k8,2025-06-30,44,DSY,Financials,4
+paper_style_k8,2025-06-30,44,FSR,Financials,6
+paper_style_k8,2025-06-30,44,GFI,Basic Materials,7
+paper_style_k8,2025-06-30,44,GRT,Financials,6
+paper_style_k8,2025-06-30,44,HAR,Basic Materials,7
+paper_style_k8,2025-06-30,44,IMP,Basic Materials,7
+paper_style_k8,2025-06-30,44,INL,Financials,3
+paper_style_k8,2025-06-30,44,INP,Financials,3
+paper_style_k8,2025-06-30,44,MNP,Basic Materials,2
+paper_style_k8,2025-06-30,44,MRP,Consumer Services,2
+paper_style_k8,2025-06-30,44,MTN,Telecommunications,0
+paper_style_k8,2025-06-30,44,NED,Financials,3
+paper_style_k8,2025-06-30,44,NPH,Basic Materials,7
+paper_style_k8,2025-06-30,44,NPN,Technology,4
+paper_style_k8,2025-06-30,44,NRP,Financials,3
+paper_style_k8,2025-06-30,44,OMU,Financials,6
+paper_style_k8,2025-06-30,44,OUT,Financials,0
+paper_style_k8,2025-06-30,44,PPH,Consumer Services,0
+paper_style_k8,2025-06-30,44,PRX,Technology,0
+paper_style_k8,2025-06-30,44,REM,Financials,1
+paper_style_k8,2025-06-30,44,RNI,Financials,1
+paper_style_k8,2025-06-30,44,SBK,Financials,3
+paper_style_k8,2025-06-30,44,SHP,Consumer Services,1
+paper_style_k8,2025-06-30,44,SLM,Financials,6
+paper_style_k8,2025-06-30,44,SOL,Basic Materials,2
+paper_style_k8,2025-06-30,44,SSW,Basic Materials,7
+paper_style_k8,2025-06-30,44,VAL,Basic Materials,3
+paper_style_k8,2025-06-30,44,VOD,Telecommunications,6
+paper_style_k8,2025-06-30,44,WHL,Consumer Services,2
+paper_style_k8,2025-06-30,45,ABG,Financials,0
+paper_style_k8,2025-06-30,45,AGL,Basic Materials,4
+paper_style_k8,2025-06-30,45,ANG,Basic Materials,5
+paper_style_k8,2025-06-30,45,ANH,Consumer Goods,2
+paper_style_k8,2025-06-30,45,APN,Health Care,7
+paper_style_k8,2025-06-30,45,BHG,Basic Materials,2
+paper_style_k8,2025-06-30,45,BID,Consumer Services,1
+paper_style_k8,2025-06-30,45,BTI,Consumer Goods,2
+paper_style_k8,2025-06-30,45,BVT,Industrials,7
+paper_style_k8,2025-06-30,45,CFR,Consumer Goods,2
+paper_style_k8,2025-06-30,45,CLS,Consumer Services,1
+paper_style_k8,2025-06-30,45,CPI,Financials,1
+paper_style_k8,2025-06-30,45,DSY,Financials,1
+paper_style_k8,2025-06-30,45,FSR,Financials,6
+paper_style_k8,2025-06-30,45,GFI,Basic Materials,5
+paper_style_k8,2025-06-30,45,GRT,Financials,6
+paper_style_k8,2025-06-30,45,HAR,Basic Materials,5
+paper_style_k8,2025-06-30,45,IMP,Basic Materials,5
+paper_style_k8,2025-06-30,45,INL,Financials,0
+paper_style_k8,2025-06-30,45,INP,Financials,0
+paper_style_k8,2025-06-30,45,MNP,Basic Materials,7
+paper_style_k8,2025-06-30,45,MRP,Consumer Services,7
+paper_style_k8,2025-06-30,45,MTN,Telecommunications,3
+paper_style_k8,2025-06-30,45,NED,Financials,0
+paper_style_k8,2025-06-30,45,NPH,Basic Materials,5
+paper_style_k8,2025-06-30,45,NPN,Technology,1
+paper_style_k8,2025-06-30,45,NRP,Financials,0
+paper_style_k8,2025-06-30,45,OMU,Financials,6
+paper_style_k8,2025-06-30,45,OUT,Financials,3
+paper_style_k8,2025-06-30,45,PPH,Consumer Services,3
+paper_style_k8,2025-06-30,45,PRX,Technology,2
+paper_style_k8,2025-06-30,45,REM,Financials,1
+paper_style_k8,2025-06-30,45,RNI,Financials,1
+paper_style_k8,2025-06-30,45,SBK,Financials,0
+paper_style_k8,2025-06-30,45,SHP,Consumer Services,4
+paper_style_k8,2025-06-30,45,SLM,Financials,6
+paper_style_k8,2025-06-30,45,SOL,Basic Materials,4
+paper_style_k8,2025-06-30,45,SSW,Basic Materials,5
+paper_style_k8,2025-06-30,45,VAL,Basic Materials,0
+paper_style_k8,2025-06-30,45,VOD,Telecommunications,3
+paper_style_k8,2025-06-30,45,WHL,Consumer Services,7
+paper_style_k8,2025-06-30,46,ABG,Financials,5
+paper_style_k8,2025-06-30,46,AGL,Basic Materials,1
+paper_style_k8,2025-06-30,46,ANG,Basic Materials,3
+paper_style_k8,2025-06-30,46,ANH,Consumer Goods,0
+paper_style_k8,2025-06-30,46,APN,Health Care,1
+paper_style_k8,2025-06-30,46,BHG,Basic Materials,0
+paper_style_k8,2025-06-30,46,BID,Consumer Services,4
+paper_style_k8,2025-06-30,46,BTI,Consumer Goods,0
+paper_style_k8,2025-06-30,46,BVT,Industrials,1
+paper_style_k8,2025-06-30,46,CFR,Consumer Goods,0
+paper_style_k8,2025-06-30,46,CLS,Consumer Services,4
+paper_style_k8,2025-06-30,46,CPI,Financials,4
+paper_style_k8,2025-06-30,46,DSY,Financials,4
+paper_style_k8,2025-06-30,46,FSR,Financials,7
+paper_style_k8,2025-06-30,46,GFI,Basic Materials,3
+paper_style_k8,2025-06-30,46,GRT,Financials,7
+paper_style_k8,2025-06-30,46,HAR,Basic Materials,3
+paper_style_k8,2025-06-30,46,IMP,Basic Materials,3
+paper_style_k8,2025-06-30,46,INL,Financials,5
+paper_style_k8,2025-06-30,46,INP,Financials,5
+paper_style_k8,2025-06-30,46,MNP,Basic Materials,1
+paper_style_k8,2025-06-30,46,MRP,Consumer Services,1
+paper_style_k8,2025-06-30,46,MTN,Telecommunications,6
+paper_style_k8,2025-06-30,46,NED,Financials,5
+paper_style_k8,2025-06-30,46,NPH,Basic Materials,3
+paper_style_k8,2025-06-30,46,NPN,Technology,4
+paper_style_k8,2025-06-30,46,NRP,Financials,5
+paper_style_k8,2025-06-30,46,OMU,Financials,7
+paper_style_k8,2025-06-30,46,OUT,Financials,2
+paper_style_k8,2025-06-30,46,PPH,Consumer Services,6
+paper_style_k8,2025-06-30,46,PRX,Technology,0
+paper_style_k8,2025-06-30,46,REM,Financials,4
+paper_style_k8,2025-06-30,46,RNI,Financials,4
+paper_style_k8,2025-06-30,46,SBK,Financials,5
+paper_style_k8,2025-06-30,46,SHP,Consumer Services,1
+paper_style_k8,2025-06-30,46,SLM,Financials,2
+paper_style_k8,2025-06-30,46,SOL,Basic Materials,1
+paper_style_k8,2025-06-30,46,SSW,Basic Materials,3
+paper_style_k8,2025-06-30,46,VAL,Basic Materials,5
+paper_style_k8,2025-06-30,46,VOD,Telecommunications,2
+paper_style_k8,2025-06-30,46,WHL,Consumer Services,1
+paper_style_k8,2025-12-31,42,ABG,Financials,1
+paper_style_k8,2025-12-31,42,AGL,Basic Materials,0
+paper_style_k8,2025-12-31,42,ANG,Basic Materials,3
+paper_style_k8,2025-12-31,42,ANH,Consumer Goods,2
+paper_style_k8,2025-12-31,42,BHG,Basic Materials,2
+paper_style_k8,2025-12-31,42,BID,Consumer Services,7
+paper_style_k8,2025-12-31,42,BTI,Consumer Goods,2
+paper_style_k8,2025-12-31,42,BVT,Industrials,7
+paper_style_k8,2025-12-31,42,CFR,Consumer Goods,2
+paper_style_k8,2025-12-31,42,CLS,Consumer Services,7
+paper_style_k8,2025-12-31,42,CPI,Financials,0
+paper_style_k8,2025-12-31,42,DSY,Financials,0
+paper_style_k8,2025-12-31,42,FSR,Financials,6
+paper_style_k8,2025-12-31,42,GFI,Basic Materials,3
+paper_style_k8,2025-12-31,42,GLN,Basic Materials,2
+paper_style_k8,2025-12-31,42,GRT,Financials,4
+paper_style_k8,2025-12-31,42,HAR,Basic Materials,3
+paper_style_k8,2025-12-31,42,IMP,Basic Materials,3
+paper_style_k8,2025-12-31,42,INL,Financials,1
+paper_style_k8,2025-12-31,42,INP,Financials,1
+paper_style_k8,2025-12-31,42,MNP,Basic Materials,1
+paper_style_k8,2025-12-31,42,MRP,Consumer Services,1
+paper_style_k8,2025-12-31,42,MTN,Telecommunications,4
+paper_style_k8,2025-12-31,42,NED,Financials,1
+paper_style_k8,2025-12-31,42,NPH,Basic Materials,3
+paper_style_k8,2025-12-31,42,NPN,Technology,0
+paper_style_k8,2025-12-31,42,NRP,Financials,1
+paper_style_k8,2025-12-31,42,OMU,Financials,6
+paper_style_k8,2025-12-31,42,OUT,Financials,5
+paper_style_k8,2025-12-31,42,PPH,Consumer Services,6
+paper_style_k8,2025-12-31,42,PRX,Technology,2
+paper_style_k8,2025-12-31,42,REM,Financials,0
+paper_style_k8,2025-12-31,42,RNI,Financials,0
+paper_style_k8,2025-12-31,42,SBK,Financials,4
+paper_style_k8,2025-12-31,42,SHP,Consumer Services,7
+paper_style_k8,2025-12-31,42,SLM,Financials,4
+paper_style_k8,2025-12-31,42,SOL,Basic Materials,0
+paper_style_k8,2025-12-31,42,SSW,Basic Materials,3
+paper_style_k8,2025-12-31,42,VAL,Basic Materials,3
+paper_style_k8,2025-12-31,42,VOD,Telecommunications,4
+paper_style_k8,2025-12-31,42,WHL,Consumer Services,5
+paper_style_k8,2025-12-31,43,ABG,Financials,0
+paper_style_k8,2025-12-31,43,AGL,Basic Materials,7
+paper_style_k8,2025-12-31,43,ANG,Basic Materials,1
+paper_style_k8,2025-12-31,43,ANH,Consumer Goods,4
+paper_style_k8,2025-12-31,43,BHG,Basic Materials,4
+paper_style_k8,2025-12-31,43,BID,Consumer Services,2
+paper_style_k8,2025-12-31,43,BTI,Consumer Goods,4
+paper_style_k8,2025-12-31,43,BVT,Industrials,2
+paper_style_k8,2025-12-31,43,CFR,Consumer Goods,4
+paper_style_k8,2025-12-31,43,CLS,Consumer Services,2
+paper_style_k8,2025-12-31,43,CPI,Financials,7
+paper_style_k8,2025-12-31,43,DSY,Financials,3
+paper_style_k8,2025-12-31,43,FSR,Financials,6
+paper_style_k8,2025-12-31,43,GFI,Basic Materials,1
+paper_style_k8,2025-12-31,43,GLN,Basic Materials,4
+paper_style_k8,2025-12-31,43,GRT,Financials,5
+paper_style_k8,2025-12-31,43,HAR,Basic Materials,1
+paper_style_k8,2025-12-31,43,IMP,Basic Materials,1
+paper_style_k8,2025-12-31,43,INL,Financials,0
+paper_style_k8,2025-12-31,43,INP,Financials,0
+paper_style_k8,2025-12-31,43,MNP,Basic Materials,0
+paper_style_k8,2025-12-31,43,MRP,Consumer Services,0
+paper_style_k8,2025-12-31,43,MTN,Telecommunications,5
+paper_style_k8,2025-12-31,43,NED,Financials,0
+paper_style_k8,2025-12-31,43,NPH,Basic Materials,1
+paper_style_k8,2025-12-31,43,NPN,Technology,7
+paper_style_k8,2025-12-31,43,NRP,Financials,0
+paper_style_k8,2025-12-31,43,OMU,Financials,6
+paper_style_k8,2025-12-31,43,OUT,Financials,2
+paper_style_k8,2025-12-31,43,PPH,Consumer Services,6
+paper_style_k8,2025-12-31,43,PRX,Technology,4
+paper_style_k8,2025-12-31,43,REM,Financials,3
+paper_style_k8,2025-12-31,43,RNI,Financials,3
+paper_style_k8,2025-12-31,43,SBK,Financials,5
+paper_style_k8,2025-12-31,43,SHP,Consumer Services,2
+paper_style_k8,2025-12-31,43,SLM,Financials,5
+paper_style_k8,2025-12-31,43,SOL,Basic Materials,7
+paper_style_k8,2025-12-31,43,SSW,Basic Materials,1
+paper_style_k8,2025-12-31,43,VAL,Basic Materials,1
+paper_style_k8,2025-12-31,43,VOD,Telecommunications,5
+paper_style_k8,2025-12-31,43,WHL,Consumer Services,2
+paper_style_k8,2025-12-31,44,ABG,Financials,4
+paper_style_k8,2025-12-31,44,AGL,Basic Materials,5
+paper_style_k8,2025-12-31,44,ANG,Basic Materials,3
+paper_style_k8,2025-12-31,44,ANH,Consumer Goods,1
+paper_style_k8,2025-12-31,44,BHG,Basic Materials,1
+paper_style_k8,2025-12-31,44,BID,Consumer Services,2
+paper_style_k8,2025-12-31,44,BTI,Consumer Goods,1
+paper_style_k8,2025-12-31,44,BVT,Industrials,2
+paper_style_k8,2025-12-31,44,CFR,Consumer Goods,1
+paper_style_k8,2025-12-31,44,CLS,Consumer Services,2
+paper_style_k8,2025-12-31,44,CPI,Financials,5
+paper_style_k8,2025-12-31,44,DSY,Financials,5
+paper_style_k8,2025-12-31,44,FSR,Financials,6
+paper_style_k8,2025-12-31,44,GFI,Basic Materials,3
+paper_style_k8,2025-12-31,44,GLN,Basic Materials,1
+paper_style_k8,2025-12-31,44,GRT,Financials,6
+paper_style_k8,2025-12-31,44,HAR,Basic Materials,3
+paper_style_k8,2025-12-31,44,IMP,Basic Materials,3
+paper_style_k8,2025-12-31,44,INL,Financials,4
+paper_style_k8,2025-12-31,44,INP,Financials,4
+paper_style_k8,2025-12-31,44,MNP,Basic Materials,7
+paper_style_k8,2025-12-31,44,MRP,Consumer Services,7
+paper_style_k8,2025-12-31,44,MTN,Telecommunications,0
+paper_style_k8,2025-12-31,44,NED,Financials,4
+paper_style_k8,2025-12-31,44,NPH,Basic Materials,3
+paper_style_k8,2025-12-31,44,NPN,Technology,5
+paper_style_k8,2025-12-31,44,NRP,Financials,4
+paper_style_k8,2025-12-31,44,OMU,Financials,6
+paper_style_k8,2025-12-31,44,OUT,Financials,0
+paper_style_k8,2025-12-31,44,PPH,Consumer Services,6
+paper_style_k8,2025-12-31,44,PRX,Technology,1
+paper_style_k8,2025-12-31,44,REM,Financials,2
+paper_style_k8,2025-12-31,44,RNI,Financials,5
+paper_style_k8,2025-12-31,44,SBK,Financials,0
+paper_style_k8,2025-12-31,44,SHP,Consumer Services,2
+paper_style_k8,2025-12-31,44,SLM,Financials,0
+paper_style_k8,2025-12-31,44,SOL,Basic Materials,5
+paper_style_k8,2025-12-31,44,SSW,Basic Materials,3
+paper_style_k8,2025-12-31,44,VAL,Basic Materials,3
+paper_style_k8,2025-12-31,44,VOD,Telecommunications,0
+paper_style_k8,2025-12-31,44,WHL,Consumer Services,2
+paper_style_k8,2025-12-31,45,ABG,Financials,4
+paper_style_k8,2025-12-31,45,AGL,Basic Materials,5
+paper_style_k8,2025-12-31,45,ANG,Basic Materials,3
+paper_style_k8,2025-12-31,45,ANH,Consumer Goods,2
+paper_style_k8,2025-12-31,45,BHG,Basic Materials,2
+paper_style_k8,2025-12-31,45,BID,Consumer Services,1
+paper_style_k8,2025-12-31,45,BTI,Consumer Goods,2
+paper_style_k8,2025-12-31,45,BVT,Industrials,1
+paper_style_k8,2025-12-31,45,CFR,Consumer Goods,2
+paper_style_k8,2025-12-31,45,CLS,Consumer Services,1
+paper_style_k8,2025-12-31,45,CPI,Financials,5
+paper_style_k8,2025-12-31,45,DSY,Financials,5
+paper_style_k8,2025-12-31,45,FSR,Financials,0
+paper_style_k8,2025-12-31,45,GFI,Basic Materials,3
+paper_style_k8,2025-12-31,45,GLN,Basic Materials,2
+paper_style_k8,2025-12-31,45,GRT,Financials,0
+paper_style_k8,2025-12-31,45,HAR,Basic Materials,3
+paper_style_k8,2025-12-31,45,IMP,Basic Materials,3
+paper_style_k8,2025-12-31,45,INL,Financials,4
+paper_style_k8,2025-12-31,45,INP,Financials,4
+paper_style_k8,2025-12-31,45,MNP,Basic Materials,7
+paper_style_k8,2025-12-31,45,MRP,Consumer Services,7
+paper_style_k8,2025-12-31,45,MTN,Telecommunications,0
+paper_style_k8,2025-12-31,45,NED,Financials,4
+paper_style_k8,2025-12-31,45,NPH,Basic Materials,3
+paper_style_k8,2025-12-31,45,NPN,Technology,5
+paper_style_k8,2025-12-31,45,NRP,Financials,4
+paper_style_k8,2025-12-31,45,OMU,Financials,0
+paper_style_k8,2025-12-31,45,OUT,Financials,6
+paper_style_k8,2025-12-31,45,PPH,Consumer Services,0
+paper_style_k8,2025-12-31,45,PRX,Technology,2
+paper_style_k8,2025-12-31,45,REM,Financials,1
+paper_style_k8,2025-12-31,45,RNI,Financials,5
+paper_style_k8,2025-12-31,45,SBK,Financials,0
+paper_style_k8,2025-12-31,45,SHP,Consumer Services,1
+paper_style_k8,2025-12-31,45,SLM,Financials,0
+paper_style_k8,2025-12-31,45,SOL,Basic Materials,5
+paper_style_k8,2025-12-31,45,SSW,Basic Materials,3
+paper_style_k8,2025-12-31,45,VAL,Basic Materials,3
+paper_style_k8,2025-12-31,45,VOD,Telecommunications,0
+paper_style_k8,2025-12-31,45,WHL,Consumer Services,6
+paper_style_k8,2025-12-31,46,ABG,Financials,5
+paper_style_k8,2025-12-31,46,AGL,Basic Materials,4
+paper_style_k8,2025-12-31,46,ANG,Basic Materials,3
+paper_style_k8,2025-12-31,46,ANH,Consumer Goods,1
+paper_style_k8,2025-12-31,46,BHG,Basic Materials,1
+paper_style_k8,2025-12-31,46,BID,Consumer Services,0
+paper_style_k8,2025-12-31,46,BTI,Consumer Goods,1
+paper_style_k8,2025-12-31,46,BVT,Industrials,0
+paper_style_k8,2025-12-31,46,CFR,Consumer Goods,1
+paper_style_k8,2025-12-31,46,CLS,Consumer Services,0
+paper_style_k8,2025-12-31,46,CPI,Financials,4
+paper_style_k8,2025-12-31,46,DSY,Financials,4
+paper_style_k8,2025-12-31,46,FSR,Financials,6
+paper_style_k8,2025-12-31,46,GFI,Basic Materials,3
+paper_style_k8,2025-12-31,46,GLN,Basic Materials,1
+paper_style_k8,2025-12-31,46,GRT,Financials,2
+paper_style_k8,2025-12-31,46,HAR,Basic Materials,3
+paper_style_k8,2025-12-31,46,IMP,Basic Materials,3
+paper_style_k8,2025-12-31,46,INL,Financials,5
+paper_style_k8,2025-12-31,46,INP,Financials,5
+paper_style_k8,2025-12-31,46,MNP,Basic Materials,7
+paper_style_k8,2025-12-31,46,MRP,Consumer Services,7
+paper_style_k8,2025-12-31,46,MTN,Telecommunications,2
+paper_style_k8,2025-12-31,46,NED,Financials,5
+paper_style_k8,2025-12-31,46,NPH,Basic Materials,3
+paper_style_k8,2025-12-31,46,NPN,Technology,4
+paper_style_k8,2025-12-31,46,NRP,Financials,5
+paper_style_k8,2025-12-31,46,OMU,Financials,6
+paper_style_k8,2025-12-31,46,OUT,Financials,0
+paper_style_k8,2025-12-31,46,PPH,Consumer Services,6
+paper_style_k8,2025-12-31,46,PRX,Technology,1
+paper_style_k8,2025-12-31,46,REM,Financials,0
+paper_style_k8,2025-12-31,46,RNI,Financials,4
+paper_style_k8,2025-12-31,46,SBK,Financials,2
+paper_style_k8,2025-12-31,46,SHP,Consumer Services,0
+paper_style_k8,2025-12-31,46,SLM,Financials,2
+paper_style_k8,2025-12-31,46,SOL,Basic Materials,4
+paper_style_k8,2025-12-31,46,SSW,Basic Materials,3
+paper_style_k8,2025-12-31,46,VAL,Basic Materials,3
+paper_style_k8,2025-12-31,46,VOD,Telecommunications,2
+paper_style_k8,2025-12-31,46,WHL,Consumer Services,0
+paper_style_k8,2026-06-30,42,ABG,Financials,5
+paper_style_k8,2026-06-30,42,AGL,Basic Materials,2
+paper_style_k8,2026-06-30,42,ANG,Basic Materials,1
+paper_style_k8,2026-06-30,42,ANH,Consumer Goods,6
+paper_style_k8,2026-06-30,42,BHG,Basic Materials,6
+paper_style_k8,2026-06-30,42,BID,Consumer Services,0
+paper_style_k8,2026-06-30,42,BTI,Consumer Goods,6
+paper_style_k8,2026-06-30,42,BVT,Industrials,0
+paper_style_k8,2026-06-30,42,CFR,Consumer Goods,6
+paper_style_k8,2026-06-30,42,CLS,Consumer Services,0
+paper_style_k8,2026-06-30,42,CPI,Financials,2
+paper_style_k8,2026-06-30,42,DSY,Financials,2
+paper_style_k8,2026-06-30,42,FSR,Financials,7
+paper_style_k8,2026-06-30,42,GFI,Basic Materials,1
+paper_style_k8,2026-06-30,42,GLN,Basic Materials,6
+paper_style_k8,2026-06-30,42,GRT,Financials,7
+paper_style_k8,2026-06-30,42,HAR,Basic Materials,1
+paper_style_k8,2026-06-30,42,IMP,Basic Materials,1
+paper_style_k8,2026-06-30,42,INL,Financials,5
+paper_style_k8,2026-06-30,42,INP,Financials,5
+paper_style_k8,2026-06-30,42,MRP,Consumer Services,0
+paper_style_k8,2026-06-30,42,MTN,Telecommunications,2
+paper_style_k8,2026-06-30,42,NED,Financials,5
+paper_style_k8,2026-06-30,42,NPH,Basic Materials,1
+paper_style_k8,2026-06-30,42,NPN,Technology,4
+paper_style_k8,2026-06-30,42,NRP,Financials,5
+paper_style_k8,2026-06-30,42,OMU,Financials,7
+paper_style_k8,2026-06-30,42,OUT,Financials,3
+paper_style_k8,2026-06-30,42,PAN,Basic Materials,1
+paper_style_k8,2026-06-30,42,PPH,Consumer Services,7
+paper_style_k8,2026-06-30,42,PRX,Technology,4
+paper_style_k8,2026-06-30,42,REM,Financials,2
+paper_style_k8,2026-06-30,42,RNI,Financials,0
+paper_style_k8,2026-06-30,42,SBK,Financials,3
+paper_style_k8,2026-06-30,42,SHP,Consumer Services,0
+paper_style_k8,2026-06-30,42,SLM,Financials,3
+paper_style_k8,2026-06-30,42,SOL,Basic Materials,2
+paper_style_k8,2026-06-30,42,SSW,Basic Materials,1
+paper_style_k8,2026-06-30,42,VAL,Basic Materials,1
+paper_style_k8,2026-06-30,42,VOD,Telecommunications,3
+paper_style_k8,2026-06-30,42,WHL,Consumer Services,0
+paper_style_k8,2026-06-30,43,ABG,Financials,5
+paper_style_k8,2026-06-30,43,AGL,Basic Materials,2
+paper_style_k8,2026-06-30,43,ANG,Basic Materials,3
+paper_style_k8,2026-06-30,43,ANH,Consumer Goods,4
+paper_style_k8,2026-06-30,43,BHG,Basic Materials,4
+paper_style_k8,2026-06-30,43,BID,Consumer Services,0
+paper_style_k8,2026-06-30,43,BTI,Consumer Goods,4
+paper_style_k8,2026-06-30,43,BVT,Industrials,0
+paper_style_k8,2026-06-30,43,CFR,Consumer Goods,4
+paper_style_k8,2026-06-30,43,CLS,Consumer Services,0
+paper_style_k8,2026-06-30,43,CPI,Financials,2
+paper_style_k8,2026-06-30,43,DSY,Financials,2
+paper_style_k8,2026-06-30,43,FSR,Financials,6
+paper_style_k8,2026-06-30,43,GFI,Basic Materials,3
+paper_style_k8,2026-06-30,43,GLN,Basic Materials,4
+paper_style_k8,2026-06-30,43,GRT,Financials,6
+paper_style_k8,2026-06-30,43,HAR,Basic Materials,3
+paper_style_k8,2026-06-30,43,IMP,Basic Materials,3
+paper_style_k8,2026-06-30,43,INL,Financials,5
+paper_style_k8,2026-06-30,43,INP,Financials,5
+paper_style_k8,2026-06-30,43,MRP,Consumer Services,0
+paper_style_k8,2026-06-30,43,MTN,Telecommunications,2
+paper_style_k8,2026-06-30,43,NED,Financials,5
+paper_style_k8,2026-06-30,43,NPH,Basic Materials,3
+paper_style_k8,2026-06-30,43,NPN,Technology,7
+paper_style_k8,2026-06-30,43,NRP,Financials,5
+paper_style_k8,2026-06-30,43,OMU,Financials,6
+paper_style_k8,2026-06-30,43,OUT,Financials,1
+paper_style_k8,2026-06-30,43,PAN,Basic Materials,3
+paper_style_k8,2026-06-30,43,PPH,Consumer Services,6
+paper_style_k8,2026-06-30,43,PRX,Technology,7
+paper_style_k8,2026-06-30,43,REM,Financials,2
+paper_style_k8,2026-06-30,43,RNI,Financials,0
+paper_style_k8,2026-06-30,43,SBK,Financials,1
+paper_style_k8,2026-06-30,43,SHP,Consumer Services,0
+paper_style_k8,2026-06-30,43,SLM,Financials,1
+paper_style_k8,2026-06-30,43,SOL,Basic Materials,2
+paper_style_k8,2026-06-30,43,SSW,Basic Materials,3
+paper_style_k8,2026-06-30,43,VAL,Basic Materials,3
+paper_style_k8,2026-06-30,43,VOD,Telecommunications,1
+paper_style_k8,2026-06-30,43,WHL,Consumer Services,0
+paper_style_k8,2026-06-30,44,ABG,Financials,5
+paper_style_k8,2026-06-30,44,AGL,Basic Materials,2
+paper_style_k8,2026-06-30,44,ANG,Basic Materials,3
+paper_style_k8,2026-06-30,44,ANH,Consumer Goods,4
+paper_style_k8,2026-06-30,44,BHG,Basic Materials,4
+paper_style_k8,2026-06-30,44,BID,Consumer Services,1
+paper_style_k8,2026-06-30,44,BTI,Consumer Goods,4
+paper_style_k8,2026-06-30,44,BVT,Industrials,1
+paper_style_k8,2026-06-30,44,CFR,Consumer Goods,4
+paper_style_k8,2026-06-30,44,CLS,Consumer Services,1
+paper_style_k8,2026-06-30,44,CPI,Financials,2
+paper_style_k8,2026-06-30,44,DSY,Financials,2
+paper_style_k8,2026-06-30,44,FSR,Financials,7
+paper_style_k8,2026-06-30,44,GFI,Basic Materials,3
+paper_style_k8,2026-06-30,44,GLN,Basic Materials,4
+paper_style_k8,2026-06-30,44,GRT,Financials,0
+paper_style_k8,2026-06-30,44,HAR,Basic Materials,3
+paper_style_k8,2026-06-30,44,IMP,Basic Materials,3
+paper_style_k8,2026-06-30,44,INL,Financials,5
+paper_style_k8,2026-06-30,44,INP,Financials,5
+paper_style_k8,2026-06-30,44,MRP,Consumer Services,1
+paper_style_k8,2026-06-30,44,MTN,Telecommunications,2
+paper_style_k8,2026-06-30,44,NED,Financials,5
+paper_style_k8,2026-06-30,44,NPH,Basic Materials,3
+paper_style_k8,2026-06-30,44,NPN,Technology,6
+paper_style_k8,2026-06-30,44,NRP,Financials,5
+paper_style_k8,2026-06-30,44,OMU,Financials,7
+paper_style_k8,2026-06-30,44,OUT,Financials,0
+paper_style_k8,2026-06-30,44,PAN,Basic Materials,3
+paper_style_k8,2026-06-30,44,PPH,Consumer Services,7
+paper_style_k8,2026-06-30,44,PRX,Technology,6
+paper_style_k8,2026-06-30,44,REM,Financials,2
+paper_style_k8,2026-06-30,44,RNI,Financials,1
+paper_style_k8,2026-06-30,44,SBK,Financials,0
+paper_style_k8,2026-06-30,44,SHP,Consumer Services,1
+paper_style_k8,2026-06-30,44,SLM,Financials,0
+paper_style_k8,2026-06-30,44,SOL,Basic Materials,2
+paper_style_k8,2026-06-30,44,SSW,Basic Materials,3
+paper_style_k8,2026-06-30,44,VAL,Basic Materials,3
+paper_style_k8,2026-06-30,44,VOD,Telecommunications,0
+paper_style_k8,2026-06-30,44,WHL,Consumer Services,0
+paper_style_k8,2026-06-30,45,ABG,Financials,3
+paper_style_k8,2026-06-30,45,AGL,Basic Materials,2
+paper_style_k8,2026-06-30,45,ANG,Basic Materials,6
+paper_style_k8,2026-06-30,45,ANH,Consumer Goods,4
+paper_style_k8,2026-06-30,45,BHG,Basic Materials,4
+paper_style_k8,2026-06-30,45,BID,Consumer Services,0
+paper_style_k8,2026-06-30,45,BTI,Consumer Goods,4
+paper_style_k8,2026-06-30,45,BVT,Industrials,0
+paper_style_k8,2026-06-30,45,CFR,Consumer Goods,4
+paper_style_k8,2026-06-30,45,CLS,Consumer Services,0
+paper_style_k8,2026-06-30,45,CPI,Financials,2
+paper_style_k8,2026-06-30,45,DSY,Financials,2
+paper_style_k8,2026-06-30,45,FSR,Financials,5
+paper_style_k8,2026-06-30,45,GFI,Basic Materials,6
+paper_style_k8,2026-06-30,45,GLN,Basic Materials,4
+paper_style_k8,2026-06-30,45,GRT,Financials,5
+paper_style_k8,2026-06-30,45,HAR,Basic Materials,6
+paper_style_k8,2026-06-30,45,IMP,Basic Materials,6
+paper_style_k8,2026-06-30,45,INL,Financials,3
+paper_style_k8,2026-06-30,45,INP,Financials,3
+paper_style_k8,2026-06-30,45,MRP,Consumer Services,0
+paper_style_k8,2026-06-30,45,MTN,Telecommunications,2
+paper_style_k8,2026-06-30,45,NED,Financials,3
+paper_style_k8,2026-06-30,45,NPH,Basic Materials,6
+paper_style_k8,2026-06-30,45,NPN,Technology,7
+paper_style_k8,2026-06-30,45,NRP,Financials,3
+paper_style_k8,2026-06-30,45,OMU,Financials,5
+paper_style_k8,2026-06-30,45,OUT,Financials,1
+paper_style_k8,2026-06-30,45,PAN,Basic Materials,6
+paper_style_k8,2026-06-30,45,PPH,Consumer Services,5
+paper_style_k8,2026-06-30,45,PRX,Technology,7
+paper_style_k8,2026-06-30,45,REM,Financials,2
+paper_style_k8,2026-06-30,45,RNI,Financials,0
+paper_style_k8,2026-06-30,45,SBK,Financials,1
+paper_style_k8,2026-06-30,45,SHP,Consumer Services,0
+paper_style_k8,2026-06-30,45,SLM,Financials,1
+paper_style_k8,2026-06-30,45,SOL,Basic Materials,2
+paper_style_k8,2026-06-30,45,SSW,Basic Materials,6
+paper_style_k8,2026-06-30,45,VAL,Basic Materials,6
+paper_style_k8,2026-06-30,45,VOD,Telecommunications,1
+paper_style_k8,2026-06-30,45,WHL,Consumer Services,1
+paper_style_k8,2026-06-30,46,ABG,Financials,4
+paper_style_k8,2026-06-30,46,AGL,Basic Materials,7
+paper_style_k8,2026-06-30,46,ANG,Basic Materials,1
+paper_style_k8,2026-06-30,46,ANH,Consumer Goods,3
+paper_style_k8,2026-06-30,46,BHG,Basic Materials,3
+paper_style_k8,2026-06-30,46,BID,Consumer Services,2
+paper_style_k8,2026-06-30,46,BTI,Consumer Goods,3
+paper_style_k8,2026-06-30,46,BVT,Industrials,2
+paper_style_k8,2026-06-30,46,CFR,Consumer Goods,3
+paper_style_k8,2026-06-30,46,CLS,Consumer Services,0
+paper_style_k8,2026-06-30,46,CPI,Financials,2
+paper_style_k8,2026-06-30,46,DSY,Financials,2
+paper_style_k8,2026-06-30,46,FSR,Financials,6
+paper_style_k8,2026-06-30,46,GFI,Basic Materials,1
+paper_style_k8,2026-06-30,46,GLN,Basic Materials,3
+paper_style_k8,2026-06-30,46,GRT,Financials,6
+paper_style_k8,2026-06-30,46,HAR,Basic Materials,1
+paper_style_k8,2026-06-30,46,IMP,Basic Materials,1
+paper_style_k8,2026-06-30,46,INL,Financials,4
+paper_style_k8,2026-06-30,46,INP,Financials,4
+paper_style_k8,2026-06-30,46,MRP,Consumer Services,0
+paper_style_k8,2026-06-30,46,MTN,Telecommunications,7
+paper_style_k8,2026-06-30,46,NED,Financials,4
+paper_style_k8,2026-06-30,46,NPH,Basic Materials,1
+paper_style_k8,2026-06-30,46,NPN,Technology,0
+paper_style_k8,2026-06-30,46,NRP,Financials,4
+paper_style_k8,2026-06-30,46,OMU,Financials,6
+paper_style_k8,2026-06-30,46,OUT,Financials,5
+paper_style_k8,2026-06-30,46,PAN,Basic Materials,1
+paper_style_k8,2026-06-30,46,PPH,Consumer Services,6
+paper_style_k8,2026-06-30,46,PRX,Technology,0
+paper_style_k8,2026-06-30,46,REM,Financials,2
+paper_style_k8,2026-06-30,46,RNI,Financials,0
+paper_style_k8,2026-06-30,46,SBK,Financials,5
+paper_style_k8,2026-06-30,46,SHP,Consumer Services,2
+paper_style_k8,2026-06-30,46,SLM,Financials,5
+paper_style_k8,2026-06-30,46,SOL,Basic Materials,7
+paper_style_k8,2026-06-30,46,SSW,Basic Materials,1
+paper_style_k8,2026-06-30,46,VAL,Basic Materials,1
+paper_style_k8,2026-06-30,46,VOD,Telecommunications,5
+paper_style_k8,2026-06-30,46,WHL,Consumer Services,0
+common_features_k8,2025-06-30,42,ABG,Financials,0
+common_features_k8,2025-06-30,42,AGL,Basic Materials,0
+common_features_k8,2025-06-30,42,ANG,Basic Materials,0
+common_features_k8,2025-06-30,42,ANH,Consumer Goods,2
+common_features_k8,2025-06-30,42,APN,Health Care,0
+common_features_k8,2025-06-30,42,BHG,Basic Materials,2
+common_features_k8,2025-06-30,42,BID,Consumer Services,0
+common_features_k8,2025-06-30,42,BTI,Consumer Goods,2
+common_features_k8,2025-06-30,42,BVT,Industrials,0
+common_features_k8,2025-06-30,42,CFR,Consumer Goods,6
+common_features_k8,2025-06-30,42,CLS,Consumer Services,0
+common_features_k8,2025-06-30,42,CPI,Financials,0
+common_features_k8,2025-06-30,42,DSY,Financials,0
+common_features_k8,2025-06-30,42,FSR,Financials,1
+common_features_k8,2025-06-30,42,GFI,Basic Materials,0
+common_features_k8,2025-06-30,42,GRT,Financials,1
+common_features_k8,2025-06-30,42,HAR,Basic Materials,0
+common_features_k8,2025-06-30,42,IMP,Basic Materials,0
+common_features_k8,2025-06-30,42,INL,Financials,0
+common_features_k8,2025-06-30,42,INP,Financials,0
+common_features_k8,2025-06-30,42,MNP,Basic Materials,0
+common_features_k8,2025-06-30,42,MRP,Consumer Services,0
+common_features_k8,2025-06-30,42,MTN,Telecommunications,0
+common_features_k8,2025-06-30,42,NED,Financials,0
+common_features_k8,2025-06-30,42,NPH,Basic Materials,0
+common_features_k8,2025-06-30,42,NPN,Technology,7
+common_features_k8,2025-06-30,42,NRP,Financials,0
+common_features_k8,2025-06-30,42,OMU,Financials,1
+common_features_k8,2025-06-30,42,OUT,Financials,0
+common_features_k8,2025-06-30,42,PPH,Consumer Services,1
+common_features_k8,2025-06-30,42,PRX,Technology,6
+common_features_k8,2025-06-30,42,REM,Financials,0
+common_features_k8,2025-06-30,42,RNI,Financials,0
+common_features_k8,2025-06-30,42,SBK,Financials,0
+common_features_k8,2025-06-30,42,SHP,Consumer Services,0
+common_features_k8,2025-06-30,42,SLM,Financials,0
+common_features_k8,2025-06-30,42,SOL,Basic Materials,3
+common_features_k8,2025-06-30,42,SSW,Basic Materials,4
+common_features_k8,2025-06-30,42,VAL,Basic Materials,5
+common_features_k8,2025-06-30,42,VOD,Telecommunications,0
+common_features_k8,2025-06-30,42,WHL,Consumer Services,0
+common_features_k8,2025-06-30,43,ABG,Financials,0
+common_features_k8,2025-06-30,43,AGL,Basic Materials,0
+common_features_k8,2025-06-30,43,ANG,Basic Materials,0
+common_features_k8,2025-06-30,43,ANH,Consumer Goods,2
+common_features_k8,2025-06-30,43,APN,Health Care,0
+common_features_k8,2025-06-30,43,BHG,Basic Materials,2
+common_features_k8,2025-06-30,43,BID,Consumer Services,0
+common_features_k8,2025-06-30,43,BTI,Consumer Goods,2
+common_features_k8,2025-06-30,43,BVT,Industrials,0
+common_features_k8,2025-06-30,43,CFR,Consumer Goods,6
+common_features_k8,2025-06-30,43,CLS,Consumer Services,0
+common_features_k8,2025-06-30,43,CPI,Financials,0
+common_features_k8,2025-06-30,43,DSY,Financials,0
+common_features_k8,2025-06-30,43,FSR,Financials,1
+common_features_k8,2025-06-30,43,GFI,Basic Materials,0
+common_features_k8,2025-06-30,43,GRT,Financials,1
+common_features_k8,2025-06-30,43,HAR,Basic Materials,0
+common_features_k8,2025-06-30,43,IMP,Basic Materials,0
+common_features_k8,2025-06-30,43,INL,Financials,0
+common_features_k8,2025-06-30,43,INP,Financials,0
+common_features_k8,2025-06-30,43,MNP,Basic Materials,0
+common_features_k8,2025-06-30,43,MRP,Consumer Services,0
+common_features_k8,2025-06-30,43,MTN,Telecommunications,0
+common_features_k8,2025-06-30,43,NED,Financials,0
+common_features_k8,2025-06-30,43,NPH,Basic Materials,0
+common_features_k8,2025-06-30,43,NPN,Technology,7
+common_features_k8,2025-06-30,43,NRP,Financials,0
+common_features_k8,2025-06-30,43,OMU,Financials,1
+common_features_k8,2025-06-30,43,OUT,Financials,0
+common_features_k8,2025-06-30,43,PPH,Consumer Services,1
+common_features_k8,2025-06-30,43,PRX,Technology,6
+common_features_k8,2025-06-30,43,REM,Financials,0
+common_features_k8,2025-06-30,43,RNI,Financials,0
+common_features_k8,2025-06-30,43,SBK,Financials,0
+common_features_k8,2025-06-30,43,SHP,Consumer Services,0
+common_features_k8,2025-06-30,43,SLM,Financials,0
+common_features_k8,2025-06-30,43,SOL,Basic Materials,3
+common_features_k8,2025-06-30,43,SSW,Basic Materials,4
+common_features_k8,2025-06-30,43,VAL,Basic Materials,5
+common_features_k8,2025-06-30,43,VOD,Telecommunications,0
+common_features_k8,2025-06-30,43,WHL,Consumer Services,0
+common_features_k8,2025-06-30,44,ABG,Financials,0
+common_features_k8,2025-06-30,44,AGL,Basic Materials,0
+common_features_k8,2025-06-30,44,ANG,Basic Materials,0
+common_features_k8,2025-06-30,44,ANH,Consumer Goods,2
+common_features_k8,2025-06-30,44,APN,Health Care,0
+common_features_k8,2025-06-30,44,BHG,Basic Materials,2
+common_features_k8,2025-06-30,44,BID,Consumer Services,0
+common_features_k8,2025-06-30,44,BTI,Consumer Goods,2
+common_features_k8,2025-06-30,44,BVT,Industrials,0
+common_features_k8,2025-06-30,44,CFR,Consumer Goods,6
+common_features_k8,2025-06-30,44,CLS,Consumer Services,0
+common_features_k8,2025-06-30,44,CPI,Financials,0
+common_features_k8,2025-06-30,44,DSY,Financials,0
+common_features_k8,2025-06-30,44,FSR,Financials,1
+common_features_k8,2025-06-30,44,GFI,Basic Materials,0
+common_features_k8,2025-06-30,44,GRT,Financials,1
+common_features_k8,2025-06-30,44,HAR,Basic Materials,0
+common_features_k8,2025-06-30,44,IMP,Basic Materials,0
+common_features_k8,2025-06-30,44,INL,Financials,0
+common_features_k8,2025-06-30,44,INP,Financials,0
+common_features_k8,2025-06-30,44,MNP,Basic Materials,0
+common_features_k8,2025-06-30,44,MRP,Consumer Services,0
+common_features_k8,2025-06-30,44,MTN,Telecommunications,0
+common_features_k8,2025-06-30,44,NED,Financials,0
+common_features_k8,2025-06-30,44,NPH,Basic Materials,0
+common_features_k8,2025-06-30,44,NPN,Technology,7
+common_features_k8,2025-06-30,44,NRP,Financials,0
+common_features_k8,2025-06-30,44,OMU,Financials,1
+common_features_k8,2025-06-30,44,OUT,Financials,0
+common_features_k8,2025-06-30,44,PPH,Consumer Services,1
+common_features_k8,2025-06-30,44,PRX,Technology,6
+common_features_k8,2025-06-30,44,REM,Financials,0
+common_features_k8,2025-06-30,44,RNI,Financials,0
+common_features_k8,2025-06-30,44,SBK,Financials,0
+common_features_k8,2025-06-30,44,SHP,Consumer Services,0
+common_features_k8,2025-06-30,44,SLM,Financials,0
+common_features_k8,2025-06-30,44,SOL,Basic Materials,3
+common_features_k8,2025-06-30,44,SSW,Basic Materials,4
+common_features_k8,2025-06-30,44,VAL,Basic Materials,5
+common_features_k8,2025-06-30,44,VOD,Telecommunications,0
+common_features_k8,2025-06-30,44,WHL,Consumer Services,0
+common_features_k8,2025-06-30,45,ABG,Financials,0
+common_features_k8,2025-06-30,45,AGL,Basic Materials,0
+common_features_k8,2025-06-30,45,ANG,Basic Materials,0
+common_features_k8,2025-06-30,45,ANH,Consumer Goods,2
+common_features_k8,2025-06-30,45,APN,Health Care,0
+common_features_k8,2025-06-30,45,BHG,Basic Materials,2
+common_features_k8,2025-06-30,45,BID,Consumer Services,0
+common_features_k8,2025-06-30,45,BTI,Consumer Goods,2
+common_features_k8,2025-06-30,45,BVT,Industrials,0
+common_features_k8,2025-06-30,45,CFR,Consumer Goods,6
+common_features_k8,2025-06-30,45,CLS,Consumer Services,0
+common_features_k8,2025-06-30,45,CPI,Financials,0
+common_features_k8,2025-06-30,45,DSY,Financials,0
+common_features_k8,2025-06-30,45,FSR,Financials,1
+common_features_k8,2025-06-30,45,GFI,Basic Materials,0
+common_features_k8,2025-06-30,45,GRT,Financials,1
+common_features_k8,2025-06-30,45,HAR,Basic Materials,0
+common_features_k8,2025-06-30,45,IMP,Basic Materials,0
+common_features_k8,2025-06-30,45,INL,Financials,0
+common_features_k8,2025-06-30,45,INP,Financials,0
+common_features_k8,2025-06-30,45,MNP,Basic Materials,0
+common_features_k8,2025-06-30,45,MRP,Consumer Services,0
+common_features_k8,2025-06-30,45,MTN,Telecommunications,0
+common_features_k8,2025-06-30,45,NED,Financials,0
+common_features_k8,2025-06-30,45,NPH,Basic Materials,0
+common_features_k8,2025-06-30,45,NPN,Technology,7
+common_features_k8,2025-06-30,45,NRP,Financials,0
+common_features_k8,2025-06-30,45,OMU,Financials,1
+common_features_k8,2025-06-30,45,OUT,Financials,0
+common_features_k8,2025-06-30,45,PPH,Consumer Services,1
+common_features_k8,2025-06-30,45,PRX,Technology,6
+common_features_k8,2025-06-30,45,REM,Financials,0
+common_features_k8,2025-06-30,45,RNI,Financials,0
+common_features_k8,2025-06-30,45,SBK,Financials,0
+common_features_k8,2025-06-30,45,SHP,Consumer Services,0
+common_features_k8,2025-06-30,45,SLM,Financials,0
+common_features_k8,2025-06-30,45,SOL,Basic Materials,3
+common_features_k8,2025-06-30,45,SSW,Basic Materials,4
+common_features_k8,2025-06-30,45,VAL,Basic Materials,5
+common_features_k8,2025-06-30,45,VOD,Telecommunications,0
+common_features_k8,2025-06-30,45,WHL,Consumer Services,0
+common_features_k8,2025-06-30,46,ABG,Financials,0
+common_features_k8,2025-06-30,46,AGL,Basic Materials,0
+common_features_k8,2025-06-30,46,ANG,Basic Materials,0
+common_features_k8,2025-06-30,46,ANH,Consumer Goods,2
+common_features_k8,2025-06-30,46,APN,Health Care,0
+common_features_k8,2025-06-30,46,BHG,Basic Materials,2
+common_features_k8,2025-06-30,46,BID,Consumer Services,0
+common_features_k8,2025-06-30,46,BTI,Consumer Goods,2
+common_features_k8,2025-06-30,46,BVT,Industrials,0
+common_features_k8,2025-06-30,46,CFR,Consumer Goods,6
+common_features_k8,2025-06-30,46,CLS,Consumer Services,0
+common_features_k8,2025-06-30,46,CPI,Financials,0
+common_features_k8,2025-06-30,46,DSY,Financials,0
+common_features_k8,2025-06-30,46,FSR,Financials,1
+common_features_k8,2025-06-30,46,GFI,Basic Materials,0
+common_features_k8,2025-06-30,46,GRT,Financials,1
+common_features_k8,2025-06-30,46,HAR,Basic Materials,0
+common_features_k8,2025-06-30,46,IMP,Basic Materials,0
+common_features_k8,2025-06-30,46,INL,Financials,0
+common_features_k8,2025-06-30,46,INP,Financials,0
+common_features_k8,2025-06-30,46,MNP,Basic Materials,0
+common_features_k8,2025-06-30,46,MRP,Consumer Services,0
+common_features_k8,2025-06-30,46,MTN,Telecommunications,0
+common_features_k8,2025-06-30,46,NED,Financials,0
+common_features_k8,2025-06-30,46,NPH,Basic Materials,0
+common_features_k8,2025-06-30,46,NPN,Technology,7
+common_features_k8,2025-06-30,46,NRP,Financials,0
+common_features_k8,2025-06-30,46,OMU,Financials,1
+common_features_k8,2025-06-30,46,OUT,Financials,0
+common_features_k8,2025-06-30,46,PPH,Consumer Services,1
+common_features_k8,2025-06-30,46,PRX,Technology,6
+common_features_k8,2025-06-30,46,REM,Financials,0
+common_features_k8,2025-06-30,46,RNI,Financials,0
+common_features_k8,2025-06-30,46,SBK,Financials,0
+common_features_k8,2025-06-30,46,SHP,Consumer Services,0
+common_features_k8,2025-06-30,46,SLM,Financials,0
+common_features_k8,2025-06-30,46,SOL,Basic Materials,3
+common_features_k8,2025-06-30,46,SSW,Basic Materials,4
+common_features_k8,2025-06-30,46,VAL,Basic Materials,5
+common_features_k8,2025-06-30,46,VOD,Telecommunications,0
+common_features_k8,2025-06-30,46,WHL,Consumer Services,0
+common_features_k8,2025-12-31,42,ABG,Financials,6
+common_features_k8,2025-12-31,42,AGL,Basic Materials,6
+common_features_k8,2025-12-31,42,ANG,Basic Materials,0
+common_features_k8,2025-12-31,42,ANH,Consumer Goods,5
+common_features_k8,2025-12-31,42,BHG,Basic Materials,5
+common_features_k8,2025-12-31,42,BID,Consumer Services,6
+common_features_k8,2025-12-31,42,BTI,Consumer Goods,5
+common_features_k8,2025-12-31,42,BVT,Industrials,6
+common_features_k8,2025-12-31,42,CFR,Consumer Goods,3
+common_features_k8,2025-12-31,42,CLS,Consumer Services,6
+common_features_k8,2025-12-31,42,CPI,Financials,6
+common_features_k8,2025-12-31,42,DSY,Financials,6
+common_features_k8,2025-12-31,42,FSR,Financials,2
+common_features_k8,2025-12-31,42,GFI,Basic Materials,0
+common_features_k8,2025-12-31,42,GLN,Basic Materials,7
+common_features_k8,2025-12-31,42,GRT,Financials,2
+common_features_k8,2025-12-31,42,HAR,Basic Materials,0
+common_features_k8,2025-12-31,42,IMP,Basic Materials,0
+common_features_k8,2025-12-31,42,INL,Financials,6
+common_features_k8,2025-12-31,42,INP,Financials,6
+common_features_k8,2025-12-31,42,MNP,Basic Materials,6
+common_features_k8,2025-12-31,42,MRP,Consumer Services,6
+common_features_k8,2025-12-31,42,MTN,Telecommunications,1
+common_features_k8,2025-12-31,42,NED,Financials,6
+common_features_k8,2025-12-31,42,NPH,Basic Materials,0
+common_features_k8,2025-12-31,42,NPN,Technology,6
+common_features_k8,2025-12-31,42,NRP,Financials,6
+common_features_k8,2025-12-31,42,OMU,Financials,2
+common_features_k8,2025-12-31,42,OUT,Financials,6
+common_features_k8,2025-12-31,42,PPH,Consumer Services,2
+common_features_k8,2025-12-31,42,PRX,Technology,3
+common_features_k8,2025-12-31,42,REM,Financials,6
+common_features_k8,2025-12-31,42,RNI,Financials,6
+common_features_k8,2025-12-31,42,SBK,Financials,6
+common_features_k8,2025-12-31,42,SHP,Consumer Services,6
+common_features_k8,2025-12-31,42,SLM,Financials,6
+common_features_k8,2025-12-31,42,SOL,Basic Materials,1
+common_features_k8,2025-12-31,42,SSW,Basic Materials,4
+common_features_k8,2025-12-31,42,VAL,Basic Materials,0
+common_features_k8,2025-12-31,42,VOD,Telecommunications,6
+common_features_k8,2025-12-31,42,WHL,Consumer Services,6
+common_features_k8,2025-12-31,43,ABG,Financials,6
+common_features_k8,2025-12-31,43,AGL,Basic Materials,6
+common_features_k8,2025-12-31,43,ANG,Basic Materials,0
+common_features_k8,2025-12-31,43,ANH,Consumer Goods,5
+common_features_k8,2025-12-31,43,BHG,Basic Materials,5
+common_features_k8,2025-12-31,43,BID,Consumer Services,6
+common_features_k8,2025-12-31,43,BTI,Consumer Goods,5
+common_features_k8,2025-12-31,43,BVT,Industrials,6
+common_features_k8,2025-12-31,43,CFR,Consumer Goods,3
+common_features_k8,2025-12-31,43,CLS,Consumer Services,6
+common_features_k8,2025-12-31,43,CPI,Financials,6
+common_features_k8,2025-12-31,43,DSY,Financials,6
+common_features_k8,2025-12-31,43,FSR,Financials,2
+common_features_k8,2025-12-31,43,GFI,Basic Materials,0
+common_features_k8,2025-12-31,43,GLN,Basic Materials,7
+common_features_k8,2025-12-31,43,GRT,Financials,2
+common_features_k8,2025-12-31,43,HAR,Basic Materials,0
+common_features_k8,2025-12-31,43,IMP,Basic Materials,0
+common_features_k8,2025-12-31,43,INL,Financials,6
+common_features_k8,2025-12-31,43,INP,Financials,6
+common_features_k8,2025-12-31,43,MNP,Basic Materials,6
+common_features_k8,2025-12-31,43,MRP,Consumer Services,6
+common_features_k8,2025-12-31,43,MTN,Telecommunications,1
+common_features_k8,2025-12-31,43,NED,Financials,6
+common_features_k8,2025-12-31,43,NPH,Basic Materials,0
+common_features_k8,2025-12-31,43,NPN,Technology,6
+common_features_k8,2025-12-31,43,NRP,Financials,6
+common_features_k8,2025-12-31,43,OMU,Financials,2
+common_features_k8,2025-12-31,43,OUT,Financials,6
+common_features_k8,2025-12-31,43,PPH,Consumer Services,2
+common_features_k8,2025-12-31,43,PRX,Technology,3
+common_features_k8,2025-12-31,43,REM,Financials,6
+common_features_k8,2025-12-31,43,RNI,Financials,6
+common_features_k8,2025-12-31,43,SBK,Financials,6
+common_features_k8,2025-12-31,43,SHP,Consumer Services,6
+common_features_k8,2025-12-31,43,SLM,Financials,6
+common_features_k8,2025-12-31,43,SOL,Basic Materials,1
+common_features_k8,2025-12-31,43,SSW,Basic Materials,4
+common_features_k8,2025-12-31,43,VAL,Basic Materials,0
+common_features_k8,2025-12-31,43,VOD,Telecommunications,6
+common_features_k8,2025-12-31,43,WHL,Consumer Services,6
+common_features_k8,2025-12-31,44,ABG,Financials,6
+common_features_k8,2025-12-31,44,AGL,Basic Materials,6
+common_features_k8,2025-12-31,44,ANG,Basic Materials,0
+common_features_k8,2025-12-31,44,ANH,Consumer Goods,5
+common_features_k8,2025-12-31,44,BHG,Basic Materials,5
+common_features_k8,2025-12-31,44,BID,Consumer Services,6
+common_features_k8,2025-12-31,44,BTI,Consumer Goods,5
+common_features_k8,2025-12-31,44,BVT,Industrials,6
+common_features_k8,2025-12-31,44,CFR,Consumer Goods,3
+common_features_k8,2025-12-31,44,CLS,Consumer Services,6
+common_features_k8,2025-12-31,44,CPI,Financials,6
+common_features_k8,2025-12-31,44,DSY,Financials,6
+common_features_k8,2025-12-31,44,FSR,Financials,2
+common_features_k8,2025-12-31,44,GFI,Basic Materials,0
+common_features_k8,2025-12-31,44,GLN,Basic Materials,7
+common_features_k8,2025-12-31,44,GRT,Financials,2
+common_features_k8,2025-12-31,44,HAR,Basic Materials,0
+common_features_k8,2025-12-31,44,IMP,Basic Materials,0
+common_features_k8,2025-12-31,44,INL,Financials,6
+common_features_k8,2025-12-31,44,INP,Financials,6
+common_features_k8,2025-12-31,44,MNP,Basic Materials,6
+common_features_k8,2025-12-31,44,MRP,Consumer Services,6
+common_features_k8,2025-12-31,44,MTN,Telecommunications,1
+common_features_k8,2025-12-31,44,NED,Financials,6
+common_features_k8,2025-12-31,44,NPH,Basic Materials,0
+common_features_k8,2025-12-31,44,NPN,Technology,6
+common_features_k8,2025-12-31,44,NRP,Financials,6
+common_features_k8,2025-12-31,44,OMU,Financials,2
+common_features_k8,2025-12-31,44,OUT,Financials,6
+common_features_k8,2025-12-31,44,PPH,Consumer Services,2
+common_features_k8,2025-12-31,44,PRX,Technology,3
+common_features_k8,2025-12-31,44,REM,Financials,6
+common_features_k8,2025-12-31,44,RNI,Financials,6
+common_features_k8,2025-12-31,44,SBK,Financials,6
+common_features_k8,2025-12-31,44,SHP,Consumer Services,6
+common_features_k8,2025-12-31,44,SLM,Financials,6
+common_features_k8,2025-12-31,44,SOL,Basic Materials,1
+common_features_k8,2025-12-31,44,SSW,Basic Materials,4
+common_features_k8,2025-12-31,44,VAL,Basic Materials,0
+common_features_k8,2025-12-31,44,VOD,Telecommunications,6
+common_features_k8,2025-12-31,44,WHL,Consumer Services,6
+common_features_k8,2025-12-31,45,ABG,Financials,6
+common_features_k8,2025-12-31,45,AGL,Basic Materials,6
+common_features_k8,2025-12-31,45,ANG,Basic Materials,0
+common_features_k8,2025-12-31,45,ANH,Consumer Goods,5
+common_features_k8,2025-12-31,45,BHG,Basic Materials,5
+common_features_k8,2025-12-31,45,BID,Consumer Services,6
+common_features_k8,2025-12-31,45,BTI,Consumer Goods,5
+common_features_k8,2025-12-31,45,BVT,Industrials,6
+common_features_k8,2025-12-31,45,CFR,Consumer Goods,3
+common_features_k8,2025-12-31,45,CLS,Consumer Services,6
+common_features_k8,2025-12-31,45,CPI,Financials,6
+common_features_k8,2025-12-31,45,DSY,Financials,6
+common_features_k8,2025-12-31,45,FSR,Financials,2
+common_features_k8,2025-12-31,45,GFI,Basic Materials,0
+common_features_k8,2025-12-31,45,GLN,Basic Materials,7
+common_features_k8,2025-12-31,45,GRT,Financials,2
+common_features_k8,2025-12-31,45,HAR,Basic Materials,0
+common_features_k8,2025-12-31,45,IMP,Basic Materials,0
+common_features_k8,2025-12-31,45,INL,Financials,6
+common_features_k8,2025-12-31,45,INP,Financials,6
+common_features_k8,2025-12-31,45,MNP,Basic Materials,6
+common_features_k8,2025-12-31,45,MRP,Consumer Services,6
+common_features_k8,2025-12-31,45,MTN,Telecommunications,1
+common_features_k8,2025-12-31,45,NED,Financials,6
+common_features_k8,2025-12-31,45,NPH,Basic Materials,0
+common_features_k8,2025-12-31,45,NPN,Technology,6
+common_features_k8,2025-12-31,45,NRP,Financials,6
+common_features_k8,2025-12-31,45,OMU,Financials,2
+common_features_k8,2025-12-31,45,OUT,Financials,6
+common_features_k8,2025-12-31,45,PPH,Consumer Services,2
+common_features_k8,2025-12-31,45,PRX,Technology,3
+common_features_k8,2025-12-31,45,REM,Financials,6
+common_features_k8,2025-12-31,45,RNI,Financials,6
+common_features_k8,2025-12-31,45,SBK,Financials,6
+common_features_k8,2025-12-31,45,SHP,Consumer Services,6
+common_features_k8,2025-12-31,45,SLM,Financials,6
+common_features_k8,2025-12-31,45,SOL,Basic Materials,1
+common_features_k8,2025-12-31,45,SSW,Basic Materials,4
+common_features_k8,2025-12-31,45,VAL,Basic Materials,0
+common_features_k8,2025-12-31,45,VOD,Telecommunications,6
+common_features_k8,2025-12-31,45,WHL,Consumer Services,6
+common_features_k8,2025-12-31,46,ABG,Financials,6
+common_features_k8,2025-12-31,46,AGL,Basic Materials,6
+common_features_k8,2025-12-31,46,ANG,Basic Materials,0
+common_features_k8,2025-12-31,46,ANH,Consumer Goods,5
+common_features_k8,2025-12-31,46,BHG,Basic Materials,5
+common_features_k8,2025-12-31,46,BID,Consumer Services,6
+common_features_k8,2025-12-31,46,BTI,Consumer Goods,5
+common_features_k8,2025-12-31,46,BVT,Industrials,6
+common_features_k8,2025-12-31,46,CFR,Consumer Goods,3
+common_features_k8,2025-12-31,46,CLS,Consumer Services,6
+common_features_k8,2025-12-31,46,CPI,Financials,6
+common_features_k8,2025-12-31,46,DSY,Financials,6
+common_features_k8,2025-12-31,46,FSR,Financials,2
+common_features_k8,2025-12-31,46,GFI,Basic Materials,0
+common_features_k8,2025-12-31,46,GLN,Basic Materials,7
+common_features_k8,2025-12-31,46,GRT,Financials,2
+common_features_k8,2025-12-31,46,HAR,Basic Materials,0
+common_features_k8,2025-12-31,46,IMP,Basic Materials,0
+common_features_k8,2025-12-31,46,INL,Financials,6
+common_features_k8,2025-12-31,46,INP,Financials,6
+common_features_k8,2025-12-31,46,MNP,Basic Materials,6
+common_features_k8,2025-12-31,46,MRP,Consumer Services,6
+common_features_k8,2025-12-31,46,MTN,Telecommunications,1
+common_features_k8,2025-12-31,46,NED,Financials,6
+common_features_k8,2025-12-31,46,NPH,Basic Materials,0
+common_features_k8,2025-12-31,46,NPN,Technology,6
+common_features_k8,2025-12-31,46,NRP,Financials,6
+common_features_k8,2025-12-31,46,OMU,Financials,2
+common_features_k8,2025-12-31,46,OUT,Financials,6
+common_features_k8,2025-12-31,46,PPH,Consumer Services,2
+common_features_k8,2025-12-31,46,PRX,Technology,3
+common_features_k8,2025-12-31,46,REM,Financials,6
+common_features_k8,2025-12-31,46,RNI,Financials,6
+common_features_k8,2025-12-31,46,SBK,Financials,6
+common_features_k8,2025-12-31,46,SHP,Consumer Services,6
+common_features_k8,2025-12-31,46,SLM,Financials,6
+common_features_k8,2025-12-31,46,SOL,Basic Materials,1
+common_features_k8,2025-12-31,46,SSW,Basic Materials,4
+common_features_k8,2025-12-31,46,VAL,Basic Materials,0
+common_features_k8,2025-12-31,46,VOD,Telecommunications,6
+common_features_k8,2025-12-31,46,WHL,Consumer Services,6
+common_features_k8,2026-06-30,42,ABG,Financials,0
+common_features_k8,2026-06-30,42,AGL,Basic Materials,0
+common_features_k8,2026-06-30,42,ANG,Basic Materials,2
+common_features_k8,2026-06-30,42,ANH,Consumer Goods,1
+common_features_k8,2026-06-30,42,BHG,Basic Materials,7
+common_features_k8,2026-06-30,42,BID,Consumer Services,0
+common_features_k8,2026-06-30,42,BTI,Consumer Goods,1
+common_features_k8,2026-06-30,42,BVT,Industrials,0
+common_features_k8,2026-06-30,42,CFR,Consumer Goods,1
+common_features_k8,2026-06-30,42,CLS,Consumer Services,0
+common_features_k8,2026-06-30,42,CPI,Financials,0
+common_features_k8,2026-06-30,42,DSY,Financials,0
+common_features_k8,2026-06-30,42,FSR,Financials,5
+common_features_k8,2026-06-30,42,GFI,Basic Materials,2
+common_features_k8,2026-06-30,42,GLN,Basic Materials,3
+common_features_k8,2026-06-30,42,GRT,Financials,5
+common_features_k8,2026-06-30,42,HAR,Basic Materials,2
+common_features_k8,2026-06-30,42,IMP,Basic Materials,2
+common_features_k8,2026-06-30,42,INL,Financials,0
+common_features_k8,2026-06-30,42,INP,Financials,0
+common_features_k8,2026-06-30,42,MRP,Consumer Services,0
+common_features_k8,2026-06-30,42,MTN,Telecommunications,0
+common_features_k8,2026-06-30,42,NED,Financials,0
+common_features_k8,2026-06-30,42,NPH,Basic Materials,2
+common_features_k8,2026-06-30,42,NPN,Technology,0
+common_features_k8,2026-06-30,42,NRP,Financials,0
+common_features_k8,2026-06-30,42,OMU,Financials,5
+common_features_k8,2026-06-30,42,OUT,Financials,0
+common_features_k8,2026-06-30,42,PAN,Basic Materials,2
+common_features_k8,2026-06-30,42,PPH,Consumer Services,5
+common_features_k8,2026-06-30,42,PRX,Technology,0
+common_features_k8,2026-06-30,42,REM,Financials,0
+common_features_k8,2026-06-30,42,RNI,Financials,0
+common_features_k8,2026-06-30,42,SBK,Financials,0
+common_features_k8,2026-06-30,42,SHP,Consumer Services,0
+common_features_k8,2026-06-30,42,SLM,Financials,0
+common_features_k8,2026-06-30,42,SOL,Basic Materials,4
+common_features_k8,2026-06-30,42,SSW,Basic Materials,6
+common_features_k8,2026-06-30,42,VAL,Basic Materials,2
+common_features_k8,2026-06-30,42,VOD,Telecommunications,0
+common_features_k8,2026-06-30,42,WHL,Consumer Services,0
+common_features_k8,2026-06-30,43,ABG,Financials,0
+common_features_k8,2026-06-30,43,AGL,Basic Materials,0
+common_features_k8,2026-06-30,43,ANG,Basic Materials,2
+common_features_k8,2026-06-30,43,ANH,Consumer Goods,1
+common_features_k8,2026-06-30,43,BHG,Basic Materials,7
+common_features_k8,2026-06-30,43,BID,Consumer Services,0
+common_features_k8,2026-06-30,43,BTI,Consumer Goods,1
+common_features_k8,2026-06-30,43,BVT,Industrials,0
+common_features_k8,2026-06-30,43,CFR,Consumer Goods,1
+common_features_k8,2026-06-30,43,CLS,Consumer Services,0
+common_features_k8,2026-06-30,43,CPI,Financials,0
+common_features_k8,2026-06-30,43,DSY,Financials,0
+common_features_k8,2026-06-30,43,FSR,Financials,5
+common_features_k8,2026-06-30,43,GFI,Basic Materials,2
+common_features_k8,2026-06-30,43,GLN,Basic Materials,3
+common_features_k8,2026-06-30,43,GRT,Financials,5
+common_features_k8,2026-06-30,43,HAR,Basic Materials,2
+common_features_k8,2026-06-30,43,IMP,Basic Materials,2
+common_features_k8,2026-06-30,43,INL,Financials,0
+common_features_k8,2026-06-30,43,INP,Financials,0
+common_features_k8,2026-06-30,43,MRP,Consumer Services,0
+common_features_k8,2026-06-30,43,MTN,Telecommunications,0
+common_features_k8,2026-06-30,43,NED,Financials,0
+common_features_k8,2026-06-30,43,NPH,Basic Materials,2
+common_features_k8,2026-06-30,43,NPN,Technology,0
+common_features_k8,2026-06-30,43,NRP,Financials,0
+common_features_k8,2026-06-30,43,OMU,Financials,5
+common_features_k8,2026-06-30,43,OUT,Financials,0
+common_features_k8,2026-06-30,43,PAN,Basic Materials,2
+common_features_k8,2026-06-30,43,PPH,Consumer Services,5
+common_features_k8,2026-06-30,43,PRX,Technology,0
+common_features_k8,2026-06-30,43,REM,Financials,0
+common_features_k8,2026-06-30,43,RNI,Financials,0
+common_features_k8,2026-06-30,43,SBK,Financials,0
+common_features_k8,2026-06-30,43,SHP,Consumer Services,0
+common_features_k8,2026-06-30,43,SLM,Financials,0
+common_features_k8,2026-06-30,43,SOL,Basic Materials,4
+common_features_k8,2026-06-30,43,SSW,Basic Materials,6
+common_features_k8,2026-06-30,43,VAL,Basic Materials,2
+common_features_k8,2026-06-30,43,VOD,Telecommunications,0
+common_features_k8,2026-06-30,43,WHL,Consumer Services,0
+common_features_k8,2026-06-30,44,ABG,Financials,0
+common_features_k8,2026-06-30,44,AGL,Basic Materials,0
+common_features_k8,2026-06-30,44,ANG,Basic Materials,2
+common_features_k8,2026-06-30,44,ANH,Consumer Goods,1
+common_features_k8,2026-06-30,44,BHG,Basic Materials,7
+common_features_k8,2026-06-30,44,BID,Consumer Services,0
+common_features_k8,2026-06-30,44,BTI,Consumer Goods,1
+common_features_k8,2026-06-30,44,BVT,Industrials,0
+common_features_k8,2026-06-30,44,CFR,Consumer Goods,1
+common_features_k8,2026-06-30,44,CLS,Consumer Services,0
+common_features_k8,2026-06-30,44,CPI,Financials,0
+common_features_k8,2026-06-30,44,DSY,Financials,0
+common_features_k8,2026-06-30,44,FSR,Financials,5
+common_features_k8,2026-06-30,44,GFI,Basic Materials,2
+common_features_k8,2026-06-30,44,GLN,Basic Materials,3
+common_features_k8,2026-06-30,44,GRT,Financials,5
+common_features_k8,2026-06-30,44,HAR,Basic Materials,2
+common_features_k8,2026-06-30,44,IMP,Basic Materials,2
+common_features_k8,2026-06-30,44,INL,Financials,0
+common_features_k8,2026-06-30,44,INP,Financials,0
+common_features_k8,2026-06-30,44,MRP,Consumer Services,0
+common_features_k8,2026-06-30,44,MTN,Telecommunications,0
+common_features_k8,2026-06-30,44,NED,Financials,0
+common_features_k8,2026-06-30,44,NPH,Basic Materials,2
+common_features_k8,2026-06-30,44,NPN,Technology,0
+common_features_k8,2026-06-30,44,NRP,Financials,0
+common_features_k8,2026-06-30,44,OMU,Financials,5
+common_features_k8,2026-06-30,44,OUT,Financials,0
+common_features_k8,2026-06-30,44,PAN,Basic Materials,2
+common_features_k8,2026-06-30,44,PPH,Consumer Services,5
+common_features_k8,2026-06-30,44,PRX,Technology,0
+common_features_k8,2026-06-30,44,REM,Financials,0
+common_features_k8,2026-06-30,44,RNI,Financials,0
+common_features_k8,2026-06-30,44,SBK,Financials,0
+common_features_k8,2026-06-30,44,SHP,Consumer Services,0
+common_features_k8,2026-06-30,44,SLM,Financials,0
+common_features_k8,2026-06-30,44,SOL,Basic Materials,4
+common_features_k8,2026-06-30,44,SSW,Basic Materials,6
+common_features_k8,2026-06-30,44,VAL,Basic Materials,2
+common_features_k8,2026-06-30,44,VOD,Telecommunications,0
+common_features_k8,2026-06-30,44,WHL,Consumer Services,0
+common_features_k8,2026-06-30,45,ABG,Financials,0
+common_features_k8,2026-06-30,45,AGL,Basic Materials,0
+common_features_k8,2026-06-30,45,ANG,Basic Materials,2
+common_features_k8,2026-06-30,45,ANH,Consumer Goods,1
+common_features_k8,2026-06-30,45,BHG,Basic Materials,7
+common_features_k8,2026-06-30,45,BID,Consumer Services,0
+common_features_k8,2026-06-30,45,BTI,Consumer Goods,1
+common_features_k8,2026-06-30,45,BVT,Industrials,0
+common_features_k8,2026-06-30,45,CFR,Consumer Goods,1
+common_features_k8,2026-06-30,45,CLS,Consumer Services,0
+common_features_k8,2026-06-30,45,CPI,Financials,0
+common_features_k8,2026-06-30,45,DSY,Financials,0
+common_features_k8,2026-06-30,45,FSR,Financials,5
+common_features_k8,2026-06-30,45,GFI,Basic Materials,2
+common_features_k8,2026-06-30,45,GLN,Basic Materials,3
+common_features_k8,2026-06-30,45,GRT,Financials,5
+common_features_k8,2026-06-30,45,HAR,Basic Materials,2
+common_features_k8,2026-06-30,45,IMP,Basic Materials,2
+common_features_k8,2026-06-30,45,INL,Financials,0
+common_features_k8,2026-06-30,45,INP,Financials,0
+common_features_k8,2026-06-30,45,MRP,Consumer Services,0
+common_features_k8,2026-06-30,45,MTN,Telecommunications,0
+common_features_k8,2026-06-30,45,NED,Financials,0
+common_features_k8,2026-06-30,45,NPH,Basic Materials,2
+common_features_k8,2026-06-30,45,NPN,Technology,0
+common_features_k8,2026-06-30,45,NRP,Financials,0
+common_features_k8,2026-06-30,45,OMU,Financials,5
+common_features_k8,2026-06-30,45,OUT,Financials,0
+common_features_k8,2026-06-30,45,PAN,Basic Materials,2
+common_features_k8,2026-06-30,45,PPH,Consumer Services,5
+common_features_k8,2026-06-30,45,PRX,Technology,0
+common_features_k8,2026-06-30,45,REM,Financials,0
+common_features_k8,2026-06-30,45,RNI,Financials,0
+common_features_k8,2026-06-30,45,SBK,Financials,0
+common_features_k8,2026-06-30,45,SHP,Consumer Services,0
+common_features_k8,2026-06-30,45,SLM,Financials,0
+common_features_k8,2026-06-30,45,SOL,Basic Materials,4
+common_features_k8,2026-06-30,45,SSW,Basic Materials,6
+common_features_k8,2026-06-30,45,VAL,Basic Materials,2
+common_features_k8,2026-06-30,45,VOD,Telecommunications,0
+common_features_k8,2026-06-30,45,WHL,Consumer Services,0
+common_features_k8,2026-06-30,46,ABG,Financials,0
+common_features_k8,2026-06-30,46,AGL,Basic Materials,0
+common_features_k8,2026-06-30,46,ANG,Basic Materials,2
+common_features_k8,2026-06-30,46,ANH,Consumer Goods,1
+common_features_k8,2026-06-30,46,BHG,Basic Materials,7
+common_features_k8,2026-06-30,46,BID,Consumer Services,0
+common_features_k8,2026-06-30,46,BTI,Consumer Goods,1
+common_features_k8,2026-06-30,46,BVT,Industrials,0
+common_features_k8,2026-06-30,46,CFR,Consumer Goods,1
+common_features_k8,2026-06-30,46,CLS,Consumer Services,0
+common_features_k8,2026-06-30,46,CPI,Financials,0
+common_features_k8,2026-06-30,46,DSY,Financials,0
+common_features_k8,2026-06-30,46,FSR,Financials,5
+common_features_k8,2026-06-30,46,GFI,Basic Materials,2
+common_features_k8,2026-06-30,46,GLN,Basic Materials,3
+common_features_k8,2026-06-30,46,GRT,Financials,5
+common_features_k8,2026-06-30,46,HAR,Basic Materials,2
+common_features_k8,2026-06-30,46,IMP,Basic Materials,2
+common_features_k8,2026-06-30,46,INL,Financials,0
+common_features_k8,2026-06-30,46,INP,Financials,0
+common_features_k8,2026-06-30,46,MRP,Consumer Services,0
+common_features_k8,2026-06-30,46,MTN,Telecommunications,0
+common_features_k8,2026-06-30,46,NED,Financials,0
+common_features_k8,2026-06-30,46,NPH,Basic Materials,2
+common_features_k8,2026-06-30,46,NPN,Technology,0
+common_features_k8,2026-06-30,46,NRP,Financials,0
+common_features_k8,2026-06-30,46,OMU,Financials,5
+common_features_k8,2026-06-30,46,OUT,Financials,0
+common_features_k8,2026-06-30,46,PAN,Basic Materials,2
+common_features_k8,2026-06-30,46,PPH,Consumer Services,5
+common_features_k8,2026-06-30,46,PRX,Technology,0
+common_features_k8,2026-06-30,46,REM,Financials,0
+common_features_k8,2026-06-30,46,RNI,Financials,0
+common_features_k8,2026-06-30,46,SBK,Financials,0
+common_features_k8,2026-06-30,46,SHP,Consumer Services,0
+common_features_k8,2026-06-30,46,SLM,Financials,0
+common_features_k8,2026-06-30,46,SOL,Basic Materials,4
+common_features_k8,2026-06-30,46,SSW,Basic Materials,6
+common_features_k8,2026-06-30,46,VAL,Basic Materials,2
+common_features_k8,2026-06-30,46,VOD,Telecommunications,0
+common_features_k8,2026-06-30,46,WHL,Consumer Services,0
+common_features_free_k,2025-06-30,42,ABG,Financials,0
+common_features_free_k,2025-06-30,42,AGL,Basic Materials,0
+common_features_free_k,2025-06-30,42,ANG,Basic Materials,0
+common_features_free_k,2025-06-30,42,ANH,Consumer Goods,0
+common_features_free_k,2025-06-30,42,APN,Health Care,0
+common_features_free_k,2025-06-30,42,BHG,Basic Materials,0
+common_features_free_k,2025-06-30,42,BID,Consumer Services,0
+common_features_free_k,2025-06-30,42,BTI,Consumer Goods,0
+common_features_free_k,2025-06-30,42,BVT,Industrials,0
+common_features_free_k,2025-06-30,42,CFR,Consumer Goods,0
+common_features_free_k,2025-06-30,42,CLS,Consumer Services,0
+common_features_free_k,2025-06-30,42,CPI,Financials,0
+common_features_free_k,2025-06-30,42,DSY,Financials,0
+common_features_free_k,2025-06-30,42,FSR,Financials,0
+common_features_free_k,2025-06-30,42,GFI,Basic Materials,0
+common_features_free_k,2025-06-30,42,GRT,Financials,0
+common_features_free_k,2025-06-30,42,HAR,Basic Materials,0
+common_features_free_k,2025-06-30,42,IMP,Basic Materials,0
+common_features_free_k,2025-06-30,42,INL,Financials,0
+common_features_free_k,2025-06-30,42,INP,Financials,0
+common_features_free_k,2025-06-30,42,MNP,Basic Materials,0
+common_features_free_k,2025-06-30,42,MRP,Consumer Services,0
+common_features_free_k,2025-06-30,42,MTN,Telecommunications,0
+common_features_free_k,2025-06-30,42,NED,Financials,0
+common_features_free_k,2025-06-30,42,NPH,Basic Materials,0
+common_features_free_k,2025-06-30,42,NPN,Technology,0
+common_features_free_k,2025-06-30,42,NRP,Financials,0
+common_features_free_k,2025-06-30,42,OMU,Financials,0
+common_features_free_k,2025-06-30,42,OUT,Financials,0
+common_features_free_k,2025-06-30,42,PPH,Consumer Services,0
+common_features_free_k,2025-06-30,42,PRX,Technology,0
+common_features_free_k,2025-06-30,42,REM,Financials,0
+common_features_free_k,2025-06-30,42,RNI,Financials,0
+common_features_free_k,2025-06-30,42,SBK,Financials,0
+common_features_free_k,2025-06-30,42,SHP,Consumer Services,0
+common_features_free_k,2025-06-30,42,SLM,Financials,0
+common_features_free_k,2025-06-30,42,SOL,Basic Materials,0
+common_features_free_k,2025-06-30,42,SSW,Basic Materials,1
+common_features_free_k,2025-06-30,42,VAL,Basic Materials,0
+common_features_free_k,2025-06-30,42,VOD,Telecommunications,0
+common_features_free_k,2025-06-30,42,WHL,Consumer Services,0
+common_features_free_k,2025-06-30,43,ABG,Financials,0
+common_features_free_k,2025-06-30,43,AGL,Basic Materials,0
+common_features_free_k,2025-06-30,43,ANG,Basic Materials,0
+common_features_free_k,2025-06-30,43,ANH,Consumer Goods,0
+common_features_free_k,2025-06-30,43,APN,Health Care,0
+common_features_free_k,2025-06-30,43,BHG,Basic Materials,0
+common_features_free_k,2025-06-30,43,BID,Consumer Services,0
+common_features_free_k,2025-06-30,43,BTI,Consumer Goods,0
+common_features_free_k,2025-06-30,43,BVT,Industrials,0
+common_features_free_k,2025-06-30,43,CFR,Consumer Goods,0
+common_features_free_k,2025-06-30,43,CLS,Consumer Services,0
+common_features_free_k,2025-06-30,43,CPI,Financials,0
+common_features_free_k,2025-06-30,43,DSY,Financials,0
+common_features_free_k,2025-06-30,43,FSR,Financials,0
+common_features_free_k,2025-06-30,43,GFI,Basic Materials,0
+common_features_free_k,2025-06-30,43,GRT,Financials,0
+common_features_free_k,2025-06-30,43,HAR,Basic Materials,0
+common_features_free_k,2025-06-30,43,IMP,Basic Materials,0
+common_features_free_k,2025-06-30,43,INL,Financials,0
+common_features_free_k,2025-06-30,43,INP,Financials,0
+common_features_free_k,2025-06-30,43,MNP,Basic Materials,0
+common_features_free_k,2025-06-30,43,MRP,Consumer Services,0
+common_features_free_k,2025-06-30,43,MTN,Telecommunications,0
+common_features_free_k,2025-06-30,43,NED,Financials,0
+common_features_free_k,2025-06-30,43,NPH,Basic Materials,0
+common_features_free_k,2025-06-30,43,NPN,Technology,0
+common_features_free_k,2025-06-30,43,NRP,Financials,0
+common_features_free_k,2025-06-30,43,OMU,Financials,0
+common_features_free_k,2025-06-30,43,OUT,Financials,0
+common_features_free_k,2025-06-30,43,PPH,Consumer Services,0
+common_features_free_k,2025-06-30,43,PRX,Technology,0
+common_features_free_k,2025-06-30,43,REM,Financials,0
+common_features_free_k,2025-06-30,43,RNI,Financials,0
+common_features_free_k,2025-06-30,43,SBK,Financials,0
+common_features_free_k,2025-06-30,43,SHP,Consumer Services,0
+common_features_free_k,2025-06-30,43,SLM,Financials,0
+common_features_free_k,2025-06-30,43,SOL,Basic Materials,0
+common_features_free_k,2025-06-30,43,SSW,Basic Materials,1
+common_features_free_k,2025-06-30,43,VAL,Basic Materials,0
+common_features_free_k,2025-06-30,43,VOD,Telecommunications,0
+common_features_free_k,2025-06-30,43,WHL,Consumer Services,0
+common_features_free_k,2025-06-30,44,ABG,Financials,0
+common_features_free_k,2025-06-30,44,AGL,Basic Materials,0
+common_features_free_k,2025-06-30,44,ANG,Basic Materials,0
+common_features_free_k,2025-06-30,44,ANH,Consumer Goods,0
+common_features_free_k,2025-06-30,44,APN,Health Care,0
+common_features_free_k,2025-06-30,44,BHG,Basic Materials,0
+common_features_free_k,2025-06-30,44,BID,Consumer Services,0
+common_features_free_k,2025-06-30,44,BTI,Consumer Goods,0
+common_features_free_k,2025-06-30,44,BVT,Industrials,0
+common_features_free_k,2025-06-30,44,CFR,Consumer Goods,0
+common_features_free_k,2025-06-30,44,CLS,Consumer Services,0
+common_features_free_k,2025-06-30,44,CPI,Financials,0
+common_features_free_k,2025-06-30,44,DSY,Financials,0
+common_features_free_k,2025-06-30,44,FSR,Financials,0
+common_features_free_k,2025-06-30,44,GFI,Basic Materials,0
+common_features_free_k,2025-06-30,44,GRT,Financials,0
+common_features_free_k,2025-06-30,44,HAR,Basic Materials,0
+common_features_free_k,2025-06-30,44,IMP,Basic Materials,0
+common_features_free_k,2025-06-30,44,INL,Financials,0
+common_features_free_k,2025-06-30,44,INP,Financials,0
+common_features_free_k,2025-06-30,44,MNP,Basic Materials,0
+common_features_free_k,2025-06-30,44,MRP,Consumer Services,0
+common_features_free_k,2025-06-30,44,MTN,Telecommunications,0
+common_features_free_k,2025-06-30,44,NED,Financials,0
+common_features_free_k,2025-06-30,44,NPH,Basic Materials,0
+common_features_free_k,2025-06-30,44,NPN,Technology,0
+common_features_free_k,2025-06-30,44,NRP,Financials,0
+common_features_free_k,2025-06-30,44,OMU,Financials,0
+common_features_free_k,2025-06-30,44,OUT,Financials,0
+common_features_free_k,2025-06-30,44,PPH,Consumer Services,0
+common_features_free_k,2025-06-30,44,PRX,Technology,0
+common_features_free_k,2025-06-30,44,REM,Financials,0
+common_features_free_k,2025-06-30,44,RNI,Financials,0
+common_features_free_k,2025-06-30,44,SBK,Financials,0
+common_features_free_k,2025-06-30,44,SHP,Consumer Services,0
+common_features_free_k,2025-06-30,44,SLM,Financials,0
+common_features_free_k,2025-06-30,44,SOL,Basic Materials,0
+common_features_free_k,2025-06-30,44,SSW,Basic Materials,1
+common_features_free_k,2025-06-30,44,VAL,Basic Materials,0
+common_features_free_k,2025-06-30,44,VOD,Telecommunications,0
+common_features_free_k,2025-06-30,44,WHL,Consumer Services,0
+common_features_free_k,2025-06-30,45,ABG,Financials,0
+common_features_free_k,2025-06-30,45,AGL,Basic Materials,0
+common_features_free_k,2025-06-30,45,ANG,Basic Materials,0
+common_features_free_k,2025-06-30,45,ANH,Consumer Goods,0
+common_features_free_k,2025-06-30,45,APN,Health Care,0
+common_features_free_k,2025-06-30,45,BHG,Basic Materials,0
+common_features_free_k,2025-06-30,45,BID,Consumer Services,0
+common_features_free_k,2025-06-30,45,BTI,Consumer Goods,0
+common_features_free_k,2025-06-30,45,BVT,Industrials,0
+common_features_free_k,2025-06-30,45,CFR,Consumer Goods,0
+common_features_free_k,2025-06-30,45,CLS,Consumer Services,0
+common_features_free_k,2025-06-30,45,CPI,Financials,0
+common_features_free_k,2025-06-30,45,DSY,Financials,0
+common_features_free_k,2025-06-30,45,FSR,Financials,0
+common_features_free_k,2025-06-30,45,GFI,Basic Materials,0
+common_features_free_k,2025-06-30,45,GRT,Financials,0
+common_features_free_k,2025-06-30,45,HAR,Basic Materials,0
+common_features_free_k,2025-06-30,45,IMP,Basic Materials,0
+common_features_free_k,2025-06-30,45,INL,Financials,0
+common_features_free_k,2025-06-30,45,INP,Financials,0
+common_features_free_k,2025-06-30,45,MNP,Basic Materials,0
+common_features_free_k,2025-06-30,45,MRP,Consumer Services,0
+common_features_free_k,2025-06-30,45,MTN,Telecommunications,0
+common_features_free_k,2025-06-30,45,NED,Financials,0
+common_features_free_k,2025-06-30,45,NPH,Basic Materials,0
+common_features_free_k,2025-06-30,45,NPN,Technology,0
+common_features_free_k,2025-06-30,45,NRP,Financials,0
+common_features_free_k,2025-06-30,45,OMU,Financials,0
+common_features_free_k,2025-06-30,45,OUT,Financials,0
+common_features_free_k,2025-06-30,45,PPH,Consumer Services,0
+common_features_free_k,2025-06-30,45,PRX,Technology,0
+common_features_free_k,2025-06-30,45,REM,Financials,0
+common_features_free_k,2025-06-30,45,RNI,Financials,0
+common_features_free_k,2025-06-30,45,SBK,Financials,0
+common_features_free_k,2025-06-30,45,SHP,Consumer Services,0
+common_features_free_k,2025-06-30,45,SLM,Financials,0
+common_features_free_k,2025-06-30,45,SOL,Basic Materials,0
+common_features_free_k,2025-06-30,45,SSW,Basic Materials,1
+common_features_free_k,2025-06-30,45,VAL,Basic Materials,0
+common_features_free_k,2025-06-30,45,VOD,Telecommunications,0
+common_features_free_k,2025-06-30,45,WHL,Consumer Services,0
+common_features_free_k,2025-06-30,46,ABG,Financials,0
+common_features_free_k,2025-06-30,46,AGL,Basic Materials,0
+common_features_free_k,2025-06-30,46,ANG,Basic Materials,0
+common_features_free_k,2025-06-30,46,ANH,Consumer Goods,0
+common_features_free_k,2025-06-30,46,APN,Health Care,0
+common_features_free_k,2025-06-30,46,BHG,Basic Materials,0
+common_features_free_k,2025-06-30,46,BID,Consumer Services,0
+common_features_free_k,2025-06-30,46,BTI,Consumer Goods,0
+common_features_free_k,2025-06-30,46,BVT,Industrials,0
+common_features_free_k,2025-06-30,46,CFR,Consumer Goods,0
+common_features_free_k,2025-06-30,46,CLS,Consumer Services,0
+common_features_free_k,2025-06-30,46,CPI,Financials,0
+common_features_free_k,2025-06-30,46,DSY,Financials,0
+common_features_free_k,2025-06-30,46,FSR,Financials,0
+common_features_free_k,2025-06-30,46,GFI,Basic Materials,0
+common_features_free_k,2025-06-30,46,GRT,Financials,0
+common_features_free_k,2025-06-30,46,HAR,Basic Materials,0
+common_features_free_k,2025-06-30,46,IMP,Basic Materials,0
+common_features_free_k,2025-06-30,46,INL,Financials,0
+common_features_free_k,2025-06-30,46,INP,Financials,0
+common_features_free_k,2025-06-30,46,MNP,Basic Materials,0
+common_features_free_k,2025-06-30,46,MRP,Consumer Services,0
+common_features_free_k,2025-06-30,46,MTN,Telecommunications,0
+common_features_free_k,2025-06-30,46,NED,Financials,0
+common_features_free_k,2025-06-30,46,NPH,Basic Materials,0
+common_features_free_k,2025-06-30,46,NPN,Technology,0
+common_features_free_k,2025-06-30,46,NRP,Financials,0
+common_features_free_k,2025-06-30,46,OMU,Financials,0
+common_features_free_k,2025-06-30,46,OUT,Financials,0
+common_features_free_k,2025-06-30,46,PPH,Consumer Services,0
+common_features_free_k,2025-06-30,46,PRX,Technology,0
+common_features_free_k,2025-06-30,46,REM,Financials,0
+common_features_free_k,2025-06-30,46,RNI,Financials,0
+common_features_free_k,2025-06-30,46,SBK,Financials,0
+common_features_free_k,2025-06-30,46,SHP,Consumer Services,0
+common_features_free_k,2025-06-30,46,SLM,Financials,0
+common_features_free_k,2025-06-30,46,SOL,Basic Materials,0
+common_features_free_k,2025-06-30,46,SSW,Basic Materials,1
+common_features_free_k,2025-06-30,46,VAL,Basic Materials,0
+common_features_free_k,2025-06-30,46,VOD,Telecommunications,0
+common_features_free_k,2025-06-30,46,WHL,Consumer Services,0
+common_features_free_k,2025-12-31,42,ABG,Financials,0
+common_features_free_k,2025-12-31,42,AGL,Basic Materials,0
+common_features_free_k,2025-12-31,42,ANG,Basic Materials,0
+common_features_free_k,2025-12-31,42,ANH,Consumer Goods,0
+common_features_free_k,2025-12-31,42,BHG,Basic Materials,0
+common_features_free_k,2025-12-31,42,BID,Consumer Services,0
+common_features_free_k,2025-12-31,42,BTI,Consumer Goods,0
+common_features_free_k,2025-12-31,42,BVT,Industrials,0
+common_features_free_k,2025-12-31,42,CFR,Consumer Goods,0
+common_features_free_k,2025-12-31,42,CLS,Consumer Services,0
+common_features_free_k,2025-12-31,42,CPI,Financials,0
+common_features_free_k,2025-12-31,42,DSY,Financials,0
+common_features_free_k,2025-12-31,42,FSR,Financials,0
+common_features_free_k,2025-12-31,42,GFI,Basic Materials,0
+common_features_free_k,2025-12-31,42,GLN,Basic Materials,1
+common_features_free_k,2025-12-31,42,GRT,Financials,0
+common_features_free_k,2025-12-31,42,HAR,Basic Materials,0
+common_features_free_k,2025-12-31,42,IMP,Basic Materials,0
+common_features_free_k,2025-12-31,42,INL,Financials,0
+common_features_free_k,2025-12-31,42,INP,Financials,0
+common_features_free_k,2025-12-31,42,MNP,Basic Materials,0
+common_features_free_k,2025-12-31,42,MRP,Consumer Services,0
+common_features_free_k,2025-12-31,42,MTN,Telecommunications,0
+common_features_free_k,2025-12-31,42,NED,Financials,0
+common_features_free_k,2025-12-31,42,NPH,Basic Materials,0
+common_features_free_k,2025-12-31,42,NPN,Technology,0
+common_features_free_k,2025-12-31,42,NRP,Financials,0
+common_features_free_k,2025-12-31,42,OMU,Financials,0
+common_features_free_k,2025-12-31,42,OUT,Financials,0
+common_features_free_k,2025-12-31,42,PPH,Consumer Services,0
+common_features_free_k,2025-12-31,42,PRX,Technology,0
+common_features_free_k,2025-12-31,42,REM,Financials,0
+common_features_free_k,2025-12-31,42,RNI,Financials,0
+common_features_free_k,2025-12-31,42,SBK,Financials,0
+common_features_free_k,2025-12-31,42,SHP,Consumer Services,0
+common_features_free_k,2025-12-31,42,SLM,Financials,0
+common_features_free_k,2025-12-31,42,SOL,Basic Materials,0
+common_features_free_k,2025-12-31,42,SSW,Basic Materials,0
+common_features_free_k,2025-12-31,42,VAL,Basic Materials,0
+common_features_free_k,2025-12-31,42,VOD,Telecommunications,0
+common_features_free_k,2025-12-31,42,WHL,Consumer Services,0
+common_features_free_k,2025-12-31,43,ABG,Financials,0
+common_features_free_k,2025-12-31,43,AGL,Basic Materials,0
+common_features_free_k,2025-12-31,43,ANG,Basic Materials,0
+common_features_free_k,2025-12-31,43,ANH,Consumer Goods,0
+common_features_free_k,2025-12-31,43,BHG,Basic Materials,0
+common_features_free_k,2025-12-31,43,BID,Consumer Services,0
+common_features_free_k,2025-12-31,43,BTI,Consumer Goods,0
+common_features_free_k,2025-12-31,43,BVT,Industrials,0
+common_features_free_k,2025-12-31,43,CFR,Consumer Goods,0
+common_features_free_k,2025-12-31,43,CLS,Consumer Services,0
+common_features_free_k,2025-12-31,43,CPI,Financials,0
+common_features_free_k,2025-12-31,43,DSY,Financials,0
+common_features_free_k,2025-12-31,43,FSR,Financials,0
+common_features_free_k,2025-12-31,43,GFI,Basic Materials,0
+common_features_free_k,2025-12-31,43,GLN,Basic Materials,1
+common_features_free_k,2025-12-31,43,GRT,Financials,0
+common_features_free_k,2025-12-31,43,HAR,Basic Materials,0
+common_features_free_k,2025-12-31,43,IMP,Basic Materials,0
+common_features_free_k,2025-12-31,43,INL,Financials,0
+common_features_free_k,2025-12-31,43,INP,Financials,0
+common_features_free_k,2025-12-31,43,MNP,Basic Materials,0
+common_features_free_k,2025-12-31,43,MRP,Consumer Services,0
+common_features_free_k,2025-12-31,43,MTN,Telecommunications,0
+common_features_free_k,2025-12-31,43,NED,Financials,0
+common_features_free_k,2025-12-31,43,NPH,Basic Materials,0
+common_features_free_k,2025-12-31,43,NPN,Technology,0
+common_features_free_k,2025-12-31,43,NRP,Financials,0
+common_features_free_k,2025-12-31,43,OMU,Financials,0
+common_features_free_k,2025-12-31,43,OUT,Financials,0
+common_features_free_k,2025-12-31,43,PPH,Consumer Services,0
+common_features_free_k,2025-12-31,43,PRX,Technology,0
+common_features_free_k,2025-12-31,43,REM,Financials,0
+common_features_free_k,2025-12-31,43,RNI,Financials,0
+common_features_free_k,2025-12-31,43,SBK,Financials,0
+common_features_free_k,2025-12-31,43,SHP,Consumer Services,0
+common_features_free_k,2025-12-31,43,SLM,Financials,0
+common_features_free_k,2025-12-31,43,SOL,Basic Materials,0
+common_features_free_k,2025-12-31,43,SSW,Basic Materials,0
+common_features_free_k,2025-12-31,43,VAL,Basic Materials,0
+common_features_free_k,2025-12-31,43,VOD,Telecommunications,0
+common_features_free_k,2025-12-31,43,WHL,Consumer Services,0
+common_features_free_k,2025-12-31,44,ABG,Financials,0
+common_features_free_k,2025-12-31,44,AGL,Basic Materials,0
+common_features_free_k,2025-12-31,44,ANG,Basic Materials,0
+common_features_free_k,2025-12-31,44,ANH,Consumer Goods,0
+common_features_free_k,2025-12-31,44,BHG,Basic Materials,0
+common_features_free_k,2025-12-31,44,BID,Consumer Services,0
+common_features_free_k,2025-12-31,44,BTI,Consumer Goods,0
+common_features_free_k,2025-12-31,44,BVT,Industrials,0
+common_features_free_k,2025-12-31,44,CFR,Consumer Goods,0
+common_features_free_k,2025-12-31,44,CLS,Consumer Services,0
+common_features_free_k,2025-12-31,44,CPI,Financials,0
+common_features_free_k,2025-12-31,44,DSY,Financials,0
+common_features_free_k,2025-12-31,44,FSR,Financials,0
+common_features_free_k,2025-12-31,44,GFI,Basic Materials,0
+common_features_free_k,2025-12-31,44,GLN,Basic Materials,1
+common_features_free_k,2025-12-31,44,GRT,Financials,0
+common_features_free_k,2025-12-31,44,HAR,Basic Materials,0
+common_features_free_k,2025-12-31,44,IMP,Basic Materials,0
+common_features_free_k,2025-12-31,44,INL,Financials,0
+common_features_free_k,2025-12-31,44,INP,Financials,0
+common_features_free_k,2025-12-31,44,MNP,Basic Materials,0
+common_features_free_k,2025-12-31,44,MRP,Consumer Services,0
+common_features_free_k,2025-12-31,44,MTN,Telecommunications,0
+common_features_free_k,2025-12-31,44,NED,Financials,0
+common_features_free_k,2025-12-31,44,NPH,Basic Materials,0
+common_features_free_k,2025-12-31,44,NPN,Technology,0
+common_features_free_k,2025-12-31,44,NRP,Financials,0
+common_features_free_k,2025-12-31,44,OMU,Financials,0
+common_features_free_k,2025-12-31,44,OUT,Financials,0
+common_features_free_k,2025-12-31,44,PPH,Consumer Services,0
+common_features_free_k,2025-12-31,44,PRX,Technology,0
+common_features_free_k,2025-12-31,44,REM,Financials,0
+common_features_free_k,2025-12-31,44,RNI,Financials,0
+common_features_free_k,2025-12-31,44,SBK,Financials,0
+common_features_free_k,2025-12-31,44,SHP,Consumer Services,0
+common_features_free_k,2025-12-31,44,SLM,Financials,0
+common_features_free_k,2025-12-31,44,SOL,Basic Materials,0
+common_features_free_k,2025-12-31,44,SSW,Basic Materials,0
+common_features_free_k,2025-12-31,44,VAL,Basic Materials,0
+common_features_free_k,2025-12-31,44,VOD,Telecommunications,0
+common_features_free_k,2025-12-31,44,WHL,Consumer Services,0
+common_features_free_k,2025-12-31,45,ABG,Financials,0
+common_features_free_k,2025-12-31,45,AGL,Basic Materials,0
+common_features_free_k,2025-12-31,45,ANG,Basic Materials,0
+common_features_free_k,2025-12-31,45,ANH,Consumer Goods,0
+common_features_free_k,2025-12-31,45,BHG,Basic Materials,0
+common_features_free_k,2025-12-31,45,BID,Consumer Services,0
+common_features_free_k,2025-12-31,45,BTI,Consumer Goods,0
+common_features_free_k,2025-12-31,45,BVT,Industrials,0
+common_features_free_k,2025-12-31,45,CFR,Consumer Goods,0
+common_features_free_k,2025-12-31,45,CLS,Consumer Services,0
+common_features_free_k,2025-12-31,45,CPI,Financials,0
+common_features_free_k,2025-12-31,45,DSY,Financials,0
+common_features_free_k,2025-12-31,45,FSR,Financials,0
+common_features_free_k,2025-12-31,45,GFI,Basic Materials,0
+common_features_free_k,2025-12-31,45,GLN,Basic Materials,1
+common_features_free_k,2025-12-31,45,GRT,Financials,0
+common_features_free_k,2025-12-31,45,HAR,Basic Materials,0
+common_features_free_k,2025-12-31,45,IMP,Basic Materials,0
+common_features_free_k,2025-12-31,45,INL,Financials,0
+common_features_free_k,2025-12-31,45,INP,Financials,0
+common_features_free_k,2025-12-31,45,MNP,Basic Materials,0
+common_features_free_k,2025-12-31,45,MRP,Consumer Services,0
+common_features_free_k,2025-12-31,45,MTN,Telecommunications,0
+common_features_free_k,2025-12-31,45,NED,Financials,0
+common_features_free_k,2025-12-31,45,NPH,Basic Materials,0
+common_features_free_k,2025-12-31,45,NPN,Technology,0
+common_features_free_k,2025-12-31,45,NRP,Financials,0
+common_features_free_k,2025-12-31,45,OMU,Financials,0
+common_features_free_k,2025-12-31,45,OUT,Financials,0
+common_features_free_k,2025-12-31,45,PPH,Consumer Services,0
+common_features_free_k,2025-12-31,45,PRX,Technology,0
+common_features_free_k,2025-12-31,45,REM,Financials,0
+common_features_free_k,2025-12-31,45,RNI,Financials,0
+common_features_free_k,2025-12-31,45,SBK,Financials,0
+common_features_free_k,2025-12-31,45,SHP,Consumer Services,0
+common_features_free_k,2025-12-31,45,SLM,Financials,0
+common_features_free_k,2025-12-31,45,SOL,Basic Materials,0
+common_features_free_k,2025-12-31,45,SSW,Basic Materials,0
+common_features_free_k,2025-12-31,45,VAL,Basic Materials,0
+common_features_free_k,2025-12-31,45,VOD,Telecommunications,0
+common_features_free_k,2025-12-31,45,WHL,Consumer Services,0
+common_features_free_k,2025-12-31,46,ABG,Financials,0
+common_features_free_k,2025-12-31,46,AGL,Basic Materials,0
+common_features_free_k,2025-12-31,46,ANG,Basic Materials,0
+common_features_free_k,2025-12-31,46,ANH,Consumer Goods,0
+common_features_free_k,2025-12-31,46,BHG,Basic Materials,0
+common_features_free_k,2025-12-31,46,BID,Consumer Services,0
+common_features_free_k,2025-12-31,46,BTI,Consumer Goods,0
+common_features_free_k,2025-12-31,46,BVT,Industrials,0
+common_features_free_k,2025-12-31,46,CFR,Consumer Goods,0
+common_features_free_k,2025-12-31,46,CLS,Consumer Services,0
+common_features_free_k,2025-12-31,46,CPI,Financials,0
+common_features_free_k,2025-12-31,46,DSY,Financials,0
+common_features_free_k,2025-12-31,46,FSR,Financials,0
+common_features_free_k,2025-12-31,46,GFI,Basic Materials,0
+common_features_free_k,2025-12-31,46,GLN,Basic Materials,1
+common_features_free_k,2025-12-31,46,GRT,Financials,0
+common_features_free_k,2025-12-31,46,HAR,Basic Materials,0
+common_features_free_k,2025-12-31,46,IMP,Basic Materials,0
+common_features_free_k,2025-12-31,46,INL,Financials,0
+common_features_free_k,2025-12-31,46,INP,Financials,0
+common_features_free_k,2025-12-31,46,MNP,Basic Materials,0
+common_features_free_k,2025-12-31,46,MRP,Consumer Services,0
+common_features_free_k,2025-12-31,46,MTN,Telecommunications,0
+common_features_free_k,2025-12-31,46,NED,Financials,0
+common_features_free_k,2025-12-31,46,NPH,Basic Materials,0
+common_features_free_k,2025-12-31,46,NPN,Technology,0
+common_features_free_k,2025-12-31,46,NRP,Financials,0
+common_features_free_k,2025-12-31,46,OMU,Financials,0
+common_features_free_k,2025-12-31,46,OUT,Financials,0
+common_features_free_k,2025-12-31,46,PPH,Consumer Services,0
+common_features_free_k,2025-12-31,46,PRX,Technology,0
+common_features_free_k,2025-12-31,46,REM,Financials,0
+common_features_free_k,2025-12-31,46,RNI,Financials,0
+common_features_free_k,2025-12-31,46,SBK,Financials,0
+common_features_free_k,2025-12-31,46,SHP,Consumer Services,0
+common_features_free_k,2025-12-31,46,SLM,Financials,0
+common_features_free_k,2025-12-31,46,SOL,Basic Materials,0
+common_features_free_k,2025-12-31,46,SSW,Basic Materials,0
+common_features_free_k,2025-12-31,46,VAL,Basic Materials,0
+common_features_free_k,2025-12-31,46,VOD,Telecommunications,0
+common_features_free_k,2025-12-31,46,WHL,Consumer Services,0
+common_features_free_k,2026-06-30,42,ABG,Financials,0
+common_features_free_k,2026-06-30,42,AGL,Basic Materials,0
+common_features_free_k,2026-06-30,42,ANG,Basic Materials,0
+common_features_free_k,2026-06-30,42,ANH,Consumer Goods,0
+common_features_free_k,2026-06-30,42,BHG,Basic Materials,0
+common_features_free_k,2026-06-30,42,BID,Consumer Services,0
+common_features_free_k,2026-06-30,42,BTI,Consumer Goods,0
+common_features_free_k,2026-06-30,42,BVT,Industrials,0
+common_features_free_k,2026-06-30,42,CFR,Consumer Goods,0
+common_features_free_k,2026-06-30,42,CLS,Consumer Services,0
+common_features_free_k,2026-06-30,42,CPI,Financials,0
+common_features_free_k,2026-06-30,42,DSY,Financials,0
+common_features_free_k,2026-06-30,42,FSR,Financials,0
+common_features_free_k,2026-06-30,42,GFI,Basic Materials,0
+common_features_free_k,2026-06-30,42,GLN,Basic Materials,1
+common_features_free_k,2026-06-30,42,GRT,Financials,0
+common_features_free_k,2026-06-30,42,HAR,Basic Materials,0
+common_features_free_k,2026-06-30,42,IMP,Basic Materials,0
+common_features_free_k,2026-06-30,42,INL,Financials,0
+common_features_free_k,2026-06-30,42,INP,Financials,0
+common_features_free_k,2026-06-30,42,MRP,Consumer Services,0
+common_features_free_k,2026-06-30,42,MTN,Telecommunications,0
+common_features_free_k,2026-06-30,42,NED,Financials,0
+common_features_free_k,2026-06-30,42,NPH,Basic Materials,0
+common_features_free_k,2026-06-30,42,NPN,Technology,0
+common_features_free_k,2026-06-30,42,NRP,Financials,0
+common_features_free_k,2026-06-30,42,OMU,Financials,0
+common_features_free_k,2026-06-30,42,OUT,Financials,0
+common_features_free_k,2026-06-30,42,PAN,Basic Materials,0
+common_features_free_k,2026-06-30,42,PPH,Consumer Services,0
+common_features_free_k,2026-06-30,42,PRX,Technology,0
+common_features_free_k,2026-06-30,42,REM,Financials,0
+common_features_free_k,2026-06-30,42,RNI,Financials,0
+common_features_free_k,2026-06-30,42,SBK,Financials,0
+common_features_free_k,2026-06-30,42,SHP,Consumer Services,0
+common_features_free_k,2026-06-30,42,SLM,Financials,0
+common_features_free_k,2026-06-30,42,SOL,Basic Materials,0
+common_features_free_k,2026-06-30,42,SSW,Basic Materials,0
+common_features_free_k,2026-06-30,42,VAL,Basic Materials,0
+common_features_free_k,2026-06-30,42,VOD,Telecommunications,0
+common_features_free_k,2026-06-30,42,WHL,Consumer Services,0
+common_features_free_k,2026-06-30,43,ABG,Financials,0
+common_features_free_k,2026-06-30,43,AGL,Basic Materials,0
+common_features_free_k,2026-06-30,43,ANG,Basic Materials,0
+common_features_free_k,2026-06-30,43,ANH,Consumer Goods,0
+common_features_free_k,2026-06-30,43,BHG,Basic Materials,0
+common_features_free_k,2026-06-30,43,BID,Consumer Services,0
+common_features_free_k,2026-06-30,43,BTI,Consumer Goods,0
+common_features_free_k,2026-06-30,43,BVT,Industrials,0
+common_features_free_k,2026-06-30,43,CFR,Consumer Goods,0
+common_features_free_k,2026-06-30,43,CLS,Consumer Services,0
+common_features_free_k,2026-06-30,43,CPI,Financials,0
+common_features_free_k,2026-06-30,43,DSY,Financials,0
+common_features_free_k,2026-06-30,43,FSR,Financials,0
+common_features_free_k,2026-06-30,43,GFI,Basic Materials,0
+common_features_free_k,2026-06-30,43,GLN,Basic Materials,1
+common_features_free_k,2026-06-30,43,GRT,Financials,0
+common_features_free_k,2026-06-30,43,HAR,Basic Materials,0
+common_features_free_k,2026-06-30,43,IMP,Basic Materials,0
+common_features_free_k,2026-06-30,43,INL,Financials,0
+common_features_free_k,2026-06-30,43,INP,Financials,0
+common_features_free_k,2026-06-30,43,MRP,Consumer Services,0
+common_features_free_k,2026-06-30,43,MTN,Telecommunications,0
+common_features_free_k,2026-06-30,43,NED,Financials,0
+common_features_free_k,2026-06-30,43,NPH,Basic Materials,0
+common_features_free_k,2026-06-30,43,NPN,Technology,0
+common_features_free_k,2026-06-30,43,NRP,Financials,0
+common_features_free_k,2026-06-30,43,OMU,Financials,0
+common_features_free_k,2026-06-30,43,OUT,Financials,0
+common_features_free_k,2026-06-30,43,PAN,Basic Materials,0
+common_features_free_k,2026-06-30,43,PPH,Consumer Services,0
+common_features_free_k,2026-06-30,43,PRX,Technology,0
+common_features_free_k,2026-06-30,43,REM,Financials,0
+common_features_free_k,2026-06-30,43,RNI,Financials,0
+common_features_free_k,2026-06-30,43,SBK,Financials,0
+common_features_free_k,2026-06-30,43,SHP,Consumer Services,0
+common_features_free_k,2026-06-30,43,SLM,Financials,0
+common_features_free_k,2026-06-30,43,SOL,Basic Materials,0
+common_features_free_k,2026-06-30,43,SSW,Basic Materials,0
+common_features_free_k,2026-06-30,43,VAL,Basic Materials,0
+common_features_free_k,2026-06-30,43,VOD,Telecommunications,0
+common_features_free_k,2026-06-30,43,WHL,Consumer Services,0
+common_features_free_k,2026-06-30,44,ABG,Financials,0
+common_features_free_k,2026-06-30,44,AGL,Basic Materials,0
+common_features_free_k,2026-06-30,44,ANG,Basic Materials,0
+common_features_free_k,2026-06-30,44,ANH,Consumer Goods,0
+common_features_free_k,2026-06-30,44,BHG,Basic Materials,0
+common_features_free_k,2026-06-30,44,BID,Consumer Services,0
+common_features_free_k,2026-06-30,44,BTI,Consumer Goods,0
+common_features_free_k,2026-06-30,44,BVT,Industrials,0
+common_features_free_k,2026-06-30,44,CFR,Consumer Goods,0
+common_features_free_k,2026-06-30,44,CLS,Consumer Services,0
+common_features_free_k,2026-06-30,44,CPI,Financials,0
+common_features_free_k,2026-06-30,44,DSY,Financials,0
+common_features_free_k,2026-06-30,44,FSR,Financials,0
+common_features_free_k,2026-06-30,44,GFI,Basic Materials,0
+common_features_free_k,2026-06-30,44,GLN,Basic Materials,1
+common_features_free_k,2026-06-30,44,GRT,Financials,0
+common_features_free_k,2026-06-30,44,HAR,Basic Materials,0
+common_features_free_k,2026-06-30,44,IMP,Basic Materials,0
+common_features_free_k,2026-06-30,44,INL,Financials,0
+common_features_free_k,2026-06-30,44,INP,Financials,0
+common_features_free_k,2026-06-30,44,MRP,Consumer Services,0
+common_features_free_k,2026-06-30,44,MTN,Telecommunications,0
+common_features_free_k,2026-06-30,44,NED,Financials,0
+common_features_free_k,2026-06-30,44,NPH,Basic Materials,0
+common_features_free_k,2026-06-30,44,NPN,Technology,0
+common_features_free_k,2026-06-30,44,NRP,Financials,0
+common_features_free_k,2026-06-30,44,OMU,Financials,0
+common_features_free_k,2026-06-30,44,OUT,Financials,0
+common_features_free_k,2026-06-30,44,PAN,Basic Materials,0
+common_features_free_k,2026-06-30,44,PPH,Consumer Services,0
+common_features_free_k,2026-06-30,44,PRX,Technology,0
+common_features_free_k,2026-06-30,44,REM,Financials,0
+common_features_free_k,2026-06-30,44,RNI,Financials,0
+common_features_free_k,2026-06-30,44,SBK,Financials,0
+common_features_free_k,2026-06-30,44,SHP,Consumer Services,0
+common_features_free_k,2026-06-30,44,SLM,Financials,0
+common_features_free_k,2026-06-30,44,SOL,Basic Materials,0
+common_features_free_k,2026-06-30,44,SSW,Basic Materials,0
+common_features_free_k,2026-06-30,44,VAL,Basic Materials,0
+common_features_free_k,2026-06-30,44,VOD,Telecommunications,0
+common_features_free_k,2026-06-30,44,WHL,Consumer Services,0
+common_features_free_k,2026-06-30,45,ABG,Financials,0
+common_features_free_k,2026-06-30,45,AGL,Basic Materials,0
+common_features_free_k,2026-06-30,45,ANG,Basic Materials,0
+common_features_free_k,2026-06-30,45,ANH,Consumer Goods,0
+common_features_free_k,2026-06-30,45,BHG,Basic Materials,0
+common_features_free_k,2026-06-30,45,BID,Consumer Services,0
+common_features_free_k,2026-06-30,45,BTI,Consumer Goods,0
+common_features_free_k,2026-06-30,45,BVT,Industrials,0
+common_features_free_k,2026-06-30,45,CFR,Consumer Goods,0
+common_features_free_k,2026-06-30,45,CLS,Consumer Services,0
+common_features_free_k,2026-06-30,45,CPI,Financials,0
+common_features_free_k,2026-06-30,45,DSY,Financials,0
+common_features_free_k,2026-06-30,45,FSR,Financials,0
+common_features_free_k,2026-06-30,45,GFI,Basic Materials,0
+common_features_free_k,2026-06-30,45,GLN,Basic Materials,1
+common_features_free_k,2026-06-30,45,GRT,Financials,0
+common_features_free_k,2026-06-30,45,HAR,Basic Materials,0
+common_features_free_k,2026-06-30,45,IMP,Basic Materials,0
+common_features_free_k,2026-06-30,45,INL,Financials,0
+common_features_free_k,2026-06-30,45,INP,Financials,0
+common_features_free_k,2026-06-30,45,MRP,Consumer Services,0
+common_features_free_k,2026-06-30,45,MTN,Telecommunications,0
+common_features_free_k,2026-06-30,45,NED,Financials,0
+common_features_free_k,2026-06-30,45,NPH,Basic Materials,0
+common_features_free_k,2026-06-30,45,NPN,Technology,0
+common_features_free_k,2026-06-30,45,NRP,Financials,0
+common_features_free_k,2026-06-30,45,OMU,Financials,0
+common_features_free_k,2026-06-30,45,OUT,Financials,0
+common_features_free_k,2026-06-30,45,PAN,Basic Materials,0
+common_features_free_k,2026-06-30,45,PPH,Consumer Services,0
+common_features_free_k,2026-06-30,45,PRX,Technology,0
+common_features_free_k,2026-06-30,45,REM,Financials,0
+common_features_free_k,2026-06-30,45,RNI,Financials,0
+common_features_free_k,2026-06-30,45,SBK,Financials,0
+common_features_free_k,2026-06-30,45,SHP,Consumer Services,0
+common_features_free_k,2026-06-30,45,SLM,Financials,0
+common_features_free_k,2026-06-30,45,SOL,Basic Materials,0
+common_features_free_k,2026-06-30,45,SSW,Basic Materials,0
+common_features_free_k,2026-06-30,45,VAL,Basic Materials,0
+common_features_free_k,2026-06-30,45,VOD,Telecommunications,0
+common_features_free_k,2026-06-30,45,WHL,Consumer Services,0
+common_features_free_k,2026-06-30,46,ABG,Financials,0
+common_features_free_k,2026-06-30,46,AGL,Basic Materials,0
+common_features_free_k,2026-06-30,46,ANG,Basic Materials,0
+common_features_free_k,2026-06-30,46,ANH,Consumer Goods,0
+common_features_free_k,2026-06-30,46,BHG,Basic Materials,0
+common_features_free_k,2026-06-30,46,BID,Consumer Services,0
+common_features_free_k,2026-06-30,46,BTI,Consumer Goods,0
+common_features_free_k,2026-06-30,46,BVT,Industrials,0
+common_features_free_k,2026-06-30,46,CFR,Consumer Goods,0
+common_features_free_k,2026-06-30,46,CLS,Consumer Services,0
+common_features_free_k,2026-06-30,46,CPI,Financials,0
+common_features_free_k,2026-06-30,46,DSY,Financials,0
+common_features_free_k,2026-06-30,46,FSR,Financials,0
+common_features_free_k,2026-06-30,46,GFI,Basic Materials,0
+common_features_free_k,2026-06-30,46,GLN,Basic Materials,1
+common_features_free_k,2026-06-30,46,GRT,Financials,0
+common_features_free_k,2026-06-30,46,HAR,Basic Materials,0
+common_features_free_k,2026-06-30,46,IMP,Basic Materials,0
+common_features_free_k,2026-06-30,46,INL,Financials,0
+common_features_free_k,2026-06-30,46,INP,Financials,0
+common_features_free_k,2026-06-30,46,MRP,Consumer Services,0
+common_features_free_k,2026-06-30,46,MTN,Telecommunications,0
+common_features_free_k,2026-06-30,46,NED,Financials,0
+common_features_free_k,2026-06-30,46,NPH,Basic Materials,0
+common_features_free_k,2026-06-30,46,NPN,Technology,0
+common_features_free_k,2026-06-30,46,NRP,Financials,0
+common_features_free_k,2026-06-30,46,OMU,Financials,0
+common_features_free_k,2026-06-30,46,OUT,Financials,0
+common_features_free_k,2026-06-30,46,PAN,Basic Materials,0
+common_features_free_k,2026-06-30,46,PPH,Consumer Services,0
+common_features_free_k,2026-06-30,46,PRX,Technology,0
+common_features_free_k,2026-06-30,46,REM,Financials,0
+common_features_free_k,2026-06-30,46,RNI,Financials,0
+common_features_free_k,2026-06-30,46,SBK,Financials,0
+common_features_free_k,2026-06-30,46,SHP,Consumer Services,0
+common_features_free_k,2026-06-30,46,SLM,Financials,0
+common_features_free_k,2026-06-30,46,SOL,Basic Materials,0
+common_features_free_k,2026-06-30,46,SSW,Basic Materials,0
+common_features_free_k,2026-06-30,46,VAL,Basic Materials,0
+common_features_free_k,2026-06-30,46,VOD,Telecommunications,0
+common_features_free_k,2026-06-30,46,WHL,Consumer Services,0

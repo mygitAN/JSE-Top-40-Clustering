@@ -1,0 +1,71 @@
+{
+  "configuration_count": 1426,
+  "selection_fits": 7130,
+  "pairwise_seed_comparisons": 14260,
+  "followup_fits": 60,
+  "selection_date": "2025-06-30",
+  "selections": {
+    "baseline": "c_feaf4c24b15c65ad",
+    "paper_style_k8": "c_7b5f706e63f1d7c6",
+    "common_features_k8": "c_073540362ecaaa17",
+    "common_features_free_k": "c_e0d5d057a79b2870"
+  },
+  "validation": {
+    "derived_constants": {
+      "volume": 1534909.228915663,
+      "revenue": 98244535964.16383,
+      "eps": 12.7715,
+      "earnings_yield": 0.051361404520658835,
+      "lower": -0.5889019129867248,
+      "upper": 0.14636747615529913
+    },
+    "workbook_reconciled": true
+  },
+  "scaling_fit_on": "2025-06-30",
+  "features": [
+    "return_1y",
+    "average_daily_volume_1y_model",
+    "market_cap_zar",
+    "beta_1y",
+    "shares_outstanding",
+    "revenue_zar_model",
+    "eps_zar_model",
+    "annualised_volatility_1y",
+    "dividend_yield",
+    "earnings_yield_model_clipped"
+  ],
+  "scaler_min": [
+    -0.4878487848784878,
+    168133.2289156627,
+    45447156720.81,
+    -0.1264415552843601,
+    115822554.0,
+    14401000000.0,
+    -69.94,
+    0.1614513320132679,
+    0.0,
+    -0.5889019129867248
+  ],
+  "scaler_max": [
+    0.750908890602622,
+    17620954.96787149,
+    2407281215110.81,
+    2.386626480843885,
+    5594357851.0,
+    1062824969965.8704,
+    529.385279010239,
+    0.6100828187958385,
+    0.0907871594690691,
+    0.1463674761552991
+  ],
+  "runtime_seconds": 236.68700000003446,
+  "promotion": false,
+  "quality_geometry": "Euclidean silhouette and centroid DB in embedding and common June-scaled features",
+  "warnings": [
+    "Finite-grid exploratory optimum, not a global optimum",
+    "Later dates were previously examined and are descriptive follow-ups",
+    "PCA95 score space may have more than two dimensions",
+    "Sectors excluded from selection; reconstruction evidence limits unchanged",
+    "SHAP fitted only for the two selected eight-cluster scenarios, seed 42"
+  ]
+}

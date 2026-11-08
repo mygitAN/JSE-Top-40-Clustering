@@ -1,0 +1,26 @@
+PASS: 123 rows; 41 per date; 43 tickers; 3 RNI rows retained; 2 volume imputations; model features complete.
+Selection representation 1/23: pca {'n_components': 2, 'svd_solver': 'full'}
+Selection representation 2/23: pca {'n_components': 0.95, 'svd_solver': 'full'}
+Selection representation 3/23: tsne {'n_components': 2, 'perplexity': 5, 'learning_rate': 10, 'max_iter': 300, 'init': 'random', 'n_jobs': 1}
+Selection representation 4/23: tsne {'n_components': 2, 'perplexity': 5, 'learning_rate': 10, 'max_iter': 1000, 'init': 'random', 'n_jobs': 1}
+Selection representation 5/23: tsne {'n_components': 2, 'perplexity': 5, 'learning_rate': 'auto', 'max_iter': 300, 'init': 'random', 'n_jobs': 1}
+Selection representation 6/23: tsne {'n_components': 2, 'perplexity': 5, 'learning_rate': 'auto', 'max_iter': 1000, 'init': 'random', 'n_jobs': 1}
+Selection representation 7/23: tsne {'n_components': 2, 'perplexity': 10, 'learning_rate': 10, 'max_iter': 300, 'init': 'random', 'n_jobs': 1}
+Selection representation 8/23: tsne {'n_components': 2, 'perplexity': 10, 'learning_rate': 10, 'max_iter': 1000, 'init': 'random', 'n_jobs': 1}
+Selection representation 9/23: tsne {'n_components': 2, 'perplexity': 10, 'learning_rate': 'auto', 'max_iter': 300, 'init': 'random', 'n_jobs': 1}
+Selection representation 10/23: tsne {'n_components': 2, 'perplexity': 10, 'learning_rate': 'auto', 'max_iter': 1000, 'init': 'random', 'n_jobs': 1}
+Selection representation 11/23: tsne {'n_components': 2, 'perplexity': 20, 'learning_rate': 10, 'max_iter': 300, 'init': 'random', 'n_jobs': 1}
+Selection representation 12/23: tsne {'n_components': 2, 'perplexity': 20, 'learning_rate': 10, 'max_iter': 1000, 'init': 'random', 'n_jobs': 1}
+Selection representation 13/23: tsne {'n_components': 2, 'perplexity': 20, 'learning_rate': 'auto', 'max_iter': 300, 'init': 'random', 'n_jobs': 1}
+Selection representation 14/23: tsne {'n_components': 2, 'perplexity': 20, 'learning_rate': 'auto', 'max_iter': 1000, 'init': 'random', 'n_jobs': 1}
+Selection representation 15/23: umap {'n_components': 2, 'n_neighbors': 5, 'min_dist': 0.0, 'n_jobs': 1}
+Selection representation 16/23: umap {'n_components': 2, 'n_neighbors': 5, 'min_dist': 0.1, 'n_jobs': 1}
+Selection representation 17/23: umap {'n_components': 2, 'n_neighbors': 5, 'min_dist': 0.5, 'n_jobs': 1}
+Selection representation 18/23: umap {'n_components': 2, 'n_neighbors': 10, 'min_dist': 0.0, 'n_jobs': 1}
+Selection representation 19/23: umap {'n_components': 2, 'n_neighbors': 10, 'min_dist': 0.1, 'n_jobs': 1}
+Selection representation 20/23: umap {'n_components': 2, 'n_neighbors': 10, 'min_dist': 0.5, 'n_jobs': 1}
+Selection representation 21/23: umap {'n_components': 2, 'n_neighbors': 20, 'min_dist': 0.0, 'n_jobs': 1}
+Selection representation 22/23: umap {'n_components': 2, 'n_neighbors': 20, 'min_dist': 0.1, 'n_jobs': 1}
+Selection representation 23/23: umap {'n_components': 2, 'n_neighbors': 20, 'min_dist': 0.5, 'n_jobs': 1}
+Computing all pairwise seed ARI/NMI
+Selections frozen on June 2025; refitting selected models at each date
