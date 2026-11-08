@@ -1,0 +1,40 @@
+ticker,2025-06-30,2025-12-31,2026-06-30,status
+BID,0,0,0,stable all dates
+BVT,0,0,0,stable all dates
+SHP,0,0,0,stable all dates
+WHL,0,0,8,shifted at least once
+AGL,0,2,6,shifted at least once
+SOL,0,2,6,shifted at least once
+MRP,0,8,8,shifted at least once
+INL,1,1,1,stable all dates
+INP,1,1,1,stable all dates
+NED,1,1,1,stable all dates
+NRP,1,1,1,stable all dates
+VAL,1,5,5,shifted at least once
+ABG,1,6,1,shifted at least once
+SBK,1,6,6,shifted at least once
+SLM,1,6,6,shifted at least once
+CLS,2,0,8,shifted at least once
+CPI,2,2,0,shifted at least once
+REM,2,2,0,shifted at least once
+NPN,2,2,2,stable all dates
+RNI,2,2,8,shifted at least once
+FSR,3,3,3,stable all dates
+OMU,3,3,3,stable all dates
+GRT,3,6,3,shifted at least once
+PRX,4,4,2,shifted at least once
+ANH,4,4,4,stable all dates
+BHG,4,4,4,stable all dates
+BTI,4,4,4,stable all dates
+CFR,4,4,4,stable all dates
+ANG,5,5,5,stable all dates
+GFI,5,5,5,stable all dates
+HAR,5,5,5,stable all dates
+DSY,6,2,0,shifted at least once
+PPH,6,3,3,shifted at least once
+MTN,6,6,6,stable all dates
+OUT,6,6,6,stable all dates
+VOD,6,6,6,stable all dates
+IMP,7,5,5,shifted at least once
+NPH,7,5,5,shifted at least once
+SSW,7,5,5,shifted at least once

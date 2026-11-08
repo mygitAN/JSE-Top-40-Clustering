@@ -26,6 +26,19 @@ def validate_study_outputs(out, config):
                 'cluster_map.png', 'feature_profile.png', 'dendrogram.png', 'shap_global.png',
                 'shap_distribution.png', 'shap_values.npz', 'surrogate_fidelity.json',
                 'shap_by_cluster.csv', 'shap_univariate_comparison.csv']]
+    if config.get('reporting_enrichment_version'):
+        required += ['longitudinal_summary.csv']
+        for name in model_folders:
+            required += [f'longitudinal/{name}/{filename}' for filename in [
+                'cluster_histories.png', 'jaccard_heatmaps.png', 'movement_counts_heatmaps.png',
+                'company_cluster_histories.csv', 'jaccard_alignment.csv', 'pair_summary.csv',
+                'stable_instruments.csv', 'shifted_instruments.csv', 'membership_transitions.csv',
+                'alignment_objective_sensitivity.csv', 'sector_and_screen_diagnostics.csv']]
+    if config.get('reporting_enrichment_version'):
+        for name in model_folders:
+            for before, after in zip(config['dates'], config['dates'][1:]):
+                required += [f'longitudinal/{name}/jaccard_{before}_{after}.csv',
+                             f'longitudinal/{name}/movement_counts_{before}_{after}.csv']
     for relative in required:
         if not (out/relative).is_file():
             raise ValueError(f'Missing required study artifact: {relative}')
@@ -120,5 +133,15 @@ def write_study_summary(study):
               'historical inputs or guarantee publication readiness. Archived shares/capitalisation, sector history '
               'and daily vendor-series evidence remain unresolved. Analyst recommendations are not invented. '
               'The ten-feature variant and historical baseline remain distinct from the original eleven-feature experiment. '
-              'No Hotelling cutoff or temporal outlier taxonomy is invented in this workflow.']
+              'Additional descriptive geometric references, when enabled, are separate from cluster SHAP and do not confirm outliers.']
+    if study.config.get('reporting_enrichment_version'):
+        lines += ['', '## Additional longitudinal reporting', '',
+            '`longitudinal_summary.csv` and `longitudinal/<model>/` add instrument histories, stable/shifted lists, '
+            'actual 0-1 Jaccard overlap heatmaps and separately labelled instrument-movement counts. '
+            'The original fixed models and maximum-overlap transition outputs remain unchanged. '
+            'Jaccard uses continuing instruments; empty unions are NA and entries/exits are separate. '
+            '`sector_and_screen_diagnostics.csv` keeps singleton, leave-one-out sector context and individual '
+            'Mahalanobis/F-reference candidates separate, with seed support and an internal-Beta sensitivity. '
+            'The F reference is descriptive, not an individually calibrated significance test on learned coordinates. '
+            'Missing/singular screens remain undefined; no new outlier-history taxonomy is introduced.']
     (study.out/'study_summary.md').write_text('\n'.join(lines)+'\n', encoding='utf-8')

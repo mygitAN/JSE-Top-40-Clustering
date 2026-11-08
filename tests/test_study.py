@@ -15,17 +15,27 @@ from study_reporting import validate_study_outputs
 
 
 class StudyTests(unittest.TestCase):
-    def test_clean_notebook_cells_have_valid_python(self):
+    def test_notebook_python_and_explicit_saved_previews(self):
         import ast
         notebook = json.loads((ROOT/'notebooks/three_cross_section_study.ipynb').read_text(encoding='utf-8'))
         self.assertEqual(notebook['nbformat'], 4)
         code_cells = [cell for cell in notebook['cells'] if cell['cell_type'] == 'code']
-        self.assertEqual(len(code_cells), 11)
+        self.assertEqual(len(code_cells), 12)
         for cell in code_cells:
             source = ''.join(cell['source']) if isinstance(cell['source'], list) else cell['source']
             ast.parse(source)
-            self.assertEqual(cell['outputs'], [])
-            self.assertIsNone(cell['execution_count'])
+            if cell.get('metadata', {}).get('saved_preview_source'):
+                import base64
+                source_run = ROOT / cell['metadata']['saved_preview_source']
+                self.assertTrue((source_run / 'COMPLETED').is_file())
+                self.assertEqual(len(cell['outputs']), 2)
+                for output in cell['outputs']:
+                    self.assertEqual(output['output_type'], 'display_data')
+                    png = base64.b64decode(output['data']['image/png'])
+                    self.assertTrue(png.startswith(b'\x89PNG\r\n\x1a\n'))
+            else:
+                self.assertEqual(cell['outputs'], [])
+                self.assertIsNone(cell['execution_count'])
 
     def test_eda_population_missingness_and_evidence(self):
         frame = pd.read_csv(ROOT/'data/processed/Top40_Retrospective_Model_Inputs_v1.csv')

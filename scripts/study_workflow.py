@@ -19,6 +19,7 @@ class StudySession:
         for key, value in [('seed', seed), ('stability_runs', stability_runs), ('include_umap_sensitivity', include_umap)]:
             if value is not None:
                 self.config[key] = value
+        self.config['reporting_enrichment_version'] = 1
         if self.config['stability_runs'] < 2:
             raise ValueError('Use at least two distinct seeds for stability diagnostics')
         if self.config['dates'] != ['2025-06-30', '2025-12-31', '2026-06-30']:
@@ -273,6 +274,12 @@ class StudySession:
                 table = pd.read_csv(folder/'temporal_agreement.csv')
                 table.insert(0, 'study_model', name)
                 comparisons.append(table)
+            from study_enrichment import enrich_model
+            enriched = []
+            for name, assignments in self.assignments.items():
+                enriched.append(enrich_model(assignments, self.model_folders[name], self.config['dates'],
+                    self.out/'longitudinal'/name, name, self.config['seed'], self.config['stability_runs']))
+            pd.DataFrame(enriched).to_csv(self.out/'longitudinal_summary.csv', index=False)
             self.temporal = pd.concat(comparisons, ignore_index=True)
             self.temporal.to_csv(self.out/'temporal_agreement.csv', index=False)
             self.eda['presence'].assign(observed_all_three=self.eda['presence'].all(axis=1)).to_csv(
