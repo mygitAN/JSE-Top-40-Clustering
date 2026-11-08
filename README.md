@@ -2,6 +2,27 @@
 
 Clustering research using historical FTSE/JSE Top 40 cross-sections.
 
+## Run the analysis
+
+Use Python 3.12 in VS Code or a terminal:
+
+```bash
+python -m venv .venv
+# Activate .venv (Windows: .venv\Scripts\activate; macOS/Linux: source .venv/bin/activate)
+python -m pip install -r requirements.txt
+python scripts/validate_data.py
+python -m unittest discover -s tests -v
+python scripts/run_analysis.py
+```
+
+Outputs go to `outputs/three_cross_sections/`: three sets of cluster plots,
+SHAP plots and values, model comparisons, cluster profiles, seed stability,
+cluster-count sensitivity, and membership-aware temporal comparisons. Choose
+a new `--output` folder for another run. See [analysis method](docs/analysis_method.md)
+for recovered historical settings, explicit new implementation choices, and
+interpretation limits. The primary baseline is t-SNE + hierarchical clustering,
+with sector held out for external comparison.
+
 ## Data
 
 - 30 June 2025, 31 December 2025 and 30 June 2026.
@@ -24,7 +45,7 @@ Membership changes are index entries/exits, not ordinary cluster transitions: NP
 
 Reinet remains in all snapshots. Its unresolved raw fundamentals stay blank. Training medians populate separate model columns and are flagged with `fundamentals_imputed`. The two missing AGL volume observations are imputed and marked `volume_imputed`. Imputed earnings yield is not an accounting identity with separately imputed EPS; do not interpret either as reported company data.
 
-Earnings yield replaces P/E for modelling. Imputation and 1st/99th percentile clipping were fitted on June 2025 only. The supplied train/validation/test date labels are a starting configuration, not evidence that three cross-sections establish robust out-of-sample performance. Encode sector categorically and fit any scaler on training data only. Keep identifiers, evidence fields, dates and raw alternatives out of the numeric feature matrix. Examine sensitivity to imputation, correlated size features, sector inclusion and extreme observations before interpreting clusters.
+Earnings yield replaces P/E for modelling. Imputation and 1st/99th percentile clipping were fitted on June 2025 only. The supplied train/validation/test labels do not make independently refitted cross-sections an out-of-sample prediction test. The baseline holds sector out for external interpretation; it is not an ordinal numeric input. Scaling is fitted on June 2025 only. Keep identifiers, evidence fields, dates and raw alternatives out of the numeric feature matrix. Examine sensitivity to imputation, correlated size features and extreme observations before interpreting clusters.
 
 ## Validate
 
