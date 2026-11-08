@@ -1,0 +1,348 @@
+{
+  "repository": "https://github.com/mygitAN/JSE-Top-40-Clustering",
+  "branch": "research/reproducible-review",
+  "pull_request": "https://github.com/mygitAN/JSE-Top-40-Clustering/pull/1",
+  "results_commit": "65f121fb944e406896ff0172b630597e9b7af7ea",
+  "retention": "Complete bundles stored in Git history; no dependency on expiring Actions artifacts",
+  "reviewer_guide": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/e0d57e01e2429b9ecb4890378f3340d2a0616199/reports/reviewer_guide.md",
+  "registry": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/e0d57e01e2429b9ecb4890378f3340d2a0616199/experiments/registry.csv",
+  "bundles": [
+    {
+      "run_id": "audit-full-42",
+      "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/tree/65f121fb944e406896ff0172b630597e9b7af7ea/experiments/runs/audit-full-42"
+    },
+    {
+      "run_id": "final-full-42",
+      "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/tree/65f121fb944e406896ff0172b630597e9b7af7ea/experiments/runs/final-full-42"
+    },
+    {
+      "run_id": "repeat-full-42",
+      "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/tree/65f121fb944e406896ff0172b630597e9b7af7ea/experiments/runs/repeat-full-42"
+    },
+    {
+      "run_id": "tracker-check-42",
+      "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/tree/ad0ab73c1461d650b2baaae5b2943225df5663bc/experiments/runs/tracker-check-42"
+    },
+    {
+      "run_id": "orion-report-01",
+      "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/tree/ededd0106c75c61f2fb5fe4c769be1d98c6e17b3/experiments/runs/orion-report-01"
+    },
+    {
+      "run_id": "user-full-20261108",
+      "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/tree/febe3b2694502378c0c1d057aab34ec8854b00ff/experiments/runs/user-full-20261108"
+    },
+    {
+      "run_id": "user-orion-20261108",
+      "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/tree/febe3b2694502378c0c1d057aab34ec8854b00ff/experiments/runs/user-orion-20261108"
+    },
+    {
+      "run_id": "silhouette-db-search-01",
+      "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/tree/febe3b2694502378c0c1d057aab34ec8854b00ff/experiments/runs/silhouette-db-search-01"
+    },
+    {
+      "run_id": "user-umap-grid-01",
+      "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/tree/4f210ac6f2d950f9034a3e86e099e5852d73f886/experiments/runs/user-umap-grid-01"
+    },
+    {
+      "run_id": "fixed-umap-001-01",
+      "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/tree/ca36b3b07cd0d9d02654deaff31dfbf54cd2b355/experiments/runs/fixed-umap-001-01"
+    },
+    {
+      "run_id": "three-cross-section-study-01",
+      "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/tree/51d7862b140183dcf1e54d40a4266f44dffa5b01/experiments/runs/three-cross-section-study-01"
+    },
+    {
+      "run_id": "three-cross-section-study-02",
+      "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/tree/51d7862b140183dcf1e54d40a4266f44dffa5b01/experiments/runs/three-cross-section-study-02"
+    },
+    {
+      "run_id": "three-cross-section-cli-check-01",
+      "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/tree/51d7862b140183dcf1e54d40a4266f44dffa5b01/experiments/runs/three-cross-section-cli-check-01"
+    },
+    {
+      "run_id": "three-cross-section-k8-01",
+      "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/tree/51d7862b140183dcf1e54d40a4266f44dffa5b01/experiments/runs/three-cross-section-k8-01"
+    },
+    {
+      "run_id": "three-cross-section-population-clarified-01",
+      "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/tree/25567135cd36b0764845b1de02211df0443ddee7/experiments/runs/three-cross-section-population-clarified-01"
+    },
+    {
+      "run_id": "three-cross-section-population-clarified-02",
+      "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/tree/25567135cd36b0764845b1de02211df0443ddee7/experiments/runs/three-cross-section-population-clarified-02"
+    },
+    {
+      "run_id": "paper-exhaustive-k8-01",
+      "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/tree/e0d57e01e2429b9ecb4890378f3340d2a0616199/experiments/runs/paper-exhaustive-k8-01"
+    },
+    {
+      "run_id": "anomaly-dynamics-report-v2-01",
+      "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/tree/d1321d88bb2f7029b41dccd7e6d99f75429dc9c8/experiments/runs/anomaly-dynamics-report-v2-01"
+    },
+    {
+      "run_id": "peer-cluster-review-01",
+      "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/tree/07c5a7a34f243849f576821186fa855951071865/experiments/runs/peer-cluster-review-01"
+    }
+  ],
+  "remote_reads": [
+    {
+      "run_id": "audit-full-42",
+      "file": "artifact_checksums.json",
+      "git_blob_sha": "0701569a1c025b29b7496706014ef9c19ada96fa",
+      "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/65f121fb944e406896ff0172b630597e9b7af7ea/experiments/runs/audit-full-42/artifact_checksums.json"
+    },
+    {
+      "run_id": "audit-full-42",
+      "file": "COMPLETED",
+      "git_blob_sha": "353e321853c0adbad3c33b3a53f74e8825b6e550",
+      "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/65f121fb944e406896ff0172b630597e9b7af7ea/experiments/runs/audit-full-42/COMPLETED"
+    },
+    {
+      "run_id": "final-full-42",
+      "file": "artifact_checksums.json",
+      "git_blob_sha": "8f60daa0dd1ce1ed3e0b943f33161bbd37a4c242",
+      "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/65f121fb944e406896ff0172b630597e9b7af7ea/experiments/runs/final-full-42/artifact_checksums.json"
+    },
+    {
+      "run_id": "final-full-42",
+      "file": "COMPLETED",
+      "git_blob_sha": "9e4490a6787c9abc0baa2edeea80fbc60da0ff3d",
+      "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/65f121fb944e406896ff0172b630597e9b7af7ea/experiments/runs/final-full-42/COMPLETED"
+    },
+    {
+      "run_id": "repeat-full-42",
+      "file": "artifact_checksums.json",
+      "git_blob_sha": "d843fa63aeb6ecf3210069a87d64164ebccae6c4",
+      "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/65f121fb944e406896ff0172b630597e9b7af7ea/experiments/runs/repeat-full-42/artifact_checksums.json"
+    },
+    {
+      "run_id": "repeat-full-42",
+      "file": "COMPLETED",
+      "git_blob_sha": "e2535ee0934996a7bb62e5960bae2c4e07321ee3",
+      "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/65f121fb944e406896ff0172b630597e9b7af7ea/experiments/runs/repeat-full-42/COMPLETED"
+    },
+    {
+      "run_id": "tracker-check-42",
+      "file": "artifact_checksums.json",
+      "git_blob_sha": "8379fad6e9c0a08eb6303b3be35e0dec92aa1f58",
+      "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/ad0ab73c1461d650b2baaae5b2943225df5663bc/experiments/runs/tracker-check-42/artifact_checksums.json"
+    },
+    {
+      "run_id": "tracker-check-42",
+      "file": "COMPLETED",
+      "git_blob_sha": "7368c7c76b5bffe4361c9c7c7f1aa1aa4f48d4f1",
+      "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/ad0ab73c1461d650b2baaae5b2943225df5663bc/experiments/runs/tracker-check-42/COMPLETED"
+    },
+    {
+      "run_id": "orion-report-01",
+      "file": "artifact_checksums.json",
+      "git_blob_sha": "fa2821ccbf22b98ee80e1730b89d176be2330ea3",
+      "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/ededd0106c75c61f2fb5fe4c769be1d98c6e17b3/experiments/runs/orion-report-01/artifact_checksums.json"
+    },
+    {
+      "run_id": "orion-report-01",
+      "file": "COMPLETED",
+      "git_blob_sha": "3c554dbc606fedfdf5bb724b9c13b3a132018fab",
+      "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/ededd0106c75c61f2fb5fe4c769be1d98c6e17b3/experiments/runs/orion-report-01/COMPLETED"
+    },
+    {
+      "run_id": "user-full-20261108",
+      "file": "artifact_checksums.json",
+      "git_blob_sha": "cf77e387eb7f72f914eb95e50bd7241e4541c681",
+      "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/febe3b2694502378c0c1d057aab34ec8854b00ff/experiments/runs/user-full-20261108/artifact_checksums.json"
+    },
+    {
+      "run_id": "user-full-20261108",
+      "file": "COMPLETED",
+      "git_blob_sha": "9ddf32aa76707fe8af4934a99b441759e134d49e",
+      "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/febe3b2694502378c0c1d057aab34ec8854b00ff/experiments/runs/user-full-20261108/COMPLETED"
+    },
+    {
+      "run_id": "user-orion-20261108",
+      "file": "artifact_checksums.json",
+      "git_blob_sha": "dab7f7cbfbeeaf7847012ae463b3cb43c74818a3",
+      "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/febe3b2694502378c0c1d057aab34ec8854b00ff/experiments/runs/user-orion-20261108/artifact_checksums.json"
+    },
+    {
+      "run_id": "user-orion-20261108",
+      "file": "COMPLETED",
+      "git_blob_sha": "4ce8e039f80dfc7d7f3235c49a2080e2e6303ed6",
+      "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/febe3b2694502378c0c1d057aab34ec8854b00ff/experiments/runs/user-orion-20261108/COMPLETED"
+    },
+    {
+      "run_id": "silhouette-db-search-01",
+      "file": "artifact_checksums.json",
+      "git_blob_sha": "d979ad1f8b011c3895f210e097fca5a216e96e1e",
+      "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/febe3b2694502378c0c1d057aab34ec8854b00ff/experiments/runs/silhouette-db-search-01/artifact_checksums.json"
+    },
+    {
+      "run_id": "silhouette-db-search-01",
+      "file": "COMPLETED",
+      "git_blob_sha": "a945189ce64707e9e949ea038d94bed2045c50c0",
+      "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/febe3b2694502378c0c1d057aab34ec8854b00ff/experiments/runs/silhouette-db-search-01/COMPLETED"
+    },
+    {
+      "run_id": "user-umap-grid-01",
+      "file": "artifact_checksums.json",
+      "git_blob_sha": "ef25c83ebf8b215c6fe9863340048d6e530aac6a",
+      "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/4f210ac6f2d950f9034a3e86e099e5852d73f886/experiments/runs/user-umap-grid-01/artifact_checksums.json"
+    },
+    {
+      "run_id": "user-umap-grid-01",
+      "file": "COMPLETED",
+      "git_blob_sha": "5e3dfe257311a890280da51775ea4d33cb5f4139",
+      "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/4f210ac6f2d950f9034a3e86e099e5852d73f886/experiments/runs/user-umap-grid-01/COMPLETED"
+    },
+    {
+      "run_id": "fixed-umap-001-01",
+      "file": "artifact_checksums.json",
+      "git_blob_sha": "aa7a827066733ee54954c7e94b4c206fac911fc2",
+      "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/ca36b3b07cd0d9d02654deaff31dfbf54cd2b355/experiments/runs/fixed-umap-001-01/artifact_checksums.json"
+    },
+    {
+      "run_id": "fixed-umap-001-01",
+      "file": "COMPLETED",
+      "git_blob_sha": "8c4c6c2bd0833cba40f390cc86f5d59ba7abfbbc",
+      "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/ca36b3b07cd0d9d02654deaff31dfbf54cd2b355/experiments/runs/fixed-umap-001-01/COMPLETED"
+    },
+    {
+      "run_id": "three-cross-section-study-01",
+      "file": "artifact_checksums.json",
+      "git_blob_sha": "986270a60c1a203ad2e76259039f4650b0590cac",
+      "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/51d7862b140183dcf1e54d40a4266f44dffa5b01/experiments/runs/three-cross-section-study-01/artifact_checksums.json"
+    },
+    {
+      "run_id": "three-cross-section-study-01",
+      "file": "COMPLETED",
+      "git_blob_sha": "ca5207271b1d1db98cdc194f2939f17cc266c611",
+      "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/51d7862b140183dcf1e54d40a4266f44dffa5b01/experiments/runs/three-cross-section-study-01/COMPLETED"
+    },
+    {
+      "run_id": "three-cross-section-study-02",
+      "file": "artifact_checksums.json",
+      "git_blob_sha": "8504c6dc7a85de34d938ac5d26251d20c5aa4846",
+      "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/51d7862b140183dcf1e54d40a4266f44dffa5b01/experiments/runs/three-cross-section-study-02/artifact_checksums.json"
+    },
+    {
+      "run_id": "three-cross-section-study-02",
+      "file": "COMPLETED",
+      "git_blob_sha": "19571bff795eb225c0d4ba35aae6bc41a023e76e",
+      "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/51d7862b140183dcf1e54d40a4266f44dffa5b01/experiments/runs/three-cross-section-study-02/COMPLETED"
+    },
+    {
+      "run_id": "three-cross-section-cli-check-01",
+      "file": "artifact_checksums.json",
+      "git_blob_sha": "f23f33547e0fd3ed014cbb9123f5bd2d576e19b1",
+      "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/51d7862b140183dcf1e54d40a4266f44dffa5b01/experiments/runs/three-cross-section-cli-check-01/artifact_checksums.json"
+    },
+    {
+      "run_id": "three-cross-section-cli-check-01",
+      "file": "COMPLETED",
+      "git_blob_sha": "31e32b129313c836059aa5d79e3df7ad565ef254",
+      "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/51d7862b140183dcf1e54d40a4266f44dffa5b01/experiments/runs/three-cross-section-cli-check-01/COMPLETED"
+    },
+    {
+      "run_id": "three-cross-section-k8-01",
+      "file": "artifact_checksums.json",
+      "git_blob_sha": "e794f58d934bed5782c043b6f4c26c3a7e2812af",
+      "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/51d7862b140183dcf1e54d40a4266f44dffa5b01/experiments/runs/three-cross-section-k8-01/artifact_checksums.json"
+    },
+    {
+      "run_id": "three-cross-section-k8-01",
+      "file": "COMPLETED",
+      "git_blob_sha": "61d9891a5790c9a045e9540c3d54737b596fbfbd",
+      "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/51d7862b140183dcf1e54d40a4266f44dffa5b01/experiments/runs/three-cross-section-k8-01/COMPLETED"
+    },
+    {
+      "run_id": "three-cross-section-population-clarified-01",
+      "file": "artifact_checksums.json",
+      "git_blob_sha": "13c976eb7d18ccca2cefe05ad33da1e71aa8f911",
+      "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/25567135cd36b0764845b1de02211df0443ddee7/experiments/runs/three-cross-section-population-clarified-01/artifact_checksums.json"
+    },
+    {
+      "run_id": "three-cross-section-population-clarified-01",
+      "file": "COMPLETED",
+      "git_blob_sha": "9ac5ec49ebf3f8b5d4c0027f2f6b4f1e4d10d4b7",
+      "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/25567135cd36b0764845b1de02211df0443ddee7/experiments/runs/three-cross-section-population-clarified-01/COMPLETED"
+    },
+    {
+      "run_id": "three-cross-section-population-clarified-02",
+      "file": "artifact_checksums.json",
+      "git_blob_sha": "2a0bfeb04c18a2e7af1024765cbcc11de1bde0df",
+      "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/25567135cd36b0764845b1de02211df0443ddee7/experiments/runs/three-cross-section-population-clarified-02/artifact_checksums.json"
+    },
+    {
+      "run_id": "three-cross-section-population-clarified-02",
+      "file": "COMPLETED",
+      "git_blob_sha": "33d0c0a9326b40fcfedfa3ebeaf244f90d8eb009",
+      "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/25567135cd36b0764845b1de02211df0443ddee7/experiments/runs/three-cross-section-population-clarified-02/COMPLETED"
+    },
+    {
+      "run_id": "paper-exhaustive-k8-01",
+      "file": "artifact_checksums.json",
+      "git_blob_sha": "a57f2e3e994986b7336c11367be141d513b90c5f",
+      "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/e0d57e01e2429b9ecb4890378f3340d2a0616199/experiments/runs/paper-exhaustive-k8-01/artifact_checksums.json"
+    },
+    {
+      "run_id": "paper-exhaustive-k8-01",
+      "file": "COMPLETED",
+      "git_blob_sha": "3c2d77de91358453bc843e840e48e9be5ad3b93e",
+      "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/e0d57e01e2429b9ecb4890378f3340d2a0616199/experiments/runs/paper-exhaustive-k8-01/COMPLETED"
+    },
+    {
+      "run_id": "anomaly-dynamics-report-v2-01",
+      "file": "artifact_checksums.json",
+      "git_blob_sha": "a41812fa7586ec7b5d47c0a573a80a57c750765e",
+      "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/d1321d88bb2f7029b41dccd7e6d99f75429dc9c8/experiments/runs/anomaly-dynamics-report-v2-01/artifact_checksums.json"
+    },
+    {
+      "run_id": "anomaly-dynamics-report-v2-01",
+      "file": "COMPLETED",
+      "git_blob_sha": "9b468a65ae34023c649af171e7b8be7409534c75",
+      "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/d1321d88bb2f7029b41dccd7e6d99f75429dc9c8/experiments/runs/anomaly-dynamics-report-v2-01/COMPLETED"
+    },
+    {
+      "run_id": "peer-cluster-review-01",
+      "file": "artifact_checksums.json",
+      "git_blob_sha": "1407be08fe823aa9a282ada61ad72f82c25169c1",
+      "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/07c5a7a34f243849f576821186fa855951071865/experiments/runs/peer-cluster-review-01/artifact_checksums.json"
+    },
+    {
+      "run_id": "peer-cluster-review-01",
+      "file": "COMPLETED",
+      "git_blob_sha": "d6069d469e719194f1151c56ea2d2ce24c1ee815",
+      "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/07c5a7a34f243849f576821186fa855951071865/experiments/runs/peer-cluster-review-01/COMPLETED"
+    }
+  ],
+  "remote_manifest_and_marker_comparison": "passed: all 38 remote Git blob SHAs match local exact bytes",
+  "review_package_commit": "febe3b2694502378c0c1d057aab34ec8854b00ff",
+  "orion_supplement_commit": "ededd0106c75c61f2fb5fe4c769be1d98c6e17b3",
+  "orion_checklist": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/ededd0106c75c61f2fb5fe4c769be1d98c6e17b3/docs/orion_methods_results_checklist.md",
+  "optimization_commit": "febe3b2694502378c0c1d057aab34ec8854b00ff",
+  "optimization_results": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/febe3b2694502378c0c1d057aab34ec8854b00ff/reports/optimization_results.md",
+  "paper_review": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/febe3b2694502378c0c1d057aab34ec8854b00ff/reports/paper_review.md",
+  "user_umap_grid_commit": "4f210ac6f2d950f9034a3e86e099e5852d73f886",
+  "user_umap_grid_results": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/4f210ac6f2d950f9034a3e86e099e5852d73f886/reports/user_umap_grid_results.md",
+  "fixed_umap_commit": "ca36b3b07cd0d9d02654deaff31dfbf54cd2b355",
+  "fixed_umap_results": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/ca36b3b07cd0d9d02654deaff31dfbf54cd2b355/reports/fixed_umap_001_results.md",
+  "study_workflow_commit": "25567135cd36b0764845b1de02211df0443ddee7",
+  "study_notebook": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/25567135cd36b0764845b1de02211df0443ddee7/notebooks/three_cross_section_study.ipynb",
+  "executed_study_notebook": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/25567135cd36b0764845b1de02211df0443ddee7/reports/three_cross_section_study_executed.ipynb",
+  "study_run": "https://github.com/mygitAN/JSE-Top-40-Clustering/tree/25567135cd36b0764845b1de02211df0443ddee7/experiments/runs/three-cross-section-population-clarified-02",
+  "population_audit": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/25567135cd36b0764845b1de02211df0443ddee7/reports/population_count_audit.md",
+  "paper_experiments_commit": "e0d57e01e2429b9ecb4890378f3340d2a0616199",
+  "paper_experiments_run": "https://github.com/mygitAN/JSE-Top-40-Clustering/tree/e0d57e01e2429b9ecb4890378f3340d2a0616199/experiments/runs/paper-exhaustive-k8-01",
+  "paper_experiments_notebook": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/571872343b71aeb97f40adfe6553ae223c6467ae/notebooks/paper_experiments.ipynb",
+  "executed_paper_experiments": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/571872343b71aeb97f40adfe6553ae223c6467ae/reports/paper_experiments_executed.ipynb",
+  "fresh_executed_paper_experiments": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/e0d57e01e2429b9ecb4890378f3340d2a0616199/reports/paper_experiments_fresh_executed.ipynb",
+  "paper_experiments_results": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/571872343b71aeb97f40adfe6553ae223c6467ae/reports/paper_experiment_results.md",
+  "paper_experiments_protocol": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/e0d57e01e2429b9ecb4890378f3340d2a0616199/docs/paper_experiments_guide.md",
+  "paper_experiments_review_commit": "571872343b71aeb97f40adfe6553ae223c6467ae",
+  "anomaly_dynamics_reporting_commit": "d1321d88bb2f7029b41dccd7e6d99f75429dc9c8",
+  "anomaly_dynamics_reporting_run": "https://github.com/mygitAN/JSE-Top-40-Clustering/tree/d1321d88bb2f7029b41dccd7e6d99f75429dc9c8/experiments/runs/anomaly-dynamics-report-v2-01",
+  "anomaly_dynamics_reporting_example": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/d1321d88bb2f7029b41dccd7e6d99f75429dc9c8/reports/anomaly_dynamics_reporting_example.md",
+  "anomaly_dynamics_reporting_protocol": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/d1321d88bb2f7029b41dccd7e6d99f75429dc9c8/docs/reporting_direction.md",
+  "peer_cluster_review_commit": "07c5a7a34f243849f576821186fa855951071865",
+  "peer_cluster_review_run": "https://github.com/mygitAN/JSE-Top-40-Clustering/tree/07c5a7a34f243849f576821186fa855951071865/experiments/runs/peer-cluster-review-01",
+  "peer_cluster_review": "https://github.com/mygitAN/JSE-Top-40-Clustering/blob/07c5a7a34f243849f576821186fa855951071865/reports/notebook_cluster_review.md"
+}

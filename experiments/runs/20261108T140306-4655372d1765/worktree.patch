@@ -1,0 +1,9 @@
+diff --git a/experiments/registry.csv b/experiments/registry.csv
+index 8c96bc1..124b65c 100644
+--- a/experiments/registry.csv
++++ b/experiments/registry.csv
+@@ -14,3 +14,4 @@ three-cross-section-study-02,completed,2026-11-08T11:13:38.805665+00:00,2026-11-
+ three-cross-section-cli-check-01,completed,2026-11-08T11:15:47.743146+00:00,2026-11-08T11:16:34.061336+00:00,three-cross-section-study-walkthrough,"Guided three-cross-section revision: EDA, model comparisons, plots, SHAP and temporal interpretation",27144bbd0d235741bca2f0dfc1117f3e63af9171,True,46.32799999997951,runs/three-cross-section-cli-check-01,
+ 20261108T135356-303a1dcda854,running,2026-11-08T13:53:56.795519+00:00,,three-cross-section-study-walkthrough,"Guided three-cross-section revision: EDA, model comparisons, plots, SHAP and temporal interpretation",,,,runs/20261108T135356-303a1dcda854,
+ three-cross-section-k8-01,completed,2026-11-08T13:56:07.592371+00:00,2026-11-08T13:56:55.763364+00:00,three-cross-section-study-walkthrough,"Guided three-cross-section revision: EDA, model comparisons, plots, SHAP and temporal interpretation",27144bbd0d235741bca2f0dfc1117f3e63af9171,True,48.15599999995902,runs/three-cross-section-k8-01,
++20261108T140306-4655372d1765,running,2026-11-08T14:03:06.173177+00:00,,three-cross-section-study-walkthrough,"Guided three-cross-section revision: EDA, model comparisons, plots, SHAP and temporal interpretation",,,,runs/20261108T140306-4655372d1765,

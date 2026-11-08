@@ -1,0 +1,59 @@
+diff --git a/experiments/registry.csv b/experiments/registry.csv
+index 7653115..fe73217 100644
+--- a/experiments/registry.csv
++++ b/experiments/registry.csv
+@@ -21,3 +21,4 @@ three-cross-section-population-clarified-02,completed,2026-11-08T14:09:48.811081
+ paper-exhaustive-k8-01,completed,2026-11-08T14:35:12.594903+00:00,2026-11-08T14:44:56.236519+00:00,paper-eda-exhaustive-grid-and-longitudinal-v1,"EDA, exhaustive finite-grid optimisation, frozen follow-ups and descriptive longitudinal screens",b3505ce5ec08dcf204aee670dba40573ef0a0532,True,583.640999999945,runs/paper-exhaustive-k8-01,
+ 20261108T144704-2caf3489dbc2,completed,2026-11-08T14:47:04.760166+00:00,2026-11-08T14:48:15.103741+00:00,three-cross-section-study-walkthrough,"Guided three-cross-section revision: EDA, model comparisons, plots, SHAP and temporal interpretation",b3505ce5ec08dcf204aee670dba40573ef0a0532,True,70.34400000004098,runs/20261108T144704-2caf3489dbc2,
+ 20261108T144029-b2b9fd874aa0,completed,2026-11-08T14:40:29.883267+00:00,2026-11-08T14:50:13.120940+00:00,paper-eda-exhaustive-grid-and-longitudinal-v1,"EDA, exhaustive finite-grid optimisation, frozen follow-ups and descriptive longitudinal screens",b3505ce5ec08dcf204aee670dba40573ef0a0532,True,583.234999999986,runs/20261108T144029-b2b9fd874aa0,
++anomaly-dynamics-report-v2-01,running,2026-11-08T15:05:08.013852+00:00,,anomaly-dynamics-reporting-amendment-v2,User-example reporting style; separate signal dynamics and varying-k sensitivity,,,,runs/anomaly-dynamics-report-v2-01,
+diff --git a/reports/test_results.txt b/reports/test_results.txt
+index 5ba2ea3..b793037 100644
+--- a/reports/test_results.txt
++++ b/reports/test_results.txt
+@@ -15,6 +15,10 @@ test_shap_class_mapping_singleton_and_additivity (test_analysis.AnalysisTests.te
+ test_shap_oof_estimable (test_analysis.AnalysisTests.test_shap_oof_estimable) ... ok
+ test_temporal_metrics_ignore_label_permutation (test_analysis.AnalysisTests.test_temporal_metrics_ignore_label_permutation) ... ok
+ test_unmatched_and_disjoint_clusters (test_analysis.AnalysisTests.test_unmatched_and_disjoint_clusters) ... ok
++test_geometric_sector_and_joint_histories_are_separate (test_anomaly_dynamics_reporting.ReportingAmendmentTests.test_geometric_sector_and_joint_histories_are_separate) ... ok
++test_k12_remains_eligible_in_declared_2_to_12_sensitivity (test_anomaly_dynamics_reporting.ReportingAmendmentTests.test_k12_remains_eligible_in_declared_2_to_12_sensitivity) ... ok
++test_missing_observation_is_not_resolution (test_anomaly_dynamics_reporting.ReportingAmendmentTests.test_missing_observation_is_not_resolution) ... ok
++test_taxonomy_distinguishes_resolved_resolving_and_sustained (test_anomaly_dynamics_reporting.ReportingAmendmentTests.test_taxonomy_distinguishes_resolved_resolving_and_sustained) ... ok
+ test_complete_validation_and_workbook_reconciliation (test_data.DataTests.test_complete_validation_and_workbook_reconciliation) ... ok
+ test_constants_use_only_june_2025 (test_data.DataTests.test_constants_use_only_june_2025) ... ok
+ test_corrupt_flags_and_model_values_fail (test_data.DataTests.test_corrupt_flags_and_model_values_fail) ... ok
+@@ -37,7 +41,7 @@ test_frozen_contrast_attributions_sum_to_same_model_margin_change (test_paper_ex
+ test_individual_distance_no_n_multiplier_and_affine_invariance (test_paper_experiments.PaperExperimentTests.test_individual_distance_no_n_multiplier_and_affine_invariance) ... ok
+ test_permuted_clusters_stable_entries_not_shifts (test_paper_experiments.PaperExperimentTests.test_permuted_clusters_stable_entries_not_shifts) ... ok
+ test_saved_notebook_replay_is_read_only (test_paper_experiments.PaperExperimentTests.test_saved_notebook_replay_is_read_only) ... PASS: 123 rows; 41 per date; 43 tickers; 3 RNI rows retained; 2 volume imputations; model features complete.
+-READ-ONLY saved results: C:\Users\HP\AppData\Local\Temp\tmpduhbqdrb\experiments\runs\saved; no experiment is rerun
++READ-ONLY saved results: C:\Users\HP\AppData\Local\Temp\tmp26axjlzm\experiments\runs\saved; no experiment is rerun
+ ok
+ test_saved_replay_rejects_unfinished_runs_and_path_ids (test_paper_experiments.PaperExperimentTests.test_saved_replay_rejects_unfinished_runs_and_path_ids) ... ok
+ test_screen_rejects_missing_or_non_2d_input (test_paper_experiments.PaperExperimentTests.test_screen_rejects_missing_or_non_2d_input) ... ok
+@@ -50,14 +54,14 @@ test_eda_population_missingness_and_evidence (test_study.StudyTests.test_eda_pop
+ test_missing_required_outputs_fail_completion (test_study.StudyTests.test_missing_required_outputs_fail_completion) ... ok
+ test_paper_workflow_requires_eight_clusters (test_study.StudyTests.test_paper_workflow_requires_eight_clusters) ... ok
+ test_stage_order_cannot_bypass_eda (test_study.StudyTests.test_stage_order_cannot_bypass_eda) ... Study run: bad-order
+-Artifacts: C:\Users\HP\AppData\Local\Temp\tmp5j_bi1cl\runs\bad-order
++Artifacts: C:\Users\HP\AppData\Local\Temp\tmpymq3gq2u\runs\bad-order
+ Traceback (most recent call last):
+   File "C:\Users\HP\Documents\GitHub\JSE-Top-40-Clustering\scripts\study_workflow.py", line 59, in _step
+     raise RuntimeError(f'Run stages in order: expected {expected}, found {self.state}')
+ RuntimeError: Run stages in order: expected explored, found started
+ ok
+ test_study_failure_is_tracked_and_not_completed (test_study.StudyTests.test_study_failure_is_tracked_and_not_completed) ... Study run: eda-failure
+-Artifacts: C:\Users\HP\AppData\Local\Temp\tmp7r8kppis\runs\eda-failure
++Artifacts: C:\Users\HP\AppData\Local\Temp\tmpgjyp401m\runs\eda-failure
+ 
+ 1. Validate and load all historical observations
+ PASS: 123 rows; 41 per date; 43 tickers; 3 RNI rows retained; 2 volume imputations; model features complete.
+@@ -101,7 +105,7 @@ test_grid_reuses_fits_and_sweeps_best_not_last_embedding (test_tune_umap.UserUma
+ test_invalid_input_fails_instead_of_skipping (test_tune_umap.UserUmapTests.test_invalid_input_fails_instead_of_skipping) ... ok
+ 
+ ----------------------------------------------------------------------
+-Ran 60 tests in 15.900s
++Ran 64 tests in 6.002s
+ 
+ OK
+ 

@@ -1,0 +1,10 @@
+representation,clustering,clusters,silhouette,davies_bouldin,status
+PCA,hierarchical,8,0.1531,0.8449,reported in original manuscript; not recomputed
+t-SNE,hierarchical,8,0.5023,0.5296,reported in original manuscript; not recomputed
+UMAP,hierarchical,8,0.3450,0.8175,reported in original manuscript; not recomputed
+PCA,DBSCAN,6,0.2367,1.4187,reported in original manuscript; not recomputed
+t-SNE,DBSCAN,4,-0.2124,2.5319,reported in original manuscript; not recomputed
+UMAP,DBSCAN,0,,,reported no clusters; not recomputed
+PCA,K-Means,8,0.1550,1.0888,reported in original manuscript; not recomputed
+t-SNE,K-Means,8,0.3658,0.7352,reported in original manuscript; not recomputed
+UMAP,K-Means,8,0.3660,0.7652,reported in original manuscript; not recomputed

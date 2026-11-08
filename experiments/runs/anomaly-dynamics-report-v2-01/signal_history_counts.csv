@@ -1,0 +1,32 @@
+role,channel,classification,instruments
+baseline,geometric_screen,never flagged,39
+baseline,geometric_screen,not eligible: missing observation or unestimable signal,4
+baseline,joint_agreement,never flagged,27
+baseline,joint_agreement,not eligible: missing observation or unestimable signal,16
+baseline,sector_divergence,never flagged,16
+baseline,sector_divergence,not eligible: missing observation or unestimable signal,16
+baseline,sector_divergence,persistent,3
+baseline,sector_divergence,recurring,6
+baseline,sector_divergence,resolved,1
+baseline,sector_divergence,resolving,1
+common_features_k8,geometric_screen,never flagged,36
+common_features_k8,geometric_screen,not eligible: missing observation or unestimable signal,4
+common_features_k8,geometric_screen,resolved,2
+common_features_k8,geometric_screen,transient,1
+common_features_k8,joint_agreement,never flagged,32
+common_features_k8,joint_agreement,not eligible: missing observation or unestimable signal,11
+common_features_k8,sector_divergence,never flagged,15
+common_features_k8,sector_divergence,not eligible: missing observation or unestimable signal,11
+common_features_k8,sector_divergence,persistent,11
+common_features_k8,sector_divergence,resolved,5
+common_features_k8,sector_divergence,resolving,1
+embedding_k8,geometric_screen,never flagged,39
+embedding_k8,geometric_screen,not eligible: missing observation or unestimable signal,4
+embedding_k8,joint_agreement,never flagged,26
+embedding_k8,joint_agreement,not eligible: missing observation or unestimable signal,17
+embedding_k8,sector_divergence,emerging,3
+embedding_k8,sector_divergence,never flagged,16
+embedding_k8,sector_divergence,not eligible: missing observation or unestimable signal,17
+embedding_k8,sector_divergence,persistent,4
+embedding_k8,sector_divergence,resolved,1
+embedding_k8,sector_divergence,resolving,2

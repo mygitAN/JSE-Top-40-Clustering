@@ -1,0 +1,18 @@
+{
+  "representation": {
+    "name": "pca",
+    "params": {
+      "n_components": 0.95,
+      "svd_solver": "full"
+    },
+    "representation_id": "r_81b710484643a5c4"
+  },
+  "clustering": {
+    "algorithm": "kmeans",
+    "params": {
+      "n_clusters": 8,
+      "n_init": 20
+    }
+  },
+  "candidate_id": "c_7d1d69927f9f3bf0"
+}

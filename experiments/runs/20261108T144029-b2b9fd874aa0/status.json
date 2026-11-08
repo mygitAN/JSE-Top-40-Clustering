@@ -1,0 +1,221 @@
+{
+  "run_id": "20261108T144029-b2b9fd874aa0",
+  "status": "completed",
+  "started_utc": "2026-11-08T14:40:29.883267+00:00",
+  "ended_utc": "2026-11-08T14:50:13.120940+00:00",
+  "experiment": "paper-eda-exhaustive-grid-and-longitudinal-v1",
+  "purpose": "EDA, exhaustive finite-grid optimisation, frozen follow-ups and descriptive longitudinal screens",
+  "artifact_path": "runs/20261108T144029-b2b9fd874aa0",
+  "exact_command": [
+    "c:\\Users\\HP\\Documents\\GitHub\\JSE-Top-40-Clustering\\.venv\\Scripts\\python.exe",
+    "c:\\Users\\HP\\Documents\\GitHub\\JSE-Top-40-Clustering\\.venv\\Lib\\site-packages\\ipykernel_launcher.py",
+    "--f=c:\\Users\\HP\\AppData\\Roaming\\jupyter\\runtime\\kernel-v361ec6fdb180d9d193649c656ba71a63c7ca263ee.json"
+  ],
+  "cwd": "c:\\Users\\HP\\Documents\\GitHub\\JSE-Top-40-Clustering\\notebooks",
+  "resolved_configuration": {
+    "experiment": "paper-eda-exhaustive-grid-and-longitudinal-v1",
+    "selection_date": "2025-06-30",
+    "dates": [
+      "2025-06-30",
+      "2025-12-31",
+      "2026-06-30"
+    ],
+    "seeds": [
+      42,
+      43,
+      44,
+      45,
+      46
+    ],
+    "pca_components": [
+      2,
+      0.95
+    ],
+    "tsne_perplexities": [
+      5,
+      10,
+      20
+    ],
+    "tsne_learning_rates": [
+      10,
+      "auto"
+    ],
+    "tsne_iterations": [
+      300,
+      1000
+    ],
+    "reduction_metrics": [
+      "euclidean",
+      "manhattan",
+      "cosine"
+    ],
+    "umap_neighbors": [
+      3,
+      5,
+      10,
+      20
+    ],
+    "umap_min_dist": [
+      0.0,
+      0.01,
+      0.1,
+      0.5
+    ],
+    "linkages": [
+      "single",
+      "complete",
+      "average",
+      "ward"
+    ],
+    "clustering_metrics": [
+      "euclidean",
+      "manhattan",
+      "chebyshev",
+      "cosine"
+    ],
+    "k": 8,
+    "k_diagnostics": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "kmeans_n_init": 20,
+    "dbscan_eps": [
+      0.3,
+      0.5,
+      0.8,
+      1.2
+    ],
+    "dbscan_min_samples": [
+      3,
+      5
+    ],
+    "dbscan_metrics": [
+      "euclidean",
+      "manhattan",
+      "cosine"
+    ],
+    "maximum_representations": 86,
+    "maximum_configurations": 3268,
+    "maximum_selection_fits": 16340,
+    "primary_selection": "common_features_k8",
+    "selection_rule": "Full coverage and valid scores on every seed; exactly 8 clusters. Minimize mean-silhouette descending rank plus mean-DB ascending rank in common June-scaled features. Tie-break by pairwise seed ARI, feature silhouette, candidate ID. Embedding-space ranking is an explicit alternative. Sector labels never select models.",
+    "hotelling": {
+      "dimensions": 2,
+      "alpha": 0.05,
+      "statistic": "individual squared Mahalanobis distance from same-snapshot mean, unbiased sample covariance, no n multiplier",
+      "f_reference": "p*(n-1)/(n-p) * F.ppf(1-alpha,p,n-p); descriptive paper-style reference, not an individual-distance null calibration",
+      "singular_covariance": "no threshold flag; report not estimable",
+      "seed_support_fraction": 0.6,
+      "confirmed_outliers": "None confirmed solely by screens, seed agreement, singleton status or SHAP; external substantive validation required"
+    },
+    "temporal_alignment": "Hungarian maximum Jaccard on common members, sorted labels, deterministic solver; reject zero-overlap matches; fresh IDs never reused; compare overlap objective and direct baseline alignment",
+    "promotion": false,
+    "scope": "Exhaustive within this finite grid, not all possible real-valued parameters or a global optimum. Later dates already examined: descriptive follow-ups, not untouched validation."
+  },
+  "python": "3.11.14 (main, Feb 12 2026, 00:37:49) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "thread_environment": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMBA_NUM_THREADS": "1"
+  },
+  "versions": {
+    "asttokens": "3.0.2",
+    "attrs": "26.1.0",
+    "beautifulsoup4": "4.15.0",
+    "bleach": "6.4.0",
+    "cloudpickle": "3.1.2",
+    "colorama": "0.4.6",
+    "comm": "0.2.3",
+    "contourpy": "1.3.3",
+    "cycler": "0.12.1",
+    "debugpy": "1.8.22",
+    "defusedxml": "0.7.1",
+    "executing": "2.3.0",
+    "fastjsonschema": "2.22.3",
+    "fonttools": "4.68.0",
+    "ipykernel": "7.4.0",
+    "ipython": "9.18.1",
+    "ipython_pygments_lexers": "1.1.1",
+    "jedi": "0.20.1",
+    "Jinja2": "3.1.6",
+    "joblib": "1.6.0",
+    "jsonschema": "4.26.0",
+    "jsonschema-specifications": "2025.9.1",
+    "jupyterlab_pygments": "0.3.0",
+    "jupyter_client": "8.10.0",
+    "jupyter_core": "5.9.1",
+    "kiwisolver": "1.5.1",
+    "llvmlite": "0.50.0",
+    "MarkupSafe": "3.0.4",
+    "matplotlib": "3.10.8",
+    "matplotlib-inline": "0.2.2",
+    "mistune": "3.4.0",
+    "nbclient": "0.11.0",
+    "nbconvert": "7.17.2",
+    "nbformat": "5.11.1",
+    "nest-asyncio2": "1.7.4",
+    "numba": "0.68.1",
+    "numpy": "2.3.5",
+    "packaging": "26.3",
+    "pandas": "2.2.3",
+    "pandocfilters": "1.5.1",
+    "parso": "0.8.7",
+    "pillow": "13.0.0",
+    "platformdirs": "4.14.5",
+    "prompt_toolkit": "3.0.53",
+    "psutil": "7.2.2",
+    "pure_eval": "0.2.4",
+    "Pygments": "2.21.0",
+    "pynndescent": "0.7.0",
+    "pyparsing": "3.3.3",
+    "python-dateutil": "4.0.0",
+    "pytz": "2026.6",
+    "pyzmq": "27.3.0",
+    "referencing": "0.37.0",
+    "rpds-py": "2026.9.1",
+    "scikit-learn": "1.6.1",
+    "scipy": "1.17.0",
+    "shap": "0.49.1",
+    "slicer": "0.0.8",
+    "soupsieve": "4.0.1",
+    "stack-data": "0.6.3",
+    "threadpoolctl": "3.8.0",
+    "tinycss2": "1.5.1",
+    "tornado": "6.6",
+    "tqdm": "4.70.1",
+    "traitlets": "5.16.1",
+    "typing_extensions": "4.16.0",
+    "tzdata": "2026.6",
+    "umap-learn": "0.5.12",
+    "wcwidth": "0.9.4",
+    "webencodings": "0.6.1",
+    "xgboost": "2.1.4"
+  },
+  "git_commit": "b3505ce5ec08dcf204aee670dba40573ef0a0532",
+  "git_dirty": true,
+  "input_sha256": {
+    "data/processed/Top40_Retrospective_Model_Inputs_v1.csv": "fe6abb616fc826ea973f74bac62902fc77d4309e449ae8af5119df750f061b95",
+    "data/source/Top40_PIT_Verification_v4.xlsx": "4f5e3e5f80b396591bd5b66b4c0ab3b99876419950e746ca99e52b2a5a5a8110",
+    "docs/Top40_Retrospective_Model_Method_v1.json": "594393356d316981076242949e40045ab71266e3868d9482be2dbdb32adbd738"
+  },
+  "study_stage": "completed",
+  "metric_artifacts": [
+    "search/candidate_summary.csv",
+    "search/best_parameters.csv",
+    "selected_model_scores.csv",
+    "longitudinal_summary.csv"
+  ],
+  "runtime_seconds": 583.234999999986,
+  "error": ""
+}

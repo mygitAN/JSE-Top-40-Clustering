@@ -1,0 +1,21 @@
+{
+  "representation": {
+    "name": "umap",
+    "params": {
+      "n_components": 2,
+      "n_neighbors": 3,
+      "min_dist": 0.01,
+      "metric": "cosine",
+      "n_jobs": 1
+    },
+    "representation_id": "r_deca05f82c54a9d1"
+  },
+  "clustering": {
+    "algorithm": "kmeans",
+    "params": {
+      "n_clusters": 8,
+      "n_init": 20
+    }
+  },
+  "candidate_id": "c_152cbd6e85993337"
+}

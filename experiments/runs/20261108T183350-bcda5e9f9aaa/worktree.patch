@@ -1,0 +1,9 @@
+diff --git a/experiments/registry.csv b/experiments/registry.csv
+index 44db6a9..2fdd64d 100644
+--- a/experiments/registry.csv
++++ b/experiments/registry.csv
+@@ -23,3 +23,4 @@ paper-exhaustive-k8-01,completed,2026-11-08T14:35:12.594903+00:00,2026-11-08T14:
+ 20261108T144029-b2b9fd874aa0,completed,2026-11-08T14:40:29.883267+00:00,2026-11-08T14:50:13.120940+00:00,paper-eda-exhaustive-grid-and-longitudinal-v1,"EDA, exhaustive finite-grid optimisation, frozen follow-ups and descriptive longitudinal screens",b3505ce5ec08dcf204aee670dba40573ef0a0532,True,583.234999999986,runs/20261108T144029-b2b9fd874aa0,
+ anomaly-dynamics-report-v2-01,completed,2026-11-08T15:05:08.013852+00:00,2026-11-08T15:05:26.773607+00:00,anomaly-dynamics-reporting-amendment-v2,User-example reporting style; separate signal dynamics and varying-k sensitivity,3a69b5a0ccb6a9bf62d60d8c0bf7f8b1ff65452c,True,18.75,runs/anomaly-dynamics-report-v2-01,
+ peer-cluster-review-01,completed,2026-11-08T15:18:23.432717+00:00,2026-11-08T15:18:39.867014+00:00,posthoc-peer-cluster-suitability-review-v1,Review peer-cluster suitability while preserving notebook strengths and primary results,23b0812f391e41d7bb075577fa497411726093e9,True,16.43799999996554,runs/peer-cluster-review-01,
++20261108T183350-bcda5e9f9aaa,running,2026-11-08T18:33:50.450686+00:00,,three-cross-section-study-walkthrough,"Guided three-cross-section revision: EDA, model comparisons, plots, SHAP and temporal interpretation",,,,runs/20261108T183350-bcda5e9f9aaa,

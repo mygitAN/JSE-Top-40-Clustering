@@ -1,0 +1,44 @@
+ticker,2025-06-30,2025-12-31,2026-06-30,observed_all_three,stability_status,baseline_to_current_changed,direct_baseline_to_current_changed
+ABG,5.0,1.0,1.0,True,shifted at least once,True,False
+AGL,4.0,7.0,1.0,True,shifted at least once,True,True
+ANG,2.0,2.0,2.0,True,stable all three,False,False
+ANH,3.0,3.0,3.0,True,stable all three,False,False
+APN,6.0,,,False,membership gap: no three-date status,,
+BHG,3.0,3.0,3.0,True,stable all three,False,False
+BID,4.0,4.0,7.0,True,shifted at least once,True,True
+BTI,3.0,3.0,3.0,True,stable all three,False,False
+BVT,6.0,4.0,7.0,True,shifted at least once,True,True
+CFR,3.0,3.0,3.0,True,stable all three,False,False
+CLS,7.0,4.0,1.0,True,shifted at least once,True,True
+CPI,7.0,7.0,7.0,True,stable all three,False,False
+DSY,1.0,7.0,7.0,True,shifted at least once,True,True
+FSR,0.0,0.0,1.0,True,shifted at least once,True,True
+GFI,2.0,2.0,2.0,True,stable all three,False,False
+GLN,,3.0,3.0,False,membership gap: no three-date status,,
+GRT,0.0,1.0,1.0,True,shifted at least once,True,True
+HAR,2.0,2.0,2.0,True,stable all three,False,False
+IMP,2.0,2.0,2.0,True,stable all three,False,False
+INL,5.0,5.0,1.0,True,shifted at least once,True,False
+INP,5.0,5.0,1.0,True,shifted at least once,True,False
+MNP,6.0,5.0,,False,membership gap: no three-date status,,
+MRP,6.0,5.0,1.0,True,shifted at least once,True,True
+MTN,2.0,2.0,1.0,True,shifted at least once,True,True
+NED,5.0,5.0,1.0,True,shifted at least once,True,False
+NPH,2.0,2.0,2.0,True,stable all three,False,False
+NPN,7.0,7.0,7.0,True,stable all three,False,False
+NRP,5.0,5.0,1.0,True,shifted at least once,True,False
+OMU,0.0,0.0,1.0,True,shifted at least once,True,True
+OUT,1.0,1.0,1.0,True,stable all three,False,True
+PAN,,,2.0,False,membership gap: no three-date status,,
+PPH,2.0,0.0,1.0,True,shifted at least once,True,True
+PRX,3.0,3.0,7.0,True,shifted at least once,True,True
+REM,7.0,7.0,7.0,True,stable all three,False,False
+RNI,7.0,7.0,7.0,True,stable all three,False,False
+SBK,1.0,1.0,1.0,True,stable all three,False,True
+SHP,4.0,4.0,7.0,True,shifted at least once,True,True
+SLM,1.0,1.0,1.0,True,stable all three,False,True
+SOL,2.0,2.0,1.0,True,shifted at least once,True,True
+SSW,2.0,2.0,2.0,True,stable all three,False,False
+VAL,6.0,2.0,2.0,True,shifted at least once,True,True
+VOD,1.0,1.0,1.0,True,stable all three,False,True
+WHL,6.0,4.0,1.0,True,shifted at least once,True,True

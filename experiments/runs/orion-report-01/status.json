@@ -1,0 +1,77 @@
+{
+  "run_id": "orion-report-01",
+  "status": "completed",
+  "started_utc": "2026-11-08T09:34:05.328063+00:00",
+  "ended_utc": "2026-11-08T09:34:07.095420+00:00",
+  "experiment": "orion-methods-results-check",
+  "purpose": "Descriptive associations and label-alignment audit of saved baseline; no promotion",
+  "artifact_path": "runs/orion-report-01",
+  "exact_command": [
+    "C:\\Users\\HP\\Documents\\GitHub\\JSE-Top-40-Clustering\\.venv\\Scripts\\python.exe",
+    "scripts/orion_review.py",
+    "--source-run",
+    "final-full-42",
+    "--run-id",
+    "orion-report-01"
+  ],
+  "cwd": "C:\\Users\\HP\\Documents\\GitHub\\JSE-Top-40-Clustering",
+  "resolved_configuration": {
+    "experiment": "orion-methods-results-check",
+    "source_run": "final-full-42",
+    "refit": false,
+    "alignment_objectives": [
+      "overlap",
+      "jaccard"
+    ],
+    "univariate_reference": "same-snapshot median, June-scaled features",
+    "tie_ranks": "average"
+  },
+  "python": "3.11.14 (main, Feb 12 2026, 00:37:49) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "thread_environment": {
+    "OMP_NUM_THREADS": null,
+    "OPENBLAS_NUM_THREADS": null,
+    "MKL_NUM_THREADS": null,
+    "NUMBA_NUM_THREADS": null
+  },
+  "versions": {
+    "cloudpickle": "3.1.2",
+    "colorama": "0.4.6",
+    "contourpy": "1.3.3",
+    "cycler": "0.12.1",
+    "fonttools": "4.68.0",
+    "joblib": "1.6.0",
+    "kiwisolver": "1.5.1",
+    "llvmlite": "0.50.0",
+    "matplotlib": "3.10.8",
+    "numba": "0.68.1",
+    "numpy": "2.3.5",
+    "packaging": "26.3",
+    "pandas": "2.2.3",
+    "pillow": "13.0.0",
+    "pynndescent": "0.7.0",
+    "pyparsing": "3.3.3",
+    "python-dateutil": "4.0.0",
+    "pytz": "2026.6",
+    "scikit-learn": "1.6.1",
+    "scipy": "1.17.0",
+    "shap": "0.49.1",
+    "slicer": "0.0.8",
+    "threadpoolctl": "3.8.0",
+    "tqdm": "4.70.1",
+    "typing_extensions": "4.16.0",
+    "tzdata": "2026.6",
+    "umap-learn": "0.5.12",
+    "xgboost": "2.1.4"
+  },
+  "git_commit": "85863a560f3d1e508465b6223995bcba3fcd125e",
+  "git_dirty": true,
+  "input_sha256": {
+    "data/processed/Top40_Retrospective_Model_Inputs_v1.csv": "fe6abb616fc826ea973f74bac62902fc77d4309e449ae8af5119df750f061b95",
+    "data/source/Top40_PIT_Verification_v4.xlsx": "4f5e3e5f80b396591bd5b66b4c0ab3b99876419950e746ca99e52b2a5a5a8110",
+    "docs/Top40_Retrospective_Model_Method_v1.json": "594393356d316981076242949e40045ab71266e3868d9482be2dbdb32adbd738"
+  },
+  "derived_source_manifest_sha256": "f0ddb2822aa2fd6891be9255afe1a42b0a71e3c5643818b20adf7e8e4c552f10",
+  "runtime_seconds": 1.7660000000614673,
+  "error": ""
+}

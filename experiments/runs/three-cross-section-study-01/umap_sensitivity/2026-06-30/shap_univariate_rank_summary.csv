@@ -1,0 +1,6 @@
+cluster,n,rank_correlation,status
+0,11,0.17575757575757575,descriptive rank comparison; no p-value
+1,10,0.10303030303030303,descriptive rank comparison; no p-value
+2,8,0.21624335800309782,descriptive rank comparison; no p-value
+3,5,0.03126526997403612,descriptive rank comparison; no p-value
+4,7,0.22627786434233255,descriptive rank comparison; no p-value

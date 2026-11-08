@@ -1,0 +1,169 @@
+before,after,objective,sector_before,sector_after,imputation_sensitive,ticker,membership_event,cluster_changed
+2025-06-30,2025-12-31,overlap,Financials,Financials,False,ABG,continuing,True
+2025-06-30,2025-12-31,overlap,Basic Materials,Basic Materials,True,AGL,continuing,True
+2025-06-30,2025-12-31,overlap,Basic Materials,Basic Materials,False,ANG,continuing,False
+2025-06-30,2025-12-31,overlap,Consumer Goods,Consumer Goods,False,ANH,continuing,False
+2025-06-30,2025-12-31,overlap,Health Care,,False,APN,exit,
+2025-06-30,2025-12-31,overlap,Basic Materials,Basic Materials,False,BHG,continuing,False
+2025-06-30,2025-12-31,overlap,Consumer Services,Consumer Services,False,BID,continuing,True
+2025-06-30,2025-12-31,overlap,Consumer Goods,Consumer Goods,False,BTI,continuing,False
+2025-06-30,2025-12-31,overlap,Industrials,Industrials,False,BVT,continuing,False
+2025-06-30,2025-12-31,overlap,Consumer Goods,Consumer Goods,False,CFR,continuing,False
+2025-06-30,2025-12-31,overlap,Consumer Services,Consumer Services,False,CLS,continuing,True
+2025-06-30,2025-12-31,overlap,Financials,Financials,False,CPI,continuing,False
+2025-06-30,2025-12-31,overlap,Financials,Financials,False,DSY,continuing,True
+2025-06-30,2025-12-31,overlap,Financials,Financials,False,FSR,continuing,False
+2025-06-30,2025-12-31,overlap,Basic Materials,Basic Materials,False,GFI,continuing,False
+2025-06-30,2025-12-31,overlap,,Basic Materials,False,GLN,entry,
+2025-06-30,2025-12-31,overlap,Financials,Financials,False,GRT,continuing,False
+2025-06-30,2025-12-31,overlap,Basic Materials,Basic Materials,False,HAR,continuing,False
+2025-06-30,2025-12-31,overlap,Basic Materials,Basic Materials,False,IMP,continuing,False
+2025-06-30,2025-12-31,overlap,Financials,Financials,False,INL,continuing,False
+2025-06-30,2025-12-31,overlap,Financials,Financials,False,INP,continuing,False
+2025-06-30,2025-12-31,overlap,Basic Materials,Basic Materials,False,MNP,continuing,True
+2025-06-30,2025-12-31,overlap,Consumer Services,Consumer Services,False,MRP,continuing,True
+2025-06-30,2025-12-31,overlap,Telecommunications,Telecommunications,False,MTN,continuing,True
+2025-06-30,2025-12-31,overlap,Financials,Financials,False,NED,continuing,False
+2025-06-30,2025-12-31,overlap,Basic Materials,Basic Materials,False,NPH,continuing,False
+2025-06-30,2025-12-31,overlap,Technology,Technology,False,NPN,continuing,False
+2025-06-30,2025-12-31,overlap,Financials,Financials,False,NRP,continuing,False
+2025-06-30,2025-12-31,overlap,Financials,Financials,False,OMU,continuing,False
+2025-06-30,2025-12-31,overlap,Financials,Financials,False,OUT,continuing,False
+2025-06-30,2025-12-31,overlap,Consumer Services,Consumer Services,False,PPH,continuing,True
+2025-06-30,2025-12-31,overlap,Technology,Technology,False,PRX,continuing,False
+2025-06-30,2025-12-31,overlap,Financials,Financials,False,REM,continuing,False
+2025-06-30,2025-12-31,overlap,Financials,Financials,True,RNI,continuing,False
+2025-06-30,2025-12-31,overlap,Financials,Financials,False,SBK,continuing,True
+2025-06-30,2025-12-31,overlap,Consumer Services,Consumer Services,False,SHP,continuing,True
+2025-06-30,2025-12-31,overlap,Financials,Financials,False,SLM,continuing,True
+2025-06-30,2025-12-31,overlap,Basic Materials,Basic Materials,False,SOL,continuing,True
+2025-06-30,2025-12-31,overlap,Basic Materials,Basic Materials,False,SSW,continuing,False
+2025-06-30,2025-12-31,overlap,Basic Materials,Basic Materials,False,VAL,continuing,True
+2025-06-30,2025-12-31,overlap,Telecommunications,Telecommunications,False,VOD,continuing,False
+2025-06-30,2025-12-31,overlap,Consumer Services,Consumer Services,False,WHL,continuing,False
+2025-06-30,2025-12-31,jaccard,Financials,Financials,False,ABG,continuing,True
+2025-06-30,2025-12-31,jaccard,Basic Materials,Basic Materials,True,AGL,continuing,True
+2025-06-30,2025-12-31,jaccard,Basic Materials,Basic Materials,False,ANG,continuing,False
+2025-06-30,2025-12-31,jaccard,Consumer Goods,Consumer Goods,False,ANH,continuing,False
+2025-06-30,2025-12-31,jaccard,Health Care,,False,APN,exit,
+2025-06-30,2025-12-31,jaccard,Basic Materials,Basic Materials,False,BHG,continuing,False
+2025-06-30,2025-12-31,jaccard,Consumer Services,Consumer Services,False,BID,continuing,True
+2025-06-30,2025-12-31,jaccard,Consumer Goods,Consumer Goods,False,BTI,continuing,False
+2025-06-30,2025-12-31,jaccard,Industrials,Industrials,False,BVT,continuing,False
+2025-06-30,2025-12-31,jaccard,Consumer Goods,Consumer Goods,False,CFR,continuing,False
+2025-06-30,2025-12-31,jaccard,Consumer Services,Consumer Services,False,CLS,continuing,True
+2025-06-30,2025-12-31,jaccard,Financials,Financials,False,CPI,continuing,False
+2025-06-30,2025-12-31,jaccard,Financials,Financials,False,DSY,continuing,True
+2025-06-30,2025-12-31,jaccard,Financials,Financials,False,FSR,continuing,False
+2025-06-30,2025-12-31,jaccard,Basic Materials,Basic Materials,False,GFI,continuing,False
+2025-06-30,2025-12-31,jaccard,,Basic Materials,False,GLN,entry,
+2025-06-30,2025-12-31,jaccard,Financials,Financials,False,GRT,continuing,False
+2025-06-30,2025-12-31,jaccard,Basic Materials,Basic Materials,False,HAR,continuing,False
+2025-06-30,2025-12-31,jaccard,Basic Materials,Basic Materials,False,IMP,continuing,False
+2025-06-30,2025-12-31,jaccard,Financials,Financials,False,INL,continuing,False
+2025-06-30,2025-12-31,jaccard,Financials,Financials,False,INP,continuing,False
+2025-06-30,2025-12-31,jaccard,Basic Materials,Basic Materials,False,MNP,continuing,True
+2025-06-30,2025-12-31,jaccard,Consumer Services,Consumer Services,False,MRP,continuing,True
+2025-06-30,2025-12-31,jaccard,Telecommunications,Telecommunications,False,MTN,continuing,True
+2025-06-30,2025-12-31,jaccard,Financials,Financials,False,NED,continuing,False
+2025-06-30,2025-12-31,jaccard,Basic Materials,Basic Materials,False,NPH,continuing,False
+2025-06-30,2025-12-31,jaccard,Technology,Technology,False,NPN,continuing,False
+2025-06-30,2025-12-31,jaccard,Financials,Financials,False,NRP,continuing,False
+2025-06-30,2025-12-31,jaccard,Financials,Financials,False,OMU,continuing,False
+2025-06-30,2025-12-31,jaccard,Financials,Financials,False,OUT,continuing,False
+2025-06-30,2025-12-31,jaccard,Consumer Services,Consumer Services,False,PPH,continuing,True
+2025-06-30,2025-12-31,jaccard,Technology,Technology,False,PRX,continuing,False
+2025-06-30,2025-12-31,jaccard,Financials,Financials,False,REM,continuing,False
+2025-06-30,2025-12-31,jaccard,Financials,Financials,True,RNI,continuing,False
+2025-06-30,2025-12-31,jaccard,Financials,Financials,False,SBK,continuing,True
+2025-06-30,2025-12-31,jaccard,Consumer Services,Consumer Services,False,SHP,continuing,True
+2025-06-30,2025-12-31,jaccard,Financials,Financials,False,SLM,continuing,True
+2025-06-30,2025-12-31,jaccard,Basic Materials,Basic Materials,False,SOL,continuing,True
+2025-06-30,2025-12-31,jaccard,Basic Materials,Basic Materials,False,SSW,continuing,False
+2025-06-30,2025-12-31,jaccard,Basic Materials,Basic Materials,False,VAL,continuing,True
+2025-06-30,2025-12-31,jaccard,Telecommunications,Telecommunications,False,VOD,continuing,False
+2025-06-30,2025-12-31,jaccard,Consumer Services,Consumer Services,False,WHL,continuing,False
+2025-12-31,2026-06-30,overlap,Financials,Financials,False,ABG,continuing,True
+2025-12-31,2026-06-30,overlap,Basic Materials,Basic Materials,True,AGL,continuing,False
+2025-12-31,2026-06-30,overlap,Basic Materials,Basic Materials,False,ANG,continuing,False
+2025-12-31,2026-06-30,overlap,Consumer Goods,Consumer Goods,False,ANH,continuing,False
+2025-12-31,2026-06-30,overlap,Basic Materials,Basic Materials,False,BHG,continuing,False
+2025-12-31,2026-06-30,overlap,Consumer Services,Consumer Services,False,BID,continuing,False
+2025-12-31,2026-06-30,overlap,Consumer Goods,Consumer Goods,False,BTI,continuing,False
+2025-12-31,2026-06-30,overlap,Industrials,Industrials,False,BVT,continuing,False
+2025-12-31,2026-06-30,overlap,Consumer Goods,Consumer Goods,False,CFR,continuing,False
+2025-12-31,2026-06-30,overlap,Consumer Services,Consumer Services,False,CLS,continuing,False
+2025-12-31,2026-06-30,overlap,Financials,Financials,False,CPI,continuing,True
+2025-12-31,2026-06-30,overlap,Financials,Financials,False,DSY,continuing,True
+2025-12-31,2026-06-30,overlap,Financials,Financials,False,FSR,continuing,False
+2025-12-31,2026-06-30,overlap,Basic Materials,Basic Materials,False,GFI,continuing,False
+2025-12-31,2026-06-30,overlap,Basic Materials,Basic Materials,False,GLN,continuing,False
+2025-12-31,2026-06-30,overlap,Financials,Financials,False,GRT,continuing,False
+2025-12-31,2026-06-30,overlap,Basic Materials,Basic Materials,False,HAR,continuing,False
+2025-12-31,2026-06-30,overlap,Basic Materials,Basic Materials,False,IMP,continuing,False
+2025-12-31,2026-06-30,overlap,Financials,Financials,False,INL,continuing,False
+2025-12-31,2026-06-30,overlap,Financials,Financials,False,INP,continuing,False
+2025-12-31,2026-06-30,overlap,Basic Materials,,False,MNP,exit,
+2025-12-31,2026-06-30,overlap,Consumer Services,Consumer Services,False,MRP,continuing,True
+2025-12-31,2026-06-30,overlap,Telecommunications,Telecommunications,False,MTN,continuing,True
+2025-12-31,2026-06-30,overlap,Financials,Financials,False,NED,continuing,False
+2025-12-31,2026-06-30,overlap,Basic Materials,Basic Materials,False,NPH,continuing,False
+2025-12-31,2026-06-30,overlap,Technology,Technology,False,NPN,continuing,True
+2025-12-31,2026-06-30,overlap,Financials,Financials,False,NRP,continuing,False
+2025-12-31,2026-06-30,overlap,Financials,Financials,False,OMU,continuing,False
+2025-12-31,2026-06-30,overlap,Financials,Financials,False,OUT,continuing,False
+2025-12-31,2026-06-30,overlap,,Basic Materials,False,PAN,entry,
+2025-12-31,2026-06-30,overlap,Consumer Services,Consumer Services,False,PPH,continuing,False
+2025-12-31,2026-06-30,overlap,Technology,Technology,False,PRX,continuing,True
+2025-12-31,2026-06-30,overlap,Financials,Financials,False,REM,continuing,True
+2025-12-31,2026-06-30,overlap,Financials,Financials,True,RNI,continuing,True
+2025-12-31,2026-06-30,overlap,Financials,Financials,False,SBK,continuing,False
+2025-12-31,2026-06-30,overlap,Consumer Services,Consumer Services,False,SHP,continuing,False
+2025-12-31,2026-06-30,overlap,Financials,Financials,False,SLM,continuing,False
+2025-12-31,2026-06-30,overlap,Basic Materials,Basic Materials,False,SOL,continuing,False
+2025-12-31,2026-06-30,overlap,Basic Materials,Basic Materials,False,SSW,continuing,False
+2025-12-31,2026-06-30,overlap,Basic Materials,Basic Materials,False,VAL,continuing,False
+2025-12-31,2026-06-30,overlap,Telecommunications,Telecommunications,False,VOD,continuing,False
+2025-12-31,2026-06-30,overlap,Consumer Services,Consumer Services,False,WHL,continuing,True
+2025-12-31,2026-06-30,jaccard,Financials,Financials,False,ABG,continuing,True
+2025-12-31,2026-06-30,jaccard,Basic Materials,Basic Materials,True,AGL,continuing,True
+2025-12-31,2026-06-30,jaccard,Basic Materials,Basic Materials,False,ANG,continuing,False
+2025-12-31,2026-06-30,jaccard,Consumer Goods,Consumer Goods,False,ANH,continuing,False
+2025-12-31,2026-06-30,jaccard,Basic Materials,Basic Materials,False,BHG,continuing,False
+2025-12-31,2026-06-30,jaccard,Consumer Services,Consumer Services,False,BID,continuing,False
+2025-12-31,2026-06-30,jaccard,Consumer Goods,Consumer Goods,False,BTI,continuing,False
+2025-12-31,2026-06-30,jaccard,Industrials,Industrials,False,BVT,continuing,False
+2025-12-31,2026-06-30,jaccard,Consumer Goods,Consumer Goods,False,CFR,continuing,False
+2025-12-31,2026-06-30,jaccard,Consumer Services,Consumer Services,False,CLS,continuing,False
+2025-12-31,2026-06-30,jaccard,Financials,Financials,False,CPI,continuing,True
+2025-12-31,2026-06-30,jaccard,Financials,Financials,False,DSY,continuing,True
+2025-12-31,2026-06-30,jaccard,Financials,Financials,False,FSR,continuing,False
+2025-12-31,2026-06-30,jaccard,Basic Materials,Basic Materials,False,GFI,continuing,False
+2025-12-31,2026-06-30,jaccard,Basic Materials,Basic Materials,False,GLN,continuing,False
+2025-12-31,2026-06-30,jaccard,Financials,Financials,False,GRT,continuing,False
+2025-12-31,2026-06-30,jaccard,Basic Materials,Basic Materials,False,HAR,continuing,False
+2025-12-31,2026-06-30,jaccard,Basic Materials,Basic Materials,False,IMP,continuing,False
+2025-12-31,2026-06-30,jaccard,Financials,Financials,False,INL,continuing,False
+2025-12-31,2026-06-30,jaccard,Financials,Financials,False,INP,continuing,False
+2025-12-31,2026-06-30,jaccard,Basic Materials,,False,MNP,exit,
+2025-12-31,2026-06-30,jaccard,Consumer Services,Consumer Services,False,MRP,continuing,True
+2025-12-31,2026-06-30,jaccard,Telecommunications,Telecommunications,False,MTN,continuing,False
+2025-12-31,2026-06-30,jaccard,Financials,Financials,False,NED,continuing,False
+2025-12-31,2026-06-30,jaccard,Basic Materials,Basic Materials,False,NPH,continuing,False
+2025-12-31,2026-06-30,jaccard,Technology,Technology,False,NPN,continuing,False
+2025-12-31,2026-06-30,jaccard,Financials,Financials,False,NRP,continuing,False
+2025-12-31,2026-06-30,jaccard,Financials,Financials,False,OMU,continuing,False
+2025-12-31,2026-06-30,jaccard,Financials,Financials,False,OUT,continuing,False
+2025-12-31,2026-06-30,jaccard,,Basic Materials,False,PAN,entry,
+2025-12-31,2026-06-30,jaccard,Consumer Services,Consumer Services,False,PPH,continuing,False
+2025-12-31,2026-06-30,jaccard,Technology,Technology,False,PRX,continuing,True
+2025-12-31,2026-06-30,jaccard,Financials,Financials,False,REM,continuing,True
+2025-12-31,2026-06-30,jaccard,Financials,Financials,True,RNI,continuing,True
+2025-12-31,2026-06-30,jaccard,Financials,Financials,False,SBK,continuing,False
+2025-12-31,2026-06-30,jaccard,Consumer Services,Consumer Services,False,SHP,continuing,False
+2025-12-31,2026-06-30,jaccard,Financials,Financials,False,SLM,continuing,False
+2025-12-31,2026-06-30,jaccard,Basic Materials,Basic Materials,False,SOL,continuing,True
+2025-12-31,2026-06-30,jaccard,Basic Materials,Basic Materials,False,SSW,continuing,False
+2025-12-31,2026-06-30,jaccard,Basic Materials,Basic Materials,False,VAL,continuing,False
+2025-12-31,2026-06-30,jaccard,Telecommunications,Telecommunications,False,VOD,continuing,False
+2025-12-31,2026-06-30,jaccard,Consumer Services,Consumer Services,False,WHL,continuing,True

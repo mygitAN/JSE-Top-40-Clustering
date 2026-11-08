@@ -1,0 +1,5 @@
+PASS: 123 rows; 41 per date; 43 tickers; 3 RNI rows retained; 2 volume imputations; model features complete.
+Analysing 2025-06-30: 41 retained instruments
+Analysing 2025-12-31: 41 retained instruments
+Analysing 2026-06-30: 41 retained instruments
+Complete: C:\Users\HP\Documents\GitHub\JSE-Top-40-Clustering\experiments\runs\user-full-20261108

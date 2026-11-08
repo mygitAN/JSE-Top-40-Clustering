@@ -1,0 +1,47 @@
+Study run: three-cross-section-k8-01
+Artifacts: C:\Users\HP\Documents\GitHub\JSE-Top-40-Clustering\experiments\runs\three-cross-section-k8-01
+
+1. Validate and load all historical observations
+PASS: 123 rows; 41 per date; 43 tickers; 3 RNI rows retained; 2 volume imputations; model features complete.
+The ten numeric model features are: ['return_1y', 'average_daily_volume_1y_model', 'market_cap_zar', 'beta_1y', 'shares_outstanding', 'revenue_zar_model', 'eps_zar_model', 'annualised_volatility_1y', 'dividend_yield', 'earnings_yield_model_clipped']
+
+2. Exploratory data analysis across all three dates
+decision_date  instruments  distinct_tickers  fundamental_imputations  volume_imputations
+   2025-06-30           41                41                        1                   1
+   2025-12-31           41                41                        1                   1
+   2026-06-30           41                41                        1                   0
+EDA saved. No features removed or parameters selected from later dates.
+Distinct tickers: 43
+Observed at all three dates: 39
+
+3. Fit representations/clusters and report silhouette AND Davies-Bouldin
+PASS: 123 rows; 41 per date; 43 tickers; 3 RNI rows retained; 2 volume imputations; model features complete.
+Analysing 2025-06-30: 41 retained instruments
+C:\Users\HP\Documents\GitHub\JSE-Top-40-Clustering\.venv\Lib\site-packages\tqdm\auto.py:21: TqdmWarning: IProgress not found. Please update jupyter and ipywidgets. See https://ipywidgets.readthedocs.io/en/stable/user_install.html
+  from .autonotebook import tqdm as notebook_tqdm
+Analysing 2025-12-31: 41 retained instruments
+Analysing 2026-06-30: 41 retained instruments
+Complete: C:\Users\HP\Documents\GitHub\JSE-Top-40-Clustering\experiments\runs\three-cross-section-k8-01\models
+Model stage complete. SHAP is still pending; the study run is not completed yet.
+baseline 2025-06-30
+umap_sensitivity 2025-06-30
+
+4. Fit gradient-boosted surrogates and explain them with SHAP
+     study_model decision_date  in_sample_accuracy  oof_accuracy                       oof_status  minimum_cluster_size  shap_max_additivity_error
+        baseline    2025-06-30                 1.0      0.536585                        estimated                     2                   0.000001
+        baseline    2025-12-31                 1.0           NaN not estimable: singleton cluster                     1                   0.000002
+        baseline    2026-06-30                 1.0      0.731707                        estimated                     2                   0.000002
+umap_sensitivity    2025-06-30                 1.0      0.609756                        estimated                     3                   0.000003
+umap_sensitivity    2025-12-31                 1.0      0.634146                        estimated                     2                   0.000002
+umap_sensitivity    2026-06-30                 1.0      0.707317                        estimated                     2                   0.000001
+baseline 2025-06-30
+umap_sensitivity 2025-06-30
+
+5. Compare continuing members separately from index entries/exits
+     study_model     before      after  continuing  entries  exits      ari      nmi
+        baseline 2025-06-30 2025-12-31          40        1      1 0.450205 0.713770
+        baseline 2025-12-31 2026-06-30          40        1      1 0.604481 0.787782
+umap_sensitivity 2025-06-30 2025-12-31          40        1      1 0.383112 0.686000
+umap_sensitivity 2025-12-31 2026-06-30          40        1      1 0.568692 0.754909
+
+6. Validate all artifacts and complete the tracked study

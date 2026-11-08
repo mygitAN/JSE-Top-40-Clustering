@@ -1,0 +1,44 @@
+ticker,2025-06-30,2025-12-31,2026-06-30,observed_all_three,stability_status,baseline_to_current_changed,direct_baseline_to_current_changed
+ABG,0.0,0.0,0.0,True,stable all three,False,False
+AGL,0.0,0.0,0.0,True,stable all three,False,False
+ANG,0.0,0.0,0.0,True,stable all three,False,False
+ANH,0.0,0.0,0.0,True,stable all three,False,False
+APN,0.0,,,False,membership gap: no three-date status,,
+BHG,0.0,0.0,0.0,True,stable all three,False,False
+BID,0.0,0.0,0.0,True,stable all three,False,False
+BTI,0.0,0.0,0.0,True,stable all three,False,False
+BVT,0.0,0.0,0.0,True,stable all three,False,False
+CFR,0.0,0.0,0.0,True,stable all three,False,False
+CLS,0.0,0.0,0.0,True,stable all three,False,False
+CPI,0.0,0.0,0.0,True,stable all three,False,False
+DSY,0.0,0.0,0.0,True,stable all three,False,False
+FSR,0.0,0.0,0.0,True,stable all three,False,False
+GFI,0.0,0.0,0.0,True,stable all three,False,False
+GLN,,2.0,2.0,False,membership gap: no three-date status,,
+GRT,0.0,0.0,0.0,True,stable all three,False,False
+HAR,0.0,0.0,0.0,True,stable all three,False,False
+IMP,0.0,0.0,0.0,True,stable all three,False,False
+INL,0.0,0.0,0.0,True,stable all three,False,False
+INP,0.0,0.0,0.0,True,stable all three,False,False
+MNP,0.0,0.0,,False,membership gap: no three-date status,,
+MRP,0.0,0.0,0.0,True,stable all three,False,False
+MTN,0.0,0.0,0.0,True,stable all three,False,False
+NED,0.0,0.0,0.0,True,stable all three,False,False
+NPH,0.0,0.0,0.0,True,stable all three,False,False
+NPN,0.0,0.0,0.0,True,stable all three,False,False
+NRP,0.0,0.0,0.0,True,stable all three,False,False
+OMU,0.0,0.0,0.0,True,stable all three,False,False
+OUT,0.0,0.0,0.0,True,stable all three,False,False
+PAN,,,0.0,False,membership gap: no three-date status,,
+PPH,0.0,0.0,0.0,True,stable all three,False,False
+PRX,0.0,0.0,0.0,True,stable all three,False,False
+REM,0.0,0.0,0.0,True,stable all three,False,False
+RNI,0.0,0.0,0.0,True,stable all three,False,False
+SBK,0.0,0.0,0.0,True,stable all three,False,False
+SHP,0.0,0.0,0.0,True,stable all three,False,False
+SLM,0.0,0.0,0.0,True,stable all three,False,False
+SOL,0.0,0.0,0.0,True,stable all three,False,False
+SSW,1.0,0.0,0.0,True,shifted at least once,True,True
+VAL,0.0,0.0,0.0,True,stable all three,False,False
+VOD,0.0,0.0,0.0,True,stable all three,False,False
+WHL,0.0,0.0,0.0,True,stable all three,False,False

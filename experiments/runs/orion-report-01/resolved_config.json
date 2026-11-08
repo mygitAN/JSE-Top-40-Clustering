@@ -1,0 +1,11 @@
+{
+  "experiment": "orion-methods-results-check",
+  "source_run": "final-full-42",
+  "refit": false,
+  "alignment_objectives": [
+    "overlap",
+    "jaccard"
+  ],
+  "univariate_reference": "same-snapshot median, June-scaled features",
+  "tie_ranks": "average"
+}

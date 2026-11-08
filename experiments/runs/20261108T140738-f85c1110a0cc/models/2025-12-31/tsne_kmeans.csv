@@ -1,0 +1,42 @@
+ticker,sector_label,fundamentals_imputed,volume_imputed,axis1,axis2,cluster
+ABG,Financials,False,False,-5.993705,0.8936811,6
+AGL,Basic Materials,False,True,3.62026,-4.0400443,0
+ANG,Basic Materials,False,False,16.127335,0.48749492,2
+ANH,Consumer Goods,False,False,0.48935026,-10.280858,4
+BHG,Basic Materials,False,False,0.16548502,-11.1378975,4
+BID,Consumer Services,False,False,2.9244337,3.9471374,5
+BTI,Consumer Goods,False,False,0.13736486,-9.663477,4
+BVT,Industrials,False,False,1.1935616,3.3827112,5
+CFR,Consumer Goods,False,False,1.0767101,-8.364921,4
+CLS,Consumer Services,False,False,2.9235625,3.0047588,5
+CPI,Financials,False,False,2.9418268,-1.9917144,7
+DSY,Financials,False,False,2.9906354,-0.1825979,7
+FSR,Financials,False,False,-4.2264647,6.3058815,1
+GFI,Basic Materials,False,False,15.10842,0.59104604,2
+GLN,Basic Materials,False,False,0.013217967,-12.381186,4
+GRT,Financials,False,False,-4.0920024,4.390977,1
+HAR,Basic Materials,False,False,13.251862,0.63005036,2
+IMP,Basic Materials,False,False,15.166912,1.6446035,2
+INL,Financials,False,False,-9.193436,1.6243923,3
+INP,Financials,False,False,-9.397628,1.1260298,3
+MNP,Basic Materials,False,False,-10.914145,3.2274313,3
+MRP,Consumer Services,False,False,-11.173432,4.047761,3
+MTN,Telecommunications,False,False,-2.4289954,-1.3194828,6
+NED,Financials,False,False,-10.17348,1.6848712,3
+NPH,Basic Materials,False,False,16.187742,1.5016488,2
+NPN,Technology,False,False,3.2348568,-3.0742774,0
+NRP,Financials,False,False,-8.707088,0.11493358,3
+OMU,Financials,False,False,-4.5359073,7.061591,1
+OUT,Financials,False,False,-1.9655488,2.3225527,6
+PPH,Consumer Services,False,False,-3.9021163,7.3989325,1
+PRX,Technology,False,False,1.3360782,-7.810192,4
+REM,Financials,False,False,2.396032,0.6010069,7
+RNI,Financials,True,False,3.5541058,-0.6558817,7
+SBK,Financials,False,False,-4.577864,1.0221986,6
+SHP,Consumer Services,False,False,2.1166568,3.8562727,5
+SLM,Financials,False,False,-3.1379406,2.2610497,6
+SOL,Basic Materials,False,False,5.025858,-4.2341537,0
+SSW,Basic Materials,False,False,16.947763,2.7343242,2
+VAL,Basic Materials,False,False,13.865675,0.6775009,2
+VOD,Telecommunications,False,False,-3.436183,0.44052005,6
+WHL,Consumer Services,False,False,-0.15878612,3.1961873,5

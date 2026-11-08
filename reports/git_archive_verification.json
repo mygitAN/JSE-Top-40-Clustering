@@ -1,0 +1,101 @@
+{
+  "results_commit": "07c5a7a34f243849f576821186fa855951071865",
+  "method": "git archive bytes, every manifest entry and completion marker",
+  "runs": [
+    {
+      "run_id": "audit-full-42",
+      "verified_artifacts": 104,
+      "status": "passed"
+    },
+    {
+      "run_id": "final-full-42",
+      "verified_artifacts": 123,
+      "status": "passed"
+    },
+    {
+      "run_id": "fixed-umap-001-01",
+      "verified_artifacts": 21,
+      "status": "passed"
+    },
+    {
+      "run_id": "orion-report-01",
+      "verified_artifacts": 13,
+      "status": "passed"
+    },
+    {
+      "run_id": "repeat-full-42",
+      "verified_artifacts": 123,
+      "status": "passed"
+    },
+    {
+      "run_id": "silhouette-db-search-01",
+      "verified_artifacts": 209,
+      "status": "passed"
+    },
+    {
+      "run_id": "three-cross-section-cli-check-01",
+      "verified_artifacts": 172,
+      "status": "passed"
+    },
+    {
+      "run_id": "three-cross-section-k8-01",
+      "verified_artifacts": 289,
+      "status": "passed"
+    },
+    {
+      "run_id": "three-cross-section-population-clarified-01",
+      "verified_artifacts": 289,
+      "status": "passed"
+    },
+    {
+      "run_id": "three-cross-section-population-clarified-02",
+      "verified_artifacts": 289,
+      "status": "passed"
+    },
+    {
+      "run_id": "three-cross-section-study-01",
+      "verified_artifacts": 277,
+      "status": "passed"
+    },
+    {
+      "run_id": "three-cross-section-study-02",
+      "verified_artifacts": 280,
+      "status": "passed"
+    },
+    {
+      "run_id": "tracker-check-42",
+      "verified_artifacts": 90,
+      "status": "passed"
+    },
+    {
+      "run_id": "user-full-20261108",
+      "verified_artifacts": 123,
+      "status": "passed"
+    },
+    {
+      "run_id": "user-orion-20261108",
+      "verified_artifacts": 13,
+      "status": "passed"
+    },
+    {
+      "run_id": "user-umap-grid-01",
+      "verified_artifacts": 20,
+      "status": "passed"
+    },
+    {
+      "run_id": "paper-exhaustive-k8-01",
+      "verified_artifacts": 1186,
+      "status": "passed"
+    },
+    {
+      "run_id": "anomaly-dynamics-report-v2-01",
+      "verified_artifacts": 53,
+      "status": "passed"
+    },
+    {
+      "run_id": "peer-cluster-review-01",
+      "verified_artifacts": 112,
+      "status": "passed"
+    }
+  ]
+}

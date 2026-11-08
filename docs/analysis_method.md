@@ -1,5 +1,17 @@
 # Three-cross-section analysis
 
+The later supplied SACJ manuscript specifies PCA(95% variance) and automatic
+t-SNE learning rate, while the frozen recovered baseline below uses PCA(2) and
+learning rate 10. Both alternatives are evaluated in the separately documented
+[joint silhouette/DB search](decisions/003-silhouette-db-search.md), with
+[saved results](../reports/optimization_results.md). No existing baseline is
+silently relabelled as an exact reproduction of the manuscript.
+
+The [ORiON checklist](orion_methods_results_checklist.md) defines the paper's
+claim boundary and evidence layers. The current ten-feature historic-consensus-
+excluded variant differs from the original 11-feature experiment. Supplementary
+Jaccard alignment and SHAP/univariate checks do not replace saved baseline results.
+
 ## Recovered baseline and explicit implementation choices
 
 The historical conversation of 8 October 2024 records MinMax scaling, t-SNE
@@ -19,7 +31,14 @@ baseline, not an optimum or a requirement imposed by sector labels; a k=2–10
 sensitivity table accompanies it. Do not select settings using June 2026 scores
 then describe June 2026 as an untouched test.
 
+The machine-readable implementation contract is `configs/baseline.json`.
+Audit repairs, environment differences and open decisions are recorded in
+`docs/decisions/001-audit.md`. Results are review candidates until explicitly
+promoted through `experiments/baseline.json`; execution never changes that pointer.
+
 ## Inputs and preprocessing
+
+Each snapshot contains **40 company groups represented by 41 listed instruments**. Investec Limited (INL) and Investec plc (INP) are separate securities in one dual-listed company (DLC) group; both remain in the instrument-level analysis. Exited members are excluded at subsequent dates until an effective re-entry. See [the population audit](../reports/population_count_audit.md) for sources and scope.
 
 All 123 rows (41/date, 43 unique tickers) remain, including RNI. The ten numeric
 inputs are return, average volume, market cap, beta, shares, revenue, EPS,
@@ -28,6 +47,13 @@ analyst ratings are not fabricated. Close is not counted as an extra feature.
 Sector labels are retained as external descriptive labels, not ordinal codes
 or model inputs. Sector ARI/NMI are agreement statistics, not ground-truth
 accuracy. This keeps the clustering unsupervised with respect to sectors.
+
+Units are preserved from the supplied workbook: return, beta, volatility and
+dividend/earnings yields are numeric ratios; volume is average daily shares;
+shares outstanding is a count; capitalization and revenue are ZAR; EPS and close
+are ZAR per share. The workbook describes return as split-adjusted price return,
+excluding cash dividends. These labels do not remove differing revenue/EPS
+accounting definitions across sectors or certify historical share bases.
 
 The audited CSV already holds separate model-only imputation columns and flags,
 with constants and E/P clipping fitted on June 2025 only. It is not overwritten.

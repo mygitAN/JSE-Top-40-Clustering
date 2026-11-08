@@ -1,0 +1,295 @@
+diff --git a/experiments/registry.csv b/experiments/registry.csv
+index 3456a31..23e9db0 100644
+--- a/experiments/registry.csv
++++ b/experiments/registry.csv
+@@ -25,3 +25,8 @@ anomaly-dynamics-report-v2-01,completed,2026-11-08T15:05:08.013852+00:00,2026-11
+ peer-cluster-review-01,completed,2026-11-08T15:18:23.432717+00:00,2026-11-08T15:18:39.867014+00:00,posthoc-peer-cluster-suitability-review-v1,Review peer-cluster suitability while preserving notebook strengths and primary results,23b0812f391e41d7bb075577fa497411726093e9,True,16.43799999996554,runs/peer-cluster-review-01,
+ 20261108T183405-456a7008fcf5,running,2026-11-08T18:34:05.849277+00:00,,paper-eda-exhaustive-grid-and-longitudinal-v1,"EDA, exhaustive finite-grid optimisation, frozen follow-ups and descriptive longitudinal screens",,,,runs/20261108T183405-456a7008fcf5,
+ 20261108T183350-bcda5e9f9aaa,completed,2026-11-08T18:33:50.450686+00:00,2026-11-08T18:34:37.329828+00:00,three-cross-section-study-walkthrough,"Guided three-cross-section revision: EDA, model comparisons, plots, SHAP and temporal interpretation",4ca523bd70f916c973173df370eae47a4b2a78fc,True,46.875,runs/20261108T183350-bcda5e9f9aaa,
++20261108T194206-c0834bf43b25,completed,2026-11-08T19:42:06.345427+00:00,2026-11-08T19:43:00.537796+00:00,three-cross-section-study-walkthrough,"Guided three-cross-section revision: EDA, model comparisons, plots, SHAP and temporal interpretation",c54c59d05d570f19b476262d0a4e2b27c0124b4a,True,54.188000000081956,runs/20261108T194206-c0834bf43b25,
++20261108T194309-0cca526cc2bb,completed,2026-11-08T19:43:09.958517+00:00,2026-11-08T19:43:41.234885+00:00,three-cross-section-study-walkthrough,"Guided three-cross-section revision: EDA, model comparisons, plots, SHAP and temporal interpretation",c54c59d05d570f19b476262d0a4e2b27c0124b4a,True,31.281000000075437,runs/20261108T194309-0cca526cc2bb,
++20261108T194635-8d8ba4b18879,completed,2026-11-08T19:46:35.997475+00:00,2026-11-08T19:47:12.817004+00:00,three-cross-section-study-walkthrough,"Guided three-cross-section revision: EDA, model comparisons, plots, SHAP and temporal interpretation",c54c59d05d570f19b476262d0a4e2b27c0124b4a,True,36.82799999997951,runs/20261108T194635-8d8ba4b18879,
++20261108T195308-c6ad590aa33a,completed,2026-11-08T19:53:08.893412+00:00,2026-11-08T19:53:52.727006+00:00,three-cross-section-study-walkthrough,"Guided three-cross-section revision: EDA, model comparisons, plots, SHAP and temporal interpretation",c54c59d05d570f19b476262d0a4e2b27c0124b4a,True,43.82799999997951,runs/20261108T195308-c6ad590aa33a,
++20261108T195416-5fc15b719ecd,running,2026-11-08T19:54:16.711028+00:00,,three-cross-section-study-walkthrough,"Guided three-cross-section revision: EDA, model comparisons, plots, SHAP and temporal interpretation",,,,runs/20261108T195416-5fc15b719ecd,
+diff --git a/experiments/runs/20261108T183405-456a7008fcf5/run.log b/experiments/runs/20261108T183405-456a7008fcf5/run.log
+index a4d28d9..2e3cfe9 100644
+--- a/experiments/runs/20261108T183405-456a7008fcf5/run.log
++++ b/experiments/runs/20261108T183405-456a7008fcf5/run.log
+@@ -50,3 +50,45 @@ Search representation 41/86: umap {'n_components': 2, 'n_neighbors': 3, 'min_dis
+ Search representation 42/86: umap {'n_components': 2, 'n_neighbors': 3, 'min_dist': 0.01, 'metric': 'euclidean', 'n_jobs': 1}
+ Search representation 43/86: umap {'n_components': 2, 'n_neighbors': 3, 'min_dist': 0.01, 'metric': 'manhattan', 'n_jobs': 1}
+ Search representation 44/86: umap {'n_components': 2, 'n_neighbors': 3, 'min_dist': 0.01, 'metric': 'cosine', 'n_jobs': 1}
++Search representation 45/86: umap {'n_components': 2, 'n_neighbors': 3, 'min_dist': 0.1, 'metric': 'euclidean', 'n_jobs': 1}
++Search representation 46/86: umap {'n_components': 2, 'n_neighbors': 3, 'min_dist': 0.1, 'metric': 'manhattan', 'n_jobs': 1}
++Search representation 47/86: umap {'n_components': 2, 'n_neighbors': 3, 'min_dist': 0.1, 'metric': 'cosine', 'n_jobs': 1}
++Search representation 48/86: umap {'n_components': 2, 'n_neighbors': 3, 'min_dist': 0.5, 'metric': 'euclidean', 'n_jobs': 1}
++Search representation 49/86: umap {'n_components': 2, 'n_neighbors': 3, 'min_dist': 0.5, 'metric': 'manhattan', 'n_jobs': 1}
++Search representation 50/86: umap {'n_components': 2, 'n_neighbors': 3, 'min_dist': 0.5, 'metric': 'cosine', 'n_jobs': 1}
++Search representation 51/86: umap {'n_components': 2, 'n_neighbors': 5, 'min_dist': 0.0, 'metric': 'euclidean', 'n_jobs': 1}
++Search representation 52/86: umap {'n_components': 2, 'n_neighbors': 5, 'min_dist': 0.0, 'metric': 'manhattan', 'n_jobs': 1}
++Search representation 53/86: umap {'n_components': 2, 'n_neighbors': 5, 'min_dist': 0.0, 'metric': 'cosine', 'n_jobs': 1}
++Search representation 54/86: umap {'n_components': 2, 'n_neighbors': 5, 'min_dist': 0.01, 'metric': 'euclidean', 'n_jobs': 1}
++Search representation 55/86: umap {'n_components': 2, 'n_neighbors': 5, 'min_dist': 0.01, 'metric': 'manhattan', 'n_jobs': 1}
++Search representation 56/86: umap {'n_components': 2, 'n_neighbors': 5, 'min_dist': 0.01, 'metric': 'cosine', 'n_jobs': 1}
++Search representation 57/86: umap {'n_components': 2, 'n_neighbors': 5, 'min_dist': 0.1, 'metric': 'euclidean', 'n_jobs': 1}
++Search representation 58/86: umap {'n_components': 2, 'n_neighbors': 5, 'min_dist': 0.1, 'metric': 'manhattan', 'n_jobs': 1}
++Search representation 59/86: umap {'n_components': 2, 'n_neighbors': 5, 'min_dist': 0.1, 'metric': 'cosine', 'n_jobs': 1}
++Search representation 60/86: umap {'n_components': 2, 'n_neighbors': 5, 'min_dist': 0.5, 'metric': 'euclidean', 'n_jobs': 1}
++Search representation 61/86: umap {'n_components': 2, 'n_neighbors': 5, 'min_dist': 0.5, 'metric': 'manhattan', 'n_jobs': 1}
++Search representation 62/86: umap {'n_components': 2, 'n_neighbors': 5, 'min_dist': 0.5, 'metric': 'cosine', 'n_jobs': 1}
++Search representation 63/86: umap {'n_components': 2, 'n_neighbors': 10, 'min_dist': 0.0, 'metric': 'euclidean', 'n_jobs': 1}
++Search representation 64/86: umap {'n_components': 2, 'n_neighbors': 10, 'min_dist': 0.0, 'metric': 'manhattan', 'n_jobs': 1}
++Search representation 65/86: umap {'n_components': 2, 'n_neighbors': 10, 'min_dist': 0.0, 'metric': 'cosine', 'n_jobs': 1}
++Search representation 66/86: umap {'n_components': 2, 'n_neighbors': 10, 'min_dist': 0.01, 'metric': 'euclidean', 'n_jobs': 1}
++Search representation 67/86: umap {'n_components': 2, 'n_neighbors': 10, 'min_dist': 0.01, 'metric': 'manhattan', 'n_jobs': 1}
++Search representation 68/86: umap {'n_components': 2, 'n_neighbors': 10, 'min_dist': 0.01, 'metric': 'cosine', 'n_jobs': 1}
++Search representation 69/86: umap {'n_components': 2, 'n_neighbors': 10, 'min_dist': 0.1, 'metric': 'euclidean', 'n_jobs': 1}
++Search representation 70/86: umap {'n_components': 2, 'n_neighbors': 10, 'min_dist': 0.1, 'metric': 'manhattan', 'n_jobs': 1}
++Search representation 71/86: umap {'n_components': 2, 'n_neighbors': 10, 'min_dist': 0.1, 'metric': 'cosine', 'n_jobs': 1}
++Search representation 72/86: umap {'n_components': 2, 'n_neighbors': 10, 'min_dist': 0.5, 'metric': 'euclidean', 'n_jobs': 1}
++Search representation 73/86: umap {'n_components': 2, 'n_neighbors': 10, 'min_dist': 0.5, 'metric': 'manhattan', 'n_jobs': 1}
++Search representation 74/86: umap {'n_components': 2, 'n_neighbors': 10, 'min_dist': 0.5, 'metric': 'cosine', 'n_jobs': 1}
++Search representation 75/86: umap {'n_components': 2, 'n_neighbors': 20, 'min_dist': 0.0, 'metric': 'euclidean', 'n_jobs': 1}
++Search representation 76/86: umap {'n_components': 2, 'n_neighbors': 20, 'min_dist': 0.0, 'metric': 'manhattan', 'n_jobs': 1}
++Search representation 77/86: umap {'n_components': 2, 'n_neighbors': 20, 'min_dist': 0.0, 'metric': 'cosine', 'n_jobs': 1}
++Search representation 78/86: umap {'n_components': 2, 'n_neighbors': 20, 'min_dist': 0.01, 'metric': 'euclidean', 'n_jobs': 1}
++Search representation 79/86: umap {'n_components': 2, 'n_neighbors': 20, 'min_dist': 0.01, 'metric': 'manhattan', 'n_jobs': 1}
++Search representation 80/86: umap {'n_components': 2, 'n_neighbors': 20, 'min_dist': 0.01, 'metric': 'cosine', 'n_jobs': 1}
++Search representation 81/86: umap {'n_components': 2, 'n_neighbors': 20, 'min_dist': 0.1, 'metric': 'euclidean', 'n_jobs': 1}
++Search representation 82/86: umap {'n_components': 2, 'n_neighbors': 20, 'min_dist': 0.1, 'metric': 'manhattan', 'n_jobs': 1}
++Search representation 83/86: umap {'n_components': 2, 'n_neighbors': 20, 'min_dist': 0.1, 'metric': 'cosine', 'n_jobs': 1}
++Search representation 84/86: umap {'n_components': 2, 'n_neighbors': 20, 'min_dist': 0.5, 'metric': 'euclidean', 'n_jobs': 1}
++Search representation 85/86: umap {'n_components': 2, 'n_neighbors': 20, 'min_dist': 0.5, 'metric': 'manhattan', 'n_jobs': 1}
++Search representation 86/86: umap {'n_components': 2, 'n_neighbors': 20, 'min_dist': 0.5, 'metric': 'cosine', 'n_jobs': 1}
+diff --git a/experiments/runs/20261108T183405-456a7008fcf5/status.json b/experiments/runs/20261108T183405-456a7008fcf5/status.json
+index 209f0d5..061e13d 100644
+--- a/experiments/runs/20261108T183405-456a7008fcf5/status.json
++++ b/experiments/runs/20261108T183405-456a7008fcf5/status.json
+@@ -209,5 +209,5 @@
+     "data/source/Top40_PIT_Verification_v4.xlsx": "4f5e3e5f80b396591bd5b66b4c0ab3b99876419950e746ca99e52b2a5a5a8110",
+     "docs/Top40_Retrospective_Model_Method_v1.json": "594393356d316981076242949e40045ab71266e3868d9482be2dbdb32adbd738"
+   },
+-  "study_stage": "explored"
++  "study_stage": "searched"
+ }
+diff --git a/notebooks/three_cross_section_study.ipynb b/notebooks/three_cross_section_study.ipynb
+index 7585caa..0cce20f 100644
+--- a/notebooks/three_cross_section_study.ipynb
++++ b/notebooks/three_cross_section_study.ipynb
+@@ -13,7 +13,11 @@
+     "\n",
+     "**Before running:** select the project `.venv` Python kernel in VS Code. Install `requirements-notebook.txt` in that environment. Then choose **Run All**. A new immutable run folder is created automatically. The command-line equivalent is `python scripts/run_study.py`.\n",
+     "\n",
+-    "Original inputs and evidence flags stay intact. RNI remains with separately flagged model-only imputations. The recovered t-SNE baseline and a frozen UMAP sensitivity are displayed separately; nothing is automatically promoted to the paper."
++    "Original inputs and evidence flags stay intact. RNI remains with separately flagged model-only imputations. The recovered t-SNE baseline and a frozen UMAP sensitivity are displayed separately; nothing is automatically promoted to the paper.",
++    "\n",
++    "**Reporting additions:** the fixed models below are retained. Population/sector context, Jaccard-aligned instrument histories, actual 0?1 Jaccard overlap, separate movement counts, sector context and descriptive geometric screens are displayed without adopting the Paper Experiments PCA winner or its search.\n",
++    "\n",
++    "**Ready-to-view saved results:** [enriched review notebook](../reports/three_cross_section_enriched_review.ipynb). It displays existing models and the reporting additions without refitting.\n"
+    ]
+   },
+   {
+@@ -268,11 +272,13 @@
+    "id": "jse-study-18",
+    "metadata": {},
+    "source": [
+-    "## 5. Compare dates while respecting index membership\n",
++    "## 5. Cluster membership and movement over time\n",
++    "\n",
++    "Keep the original continuing-member ARI/NMI and maximum-overlap counts. Additional views use Hungarian maximum-Jaccard label alignment, with fresh IDs for unmatched clusters. These are descriptive labels, not sectors or permanent economic identities.\n",
+     "\n",
+-    "ARI/NMI compare continuing members only. Hungarian maximum-overlap alignment creates descriptive transition tables; labels do not become persistent economic identities. Entries/exits are displayed separately and receive **no ordinary cluster-change flag**. Imputation-sensitive interpretations remain marked.\n",
++    "**Jaccard heatmaps show intersection / union (0?1), not transition counts.** Every adjacent comparison uses instruments present at both dates; entries/exits are shown separately. Empty unions are NA. Jaccard scores are not transition probabilities; rows need not sum to one. Instrument histories require all three observations. Compare alignment-objective sensitivity before interpreting a changed instrument.\n",
+     "\n",
+-    "The separate Jaccard-alignment sensitivity is documented in `reports/orion_alignment_differences.csv` and the ORiON checklist; alignment objectives can change instrument-level interpretations. No emerging/persistent/resolving anomaly taxonomy is invented here."
++    "The extra geometric screen reuses Paper Experiments? individual squared Mahalanobis distance (no n multiplier), its explicitly descriptive F reference and internal-Beta sensitivity. Singular covariance is not estimable. The F cutoff is not a calibrated individual-outlier test on learned coordinates. Seed-42 flags supported by at least three estimable seeds are descriptive candidates, not confirmed anomalies. Sector divergence, singleton membership and geometric extremes are separate. Existing cluster SHAP explains membership associations; it does not explain the distance screen or establish a cause.\n"
+    ]
+   },
+   {
+@@ -289,7 +295,119 @@
+     "    study.show_figure(relative_folder / \"transition_heatmaps.png\")\n",
+     "    events = study.table(relative_folder / \"membership_and_cluster_transitions.csv\")\n",
+     "    display(events.loc[events.membership_event != \"continuing\",\n",
+-    "                       [\"before\", \"after\", \"ticker\", \"membership_event\", \"cluster_changed\"]])"
++    "                       [\"before\", \"after\", \"ticker\", \"membership_event\", \"cluster_changed\"]])\n",
++    "\n",
++    "# Reporting additions use the SAME baseline and UMAP partitions as the model stage.\n",
++    "display(study.table(\"longitudinal_summary.csv\"))\n",
++    "for model_name in study.model_folders:\n",
++    "    folder = f\"longitudinal/{model_name}\"\n",
++    "    print(f\"\\n{model_name}: Jaccard-aligned descriptive membership\")\n",
++    "    study.show_figure(f\"{folder}/cluster_histories.png\")\n",
++    "    study.show_figure(f\"{folder}/jaccard_heatmaps.png\")\n",
++    "    study.show_figure(f\"{folder}/movement_counts_heatmaps.png\")\n",
++    "    display(study.table(f\"{folder}/stable_instruments.csv\"))\n",
++    "    display(study.table(f\"{folder}/shifted_instruments.csv\"))\n",
++    "    events = study.table(f\"{folder}/membership_transitions.csv\")\n",
++    "    display(events.query(\"membership_event != 'continuing'\"))\n",
++    "    sensitivity = study.table(f\"{folder}/alignment_objective_sensitivity.csv\")\n",
++    "    display(sensitivity.loc[sensitivity.jaccard_changed != sensitivity.overlap_changed])\n",
++    "    diagnostics = study.table(f\"{folder}/sector_and_screen_diagnostics.csv\")\n",
++    "    display(diagnostics)\n"
++   ]
++  },
++  {
++   "cell_type": "markdown",
++   "id": "jse-study-19a",
++   "metadata": {},
++   "source": [
++    "### Cluster histories across the three dates\n",
++    "\n",
++    "Each row is an instrument observed at all three dates. Cluster labels at each later date are aligned to the previous date with the Hungarian maximum-Jaccard assignment on continuing members (deterministic solver). A cluster with no positive overlap gets a fresh label that is never reused. Colours and numbers are aligned descriptive labels, not sectors or permanent identities. The full code is in the next cell; it reads only the saved `assignments.csv` of each model and writes nothing to the run folder."
++   ]
++  },
++  {
++   "cell_type": "code",
++   "execution_count": null,
++   "id": "jse-study-19b",
++   "metadata": {},
++   "outputs": [],
++   "source": [
++    "# Cluster histories: Hungarian maximum-Jaccard alignment of cluster labels across dates,\n",
++    "# then one row per instrument observed at every date. Self-contained: no project helpers.\n",
++    "import numpy as np\n",
++    "import pandas as pd\n",
++    "import matplotlib.pyplot as plt\n",
++    "from matplotlib.colors import ListedColormap, BoundaryNorm\n",
++    "from scipy.optimize import linear_sum_assignment\n",
++    "\n",
++    "HISTORY_DATES = list(study.config[\"dates\"])\n",
++    "\n",
++    "\n",
++    "def align_to_previous(previous, current, next_fresh_id):\n",
++    "    \"\"\"Relabel `current` clusters to the `previous` aligned labels by maximum Jaccard.\n",
++    "\n",
++    "    Both inputs are Series indexed by ticker. Overlap is measured on continuing members only.\n",
++    "    A current cluster with no positive-overlap match gets a fresh ID that was never used before.\n",
++    "    \"\"\"\n",
++    "    common = previous.index.intersection(current.index)\n",
++    "    old_labels, new_labels = sorted(previous.unique()), sorted(current.unique())\n",
++    "    old_sets = {c: set(common[previous.loc[common] == c]) for c in old_labels}\n",
++    "    new_sets = {c: set(common[current.loc[common] == c]) for c in new_labels}\n",
++    "    intersections = np.array([[len(old_sets[a] & new_sets[b]) for b in new_labels] for a in old_labels])\n",
++    "    unions = np.array([[len(old_sets[a] | new_sets[b]) for b in new_labels] for a in old_labels])\n",
++    "    jaccard = np.divide(intersections, unions, out=np.zeros(intersections.shape), where=unions > 0)\n",
++    "    rows, cols = linear_sum_assignment(-jaccard)  # deterministic Hungarian solver, maximise Jaccard\n",
++    "    mapping = {new_labels[c]: old_labels[r] for r, c in zip(rows, cols) if intersections[r, c] > 0}\n",
++    "    for label in new_labels:  # zero-overlap matches are rejected -> fresh, never-reused ID\n",
++    "        if label not in mapping:\n",
++    "            mapping[label] = next_fresh_id\n",
++    "            next_fresh_id += 1\n",
++    "    return current.map(mapping), next_fresh_id\n",
++    "\n",
++    "\n",
++    "def cluster_histories(assignments, dates):\n",
++    "    \"\"\"Return a ticker x date table of aligned labels for instruments present at all dates.\"\"\"\n",
++    "    raw = {d: assignments[assignments.decision_date == d].set_index(\"ticker\")[\"cluster\"].astype(int)\n",
++    "           for d in dates}\n",
++    "    aligned = {dates[0]: raw[dates[0]]}\n",
++    "    next_fresh_id = int(raw[dates[0]].max()) + 1\n",
++    "    for before, after in zip(dates, dates[1:]):\n",
++    "        aligned[after], next_fresh_id = align_to_previous(aligned[before], raw[after], next_fresh_id)\n",
++    "    table = pd.DataFrame(aligned)\n",
++    "    observed = table.dropna().astype(int)\n",
++    "    observed[\"status\"] = np.where(observed[dates].nunique(axis=1) == 1, \"stable all dates\", \"shifted at least once\")\n",
++    "    # Same row order as the Paper Experiments figure: by label at each date, then ticker.\n",
++    "    return observed.reset_index(names=\"ticker\").sort_values(dates + [\"ticker\"]).reset_index(drop=True)\n",
++    "\n",
++    "\n",
++    "def plot_cluster_histories(observed, dates, title):\n",
++    "    labels = sorted(set(observed[dates].to_numpy().ravel()))\n",
++    "    index = {label: i for i, label in enumerate(labels)}\n",
++    "    colours = plt.get_cmap(\"tab20\")(np.linspace(0, 1, len(labels)))\n",
++    "    grid = np.array([[index[v] for v in row] for row in observed[dates].to_numpy()])\n",
++    "    fig, ax = plt.subplots(figsize=(8, max(5, 0.28 * len(observed) + 1.5)))\n",
++    "    ax.imshow(grid, cmap=ListedColormap(colours), norm=BoundaryNorm(np.arange(len(labels) + 1) - 0.5, len(labels)),\n",
++    "              aspect=\"auto\", interpolation=\"nearest\")\n",
++    "    for i, row in enumerate(observed[dates].to_numpy()):\n",
++    "        for j, label in enumerate(row):\n",
++    "            luminance = colours[index[label]][:3] @ np.array([0.2126, 0.7152, 0.0722])\n",
++    "            ax.text(j, i, str(label), ha=\"center\", va=\"center\", fontsize=7,\n",
++    "                    color=\"white\" if luminance < 0.45 else \"black\")\n",
++    "    ax.set_xticks(range(len(dates)), dates)\n",
++    "    ax.set_yticks(range(len(observed)), observed.ticker, fontsize=8)\n",
++    "    ax.set_title(f\"{title}\\nCluster histories: {len(observed)} instruments observed at all dates\\n\"\n",
++    "                 \"Numbers are aligned descriptive labels, not sectors\", fontsize=11)\n",
++    "    fig.tight_layout()\n",
++    "    plt.show()\n",
++    "\n",
++    "\n",
++    "for model_name, folder in study.model_folders.items():\n",
++    "    assignments = pd.read_csv(folder / \"assignments.csv\")\n",
++    "    histories = cluster_histories(assignments, HISTORY_DATES)\n",
++    "    plot_cluster_histories(histories, HISTORY_DATES, model_name)\n",
++    "    print(f\"{model_name}: {int((histories.status == 'stable all dates').sum())} stable, \"\n",
++    "          f\"{int((histories.status == 'shifted at least once').sum())} shifted of {len(histories)}\")\n",
++    "    display(histories[histories.status == \"shifted at least once\"])"
+    ]
+   },
+   {
+diff --git a/scripts/study_reporting.py b/scripts/study_reporting.py
+index a08741e..4a95036 100644
+--- a/scripts/study_reporting.py
++++ b/scripts/study_reporting.py
+@@ -26,6 +26,19 @@ def validate_study_outputs(out, config):
+                 'cluster_map.png', 'feature_profile.png', 'dendrogram.png', 'shap_global.png',
+                 'shap_distribution.png', 'shap_values.npz', 'surrogate_fidelity.json',
+                 'shap_by_cluster.csv', 'shap_univariate_comparison.csv']]
++    if config.get('reporting_enrichment_version'):
++        required += ['longitudinal_summary.csv']
++        for name in model_folders:
++            required += [f'longitudinal/{name}/{filename}' for filename in [
++                'cluster_histories.png', 'jaccard_heatmaps.png', 'movement_counts_heatmaps.png',
++                'company_cluster_histories.csv', 'jaccard_alignment.csv', 'pair_summary.csv',
++                'stable_instruments.csv', 'shifted_instruments.csv', 'membership_transitions.csv',
++                'alignment_objective_sensitivity.csv', 'sector_and_screen_diagnostics.csv']]
++    if config.get('reporting_enrichment_version'):
++        for name in model_folders:
++            for before, after in zip(config['dates'], config['dates'][1:]):
++                required += [f'longitudinal/{name}/jaccard_{before}_{after}.csv',
++                             f'longitudinal/{name}/movement_counts_{before}_{after}.csv']
+     for relative in required:
+         if not (out/relative).is_file():
+             raise ValueError(f'Missing required study artifact: {relative}')
+@@ -120,5 +133,15 @@ def write_study_summary(study):
+               'historical inputs or guarantee publication readiness. Archived shares/capitalisation, sector history '
+               'and daily vendor-series evidence remain unresolved. Analyst recommendations are not invented. '
+               'The ten-feature variant and historical baseline remain distinct from the original eleven-feature experiment. '
+-              'No Hotelling cutoff or temporal outlier taxonomy is invented in this workflow.']
++              'Additional descriptive geometric references, when enabled, are separate from cluster SHAP and do not confirm outliers.']
++    if study.config.get('reporting_enrichment_version'):
++        lines += ['', '## Additional longitudinal reporting', '',
++            '`longitudinal_summary.csv` and `longitudinal/<model>/` add instrument histories, stable/shifted lists, '
++            'actual 0-1 Jaccard overlap heatmaps and separately labelled instrument-movement counts. '
++            'The original fixed models and maximum-overlap transition outputs remain unchanged. '
++            'Jaccard uses continuing instruments; empty unions are NA and entries/exits are separate. '
++            '`sector_and_screen_diagnostics.csv` keeps singleton, leave-one-out sector context and individual '
++            'Mahalanobis/F-reference candidates separate, with seed support and an internal-Beta sensitivity. '
++            'The F reference is descriptive, not an individually calibrated significance test on learned coordinates. '
++            'Missing/singular screens remain undefined; no new outlier-history taxonomy is introduced.']
+     (study.out/'study_summary.md').write_text('\n'.join(lines)+'\n', encoding='utf-8')
+diff --git a/scripts/study_workflow.py b/scripts/study_workflow.py
+index aa24de0..18f4522 100644
+--- a/scripts/study_workflow.py
++++ b/scripts/study_workflow.py
+@@ -19,6 +19,7 @@ class StudySession:
+         for key, value in [('seed', seed), ('stability_runs', stability_runs), ('include_umap_sensitivity', include_umap)]:
+             if value is not None:
+                 self.config[key] = value
++        self.config['reporting_enrichment_version'] = 1
+         if self.config['stability_runs'] < 2:
+             raise ValueError('Use at least two distinct seeds for stability diagnostics')
+         if self.config['dates'] != ['2025-06-30', '2025-12-31', '2026-06-30']:
+@@ -273,6 +274,12 @@ class StudySession:
+                 table = pd.read_csv(folder/'temporal_agreement.csv')
+                 table.insert(0, 'study_model', name)
+                 comparisons.append(table)
++            from study_enrichment import enrich_model
++            enriched = []
++            for name, assignments in self.assignments.items():
++                enriched.append(enrich_model(assignments, self.model_folders[name], self.config['dates'],
++                    self.out/'longitudinal'/name, name, self.config['seed'], self.config['stability_runs']))
++            pd.DataFrame(enriched).to_csv(self.out/'longitudinal_summary.csv', index=False)
+             self.temporal = pd.concat(comparisons, ignore_index=True)
+             self.temporal.to_csv(self.out/'temporal_agreement.csv', index=False)
+             self.eda['presence'].assign(observed_all_three=self.eda['presence'].all(axis=1)).to_csv(

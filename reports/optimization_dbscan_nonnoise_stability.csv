@@ -1,0 +1,1841 @@
+candidate_id,seed_a,seed_b,common_nonnoise_members,common_coverage,ari,nmi,status
+c_00bc9a9490b50c6e,42,43,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_00bc9a9490b50c6e,42,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_00bc9a9490b50c6e,42,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_00bc9a9490b50c6e,42,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_00bc9a9490b50c6e,43,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_00bc9a9490b50c6e,43,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_00bc9a9490b50c6e,43,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_00bc9a9490b50c6e,44,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_00bc9a9490b50c6e,44,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_00bc9a9490b50c6e,45,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_01a7cd18749d9814,42,43,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_01a7cd18749d9814,42,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_01a7cd18749d9814,42,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_01a7cd18749d9814,42,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_01a7cd18749d9814,43,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_01a7cd18749d9814,43,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_01a7cd18749d9814,43,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_01a7cd18749d9814,44,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_01a7cd18749d9814,44,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_01a7cd18749d9814,45,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_039d22f1c079aa2b,42,43,38,0.926829268292683,,,not estimable: insufficient non-noise cluster structure
+c_039d22f1c079aa2b,42,44,37,0.9024390243902439,,,not estimable: insufficient non-noise cluster structure
+c_039d22f1c079aa2b,42,45,37,0.9024390243902439,,,not estimable: insufficient non-noise cluster structure
+c_039d22f1c079aa2b,42,46,36,0.8780487804878049,,,not estimable: insufficient non-noise cluster structure
+c_039d22f1c079aa2b,43,44,39,0.9512195121951219,,,not estimable: insufficient non-noise cluster structure
+c_039d22f1c079aa2b,43,45,40,0.975609756097561,,,not estimable: insufficient non-noise cluster structure
+c_039d22f1c079aa2b,43,46,38,0.926829268292683,,,not estimable: insufficient non-noise cluster structure
+c_039d22f1c079aa2b,44,45,38,0.926829268292683,,,not estimable: insufficient non-noise cluster structure
+c_039d22f1c079aa2b,44,46,37,0.9024390243902439,,,not estimable: insufficient non-noise cluster structure
+c_039d22f1c079aa2b,45,46,37,0.9024390243902439,,,not estimable: insufficient non-noise cluster structure
+c_03f5c25ea1fb2b42,42,43,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_03f5c25ea1fb2b42,42,44,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_03f5c25ea1fb2b42,42,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_03f5c25ea1fb2b42,42,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_03f5c25ea1fb2b42,43,44,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_03f5c25ea1fb2b42,43,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_03f5c25ea1fb2b42,43,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_03f5c25ea1fb2b42,44,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_03f5c25ea1fb2b42,44,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_03f5c25ea1fb2b42,45,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_05a9648376bdb81e,42,43,12,0.2926829268292683,0.7552533992583437,0.8848624133519585,conditional on common non-noise members
+c_05a9648376bdb81e,42,44,4,0.0975609756097561,,,not estimable: insufficient non-noise cluster structure
+c_05a9648376bdb81e,42,45,13,0.3170731707317073,0.9009314140558848,0.9266430111579305,conditional on common non-noise members
+c_05a9648376bdb81e,42,46,12,0.2926829268292683,0.7533632286995515,0.8737101996493658,conditional on common non-noise members
+c_05a9648376bdb81e,43,44,3,0.07317073170731707,,,not estimable: insufficient non-noise cluster structure
+c_05a9648376bdb81e,43,45,12,0.2926829268292683,1.0,1.0,conditional on common non-noise members
+c_05a9648376bdb81e,43,46,11,0.2682926829268293,1.0,1.0,conditional on common non-noise members
+c_05a9648376bdb81e,44,45,7,0.17073170731707318,,,not estimable: insufficient non-noise cluster structure
+c_05a9648376bdb81e,44,46,3,0.07317073170731707,,,not estimable: insufficient non-noise cluster structure
+c_05a9648376bdb81e,45,46,11,0.2682926829268293,1.0,1.0,conditional on common non-noise members
+c_06160f36755fd42f,42,43,18,0.43902439024390244,1.0,1.0,conditional on common non-noise members
+c_06160f36755fd42f,42,44,5,0.12195121951219512,,,not estimable: insufficient non-noise cluster structure
+c_06160f36755fd42f,42,45,11,0.2682926829268293,1.0,1.0,conditional on common non-noise members
+c_06160f36755fd42f,42,46,17,0.4146341463414634,1.0,0.9999999999999998,conditional on common non-noise members
+c_06160f36755fd42f,43,44,5,0.12195121951219512,,,not estimable: insufficient non-noise cluster structure
+c_06160f36755fd42f,43,45,16,0.3902439024390244,0.6601529311809685,0.7800761844590146,conditional on common non-noise members
+c_06160f36755fd42f,43,46,17,0.4146341463414634,1.0,0.9999999999999998,conditional on common non-noise members
+c_06160f36755fd42f,44,45,4,0.0975609756097561,,,not estimable: insufficient non-noise cluster structure
+c_06160f36755fd42f,44,46,5,0.12195121951219512,,,not estimable: insufficient non-noise cluster structure
+c_06160f36755fd42f,45,46,11,0.2682926829268293,1.0,1.0,conditional on common non-noise members
+c_06339399c1128d54,42,43,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_06339399c1128d54,42,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_06339399c1128d54,42,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_06339399c1128d54,42,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_06339399c1128d54,43,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_06339399c1128d54,43,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_06339399c1128d54,43,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_06339399c1128d54,44,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_06339399c1128d54,44,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_06339399c1128d54,45,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_097b92f37e3d2f17,42,43,41,1.0,1.0,1.0,conditional on common non-noise members
+c_097b92f37e3d2f17,42,44,41,1.0,1.0,1.0,conditional on common non-noise members
+c_097b92f37e3d2f17,42,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_097b92f37e3d2f17,42,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_097b92f37e3d2f17,43,44,41,1.0,1.0,1.0,conditional on common non-noise members
+c_097b92f37e3d2f17,43,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_097b92f37e3d2f17,43,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_097b92f37e3d2f17,44,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_097b92f37e3d2f17,44,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_097b92f37e3d2f17,45,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_0ce9a73b0f492107,42,43,18,0.43902439024390244,,,not estimable: insufficient non-noise cluster structure
+c_0ce9a73b0f492107,42,44,16,0.3902439024390244,,,not estimable: insufficient non-noise cluster structure
+c_0ce9a73b0f492107,42,45,18,0.43902439024390244,,,not estimable: insufficient non-noise cluster structure
+c_0ce9a73b0f492107,42,46,23,0.5609756097560976,1.0,1.0,conditional on common non-noise members
+c_0ce9a73b0f492107,43,44,16,0.3902439024390244,,,not estimable: insufficient non-noise cluster structure
+c_0ce9a73b0f492107,43,45,17,0.4146341463414634,,,not estimable: insufficient non-noise cluster structure
+c_0ce9a73b0f492107,43,46,18,0.43902439024390244,,,not estimable: insufficient non-noise cluster structure
+c_0ce9a73b0f492107,44,45,15,0.36585365853658536,,,not estimable: insufficient non-noise cluster structure
+c_0ce9a73b0f492107,44,46,16,0.3902439024390244,,,not estimable: insufficient non-noise cluster structure
+c_0ce9a73b0f492107,45,46,17,0.4146341463414634,,,not estimable: insufficient non-noise cluster structure
+c_0cf97b2945f2bb2d,42,43,36,0.8780487804878049,0.6225806451612903,0.8518090878890012,conditional on common non-noise members
+c_0cf97b2945f2bb2d,42,44,38,0.926829268292683,0.6365851857322207,0.8542109766806112,conditional on common non-noise members
+c_0cf97b2945f2bb2d,42,45,38,0.926829268292683,0.6365851857322207,0.8542109766806112,conditional on common non-noise members
+c_0cf97b2945f2bb2d,42,46,36,0.8780487804878049,0.8028292438657987,0.927371799769382,conditional on common non-noise members
+c_0cf97b2945f2bb2d,43,44,39,0.9512195121951219,1.0,1.0,conditional on common non-noise members
+c_0cf97b2945f2bb2d,43,45,39,0.9512195121951219,1.0,1.0,conditional on common non-noise members
+c_0cf97b2945f2bb2d,43,46,38,0.926829268292683,0.4595817548252862,0.7736968258284336,conditional on common non-noise members
+c_0cf97b2945f2bb2d,44,45,41,1.0,1.0,1.0,conditional on common non-noise members
+c_0cf97b2945f2bb2d,44,46,39,0.9512195121951219,0.45985315257716003,0.7706463796071358,conditional on common non-noise members
+c_0cf97b2945f2bb2d,45,46,39,0.9512195121951219,0.45985315257716003,0.7706463796071358,conditional on common non-noise members
+c_0ecd1e8964f97d5c,42,43,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_0ecd1e8964f97d5c,42,44,41,1.0,1.0,1.0,conditional on common non-noise members
+c_0ecd1e8964f97d5c,42,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_0ecd1e8964f97d5c,42,46,41,1.0,1.0,1.0,conditional on common non-noise members
+c_0ecd1e8964f97d5c,43,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_0ecd1e8964f97d5c,43,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_0ecd1e8964f97d5c,43,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_0ecd1e8964f97d5c,44,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_0ecd1e8964f97d5c,44,46,41,1.0,1.0,1.0,conditional on common non-noise members
+c_0ecd1e8964f97d5c,45,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_1177b4a3d5f6ac30,42,43,40,0.975609756097561,0.847778358599059,0.8784618549950214,conditional on common non-noise members
+c_1177b4a3d5f6ac30,42,44,40,0.975609756097561,0.847778358599059,0.8784618549950214,conditional on common non-noise members
+c_1177b4a3d5f6ac30,42,45,37,0.9024390243902439,0.47894166694022255,0.6864380007113057,conditional on common non-noise members
+c_1177b4a3d5f6ac30,42,46,40,0.975609756097561,0.5009443052611293,0.7505515456048124,conditional on common non-noise members
+c_1177b4a3d5f6ac30,43,44,41,1.0,1.0,1.0,conditional on common non-noise members
+c_1177b4a3d5f6ac30,43,45,38,0.926829268292683,0.4351773255681999,0.6426473527525296,conditional on common non-noise members
+c_1177b4a3d5f6ac30,43,46,41,1.0,0.7023593466424682,0.8451366978492484,conditional on common non-noise members
+c_1177b4a3d5f6ac30,44,45,38,0.926829268292683,0.4351773255681999,0.6426473527525296,conditional on common non-noise members
+c_1177b4a3d5f6ac30,44,46,41,1.0,0.7023593466424682,0.8451366978492484,conditional on common non-noise members
+c_1177b4a3d5f6ac30,45,46,38,0.926829268292683,0.6405636452879581,0.8073586444749657,conditional on common non-noise members
+c_16033ec33cad5416,42,43,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_16033ec33cad5416,42,44,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_16033ec33cad5416,42,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_16033ec33cad5416,42,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_16033ec33cad5416,43,44,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_16033ec33cad5416,43,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_16033ec33cad5416,43,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_16033ec33cad5416,44,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_16033ec33cad5416,44,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_16033ec33cad5416,45,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_16198a3097823b21,42,43,25,0.6097560975609756,0.829205807002562,0.904865195844408,conditional on common non-noise members
+c_16198a3097823b21,42,44,11,0.2682926829268293,0.34175531914893614,0.4965096610963304,conditional on common non-noise members
+c_16198a3097823b21,42,45,24,0.5853658536585366,1.0,1.0,conditional on common non-noise members
+c_16198a3097823b21,42,46,17,0.4146341463414634,0.6280087527352297,0.76869096045673,conditional on common non-noise members
+c_16198a3097823b21,43,44,12,0.2926829268292683,0.30791229742612014,0.5105753940473438,conditional on common non-noise members
+c_16198a3097823b21,43,45,28,0.6829268292682927,0.7993886129155522,0.8703610324287487,conditional on common non-noise members
+c_16198a3097823b21,43,46,19,0.4634146341463415,0.5243232240993283,0.684713690124688,conditional on common non-noise members
+c_16198a3097823b21,44,45,12,0.2926829268292683,0.20037278657968313,0.40297906842068426,conditional on common non-noise members
+c_16198a3097823b21,44,46,9,0.21951219512195122,,,not estimable: insufficient non-noise cluster structure
+c_16198a3097823b21,45,46,20,0.4878048780487805,0.679379007762403,0.7840998066480175,conditional on common non-noise members
+c_187b7624a4923c16,42,43,38,0.926829268292683,1.0,1.0,conditional on common non-noise members
+c_187b7624a4923c16,42,44,39,0.9512195121951219,1.0,1.0,conditional on common non-noise members
+c_187b7624a4923c16,42,45,38,0.926829268292683,1.0,1.0,conditional on common non-noise members
+c_187b7624a4923c16,42,46,39,0.9512195121951219,0.7022334757791672,0.7464419566132715,conditional on common non-noise members
+c_187b7624a4923c16,43,44,38,0.926829268292683,1.0,1.0,conditional on common non-noise members
+c_187b7624a4923c16,43,45,38,0.926829268292683,1.0,1.0,conditional on common non-noise members
+c_187b7624a4923c16,43,46,38,0.926829268292683,0.700298422623277,0.7464289681217507,conditional on common non-noise members
+c_187b7624a4923c16,44,45,39,0.9512195121951219,1.0,1.0,conditional on common non-noise members
+c_187b7624a4923c16,44,46,39,0.9512195121951219,0.7022334757791672,0.7464419566132715,conditional on common non-noise members
+c_187b7624a4923c16,45,46,38,0.926829268292683,0.700298422623277,0.7464289681217507,conditional on common non-noise members
+c_196fa9e066342d8a,42,43,36,0.8780487804878049,0.2679167736963781,0.5918917308649247,conditional on common non-noise members
+c_196fa9e066342d8a,42,44,37,0.9024390243902439,0.1169880066798239,0.45109939744022787,conditional on common non-noise members
+c_196fa9e066342d8a,42,45,32,0.7804878048780488,0.4539531330742097,0.6971077291269578,conditional on common non-noise members
+c_196fa9e066342d8a,42,46,34,0.8292682926829268,0.3600087380761669,0.6468890476591981,conditional on common non-noise members
+c_196fa9e066342d8a,43,44,34,0.8292682926829268,0.3583786896814646,0.6779827351556804,conditional on common non-noise members
+c_196fa9e066342d8a,43,45,31,0.7560975609756098,0.6437399713777701,0.8302129180110895,conditional on common non-noise members
+c_196fa9e066342d8a,43,46,33,0.8048780487804879,0.491078887056354,0.786643187482907,conditional on common non-noise members
+c_196fa9e066342d8a,44,45,30,0.7317073170731707,0.5585094296750739,0.7998716655141385,conditional on common non-noise members
+c_196fa9e066342d8a,44,46,32,0.7804878048780488,0.4479748603351955,0.7317237220869126,conditional on common non-noise members
+c_196fa9e066342d8a,45,46,29,0.7073170731707317,0.833127825729552,0.9217996799359709,conditional on common non-noise members
+c_1dc2c251db97c395,42,43,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_1dc2c251db97c395,42,44,41,1.0,0.8479228486646885,0.7492292934625097,conditional on common non-noise members
+c_1dc2c251db97c395,42,45,41,1.0,0.3117505995203837,0.5542711435704193,conditional on common non-noise members
+c_1dc2c251db97c395,42,46,41,1.0,-0.05321100917431193,0.11746331949197461,conditional on common non-noise members
+c_1dc2c251db97c395,43,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_1dc2c251db97c395,43,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_1dc2c251db97c395,43,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_1dc2c251db97c395,44,45,41,1.0,0.23543625571255974,0.4020140426864386,conditional on common non-noise members
+c_1dc2c251db97c395,44,46,41,1.0,-0.052314871668918086,0.09716683437728967,conditional on common non-noise members
+c_1dc2c251db97c395,45,46,41,1.0,0.7464664310954063,0.8088225966579874,conditional on common non-noise members
+c_1ff02689235051f0,42,43,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_1ff02689235051f0,42,44,41,1.0,-0.08672013048797064,0.0718292069320582,conditional on common non-noise members
+c_1ff02689235051f0,42,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_1ff02689235051f0,42,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_1ff02689235051f0,43,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_1ff02689235051f0,43,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_1ff02689235051f0,43,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_1ff02689235051f0,44,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_1ff02689235051f0,44,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_1ff02689235051f0,45,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_220bc8ec911a9436,42,43,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_220bc8ec911a9436,42,44,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_220bc8ec911a9436,42,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_220bc8ec911a9436,42,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_220bc8ec911a9436,43,44,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_220bc8ec911a9436,43,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_220bc8ec911a9436,43,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_220bc8ec911a9436,44,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_220bc8ec911a9436,44,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_220bc8ec911a9436,45,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_247927bd52c7748f,42,43,32,0.7804878048780488,0.4503351182666052,0.7168291324288597,conditional on common non-noise members
+c_247927bd52c7748f,42,44,34,0.8292682926829268,0.5908792571164645,0.7724746973158726,conditional on common non-noise members
+c_247927bd52c7748f,42,45,33,0.8048780487804879,0.899273607748184,0.9006533700666273,conditional on common non-noise members
+c_247927bd52c7748f,42,46,35,0.8536585365853658,0.5540398740818469,0.7572975451616935,conditional on common non-noise members
+c_247927bd52c7748f,43,44,32,0.7804878048780488,0.24877326681104198,0.5826847223492707,conditional on common non-noise members
+c_247927bd52c7748f,43,45,32,0.7804878048780488,0.3807210781966204,0.6758639931264974,conditional on common non-noise members
+c_247927bd52c7748f,43,46,32,0.7804878048780488,0.24877326681104198,0.5826847223492707,conditional on common non-noise members
+c_247927bd52c7748f,44,45,32,0.7804878048780488,0.5888204642349597,0.754899198340581,conditional on common non-noise members
+c_247927bd52c7748f,44,46,34,0.8292682926829268,1.0,1.0,conditional on common non-noise members
+c_247927bd52c7748f,45,46,33,0.8048780487804879,0.5428571428571428,0.7347196428907686,conditional on common non-noise members
+c_24c70d4742bdef71,42,43,38,0.926829268292683,0.8105879375239837,0.8782120093930749,conditional on common non-noise members
+c_24c70d4742bdef71,42,44,37,0.9024390243902439,0.8081148073282052,0.8783604962023183,conditional on common non-noise members
+c_24c70d4742bdef71,42,45,33,0.8048780487804879,1.0,1.0,conditional on common non-noise members
+c_24c70d4742bdef71,42,46,38,0.926829268292683,0.3243266680637958,0.5187772315177244,conditional on common non-noise members
+c_24c70d4742bdef71,43,44,37,0.9024390243902439,1.0,1.0,conditional on common non-noise members
+c_24c70d4742bdef71,43,45,36,0.8780487804878049,1.0,1.0,conditional on common non-noise members
+c_24c70d4742bdef71,43,46,41,1.0,0.5370866946296411,0.7363899018121055,conditional on common non-noise members
+c_24c70d4742bdef71,44,45,33,0.8048780487804879,1.0,1.0,conditional on common non-noise members
+c_24c70d4742bdef71,44,46,37,0.9024390243902439,0.4400224215246637,0.6195712835935581,conditional on common non-noise members
+c_24c70d4742bdef71,45,46,36,0.8780487804878049,0.5008724357462863,0.7249833978519492,conditional on common non-noise members
+c_2509ce5693a198aa,42,43,34,0.8292682926829268,0.5506404967387966,0.7589568644615922,conditional on common non-noise members
+c_2509ce5693a198aa,42,44,34,0.8292682926829268,1.0,1.0,conditional on common non-noise members
+c_2509ce5693a198aa,42,45,34,0.8292682926829268,1.0,1.0,conditional on common non-noise members
+c_2509ce5693a198aa,42,46,34,0.8292682926829268,0.5506404967387966,0.7589568644615922,conditional on common non-noise members
+c_2509ce5693a198aa,43,44,34,0.8292682926829268,0.5506404967387966,0.7589568644615922,conditional on common non-noise members
+c_2509ce5693a198aa,43,45,34,0.8292682926829268,0.5506404967387966,0.7589568644615922,conditional on common non-noise members
+c_2509ce5693a198aa,43,46,34,0.8292682926829268,1.0,1.0,conditional on common non-noise members
+c_2509ce5693a198aa,44,45,34,0.8292682926829268,1.0,1.0,conditional on common non-noise members
+c_2509ce5693a198aa,44,46,34,0.8292682926829268,0.5506404967387966,0.7589568644615922,conditional on common non-noise members
+c_2509ce5693a198aa,45,46,34,0.8292682926829268,0.5506404967387966,0.7589568644615922,conditional on common non-noise members
+c_25a272443ed477fe,42,43,36,0.8780487804878049,-0.11244315832988838,0.08147171498138027,conditional on common non-noise members
+c_25a272443ed477fe,42,44,31,0.7560975609756098,,,not estimable: insufficient non-noise cluster structure
+c_25a272443ed477fe,42,45,32,0.7804878048780488,,,not estimable: insufficient non-noise cluster structure
+c_25a272443ed477fe,42,46,37,0.9024390243902439,,,not estimable: insufficient non-noise cluster structure
+c_25a272443ed477fe,43,44,32,0.7804878048780488,,,not estimable: insufficient non-noise cluster structure
+c_25a272443ed477fe,43,45,32,0.7804878048780488,,,not estimable: insufficient non-noise cluster structure
+c_25a272443ed477fe,43,46,37,0.9024390243902439,,,not estimable: insufficient non-noise cluster structure
+c_25a272443ed477fe,44,45,29,0.7073170731707317,,,not estimable: insufficient non-noise cluster structure
+c_25a272443ed477fe,44,46,32,0.7804878048780488,,,not estimable: insufficient non-noise cluster structure
+c_25a272443ed477fe,45,46,33,0.8048780487804879,,,not estimable: insufficient non-noise cluster structure
+c_282c762aeaec5f3d,42,43,22,0.5365853658536586,0.4424778761061947,0.7357184153223582,conditional on common non-noise members
+c_282c762aeaec5f3d,42,44,26,0.6341463414634146,0.8201438848920863,0.8855087401595998,conditional on common non-noise members
+c_282c762aeaec5f3d,42,45,22,0.5365853658536586,0.32931450223906306,0.6906059338911402,conditional on common non-noise members
+c_282c762aeaec5f3d,42,46,25,0.6097560975609756,0.6566523605150214,0.7924040792784615,conditional on common non-noise members
+c_282c762aeaec5f3d,43,44,25,0.6097560975609756,0.4224137931034483,0.7142438836767268,conditional on common non-noise members
+c_282c762aeaec5f3d,43,45,26,0.6341463414634146,0.47064163840751916,0.7169503260054042,conditional on common non-noise members
+c_282c762aeaec5f3d,43,46,27,0.6585365853658537,0.20835995940307483,0.50796229499838,conditional on common non-noise members
+c_282c762aeaec5f3d,44,45,24,0.5853658536585366,0.45077972709551656,0.7762880760847556,conditional on common non-noise members
+c_282c762aeaec5f3d,44,46,27,0.6585365853658537,0.7003934794828556,0.8119637498957111,conditional on common non-noise members
+c_282c762aeaec5f3d,45,46,26,0.6341463414634146,0.33414634146341465,0.6469320905155234,conditional on common non-noise members
+c_285051cdf3edcf7f,42,43,40,0.975609756097561,-0.12132273063051319,0.05273540222576606,conditional on common non-noise members
+c_285051cdf3edcf7f,42,44,40,0.975609756097561,,,not estimable: insufficient non-noise cluster structure
+c_285051cdf3edcf7f,42,45,39,0.9512195121951219,0.17172870518383193,0.15819521170576384,conditional on common non-noise members
+c_285051cdf3edcf7f,42,46,40,0.975609756097561,0.5482140941756946,0.5432566141748075,conditional on common non-noise members
+c_285051cdf3edcf7f,43,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_285051cdf3edcf7f,43,45,40,0.975609756097561,-0.09014675052410902,0.034249985523887826,conditional on common non-noise members
+c_285051cdf3edcf7f,43,46,41,1.0,-0.09495548961424333,0.03881038878639823,conditional on common non-noise members
+c_285051cdf3edcf7f,44,45,40,0.975609756097561,,,not estimable: insufficient non-noise cluster structure
+c_285051cdf3edcf7f,44,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_285051cdf3edcf7f,45,46,40,0.975609756097561,-0.09676443906864228,0.04024471354188326,conditional on common non-noise members
+c_2bdcc63f68cd14ef,42,43,19,0.4634146341463415,1.0,1.0,conditional on common non-noise members
+c_2bdcc63f68cd14ef,42,44,19,0.4634146341463415,1.0,1.0,conditional on common non-noise members
+c_2bdcc63f68cd14ef,42,45,19,0.4634146341463415,1.0,1.0,conditional on common non-noise members
+c_2bdcc63f68cd14ef,42,46,19,0.4634146341463415,1.0,1.0,conditional on common non-noise members
+c_2bdcc63f68cd14ef,43,44,19,0.4634146341463415,1.0,1.0,conditional on common non-noise members
+c_2bdcc63f68cd14ef,43,45,19,0.4634146341463415,1.0,1.0,conditional on common non-noise members
+c_2bdcc63f68cd14ef,43,46,19,0.4634146341463415,1.0,1.0,conditional on common non-noise members
+c_2bdcc63f68cd14ef,44,45,19,0.4634146341463415,1.0,1.0,conditional on common non-noise members
+c_2bdcc63f68cd14ef,44,46,19,0.4634146341463415,1.0,1.0,conditional on common non-noise members
+c_2bdcc63f68cd14ef,45,46,19,0.4634146341463415,1.0,1.0,conditional on common non-noise members
+c_2d6e18ab65defe00,42,43,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_2d6e18ab65defe00,42,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_2d6e18ab65defe00,42,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_2d6e18ab65defe00,42,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_2d6e18ab65defe00,43,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_2d6e18ab65defe00,43,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_2d6e18ab65defe00,43,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_2d6e18ab65defe00,44,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_2d6e18ab65defe00,44,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_2d6e18ab65defe00,45,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_2e4f98e927848059,42,43,38,0.926829268292683,1.0,1.0,conditional on common non-noise members
+c_2e4f98e927848059,42,44,41,1.0,0.7058056099151989,0.746482312583704,conditional on common non-noise members
+c_2e4f98e927848059,42,45,40,0.975609756097561,1.0,1.0,conditional on common non-noise members
+c_2e4f98e927848059,42,46,39,0.9512195121951219,1.0,1.0,conditional on common non-noise members
+c_2e4f98e927848059,43,44,38,0.926829268292683,0.700298422623277,0.7464289681217507,conditional on common non-noise members
+c_2e4f98e927848059,43,45,38,0.926829268292683,1.0,1.0,conditional on common non-noise members
+c_2e4f98e927848059,43,46,37,0.9024390243902439,1.0,1.0,conditional on common non-noise members
+c_2e4f98e927848059,44,45,40,0.975609756097561,0.7040667114571395,0.7464599761422928,conditional on common non-noise members
+c_2e4f98e927848059,44,46,39,0.9512195121951219,0.7022334757791672,0.7464419566132715,conditional on common non-noise members
+c_2e4f98e927848059,45,46,38,0.926829268292683,1.0,1.0,conditional on common non-noise members
+c_2e8a3a98b01d4059,42,43,4,0.0975609756097561,,,not estimable: insufficient non-noise cluster structure
+c_2e8a3a98b01d4059,42,44,15,0.36585365853658536,,,not estimable: insufficient non-noise cluster structure
+c_2e8a3a98b01d4059,42,45,12,0.2926829268292683,,,not estimable: insufficient non-noise cluster structure
+c_2e8a3a98b01d4059,42,46,15,0.36585365853658536,,,not estimable: insufficient non-noise cluster structure
+c_2e8a3a98b01d4059,43,44,1,0.024390243902439025,,,not estimable: insufficient non-noise cluster structure
+c_2e8a3a98b01d4059,43,45,6,0.14634146341463414,,,not estimable: insufficient non-noise cluster structure
+c_2e8a3a98b01d4059,43,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_2e8a3a98b01d4059,44,45,13,0.3170731707317073,0.6124911284599006,0.6996901283837371,conditional on common non-noise members
+c_2e8a3a98b01d4059,44,46,17,0.4146341463414634,0.6901579586877278,0.7846995164274886,conditional on common non-noise members
+c_2e8a3a98b01d4059,45,46,9,0.21951219512195122,0.5,0.5393950821620858,conditional on common non-noise members
+c_2f0d32418cfeff11,42,43,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_2f0d32418cfeff11,42,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_2f0d32418cfeff11,42,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_2f0d32418cfeff11,42,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_2f0d32418cfeff11,43,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_2f0d32418cfeff11,43,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_2f0d32418cfeff11,43,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_2f0d32418cfeff11,44,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_2f0d32418cfeff11,44,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_2f0d32418cfeff11,45,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_31d5f5081235fdbe,42,43,38,0.926829268292683,1.0,1.0,conditional on common non-noise members
+c_31d5f5081235fdbe,42,44,38,0.926829268292683,1.0,1.0,conditional on common non-noise members
+c_31d5f5081235fdbe,42,45,38,0.926829268292683,1.0,1.0,conditional on common non-noise members
+c_31d5f5081235fdbe,42,46,38,0.926829268292683,1.0,1.0,conditional on common non-noise members
+c_31d5f5081235fdbe,43,44,39,0.9512195121951219,1.0,1.0,conditional on common non-noise members
+c_31d5f5081235fdbe,43,45,39,0.9512195121951219,1.0,1.0,conditional on common non-noise members
+c_31d5f5081235fdbe,43,46,38,0.926829268292683,1.0,1.0,conditional on common non-noise members
+c_31d5f5081235fdbe,44,45,39,0.9512195121951219,1.0,1.0,conditional on common non-noise members
+c_31d5f5081235fdbe,44,46,38,0.926829268292683,1.0,1.0,conditional on common non-noise members
+c_31d5f5081235fdbe,45,46,39,0.9512195121951219,1.0,1.0,conditional on common non-noise members
+c_33fa0a4b35eb751c,42,43,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_33fa0a4b35eb751c,42,44,41,1.0,1.0,1.0,conditional on common non-noise members
+c_33fa0a4b35eb751c,42,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_33fa0a4b35eb751c,42,46,41,1.0,1.0,1.0,conditional on common non-noise members
+c_33fa0a4b35eb751c,43,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_33fa0a4b35eb751c,43,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_33fa0a4b35eb751c,43,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_33fa0a4b35eb751c,44,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_33fa0a4b35eb751c,44,46,41,1.0,1.0,1.0,conditional on common non-noise members
+c_33fa0a4b35eb751c,45,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_3411087ab8a60dc7,42,43,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_3411087ab8a60dc7,42,44,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_3411087ab8a60dc7,42,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_3411087ab8a60dc7,42,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_3411087ab8a60dc7,43,44,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_3411087ab8a60dc7,43,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_3411087ab8a60dc7,43,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_3411087ab8a60dc7,44,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_3411087ab8a60dc7,44,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_3411087ab8a60dc7,45,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_3934a0b79810cd84,42,43,26,0.6341463414634146,,,not estimable: insufficient non-noise cluster structure
+c_3934a0b79810cd84,42,44,26,0.6341463414634146,,,not estimable: insufficient non-noise cluster structure
+c_3934a0b79810cd84,42,45,26,0.6341463414634146,,,not estimable: insufficient non-noise cluster structure
+c_3934a0b79810cd84,42,46,26,0.6341463414634146,,,not estimable: insufficient non-noise cluster structure
+c_3934a0b79810cd84,43,44,26,0.6341463414634146,,,not estimable: insufficient non-noise cluster structure
+c_3934a0b79810cd84,43,45,26,0.6341463414634146,,,not estimable: insufficient non-noise cluster structure
+c_3934a0b79810cd84,43,46,26,0.6341463414634146,,,not estimable: insufficient non-noise cluster structure
+c_3934a0b79810cd84,44,45,26,0.6341463414634146,,,not estimable: insufficient non-noise cluster structure
+c_3934a0b79810cd84,44,46,26,0.6341463414634146,,,not estimable: insufficient non-noise cluster structure
+c_3934a0b79810cd84,45,46,26,0.6341463414634146,,,not estimable: insufficient non-noise cluster structure
+c_3bd7e38e8ba0d0e0,42,43,25,0.6097560975609756,0.8959646910466582,0.9192959805694892,conditional on common non-noise members
+c_3bd7e38e8ba0d0e0,42,44,24,0.5853658536585366,1.0,1.0,conditional on common non-noise members
+c_3bd7e38e8ba0d0e0,42,45,22,0.5365853658536586,0.8859634688168504,0.9141218206136619,conditional on common non-noise members
+c_3bd7e38e8ba0d0e0,42,46,27,0.6585365853658537,0.8866749688667497,0.9189882189830355,conditional on common non-noise members
+c_3bd7e38e8ba0d0e0,43,44,26,0.6341463414634146,1.0,1.0,conditional on common non-noise members
+c_3bd7e38e8ba0d0e0,43,45,25,0.6097560975609756,1.0,1.0,conditional on common non-noise members
+c_3bd7e38e8ba0d0e0,43,46,28,0.6829268292682927,0.7226870761787683,0.8070435262406757,conditional on common non-noise members
+c_3bd7e38e8ba0d0e0,44,45,23,0.5609756097560976,1.0,1.0,conditional on common non-noise members
+c_3bd7e38e8ba0d0e0,44,46,26,0.6341463414634146,0.8857212409726543,0.917640893480858,conditional on common non-noise members
+c_3bd7e38e8ba0d0e0,45,46,27,0.6585365853658537,0.8408740592982138,0.886178481493976,conditional on common non-noise members
+c_3c71e87c056750e7,42,43,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_3c71e87c056750e7,42,44,41,1.0,0.23543625571255974,0.4020140426864386,conditional on common non-noise members
+c_3c71e87c056750e7,42,45,41,1.0,1.0,1.0,conditional on common non-noise members
+c_3c71e87c056750e7,42,46,41,1.0,1.0,1.0,conditional on common non-noise members
+c_3c71e87c056750e7,43,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_3c71e87c056750e7,43,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_3c71e87c056750e7,43,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_3c71e87c056750e7,44,45,41,1.0,0.23543625571255974,0.4020140426864386,conditional on common non-noise members
+c_3c71e87c056750e7,44,46,41,1.0,0.23543625571255974,0.4020140426864386,conditional on common non-noise members
+c_3c71e87c056750e7,45,46,41,1.0,1.0,1.0,conditional on common non-noise members
+c_3de1b8f7124a024f,42,43,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_3de1b8f7124a024f,42,44,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_3de1b8f7124a024f,42,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_3de1b8f7124a024f,42,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_3de1b8f7124a024f,43,44,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_3de1b8f7124a024f,43,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_3de1b8f7124a024f,43,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_3de1b8f7124a024f,44,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_3de1b8f7124a024f,44,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_3de1b8f7124a024f,45,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_3f1ce5e96f82fbc6,42,43,27,0.6585365853658537,1.0,1.0,conditional on common non-noise members
+c_3f1ce5e96f82fbc6,42,44,27,0.6585365853658537,1.0,1.0,conditional on common non-noise members
+c_3f1ce5e96f82fbc6,42,45,27,0.6585365853658537,1.0,1.0,conditional on common non-noise members
+c_3f1ce5e96f82fbc6,42,46,27,0.6585365853658537,1.0,1.0,conditional on common non-noise members
+c_3f1ce5e96f82fbc6,43,44,27,0.6585365853658537,1.0,1.0,conditional on common non-noise members
+c_3f1ce5e96f82fbc6,43,45,27,0.6585365853658537,1.0,1.0,conditional on common non-noise members
+c_3f1ce5e96f82fbc6,43,46,27,0.6585365853658537,1.0,1.0,conditional on common non-noise members
+c_3f1ce5e96f82fbc6,44,45,27,0.6585365853658537,1.0,1.0,conditional on common non-noise members
+c_3f1ce5e96f82fbc6,44,46,27,0.6585365853658537,1.0,1.0,conditional on common non-noise members
+c_3f1ce5e96f82fbc6,45,46,27,0.6585365853658537,1.0,1.0,conditional on common non-noise members
+c_3f9dca050537c1f4,42,43,33,0.8048780487804879,0.9231519350284542,0.9367701929524747,conditional on common non-noise members
+c_3f9dca050537c1f4,42,44,24,0.5853658536585366,0.7839934667211107,0.6842424870491967,conditional on common non-noise members
+c_3f9dca050537c1f4,42,45,26,0.6341463414634146,0.5755541248965327,0.671128107682246,conditional on common non-noise members
+c_3f9dca050537c1f4,42,46,27,0.6585365853658537,0.7046533411656374,0.7961004417623907,conditional on common non-noise members
+c_3f9dca050537c1f4,43,44,24,0.5853658536585366,0.7839934667211107,0.6842424870491967,conditional on common non-noise members
+c_3f9dca050537c1f4,43,45,28,0.6829268292682927,0.746031746031746,0.8490762189772579,conditional on common non-noise members
+c_3f9dca050537c1f4,43,46,29,0.7073170731707317,0.8280046848912258,0.9024414735791467,conditional on common non-noise members
+c_3f9dca050537c1f4,44,45,22,0.5365853658536586,0.24571428571428572,0.2789897082288165,conditional on common non-noise members
+c_3f9dca050537c1f4,44,46,22,0.5365853658536586,0.5503387059098341,0.6321847159157763,conditional on common non-noise members
+c_3f9dca050537c1f4,45,46,23,0.5609756097560976,0.5121298830554865,0.6548415981358215,conditional on common non-noise members
+c_3fb0bed9b3c8533a,42,43,41,1.0,0.20906356264713577,0.5904040540063388,conditional on common non-noise members
+c_3fb0bed9b3c8533a,42,44,41,1.0,0.8468314845053958,0.8631688409433375,conditional on common non-noise members
+c_3fb0bed9b3c8533a,42,45,41,1.0,1.0,1.0,conditional on common non-noise members
+c_3fb0bed9b3c8533a,42,46,39,0.9512195121951219,0.6152824224655276,0.8333349690065037,conditional on common non-noise members
+c_3fb0bed9b3c8533a,43,44,41,1.0,0.1839657738095238,0.5689349472493148,conditional on common non-noise members
+c_3fb0bed9b3c8533a,43,45,41,1.0,0.20906356264713577,0.5904040540063388,conditional on common non-noise members
+c_3fb0bed9b3c8533a,43,46,39,0.9512195121951219,0.43856413775357034,0.7495499253918375,conditional on common non-noise members
+c_3fb0bed9b3c8533a,44,45,41,1.0,0.8468314845053958,0.8631688409433375,conditional on common non-noise members
+c_3fb0bed9b3c8533a,44,46,39,0.9512195121951219,0.4665925004908056,0.7013168638718184,conditional on common non-noise members
+c_3fb0bed9b3c8533a,45,46,39,0.9512195121951219,0.6152824224655276,0.8333349690065037,conditional on common non-noise members
+c_4003f35814f57c2b,42,43,41,1.0,0.7379170155779569,0.875051907371109,conditional on common non-noise members
+c_4003f35814f57c2b,42,44,41,1.0,1.0,1.0,conditional on common non-noise members
+c_4003f35814f57c2b,42,45,41,1.0,1.0,1.0,conditional on common non-noise members
+c_4003f35814f57c2b,42,46,41,1.0,0.7379170155779569,0.875051907371109,conditional on common non-noise members
+c_4003f35814f57c2b,43,44,41,1.0,0.7379170155779569,0.875051907371109,conditional on common non-noise members
+c_4003f35814f57c2b,43,45,41,1.0,0.7379170155779569,0.875051907371109,conditional on common non-noise members
+c_4003f35814f57c2b,43,46,41,1.0,1.0,1.0,conditional on common non-noise members
+c_4003f35814f57c2b,44,45,41,1.0,1.0,1.0,conditional on common non-noise members
+c_4003f35814f57c2b,44,46,41,1.0,0.7379170155779569,0.875051907371109,conditional on common non-noise members
+c_4003f35814f57c2b,45,46,41,1.0,0.7379170155779569,0.875051907371109,conditional on common non-noise members
+c_40c26d04f0ea8a97,42,43,34,0.8292682926829268,0.9073786677056986,0.9096995129612031,conditional on common non-noise members
+c_40c26d04f0ea8a97,42,44,34,0.8292682926829268,0.5908792571164645,0.7724746973158726,conditional on common non-noise members
+c_40c26d04f0ea8a97,42,45,33,0.8048780487804879,1.0,1.0,conditional on common non-noise members
+c_40c26d04f0ea8a97,42,46,34,0.8292682926829268,0.5908792571164645,0.7724746973158726,conditional on common non-noise members
+c_40c26d04f0ea8a97,43,44,34,0.8292682926829268,0.638226786142007,0.7893138504122871,conditional on common non-noise members
+c_40c26d04f0ea8a97,43,45,34,0.8292682926829268,1.0,1.0,conditional on common non-noise members
+c_40c26d04f0ea8a97,43,46,35,0.8536585365853658,0.5945945945945946,0.7712225169788429,conditional on common non-noise members
+c_40c26d04f0ea8a97,44,45,33,0.8048780487804879,0.6343237066278828,0.7902745977235076,conditional on common non-noise members
+c_40c26d04f0ea8a97,44,46,34,0.8292682926829268,1.0,1.0,conditional on common non-noise members
+c_40c26d04f0ea8a97,45,46,34,0.8292682926829268,0.5908792571164645,0.7724746973158726,conditional on common non-noise members
+c_421aa08d93757b02,42,43,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_421aa08d93757b02,42,44,40,0.975609756097561,,,not estimable: insufficient non-noise cluster structure
+c_421aa08d93757b02,42,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_421aa08d93757b02,42,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_421aa08d93757b02,43,44,40,0.975609756097561,,,not estimable: insufficient non-noise cluster structure
+c_421aa08d93757b02,43,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_421aa08d93757b02,43,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_421aa08d93757b02,44,45,40,0.975609756097561,,,not estimable: insufficient non-noise cluster structure
+c_421aa08d93757b02,44,46,40,0.975609756097561,,,not estimable: insufficient non-noise cluster structure
+c_421aa08d93757b02,45,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_448da331d1fbfa82,42,43,38,0.926829268292683,1.0,1.0,conditional on common non-noise members
+c_448da331d1fbfa82,42,44,38,0.926829268292683,,,not estimable: insufficient non-noise cluster structure
+c_448da331d1fbfa82,42,45,35,0.8536585365853658,,,not estimable: insufficient non-noise cluster structure
+c_448da331d1fbfa82,42,46,38,0.926829268292683,0.4786778906880282,0.634415872097325,conditional on common non-noise members
+c_448da331d1fbfa82,43,44,38,0.926829268292683,,,not estimable: insufficient non-noise cluster structure
+c_448da331d1fbfa82,43,45,35,0.8536585365853658,,,not estimable: insufficient non-noise cluster structure
+c_448da331d1fbfa82,43,46,38,0.926829268292683,0.4786778906880282,0.634415872097325,conditional on common non-noise members
+c_448da331d1fbfa82,44,45,35,0.8536585365853658,,,not estimable: insufficient non-noise cluster structure
+c_448da331d1fbfa82,44,46,38,0.926829268292683,,,not estimable: insufficient non-noise cluster structure
+c_448da331d1fbfa82,45,46,35,0.8536585365853658,,,not estimable: insufficient non-noise cluster structure
+c_44d5f34c3ca562cf,42,43,16,0.3902439024390244,,,not estimable: insufficient non-noise cluster structure
+c_44d5f34c3ca562cf,42,44,16,0.3902439024390244,,,not estimable: insufficient non-noise cluster structure
+c_44d5f34c3ca562cf,42,45,14,0.34146341463414637,,,not estimable: insufficient non-noise cluster structure
+c_44d5f34c3ca562cf,42,46,15,0.36585365853658536,,,not estimable: insufficient non-noise cluster structure
+c_44d5f34c3ca562cf,43,44,19,0.4634146341463415,,,not estimable: insufficient non-noise cluster structure
+c_44d5f34c3ca562cf,43,45,14,0.34146341463414637,0.2572347266881029,0.3004803822489515,conditional on common non-noise members
+c_44d5f34c3ca562cf,43,46,19,0.4634146341463415,,,not estimable: insufficient non-noise cluster structure
+c_44d5f34c3ca562cf,44,45,15,0.36585365853658536,,,not estimable: insufficient non-noise cluster structure
+c_44d5f34c3ca562cf,44,46,19,0.4634146341463415,,,not estimable: insufficient non-noise cluster structure
+c_44d5f34c3ca562cf,45,46,14,0.34146341463414637,,,not estimable: insufficient non-noise cluster structure
+c_45ed07ec4e897607,42,43,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_45ed07ec4e897607,42,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_45ed07ec4e897607,42,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_45ed07ec4e897607,42,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_45ed07ec4e897607,43,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_45ed07ec4e897607,43,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_45ed07ec4e897607,43,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_45ed07ec4e897607,44,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_45ed07ec4e897607,44,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_45ed07ec4e897607,45,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_4e9378f6a4b807a7,42,43,34,0.8292682926829268,0.8021790600105067,0.8760135192619298,conditional on common non-noise members
+c_4e9378f6a4b807a7,42,44,28,0.6829268292682927,0.417910447761194,0.6359490909916539,conditional on common non-noise members
+c_4e9378f6a4b807a7,42,45,31,0.7560975609756098,0.7263556116015133,0.7965969814365766,conditional on common non-noise members
+c_4e9378f6a4b807a7,42,46,31,0.7560975609756098,0.7263556116015133,0.7965969814365766,conditional on common non-noise members
+c_4e9378f6a4b807a7,43,44,21,0.5121951219512195,0.9188473004306061,0.9383218403270228,conditional on common non-noise members
+c_4e9378f6a4b807a7,43,45,29,0.7073170731707317,1.0,1.0,conditional on common non-noise members
+c_4e9378f6a4b807a7,43,46,29,0.7073170731707317,1.0,1.0,conditional on common non-noise members
+c_4e9378f6a4b807a7,44,45,22,0.5365853658536586,1.0,1.0,conditional on common non-noise members
+c_4e9378f6a4b807a7,44,46,22,0.5365853658536586,1.0,1.0,conditional on common non-noise members
+c_4e9378f6a4b807a7,45,46,31,0.7560975609756098,1.0,1.0,conditional on common non-noise members
+c_4f82efcae8bac3bb,42,43,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_4f82efcae8bac3bb,42,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_4f82efcae8bac3bb,42,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_4f82efcae8bac3bb,42,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_4f82efcae8bac3bb,43,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_4f82efcae8bac3bb,43,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_4f82efcae8bac3bb,43,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_4f82efcae8bac3bb,44,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_4f82efcae8bac3bb,44,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_4f82efcae8bac3bb,45,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_5105ca0eccc38234,42,43,41,1.0,1.0,1.0,conditional on common non-noise members
+c_5105ca0eccc38234,42,44,41,1.0,1.0,1.0,conditional on common non-noise members
+c_5105ca0eccc38234,42,45,41,1.0,1.0,1.0,conditional on common non-noise members
+c_5105ca0eccc38234,42,46,41,1.0,1.0,1.0,conditional on common non-noise members
+c_5105ca0eccc38234,43,44,41,1.0,1.0,1.0,conditional on common non-noise members
+c_5105ca0eccc38234,43,45,41,1.0,1.0,1.0,conditional on common non-noise members
+c_5105ca0eccc38234,43,46,41,1.0,1.0,1.0,conditional on common non-noise members
+c_5105ca0eccc38234,44,45,41,1.0,1.0,1.0,conditional on common non-noise members
+c_5105ca0eccc38234,44,46,41,1.0,1.0,1.0,conditional on common non-noise members
+c_5105ca0eccc38234,45,46,41,1.0,1.0,1.0,conditional on common non-noise members
+c_53082c17ad9afeea,42,43,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_53082c17ad9afeea,42,44,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_53082c17ad9afeea,42,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_53082c17ad9afeea,42,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_53082c17ad9afeea,43,44,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_53082c17ad9afeea,43,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_53082c17ad9afeea,43,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_53082c17ad9afeea,44,45,3,0.07317073170731707,1.0,1.0,conditional on common non-noise members
+c_53082c17ad9afeea,44,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_53082c17ad9afeea,45,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_5396d39819f0e0f9,42,43,37,0.9024390243902439,0.2891125343092406,0.6355093765930845,conditional on common non-noise members
+c_5396d39819f0e0f9,42,44,35,0.8536585365853658,0.6677033257043988,0.8666589200653576,conditional on common non-noise members
+c_5396d39819f0e0f9,42,45,38,0.926829268292683,0.6913605262980149,0.8837065611489441,conditional on common non-noise members
+c_5396d39819f0e0f9,42,46,35,0.8536585365853658,0.43057722308892354,0.7701382055423681,conditional on common non-noise members
+c_5396d39819f0e0f9,43,44,36,0.8780487804878049,0.31483096496178115,0.6376039477919266,conditional on common non-noise members
+c_5396d39819f0e0f9,43,45,36,0.8780487804878049,0.4082806210465785,0.6733025080386199,conditional on common non-noise members
+c_5396d39819f0e0f9,43,46,36,0.8780487804878049,0.7988485358362812,0.8729491122664815,conditional on common non-noise members
+c_5396d39819f0e0f9,44,45,34,0.8292682926829268,0.7539936102236422,0.8868753004652724,conditional on common non-noise members
+c_5396d39819f0e0f9,44,46,36,0.8780487804878049,0.4386101309730279,0.7532959028896963,conditional on common non-noise members
+c_5396d39819f0e0f9,45,46,34,0.8292682926829268,0.5636627357003217,0.8108404148038407,conditional on common non-noise members
+c_55687dca99526efe,42,43,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_55687dca99526efe,42,44,40,0.975609756097561,,,not estimable: insufficient non-noise cluster structure
+c_55687dca99526efe,42,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_55687dca99526efe,42,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_55687dca99526efe,43,44,40,0.975609756097561,,,not estimable: insufficient non-noise cluster structure
+c_55687dca99526efe,43,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_55687dca99526efe,43,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_55687dca99526efe,44,45,40,0.975609756097561,,,not estimable: insufficient non-noise cluster structure
+c_55687dca99526efe,44,46,40,0.975609756097561,,,not estimable: insufficient non-noise cluster structure
+c_55687dca99526efe,45,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_55993fa3ee8a5e36,42,43,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_55993fa3ee8a5e36,42,44,37,0.9024390243902439,,,not estimable: insufficient non-noise cluster structure
+c_55993fa3ee8a5e36,42,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_55993fa3ee8a5e36,42,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_55993fa3ee8a5e36,43,44,37,0.9024390243902439,,,not estimable: insufficient non-noise cluster structure
+c_55993fa3ee8a5e36,43,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_55993fa3ee8a5e36,43,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_55993fa3ee8a5e36,44,45,37,0.9024390243902439,,,not estimable: insufficient non-noise cluster structure
+c_55993fa3ee8a5e36,44,46,37,0.9024390243902439,,,not estimable: insufficient non-noise cluster structure
+c_55993fa3ee8a5e36,45,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_55a11fc76959842a,42,43,24,0.5853658536585366,0.5106382978723404,0.7020168761809932,conditional on common non-noise members
+c_55a11fc76959842a,42,44,23,0.5609756097560976,1.0,1.0,conditional on common non-noise members
+c_55a11fc76959842a,42,45,16,0.3902439024390244,1.0,1.0,conditional on common non-noise members
+c_55a11fc76959842a,42,46,25,0.6097560975609756,1.0,1.0,conditional on common non-noise members
+c_55a11fc76959842a,43,44,22,0.5365853658536586,0.47146918116896624,0.6811844280997601,conditional on common non-noise members
+c_55a11fc76959842a,43,45,16,0.3902439024390244,,,not estimable: insufficient non-noise cluster structure
+c_55a11fc76959842a,43,46,25,0.6097560975609756,0.512743628185907,0.6992789822665351,conditional on common non-noise members
+c_55a11fc76959842a,44,45,16,0.3902439024390244,1.0,1.0,conditional on common non-noise members
+c_55a11fc76959842a,44,46,24,0.5853658536585366,1.0,1.0,conditional on common non-noise members
+c_55a11fc76959842a,45,46,17,0.4146341463414634,1.0,1.0,conditional on common non-noise members
+c_563684b462de7fa2,42,43,35,0.8536585365853658,,,not estimable: insufficient non-noise cluster structure
+c_563684b462de7fa2,42,44,35,0.8536585365853658,,,not estimable: insufficient non-noise cluster structure
+c_563684b462de7fa2,42,45,35,0.8536585365853658,,,not estimable: insufficient non-noise cluster structure
+c_563684b462de7fa2,42,46,35,0.8536585365853658,,,not estimable: insufficient non-noise cluster structure
+c_563684b462de7fa2,43,44,35,0.8536585365853658,,,not estimable: insufficient non-noise cluster structure
+c_563684b462de7fa2,43,45,35,0.8536585365853658,,,not estimable: insufficient non-noise cluster structure
+c_563684b462de7fa2,43,46,35,0.8536585365853658,,,not estimable: insufficient non-noise cluster structure
+c_563684b462de7fa2,44,45,35,0.8536585365853658,,,not estimable: insufficient non-noise cluster structure
+c_563684b462de7fa2,44,46,35,0.8536585365853658,,,not estimable: insufficient non-noise cluster structure
+c_563684b462de7fa2,45,46,35,0.8536585365853658,,,not estimable: insufficient non-noise cluster structure
+c_56490383ff0f1ee6,42,43,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_56490383ff0f1ee6,42,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_56490383ff0f1ee6,42,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_56490383ff0f1ee6,42,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_56490383ff0f1ee6,43,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_56490383ff0f1ee6,43,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_56490383ff0f1ee6,43,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_56490383ff0f1ee6,44,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_56490383ff0f1ee6,44,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_56490383ff0f1ee6,45,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_579e5da39140923e,42,43,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_579e5da39140923e,42,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_579e5da39140923e,42,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_579e5da39140923e,42,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_579e5da39140923e,43,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_579e5da39140923e,43,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_579e5da39140923e,43,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_579e5da39140923e,44,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_579e5da39140923e,44,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_579e5da39140923e,45,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_588a52c52d9ad527,42,43,5,0.12195121951219512,,,not estimable: insufficient non-noise cluster structure
+c_588a52c52d9ad527,42,44,5,0.12195121951219512,,,not estimable: insufficient non-noise cluster structure
+c_588a52c52d9ad527,42,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_588a52c52d9ad527,42,46,6,0.14634146341463414,-0.17391304347826086,0.13921962366837867,conditional on common non-noise members
+c_588a52c52d9ad527,43,44,5,0.12195121951219512,,,not estimable: insufficient non-noise cluster structure
+c_588a52c52d9ad527,43,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_588a52c52d9ad527,43,46,5,0.12195121951219512,,,not estimable: insufficient non-noise cluster structure
+c_588a52c52d9ad527,44,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_588a52c52d9ad527,44,46,5,0.12195121951219512,,,not estimable: insufficient non-noise cluster structure
+c_588a52c52d9ad527,45,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_5a96e15fee0f1363,42,43,41,1.0,-0.05321100917431193,0.11746331949197461,conditional on common non-noise members
+c_5a96e15fee0f1363,42,44,41,1.0,1.0,1.0,conditional on common non-noise members
+c_5a96e15fee0f1363,42,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_5a96e15fee0f1363,42,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_5a96e15fee0f1363,43,44,41,1.0,-0.05321100917431193,0.11746331949197461,conditional on common non-noise members
+c_5a96e15fee0f1363,43,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_5a96e15fee0f1363,43,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_5a96e15fee0f1363,44,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_5a96e15fee0f1363,44,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_5a96e15fee0f1363,45,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_5aec4b2e3e3a0252,42,43,31,0.7560975609756098,0.9483428994630624,0.9699322838883018,conditional on common non-noise members
+c_5aec4b2e3e3a0252,42,44,28,0.6829268292682927,1.0,1.0,conditional on common non-noise members
+c_5aec4b2e3e3a0252,42,45,28,0.6829268292682927,0.8666919863273832,0.9112194126008129,conditional on common non-noise members
+c_5aec4b2e3e3a0252,42,46,24,0.5853658536585366,0.8579183826282292,0.90492620674513,conditional on common non-noise members
+c_5aec4b2e3e3a0252,43,44,30,0.7317073170731707,0.9136809613052586,0.9620595540862559,conditional on common non-noise members
+c_5aec4b2e3e3a0252,43,45,29,0.7073170731707317,0.8395704523267166,0.9160102623218173,conditional on common non-noise members
+c_5aec4b2e3e3a0252,43,46,25,0.6097560975609756,1.0,1.0,conditional on common non-noise members
+c_5aec4b2e3e3a0252,44,45,26,0.6341463414634146,0.8987381212026796,0.9447622725589154,conditional on common non-noise members
+c_5aec4b2e3e3a0252,44,46,25,0.6097560975609756,0.8876310970534377,0.9522412617154422,conditional on common non-noise members
+c_5aec4b2e3e3a0252,45,46,24,0.5853658536585366,0.9078947368421053,0.9415080656623883,conditional on common non-noise members
+c_5b9aefd0216c89b5,42,43,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_5b9aefd0216c89b5,42,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_5b9aefd0216c89b5,42,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_5b9aefd0216c89b5,42,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_5b9aefd0216c89b5,43,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_5b9aefd0216c89b5,43,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_5b9aefd0216c89b5,43,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_5b9aefd0216c89b5,44,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_5b9aefd0216c89b5,44,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_5b9aefd0216c89b5,45,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_5c102e5668b95508,42,43,39,0.9512195121951219,0.4136936683487771,0.6032059776275192,conditional on common non-noise members
+c_5c102e5668b95508,42,44,38,0.926829268292683,0.44237328468311254,0.6181883265784741,conditional on common non-noise members
+c_5c102e5668b95508,42,45,39,0.9512195121951219,1.0,1.0,conditional on common non-noise members
+c_5c102e5668b95508,42,46,39,0.9512195121951219,0.3953611159314875,0.6240551217480734,conditional on common non-noise members
+c_5c102e5668b95508,43,44,38,0.926829268292683,1.0,1.0,conditional on common non-noise members
+c_5c102e5668b95508,43,45,39,0.9512195121951219,0.4136936683487771,0.6032059776275192,conditional on common non-noise members
+c_5c102e5668b95508,43,46,40,0.975609756097561,-0.07679230904507885,0.11934459211258139,conditional on common non-noise members
+c_5c102e5668b95508,44,45,38,0.926829268292683,0.44237328468311254,0.6181883265784741,conditional on common non-noise members
+c_5c102e5668b95508,44,46,38,0.926829268292683,-0.09145790539269738,0.11614229832635568,conditional on common non-noise members
+c_5c102e5668b95508,45,46,39,0.9512195121951219,0.3953611159314875,0.6240551217480734,conditional on common non-noise members
+c_5c264a58f0f80291,42,43,34,0.8292682926829268,1.0,1.0,conditional on common non-noise members
+c_5c264a58f0f80291,42,44,37,0.9024390243902439,1.0,1.0,conditional on common non-noise members
+c_5c264a58f0f80291,42,45,36,0.8780487804878049,1.0,1.0,conditional on common non-noise members
+c_5c264a58f0f80291,42,46,36,0.8780487804878049,1.0,1.0,conditional on common non-noise members
+c_5c264a58f0f80291,43,44,35,0.8536585365853658,1.0,1.0,conditional on common non-noise members
+c_5c264a58f0f80291,43,45,35,0.8536585365853658,1.0,1.0,conditional on common non-noise members
+c_5c264a58f0f80291,43,46,34,0.8292682926829268,1.0,1.0,conditional on common non-noise members
+c_5c264a58f0f80291,44,45,37,0.9024390243902439,1.0,1.0,conditional on common non-noise members
+c_5c264a58f0f80291,44,46,36,0.8780487804878049,1.0,1.0,conditional on common non-noise members
+c_5c264a58f0f80291,45,46,35,0.8536585365853658,1.0,1.0,conditional on common non-noise members
+c_5f7bfc4233c255b3,42,43,26,0.6341463414634146,1.0,1.0,conditional on common non-noise members
+c_5f7bfc4233c255b3,42,44,28,0.6829268292682927,1.0,1.0,conditional on common non-noise members
+c_5f7bfc4233c255b3,42,45,36,0.8780487804878049,1.0,1.0,conditional on common non-noise members
+c_5f7bfc4233c255b3,42,46,26,0.6341463414634146,1.0,1.0,conditional on common non-noise members
+c_5f7bfc4233c255b3,43,44,24,0.5853658536585366,1.0,1.0,conditional on common non-noise members
+c_5f7bfc4233c255b3,43,45,27,0.6585365853658537,1.0,1.0,conditional on common non-noise members
+c_5f7bfc4233c255b3,43,46,26,0.6341463414634146,1.0,1.0,conditional on common non-noise members
+c_5f7bfc4233c255b3,44,45,30,0.7317073170731707,1.0,1.0,conditional on common non-noise members
+c_5f7bfc4233c255b3,44,46,23,0.5609756097560976,1.0,1.0,conditional on common non-noise members
+c_5f7bfc4233c255b3,45,46,26,0.6341463414634146,1.0,1.0,conditional on common non-noise members
+c_5fc50618df5ab51b,42,43,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_5fc50618df5ab51b,42,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_5fc50618df5ab51b,42,45,41,1.0,1.0,1.0,conditional on common non-noise members
+c_5fc50618df5ab51b,42,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_5fc50618df5ab51b,43,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_5fc50618df5ab51b,43,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_5fc50618df5ab51b,43,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_5fc50618df5ab51b,44,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_5fc50618df5ab51b,44,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_5fc50618df5ab51b,45,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_5ff681b0ad69e5eb,42,43,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_5ff681b0ad69e5eb,42,44,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_5ff681b0ad69e5eb,42,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_5ff681b0ad69e5eb,42,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_5ff681b0ad69e5eb,43,44,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_5ff681b0ad69e5eb,43,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_5ff681b0ad69e5eb,43,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_5ff681b0ad69e5eb,44,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_5ff681b0ad69e5eb,44,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_5ff681b0ad69e5eb,45,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_62035519b8057e3e,42,43,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_62035519b8057e3e,42,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_62035519b8057e3e,42,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_62035519b8057e3e,42,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_62035519b8057e3e,43,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_62035519b8057e3e,43,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_62035519b8057e3e,43,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_62035519b8057e3e,44,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_62035519b8057e3e,44,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_62035519b8057e3e,45,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_682825f2d9bcb203,42,43,41,1.0,0.4491362763915547,0.6145612689628894,conditional on common non-noise members
+c_682825f2d9bcb203,42,44,41,1.0,1.0,1.0,conditional on common non-noise members
+c_682825f2d9bcb203,42,45,41,1.0,0.5753236862147754,0.552199767253985,conditional on common non-noise members
+c_682825f2d9bcb203,42,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_682825f2d9bcb203,43,44,41,1.0,0.4491362763915547,0.6145612689628894,conditional on common non-noise members
+c_682825f2d9bcb203,43,45,41,1.0,0.23465358382194568,0.3974023321921664,conditional on common non-noise members
+c_682825f2d9bcb203,43,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_682825f2d9bcb203,44,45,41,1.0,0.5753236862147754,0.552199767253985,conditional on common non-noise members
+c_682825f2d9bcb203,44,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_682825f2d9bcb203,45,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_697311d793773984,42,43,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_697311d793773984,42,44,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_697311d793773984,42,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_697311d793773984,42,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_697311d793773984,43,44,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_697311d793773984,43,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_697311d793773984,43,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_697311d793773984,44,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_697311d793773984,44,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_697311d793773984,45,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_69ae730bf681fbbf,42,43,18,0.43902439024390244,,,not estimable: insufficient non-noise cluster structure
+c_69ae730bf681fbbf,42,44,17,0.4146341463414634,,,not estimable: insufficient non-noise cluster structure
+c_69ae730bf681fbbf,42,45,18,0.43902439024390244,,,not estimable: insufficient non-noise cluster structure
+c_69ae730bf681fbbf,42,46,18,0.43902439024390244,,,not estimable: insufficient non-noise cluster structure
+c_69ae730bf681fbbf,43,44,17,0.4146341463414634,,,not estimable: insufficient non-noise cluster structure
+c_69ae730bf681fbbf,43,45,18,0.43902439024390244,,,not estimable: insufficient non-noise cluster structure
+c_69ae730bf681fbbf,43,46,18,0.43902439024390244,,,not estimable: insufficient non-noise cluster structure
+c_69ae730bf681fbbf,44,45,17,0.4146341463414634,,,not estimable: insufficient non-noise cluster structure
+c_69ae730bf681fbbf,44,46,17,0.4146341463414634,,,not estimable: insufficient non-noise cluster structure
+c_69ae730bf681fbbf,45,46,18,0.43902439024390244,,,not estimable: insufficient non-noise cluster structure
+c_6e2077b23a56fbf7,42,43,9,0.21951219512195122,1.0,1.0,conditional on common non-noise members
+c_6e2077b23a56fbf7,42,44,9,0.21951219512195122,1.0,1.0,conditional on common non-noise members
+c_6e2077b23a56fbf7,42,45,7,0.17073170731707318,0.4424778761061947,0.7133884404294447,conditional on common non-noise members
+c_6e2077b23a56fbf7,42,46,9,0.21951219512195122,0.6842105263157895,0.8732125948308145,conditional on common non-noise members
+c_6e2077b23a56fbf7,43,44,13,0.3170731707317073,1.0,1.0,conditional on common non-noise members
+c_6e2077b23a56fbf7,43,45,10,0.24390243902439024,0.6,0.8246356370538958,conditional on common non-noise members
+c_6e2077b23a56fbf7,43,46,14,0.34146341463414637,0.7741935483870968,0.9186973125079317,conditional on common non-noise members
+c_6e2077b23a56fbf7,44,45,13,0.3170731707317073,0.523943661971831,0.7987202944629633,conditional on common non-noise members
+c_6e2077b23a56fbf7,44,46,14,0.34146341463414637,0.5968586387434555,0.8572302481872437,conditional on common non-noise members
+c_6e2077b23a56fbf7,45,46,16,0.3902439024390244,0.8717948717948718,0.9117139413761732,conditional on common non-noise members
+c_6f9a95bcc699c1d9,42,43,39,0.9512195121951219,0.4484298674110258,0.7089890716184368,conditional on common non-noise members
+c_6f9a95bcc699c1d9,42,44,39,0.9512195121951219,0.5910746477318716,0.7904968712962414,conditional on common non-noise members
+c_6f9a95bcc699c1d9,42,45,39,0.9512195121951219,0.33318607961517693,0.6618921652497562,conditional on common non-noise members
+c_6f9a95bcc699c1d9,42,46,39,0.9512195121951219,0.6048574752763235,0.7922893745532451,conditional on common non-noise members
+c_6f9a95bcc699c1d9,43,44,39,0.9512195121951219,0.6711873753322678,0.821139531233951,conditional on common non-noise members
+c_6f9a95bcc699c1d9,43,45,39,0.9512195121951219,0.6740750323415265,0.8225734455188196,conditional on common non-noise members
+c_6f9a95bcc699c1d9,43,46,39,0.9512195121951219,0.7867084321029462,0.8987682935277115,conditional on common non-noise members
+c_6f9a95bcc699c1d9,44,45,39,0.9512195121951219,0.5689877547304372,0.7807531874582583,conditional on common non-noise members
+c_6f9a95bcc699c1d9,44,46,40,0.975609756097561,0.8154991431019709,0.8426187903090039,conditional on common non-noise members
+c_6f9a95bcc699c1d9,45,46,39,0.9512195121951219,0.5593929114516317,0.775265903097915,conditional on common non-noise members
+c_6fa0e4b6a1e67424,42,43,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_6fa0e4b6a1e67424,42,44,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_6fa0e4b6a1e67424,42,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_6fa0e4b6a1e67424,42,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_6fa0e4b6a1e67424,43,44,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_6fa0e4b6a1e67424,43,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_6fa0e4b6a1e67424,43,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_6fa0e4b6a1e67424,44,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_6fa0e4b6a1e67424,44,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_6fa0e4b6a1e67424,45,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_7025422fc1101e66,42,43,35,0.8536585365853658,0.09511252836205311,0.4912345460966804,conditional on common non-noise members
+c_7025422fc1101e66,42,44,34,0.8292682926829268,-0.03691606532472465,0.27988466698379766,conditional on common non-noise members
+c_7025422fc1101e66,42,45,37,0.9024390243902439,0.005808761849783976,0.28729237623572423,conditional on common non-noise members
+c_7025422fc1101e66,42,46,33,0.8048780487804879,0.5210574057276144,0.6899862272886276,conditional on common non-noise members
+c_7025422fc1101e66,43,44,34,0.8292682926829268,0.39360428376625534,0.6294562925209947,conditional on common non-noise members
+c_7025422fc1101e66,43,45,36,0.8780487804878049,0.21753607103218647,0.5396289004290669,conditional on common non-noise members
+c_7025422fc1101e66,43,46,32,0.7804878048780488,0.41716280943641165,0.7083691131832935,conditional on common non-noise members
+c_7025422fc1101e66,44,45,36,0.8780487804878049,0.3806738958159877,0.4583595296502013,conditional on common non-noise members
+c_7025422fc1101e66,44,46,32,0.7804878048780488,0.1696583024869329,0.4647030584101757,conditional on common non-noise members
+c_7025422fc1101e66,45,46,33,0.8048780487804879,0.033752029394172434,0.35167314205400996,conditional on common non-noise members
+c_7117334b64101bcd,42,43,41,1.0,0.7366023140712576,0.8557652100919129,conditional on common non-noise members
+c_7117334b64101bcd,42,44,37,0.9024390243902439,0.9369676320272572,0.9247071137963813,conditional on common non-noise members
+c_7117334b64101bcd,42,45,41,1.0,1.0,1.0,conditional on common non-noise members
+c_7117334b64101bcd,42,46,41,1.0,1.0,1.0,conditional on common non-noise members
+c_7117334b64101bcd,43,44,37,0.9024390243902439,0.6437606192184255,0.7413060369937092,conditional on common non-noise members
+c_7117334b64101bcd,43,45,41,1.0,0.7366023140712576,0.8557652100919129,conditional on common non-noise members
+c_7117334b64101bcd,43,46,41,1.0,0.7366023140712576,0.8557652100919129,conditional on common non-noise members
+c_7117334b64101bcd,44,45,37,0.9024390243902439,0.9369676320272572,0.9247071137963813,conditional on common non-noise members
+c_7117334b64101bcd,44,46,37,0.9024390243902439,0.9369676320272572,0.9247071137963813,conditional on common non-noise members
+c_7117334b64101bcd,45,46,41,1.0,1.0,1.0,conditional on common non-noise members
+c_7148bf3b07fca744,42,43,34,0.8292682926829268,1.0,1.0,conditional on common non-noise members
+c_7148bf3b07fca744,42,44,35,0.8536585365853658,1.0,1.0,conditional on common non-noise members
+c_7148bf3b07fca744,42,45,34,0.8292682926829268,1.0,1.0,conditional on common non-noise members
+c_7148bf3b07fca744,42,46,35,0.8536585365853658,1.0,1.0,conditional on common non-noise members
+c_7148bf3b07fca744,43,44,35,0.8536585365853658,1.0,1.0,conditional on common non-noise members
+c_7148bf3b07fca744,43,45,35,0.8536585365853658,1.0,1.0,conditional on common non-noise members
+c_7148bf3b07fca744,43,46,34,0.8292682926829268,1.0,1.0,conditional on common non-noise members
+c_7148bf3b07fca744,44,45,36,0.8780487804878049,1.0,1.0,conditional on common non-noise members
+c_7148bf3b07fca744,44,46,35,0.8536585365853658,1.0,1.0,conditional on common non-noise members
+c_7148bf3b07fca744,45,46,34,0.8292682926829268,1.0,1.0,conditional on common non-noise members
+c_71be172d13210d30,42,43,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_71be172d13210d30,42,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_71be172d13210d30,42,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_71be172d13210d30,42,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_71be172d13210d30,43,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_71be172d13210d30,43,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_71be172d13210d30,43,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_71be172d13210d30,44,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_71be172d13210d30,44,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_71be172d13210d30,45,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_724b654acd9545c8,42,43,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_724b654acd9545c8,42,44,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_724b654acd9545c8,42,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_724b654acd9545c8,42,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_724b654acd9545c8,43,44,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_724b654acd9545c8,43,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_724b654acd9545c8,43,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_724b654acd9545c8,44,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_724b654acd9545c8,44,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_724b654acd9545c8,45,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_728f1e21251384e9,42,43,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_728f1e21251384e9,42,44,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_728f1e21251384e9,42,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_728f1e21251384e9,42,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_728f1e21251384e9,43,44,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_728f1e21251384e9,43,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_728f1e21251384e9,43,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_728f1e21251384e9,44,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_728f1e21251384e9,44,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_728f1e21251384e9,45,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_744414a3b9d3f2ac,42,43,35,0.8536585365853658,,,not estimable: insufficient non-noise cluster structure
+c_744414a3b9d3f2ac,42,44,35,0.8536585365853658,,,not estimable: insufficient non-noise cluster structure
+c_744414a3b9d3f2ac,42,45,35,0.8536585365853658,,,not estimable: insufficient non-noise cluster structure
+c_744414a3b9d3f2ac,42,46,35,0.8536585365853658,,,not estimable: insufficient non-noise cluster structure
+c_744414a3b9d3f2ac,43,44,35,0.8536585365853658,,,not estimable: insufficient non-noise cluster structure
+c_744414a3b9d3f2ac,43,45,35,0.8536585365853658,,,not estimable: insufficient non-noise cluster structure
+c_744414a3b9d3f2ac,43,46,35,0.8536585365853658,,,not estimable: insufficient non-noise cluster structure
+c_744414a3b9d3f2ac,44,45,35,0.8536585365853658,,,not estimable: insufficient non-noise cluster structure
+c_744414a3b9d3f2ac,44,46,35,0.8536585365853658,,,not estimable: insufficient non-noise cluster structure
+c_744414a3b9d3f2ac,45,46,35,0.8536585365853658,,,not estimable: insufficient non-noise cluster structure
+c_74446a083a23f29c,42,43,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_74446a083a23f29c,42,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_74446a083a23f29c,42,45,39,0.9512195121951219,,,not estimable: insufficient non-noise cluster structure
+c_74446a083a23f29c,42,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_74446a083a23f29c,43,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_74446a083a23f29c,43,45,39,0.9512195121951219,,,not estimable: insufficient non-noise cluster structure
+c_74446a083a23f29c,43,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_74446a083a23f29c,44,45,39,0.9512195121951219,,,not estimable: insufficient non-noise cluster structure
+c_74446a083a23f29c,44,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_74446a083a23f29c,45,46,39,0.9512195121951219,,,not estimable: insufficient non-noise cluster structure
+c_764f1f0369084450,42,43,41,1.0,0.4491362763915547,0.6145612689628894,conditional on common non-noise members
+c_764f1f0369084450,42,44,41,1.0,1.0,1.0,conditional on common non-noise members
+c_764f1f0369084450,42,45,34,0.8292682926829268,,,not estimable: insufficient non-noise cluster structure
+c_764f1f0369084450,42,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_764f1f0369084450,43,44,41,1.0,0.4491362763915547,0.6145612689628894,conditional on common non-noise members
+c_764f1f0369084450,43,45,34,0.8292682926829268,,,not estimable: insufficient non-noise cluster structure
+c_764f1f0369084450,43,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_764f1f0369084450,44,45,34,0.8292682926829268,,,not estimable: insufficient non-noise cluster structure
+c_764f1f0369084450,44,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_764f1f0369084450,45,46,34,0.8292682926829268,,,not estimable: insufficient non-noise cluster structure
+c_768cf36d5393ef0e,42,43,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_768cf36d5393ef0e,42,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_768cf36d5393ef0e,42,45,41,1.0,1.0,1.0,conditional on common non-noise members
+c_768cf36d5393ef0e,42,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_768cf36d5393ef0e,43,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_768cf36d5393ef0e,43,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_768cf36d5393ef0e,43,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_768cf36d5393ef0e,44,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_768cf36d5393ef0e,44,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_768cf36d5393ef0e,45,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_779fc31fa278ac20,42,43,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_779fc31fa278ac20,42,44,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_779fc31fa278ac20,42,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_779fc31fa278ac20,42,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_779fc31fa278ac20,43,44,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_779fc31fa278ac20,43,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_779fc31fa278ac20,43,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_779fc31fa278ac20,44,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_779fc31fa278ac20,44,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_779fc31fa278ac20,45,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_7976fbcc08479c0c,42,43,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_7976fbcc08479c0c,42,44,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_7976fbcc08479c0c,42,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_7976fbcc08479c0c,42,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_7976fbcc08479c0c,43,44,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_7976fbcc08479c0c,43,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_7976fbcc08479c0c,43,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_7976fbcc08479c0c,44,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_7976fbcc08479c0c,44,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_7976fbcc08479c0c,45,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_7a067e4f6c20a488,42,43,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_7a067e4f6c20a488,42,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_7a067e4f6c20a488,42,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_7a067e4f6c20a488,42,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_7a067e4f6c20a488,43,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_7a067e4f6c20a488,43,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_7a067e4f6c20a488,43,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_7a067e4f6c20a488,44,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_7a067e4f6c20a488,44,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_7a067e4f6c20a488,45,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_7a9d453f75b6010f,42,43,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_7a9d453f75b6010f,42,44,39,0.9512195121951219,,,not estimable: insufficient non-noise cluster structure
+c_7a9d453f75b6010f,42,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_7a9d453f75b6010f,42,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_7a9d453f75b6010f,43,44,39,0.9512195121951219,,,not estimable: insufficient non-noise cluster structure
+c_7a9d453f75b6010f,43,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_7a9d453f75b6010f,43,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_7a9d453f75b6010f,44,45,39,0.9512195121951219,,,not estimable: insufficient non-noise cluster structure
+c_7a9d453f75b6010f,44,46,39,0.9512195121951219,,,not estimable: insufficient non-noise cluster structure
+c_7a9d453f75b6010f,45,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_7c3e15d18f4c80bd,42,43,17,0.4146341463414634,,,not estimable: insufficient non-noise cluster structure
+c_7c3e15d18f4c80bd,42,44,21,0.5121951219512195,1.0,1.0,conditional on common non-noise members
+c_7c3e15d18f4c80bd,42,45,17,0.4146341463414634,,,not estimable: insufficient non-noise cluster structure
+c_7c3e15d18f4c80bd,42,46,21,0.5121951219512195,1.0,1.0,conditional on common non-noise members
+c_7c3e15d18f4c80bd,43,44,16,0.3902439024390244,,,not estimable: insufficient non-noise cluster structure
+c_7c3e15d18f4c80bd,43,45,16,0.3902439024390244,,,not estimable: insufficient non-noise cluster structure
+c_7c3e15d18f4c80bd,43,46,16,0.3902439024390244,,,not estimable: insufficient non-noise cluster structure
+c_7c3e15d18f4c80bd,44,45,17,0.4146341463414634,,,not estimable: insufficient non-noise cluster structure
+c_7c3e15d18f4c80bd,44,46,21,0.5121951219512195,1.0,1.0,conditional on common non-noise members
+c_7c3e15d18f4c80bd,45,46,16,0.3902439024390244,,,not estimable: insufficient non-noise cluster structure
+c_7d1897fae9b63e45,42,43,12,0.2926829268292683,1.0,1.0,conditional on common non-noise members
+c_7d1897fae9b63e45,42,44,12,0.2926829268292683,1.0,1.0,conditional on common non-noise members
+c_7d1897fae9b63e45,42,45,12,0.2926829268292683,1.0,1.0,conditional on common non-noise members
+c_7d1897fae9b63e45,42,46,9,0.21951219512195122,1.0,1.0,conditional on common non-noise members
+c_7d1897fae9b63e45,43,44,14,0.34146341463414637,1.0,0.9999999999999999,conditional on common non-noise members
+c_7d1897fae9b63e45,43,45,15,0.36585365853658536,1.0,1.0,conditional on common non-noise members
+c_7d1897fae9b63e45,43,46,12,0.2926829268292683,1.0,1.0,conditional on common non-noise members
+c_7d1897fae9b63e45,44,45,14,0.34146341463414637,1.0,1.0,conditional on common non-noise members
+c_7d1897fae9b63e45,44,46,11,0.2682926829268293,1.0,1.0,conditional on common non-noise members
+c_7d1897fae9b63e45,45,46,12,0.2926829268292683,1.0,1.0,conditional on common non-noise members
+c_7d8d3cf8e5038a96,42,43,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_7d8d3cf8e5038a96,42,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_7d8d3cf8e5038a96,42,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_7d8d3cf8e5038a96,42,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_7d8d3cf8e5038a96,43,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_7d8d3cf8e5038a96,43,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_7d8d3cf8e5038a96,43,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_7d8d3cf8e5038a96,44,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_7d8d3cf8e5038a96,44,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_7d8d3cf8e5038a96,45,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_7dc1f4041361525b,42,43,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_7dc1f4041361525b,42,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_7dc1f4041361525b,42,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_7dc1f4041361525b,42,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_7dc1f4041361525b,43,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_7dc1f4041361525b,43,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_7dc1f4041361525b,43,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_7dc1f4041361525b,44,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_7dc1f4041361525b,44,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_7dc1f4041361525b,45,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_7dfcb40a13c151ae,42,43,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_7dfcb40a13c151ae,42,44,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_7dfcb40a13c151ae,42,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_7dfcb40a13c151ae,42,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_7dfcb40a13c151ae,43,44,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_7dfcb40a13c151ae,43,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_7dfcb40a13c151ae,43,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_7dfcb40a13c151ae,44,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_7dfcb40a13c151ae,44,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_7dfcb40a13c151ae,45,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_7e2d5fe5b3027b19,42,43,31,0.7560975609756098,0.734679904142417,0.8971375039364584,conditional on common non-noise members
+c_7e2d5fe5b3027b19,42,44,32,0.7804878048780488,1.0,1.0,conditional on common non-noise members
+c_7e2d5fe5b3027b19,42,45,32,0.7804878048780488,1.0,1.0,conditional on common non-noise members
+c_7e2d5fe5b3027b19,42,46,31,0.7560975609756098,0.910080771118747,0.9407427312373405,conditional on common non-noise members
+c_7e2d5fe5b3027b19,43,44,33,0.8048780487804879,0.7605321507760532,0.9043750540685269,conditional on common non-noise members
+c_7e2d5fe5b3027b19,43,45,33,0.8048780487804879,0.7605321507760532,0.9043750540685269,conditional on common non-noise members
+c_7e2d5fe5b3027b19,43,46,33,0.8048780487804879,0.7897042716319824,0.9115283134133325,conditional on common non-noise members
+c_7e2d5fe5b3027b19,44,45,35,0.8536585365853658,1.0,1.0,conditional on common non-noise members
+c_7e2d5fe5b3027b19,44,46,33,0.8048780487804879,0.9201303234814987,0.9445757074562183,conditional on common non-noise members
+c_7e2d5fe5b3027b19,45,46,33,0.8048780487804879,0.9201303234814987,0.9445757074562183,conditional on common non-noise members
+c_80a7d0f9c22ca3fe,42,43,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_80a7d0f9c22ca3fe,42,44,37,0.9024390243902439,,,not estimable: insufficient non-noise cluster structure
+c_80a7d0f9c22ca3fe,42,45,41,1.0,0.3117505995203837,0.5542711435704193,conditional on common non-noise members
+c_80a7d0f9c22ca3fe,42,46,41,1.0,-0.05321100917431193,0.11746331949197461,conditional on common non-noise members
+c_80a7d0f9c22ca3fe,43,44,37,0.9024390243902439,,,not estimable: insufficient non-noise cluster structure
+c_80a7d0f9c22ca3fe,43,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_80a7d0f9c22ca3fe,43,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_80a7d0f9c22ca3fe,44,45,37,0.9024390243902439,,,not estimable: insufficient non-noise cluster structure
+c_80a7d0f9c22ca3fe,44,46,37,0.9024390243902439,,,not estimable: insufficient non-noise cluster structure
+c_80a7d0f9c22ca3fe,45,46,41,1.0,0.7464664310954063,0.8088225966579874,conditional on common non-noise members
+c_836f0faa56db6fc2,42,43,33,0.8048780487804879,1.0,1.0,conditional on common non-noise members
+c_836f0faa56db6fc2,42,44,34,0.8292682926829268,0.8011695906432749,0.9142410719897311,conditional on common non-noise members
+c_836f0faa56db6fc2,42,45,34,0.8292682926829268,0.8011695906432749,0.9142410719897311,conditional on common non-noise members
+c_836f0faa56db6fc2,42,46,34,0.8292682926829268,0.8011695906432749,0.9142410719897311,conditional on common non-noise members
+c_836f0faa56db6fc2,43,44,33,0.8048780487804879,0.7897042716319824,0.9115283134133327,conditional on common non-noise members
+c_836f0faa56db6fc2,43,45,33,0.8048780487804879,0.7897042716319824,0.9115283134133325,conditional on common non-noise members
+c_836f0faa56db6fc2,43,46,34,0.8292682926829268,0.8011695906432749,0.9142410719897311,conditional on common non-noise members
+c_836f0faa56db6fc2,44,45,34,0.8292682926829268,1.0,1.0,conditional on common non-noise members
+c_836f0faa56db6fc2,44,46,34,0.8292682926829268,1.0,1.0,conditional on common non-noise members
+c_836f0faa56db6fc2,45,46,34,0.8292682926829268,1.0,1.0,conditional on common non-noise members
+c_83db85ec9880f498,42,43,10,0.24390243902439024,,,not estimable: insufficient non-noise cluster structure
+c_83db85ec9880f498,42,44,10,0.24390243902439024,,,not estimable: insufficient non-noise cluster structure
+c_83db85ec9880f498,42,45,10,0.24390243902439024,,,not estimable: insufficient non-noise cluster structure
+c_83db85ec9880f498,42,46,10,0.24390243902439024,,,not estimable: insufficient non-noise cluster structure
+c_83db85ec9880f498,43,44,10,0.24390243902439024,,,not estimable: insufficient non-noise cluster structure
+c_83db85ec9880f498,43,45,10,0.24390243902439024,,,not estimable: insufficient non-noise cluster structure
+c_83db85ec9880f498,43,46,10,0.24390243902439024,,,not estimable: insufficient non-noise cluster structure
+c_83db85ec9880f498,44,45,10,0.24390243902439024,,,not estimable: insufficient non-noise cluster structure
+c_83db85ec9880f498,44,46,10,0.24390243902439024,,,not estimable: insufficient non-noise cluster structure
+c_83db85ec9880f498,45,46,10,0.24390243902439024,,,not estimable: insufficient non-noise cluster structure
+c_861a7c54880e6783,42,43,7,0.17073170731707318,,,not estimable: insufficient non-noise cluster structure
+c_861a7c54880e6783,42,44,6,0.14634146341463414,1.0,1.0,conditional on common non-noise members
+c_861a7c54880e6783,42,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_861a7c54880e6783,42,46,10,0.24390243902439024,1.0,1.0,conditional on common non-noise members
+c_861a7c54880e6783,43,44,7,0.17073170731707318,1.0,1.0,conditional on common non-noise members
+c_861a7c54880e6783,43,45,7,0.17073170731707318,1.0,1.0,conditional on common non-noise members
+c_861a7c54880e6783,43,46,7,0.17073170731707318,-0.16666666666666666,0.1044957399781123,conditional on common non-noise members
+c_861a7c54880e6783,44,45,8,0.1951219512195122,1.0,1.0,conditional on common non-noise members
+c_861a7c54880e6783,44,46,8,0.1951219512195122,0.5555555555555556,0.758778393231669,conditional on common non-noise members
+c_861a7c54880e6783,45,46,6,0.14634146341463414,,,not estimable: insufficient non-noise cluster structure
+c_86611a25b8b59d27,42,43,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_86611a25b8b59d27,42,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_86611a25b8b59d27,42,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_86611a25b8b59d27,42,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_86611a25b8b59d27,43,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_86611a25b8b59d27,43,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_86611a25b8b59d27,43,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_86611a25b8b59d27,44,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_86611a25b8b59d27,44,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_86611a25b8b59d27,45,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_87ed03d645cbe852,42,43,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_87ed03d645cbe852,42,44,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_87ed03d645cbe852,42,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_87ed03d645cbe852,42,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_87ed03d645cbe852,43,44,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_87ed03d645cbe852,43,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_87ed03d645cbe852,43,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_87ed03d645cbe852,44,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_87ed03d645cbe852,44,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_87ed03d645cbe852,45,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_88b7bca3e6c67cb9,42,43,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_88b7bca3e6c67cb9,42,44,37,0.9024390243902439,,,not estimable: insufficient non-noise cluster structure
+c_88b7bca3e6c67cb9,42,45,41,1.0,1.0,1.0,conditional on common non-noise members
+c_88b7bca3e6c67cb9,42,46,41,1.0,1.0,1.0,conditional on common non-noise members
+c_88b7bca3e6c67cb9,43,44,37,0.9024390243902439,,,not estimable: insufficient non-noise cluster structure
+c_88b7bca3e6c67cb9,43,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_88b7bca3e6c67cb9,43,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_88b7bca3e6c67cb9,44,45,37,0.9024390243902439,,,not estimable: insufficient non-noise cluster structure
+c_88b7bca3e6c67cb9,44,46,37,0.9024390243902439,,,not estimable: insufficient non-noise cluster structure
+c_88b7bca3e6c67cb9,45,46,41,1.0,1.0,1.0,conditional on common non-noise members
+c_88ce8e0c100ee513,42,43,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_88ce8e0c100ee513,42,44,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_88ce8e0c100ee513,42,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_88ce8e0c100ee513,42,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_88ce8e0c100ee513,43,44,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_88ce8e0c100ee513,43,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_88ce8e0c100ee513,43,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_88ce8e0c100ee513,44,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_88ce8e0c100ee513,44,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_88ce8e0c100ee513,45,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_892146e40dd6ad2f,42,43,41,1.0,1.0,1.0,conditional on common non-noise members
+c_892146e40dd6ad2f,42,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_892146e40dd6ad2f,42,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_892146e40dd6ad2f,42,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_892146e40dd6ad2f,43,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_892146e40dd6ad2f,43,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_892146e40dd6ad2f,43,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_892146e40dd6ad2f,44,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_892146e40dd6ad2f,44,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_892146e40dd6ad2f,45,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_897f443557841e3f,42,43,17,0.4146341463414634,0.882960413080895,0.9556146246902935,conditional on common non-noise members
+c_897f443557841e3f,42,44,29,0.7073170731707317,1.0,1.0,conditional on common non-noise members
+c_897f443557841e3f,42,45,27,0.6585365853658537,1.0,1.0,conditional on common non-noise members
+c_897f443557841e3f,42,46,27,0.6585365853658537,1.0,1.0,conditional on common non-noise members
+c_897f443557841e3f,43,44,21,0.5121951219512195,0.9122807017543859,0.9674304217599674,conditional on common non-noise members
+c_897f443557841e3f,43,45,17,0.4146341463414634,0.882960413080895,0.9556146246902935,conditional on common non-noise members
+c_897f443557841e3f,43,46,21,0.5121951219512195,0.631578947368421,0.8813038222222881,conditional on common non-noise members
+c_897f443557841e3f,44,45,27,0.6585365853658537,1.0,1.0,conditional on common non-noise members
+c_897f443557841e3f,44,46,27,0.6585365853658537,1.0,1.0,conditional on common non-noise members
+c_897f443557841e3f,45,46,27,0.6585365853658537,1.0,1.0,conditional on common non-noise members
+c_8b5a181872b67bca,42,43,41,1.0,-0.05321100917431193,0.11746331949197461,conditional on common non-noise members
+c_8b5a181872b67bca,42,44,41,1.0,1.0,1.0,conditional on common non-noise members
+c_8b5a181872b67bca,42,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_8b5a181872b67bca,42,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_8b5a181872b67bca,43,44,41,1.0,-0.05321100917431193,0.11746331949197461,conditional on common non-noise members
+c_8b5a181872b67bca,43,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_8b5a181872b67bca,43,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_8b5a181872b67bca,44,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_8b5a181872b67bca,44,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_8b5a181872b67bca,45,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_8b7ad7c9ad26a06b,42,43,17,0.4146341463414634,0.36193029490616624,0.6201641172259597,conditional on common non-noise members
+c_8b7ad7c9ad26a06b,42,44,16,0.3902439024390244,0.3329532497149373,0.385788293672683,conditional on common non-noise members
+c_8b7ad7c9ad26a06b,42,45,12,0.2926829268292683,0.5936675461741425,0.7389666773949637,conditional on common non-noise members
+c_8b7ad7c9ad26a06b,42,46,14,0.34146341463414637,0.47297297297297297,0.5243821634784847,conditional on common non-noise members
+c_8b7ad7c9ad26a06b,43,44,16,0.3902439024390244,,,not estimable: insufficient non-noise cluster structure
+c_8b7ad7c9ad26a06b,43,45,16,0.3902439024390244,1.0,1.0,conditional on common non-noise members
+c_8b7ad7c9ad26a06b,43,46,13,0.3170731707317073,,,not estimable: insufficient non-noise cluster structure
+c_8b7ad7c9ad26a06b,44,45,11,0.2682926829268293,,,not estimable: insufficient non-noise cluster structure
+c_8b7ad7c9ad26a06b,44,46,15,0.36585365853658536,0.6145374449339207,0.765568831575998,conditional on common non-noise members
+c_8b7ad7c9ad26a06b,45,46,11,0.2682926829268293,,,not estimable: insufficient non-noise cluster structure
+c_8be1457e8599f85b,42,43,27,0.6585365853658537,0.7169028689941237,0.8957821171862539,conditional on common non-noise members
+c_8be1457e8599f85b,42,44,33,0.8048780487804879,1.0,1.0,conditional on common non-noise members
+c_8be1457e8599f85b,42,45,32,0.7804878048780488,1.0,1.0,conditional on common non-noise members
+c_8be1457e8599f85b,42,46,29,0.7073170731707317,1.0,1.0,conditional on common non-noise members
+c_8be1457e8599f85b,43,44,26,0.6341463414634146,0.7001607928934813,0.8908261008223135,conditional on common non-noise members
+c_8be1457e8599f85b,43,45,25,0.6097560975609756,0.75,0.9057460992755193,conditional on common non-noise members
+c_8be1457e8599f85b,43,46,23,0.5609756097560976,0.6720248898107337,0.8522148933012154,conditional on common non-noise members
+c_8be1457e8599f85b,44,45,31,0.7560975609756098,1.0,1.0,conditional on common non-noise members
+c_8be1457e8599f85b,44,46,28,0.6829268292682927,1.0,1.0,conditional on common non-noise members
+c_8be1457e8599f85b,45,46,27,0.6585365853658537,1.0,1.0,conditional on common non-noise members
+c_8bf41471db1732d6,42,43,16,0.3902439024390244,,,not estimable: insufficient non-noise cluster structure
+c_8bf41471db1732d6,42,44,16,0.3902439024390244,,,not estimable: insufficient non-noise cluster structure
+c_8bf41471db1732d6,42,45,16,0.3902439024390244,,,not estimable: insufficient non-noise cluster structure
+c_8bf41471db1732d6,42,46,13,0.3170731707317073,0.5038167938931297,0.7218896666944281,conditional on common non-noise members
+c_8bf41471db1732d6,43,44,17,0.4146341463414634,,,not estimable: insufficient non-noise cluster structure
+c_8bf41471db1732d6,43,45,17,0.4146341463414634,,,not estimable: insufficient non-noise cluster structure
+c_8bf41471db1732d6,43,46,14,0.34146341463414637,,,not estimable: insufficient non-noise cluster structure
+c_8bf41471db1732d6,44,45,18,0.43902439024390244,,,not estimable: insufficient non-noise cluster structure
+c_8bf41471db1732d6,44,46,14,0.34146341463414637,,,not estimable: insufficient non-noise cluster structure
+c_8bf41471db1732d6,45,46,20,0.4878048780487805,0.2962962962962963,0.5771596324111236,conditional on common non-noise members
+c_8ca9138dce540874,42,43,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_8ca9138dce540874,42,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_8ca9138dce540874,42,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_8ca9138dce540874,42,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_8ca9138dce540874,43,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_8ca9138dce540874,43,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_8ca9138dce540874,43,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_8ca9138dce540874,44,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_8ca9138dce540874,44,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_8ca9138dce540874,45,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_8e91392c66e71d2c,42,43,37,0.9024390243902439,,,not estimable: insufficient non-noise cluster structure
+c_8e91392c66e71d2c,42,44,37,0.9024390243902439,,,not estimable: insufficient non-noise cluster structure
+c_8e91392c66e71d2c,42,45,37,0.9024390243902439,,,not estimable: insufficient non-noise cluster structure
+c_8e91392c66e71d2c,42,46,37,0.9024390243902439,,,not estimable: insufficient non-noise cluster structure
+c_8e91392c66e71d2c,43,44,37,0.9024390243902439,,,not estimable: insufficient non-noise cluster structure
+c_8e91392c66e71d2c,43,45,37,0.9024390243902439,,,not estimable: insufficient non-noise cluster structure
+c_8e91392c66e71d2c,43,46,37,0.9024390243902439,,,not estimable: insufficient non-noise cluster structure
+c_8e91392c66e71d2c,44,45,37,0.9024390243902439,,,not estimable: insufficient non-noise cluster structure
+c_8e91392c66e71d2c,44,46,37,0.9024390243902439,,,not estimable: insufficient non-noise cluster structure
+c_8e91392c66e71d2c,45,46,37,0.9024390243902439,,,not estimable: insufficient non-noise cluster structure
+c_8ee2ad8a818e21ff,42,43,31,0.7560975609756098,0.586246345493835,0.7312400193263199,conditional on common non-noise members
+c_8ee2ad8a818e21ff,42,44,31,0.7560975609756098,0.5432220039292731,0.7030950464002897,conditional on common non-noise members
+c_8ee2ad8a818e21ff,42,45,27,0.6585365853658537,0.8153426754029366,0.8720709413830635,conditional on common non-noise members
+c_8ee2ad8a818e21ff,42,46,29,0.7073170731707317,0.8339084344206894,0.8788046297272071,conditional on common non-noise members
+c_8ee2ad8a818e21ff,43,44,41,1.0,0.8153791722618464,0.8879605995311787,conditional on common non-noise members
+c_8ee2ad8a818e21ff,43,45,31,0.7560975609756098,0.5632602570270084,0.7350358498502171,conditional on common non-noise members
+c_8ee2ad8a818e21ff,43,46,38,0.926829268292683,0.6110072399191552,0.8021099119536635,conditional on common non-noise members
+c_8ee2ad8a818e21ff,44,45,31,0.7560975609756098,0.6614293926039471,0.8173172766876745,conditional on common non-noise members
+c_8ee2ad8a818e21ff,44,46,38,0.926829268292683,0.7001008325146078,0.8604981170491348,conditional on common non-noise members
+c_8ee2ad8a818e21ff,45,46,30,0.7317073170731707,1.0,1.0000000000000002,conditional on common non-noise members
+c_8f63f4870e4e2c86,42,43,15,0.36585365853658536,,,not estimable: insufficient non-noise cluster structure
+c_8f63f4870e4e2c86,42,44,15,0.36585365853658536,,,not estimable: insufficient non-noise cluster structure
+c_8f63f4870e4e2c86,42,45,15,0.36585365853658536,,,not estimable: insufficient non-noise cluster structure
+c_8f63f4870e4e2c86,42,46,15,0.36585365853658536,,,not estimable: insufficient non-noise cluster structure
+c_8f63f4870e4e2c86,43,44,15,0.36585365853658536,,,not estimable: insufficient non-noise cluster structure
+c_8f63f4870e4e2c86,43,45,15,0.36585365853658536,,,not estimable: insufficient non-noise cluster structure
+c_8f63f4870e4e2c86,43,46,15,0.36585365853658536,,,not estimable: insufficient non-noise cluster structure
+c_8f63f4870e4e2c86,44,45,15,0.36585365853658536,,,not estimable: insufficient non-noise cluster structure
+c_8f63f4870e4e2c86,44,46,15,0.36585365853658536,,,not estimable: insufficient non-noise cluster structure
+c_8f63f4870e4e2c86,45,46,15,0.36585365853658536,,,not estimable: insufficient non-noise cluster structure
+c_912525fc52d64d43,42,43,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_912525fc52d64d43,42,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_912525fc52d64d43,42,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_912525fc52d64d43,42,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_912525fc52d64d43,43,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_912525fc52d64d43,43,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_912525fc52d64d43,43,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_912525fc52d64d43,44,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_912525fc52d64d43,44,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_912525fc52d64d43,45,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_9176aed1602c6cf5,42,43,17,0.4146341463414634,1.0,1.0,conditional on common non-noise members
+c_9176aed1602c6cf5,42,44,17,0.4146341463414634,1.0,1.0,conditional on common non-noise members
+c_9176aed1602c6cf5,42,45,15,0.36585365853658536,1.0,1.0,conditional on common non-noise members
+c_9176aed1602c6cf5,42,46,17,0.4146341463414634,1.0,1.0,conditional on common non-noise members
+c_9176aed1602c6cf5,43,44,17,0.4146341463414634,1.0,1.0,conditional on common non-noise members
+c_9176aed1602c6cf5,43,45,17,0.4146341463414634,0.8172043010752689,0.9412044739424323,conditional on common non-noise members
+c_9176aed1602c6cf5,43,46,19,0.4634146341463415,1.0,1.0,conditional on common non-noise members
+c_9176aed1602c6cf5,44,45,15,0.36585365853658536,1.0,1.0,conditional on common non-noise members
+c_9176aed1602c6cf5,44,46,18,0.43902439024390244,1.0,1.0,conditional on common non-noise members
+c_9176aed1602c6cf5,45,46,17,0.4146341463414634,0.8172043010752689,0.9412044739424323,conditional on common non-noise members
+c_92d1c4a074552219,42,43,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_92d1c4a074552219,42,44,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_92d1c4a074552219,42,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_92d1c4a074552219,42,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_92d1c4a074552219,43,44,2,0.04878048780487805,,,not estimable: insufficient non-noise cluster structure
+c_92d1c4a074552219,43,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_92d1c4a074552219,43,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_92d1c4a074552219,44,45,4,0.0975609756097561,,,not estimable: insufficient non-noise cluster structure
+c_92d1c4a074552219,44,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_92d1c4a074552219,45,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_93b92dee6dd01398,42,43,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_93b92dee6dd01398,42,44,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_93b92dee6dd01398,42,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_93b92dee6dd01398,42,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_93b92dee6dd01398,43,44,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_93b92dee6dd01398,43,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_93b92dee6dd01398,43,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_93b92dee6dd01398,44,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_93b92dee6dd01398,44,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_93b92dee6dd01398,45,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_9a7efe4842976c67,42,43,39,0.9512195121951219,,,not estimable: insufficient non-noise cluster structure
+c_9a7efe4842976c67,42,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_9a7efe4842976c67,42,45,40,0.975609756097561,,,not estimable: insufficient non-noise cluster structure
+c_9a7efe4842976c67,42,46,40,0.975609756097561,,,not estimable: insufficient non-noise cluster structure
+c_9a7efe4842976c67,43,44,39,0.9512195121951219,0.7022334757791672,0.7464419566132715,conditional on common non-noise members
+c_9a7efe4842976c67,43,45,39,0.9512195121951219,1.0,1.0,conditional on common non-noise members
+c_9a7efe4842976c67,43,46,38,0.926829268292683,1.0,1.0,conditional on common non-noise members
+c_9a7efe4842976c67,44,45,40,0.975609756097561,0.7040667114571395,0.7464599761422928,conditional on common non-noise members
+c_9a7efe4842976c67,44,46,40,0.975609756097561,0.7040667114571395,0.7464599761422928,conditional on common non-noise members
+c_9a7efe4842976c67,45,46,39,0.9512195121951219,1.0,1.0,conditional on common non-noise members
+c_9c93e5deff4e95d2,42,43,6,0.14634146341463414,1.0,1.0,conditional on common non-noise members
+c_9c93e5deff4e95d2,42,44,6,0.14634146341463414,1.0,1.0,conditional on common non-noise members
+c_9c93e5deff4e95d2,42,45,6,0.14634146341463414,1.0,1.0,conditional on common non-noise members
+c_9c93e5deff4e95d2,42,46,6,0.14634146341463414,1.0,1.0,conditional on common non-noise members
+c_9c93e5deff4e95d2,43,44,6,0.14634146341463414,1.0,1.0,conditional on common non-noise members
+c_9c93e5deff4e95d2,43,45,6,0.14634146341463414,1.0,1.0,conditional on common non-noise members
+c_9c93e5deff4e95d2,43,46,6,0.14634146341463414,1.0,1.0,conditional on common non-noise members
+c_9c93e5deff4e95d2,44,45,6,0.14634146341463414,1.0,1.0,conditional on common non-noise members
+c_9c93e5deff4e95d2,44,46,6,0.14634146341463414,1.0,1.0,conditional on common non-noise members
+c_9c93e5deff4e95d2,45,46,6,0.14634146341463414,1.0,1.0,conditional on common non-noise members
+c_9dd946086e1dbcbc,42,43,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_9dd946086e1dbcbc,42,44,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_9dd946086e1dbcbc,42,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_9dd946086e1dbcbc,42,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_9dd946086e1dbcbc,43,44,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_9dd946086e1dbcbc,43,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_9dd946086e1dbcbc,43,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_9dd946086e1dbcbc,44,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_9dd946086e1dbcbc,44,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_9dd946086e1dbcbc,45,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_9de2bdcba5b5b3ef,42,43,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_9de2bdcba5b5b3ef,42,44,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_9de2bdcba5b5b3ef,42,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_9de2bdcba5b5b3ef,42,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_9de2bdcba5b5b3ef,43,44,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_9de2bdcba5b5b3ef,43,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_9de2bdcba5b5b3ef,43,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_9de2bdcba5b5b3ef,44,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_9de2bdcba5b5b3ef,44,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_9de2bdcba5b5b3ef,45,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_9f4e7ba8877a5865,42,43,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_9f4e7ba8877a5865,42,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_9f4e7ba8877a5865,42,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_9f4e7ba8877a5865,42,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_9f4e7ba8877a5865,43,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_9f4e7ba8877a5865,43,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_9f4e7ba8877a5865,43,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_9f4e7ba8877a5865,44,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_9f4e7ba8877a5865,44,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_9f4e7ba8877a5865,45,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_a04d4fdac1b065f7,42,43,39,0.9512195121951219,0.4136936683487771,0.6032059776275192,conditional on common non-noise members
+c_a04d4fdac1b065f7,42,44,39,0.9512195121951219,1.0,1.0,conditional on common non-noise members
+c_a04d4fdac1b065f7,42,45,39,0.9512195121951219,1.0,1.0,conditional on common non-noise members
+c_a04d4fdac1b065f7,42,46,39,0.9512195121951219,0.4136936683487771,0.6032059776275192,conditional on common non-noise members
+c_a04d4fdac1b065f7,43,44,39,0.9512195121951219,0.4136936683487771,0.6032059776275192,conditional on common non-noise members
+c_a04d4fdac1b065f7,43,45,39,0.9512195121951219,0.4136936683487771,0.6032059776275192,conditional on common non-noise members
+c_a04d4fdac1b065f7,43,46,39,0.9512195121951219,1.0,1.0,conditional on common non-noise members
+c_a04d4fdac1b065f7,44,45,39,0.9512195121951219,1.0,1.0,conditional on common non-noise members
+c_a04d4fdac1b065f7,44,46,39,0.9512195121951219,0.4136936683487771,0.6032059776275192,conditional on common non-noise members
+c_a04d4fdac1b065f7,45,46,39,0.9512195121951219,0.4136936683487771,0.6032059776275192,conditional on common non-noise members
+c_a10d3935ac229ea2,42,43,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_a10d3935ac229ea2,42,44,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_a10d3935ac229ea2,42,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_a10d3935ac229ea2,42,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_a10d3935ac229ea2,43,44,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_a10d3935ac229ea2,43,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_a10d3935ac229ea2,43,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_a10d3935ac229ea2,44,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_a10d3935ac229ea2,44,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_a10d3935ac229ea2,45,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_a128be0ec80d246a,42,43,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_a128be0ec80d246a,42,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_a128be0ec80d246a,42,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_a128be0ec80d246a,42,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_a128be0ec80d246a,43,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_a128be0ec80d246a,43,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_a128be0ec80d246a,43,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_a128be0ec80d246a,44,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_a128be0ec80d246a,44,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_a128be0ec80d246a,45,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_a182fa1c20078a03,42,43,4,0.0975609756097561,,,not estimable: insufficient non-noise cluster structure
+c_a182fa1c20078a03,42,44,3,0.07317073170731707,-0.5,0.2740175421212811,conditional on common non-noise members
+c_a182fa1c20078a03,42,45,7,0.17073170731707318,1.0,1.0,conditional on common non-noise members
+c_a182fa1c20078a03,42,46,2,0.04878048780487805,,,not estimable: insufficient non-noise cluster structure
+c_a182fa1c20078a03,43,44,2,0.04878048780487805,,,not estimable: insufficient non-noise cluster structure
+c_a182fa1c20078a03,43,45,14,0.34146341463414637,0.7741935483870968,0.9186973125079317,conditional on common non-noise members
+c_a182fa1c20078a03,43,46,9,0.21951219512195122,1.0,1.0,conditional on common non-noise members
+c_a182fa1c20078a03,44,45,6,0.14634146341463414,1.0,1.0,conditional on common non-noise members
+c_a182fa1c20078a03,44,46,4,0.0975609756097561,1.0,1.0,conditional on common non-noise members
+c_a182fa1c20078a03,45,46,14,0.34146341463414637,0.7741935483870968,0.9186973125079317,conditional on common non-noise members
+c_a533d877652eaa29,42,43,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_a533d877652eaa29,42,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_a533d877652eaa29,42,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_a533d877652eaa29,42,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_a533d877652eaa29,43,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_a533d877652eaa29,43,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_a533d877652eaa29,43,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_a533d877652eaa29,44,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_a533d877652eaa29,44,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_a533d877652eaa29,45,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_a6639436514f751a,42,43,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_a6639436514f751a,42,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_a6639436514f751a,42,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_a6639436514f751a,42,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_a6639436514f751a,43,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_a6639436514f751a,43,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_a6639436514f751a,43,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_a6639436514f751a,44,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_a6639436514f751a,44,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_a6639436514f751a,45,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_a982d3f891ba67e1,42,43,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_a982d3f891ba67e1,42,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_a982d3f891ba67e1,42,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_a982d3f891ba67e1,42,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_a982d3f891ba67e1,43,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_a982d3f891ba67e1,43,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_a982d3f891ba67e1,43,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_a982d3f891ba67e1,44,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_a982d3f891ba67e1,44,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_a982d3f891ba67e1,45,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_abb53bfb2932f366,42,43,37,0.9024390243902439,0.686638470368034,0.8066658636358796,conditional on common non-noise members
+c_abb53bfb2932f366,42,44,41,1.0,0.6738758874572706,0.7837023036149381,conditional on common non-noise members
+c_abb53bfb2932f366,42,45,41,1.0,0.6206376345167455,0.7848327928126321,conditional on common non-noise members
+c_abb53bfb2932f366,42,46,40,0.975609756097561,0.63058568329718,0.783976659962243,conditional on common non-noise members
+c_abb53bfb2932f366,43,44,37,0.9024390243902439,0.8748002631826299,0.8862253982740884,conditional on common non-noise members
+c_abb53bfb2932f366,43,45,37,0.9024390243902439,1.0,1.0,conditional on common non-noise members
+c_abb53bfb2932f366,43,46,36,0.8780487804878049,1.0,1.0,conditional on common non-noise members
+c_abb53bfb2932f366,44,45,41,1.0,0.8017848085214304,0.8285443470708446,conditional on common non-noise members
+c_abb53bfb2932f366,44,46,40,0.975609756097561,0.8028277634961439,0.847749313103439,conditional on common non-noise members
+c_abb53bfb2932f366,45,46,40,0.975609756097561,0.95420054200542,0.9522530459395229,conditional on common non-noise members
+c_ae591c9b6e7e1d2d,42,43,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_ae591c9b6e7e1d2d,42,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_ae591c9b6e7e1d2d,42,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_ae591c9b6e7e1d2d,42,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_ae591c9b6e7e1d2d,43,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_ae591c9b6e7e1d2d,43,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_ae591c9b6e7e1d2d,43,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_ae591c9b6e7e1d2d,44,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_ae591c9b6e7e1d2d,44,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_ae591c9b6e7e1d2d,45,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_aef849bcc49c6490,42,43,17,0.4146341463414634,1.0,1.0,conditional on common non-noise members
+c_aef849bcc49c6490,42,44,3,0.07317073170731707,,,not estimable: insufficient non-noise cluster structure
+c_aef849bcc49c6490,42,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_aef849bcc49c6490,42,46,9,0.21951219512195122,1.0,1.0,conditional on common non-noise members
+c_aef849bcc49c6490,43,44,3,0.07317073170731707,,,not estimable: insufficient non-noise cluster structure
+c_aef849bcc49c6490,43,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_aef849bcc49c6490,43,46,12,0.2926829268292683,1.0,1.0,conditional on common non-noise members
+c_aef849bcc49c6490,44,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_aef849bcc49c6490,44,46,3,0.07317073170731707,,,not estimable: insufficient non-noise cluster structure
+c_aef849bcc49c6490,45,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_afc0f185da376bdf,42,43,24,0.5853658536585366,1.0,1.0,conditional on common non-noise members
+c_afc0f185da376bdf,42,44,17,0.4146341463414634,1.0,1.0,conditional on common non-noise members
+c_afc0f185da376bdf,42,45,5,0.12195121951219512,,,not estimable: insufficient non-noise cluster structure
+c_afc0f185da376bdf,42,46,20,0.4878048780487805,0.3014705882352941,0.5316031812778748,conditional on common non-noise members
+c_afc0f185da376bdf,43,44,18,0.43902439024390244,1.0,1.0,conditional on common non-noise members
+c_afc0f185da376bdf,43,45,5,0.12195121951219512,,,not estimable: insufficient non-noise cluster structure
+c_afc0f185da376bdf,43,46,23,0.5609756097560976,0.30861723446893785,0.5196250439038456,conditional on common non-noise members
+c_afc0f185da376bdf,44,45,5,0.12195121951219512,,,not estimable: insufficient non-noise cluster structure
+c_afc0f185da376bdf,44,46,14,0.34146341463414637,1.0,1.0,conditional on common non-noise members
+c_afc0f185da376bdf,45,46,5,0.12195121951219512,,,not estimable: insufficient non-noise cluster structure
+c_b2e02c8649ec5b9d,42,43,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_b2e02c8649ec5b9d,42,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_b2e02c8649ec5b9d,42,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_b2e02c8649ec5b9d,42,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_b2e02c8649ec5b9d,43,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_b2e02c8649ec5b9d,43,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_b2e02c8649ec5b9d,43,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_b2e02c8649ec5b9d,44,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_b2e02c8649ec5b9d,44,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_b2e02c8649ec5b9d,45,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_b3e893830a1b026f,42,43,24,0.5853658536585366,,,not estimable: insufficient non-noise cluster structure
+c_b3e893830a1b026f,42,44,28,0.6829268292682927,0.4461538461538462,0.6038368009315431,conditional on common non-noise members
+c_b3e893830a1b026f,42,45,23,0.5609756097560976,1.0,1.0,conditional on common non-noise members
+c_b3e893830a1b026f,42,46,25,0.6097560975609756,,,not estimable: insufficient non-noise cluster structure
+c_b3e893830a1b026f,43,44,30,0.7317073170731707,0.546875,0.6836398690443689,conditional on common non-noise members
+c_b3e893830a1b026f,43,45,20,0.4878048780487805,,,not estimable: insufficient non-noise cluster structure
+c_b3e893830a1b026f,43,46,30,0.7317073170731707,1.0,1.0,conditional on common non-noise members
+c_b3e893830a1b026f,44,45,24,0.5853658536585366,1.0,1.0,conditional on common non-noise members
+c_b3e893830a1b026f,44,46,32,0.7804878048780488,0.5037873374303273,0.6597953123871323,conditional on common non-noise members
+c_b3e893830a1b026f,45,46,21,0.5121951219512195,,,not estimable: insufficient non-noise cluster structure
+c_b40d56bfc8e48bc6,42,43,39,0.9512195121951219,0.8881798779830556,0.9121674475686901,conditional on common non-noise members
+c_b40d56bfc8e48bc6,42,44,37,0.9024390243902439,0.6000659374300886,0.7761631570343958,conditional on common non-noise members
+c_b40d56bfc8e48bc6,42,45,39,0.9512195121951219,0.6253030439076951,0.760908367676719,conditional on common non-noise members
+c_b40d56bfc8e48bc6,42,46,40,0.975609756097561,0.4987239459422717,0.7022982046628836,conditional on common non-noise members
+c_b40d56bfc8e48bc6,43,44,37,0.9024390243902439,0.6871611928550572,0.8557519179566255,conditional on common non-noise members
+c_b40d56bfc8e48bc6,43,45,38,0.926829268292683,0.7651957315519828,0.885648446834963,conditional on common non-noise members
+c_b40d56bfc8e48bc6,43,46,39,0.9512195121951219,0.43000579458697474,0.6298241414576802,conditional on common non-noise members
+c_b40d56bfc8e48bc6,44,45,36,0.8780487804878049,0.8735109088475438,0.94525092437859,conditional on common non-noise members
+c_b40d56bfc8e48bc6,44,46,37,0.9024390243902439,0.2665863778468848,0.5239489729935667,conditional on common non-noise members
+c_b40d56bfc8e48bc6,45,46,40,0.975609756097561,0.2530184189653653,0.5119047416497823,conditional on common non-noise members
+c_b7ffe8c150c6f21f,42,43,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_b7ffe8c150c6f21f,42,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_b7ffe8c150c6f21f,42,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_b7ffe8c150c6f21f,42,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_b7ffe8c150c6f21f,43,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_b7ffe8c150c6f21f,43,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_b7ffe8c150c6f21f,43,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_b7ffe8c150c6f21f,44,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_b7ffe8c150c6f21f,44,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_b7ffe8c150c6f21f,45,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_b80e47f03908e6d2,42,43,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_b80e47f03908e6d2,42,44,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_b80e47f03908e6d2,42,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_b80e47f03908e6d2,42,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_b80e47f03908e6d2,43,44,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_b80e47f03908e6d2,43,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_b80e47f03908e6d2,43,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_b80e47f03908e6d2,44,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_b80e47f03908e6d2,44,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_b80e47f03908e6d2,45,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_b89a8134c936edad,42,43,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_b89a8134c936edad,42,44,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_b89a8134c936edad,42,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_b89a8134c936edad,42,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_b89a8134c936edad,43,44,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_b89a8134c936edad,43,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_b89a8134c936edad,43,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_b89a8134c936edad,44,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_b89a8134c936edad,44,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_b89a8134c936edad,45,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_b9176478b1b1eeda,42,43,32,0.7804878048780488,1.0,1.0,conditional on common non-noise members
+c_b9176478b1b1eeda,42,44,32,0.7804878048780488,1.0,1.0,conditional on common non-noise members
+c_b9176478b1b1eeda,42,45,32,0.7804878048780488,1.0,1.0,conditional on common non-noise members
+c_b9176478b1b1eeda,42,46,32,0.7804878048780488,1.0,1.0,conditional on common non-noise members
+c_b9176478b1b1eeda,43,44,32,0.7804878048780488,1.0,1.0,conditional on common non-noise members
+c_b9176478b1b1eeda,43,45,32,0.7804878048780488,1.0,1.0,conditional on common non-noise members
+c_b9176478b1b1eeda,43,46,32,0.7804878048780488,1.0,1.0,conditional on common non-noise members
+c_b9176478b1b1eeda,44,45,32,0.7804878048780488,1.0,1.0,conditional on common non-noise members
+c_b9176478b1b1eeda,44,46,32,0.7804878048780488,1.0,1.0,conditional on common non-noise members
+c_b9176478b1b1eeda,45,46,32,0.7804878048780488,1.0,1.0,conditional on common non-noise members
+c_b9420bea5ea6e826,42,43,16,0.3902439024390244,1.0,1.0,conditional on common non-noise members
+c_b9420bea5ea6e826,42,44,13,0.3170731707317073,1.0,1.0,conditional on common non-noise members
+c_b9420bea5ea6e826,42,45,16,0.3902439024390244,1.0,1.0,conditional on common non-noise members
+c_b9420bea5ea6e826,42,46,13,0.3170731707317073,1.0,1.0,conditional on common non-noise members
+c_b9420bea5ea6e826,43,44,15,0.36585365853658536,1.0,1.0,conditional on common non-noise members
+c_b9420bea5ea6e826,43,45,18,0.43902439024390244,1.0,1.0,conditional on common non-noise members
+c_b9420bea5ea6e826,43,46,15,0.36585365853658536,1.0,1.0,conditional on common non-noise members
+c_b9420bea5ea6e826,44,45,18,0.43902439024390244,1.0,1.0,conditional on common non-noise members
+c_b9420bea5ea6e826,44,46,18,0.43902439024390244,1.0,1.0,conditional on common non-noise members
+c_b9420bea5ea6e826,45,46,18,0.43902439024390244,1.0,1.0,conditional on common non-noise members
+c_b96609df18941590,42,43,40,0.975609756097561,1.0,1.0,conditional on common non-noise members
+c_b96609df18941590,42,44,40,0.975609756097561,,,not estimable: insufficient non-noise cluster structure
+c_b96609df18941590,42,45,40,0.975609756097561,,,not estimable: insufficient non-noise cluster structure
+c_b96609df18941590,42,46,40,0.975609756097561,0.8466888418506199,0.7481128386806597,conditional on common non-noise members
+c_b96609df18941590,43,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_b96609df18941590,43,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_b96609df18941590,43,46,41,1.0,0.8479228486646885,0.7492292934625097,conditional on common non-noise members
+c_b96609df18941590,44,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_b96609df18941590,44,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_b96609df18941590,45,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_b99b4b10da66145d,42,43,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_b99b4b10da66145d,42,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_b99b4b10da66145d,42,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_b99b4b10da66145d,42,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_b99b4b10da66145d,43,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_b99b4b10da66145d,43,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_b99b4b10da66145d,43,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_b99b4b10da66145d,44,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_b99b4b10da66145d,44,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_b99b4b10da66145d,45,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_ba78b5add2beba3b,42,43,41,1.0,0.36817035584197255,0.5784507367314777,conditional on common non-noise members
+c_ba78b5add2beba3b,42,44,41,1.0,1.0,1.0,conditional on common non-noise members
+c_ba78b5add2beba3b,42,45,41,1.0,1.0,1.0,conditional on common non-noise members
+c_ba78b5add2beba3b,42,46,41,1.0,0.36817035584197255,0.5784507367314777,conditional on common non-noise members
+c_ba78b5add2beba3b,43,44,41,1.0,0.36817035584197255,0.5784507367314777,conditional on common non-noise members
+c_ba78b5add2beba3b,43,45,41,1.0,0.36817035584197255,0.5784507367314777,conditional on common non-noise members
+c_ba78b5add2beba3b,43,46,41,1.0,1.0,1.0,conditional on common non-noise members
+c_ba78b5add2beba3b,44,45,41,1.0,1.0,1.0,conditional on common non-noise members
+c_ba78b5add2beba3b,44,46,41,1.0,0.36817035584197255,0.5784507367314777,conditional on common non-noise members
+c_ba78b5add2beba3b,45,46,41,1.0,0.36817035584197255,0.5784507367314777,conditional on common non-noise members
+c_bab7975ddd18f1d4,42,43,1,0.024390243902439025,,,not estimable: insufficient non-noise cluster structure
+c_bab7975ddd18f1d4,42,44,1,0.024390243902439025,,,not estimable: insufficient non-noise cluster structure
+c_bab7975ddd18f1d4,42,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_bab7975ddd18f1d4,42,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_bab7975ddd18f1d4,43,44,6,0.14634146341463414,0.3076923076923077,0.6163773591245547,conditional on common non-noise members
+c_bab7975ddd18f1d4,43,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_bab7975ddd18f1d4,43,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_bab7975ddd18f1d4,44,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_bab7975ddd18f1d4,44,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_bab7975ddd18f1d4,45,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_bc5c2e64792f2dcb,42,43,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_bc5c2e64792f2dcb,42,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_bc5c2e64792f2dcb,42,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_bc5c2e64792f2dcb,42,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_bc5c2e64792f2dcb,43,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_bc5c2e64792f2dcb,43,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_bc5c2e64792f2dcb,43,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_bc5c2e64792f2dcb,44,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_bc5c2e64792f2dcb,44,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_bc5c2e64792f2dcb,45,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_be5ddbb2eeae6ac2,42,43,23,0.5609756097560976,,,not estimable: insufficient non-noise cluster structure
+c_be5ddbb2eeae6ac2,42,44,30,0.7317073170731707,,,not estimable: insufficient non-noise cluster structure
+c_be5ddbb2eeae6ac2,42,45,28,0.6829268292682927,,,not estimable: insufficient non-noise cluster structure
+c_be5ddbb2eeae6ac2,42,46,30,0.7317073170731707,,,not estimable: insufficient non-noise cluster structure
+c_be5ddbb2eeae6ac2,43,44,33,0.8048780487804879,,,not estimable: insufficient non-noise cluster structure
+c_be5ddbb2eeae6ac2,43,45,29,0.7073170731707317,,,not estimable: insufficient non-noise cluster structure
+c_be5ddbb2eeae6ac2,43,46,32,0.7804878048780488,,,not estimable: insufficient non-noise cluster structure
+c_be5ddbb2eeae6ac2,44,45,36,0.8780487804878049,,,not estimable: insufficient non-noise cluster structure
+c_be5ddbb2eeae6ac2,44,46,38,0.926829268292683,,,not estimable: insufficient non-noise cluster structure
+c_be5ddbb2eeae6ac2,45,46,36,0.8780487804878049,,,not estimable: insufficient non-noise cluster structure
+c_c1042bf2899e80fd,42,43,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_c1042bf2899e80fd,42,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_c1042bf2899e80fd,42,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_c1042bf2899e80fd,42,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_c1042bf2899e80fd,43,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_c1042bf2899e80fd,43,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_c1042bf2899e80fd,43,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_c1042bf2899e80fd,44,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_c1042bf2899e80fd,44,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_c1042bf2899e80fd,45,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_c2c935eb202f9dda,42,43,32,0.7804878048780488,1.0,1.0,conditional on common non-noise members
+c_c2c935eb202f9dda,42,44,31,0.7560975609756098,1.0,1.0,conditional on common non-noise members
+c_c2c935eb202f9dda,42,45,27,0.6585365853658537,1.0,1.0,conditional on common non-noise members
+c_c2c935eb202f9dda,42,46,29,0.7073170731707317,1.0,1.0,conditional on common non-noise members
+c_c2c935eb202f9dda,43,44,29,0.7073170731707317,1.0,1.0,conditional on common non-noise members
+c_c2c935eb202f9dda,43,45,27,0.6585365853658537,1.0,1.0,conditional on common non-noise members
+c_c2c935eb202f9dda,43,46,29,0.7073170731707317,1.0,1.0,conditional on common non-noise members
+c_c2c935eb202f9dda,44,45,27,0.6585365853658537,1.0,1.0,conditional on common non-noise members
+c_c2c935eb202f9dda,44,46,30,0.7317073170731707,1.0,1.0,conditional on common non-noise members
+c_c2c935eb202f9dda,45,46,27,0.6585365853658537,1.0,1.0,conditional on common non-noise members
+c_c338bfba4a068d71,42,43,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_c338bfba4a068d71,42,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_c338bfba4a068d71,42,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_c338bfba4a068d71,42,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_c338bfba4a068d71,43,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_c338bfba4a068d71,43,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_c338bfba4a068d71,43,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_c338bfba4a068d71,44,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_c338bfba4a068d71,44,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_c338bfba4a068d71,45,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_c42577559897b726,42,43,37,0.9024390243902439,1.0,1.0,conditional on common non-noise members
+c_c42577559897b726,42,44,40,0.975609756097561,0.6367526032002445,0.8500599629915125,conditional on common non-noise members
+c_c42577559897b726,42,45,32,0.7804878048780488,0.6024520856820744,0.8386270552251671,conditional on common non-noise members
+c_c42577559897b726,42,46,40,0.975609756097561,1.0,1.0,conditional on common non-noise members
+c_c42577559897b726,43,44,38,0.926829268292683,0.6490264603095357,0.8534296152014241,conditional on common non-noise members
+c_c42577559897b726,43,45,32,0.7804878048780488,0.6024520856820744,0.8386270552251671,conditional on common non-noise members
+c_c42577559897b726,43,46,38,0.926829268292683,1.0,1.0,conditional on common non-noise members
+c_c42577559897b726,44,45,32,0.7804878048780488,1.0,1.0,conditional on common non-noise members
+c_c42577559897b726,44,46,41,1.0,0.6378162450066578,0.8482652073510898,conditional on common non-noise members
+c_c42577559897b726,45,46,32,0.7804878048780488,0.6024520856820744,0.8386270552251671,conditional on common non-noise members
+c_c5055052e661405d,42,43,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_c5055052e661405d,42,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_c5055052e661405d,42,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_c5055052e661405d,42,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_c5055052e661405d,43,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_c5055052e661405d,43,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_c5055052e661405d,43,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_c5055052e661405d,44,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_c5055052e661405d,44,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_c5055052e661405d,45,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_c7ded75670c62733,42,43,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_c7ded75670c62733,42,44,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_c7ded75670c62733,42,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_c7ded75670c62733,42,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_c7ded75670c62733,43,44,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_c7ded75670c62733,43,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_c7ded75670c62733,43,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_c7ded75670c62733,44,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_c7ded75670c62733,44,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_c7ded75670c62733,45,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_c8973b0ec7961134,42,43,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_c8973b0ec7961134,42,44,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_c8973b0ec7961134,42,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_c8973b0ec7961134,42,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_c8973b0ec7961134,43,44,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_c8973b0ec7961134,43,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_c8973b0ec7961134,43,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_c8973b0ec7961134,44,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_c8973b0ec7961134,44,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_c8973b0ec7961134,45,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_c8c3588aac4a715c,42,43,12,0.2926829268292683,1.0,1.0,conditional on common non-noise members
+c_c8c3588aac4a715c,42,44,18,0.43902439024390244,0.7964071856287425,0.9363535260991618,conditional on common non-noise members
+c_c8c3588aac4a715c,42,45,18,0.43902439024390244,0.7964071856287425,0.9363535260991618,conditional on common non-noise members
+c_c8c3588aac4a715c,42,46,15,0.36585365853658536,0.9176470588235294,0.9619557571038375,conditional on common non-noise members
+c_c8c3588aac4a715c,43,44,12,0.2926829268292683,1.0,1.0,conditional on common non-noise members
+c_c8c3588aac4a715c,43,45,12,0.2926829268292683,1.0,1.0,conditional on common non-noise members
+c_c8c3588aac4a715c,43,46,9,0.21951219512195122,1.0,1.0,conditional on common non-noise members
+c_c8c3588aac4a715c,44,45,18,0.43902439024390244,1.0,1.0,conditional on common non-noise members
+c_c8c3588aac4a715c,44,46,12,0.2926829268292683,1.0,1.0,conditional on common non-noise members
+c_c8c3588aac4a715c,45,46,12,0.2926829268292683,1.0,1.0,conditional on common non-noise members
+c_ca2b5f44374f62cb,42,43,41,1.0,0.48771464470194054,0.7031509079540638,conditional on common non-noise members
+c_ca2b5f44374f62cb,42,44,35,0.8536585365853658,0.06558341206429452,0.4634609035934759,conditional on common non-noise members
+c_ca2b5f44374f62cb,42,45,41,1.0,0.8691141260973663,0.8925470191758913,conditional on common non-noise members
+c_ca2b5f44374f62cb,42,46,41,1.0,0.40918230563002683,0.6359820059281373,conditional on common non-noise members
+c_ca2b5f44374f62cb,43,44,35,0.8536585365853658,0.5126815333701783,0.7271148652451701,conditional on common non-noise members
+c_ca2b5f44374f62cb,43,45,41,1.0,0.6530893349075167,0.7756501735888245,conditional on common non-noise members
+c_ca2b5f44374f62cb,43,46,41,1.0,0.7868483911760573,0.833530917978707,conditional on common non-noise members
+c_ca2b5f44374f62cb,44,45,35,0.8536585365853658,0.25211625870480797,0.5151522563820085,conditional on common non-noise members
+c_ca2b5f44374f62cb,44,46,35,0.8536585365853658,0.40808101420809634,0.6159840798163019,conditional on common non-noise members
+c_ca2b5f44374f62cb,45,46,41,1.0,0.5669014084507042,0.7083542422932445,conditional on common non-noise members
+c_ca759c9e4123e2aa,42,43,3,0.07317073170731707,,,not estimable: insufficient non-noise cluster structure
+c_ca759c9e4123e2aa,42,44,3,0.07317073170731707,,,not estimable: insufficient non-noise cluster structure
+c_ca759c9e4123e2aa,42,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_ca759c9e4123e2aa,42,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_ca759c9e4123e2aa,43,44,10,0.24390243902439024,0.88,0.9193862113707666,conditional on common non-noise members
+c_ca759c9e4123e2aa,43,45,3,0.07317073170731707,,,not estimable: insufficient non-noise cluster structure
+c_ca759c9e4123e2aa,43,46,4,0.0975609756097561,1.0,1.0,conditional on common non-noise members
+c_ca759c9e4123e2aa,44,45,5,0.12195121951219512,,,not estimable: insufficient non-noise cluster structure
+c_ca759c9e4123e2aa,44,46,9,0.21951219512195122,1.0,1.0,conditional on common non-noise members
+c_ca759c9e4123e2aa,45,46,3,0.07317073170731707,,,not estimable: insufficient non-noise cluster structure
+c_caff2b8e74c588be,42,43,41,1.0,0.36817035584197255,0.5784507367314777,conditional on common non-noise members
+c_caff2b8e74c588be,42,44,41,1.0,0.4721687404810483,0.6068832129294103,conditional on common non-noise members
+c_caff2b8e74c588be,42,45,41,1.0,1.0,1.0,conditional on common non-noise members
+c_caff2b8e74c588be,42,46,41,1.0,0.4467578458908292,0.6506072096782602,conditional on common non-noise members
+c_caff2b8e74c588be,43,44,41,1.0,0.7058056099151989,0.746482312583704,conditional on common non-noise members
+c_caff2b8e74c588be,43,45,41,1.0,0.36817035584197255,0.5784507367314777,conditional on common non-noise members
+c_caff2b8e74c588be,43,46,41,1.0,-0.06930276580082027,0.12088025363837585,conditional on common non-noise members
+c_caff2b8e74c588be,44,45,41,1.0,0.4721687404810483,0.6068832129294103,conditional on common non-noise members
+c_caff2b8e74c588be,44,46,41,1.0,-0.009818680953751466,0.21842450679145264,conditional on common non-noise members
+c_caff2b8e74c588be,45,46,41,1.0,0.4467578458908292,0.6506072096782602,conditional on common non-noise members
+c_ccc659d998468395,42,43,36,0.8780487804878049,1.0,1.0,conditional on common non-noise members
+c_ccc659d998468395,42,44,38,0.926829268292683,1.0,1.0,conditional on common non-noise members
+c_ccc659d998468395,42,45,37,0.9024390243902439,1.0,1.0,conditional on common non-noise members
+c_ccc659d998468395,42,46,37,0.9024390243902439,1.0,1.0,conditional on common non-noise members
+c_ccc659d998468395,43,44,36,0.8780487804878049,1.0,1.0,conditional on common non-noise members
+c_ccc659d998468395,43,45,36,0.8780487804878049,1.0,1.0,conditional on common non-noise members
+c_ccc659d998468395,43,46,35,0.8536585365853658,1.0,1.0,conditional on common non-noise members
+c_ccc659d998468395,44,45,37,0.9024390243902439,1.0,1.0,conditional on common non-noise members
+c_ccc659d998468395,44,46,37,0.9024390243902439,1.0,1.0,conditional on common non-noise members
+c_ccc659d998468395,45,46,36,0.8780487804878049,1.0,1.0,conditional on common non-noise members
+c_ce2ea8516173daf0,42,43,35,0.8536585365853658,0.6201550387596899,0.8426367803736726,conditional on common non-noise members
+c_ce2ea8516173daf0,42,44,35,0.8536585365853658,0.6433356840620592,0.8719514584704112,conditional on common non-noise members
+c_ce2ea8516173daf0,42,45,35,0.8536585365853658,0.36708149198744283,0.7298413842780491,conditional on common non-noise members
+c_ce2ea8516173daf0,42,46,33,0.8048780487804879,0.28426420514144624,0.6369523297558796,conditional on common non-noise members
+c_ce2ea8516173daf0,43,44,36,0.8780487804878049,0.4215743930101655,0.7556275732204393,conditional on common non-noise members
+c_ce2ea8516173daf0,43,45,35,0.8536585365853658,0.2894168466522678,0.6830125098091524,conditional on common non-noise members
+c_ce2ea8516173daf0,43,46,34,0.8292682926829268,0.31950146627565984,0.6548720799457944,conditional on common non-noise members
+c_ce2ea8516173daf0,44,45,37,0.9024390243902439,0.5941020347979947,0.8370194193237568,conditional on common non-noise members
+c_ce2ea8516173daf0,44,46,35,0.8536585365853658,0.38141227326201743,0.7053065653349214,conditional on common non-noise members
+c_ce2ea8516173daf0,45,46,35,0.8536585365853658,0.23490465377144265,0.6129596861444242,conditional on common non-noise members
+c_ce835bae9dd9ea0a,42,43,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_ce835bae9dd9ea0a,42,44,37,0.9024390243902439,,,not estimable: insufficient non-noise cluster structure
+c_ce835bae9dd9ea0a,42,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_ce835bae9dd9ea0a,42,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_ce835bae9dd9ea0a,43,44,37,0.9024390243902439,,,not estimable: insufficient non-noise cluster structure
+c_ce835bae9dd9ea0a,43,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_ce835bae9dd9ea0a,43,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_ce835bae9dd9ea0a,44,45,37,0.9024390243902439,,,not estimable: insufficient non-noise cluster structure
+c_ce835bae9dd9ea0a,44,46,37,0.9024390243902439,,,not estimable: insufficient non-noise cluster structure
+c_ce835bae9dd9ea0a,45,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_cf85b4c3a30bca88,42,43,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_cf85b4c3a30bca88,42,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_cf85b4c3a30bca88,42,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_cf85b4c3a30bca88,42,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_cf85b4c3a30bca88,43,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_cf85b4c3a30bca88,43,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_cf85b4c3a30bca88,43,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_cf85b4c3a30bca88,44,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_cf85b4c3a30bca88,44,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_cf85b4c3a30bca88,45,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_d2a47f12072b4e32,42,43,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_d2a47f12072b4e32,42,44,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_d2a47f12072b4e32,42,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_d2a47f12072b4e32,42,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_d2a47f12072b4e32,43,44,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_d2a47f12072b4e32,43,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_d2a47f12072b4e32,43,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_d2a47f12072b4e32,44,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_d2a47f12072b4e32,44,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_d2a47f12072b4e32,45,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_d2f30bbba6d62abc,42,43,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_d2f30bbba6d62abc,42,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_d2f30bbba6d62abc,42,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_d2f30bbba6d62abc,42,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_d2f30bbba6d62abc,43,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_d2f30bbba6d62abc,43,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_d2f30bbba6d62abc,43,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_d2f30bbba6d62abc,44,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_d2f30bbba6d62abc,44,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_d2f30bbba6d62abc,45,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_d62f8b155324648a,42,43,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_d62f8b155324648a,42,44,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_d62f8b155324648a,42,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_d62f8b155324648a,42,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_d62f8b155324648a,43,44,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_d62f8b155324648a,43,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_d62f8b155324648a,43,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_d62f8b155324648a,44,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_d62f8b155324648a,44,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_d62f8b155324648a,45,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_d6b6c9d3c8da86a4,42,43,34,0.8292682926829268,,,not estimable: insufficient non-noise cluster structure
+c_d6b6c9d3c8da86a4,42,44,34,0.8292682926829268,,,not estimable: insufficient non-noise cluster structure
+c_d6b6c9d3c8da86a4,42,45,33,0.8048780487804879,,,not estimable: insufficient non-noise cluster structure
+c_d6b6c9d3c8da86a4,42,46,34,0.8292682926829268,,,not estimable: insufficient non-noise cluster structure
+c_d6b6c9d3c8da86a4,43,44,35,0.8536585365853658,,,not estimable: insufficient non-noise cluster structure
+c_d6b6c9d3c8da86a4,43,45,37,0.9024390243902439,,,not estimable: insufficient non-noise cluster structure
+c_d6b6c9d3c8da86a4,43,46,35,0.8536585365853658,,,not estimable: insufficient non-noise cluster structure
+c_d6b6c9d3c8da86a4,44,45,35,0.8536585365853658,,,not estimable: insufficient non-noise cluster structure
+c_d6b6c9d3c8da86a4,44,46,36,0.8780487804878049,,,not estimable: insufficient non-noise cluster structure
+c_d6b6c9d3c8da86a4,45,46,35,0.8536585365853658,,,not estimable: insufficient non-noise cluster structure
+c_d8167736ca4f180a,42,43,38,0.926829268292683,,,not estimable: insufficient non-noise cluster structure
+c_d8167736ca4f180a,42,44,38,0.926829268292683,,,not estimable: insufficient non-noise cluster structure
+c_d8167736ca4f180a,42,45,38,0.926829268292683,,,not estimable: insufficient non-noise cluster structure
+c_d8167736ca4f180a,42,46,38,0.926829268292683,,,not estimable: insufficient non-noise cluster structure
+c_d8167736ca4f180a,43,44,38,0.926829268292683,,,not estimable: insufficient non-noise cluster structure
+c_d8167736ca4f180a,43,45,38,0.926829268292683,,,not estimable: insufficient non-noise cluster structure
+c_d8167736ca4f180a,43,46,38,0.926829268292683,,,not estimable: insufficient non-noise cluster structure
+c_d8167736ca4f180a,44,45,38,0.926829268292683,,,not estimable: insufficient non-noise cluster structure
+c_d8167736ca4f180a,44,46,38,0.926829268292683,,,not estimable: insufficient non-noise cluster structure
+c_d8167736ca4f180a,45,46,38,0.926829268292683,,,not estimable: insufficient non-noise cluster structure
+c_da42dda7d8e709f9,42,43,41,1.0,1.0,1.0,conditional on common non-noise members
+c_da42dda7d8e709f9,42,44,41,1.0,1.0,1.0,conditional on common non-noise members
+c_da42dda7d8e709f9,42,45,41,1.0,0.7058056099151989,0.746482312583704,conditional on common non-noise members
+c_da42dda7d8e709f9,42,46,41,1.0,1.0,1.0,conditional on common non-noise members
+c_da42dda7d8e709f9,43,44,41,1.0,1.0,1.0,conditional on common non-noise members
+c_da42dda7d8e709f9,43,45,41,1.0,0.7058056099151989,0.746482312583704,conditional on common non-noise members
+c_da42dda7d8e709f9,43,46,41,1.0,1.0,1.0,conditional on common non-noise members
+c_da42dda7d8e709f9,44,45,41,1.0,0.7058056099151989,0.746482312583704,conditional on common non-noise members
+c_da42dda7d8e709f9,44,46,41,1.0,1.0,1.0,conditional on common non-noise members
+c_da42dda7d8e709f9,45,46,41,1.0,0.7058056099151989,0.746482312583704,conditional on common non-noise members
+c_dbda060ed9bb57fb,42,43,5,0.12195121951219512,,,not estimable: insufficient non-noise cluster structure
+c_dbda060ed9bb57fb,42,44,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_dbda060ed9bb57fb,42,45,3,0.07317073170731707,,,not estimable: insufficient non-noise cluster structure
+c_dbda060ed9bb57fb,42,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_dbda060ed9bb57fb,43,44,10,0.24390243902439024,1.0,1.0,conditional on common non-noise members
+c_dbda060ed9bb57fb,43,45,10,0.24390243902439024,1.0,1.0,conditional on common non-noise members
+c_dbda060ed9bb57fb,43,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_dbda060ed9bb57fb,44,45,5,0.12195121951219512,,,not estimable: insufficient non-noise cluster structure
+c_dbda060ed9bb57fb,44,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_dbda060ed9bb57fb,45,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_dcbc96ff1e05babd,42,43,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_dcbc96ff1e05babd,42,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_dcbc96ff1e05babd,42,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_dcbc96ff1e05babd,42,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_dcbc96ff1e05babd,43,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_dcbc96ff1e05babd,43,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_dcbc96ff1e05babd,43,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_dcbc96ff1e05babd,44,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_dcbc96ff1e05babd,44,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_dcbc96ff1e05babd,45,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_ddff9f03bd8136a3,42,43,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_ddff9f03bd8136a3,42,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_ddff9f03bd8136a3,42,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_ddff9f03bd8136a3,42,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_ddff9f03bd8136a3,43,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_ddff9f03bd8136a3,43,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_ddff9f03bd8136a3,43,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_ddff9f03bd8136a3,44,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_ddff9f03bd8136a3,44,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_ddff9f03bd8136a3,45,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_df89a796271b28cf,42,43,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_df89a796271b28cf,42,44,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_df89a796271b28cf,42,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_df89a796271b28cf,42,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_df89a796271b28cf,43,44,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_df89a796271b28cf,43,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_df89a796271b28cf,43,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_df89a796271b28cf,44,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_df89a796271b28cf,44,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_df89a796271b28cf,45,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_e5d9ba35056f6e24,42,43,41,1.0,1.0,1.0,conditional on common non-noise members
+c_e5d9ba35056f6e24,42,44,41,1.0,0.9368531296205027,0.9154890751837105,conditional on common non-noise members
+c_e5d9ba35056f6e24,42,45,41,1.0,1.0,1.0,conditional on common non-noise members
+c_e5d9ba35056f6e24,42,46,41,1.0,1.0,1.0,conditional on common non-noise members
+c_e5d9ba35056f6e24,43,44,41,1.0,0.9368531296205027,0.9154890751837105,conditional on common non-noise members
+c_e5d9ba35056f6e24,43,45,41,1.0,1.0,1.0,conditional on common non-noise members
+c_e5d9ba35056f6e24,43,46,41,1.0,1.0,1.0,conditional on common non-noise members
+c_e5d9ba35056f6e24,44,45,41,1.0,0.9368531296205027,0.9154890751837105,conditional on common non-noise members
+c_e5d9ba35056f6e24,44,46,41,1.0,0.9368531296205027,0.9154890751837105,conditional on common non-noise members
+c_e5d9ba35056f6e24,45,46,41,1.0,1.0,1.0,conditional on common non-noise members
+c_e74abd61fcd01778,42,43,41,1.0,0.6378162450066578,0.8482652073510898,conditional on common non-noise members
+c_e74abd61fcd01778,42,44,41,1.0,0.6378162450066578,0.8482652073510898,conditional on common non-noise members
+c_e74abd61fcd01778,42,45,41,1.0,0.6378162450066578,0.8482652073510898,conditional on common non-noise members
+c_e74abd61fcd01778,42,46,41,1.0,0.6378162450066578,0.8482652073510898,conditional on common non-noise members
+c_e74abd61fcd01778,43,44,41,1.0,1.0,1.0,conditional on common non-noise members
+c_e74abd61fcd01778,43,45,41,1.0,1.0,1.0,conditional on common non-noise members
+c_e74abd61fcd01778,43,46,41,1.0,1.0,1.0,conditional on common non-noise members
+c_e74abd61fcd01778,44,45,41,1.0,1.0,1.0,conditional on common non-noise members
+c_e74abd61fcd01778,44,46,41,1.0,1.0,1.0,conditional on common non-noise members
+c_e74abd61fcd01778,45,46,41,1.0,1.0,1.0,conditional on common non-noise members
+c_eb348b152645ce87,42,43,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_eb348b152645ce87,42,44,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_eb348b152645ce87,42,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_eb348b152645ce87,42,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_eb348b152645ce87,43,44,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_eb348b152645ce87,43,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_eb348b152645ce87,43,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_eb348b152645ce87,44,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_eb348b152645ce87,44,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_eb348b152645ce87,45,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_ecadeaa7931dc2dc,42,43,16,0.3902439024390244,1.0,1.0,conditional on common non-noise members
+c_ecadeaa7931dc2dc,42,44,10,0.24390243902439024,1.0,1.0,conditional on common non-noise members
+c_ecadeaa7931dc2dc,42,45,14,0.34146341463414637,1.0,1.0,conditional on common non-noise members
+c_ecadeaa7931dc2dc,42,46,16,0.3902439024390244,1.0,1.0,conditional on common non-noise members
+c_ecadeaa7931dc2dc,43,44,11,0.2682926829268293,1.0,1.0,conditional on common non-noise members
+c_ecadeaa7931dc2dc,43,45,12,0.2926829268292683,1.0,1.0,conditional on common non-noise members
+c_ecadeaa7931dc2dc,43,46,17,0.4146341463414634,1.0,1.0,conditional on common non-noise members
+c_ecadeaa7931dc2dc,44,45,9,0.21951219512195122,1.0,1.0,conditional on common non-noise members
+c_ecadeaa7931dc2dc,44,46,11,0.2682926829268293,1.0,1.0,conditional on common non-noise members
+c_ecadeaa7931dc2dc,45,46,13,0.3170731707317073,1.0,1.0,conditional on common non-noise members
+c_ee51a367283056ed,42,43,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_ee51a367283056ed,42,44,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_ee51a367283056ed,42,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_ee51a367283056ed,42,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_ee51a367283056ed,43,44,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_ee51a367283056ed,43,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_ee51a367283056ed,43,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_ee51a367283056ed,44,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_ee51a367283056ed,44,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_ee51a367283056ed,45,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_ef7382c51062315f,42,43,41,1.0,0.7058056099151989,0.746482312583704,conditional on common non-noise members
+c_ef7382c51062315f,42,44,41,1.0,-0.08218356328734253,0.03132828608385602,conditional on common non-noise members
+c_ef7382c51062315f,42,45,41,1.0,0.6802639472105579,0.5681361980270652,conditional on common non-noise members
+c_ef7382c51062315f,42,46,41,1.0,0.7058056099151989,0.746482312583704,conditional on common non-noise members
+c_ef7382c51062315f,43,44,41,1.0,0.4768952398626705,0.5919493183794596,conditional on common non-noise members
+c_ef7382c51062315f,43,45,41,1.0,0.43885125730722835,0.4063473636719219,conditional on common non-noise members
+c_ef7382c51062315f,43,46,41,1.0,1.0,1.0,conditional on common non-noise members
+c_ef7382c51062315f,44,45,41,1.0,-0.06977784404353661,0.022091050401956375,conditional on common non-noise members
+c_ef7382c51062315f,44,46,41,1.0,0.4768952398626705,0.5919493183794596,conditional on common non-noise members
+c_ef7382c51062315f,45,46,41,1.0,0.43885125730722835,0.4063473636719219,conditional on common non-noise members
+c_f1d4dd4d83c25362,42,43,41,1.0,1.0,1.0,conditional on common non-noise members
+c_f1d4dd4d83c25362,42,44,41,1.0,1.0,1.0,conditional on common non-noise members
+c_f1d4dd4d83c25362,42,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_f1d4dd4d83c25362,42,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_f1d4dd4d83c25362,43,44,41,1.0,1.0,1.0,conditional on common non-noise members
+c_f1d4dd4d83c25362,43,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_f1d4dd4d83c25362,43,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_f1d4dd4d83c25362,44,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_f1d4dd4d83c25362,44,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_f1d4dd4d83c25362,45,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_f5044cfcbacf22b2,42,43,39,0.9512195121951219,1.0,1.0,conditional on common non-noise members
+c_f5044cfcbacf22b2,42,44,39,0.9512195121951219,1.0,1.0,conditional on common non-noise members
+c_f5044cfcbacf22b2,42,45,38,0.926829268292683,1.0,1.0,conditional on common non-noise members
+c_f5044cfcbacf22b2,42,46,39,0.9512195121951219,1.0,1.0,conditional on common non-noise members
+c_f5044cfcbacf22b2,43,44,39,0.9512195121951219,1.0,1.0,conditional on common non-noise members
+c_f5044cfcbacf22b2,43,45,38,0.926829268292683,1.0,1.0,conditional on common non-noise members
+c_f5044cfcbacf22b2,43,46,39,0.9512195121951219,1.0,1.0,conditional on common non-noise members
+c_f5044cfcbacf22b2,44,45,38,0.926829268292683,1.0,1.0,conditional on common non-noise members
+c_f5044cfcbacf22b2,44,46,39,0.9512195121951219,1.0,1.0,conditional on common non-noise members
+c_f5044cfcbacf22b2,45,46,38,0.926829268292683,1.0,1.0,conditional on common non-noise members
+c_f59d6f9f92dc5b70,42,43,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_f59d6f9f92dc5b70,42,44,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_f59d6f9f92dc5b70,42,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_f59d6f9f92dc5b70,42,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_f59d6f9f92dc5b70,43,44,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_f59d6f9f92dc5b70,43,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_f59d6f9f92dc5b70,43,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_f59d6f9f92dc5b70,44,45,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_f59d6f9f92dc5b70,44,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_f59d6f9f92dc5b70,45,46,0,0.0,,,not estimable: insufficient non-noise cluster structure
+c_f5ff7080be74cd51,42,43,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_f5ff7080be74cd51,42,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_f5ff7080be74cd51,42,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_f5ff7080be74cd51,42,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_f5ff7080be74cd51,43,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_f5ff7080be74cd51,43,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_f5ff7080be74cd51,43,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_f5ff7080be74cd51,44,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_f5ff7080be74cd51,44,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_f5ff7080be74cd51,45,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_f605bd01e9475b36,42,43,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_f605bd01e9475b36,42,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_f605bd01e9475b36,42,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_f605bd01e9475b36,42,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_f605bd01e9475b36,43,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_f605bd01e9475b36,43,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_f605bd01e9475b36,43,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_f605bd01e9475b36,44,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_f605bd01e9475b36,44,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_f605bd01e9475b36,45,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_f731bd419c65f5ac,42,43,38,0.926829268292683,-0.11171933922098144,0.07449089920076003,conditional on common non-noise members
+c_f731bd419c65f5ac,42,44,38,0.926829268292683,,,not estimable: insufficient non-noise cluster structure
+c_f731bd419c65f5ac,42,45,37,0.9024390243902439,0.32252273815222593,0.1494512933592112,conditional on common non-noise members
+c_f731bd419c65f5ac,42,46,38,0.926829268292683,,,not estimable: insufficient non-noise cluster structure
+c_f731bd419c65f5ac,43,44,39,0.9512195121951219,,,not estimable: insufficient non-noise cluster structure
+c_f731bd419c65f5ac,43,45,38,0.926829268292683,-0.10192516377959085,0.062244334756886066,conditional on common non-noise members
+c_f731bd419c65f5ac,43,46,39,0.9512195121951219,,,not estimable: insufficient non-noise cluster structure
+c_f731bd419c65f5ac,44,45,38,0.926829268292683,,,not estimable: insufficient non-noise cluster structure
+c_f731bd419c65f5ac,44,46,40,0.975609756097561,,,not estimable: insufficient non-noise cluster structure
+c_f731bd419c65f5ac,45,46,38,0.926829268292683,,,not estimable: insufficient non-noise cluster structure
+c_f73f2e91337c3a23,42,43,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_f73f2e91337c3a23,42,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_f73f2e91337c3a23,42,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_f73f2e91337c3a23,42,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_f73f2e91337c3a23,43,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_f73f2e91337c3a23,43,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_f73f2e91337c3a23,43,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_f73f2e91337c3a23,44,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_f73f2e91337c3a23,44,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_f73f2e91337c3a23,45,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_fe9914b08a478bf5,42,43,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_fe9914b08a478bf5,42,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_fe9914b08a478bf5,42,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_fe9914b08a478bf5,42,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_fe9914b08a478bf5,43,44,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_fe9914b08a478bf5,43,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_fe9914b08a478bf5,43,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_fe9914b08a478bf5,44,45,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_fe9914b08a478bf5,44,46,41,1.0,,,not estimable: insufficient non-noise cluster structure
+c_fe9914b08a478bf5,45,46,41,1.0,,,not estimable: insufficient non-noise cluster structure

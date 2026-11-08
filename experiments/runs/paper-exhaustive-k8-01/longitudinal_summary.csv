@@ -1,0 +1,4 @@
+role,candidate_id,status,stable_all_three,shifted_all_three,membership_gaps,screen_candidates,multi_seed_supported_candidates,confirmed_outliers,sector_divergences
+baseline,c_4f80a40f7dda0468,completed descriptive review,21,18,4,0,0,0,40
+common_features_k8,c_073540362ecaaa17,completed descriptive review,29,10,4,5,5,0,48
+embedding_k8,c_152cbd6e85993337,completed descriptive review,19,20,4,0,0,0,37

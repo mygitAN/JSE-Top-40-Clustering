@@ -1,0 +1,20 @@
+{
+  "source_run": "user-full-20261108",
+  "model_refitted": false,
+  "promotion": false,
+  "observation_counts": {
+    "2025-06-30": 41,
+    "2025-12-31": 41,
+    "2026-06-30": 41
+  },
+  "observed_all_three": 39,
+  "univariate_definition": "cluster median minus same-snapshot median in the saved June-2025-MinMax-scaled ten-feature space",
+  "comparison": "within-cluster feature ranks; SHAP own-class mean absolute margins; no inferential p-values",
+  "alignment": "independent adjacent pairs on continuing-member sets; sorted labels; maximum sum Jaccard versus overlap; zero-overlap unmatched",
+  "pending": [
+    "Hotelling statistic/reference/cutoff specification",
+    "flag definitions and time windows",
+    "P/E sensitivity specification beyond missing/loss accounting",
+    "archived source validation"
+  ]
+}

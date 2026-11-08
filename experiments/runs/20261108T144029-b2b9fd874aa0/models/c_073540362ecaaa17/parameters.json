@@ -1,0 +1,19 @@
+{
+  "representation": {
+    "name": "pca",
+    "params": {
+      "n_components": 0.95,
+      "svd_solver": "full"
+    },
+    "representation_id": "r_81b710484643a5c4"
+  },
+  "clustering": {
+    "algorithm": "hierarchical",
+    "params": {
+      "n_clusters": 8,
+      "linkage": "average",
+      "metric": "euclidean"
+    }
+  },
+  "candidate_id": "c_073540362ecaaa17"
+}

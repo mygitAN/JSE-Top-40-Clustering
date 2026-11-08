@@ -1,0 +1,5 @@
+decision_date,feature_a,feature_b,pearson_r
+2025-06-30,beta_1y,annualised_volatility_1y,0.814852456076691
+2025-12-31,return_1y,annualised_volatility_1y,0.813611624949482
+2025-12-31,beta_1y,annualised_volatility_1y,0.8790525519898672
+2026-06-30,beta_1y,annualised_volatility_1y,0.8081727985907662

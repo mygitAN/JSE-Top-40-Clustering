@@ -1,0 +1,11 @@
+feature,mean_abs_shap
+dividend_yield,0.4626475
+return_1y,0.4531164
+annualised_volatility_1y,0.35700858
+market_cap_zar,0.31774622
+shares_outstanding,0.3013283
+eps_zar_model,0.1710858
+earnings_yield_model_clipped,0.07163385
+average_daily_volume_1y_model,0.068796694
+beta_1y,0.05024039
+revenue_zar_model,0.044668548

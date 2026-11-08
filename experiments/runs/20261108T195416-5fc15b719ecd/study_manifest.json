@@ -1,0 +1,161 @@
+{
+  "run_id": "20261108T195416-5fc15b719ecd",
+  "stage_order": [
+    "validate_and_load",
+    "eda",
+    "modelling",
+    "shap",
+    "temporal_comparison",
+    "finish"
+  ],
+  "dates": [
+    "2025-06-30",
+    "2025-12-31",
+    "2026-06-30"
+  ],
+  "observations": 123,
+  "instruments_per_date": 41,
+  "distinct_tickers": 43,
+  "observed_all_three": 39,
+  "model_comparisons": 30,
+  "explained_partitions": 6,
+  "preprocessing_fit_on": "2025-06-30",
+  "shap_completed": true,
+  "promotion": false,
+  "configuration": {
+    "experiment": "three-cross-section-study-walkthrough",
+    "dates": [
+      "2025-06-30",
+      "2025-12-31",
+      "2026-06-30"
+    ],
+    "seed": 42,
+    "stability_runs": 5,
+    "include_umap_sensitivity": true,
+    "umap_sensitivity_k": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "baseline": "configs/baseline.json",
+    "umap_sensitivity": {
+      "n_neighbors": 3,
+      "min_dist": 0.01,
+      "n_components": 2,
+      "metric": "euclidean",
+      "n_jobs": 1,
+      "n_clusters": 8,
+      "linkage": "average",
+      "clustering_metric": "manhattan",
+      "selection_source": "User clarification: k=8 fixed to match the eight sector categories in the original design; neighbors/min_dist retained as an exploratory UMAP comparison"
+    },
+    "stage_order": [
+      "validate_and_load",
+      "eda",
+      "modelling",
+      "shap",
+      "temporal_comparison",
+      "finish"
+    ],
+    "selection_policy": "k=8 fixed by study design for hierarchical/K-Means models; sector agreement does not tune parameters. Other k values are sensitivity diagnostics only. DBSCAN retains its actual cluster/noise count.",
+    "promotion": false,
+    "reporting_enrichment_version": 1,
+    "resolved_baseline": {
+      "method_version": "reconstructed-baseline-v2-audit",
+      "data_version": "Top40_Retrospective_Model_Inputs_v1",
+      "primary": "tsne_hierarchical",
+      "features": [
+        "return_1y",
+        "average_daily_volume_1y_model",
+        "market_cap_zar",
+        "beta_1y",
+        "shares_outstanding",
+        "revenue_zar_model",
+        "eps_zar_model",
+        "annualised_volatility_1y",
+        "dividend_yield",
+        "earnings_yield_model_clipped"
+      ],
+      "fit_date": "2025-06-30",
+      "scaler": "MinMaxScaler(clip=False)",
+      "pca": {
+        "n_components": 2,
+        "svd_solver": "full"
+      },
+      "tsne": {
+        "n_components": 2,
+        "perplexity": 5,
+        "learning_rate": 10,
+        "max_iter": 300,
+        "init": "random",
+        "n_jobs": 1
+      },
+      "umap": {
+        "n_components": 2,
+        "n_neighbors": 10,
+        "min_dist": 0.1,
+        "n_jobs": 1
+      },
+      "hierarchical": {
+        "n_clusters": 8,
+        "linkage": "average",
+        "metric": "manhattan"
+      },
+      "kmeans": {
+        "n_clusters": 8,
+        "n_init": 20
+      },
+      "dbscan": {
+        "eps": 0.5,
+        "min_samples": 3
+      },
+      "dbscan_preprocessing": "per-snapshot embedding standardization, ddof=0",
+      "surrogate": {
+        "n_estimators": 150,
+        "max_depth": 2,
+        "learning_rate": 0.05,
+        "subsample": 1,
+        "colsample_bytree": 1,
+        "n_jobs": 1,
+        "objective": "multi:softprob",
+        "eval_metric": "mlogloss"
+      },
+      "seed": 42,
+      "stability_runs": 5,
+      "sensitivity_k": [
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "silhouette_metric": "euclidean",
+      "davies_bouldin_metric": "euclidean embedding centroids",
+      "selection_policy": "fixed descriptive comparisons; no score-based promotion"
+    }
+  },
+  "validation": {
+    "derived_constants": {
+      "volume": 1534909.228915663,
+      "revenue": 98244535964.16383,
+      "eps": 12.7715,
+      "earnings_yield": 0.051361404520658835,
+      "lower": -0.5889019129867248,
+      "upper": 0.14636747615529913
+    },
+    "workbook_reconciled": true
+  },
+  "interpretation": "Repeated descriptive cross-sections; not return prediction or 123 independent firms"
+}

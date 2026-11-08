@@ -1,0 +1,29 @@
+{
+  "primary": "common_features_k8",
+  "rule": "Full coverage and valid scores on every seed; exactly 8 clusters. Minimize mean-silhouette descending rank plus mean-DB ascending rank in common June-scaled features. Tie-break by pairwise seed ARI, feature silhouette, candidate ID. Embedding-space ranking is an explicit alternative. Sector labels never select models.",
+  "selection_date": "2025-06-30",
+  "roles": {
+    "common_features_k8": "c_073540362ecaaa17",
+    "features_pca_hierarchical": "c_270de6df6144c04c",
+    "features_pca_kmeans": "c_7d1d69927f9f3bf0",
+    "features_tsne_dbscan": "c_79448941048b352e",
+    "features_tsne_hierarchical": "c_7362fc096868a7b4",
+    "features_tsne_kmeans": "c_81df66beccbdd3bc",
+    "features_umap_dbscan": "c_ecdf1240e2435ac4",
+    "features_umap_hierarchical": "c_c31a5a00879f0102",
+    "features_umap_kmeans": "c_e42e8f91feb4c6b9",
+    "embedding_k8": "c_152cbd6e85993337",
+    "embedding_pca_hierarchical": "c_ff49c0c2566f2b76",
+    "embedding_pca_kmeans": "c_feeeb5a431fab19e",
+    "embedding_tsne_dbscan": "c_ff86aac25ddcaaf4",
+    "embedding_tsne_hierarchical": "c_563dcace192c2c9c",
+    "embedding_tsne_kmeans": "c_4189645cd001d44c",
+    "embedding_umap_dbscan": "c_a2fdce037adde186",
+    "embedding_umap_hierarchical": "c_190352ea0dd7b2c1",
+    "embedding_umap_kmeans": "c_152cbd6e85993337",
+    "baseline": "c_4f80a40f7dda0468"
+  },
+  "universal_best_claim": false,
+  "later_dates_used_for_selection": false,
+  "caveat": "Later dates were examined in earlier work: not untouched holdouts; this is an explicitly recorded exploratory protocol"
+}

@@ -1,0 +1,5 @@
+before,after,objective,raw_cluster,aligned_cluster,continuing_intersection,continuing_union,jaccard,status
+2025-06-30,2025-12-31,jaccard,0,0,39,40,0.975,matched
+2025-06-30,2025-12-31,jaccard,1,2,0,0,0.0,unmatched: fresh descriptive ID
+2025-12-31,2026-06-30,jaccard,0,0,39,39,1.0,matched
+2025-12-31,2026-06-30,jaccard,1,2,1,1,1.0,matched

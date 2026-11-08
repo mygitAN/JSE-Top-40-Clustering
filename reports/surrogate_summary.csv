@@ -1,0 +1,4 @@
+decision_date,in_sample_accuracy,oof_accuracy,minimum_cluster_size,oof_status,shap_max_additivity_error,shap_additivity_atol
+2025-06-30,1.0,0.5365853658536586,2,estimated,1.430511474609375e-06,0.0001
+2025-12-31,1.0,,1,not estimable: singleton cluster,1.6689300537109375e-06,0.0001
+2026-06-30,1.0,0.7317073170731707,2,estimated,1.6689300537109375e-06,0.0001

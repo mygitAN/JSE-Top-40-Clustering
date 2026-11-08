@@ -1,0 +1,24 @@
+{
+  "representation": {
+    "name": "tsne",
+    "params": {
+      "n_components": 2,
+      "perplexity": 5,
+      "learning_rate": 10,
+      "max_iter": 300,
+      "metric": "cosine",
+      "init": "random",
+      "n_jobs": 1
+    },
+    "representation_id": "r_3d7eac92f885d72e"
+  },
+  "clustering": {
+    "algorithm": "dbscan",
+    "params": {
+      "eps": 0.5,
+      "min_samples": 3,
+      "metric": "euclidean"
+    }
+  },
+  "candidate_id": "c_ff86aac25ddcaaf4"
+}

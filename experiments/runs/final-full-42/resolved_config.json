@@ -1,0 +1,79 @@
+{
+  "method_version": "reconstructed-baseline-v2-audit",
+  "data_version": "Top40_Retrospective_Model_Inputs_v1",
+  "primary": "tsne_hierarchical",
+  "features": [
+    "return_1y",
+    "average_daily_volume_1y_model",
+    "market_cap_zar",
+    "beta_1y",
+    "shares_outstanding",
+    "revenue_zar_model",
+    "eps_zar_model",
+    "annualised_volatility_1y",
+    "dividend_yield",
+    "earnings_yield_model_clipped"
+  ],
+  "fit_date": "2025-06-30",
+  "scaler": "MinMaxScaler(clip=False)",
+  "pca": {
+    "n_components": 2,
+    "svd_solver": "full"
+  },
+  "tsne": {
+    "n_components": 2,
+    "perplexity": 5,
+    "learning_rate": 10,
+    "max_iter": 300,
+    "init": "random",
+    "n_jobs": 1
+  },
+  "umap": {
+    "n_components": 2,
+    "n_neighbors": 10,
+    "min_dist": 0.1,
+    "n_jobs": 1
+  },
+  "hierarchical": {
+    "n_clusters": 8,
+    "linkage": "average",
+    "metric": "manhattan"
+  },
+  "kmeans": {
+    "n_clusters": 8,
+    "n_init": 20
+  },
+  "dbscan": {
+    "eps": 0.5,
+    "min_samples": 3
+  },
+  "dbscan_preprocessing": "per-snapshot embedding standardization, ddof=0",
+  "surrogate": {
+    "n_estimators": 150,
+    "max_depth": 2,
+    "learning_rate": 0.05,
+    "subsample": 1,
+    "colsample_bytree": 1,
+    "n_jobs": 1,
+    "objective": "multi:softprob",
+    "eval_metric": "mlogloss"
+  },
+  "seed": 42,
+  "stability_runs": 5,
+  "sensitivity_k": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+  ],
+  "silhouette_metric": "euclidean",
+  "davies_bouldin_metric": "euclidean embedding centroids",
+  "selection_policy": "fixed descriptive comparisons; no score-based promotion",
+  "mode": "full",
+  "skip_shap": false
+}

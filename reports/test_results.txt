@@ -1,0 +1,113 @@
+COMMAND: ['C:\\Users\\HP\\Documents\\GitHub\\JSE-Top-40-Clustering\\.venv\\Scripts\\python.exe', '-O', 'C:\\Users\\HP\\Documents\\GitHub\\JSE-Top-40-Clustering\\scripts\\validate_data.py']
+RETURN CODE: 0
+PASS: 123 rows; 41 per date; 43 tickers; 3 RNI rows retained; 2 volume imputations; model features complete.
+
+COMMAND: ['C:\\Users\\HP\\Documents\\GitHub\\JSE-Top-40-Clustering\\.venv\\Scripts\\python.exe', '-m', 'unittest', 'discover', '-s', 'tests', '-v']
+RETURN CODE: 0
+test_duplicate_and_missing_features_fail (test_analysis.AnalysisTests.test_duplicate_and_missing_features_fail) ... ok
+test_entries_and_exits_are_not_cluster_changes (test_analysis.AnalysisTests.test_entries_and_exits_are_not_cluster_changes) ... ok
+test_future_values_do_not_change_scaler (test_analysis.AnalysisTests.test_future_values_do_not_change_scaler) ... ok
+test_noise_has_no_fake_silhouette (test_analysis.AnalysisTests.test_noise_has_no_fake_silhouette) ... ok
+test_permuted_labels_align (test_analysis.AnalysisTests.test_permuted_labels_align) ... ok
+test_retains_all_members_and_rni (test_analysis.AnalysisTests.test_retains_all_members_and_rni) ... ok
+test_same_seed_and_row_order (test_analysis.AnalysisTests.test_same_seed_and_row_order) ... ok
+test_shap_class_mapping_singleton_and_additivity (test_analysis.AnalysisTests.test_shap_class_mapping_singleton_and_additivity) ... ok
+test_shap_oof_estimable (test_analysis.AnalysisTests.test_shap_oof_estimable) ... ok
+test_temporal_metrics_ignore_label_permutation (test_analysis.AnalysisTests.test_temporal_metrics_ignore_label_permutation) ... ok
+test_unmatched_and_disjoint_clusters (test_analysis.AnalysisTests.test_unmatched_and_disjoint_clusters) ... ok
+test_geometric_sector_and_joint_histories_are_separate (test_anomaly_dynamics_reporting.ReportingAmendmentTests.test_geometric_sector_and_joint_histories_are_separate) ... ok
+test_k12_remains_eligible_in_declared_2_to_12_sensitivity (test_anomaly_dynamics_reporting.ReportingAmendmentTests.test_k12_remains_eligible_in_declared_2_to_12_sensitivity) ... ok
+test_missing_observation_is_not_resolution (test_anomaly_dynamics_reporting.ReportingAmendmentTests.test_missing_observation_is_not_resolution) ... ok
+test_taxonomy_distinguishes_resolved_resolving_and_sustained (test_anomaly_dynamics_reporting.ReportingAmendmentTests.test_taxonomy_distinguishes_resolved_resolving_and_sustained) ... ok
+test_better_scoring_singleton_or_wrong_k_cannot_enter_review_shortlist (test_cluster_suitability_review.SuitabilityReviewTests.test_better_scoring_singleton_or_wrong_k_cannot_enter_review_shortlist) ... ok
+test_size_profile_does_not_treat_noise_as_a_peer_group (test_cluster_suitability_review.SuitabilityReviewTests.test_size_profile_does_not_treat_noise_as_a_peer_group) ... ok
+test_complete_validation_and_workbook_reconciliation (test_data.DataTests.test_complete_validation_and_workbook_reconciliation) ... ok
+test_constants_use_only_june_2025 (test_data.DataTests.test_constants_use_only_june_2025) ... ok
+test_corrupt_flags_and_model_values_fail (test_data.DataTests.test_corrupt_flags_and_model_values_fail) ... ok
+test_missing_required_data_fails (test_data.DataTests.test_missing_required_data_fails) ... ok
+test_validation_checks_survive_optimization (test_data.DataTests.test_validation_checks_survive_optimization) ... ok
+test_both_metrics_and_noise_accounting (test_optimization.OptimizationTests.test_both_metrics_and_noise_accounting) ... ok
+test_dbscan_stability_excludes_noise_and_reports_common_coverage (test_optimization.OptimizationTests.test_dbscan_stability_excludes_noise_and_reports_common_coverage) ... ok
+test_exact_budget_and_preserved_baseline (test_optimization.OptimizationTests.test_exact_budget_and_preserved_baseline) ... ok
+test_joint_selection_filters_population_and_uses_db (test_optimization.OptimizationTests.test_joint_selection_filters_population_and_uses_db) ... ok
+test_pareto_and_deterministic_hierarchical_fit (test_optimization.OptimizationTests.test_pareto_and_deterministic_hierarchical_fit) ... ok
+test_alignment_ignores_input_order_and_entry_only_clusters (test_orion_review.OrionTests.test_alignment_ignores_input_order_and_entry_only_clusters) ... ok
+test_all_date_observation_population (test_orion_review.OrionTests.test_all_date_observation_population) ... ok
+test_deviation_definition_and_singleton (test_orion_review.OrionTests.test_deviation_definition_and_singleton) ... ok
+test_jaccard_is_not_overlap_objective (test_orion_review.OrionTests.test_jaccard_is_not_overlap_objective) ... ok
+test_permutation_unmatched_and_membership_events (test_orion_review.OrionTests.test_permutation_unmatched_and_membership_events) ... ok
+test_saved_objectives_disagree_on_four_instruments (test_orion_review.OrionTests.test_saved_objectives_disagree_on_four_instruments) ... ok
+test_declared_grid_complete_unique_and_invalid_ward_excluded (test_paper_experiments.PaperExperimentTests.test_declared_grid_complete_unique_and_invalid_ward_excluded) ... ok
+test_f_reference_formula_is_saved_without_claiming_individual_test (test_paper_experiments.PaperExperimentTests.test_f_reference_formula_is_saved_without_claiming_individual_test) ... ok
+test_frozen_contrast_attributions_sum_to_same_model_margin_change (test_paper_experiments.PaperExperimentTests.test_frozen_contrast_attributions_sum_to_same_model_margin_change) ... ok
+test_individual_distance_no_n_multiplier_and_affine_invariance (test_paper_experiments.PaperExperimentTests.test_individual_distance_no_n_multiplier_and_affine_invariance) ... ok
+test_permuted_clusters_stable_entries_not_shifts (test_paper_experiments.PaperExperimentTests.test_permuted_clusters_stable_entries_not_shifts) ... ok
+test_saved_notebook_replay_is_read_only (test_paper_experiments.PaperExperimentTests.test_saved_notebook_replay_is_read_only) ... PASS: 123 rows; 41 per date; 43 tickers; 3 RNI rows retained; 2 volume imputations; model features complete.
+READ-ONLY saved results: C:\Users\HP\AppData\Local\Temp\tmp4rhi8fea\experiments\runs\saved; no experiment is rerun
+ok
+test_saved_replay_rejects_unfinished_runs_and_path_ids (test_paper_experiments.PaperExperimentTests.test_saved_replay_rejects_unfinished_runs_and_path_ids) ... ok
+test_screen_rejects_missing_or_non_2d_input (test_paper_experiments.PaperExperimentTests.test_screen_rejects_missing_or_non_2d_input) ... ok
+test_screen_taxonomy_requires_observation_and_handles_recurrence (test_paper_experiments.PaperExperimentTests.test_screen_taxonomy_requires_observation_and_handles_recurrence) ... ok
+test_sector_context_does_not_label_singletons_or_ties_as_divergent (test_paper_experiments.PaperExperimentTests.test_sector_context_does_not_label_singletons_or_ties_as_divergent) ... ok
+test_singular_screen_unestimable_not_zero_distance (test_paper_experiments.PaperExperimentTests.test_singular_screen_unestimable_not_zero_distance) ... ok
+test_clean_notebook_cells_have_valid_python (test_study.StudyTests.test_clean_notebook_cells_have_valid_python) ... ok
+test_eda_does_not_refit_scaler_on_future (test_study.StudyTests.test_eda_does_not_refit_scaler_on_future) ... ok
+test_eda_population_missingness_and_evidence (test_study.StudyTests.test_eda_population_missingness_and_evidence) ... ok
+test_missing_required_outputs_fail_completion (test_study.StudyTests.test_missing_required_outputs_fail_completion) ... ok
+test_paper_workflow_requires_eight_clusters (test_study.StudyTests.test_paper_workflow_requires_eight_clusters) ... ok
+test_stage_order_cannot_bypass_eda (test_study.StudyTests.test_stage_order_cannot_bypass_eda) ... Study run: bad-order
+Artifacts: C:\Users\HP\AppData\Local\Temp\tmpy194uv4p\runs\bad-order
+Traceback (most recent call last):
+  File "C:\Users\HP\Documents\GitHub\JSE-Top-40-Clustering\scripts\study_workflow.py", line 59, in _step
+    raise RuntimeError(f'Run stages in order: expected {expected}, found {self.state}')
+RuntimeError: Run stages in order: expected explored, found started
+ok
+test_study_failure_is_tracked_and_not_completed (test_study.StudyTests.test_study_failure_is_tracked_and_not_completed) ... Study run: eda-failure
+Artifacts: C:\Users\HP\AppData\Local\Temp\tmpn3rfsnp2\runs\eda-failure
+
+1. Validate and load all historical observations
+PASS: 123 rows; 41 per date; 43 tickers; 3 RNI rows retained; 2 volume imputations; model features complete.
+
+2. Exploratory data analysis across all three dates
+Traceback (most recent call last):
+  File "C:\Users\HP\Documents\GitHub\JSE-Top-40-Clustering\scripts\study_workflow.py", line 61, in _step
+    result = action()
+             ^^^^^^^^
+  File "C:\Users\HP\Documents\GitHub\JSE-Top-40-Clustering\scripts\study_workflow.py", line 88, in action
+    self.eda = explore(self.data, self.features, self.scaler, self.out/'eda')
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Documents\GitHub\hierarchical-marl-equity-rotation\.uv-python\cpython-3.11.14-windows-x86_64-none\Lib\unittest\mock.py", line 1124, in __call__
+    return self._mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Documents\GitHub\hierarchical-marl-equity-rotation\.uv-python\cpython-3.11.14-windows-x86_64-none\Lib\unittest\mock.py", line 1128, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\HP\Documents\GitHub\hierarchical-marl-equity-rotation\.uv-python\cpython-3.11.14-windows-x86_64-none\Lib\unittest\mock.py", line 1183, in _execute_mock_call
+    raise effect
+RuntimeError: synthetic EDA failure
+ok
+test_completion_collision_and_manifest (test_tracking.TrackingTests.test_completion_collision_and_manifest) ... ok
+test_completion_marker_io_failure_marks_registry_failed (test_tracking.TrackingTests.test_completion_marker_io_failure_marks_registry_failed) ... ok
+test_concurrent_registry_updates_and_finalization (test_tracking.TrackingTests.test_concurrent_registry_updates_and_finalization) ... ok
+test_dependency_failure_tracked_before_heavy_imports (test_tracking.TrackingTests.test_dependency_failure_tracked_before_heavy_imports) ... ok
+test_failed_runs_preserve_diagnostics (test_tracking.TrackingTests.test_failed_runs_preserve_diagnostics) ... Traceback (most recent call last):
+  File "C:\Users\HP\Documents\GitHub\JSE-Top-40-Clustering\tests\test_tracking.py", line 32, in test_failed_runs_preserve_diagnostics
+    raise RuntimeError('synthetic failure')
+RuntimeError: synthetic failure
+ok
+test_finalization_failure_never_completes (test_tracking.TrackingTests.test_finalization_failure_never_completes) ... ok
+test_invalid_run_id (test_tracking.TrackingTests.test_invalid_run_id) ... ok
+test_registry_rejects_invalid_status (test_tracking.TrackingTests.test_registry_rejects_invalid_status) ... ok
+test_registry_serializes_independent_processes (test_tracking.TrackingTests.test_registry_serializes_independent_processes) ... ok
+test_both_scores_print_separate_champions (test_tune_umap.UserUmapTests.test_both_scores_print_separate_champions) ... ok
+test_dendrogram_tree_matches_same_clustering_geometry (test_tune_umap.UserUmapTests.test_dendrogram_tree_matches_same_clustering_geometry) ... ok
+test_fixed_embedding_is_fit_once_and_prints_every_k (test_tune_umap.UserUmapTests.test_fixed_embedding_is_fit_once_and_prints_every_k) ... ok
+test_fixed_mode_rejects_ambiguous_grid (test_tune_umap.UserUmapTests.test_fixed_mode_rejects_ambiguous_grid) ... ok
+test_grid_reuses_fits_and_sweeps_best_not_last_embedding (test_tune_umap.UserUmapTests.test_grid_reuses_fits_and_sweeps_best_not_last_embedding) ... ok
+test_invalid_input_fails_instead_of_skipping (test_tune_umap.UserUmapTests.test_invalid_input_fails_instead_of_skipping) ... ok
+
+----------------------------------------------------------------------
+Ran 66 tests in 5.666s
+
+OK
+

@@ -1,0 +1,194 @@
+diff --git a/.github/workflows/validate.yml b/.github/workflows/validate.yml
+index b8cf8c3..7f68267 100644
+--- a/.github/workflows/validate.yml
++++ b/.github/workflows/validate.yml
+@@ -5,7 +5,7 @@ on:
+   workflow_dispatch:
+     inputs:
+       full_suite:
+-        description: Run nine combinations and five seeds on all dates
++        description: Run full EDA-to-SHAP study with five seeds and the UMAP sensitivity
+         type: boolean
+         default: false
+       optimize_models:
+@@ -40,9 +40,9 @@ jobs:
+       - run: python -m pip install -r requirements.txt
+       - run: python -m unittest discover -s tests -v
+       - if: ${{ !inputs.full_suite }}
+-        run: python scripts/run_analysis.py --output outputs/ci --mode baseline --stability-runs 2
++        run: python scripts/run_study.py --output outputs/ci --stability-runs 2 --baseline-only
+       - if: ${{ inputs.full_suite }}
+-        run: python scripts/run_analysis.py --output outputs/ci --mode full --stability-runs 5
++        run: python scripts/run_study.py --output outputs/ci --stability-runs 5
+       - if: ${{ inputs.optimize_models }}
+         run: python scripts/optimize_models.py --run-id ci-optimization-${{ github.run_id }}-${{ matrix.os }}
+       - uses: actions/upload-artifact@v4
+diff --git a/README.md b/README.md
+index 9acc684..f2a0ee9 100644
+--- a/README.md
++++ b/README.md
+@@ -1,6 +1,36 @@
+ # JSE Top 40 Clustering
+ 
+-Clustering research using historical FTSE/JSE Top 40 cross-sections.
++An EDA-to-SHAP workflow extending the original single-window SACJ study to three
++historical FTSE/JSE Top 40 cross-sections.
++
++## Start here: the complete study
++
++Open **[notebooks/three_cross_section_study.ipynb](notebooks/three_cross_section_study.ipynb)**
++in VS Code, select the project `.venv` kernel and choose **Run All**.
++
++The notebook walks through:
++
++1. Validate and load all 123 instrument-date observations.
++2. **EDA:** population, missing cases, imputations, distributions, correlations and sector context.
++3. **Modelling:** PCA/t-SNE/UMAP with hierarchical clustering, K-Means and DBSCAN at every date.
++4. **Plots and scores:** silhouette **and** Davies-Bouldin in embedding/common-feature space, maps, profiles and dendrograms.
++5. **SHAP:** gradient-boosted surrogate explanations, class mapping, additivity and in-sample/OOF fidelity.
++6. **Temporal comparisons:** continuing members, index entries/exits and aligned transition tables.
++
++The command-line equivalent runs the same stages:
++
++```bash
++python scripts/run_study.py
++```
++
++Each execution creates a new tracked `experiments/runs/<run_id>/` folder.
++Start reading its **`study_summary.md`**. The original t-SNE baseline and the frozen
++UMAP sensitivity are labelled separately; settings are not retuned on later dates.
++The paper's hierarchical/K-Means models use **k=8**, matching the original
++eight-sector design. Other k values remain diagnostics; DBSCAN reports its
++natural cluster/noise count as a separate comparator.
++See the [step-by-step study guide](docs/study_guide.md) for setup, file locations
++and the meaning of the plots.
+ 
+ Study claim: a repeated, interpretable cross-sectional investment-screening
+ process. See the [ORiON methods-to-results checklist](docs/orion_methods_results_checklist.md)
+@@ -8,7 +38,7 @@ for the evidence matrix, ten-feature variant, implemented results and pending
+ screening specifications. Reconstructed inputs do not become certified PIT
+ observations through modelling.
+ 
+-## Run the analysis
++## Install dependencies
+ 
+ Use Python 3.11 or 3.12 in VS Code or a terminal. Windows Python 3.11.14
+ was executed locally with every pinned top-level dependency; see the
+@@ -20,6 +50,18 @@ Ubuntu/3.12 CI also passed for the final code commit; see
+ python -m venv .venv
+ # Activate .venv (Windows: .venv\Scripts\activate; macOS/Linux: source .venv/bin/activate)
+ python -m pip install -r requirements.txt
++# For the interactive notebook, install the notebook support as well:
++python -m pip install -r requirements-notebook.txt
++python scripts/run_study.py
++```
++
++The notebook and command-line workflow use the same tested Python modules.
++The supporting scripts below remain available for individual experiments.
++
++<details>
++<summary>Advanced: validation, individual experiments and saved-result printing</summary>
++
++```bash
+ python scripts/validate_data.py
+ python -m unittest discover -s tests -v
+ python scripts/run_analysis.py --mode baseline --experiment baseline
+@@ -38,6 +80,8 @@ python scripts/tune_umap.py --config configs/umap_fixed_001.json
+ python scripts/tune_umap.py --print-run fixed-umap-001-01
+ ```
+ 
++</details>
++
+ Outputs go to unique immutable `experiments/runs/<run_id>/` directories. Each run
+ has a status, diagnostic log, exact configuration, code snapshot, input hashes,
+ environment, artifacts and checksums. `experiments/registry.csv` has one record
+diff --git a/experiments/registry.csv b/experiments/registry.csv
+index 76df3d4..0a11190 100644
+--- a/experiments/registry.csv
++++ b/experiments/registry.csv
+@@ -9,3 +9,8 @@ user-orion-20261108,completed,2026-11-08T09:59:53.962256+00:00,2026-11-08T09:59:
+ silhouette-db-search-01,completed,2026-11-08T10:12:57.725090+00:00,2026-11-08T10:16:57.811414+00:00,silhouette-db-bounded-search-v1,User-requested finite-grid joint silhouette/DB optimisation; no promotion,e37cc418372a10e70d1dfb2a1c0d4f8bafacd4d3,True,240.09399999992456,runs/silhouette-db-search-01,
+ user-umap-grid-01,completed,2026-11-08T10:33:23.289977+00:00,2026-11-08T10:33:39.869968+00:00,user-umap-average-manhattan-grid-v1,"Correct and execute user-supplied UMAP grid, print winners/parameters and plot hierarchy",d67892b6fd6d5099119165bbc14d1dfff486c6b0,True,16.57900000002701,runs/user-umap-grid-01,
+ fixed-umap-001-01,completed,2026-11-08T10:38:16.799158+00:00,2026-11-08T10:38:33.007521+00:00,fixed-umap-3-neighbors-min-dist-001,"Correct and execute user-supplied UMAP grid, print winners/parameters and plot hierarchy",0790f09fd54a5717b74887caadf4b0a478a33740,True,16.20299999997951,runs/fixed-umap-001-01,
++three-cross-section-study-01,completed,2026-11-08T11:09:01.240319+00:00,2026-11-08T11:09:59.620710+00:00,three-cross-section-study-walkthrough,"Guided three-cross-section revision: EDA, model comparisons, plots, SHAP and temporal interpretation",27144bbd0d235741bca2f0dfc1117f3e63af9171,True,58.375,runs/three-cross-section-study-01,
++three-cross-section-study-02,completed,2026-11-08T11:13:38.805665+00:00,2026-11-08T11:14:42.973139+00:00,three-cross-section-study-walkthrough,"Guided three-cross-section revision: EDA, model comparisons, plots, SHAP and temporal interpretation",27144bbd0d235741bca2f0dfc1117f3e63af9171,True,64.17200000002049,runs/three-cross-section-study-02,
++three-cross-section-cli-check-01,completed,2026-11-08T11:15:47.743146+00:00,2026-11-08T11:16:34.061336+00:00,three-cross-section-study-walkthrough,"Guided three-cross-section revision: EDA, model comparisons, plots, SHAP and temporal interpretation",27144bbd0d235741bca2f0dfc1117f3e63af9171,True,46.32799999997951,runs/three-cross-section-cli-check-01,
++20261108T135356-303a1dcda854,running,2026-11-08T13:53:56.795519+00:00,,three-cross-section-study-walkthrough,"Guided three-cross-section revision: EDA, model comparisons, plots, SHAP and temporal interpretation",,,,runs/20261108T135356-303a1dcda854,
++three-cross-section-k8-01,running,2026-11-08T13:56:07.592371+00:00,,three-cross-section-study-walkthrough,"Guided three-cross-section revision: EDA, model comparisons, plots, SHAP and temporal interpretation",,,,runs/three-cross-section-k8-01,
+diff --git a/reports/test_results.txt b/reports/test_results.txt
+index 904982f..9cbcf36 100644
+--- a/reports/test_results.txt
++++ b/reports/test_results.txt
+@@ -31,6 +31,45 @@ test_deviation_definition_and_singleton (test_orion_review.OrionTests.test_devia
+ test_jaccard_is_not_overlap_objective (test_orion_review.OrionTests.test_jaccard_is_not_overlap_objective) ... ok
+ test_permutation_unmatched_and_membership_events (test_orion_review.OrionTests.test_permutation_unmatched_and_membership_events) ... ok
+ test_saved_objectives_disagree_on_four_instruments (test_orion_review.OrionTests.test_saved_objectives_disagree_on_four_instruments) ... ok
++test_clean_notebook_cells_have_valid_python (test_study.StudyTests.test_clean_notebook_cells_have_valid_python) ... ok
++test_eda_does_not_refit_scaler_on_future (test_study.StudyTests.test_eda_does_not_refit_scaler_on_future) ... ok
++test_eda_population_missingness_and_evidence (test_study.StudyTests.test_eda_population_missingness_and_evidence) ... ok
++test_missing_required_outputs_fail_completion (test_study.StudyTests.test_missing_required_outputs_fail_completion) ... ok
++test_paper_workflow_requires_eight_clusters (test_study.StudyTests.test_paper_workflow_requires_eight_clusters) ... ok
++test_stage_order_cannot_bypass_eda (test_study.StudyTests.test_stage_order_cannot_bypass_eda) ... warning: in the working copy of 'scripts/tracking.py', LF will be replaced by CRLF the next time Git touches it
++PASS: 123 rows; 41 per date; 43 tickers; 3 RNI rows retained; 2 volume imputations; model features complete.
++Study run: bad-order
++Artifacts: C:\Users\HP\AppData\Local\Temp\tmppsyzm797\runs\bad-order
++Traceback (most recent call last):
++  File "C:\Users\HP\Documents\GitHub\JSE-Top-40-Clustering\scripts\study_workflow.py", line 59, in _step
++    raise RuntimeError(f'Run stages in order: expected {expected}, found {self.state}')
++RuntimeError: Run stages in order: expected explored, found started
++ok
++test_study_failure_is_tracked_and_not_completed (test_study.StudyTests.test_study_failure_is_tracked_and_not_completed) ... warning: in the working copy of 'scripts/tracking.py', LF will be replaced by CRLF the next time Git touches it
++Study run: eda-failure
++Artifacts: C:\Users\HP\AppData\Local\Temp\tmp6s2jcyef\runs\eda-failure
++
++1. Validate and load all historical observations
++PASS: 123 rows; 41 per date; 43 tickers; 3 RNI rows retained; 2 volume imputations; model features complete.
++
++2. Exploratory data analysis across all three dates
++Traceback (most recent call last):
++  File "C:\Users\HP\Documents\GitHub\JSE-Top-40-Clustering\scripts\study_workflow.py", line 61, in _step
++    result = action()
++             ^^^^^^^^
++  File "C:\Users\HP\Documents\GitHub\JSE-Top-40-Clustering\scripts\study_workflow.py", line 88, in action
++    self.eda = explore(self.data, self.features, self.scaler, self.out/'eda')
++               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
++  File "C:\Users\HP\Documents\GitHub\hierarchical-marl-equity-rotation\.uv-python\cpython-3.11.14-windows-x86_64-none\Lib\unittest\mock.py", line 1124, in __call__
++    return self._mock_call(*args, **kwargs)
++           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
++  File "C:\Users\HP\Documents\GitHub\hierarchical-marl-equity-rotation\.uv-python\cpython-3.11.14-windows-x86_64-none\Lib\unittest\mock.py", line 1128, in _mock_call
++    return self._execute_mock_call(*args, **kwargs)
++           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
++  File "C:\Users\HP\Documents\GitHub\hierarchical-marl-equity-rotation\.uv-python\cpython-3.11.14-windows-x86_64-none\Lib\unittest\mock.py", line 1183, in _execute_mock_call
++    raise effect
++RuntimeError: synthetic EDA failure
++ok
+ test_completion_collision_and_manifest (test_tracking.TrackingTests.test_completion_collision_and_manifest) ... ok
+ test_completion_marker_io_failure_marks_registry_failed (test_tracking.TrackingTests.test_completion_marker_io_failure_marks_registry_failed) ... ok
+ test_concurrent_registry_updates_and_finalization (test_tracking.TrackingTests.test_concurrent_registry_updates_and_finalization) ... ok
+@@ -52,8 +91,7 @@ test_grid_reuses_fits_and_sweeps_best_not_last_embedding (test_tune_umap.UserUma
+ test_invalid_input_fails_instead_of_skipping (test_tune_umap.UserUmapTests.test_invalid_input_fails_instead_of_skipping) ... ok
+ 
+ ----------------------------------------------------------------------
+-Ran 42 tests in 3.925s
++Ran 49 tests in 5.909s
+ 
+ OK
+-PASS: 123 rows; 41 per date; 43 tickers; 3 RNI rows retained; 2 volume imputations; model features complete.
+ 
+diff --git a/scripts/tracking.py b/scripts/tracking.py
+index 3eae144..bce26d6 100644
+--- a/scripts/tracking.py
++++ b/scripts/tracking.py
+@@ -153,9 +153,11 @@ class Run:
+         (self.out / 'worktree.patch').write_text(git('diff', '--binary', 'HEAD'), encoding='utf-8')
+         # Includes untracked implementation files, excludes result trees, caches and credentials.
+         paths = []
+-        for folder in ['scripts', 'tests', 'configs', 'docs', 'data', '.github']:
++        for folder in ['scripts', 'tests', 'configs', 'docs', 'data', '.github', 'notebooks']:
+             paths += [p for p in (ROOT / folder).rglob('*') if p.is_file() and '__pycache__' not in p.parts]
+         paths += [ROOT / p for p in ['README.md', 'requirements.txt', '.gitignore']]
++        if (ROOT/'requirements-notebook.txt').is_file():
++            paths.append(ROOT/'requirements-notebook.txt')
+         with zipfile.ZipFile(self.out / 'source_snapshot.zip', 'w', zipfile.ZIP_DEFLATED) as archive:
+             for p in sorted(paths):
+                 archive.write(p, p.relative_to(ROOT).as_posix())

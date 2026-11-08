@@ -1,0 +1,27 @@
+{
+  "config": {
+    "experiment": "posthoc-peer-cluster-suitability-review-v1",
+    "source_run": "paper-exhaustive-k8-01",
+    "primary_k": 8,
+    "shortlist_size": 3,
+    "review_filter": "Existing full-coverage, valid eight-cluster candidates with no singleton clusters on any June seed",
+    "ranking": "Existing joint rank of mean common-feature silhouette and Davies-Bouldin; seed ARI, feature silhouette and candidate ID tie-breaks",
+    "scope": "Post hoc diagnostic shortlist, not a prespecified replacement or a requirement for equal cluster sizes; sectors do not select candidates",
+    "followup": "Freeze June shortlist settings and refit at all three dates over the original five seeds; report later singletons rather than filtering on future results",
+    "promotion": false
+  },
+  "source_run": "paper-exhaustive-k8-01",
+  "source_manifest_sha256": "e9391d11aa008dee838b17b90fb279a14bd5300931d2d5ea3943d0aa4a2a9099",
+  "verified_source_artifacts": 1186,
+  "june_eligible_without_singletons": 488,
+  "shortlisted": [
+    "c_68a10edff9ce364e",
+    "c_7c1fdd70546e22c7",
+    "c_b0aaecdaf4f71ae6"
+  ],
+  "followup_fits": 45,
+  "primary_outputs_unchanged": true,
+  "posthoc_review": true,
+  "sectors_used_for_selection": false,
+  "promotion": false
+}

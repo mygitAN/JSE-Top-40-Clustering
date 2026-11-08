@@ -1,0 +1,96 @@
+diff --git a/experiments/registry.csv b/experiments/registry.csv
+index 748818d..d6106be 100644
+--- a/experiments/registry.csv
++++ b/experiments/registry.csv
+@@ -2,3 +2,4 @@ run_id,status,started_utc,ended_utc,experiment,purpose,git_commit,git_dirty,runt
+ audit-full-42,completed,2026-11-08T09:08:00.036755+00:00,2026-11-08T09:08:36.984318+00:00,fixed-suite,All three dates; nine combinations; seeds 42-46; k=2-10; SHAP,59795b348a6ab447ca41219efb66ab4eddd93dce,True,36.95400000002701,runs/audit-full-42,
+ final-full-42,completed,2026-11-08T09:15:06.204426+00:00,2026-11-08T09:15:37.708765+00:00,fixed-suite,All three dates; nine combinations; seeds 42-46; k=2-10; SHAP,89c2cce42096ce3d2d4ee0def3b42d71a16c4c4b,True,31.5,runs/final-full-42,
+ repeat-full-42,completed,2026-11-08T09:16:10.571968+00:00,2026-11-08T09:16:40.814005+00:00,fixed-suite,All three dates; nine combinations; seeds 42-46; k=2-10; SHAP,89c2cce42096ce3d2d4ee0def3b42d71a16c4c4b,True,30.25,runs/repeat-full-42,
++tracker-check-42,running,2026-11-08T09:23:05.093567+00:00,,final-tracker-check,All-date baseline and SHAP after completion-marker I/O recovery fix,,,,runs/tracker-check-42,
+diff --git a/reports/test_results.txt b/reports/test_results.txt
+index 0546559..57a6836 100644
+--- a/reports/test_results.txt
++++ b/reports/test_results.txt
+@@ -21,6 +21,7 @@ test_corrupt_flags_and_model_values_fail (test_data.DataTests.test_corrupt_flags
+ test_missing_required_data_fails (test_data.DataTests.test_missing_required_data_fails) ... ok
+ test_validation_checks_survive_optimization (test_data.DataTests.test_validation_checks_survive_optimization) ... ok
+ test_completion_collision_and_manifest (test_tracking.TrackingTests.test_completion_collision_and_manifest) ... ok
++test_completion_marker_io_failure_marks_registry_failed (test_tracking.TrackingTests.test_completion_marker_io_failure_marks_registry_failed) ... ok
+ test_concurrent_registry_updates_and_finalization (test_tracking.TrackingTests.test_concurrent_registry_updates_and_finalization) ... ok
+ test_dependency_failure_tracked_before_heavy_imports (test_tracking.TrackingTests.test_dependency_failure_tracked_before_heavy_imports) ... ok
+ test_failed_runs_preserve_diagnostics (test_tracking.TrackingTests.test_failed_runs_preserve_diagnostics) ... Traceback (most recent call last):
+@@ -34,7 +35,7 @@ test_registry_rejects_invalid_status (test_tracking.TrackingTests.test_registry_
+ test_registry_serializes_independent_processes (test_tracking.TrackingTests.test_registry_serializes_independent_processes) ... ok
+ 
+ ----------------------------------------------------------------------
+-Ran 24 tests in 9.641s
++Ran 25 tests in 6.293s
+ 
+ OK
+ PASS: 123 rows; 41 per date; 43 tickers; 3 RNI rows retained; 2 volume imputations; model features complete.
+diff --git a/scripts/tracking.py b/scripts/tracking.py
+index f040d9b..3eae144 100644
+--- a/scripts/tracking.py
++++ b/scripts/tracking.py
+@@ -59,7 +59,7 @@ def registry_lock(base, timeout=15):
+         lock.unlink()
+ 
+ 
+-def register(base, record):
++def register(base, record, *, finalization_recovery=False):
+     base = Path(base)
+     with registry_lock(base):
+         path = base / 'registry.csv'
+@@ -70,8 +70,13 @@ def register(base, record):
+         if record.get('status') not in {'running', 'completed', 'failed'}:
+             raise ValueError('Invalid registry status')
+         matches = [r for r in records if r['run_id'] == record['run_id']]
+-        if matches and (matches[0]['status'] != 'running' or record['status'] == 'running'):
+-            raise FileExistsError('Registry run ID already used or finalized')
++        if matches:
++            transition = matches[0]['status'] == 'running' and record['status'] in {'completed', 'failed'}
++            recovery = (finalization_recovery and matches[0]['status'] == 'completed' and
++                        record['status'] == 'failed' and
++                        not (base/'runs'/record['run_id']/'COMPLETED').exists())
++            if not (transition or recovery):
++                raise FileExistsError('Registry run ID already used or finalized')
+         records = [r for r in records if r['run_id'] != record['run_id']]
+         records.append({k: record.get(k, '') for k in FIELDS})
+         buf = io.StringIO(newline='')
+@@ -179,7 +184,7 @@ class Run:
+             self.meta.update(status='failed', error=f'Finalization failed: {error}')
+             (self.out/'finalization_error.txt').write_text(traceback.format_exc(), encoding='utf-8')
+             try:
+-                register(self.base, self.meta)
++                register(self.base, self.meta, finalization_recovery=True)
+             except Exception as registry_error:
+                 # A locked/corrupt registry must not conceal local failure evidence.
+                 self.meta['registry_error'] = str(registry_error)
+diff --git a/tests/test_tracking.py b/tests/test_tracking.py
+index 76001f2..99ca2a6 100644
+--- a/tests/test_tracking.py
++++ b/tests/test_tracking.py
+@@ -74,6 +74,23 @@ class TrackingTests(unittest.TestCase):
+             with self.assertRaisesRegex(ValueError, 'status'):
+                 register(tmp, {'run_id': 'bad', 'status': 'success-ish'})
+ 
++    def test_completion_marker_io_failure_marks_registry_failed(self):
++        from unittest.mock import patch
++        original = Path.write_text
++        def write(path, *args, **kwargs):
++            if path.name == 'COMPLETED':
++                raise OSError('synthetic marker IO failure')
++            return original(path, *args, **kwargs)
++        with tempfile.TemporaryDirectory() as tmp:
++            with self.assertRaisesRegex(OSError, 'marker IO failure'):
++                with patch.object(Path, 'write_text', write):
++                    with Run(tmp, {}, 'test', 'marker failure', 'marker-failed') as run:
++                        pass
++            self.assertFalse((run.out/'COMPLETED').exists())
++            self.assertEqual(json.loads((run.out/'status.json').read_text())['status'], 'failed')
++            with (Path(tmp)/'registry.csv').open() as stream:
++                self.assertEqual(list(csv.DictReader(stream))[0]['status'], 'failed')
++
+     def test_registry_serializes_independent_processes(self):
+         with tempfile.TemporaryDirectory() as tmp:
+             code = ('import sys; sys.path.insert(0, sys.argv[1]); '

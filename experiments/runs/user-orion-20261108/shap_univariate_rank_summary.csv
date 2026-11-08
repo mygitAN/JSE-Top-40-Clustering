@@ -1,0 +1,25 @@
+decision_date,cluster,n,rank_correlation,status
+2025-06-30,0,8,0.742387174159217,descriptive rank comparison; no p-value
+2025-06-30,1,5,0.5741633988358115,descriptive rank comparison; no p-value
+2025-06-30,2,8,0.46015733935488656,descriptive rank comparison; no p-value
+2025-06-30,3,5,0.8787878787878788,descriptive rank comparison; no p-value
+2025-06-30,4,3,0.7477238187264794,descriptive rank comparison; no p-value
+2025-06-30,5,7,0.7259592864296668,descriptive rank comparison; no p-value
+2025-06-30,6,3,0.37426130267530777,descriptive rank comparison; no p-value
+2025-06-30,7,2,0.42023031949290335,descriptive rank comparison; no p-value
+2025-12-31,0,6,0.9245067028843873,descriptive rank comparison; no p-value
+2025-12-31,1,7,0.5515151515151515,descriptive rank comparison; no p-value
+2025-12-31,2,6,0.5940262055390594,descriptive rank comparison; no p-value
+2025-12-31,3,7,0.7783791658787675,descriptive rank comparison; no p-value
+2025-12-31,4,5,0.6606060606060605,descriptive rank comparison; no p-value
+2025-12-31,5,5,0.6933037246280291,descriptive rank comparison; no p-value
+2025-12-31,6,4,0.8857162118542732,descriptive rank comparison; no p-value
+2025-12-31,7,1,0.20041753698892312,descriptive rank comparison; no p-value
+2026-06-30,0,9,0.3939393939393939,descriptive rank comparison; no p-value
+2026-06-30,1,5,0.6930123197952737,descriptive rank comparison; no p-value
+2026-06-30,2,4,0.6564911374796382,descriptive rank comparison; no p-value
+2026-06-30,3,8,0.683349073208448,descriptive rank comparison; no p-value
+2026-06-30,4,5,0.09203146787097731,descriptive rank comparison; no p-value
+2026-06-30,5,3,0.6606060606060605,descriptive rank comparison; no p-value
+2026-06-30,6,5,0.40618119722996154,descriptive rank comparison; no p-value
+2026-06-30,7,2,0.48773821159496344,descriptive rank comparison; no p-value

@@ -1,0 +1,44 @@
+{
+  "protocol": {
+    "experiment": "anomaly-dynamics-reporting-amendment-v2",
+    "source_run": "paper-exhaustive-k8-01",
+    "amendment_date": "2026-11-08",
+    "primary_design": "Keep June-selected settings and k=8 at all three dates",
+    "sensitivity": "Vary only k=2..12 independently at each date for the three existing main models, holding their June-selected representation and other clustering parameters fixed",
+    "selection_rule": "Same all-seed full-coverage joint silhouette/DB rank rule, separately in common features and embedding coordinates; seed ARI, feature silhouette and candidate ID tie-breaks; sector labels excluded",
+    "taxonomy_version": "v2; reporting amendment after existing results were examined, not retrospectively prespecified",
+    "patterns": {
+      "000": "never flagged",
+      "001": "emerging",
+      "011": "emerging and sustained",
+      "111": "persistent",
+      "110": "resolving",
+      "100": "resolved",
+      "010": "transient",
+      "101": "recurring"
+    },
+    "channels": [
+      "geometric_screen",
+      "sector_divergence",
+      "joint_agreement"
+    ],
+    "missing_rule": "All three dates and estimable channel values required; an absence, sector tie or singleton is not an unflagged observation",
+    "joint_rule": "Both geometric and sector-divergence flags true, only when both channels are estimable",
+    "confirmed_outliers": false,
+    "promotion": false
+  },
+  "source_run": "paper-exhaustive-k8-01",
+  "source_manifest_sha256": "e9391d11aa008dee838b17b90fb279a14bd5300931d2d5ea3943d0aa4a2a9099",
+  "source_verified_artifacts": 1186,
+  "model_features": 10,
+  "instruments_per_date": 41,
+  "economic_groups_per_date": 40,
+  "independent_sample_size_increased": false,
+  "primary_models_refitted": false,
+  "sensitivity_clustering_fits": 495,
+  "representations_refitted": false,
+  "primary_k": 8,
+  "amendment_after_existing_results": true,
+  "confirmed_outliers": 0,
+  "promotion": false
+}

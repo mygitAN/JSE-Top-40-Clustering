@@ -1,0 +1,112 @@
+{
+  "run_id": "fixed-umap-001-01",
+  "status": "completed",
+  "started_utc": "2026-11-08T10:38:16.799158+00:00",
+  "ended_utc": "2026-11-08T10:38:33.007521+00:00",
+  "experiment": "fixed-umap-3-neighbors-min-dist-001",
+  "purpose": "Correct and execute user-supplied UMAP grid, print winners/parameters and plot hierarchy",
+  "artifact_path": "runs/fixed-umap-001-01",
+  "exact_command": [
+    "C:\\Users\\HP\\Documents\\GitHub\\JSE-Top-40-Clustering\\.venv\\Scripts\\python.exe",
+    "scripts/tune_umap.py",
+    "--config",
+    "configs/umap_fixed_001.json",
+    "--run-id",
+    "fixed-umap-001-01"
+  ],
+  "cwd": "C:\\Users\\HP\\Documents\\GitHub\\JSE-Top-40-Clustering",
+  "resolved_configuration": {
+    "experiment": "fixed-umap-3-neighbors-min-dist-001",
+    "mode": "fixed_embedding",
+    "plot_style": "dual_axis",
+    "selection_date": "2025-06-30",
+    "n_neighbors": [
+      3
+    ],
+    "min_dist": [
+      0.01
+    ],
+    "grid_clusters": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "cluster_sweep": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "umap_metric": "euclidean",
+    "n_components": 2,
+    "linkage": "average",
+    "clustering_metric": "manhattan",
+    "seed": 42,
+    "n_jobs": 1,
+    "selection_rule": "Minimum sum of average ranks: silhouette descending and Davies-Bouldin ascending; ties: higher silhouette, lower DB, then sorted parameter values",
+    "scope": "One fixed UMAP embedding, k=2..12; single seed 42",
+    "promotion": false
+  },
+  "python": "3.11.14 (main, Feb 12 2026, 00:37:49) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-10-10.0.26300-SP0",
+  "thread_environment": {
+    "OMP_NUM_THREADS": "1",
+    "OPENBLAS_NUM_THREADS": "1",
+    "MKL_NUM_THREADS": "1",
+    "NUMBA_NUM_THREADS": "1"
+  },
+  "versions": {
+    "cloudpickle": "3.1.2",
+    "colorama": "0.4.6",
+    "contourpy": "1.3.3",
+    "cycler": "0.12.1",
+    "fonttools": "4.68.0",
+    "joblib": "1.6.0",
+    "kiwisolver": "1.5.1",
+    "llvmlite": "0.50.0",
+    "matplotlib": "3.10.8",
+    "numba": "0.68.1",
+    "numpy": "2.3.5",
+    "packaging": "26.3",
+    "pandas": "2.2.3",
+    "pillow": "13.0.0",
+    "pynndescent": "0.7.0",
+    "pyparsing": "3.3.3",
+    "python-dateutil": "4.0.0",
+    "pytz": "2026.6",
+    "scikit-learn": "1.6.1",
+    "scipy": "1.17.0",
+    "shap": "0.49.1",
+    "slicer": "0.0.8",
+    "threadpoolctl": "3.8.0",
+    "tqdm": "4.70.1",
+    "typing_extensions": "4.16.0",
+    "tzdata": "2026.6",
+    "umap-learn": "0.5.12",
+    "xgboost": "2.1.4"
+  },
+  "git_commit": "0790f09fd54a5717b74887caadf4b0a478a33740",
+  "git_dirty": true,
+  "input_sha256": {
+    "data/processed/Top40_Retrospective_Model_Inputs_v1.csv": "fe6abb616fc826ea973f74bac62902fc77d4309e449ae8af5119df750f061b95",
+    "data/source/Top40_PIT_Verification_v4.xlsx": "4f5e3e5f80b396591bd5b66b4c0ab3b99876419950e746ca99e52b2a5a5a8110",
+    "docs/Top40_Retrospective_Model_Method_v1.json": "594393356d316981076242949e40045ab71266e3868d9482be2dbdb32adbd738"
+  },
+  "runtime_seconds": 16.20299999997951,
+  "error": ""
+}

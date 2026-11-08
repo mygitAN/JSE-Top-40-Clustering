@@ -1,0 +1,52 @@
+{
+  "dimensions": 2,
+  "estimator_parameters": {
+    "a": null,
+    "angular_rp_forest": false,
+    "b": null,
+    "dens_frac": 0.3,
+    "dens_lambda": 2.0,
+    "dens_var_shift": 0.1,
+    "densmap": false,
+    "disconnection_distance": null,
+    "force_approximation_algorithm": false,
+    "init": "spectral",
+    "learning_rate": 1.0,
+    "local_connectivity": 1.0,
+    "low_memory": true,
+    "metric": "euclidean",
+    "metric_kwds": null,
+    "min_dist": 0.5,
+    "n_components": 2,
+    "n_epochs": null,
+    "n_jobs": 1,
+    "n_neighbors": 3,
+    "negative_sample_rate": 5,
+    "output_dens": false,
+    "output_metric": "euclidean",
+    "output_metric_kwds": null,
+    "precomputed_knn": [
+      null,
+      null,
+      null
+    ],
+    "random_state": 42,
+    "repulsion_strength": 1.0,
+    "set_op_mix_ratio": 1.0,
+    "spread": 1.0,
+    "target_metric": "categorical",
+    "target_metric_kwds": null,
+    "target_n_neighbors": -1,
+    "target_weight": 0.5,
+    "tqdm_kwds": {
+      "desc": "Epochs completed",
+      "bar_format": "{desc}: {percentage:3.0f}%| {bar} {n_fmt}/{total_fmt} [{elapsed}]",
+      "disable": true
+    },
+    "transform_mode": "embedding",
+    "transform_queue_size": 4.0,
+    "transform_seed": 42,
+    "unique": false,
+    "verbose": false
+  }
+}

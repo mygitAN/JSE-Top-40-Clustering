@@ -1,0 +1,44 @@
+ticker,2025-06-30,2025-12-31,2026-06-30,screen_history,confirmed_outlier
+ABG,False,False,False,never flagged,False
+AGL,False,False,False,never flagged,False
+ANG,False,False,False,never flagged,False
+ANH,False,False,False,never flagged,False
+APN,False,,,not eligible: missing observation/screen,False
+BHG,False,False,False,never flagged,False
+BID,False,False,False,never flagged,False
+BTI,False,False,False,never flagged,False
+BVT,False,False,False,never flagged,False
+CFR,False,False,False,never flagged,False
+CLS,False,False,False,never flagged,False
+CPI,False,False,False,never flagged,False
+DSY,False,False,False,never flagged,False
+FSR,False,False,False,never flagged,False
+GFI,False,False,False,never flagged,False
+GLN,,False,False,not eligible: missing observation/screen,False
+GRT,False,False,False,never flagged,False
+HAR,False,False,False,never flagged,False
+IMP,False,False,False,never flagged,False
+INL,False,False,False,never flagged,False
+INP,False,False,False,never flagged,False
+MNP,False,False,,not eligible: missing observation/screen,False
+MRP,False,False,False,never flagged,False
+MTN,False,False,False,never flagged,False
+NED,False,False,False,never flagged,False
+NPH,False,False,False,never flagged,False
+NPN,False,False,False,never flagged,False
+NRP,False,False,False,never flagged,False
+OMU,False,False,False,never flagged,False
+OUT,False,False,False,never flagged,False
+PAN,,,False,not eligible: missing observation/screen,False
+PPH,False,False,False,never flagged,False
+PRX,False,False,False,never flagged,False
+REM,False,False,False,never flagged,False
+RNI,False,False,False,never flagged,False
+SBK,False,False,False,never flagged,False
+SHP,False,False,False,never flagged,False
+SLM,False,False,False,never flagged,False
+SOL,False,False,False,never flagged,False
+SSW,False,False,False,never flagged,False
+VAL,False,False,False,never flagged,False
+VOD,False,False,False,never flagged,False
+WHL,False,False,False,never flagged,False

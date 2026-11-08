@@ -1,0 +1,47 @@
+{
+  "headRefOid": "51d7862b140183dcf1e54d40a4266f44dffa5b01",
+  "isDraft": true,
+  "statusCheckRollup": [
+    {
+      "__typename": "CheckRun",
+      "completedAt": "0001-01-01T00:00:00Z",
+      "conclusion": "",
+      "detailsUrl": "https://github.com/mygitAN/JSE-Top-40-Clustering/actions/runs/42487832962/job/128753483192",
+      "name": "validate (ubuntu-latest, 3.12)",
+      "startedAt": "2026-11-08T14:02:43Z",
+      "status": "IN_PROGRESS",
+      "workflowName": "Validate data"
+    },
+    {
+      "__typename": "CheckRun",
+      "completedAt": "0001-01-01T00:00:00Z",
+      "conclusion": "",
+      "detailsUrl": "https://github.com/mygitAN/JSE-Top-40-Clustering/actions/runs/42487828674/job/128753470333",
+      "name": "validate (ubuntu-latest, 3.12)",
+      "startedAt": "2026-11-08T14:02:40Z",
+      "status": "IN_PROGRESS",
+      "workflowName": "Validate data"
+    },
+    {
+      "__typename": "CheckRun",
+      "completedAt": "0001-01-01T00:00:00Z",
+      "conclusion": "",
+      "detailsUrl": "https://github.com/mygitAN/JSE-Top-40-Clustering/actions/runs/42487832962/job/128753483023",
+      "name": "validate (windows-latest, 3.11)",
+      "startedAt": "2026-11-08T14:02:43Z",
+      "status": "IN_PROGRESS",
+      "workflowName": "Validate data"
+    },
+    {
+      "__typename": "CheckRun",
+      "completedAt": "0001-01-01T00:00:00Z",
+      "conclusion": "",
+      "detailsUrl": "https://github.com/mygitAN/JSE-Top-40-Clustering/actions/runs/42487828674/job/128753470110",
+      "name": "validate (windows-latest, 3.11)",
+      "startedAt": "2026-11-08T14:02:39Z",
+      "status": "IN_PROGRESS",
+      "workflowName": "Validate data"
+    }
+  ],
+  "url": "https://github.com/mygitAN/JSE-Top-40-Clustering/pull/1"
+}

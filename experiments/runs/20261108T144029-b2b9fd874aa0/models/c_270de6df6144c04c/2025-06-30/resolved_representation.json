@@ -1,0 +1,23 @@
+{
+  "dimensions": 7,
+  "estimator_parameters": {
+    "copy": true,
+    "iterated_power": "auto",
+    "n_components": 0.95,
+    "n_oversamples": 10,
+    "power_iteration_normalizer": "auto",
+    "random_state": null,
+    "svd_solver": "full",
+    "tol": 0.0,
+    "whiten": false
+  },
+  "explained_variance_ratio": [
+    0.29150787850511695,
+    0.23384027358642884,
+    0.19053467142995073,
+    0.11280797586901124,
+    0.08134955847085545,
+    0.03652168679681488,
+    0.019142880763849075
+  ]
+}

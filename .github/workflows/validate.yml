@@ -1,23 +1,61 @@
-name: Validate data
-on: [push, pull_request]
+name: Validate research pipeline
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+    inputs:
+      full_suite:
+        description: Run full EDA-to-SHAP study with five seeds and the UMAP sensitivity
+        type: boolean
+        default: false
+      optimize_models:
+        description: Run the bounded 1426-configuration silhouette/DB search
+        type: boolean
+        default: false
+      paper_experiments:
+        description: Run the complete 3268-configuration EDA and longitudinal experiment
+        type: boolean
+        default: false
 permissions:
   contents: read
 jobs:
   validate:
-    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        include:
+          - os: ubuntu-latest
+            python: '3.12'
+          - os: windows-latest
+            python: '3.11'
+    runs-on: ${{ matrix.os }}
+    env:
+      OPENBLAS_NUM_THREADS: '1'
+      OMP_NUM_THREADS: '1'
+      MKL_NUM_THREADS: '1'
+      NUMBA_NUM_THREADS: '1'
+      MPLCONFIGDIR: ${{ github.workspace }}/.runtime/matplotlib
+      NUMBA_CACHE_DIR: ${{ github.workspace }}/.runtime/numba
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
-          python-version: '3.12'
+          python-version: ${{ matrix.python }}
       - run: python scripts/validate_data.py
       - run: python -m pip install -r requirements.txt
       - run: python -m unittest discover -s tests -v
-      - run: python scripts/run_analysis.py --output outputs/ci
-        env:
-          OPENBLAS_NUM_THREADS: '1'
-          OMP_NUM_THREADS: '1'
+      - if: ${{ !inputs.full_suite }}
+        run: python scripts/run_study.py --output outputs/ci --stability-runs 2 --baseline-only
+      - if: ${{ inputs.full_suite }}
+        run: python scripts/run_study.py --output outputs/ci --stability-runs 5
+      - if: ${{ inputs.optimize_models }}
+        run: python scripts/optimize_models.py --run-id ci-optimization-${{ github.run_id }}-${{ matrix.os }}
+      - if: ${{ inputs.paper_experiments }}
+        run: python scripts/paper_experiments.py --run-id ci-paper-${{ github.run_id }}-${{ matrix.os }}
       - uses: actions/upload-artifact@v4
+        if: always()
         with:
-          name: three-cross-section-analysis
-          path: outputs/ci/
+          name: research-${{ matrix.os }}-py${{ matrix.python }}
+          path: |
+            outputs/ci/
+            experiments/runs/ci-optimization-*/
+            experiments/runs/ci-paper-*/

@@ -1,0 +1,84 @@
+diff --git a/experiments/registry.csv b/experiments/registry.csv
+index 76df3d4..f7ac96b 100644
+--- a/experiments/registry.csv
++++ b/experiments/registry.csv
+@@ -9,3 +9,4 @@ user-orion-20261108,completed,2026-11-08T09:59:53.962256+00:00,2026-11-08T09:59:
+ silhouette-db-search-01,completed,2026-11-08T10:12:57.725090+00:00,2026-11-08T10:16:57.811414+00:00,silhouette-db-bounded-search-v1,User-requested finite-grid joint silhouette/DB optimisation; no promotion,e37cc418372a10e70d1dfb2a1c0d4f8bafacd4d3,True,240.09399999992456,runs/silhouette-db-search-01,
+ user-umap-grid-01,completed,2026-11-08T10:33:23.289977+00:00,2026-11-08T10:33:39.869968+00:00,user-umap-average-manhattan-grid-v1,"Correct and execute user-supplied UMAP grid, print winners/parameters and plot hierarchy",d67892b6fd6d5099119165bbc14d1dfff486c6b0,True,16.57900000002701,runs/user-umap-grid-01,
+ fixed-umap-001-01,completed,2026-11-08T10:38:16.799158+00:00,2026-11-08T10:38:33.007521+00:00,fixed-umap-3-neighbors-min-dist-001,"Correct and execute user-supplied UMAP grid, print winners/parameters and plot hierarchy",0790f09fd54a5717b74887caadf4b0a478a33740,True,16.20299999997951,runs/fixed-umap-001-01,
++three-cross-section-study-01,running,2026-11-08T11:09:01.240319+00:00,,three-cross-section-study-walkthrough,"Guided three-cross-section revision: EDA, model comparisons, plots, SHAP and temporal interpretation",,,,runs/three-cross-section-study-01,
+diff --git a/reports/test_results.txt b/reports/test_results.txt
+index 904982f..135e76f 100644
+--- a/reports/test_results.txt
++++ b/reports/test_results.txt
+@@ -31,6 +31,43 @@ test_deviation_definition_and_singleton (test_orion_review.OrionTests.test_devia
+ test_jaccard_is_not_overlap_objective (test_orion_review.OrionTests.test_jaccard_is_not_overlap_objective) ... ok
+ test_permutation_unmatched_and_membership_events (test_orion_review.OrionTests.test_permutation_unmatched_and_membership_events) ... ok
+ test_saved_objectives_disagree_on_four_instruments (test_orion_review.OrionTests.test_saved_objectives_disagree_on_four_instruments) ... ok
++test_eda_does_not_refit_scaler_on_future (test_study.StudyTests.test_eda_does_not_refit_scaler_on_future) ... ok
++test_eda_population_missingness_and_evidence (test_study.StudyTests.test_eda_population_missingness_and_evidence) ... ok
++test_missing_required_outputs_fail_completion (test_study.StudyTests.test_missing_required_outputs_fail_completion) ... ok
++test_stage_order_cannot_bypass_eda (test_study.StudyTests.test_stage_order_cannot_bypass_eda) ... warning: in the working copy of 'scripts/tracking.py', LF will be replaced by CRLF the next time Git touches it
++PASS: 123 rows; 41 per date; 43 tickers; 3 RNI rows retained; 2 volume imputations; model features complete.
++Study run: bad-order
++Artifacts: C:\Users\HP\AppData\Local\Temp\tmpsm4tkkf_\runs\bad-order
++Traceback (most recent call last):
++  File "C:\Users\HP\Documents\GitHub\JSE-Top-40-Clustering\scripts\study_workflow.py", line 55, in _step
++    raise RuntimeError(f'Run stages in order: expected {expected}, found {self.state}')
++RuntimeError: Run stages in order: expected explored, found started
++ok
++test_study_failure_is_tracked_and_not_completed (test_study.StudyTests.test_study_failure_is_tracked_and_not_completed) ... warning: in the working copy of 'scripts/tracking.py', LF will be replaced by CRLF the next time Git touches it
++Study run: eda-failure
++Artifacts: C:\Users\HP\AppData\Local\Temp\tmpj48eddyi\runs\eda-failure
++
++1. Validate and load all historical observations
++PASS: 123 rows; 41 per date; 43 tickers; 3 RNI rows retained; 2 volume imputations; model features complete.
++
++2. Exploratory data analysis across all three dates
++Traceback (most recent call last):
++  File "C:\Users\HP\Documents\GitHub\JSE-Top-40-Clustering\scripts\study_workflow.py", line 57, in _step
++    result = action()
++             ^^^^^^^^
++  File "C:\Users\HP\Documents\GitHub\JSE-Top-40-Clustering\scripts\study_workflow.py", line 84, in action
++    self.eda = explore(self.data, self.features, self.scaler, self.out/'eda')
++               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
++  File "C:\Users\HP\Documents\GitHub\hierarchical-marl-equity-rotation\.uv-python\cpython-3.11.14-windows-x86_64-none\Lib\unittest\mock.py", line 1124, in __call__
++    return self._mock_call(*args, **kwargs)
++           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
++  File "C:\Users\HP\Documents\GitHub\hierarchical-marl-equity-rotation\.uv-python\cpython-3.11.14-windows-x86_64-none\Lib\unittest\mock.py", line 1128, in _mock_call
++    return self._execute_mock_call(*args, **kwargs)
++           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
++  File "C:\Users\HP\Documents\GitHub\hierarchical-marl-equity-rotation\.uv-python\cpython-3.11.14-windows-x86_64-none\Lib\unittest\mock.py", line 1183, in _execute_mock_call
++    raise effect
++RuntimeError: synthetic EDA failure
++ok
+ test_completion_collision_and_manifest (test_tracking.TrackingTests.test_completion_collision_and_manifest) ... ok
+ test_completion_marker_io_failure_marks_registry_failed (test_tracking.TrackingTests.test_completion_marker_io_failure_marks_registry_failed) ... ok
+ test_concurrent_registry_updates_and_finalization (test_tracking.TrackingTests.test_concurrent_registry_updates_and_finalization) ... ok
+@@ -52,8 +89,7 @@ test_grid_reuses_fits_and_sweeps_best_not_last_embedding (test_tune_umap.UserUma
+ test_invalid_input_fails_instead_of_skipping (test_tune_umap.UserUmapTests.test_invalid_input_fails_instead_of_skipping) ... ok
+ 
+ ----------------------------------------------------------------------
+-Ran 42 tests in 3.925s
++Ran 47 tests in 9.627s
+ 
+ OK
+-PASS: 123 rows; 41 per date; 43 tickers; 3 RNI rows retained; 2 volume imputations; model features complete.
+ 
+diff --git a/scripts/tracking.py b/scripts/tracking.py
+index 3eae144..bce26d6 100644
+--- a/scripts/tracking.py
++++ b/scripts/tracking.py
+@@ -153,9 +153,11 @@ class Run:
+         (self.out / 'worktree.patch').write_text(git('diff', '--binary', 'HEAD'), encoding='utf-8')
+         # Includes untracked implementation files, excludes result trees, caches and credentials.
+         paths = []
+-        for folder in ['scripts', 'tests', 'configs', 'docs', 'data', '.github']:
++        for folder in ['scripts', 'tests', 'configs', 'docs', 'data', '.github', 'notebooks']:
+             paths += [p for p in (ROOT / folder).rglob('*') if p.is_file() and '__pycache__' not in p.parts]
+         paths += [ROOT / p for p in ['README.md', 'requirements.txt', '.gitignore']]
++        if (ROOT/'requirements-notebook.txt').is_file():
++            paths.append(ROOT/'requirements-notebook.txt')
+         with zipfile.ZipFile(self.out / 'source_snapshot.zip', 'w', zipfile.ZIP_DEFLATED) as archive:
+             for p in sorted(paths):
+                 archive.write(p, p.relative_to(ROOT).as_posix())

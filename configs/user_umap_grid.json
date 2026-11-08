@@ -1,0 +1,17 @@
+{
+  "experiment": "user-umap-average-manhattan-grid-v1",
+  "selection_date": "2025-06-30",
+  "n_neighbors": [3,5,10],
+  "min_dist": [0.01,0.04,0.1],
+  "grid_clusters": [7,10,11,12],
+  "cluster_sweep": [2,3,4,5,6,7,8,9,10,11,12,13,14,15],
+  "umap_metric": "euclidean",
+  "n_components": 2,
+  "linkage": "average",
+  "clustering_metric": "manhattan",
+  "seed": 42,
+  "n_jobs": 1,
+  "selection_rule": "Minimum sum of average ranks: silhouette descending and Davies-Bouldin ascending; ties: higher silhouette, lower DB, then sorted parameter values",
+  "scope": "36 grid combinations, then k=2..15 on the selected grid embedding; not a full 9x14 joint search",
+  "promotion": false
+}

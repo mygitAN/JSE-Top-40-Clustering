@@ -1,0 +1,6 @@
+decision_date,ticker,company,volume_imputed,fundamentals_imputed
+2025-06-30,AGL,ANGLO AMERICAN PLC,True,False
+2025-06-30,RNI,REINET INVESTMENTS SCA,False,True
+2025-12-31,AGL,ANGLO AMERICAN PLC,True,False
+2025-12-31,RNI,REINET INVESTMENTS SCA,False,True
+2026-06-30,RNI,REINET INVESTMENTS SCA,False,True
