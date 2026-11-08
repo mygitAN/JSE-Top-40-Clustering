@@ -1,0 +1,15 @@
+{
+  "alignment_membership_events.csv": "9ad2fe6a6adc5416bb8eac29074b7b73260dc7d00c77b6b9f02141987ee27c46",
+  "alignment_objective_comparison.csv": "a80061dac37a4ca9c3735670b863c962cf322a49d6aec06c2c82df630f35c90e",
+  "earnings_yield_and_pe_diagnostic.csv": "ccd37092672d3a1b7755f9d1de493c1769c64209cf03bf84fdcd21705f0b9946",
+  "pe_case_counts.csv": "fed5da95bb8a7a98e6cfba5e340d3d5b62fe598a29707fed6cddae0bacfb5411",
+  "reporting_manifest.json": "174ca1fca2ab19d4b3023e785215f6b9e003b659d088030ef5ccb969bedfa620",
+  "resolved_config.json": "65970b74b45c94255280c79487abc983cf6c67ec3db37d039ec95d5cc67ad9bd",
+  "run.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "shap_univariate_comparison.csv": "9589f99d862c4d98ca276287e5af57dba50c431f3ea15a3c4a7d02dbb27b8b70",
+  "shap_univariate_rank_summary.csv": "6e7f6f17455e04ce5073198668471c9525878e1218357ce8d6fe3d833fb74a7e",
+  "source_snapshot.zip": "e2f649e795751687a96fbb4f13e6c9ee858b0da918a3707ab938ff65acfb7800",
+  "status.json": "55c9db4a2c925a1dd18b7ab9c8ecca9a9ce01f93e941035a784f10267f0964e4",
+  "temporal_observation_eligibility.csv": "6c7be4f1900e57d27d67c56279ba5dde42050a8441b75f80eca54108fed0b465",
+  "worktree.patch": "a2bfeea2388c8c6eec77e52499dcefcec26acc90f854f1fcc9076d8ed7082192"
+}

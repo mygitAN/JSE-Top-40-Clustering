@@ -41,7 +41,7 @@ test_registry_rejects_invalid_status (test_tracking.TrackingTests.test_registry_
 test_registry_serializes_independent_processes (test_tracking.TrackingTests.test_registry_serializes_independent_processes) ... ok
 
 ----------------------------------------------------------------------
-Ran 31 tests in 5.023s
+Ran 31 tests in 3.708s
 
 OK
 PASS: 123 rows; 41 per date; 43 tickers; 3 RNI rows retained; 2 volume imputations; model features complete.
