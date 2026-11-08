@@ -1,0 +1,45 @@
+{
+  "review_date": "2026-11-08",
+  "source_protocol": "C:\\Users\\HP\\Documents\\GitHub\\JSE-Top-40-Clustering-paper\\docs\\research_protocol.md",
+  "source_sha256": "3e59ac2e9b34bd7b8d7491dc45128f5de2f65944a9395846c5e8cf2a7b95fe19",
+  "source_tag": "protocol-v1",
+  "source_tag_commit": "dbb24f6ee49ab7140f468756ca6845e47507bfd1",
+  "numerical_checks": [
+    {
+      "n": 40,
+      "p": 2,
+      "alpha": 0.05,
+      "proposed_f_reference": 6.660416635188393,
+      "internal_distance_max": 38.025,
+      "one_sided_internal_beta_reference": 5.684757133765495,
+      "internal_normal_tail_above_f_reference": 0.028369426301885884,
+      "expected_internal_normal_flags": 1.1347770520754354,
+      "proposed_bonferroni_f_reference": 16.44454411100205,
+      "bonferroni_exceeds_internal_max": false
+    },
+    {
+      "n": 41,
+      "p": 10,
+      "alpha": 0.05,
+      "proposed_f_reference": 27.782653449106746,
+      "internal_distance_max": 39.02439024390244,
+      "one_sided_internal_beta_reference": 16.355911372368496,
+      "internal_normal_tail_above_f_reference": 8.61811940919045e-06,
+      "expected_internal_normal_flags": 0.00035334289577680845,
+      "proposed_bonferroni_f_reference": 52.62052212168812,
+      "bonferroni_exceeds_internal_max": true
+    }
+  ],
+  "simulation": {
+    "seed": 20261108,
+    "replications": 3000,
+    "n": 41,
+    "p": 10,
+    "data_model": "Independent standard normal vectors, diagnostic only; not JSE observations",
+    "mean_flags_proposed_f": 0.0003333333333333333,
+    "mean_flags_internal_beta": 2.025,
+    "nominal_n_times_alpha": 2.05
+  },
+  "warning": "Internal Beta references require iid multivariate-normal assumptions; these are not established for the equity data. No empirical JSE significance claim.",
+  "protocol_or_tag_modified": false
+}
