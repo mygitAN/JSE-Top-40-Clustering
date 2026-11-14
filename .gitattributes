@@ -1,2 +1,2 @@
-# Immutable experiment checksums refer to exact bytes on every platform.
-experiments/runs/** -text
+# results/ files are checksummed in results/manifest.json; keep their exact bytes.
+results/** -text

@@ -4,7 +4,11 @@ __pycache__/
 .env
 .DS_Store
 .ipynb_checkpoints/
-outputs/
 .uv-cache/
 .uv-python/
 .runtime/
+
+# Run outputs are local. Regenerate them with `python -m top40`; the outputs the
+# paper cites are copied into the tracked results/ folder by `python -m top40.export`.
+experiments/
+outputs/

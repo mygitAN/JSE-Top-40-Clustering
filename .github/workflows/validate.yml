@@ -1,26 +1,14 @@
-name: Validate research pipeline
+name: Validate
 on:
   push:
   pull_request:
   workflow_dispatch:
-    inputs:
-      full_suite:
-        description: Run full EDA-to-SHAP study with five seeds and the UMAP sensitivity
-        type: boolean
-        default: false
-      optimize_models:
-        description: Run the bounded 1426-configuration silhouette/DB search
-        type: boolean
-        default: false
-      paper_experiments:
-        description: Run the complete 3268-configuration EDA and longitudinal experiment
-        type: boolean
-        default: false
 permissions:
   contents: read
 jobs:
   validate:
     strategy:
+      fail-fast: false
       matrix:
         include:
           - os: ubuntu-latest
@@ -33,29 +21,20 @@ jobs:
       OMP_NUM_THREADS: '1'
       MKL_NUM_THREADS: '1'
       NUMBA_NUM_THREADS: '1'
-      MPLCONFIGDIR: ${{ github.workspace }}/.runtime/matplotlib
-      NUMBA_CACHE_DIR: ${{ github.workspace }}/.runtime/numba
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python }}
-      - run: python scripts/validate_data.py
+      # Input validation needs no third-party package, so it runs first.
+      - run: python -m top40.data
+      # The committed results must be exactly what was exported from their run.
+      - run: python -m top40.export --check
       - run: python -m pip install -r requirements.txt
-      - run: python -m unittest discover -s tests -v
-      - if: ${{ !inputs.full_suite }}
-        run: python scripts/run_study.py --output outputs/ci --stability-runs 2 --baseline-only
-      - if: ${{ inputs.full_suite }}
-        run: python scripts/run_study.py --output outputs/ci --stability-runs 5
-      - if: ${{ inputs.optimize_models }}
-        run: python scripts/optimize_models.py --run-id ci-optimization-${{ github.run_id }}-${{ matrix.os }}
-      - if: ${{ inputs.paper_experiments }}
-        run: python scripts/paper_experiments.py --run-id ci-paper-${{ github.run_id }}-${{ matrix.os }}
+      - run: python -m unittest discover -s tests -t . -v
+      - run: python -m top40 --output outputs/ci --run-id ci --stability-runs 2
       - uses: actions/upload-artifact@v4
         if: always()
         with:
-          name: research-${{ matrix.os }}-py${{ matrix.python }}
-          path: |
-            outputs/ci/
-            experiments/runs/ci-optimization-*/
-            experiments/runs/ci-paper-*/
+          name: study-${{ matrix.os }}-py${{ matrix.python }}
+          path: outputs/ci/runs/ci/

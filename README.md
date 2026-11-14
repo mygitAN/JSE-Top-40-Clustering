@@ -1,194 +1,166 @@
-# JSE Top 40 Clustering
+# JSE Top 40 clustering
 
-An EDA-to-SHAP workflow extending the original single-window SACJ study to three
-historical FTSE/JSE Top 40 cross-sections.
+Do FTSE/JSE Top 40 companies fall into stable peer groups on their financial
+characteristics, and do those groups change in ways worth tracking?
 
-The paper's reporting direction is **structural-signal dynamics**: emerging,
-persistent, resolving and related histories, with cluster shifts, geometric
-screening and sector divergence kept separate. Read the
-[working reporting example](reports/anomaly_dynamics_reporting_example.md) and
-[reporting protocol](docs/reporting_direction.md). The primary design keeps k=8;
-the separate varying-k sensitivity and revised taxonomy preserve all old outputs.
+This repository extends an earlier single-date clustering study to three dates:
+30 June 2025, 31 December 2025 and 30 June 2026. Each date has 41 listed
+instruments (40 company groups; Investec has two lines), giving 123 rows and 43
+distinct tickers.
 
-The [cluster-suitability review](reports/notebook_cluster_review.md) examines
-why the score-selected PCA partition creates a large residual group and
-singletons. It preserves the notebook and compares three post hoc alternatives
-at k=8 across all dates and five seeds; no model is promoted by that review.
+## Status
 
-## Start here: EDA, experimentation and optimisation
+The work is exploratory. The pipeline is reproducible, but the evidence that the
+clusters are economically meaningful is still weak:
 
-Open **[notebooks/paper_experiments.ipynb](notebooks/paper_experiments.ipynb)**
-with the project `.venv` kernel and choose **Run All**. It shows EDA first, all
-3,268 declared parameter combinations over five seeds, joint silhouette/DB
-selection, exact winning parameters, all-date dendrograms, named stable/shifted
-instrument lists, Hotelling descriptive screens, sector divergence and SHAP
-attribute reviews. See the [experiment guide](docs/paper_experiments_guide.md).
+- **Feature definitions change the answer.** Partitions from the original ten
+  features and from the share-basis-invariant set agree only moderately
+  (adjusted Rand index about 0.43 to 0.62).
+- **Scaling fitted on June 2025 lets one feature dominate later dates.** In
+  December 2025 the one-year return carries a third to two thirds of the total
+  scaled variance, whichever feature set is used.
+- **There is no external validation yet**, and the only noise reference is
+  agreement between random seeds.
 
-```bash
-python scripts/paper_experiments.py
-```
+Next steps are listed at the end.
 
-## Fixed-comparison walkthrough
+## Run it
 
-Open **[notebooks/three_cross_section_study.ipynb](notebooks/three_cross_section_study.ipynb)**
-in VS Code, select the project `.venv` kernel and choose **Run All**.
-
-The notebook walks through:
-
-1. Validate and load all 123 instrument-date observations.
-2. **EDA:** population, missing cases, imputations, distributions, correlations and sector context.
-3. **Modelling:** PCA/t-SNE/UMAP with hierarchical clustering, K-Means and DBSCAN at every date.
-4. **Plots and scores:** silhouette **and** Davies-Bouldin in embedding/common-feature space, maps, profiles and dendrograms.
-5. **SHAP:** gradient-boosted surrogate explanations, class mapping, additivity and in-sample/OOF fidelity.
-6. **Temporal comparisons:** continuing members, index entries/exits and aligned transition tables.
-
-The command-line equivalent runs the same stages:
-
-```bash
-python scripts/run_study.py
-```
-
-Each execution creates a new tracked `experiments/runs/<run_id>/` folder.
-Start reading its **`study_summary.md`**. The original t-SNE baseline and the frozen
-UMAP sensitivity are labelled separately; settings are not retuned on later dates.
-The paper's hierarchical/K-Means models use **k=8**, matching the original
-eight-sector design. Other k values remain diagnostics; DBSCAN reports its
-natural cluster/noise count as a separate comparator.
-See the [step-by-step study guide](docs/study_guide.md) for setup, file locations
-and the meaning of the plots.
-
-Each snapshot contains **40 company groups represented by 41 listed instruments**. Investec Limited (INL) and Investec plc (INP) are separate securities in one dual-listed company (DLC) group; both remain in the instrument-level analysis. Exited members are excluded at subsequent dates until an effective re-entry. See [the population audit](reports/population_count_audit.md) for sources and scope.
-
-Study claim: a repeated, interpretable cross-sectional investment-screening
-process. See the [ORiON methods-to-results checklist](docs/orion_methods_results_checklist.md)
-for the evidence matrix, ten-feature variant, implemented results and pending
-screening specifications. Reconstructed inputs do not become certified PIT
-observations through modelling.
-
-## Install dependencies
-
-Use Python 3.11 or 3.12 in VS Code or a terminal. Windows Python 3.11.14
-was executed locally with every pinned top-level dependency; see the
-[full environment lock](configs/environment-windows-py311.txt). Windows/3.11 and
-Ubuntu/3.12 CI passed for the earlier recorded commit; see
-[recorded check evidence](reports/ci_status.json).
+Python 3.11 or 3.12.
 
 ```bash
 python -m venv .venv
-# Activate .venv (Windows: .venv\Scripts\activate; macOS/Linux: source .venv/bin/activate)
-python -m pip install -r requirements.txt
-# For the interactive notebook, install the notebook support as well:
-python -m pip install -r requirements-notebook.txt
-python scripts/run_study.py
+.venv\Scripts\activate            # macOS/Linux: source .venv/bin/activate
+pip install -r requirements-notebook.txt   # exact Windows versions: requirements-lock-windows-py311.txt
+
+python -m top40.data              # validate the inputs (standard library only)
+python -m unittest discover -s tests -t .
+python -m top40                   # full study, about two minutes
 ```
 
-The notebook and command-line workflow use the same tested Python modules.
-The supporting scripts below remain available for individual experiments.
+Or open [notebooks/three_cross_section_study.ipynb](notebooks/three_cross_section_study.ipynb),
+select the `.venv` kernel and choose **Run All**. The notebook calls the same
+code and shows every table and figure in order.
 
-<details>
-<summary>Advanced: validation, individual experiments and saved-result printing</summary>
+Each run writes a new folder under `experiments/runs/<run id>/`; start with its
+`summary.md`. Run folders stay local and are not committed.
+
+## Results
+
+[results/](results/) is the committed copy of the tables and figures the paper
+cites, all from one run. [results/manifest.json](results/manifest.json) names
+that run, its code commit and the checksum of every file. To refresh it from a
+new run, and to check it has not been edited by hand:
 
 ```bash
-python scripts/validate_data.py
-python -m unittest discover -s tests -v
-python scripts/run_analysis.py --mode baseline --experiment baseline
-# Full comparisons, five seeds (42–46), k=2–10, and SHAP on every date:
-python scripts/run_analysis.py --mode full --experiment fixed-suite
-# Explicitly requested finite-grid optimisation: both silhouette and DB:
-python scripts/optimize_models.py
-# Build the compact results/plots using the completed run ID:
-python scripts/summarize_optimization.py silhouette-db-search-01
-# Print the supplied UMAP grid's saved winners and parameters without refitting:
-python scripts/tune_umap.py --print-run user-umap-grid-01
-# Run that 36-combination grid and its selected-embedding k sweep again:
-python scripts/tune_umap.py
-# Fixed UMAP from the latest snippet: neighbors=3, min_dist=0.01, k=2..12:
-python scripts/tune_umap.py --config configs/umap_fixed_001.json
-python scripts/tune_umap.py --print-run fixed-umap-001-01
+python -m top40.export experiments/runs/<run id>
+python -m top40.export --check
 ```
 
-</details>
+Export replaces the whole folder, so it never mixes runs. Only cite results whose
+manifest shows `"git_dirty": false`. The manifest identifies the exact implementation commit used to generate the export.
+An [executed review notebook](reports/three_cross_section_review.ipynb) retains the
+plots and tables for viewing without rerunning the study.
 
-Outputs go to unique immutable `experiments/runs/<run_id>/` directories. Each run
-has a status, diagnostic log, exact configuration, code snapshot, input hashes,
-environment, artifacts and checksums. `experiments/registry.csv` has one record
-per run. A `COMPLETED` marker is written only after required outputs, checksums
-and registry updates succeed. Failed runs are retained. Never reuse a run ID.
-`--output` changes the registry root, not a reusable run directory.
-`--skip-shap` explicitly requests an incomplete smoke test and is recorded in
-configuration. `--mode baseline` still exports k/seed sensitivity diagnostics.
+## Feature sets
 
-The [review package](reports/reviewer_guide.md) links saved results. Full bundles,
-including plots, models and SHAP arrays, are small enough to commit in Git.
-No expiring Actions artifact is the sole archive. `experiments/baseline.json`
-holds the specification pointer and an intentionally unpromoted results pointer.
+Choose one with `--feature-set` or `FEATURE_SET` in the notebook. The default is
+set in [configs/study.json](configs/study.json).
 
-The [joint silhouette/DB optimisation results](reports/optimization_results.md)
-report both scores, the full nine-family comparison, seed variability and
-Pareto trade-offs. The [paper review](reports/paper_review.md) records differences
-between the supplied SACJ manuscript and the reconstructed baseline. The bounded
-[search protocol](docs/decisions/003-silhouette-db-search.md) uses June 2025 alone
-for selection and preserves the baseline. Expensive optimisation is optional in
-CI through the `optimize_models` workflow-dispatch input.
+| Name | Status | Features |
+| --- | --- | --- |
+| `original10` | Archived reference | Return, volume, market cap, beta, shares, revenue, EPS, volatility, dividend yield, earnings yield |
+| `logsize10` | Diagnostic | The same ten with log volume, market cap, shares and revenue |
+| `invariant8` (default) | Candidate | Return, beta, volatility, dividend yield, earnings yield, log market cap, log revenue/cap, log turnover |
+| `market5` | Diagnostic | Return, beta, volatility, dividend yield, earnings yield |
 
-Verify and reproduce a saved run (replace the IDs with those in the registry):
+`original10` reproduces the earlier results exactly. It includes raw share count
+and EPS, which change mechanically when a company subdivides its shares: Naspers'
+five-for-one subdivision on 6 October 2025 multiplies its recorded share count by
+4.57 while the count on a common basis falls to 0.91. Nothing in `invariant8`
+changes under a subdivision.
 
-```bash
-python scripts/verify_run.py experiments/runs/final-full-42
-python scripts/run_analysis.py --mode full --seed 42 --stability-runs 5 --experiment fixed-suite --purpose "All three dates; nine combinations; seeds 42-46; k=2-10; SHAP" --run-id my-reproduction
-python scripts/compare_runs.py experiments/runs/final-full-42 experiments/runs/my-reproduction --report reports/my-reproduction.json
+All sets except `original10` were defined after the earlier results had been
+examined. They are pilot-informed, not pre-registered.
+
+## What a run does
+
+| Stage | Output folder | Content |
+| --- | --- | --- |
+| 1. Load | | Validate the inputs against the source workbook; fit scaling on June 2025 only |
+| 2. Explore | `eda/` | Population, imputed cases, distributions, rank correlations |
+| 3. Audit features | `feature_audit/` | Share-basis changes, feature dominance, the same recipe on every feature set |
+| 4. Fit models | `comparison/`, `models/` | PCA, t-SNE and UMAP with hierarchical, K-Means and DBSCAN; two primary models over five seeds |
+| 5. Explain | `models/` | Cluster profiles, and a gradient-boosted surrogate explained with SHAP |
+| 6. Compare dates | `longitudinal/` | Jaccard-aligned cluster histories, entries and exits kept separate, a feature-space distance screen |
+| 7. Finish | | Check every expected output, write `summary.md`, mark the run completed |
+
+The primary models use k=8, the original paper's choice (it matched eight sector
+labels). It is a reference specification, not evidence of eight natural groups.
+
+## Layout
+
+```
+configs/study.json        dates, seeds, model settings, default feature set
+data/source/              audit workbook with field-level sources
+data/processed/           the 123-row model inputs and their imputation policy
+data/reference/           sourced corrections: subdivisions, volume basis, Investec shares
+top40/                    the package
+  data.py                   load and validate inputs
+  features.py               feature sets and derived columns
+  models.py                 scaling, representations, clustering, scores, distance screen
+  ablation.py               feature-validity comparison
+  explain.py                surrogate and SHAP
+  temporal.py               alignment and histories across dates
+  eda.py, plots.py          tables and figures
+  study.py, report.py       the staged run and its summary
+  tracking.py               run folders, checksums, registry
+  export.py                 copy one run's cited outputs into results/
+results/                  committed tables and figures from one named run
+notebooks/                the walkthrough
+tests/
+docs/method.md            method, data policy and limits
 ```
 
-Use the matching code commit recorded in `status.json`, or extract its
-`source_snapshot.zip` into a separate clean directory for dirty-worktree runs.
-Install the archived environment lock there for the closest local reproduction.
-`resolved_config.json` records overrides. Comparison checks CSVs, numerical NPZ
-contents and deterministic model/manifest JSON with rtol=1e-7, atol=1e-6 for
-tables/arrays. Images and archive timestamps need not have identical bytes.
-Run IDs, purposes and timestamps differ and are excluded from numerical checks.
+## Data limits
 
-Registry updates use an exclusive lock and atomic replacement. After a killed
-process, inspect the owner in `.registry.lock` before removing an abandoned lock.
-A stale `running` record or a directory without `COMPLETED` is not a successful run.
-See [analysis method](docs/analysis_method.md)
-for recovered historical settings, explicit new implementation choices, and
-interpretation limits. The primary baseline is t-SNE + hierarchical clustering,
-with sector held out for external comparison.
+The inputs are a retrospective reconstruction from public sources, not a
+verified point-in-time dataset. See [docs/method.md](docs/method.md). In short:
 
-## Data
+- Share counts, market capitalisation and sector labels are unverified.
+- Reinet's fundamentals are imputed at all three dates, and Anglo American's
+  volume at two.
+- Volume is JSE trading only, which understates liquidity for companies whose
+  main listing is abroad.
 
-- 30 June 2025, 31 December 2025 and 30 June 2026.
-- 41 instruments at each date: 123 rows and 43 distinct tickers.
-- Every historical index member is retained, including unresolved observations.
-- Market cap, shares outstanding, sector, return, volume, beta, volatility, dividend yield, revenue, EPS and earnings yield are included.
+Three corrections are applied to the derived features, with sources in
+[data/reference/](data/reference/); the raw inputs are unchanged:
 
-| File | Purpose |
-| --- | --- |
-| `data/processed/Top40_Retrospective_Model_Inputs_v1.csv` | Modelling inputs with raw and model-only imputed values |
-| `data/source/Top40_PIT_Verification_v4.xlsx` | Audit workbook, underlying inputs, source URLs and field-level evidence |
-| `docs/Top40_Retrospective_Model_Method_v1.json` | Selection, imputation, clipping and evidence policy |
-| `scripts/validate_data.py` | Dataset checks using the Python standard library |
+- **Naspers subdivision:** recorded, so shares and EPS can be compared on one
+  basis.
+- **Naspers volume:** restated to post-subdivision units at December 2025 and
+  June 2026. It previously mixed both bases.
+- **Investec:** each line gets its own share count, from Investec's disclosed
+  per-issuer counts. Both lines previously carried the combined dual-listed
+  count, and so the whole group's market cap.
 
-## Research policy
+Source attribution is in the workbook. Third-party data is not relicensed here.
 
-This is a retrospective public-source reconstruction, not a certified investor-observable point-in-time backtest. Later restatements are permitted, although this version retains the issuer values already in the v4 workbook. Prices and other market features come from reconstructed vendor daily history. Historical shares and sector labels remain unverified; market cap reconciles to close times shares. Sector uses the existing eight legacy Listcorp labels, not a newly verified historical 11-industry ICB mapping.
+## Next steps
 
-Membership changes are index entries/exits, not ordinary cluster transitions: NPH replaced GLN in June 2025, GLN replaced APN in September 2025, and PAN replaced MNP in March 2026.
+1. **Scaling.** Decide between scaling fitted on June 2025 and per-date robust
+   scaling, and report how many shifts survive the choice.
+2. **Noise floor.** Resample instruments within each date and compare
+   date-to-date change against within-date variability.
+3. **External validation.** Test whether clusters at one date explain return
+   co-movement over the following six months better than sector labels and
+   random partitions. This needs daily prices, which are not in the repository.
+   Fix the evaluation rules before the 31 December 2026 window closes.
+4. **Data.** Verified point-in-time share counts for all instruments, and total
+   (not JSE-only) volume for foreign-listed companies.
 
-Reinet remains in all snapshots. Its unresolved raw fundamentals stay blank. Training medians populate separate model columns and are flagged with `fundamentals_imputed`. The two missing AGL volume observations are imputed and marked `volume_imputed`. Imputed earnings yield is not an accounting identity with separately imputed EPS; do not interpret either as reported company data.
+## History
 
-Earnings yield replaces P/E for modelling. Imputation and 1st/99th percentile clipping were fitted on June 2025 only. The supplied train/validation/test labels do not make independently refitted cross-sections an out-of-sample prediction test. The baseline holds sector out for external interpretation; it is not an ordinal numeric input. Scaling is fitted on June 2025 only. Keep identifiers, evidence fields, dates and raw alternatives out of the numeric feature matrix. Examine sensitivity to imputation, correlated size features and extreme observations before interpreting clusters.
-
-## Validate
-
-Python 3.10 or later; no packages required:
-
-```bash
-python scripts/validate_data.py
-```
-
-Validation checks membership, unique keys, retained unresolved rows, model-feature completeness, missingness flags, imputation constants, clipping, and cap arithmetic. It does not independently certify the source data. Analyst ratings are not inferred or included.
-
-## Data reuse
-
-Source attribution is retained in the workbook. Public availability does not imply unrestricted redistribution rights. No blanket open-data licence is asserted for third-party data.
+Everything before the November 2026 clean-up, including the 3,268-configuration
+grid search, 32 archived runs and the earlier reports, is preserved at the git
+tag `archive/pre-slim-2026-11-14`.

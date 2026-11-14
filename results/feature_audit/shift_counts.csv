@@ -1,0 +1,9 @@
+feature_set,recipe,stable,shifted,membership gap
+original10,tsne_hierarchical,21,18,4
+original10,ward_features,26,13,4
+logsize10,tsne_hierarchical,20,19,4
+logsize10,ward_features,23,16,4
+invariant8,tsne_hierarchical,22,17,4
+invariant8,ward_features,20,19,4
+market5,tsne_hierarchical,17,22,4
+market5,ward_features,6,33,4

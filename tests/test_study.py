@@ -1,97 +1,80 @@
+import ast
 import json
-import sys
 import tempfile
 import unittest
-from pathlib import Path
 from unittest.mock import patch
 
-import pandas as pd
+from top40 import CONFIG, ROOT
+from top40.ablation import run_ablation
+from top40.data import DATES, load_inputs
+from top40.eda import eda_tables
+from top40.features import add_derived_columns, get_feature_set
+from top40.models import prepare
+from top40.study import StudySession
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[1]/'scripts'))
-from analysis import ROOT, FEATURES, prepare
-from study_eda import eda_tables
-from study_workflow import StudySession
-from study_reporting import validate_study_outputs
+
+def status(study):
+    return json.loads((study.out / 'status.json').read_text(encoding='utf-8'))['status']
 
 
 class StudyTests(unittest.TestCase):
-    def test_notebook_python_and_explicit_saved_previews(self):
-        import ast
-        notebook = json.loads((ROOT/'notebooks/three_cross_section_study.ipynb').read_text(encoding='utf-8'))
-        self.assertEqual(notebook['nbformat'], 4)
-        code_cells = [cell for cell in notebook['cells'] if cell['cell_type'] == 'code']
-        self.assertEqual(len(code_cells), 12)
-        for cell in code_cells:
-            source = ''.join(cell['source']) if isinstance(cell['source'], list) else cell['source']
-            ast.parse(source)
-            if cell.get('metadata', {}).get('saved_preview_source'):
-                import base64
-                source_run = ROOT / cell['metadata']['saved_preview_source']
-                self.assertTrue((source_run / 'COMPLETED').is_file())
-                self.assertEqual(len(cell['outputs']), 2)
-                for output in cell['outputs']:
-                    self.assertEqual(output['output_type'], 'display_data')
-                    png = base64.b64decode(output['data']['image/png'])
-                    self.assertTrue(png.startswith(b'\x89PNG\r\n\x1a\n'))
-            else:
-                self.assertEqual(cell['outputs'], [])
-                self.assertIsNone(cell['execution_count'])
+    @classmethod
+    def setUpClass(cls):
+        cls.config = json.loads(CONFIG.read_text(encoding='utf-8'))
+        cls.frame = add_derived_columns(load_inputs(), DATES[0])
 
-    def test_eda_population_missingness_and_evidence(self):
-        frame = pd.read_csv(ROOT/'data/processed/Top40_Retrospective_Model_Inputs_v1.csv')
-        scaler, _ = prepare(frame)
-        tables = eda_tables(frame, FEATURES, scaler)
+    def test_notebook_is_clean_and_parses(self):
+        notebook = json.loads((ROOT / 'notebooks/three_cross_section_study.ipynb').read_text(encoding='utf-8'))
+        for cell in notebook['cells']:
+            if cell['cell_type'] == 'code':
+                ast.parse(''.join(cell['source']))
+                self.assertEqual(cell['outputs'], [])
+
+    def test_configured_feature_sets_exist(self):
+        for name in [self.config['feature_set'], *self.config['ablation_feature_sets']]:
+            get_feature_set(name)
+
+    def test_eda_population_and_missingness(self):
+        feature_set = get_feature_set('invariant8')
+        scaler, _ = prepare(self.frame, feature_set.columns, DATES, DATES[0])
+        tables = eda_tables(self.frame, feature_set, scaler)
         self.assertEqual(tables['population'].instruments.tolist(), [41, 41, 41])
         self.assertEqual(tables['population'].economic_groups.tolist(), [40, 40, 40])
-        self.assertEqual(set(tables['scaled'].query('ticker in ["INL", "INP"]').ticker), {'INL', 'INP'})
         self.assertEqual(int(tables['presence'].all(axis=1).sum()), 39)
-        self.assertEqual(int(tables['missingness'].model_missing.sum()), 0)
-        self.assertEqual(int(tables['missingness'].query('feature == "revenue_zar_model"').raw_missing.sum()), 3)
-        self.assertEqual(int(tables['missingness'].query('feature == "average_daily_volume_1y_model"').raw_missing.sum()), 2)
-        self.assertEqual(len(tables['descriptions']), 30)
-        self.assertIn('feature', tables['descriptions'])
+        missing = tables['missingness'].groupby('feature').raw_missing.sum()
+        self.assertEqual((missing['log_sales_to_cap'], missing['log_turnover'], missing['beta_1y']), (3, 2, 0))
         self.assertEqual(len(tables['scaled']), 123)
-        self.assertEqual(set(tables['correlations']), set(frame.decision_date))
 
-    def test_eda_does_not_refit_scaler_on_future(self):
-        frame = pd.read_csv(ROOT/'data/processed/Top40_Retrospective_Model_Inputs_v1.csv')
-        scaler, _ = prepare(frame)
-        before = scaler.data_max_.copy()
-        frame.loc[frame.decision_date != '2025-06-30', FEATURES] *= 100
-        tables = eda_tables(frame, FEATURES, scaler)
-        self.assertTrue((scaler.data_max_ == before).all())
-        self.assertGreater(tables['scaled'][FEATURES].max().max(), 1)
+    def test_ablation_tables(self):
+        result = run_ablation(self.frame, self.config, feature_sets=['original10', 'invariant8'], seeds=[42, 43])
+        self.assertEqual(len(result['dominance']), 2 * 3)
+        self.assertEqual(len(result['quality']), 2 * 2 * 3)
+        self.assertEqual(len(result['cross_set_agreement']), 2 * 3)
+        self.assertTrue((result['quality'].n_clusters == self.config['k']).all())
+        self.assertEqual(len(result['instrument_status']), 43)
+        # The deterministic recipe has no seed pairs to compare.
+        ward = result['quality'][result['quality'].recipe == 'ward_features']
+        self.assertTrue(ward.mean_seed_ari.isna().all())
 
-    def test_study_failure_is_tracked_and_not_completed(self):
-        with tempfile.TemporaryDirectory() as temporary:
-            study = StudySession(output=temporary, run_id='eda-failure', include_umap=False, stability_runs=2)
-            study.load_data()
-            with patch('study_eda.explore', side_effect=RuntimeError('synthetic EDA failure')):
-                with self.assertRaisesRegex(RuntimeError, 'synthetic EDA failure'):
-                    study.explore()
-            self.assertFalse((study.out/'COMPLETED').exists())
-            self.assertEqual(json.loads((study.out/'status.json').read_text())['status'], 'failed')
-
-    def test_stage_order_cannot_bypass_eda(self):
-        with tempfile.TemporaryDirectory() as temporary:
-            study = StudySession(output=temporary, run_id='bad-order', include_umap=False, stability_runs=2)
+    def test_stages_cannot_be_skipped(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            study = StudySession(output=tmp, run_id='bad-order', stability_runs=2)
             with self.assertRaisesRegex(RuntimeError, 'stages in order'):
                 study.fit_models()
-            self.assertFalse((study.out/'COMPLETED').exists())
-            self.assertEqual(study.state, 'failed')
+            self.assertEqual(status(study), 'failed')
+            self.assertFalse((study.out / 'COMPLETED').exists())
 
-    def test_missing_required_outputs_fail_completion(self):
-        config = json.loads((ROOT/'configs/study.json').read_text())
-        with tempfile.TemporaryDirectory() as temporary:
-            with self.assertRaisesRegex(ValueError, 'Missing required study artifact'):
-                validate_study_outputs(temporary, config)
+    def test_stage_failure_is_recorded(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            study = StudySession(output=tmp, run_id='eda-failure', stability_runs=2)
+            study.load_data()
+            with patch('top40.eda.explore', side_effect=RuntimeError('synthetic failure')):
+                with self.assertRaisesRegex(RuntimeError, 'synthetic failure'):
+                    study.explore()
+            self.assertEqual(status(study), 'failed')
+            with self.assertRaisesRegex(RuntimeError, 'closed'):
+                study.audit_features()
 
-    def test_paper_workflow_requires_eight_clusters(self):
-        config = json.loads((ROOT/'configs/study.json').read_text())
-        self.assertEqual(config['umap_sensitivity']['n_clusters'], 8)
-        with tempfile.TemporaryDirectory() as temporary:
-            config['umap_sensitivity']['n_clusters'] = 5
-            path = Path(temporary)/'wrong-k.json'
-            path.write_text(json.dumps(config), encoding='utf-8')
-            with self.assertRaisesRegex(ValueError, 'fixes k=8'):
-                StudySession(output=temporary, config_path=path)
+
+if __name__ == '__main__':
+    unittest.main()
