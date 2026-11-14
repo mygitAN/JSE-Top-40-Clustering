@@ -23,12 +23,20 @@ class StudyTests(unittest.TestCase):
         cls.config = json.loads(CONFIG.read_text(encoding='utf-8'))
         cls.frame = add_derived_columns(load_inputs(), DATES[0])
 
-    def test_notebook_is_clean_and_parses(self):
+    def test_notebook_parses_and_has_no_partial_or_error_outputs(self):
         notebook = json.loads((ROOT / 'notebooks/three_cross_section_study.ipynb').read_text(encoding='utf-8'))
-        for cell in notebook['cells']:
-            if cell['cell_type'] == 'code':
-                ast.parse(''.join(cell['source']))
+        code = [cell for cell in notebook['cells'] if cell['cell_type'] == 'code']
+        executed = [cell.get('execution_count') is not None for cell in code]
+        self.assertTrue(all(executed) or not any(executed), 'Keep either a complete execution or a clean notebook')
+        for cell in code:
+            ast.parse(''.join(cell['source']))
+            self.assertFalse(any(output['output_type'] == 'error' for output in cell.get('outputs', [])))
+            if not any(executed):
                 self.assertEqual(cell['outputs'], [])
+        if all(executed):
+            image_count = sum('image/png' in output.get('data', {})
+                              for cell in code for output in cell.get('outputs', []))
+            self.assertGreaterEqual(image_count, 40, 'Completed notebook must retain the visual evidence')
 
     def test_configured_feature_sets_exist(self):
         for name in [self.config['feature_set'], *self.config['ablation_feature_sets']]:

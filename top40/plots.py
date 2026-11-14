@@ -139,7 +139,7 @@ def variance_shares(dominance, path):
 
 # --- models ----------------------------------------------------------------------------------
 
-def cluster_map(frame, embedding, labels, path, title):
+def cluster_map(frame, embedding, labels, path, title, quality=None):
     from textwrap import fill
 
     fig, (axis, panel) = plt.subplots(1, 2, figsize=(13, 7), gridspec_kw={'width_ratios': [2, 1]})
@@ -157,10 +157,21 @@ def cluster_map(frame, embedding, labels, path, title):
                    color=points.cmap(points.norm(group)), va='top')
         panel.text(0, position - .035, fill(', '.join(tickers), width=39), fontsize=8, va='top')
     panel.text(0, 0, '* imputed input. Cluster numbers are local to this fit.', fontsize=8)
-    fig.suptitle(title, fontsize=10)
+    fig.suptitle(title, fontsize=13, fontweight='bold')
+    if quality is not None:
+        def value(key):
+            number = quality[key]
+            return 'n/a' if number is None or not np.isfinite(number) else f'{number:.3f}'
+        scores = (f'Feature space: Silhouette = {value("silhouette_features")}   |   '
+                  f'Davies-Bouldin = {value("davies_bouldin_features")}\n'
+                  f'Embedding space: Silhouette = {value("silhouette_embedding")}   |   '
+                  f'Davies-Bouldin = {value("davies_bouldin_embedding")}\n'
+                  'Silhouette: higher is better. Davies-Bouldin: lower is better.')
+        fig.text(.5, .925, scores, ha='center', va='top', fontsize=10,
+                 bbox=dict(boxstyle='round,pad=.5', facecolor='#eef4f8', edgecolor='#a9b8c3'))
     axis.set_xlabel('Representation axis 1')
     axis.set_ylabel('Representation axis 2')
-    fig.tight_layout()
+    fig.tight_layout(rect=(0, 0, 1, .80) if quality is not None else (0, 0, 1, .95))
     _save(fig, path, dpi=150)
 
 

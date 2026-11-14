@@ -167,7 +167,7 @@ class StudySession:
                                             clusters=fits[current], tickers=sub.ticker.to_numpy(dtype=str),
                                             features=np.array(columns))
                         plots.cluster_map(result, z, fits[current], date_folder / 'cluster_map.png',
-                                          f'{date}: {name}\n{plots.score_line(quality)}')
+                                          f'{date}: {name}', quality=quality)
                         plots.feature_profile(result, x, self.feature_set, date_folder / 'feature_profile.png',
                                               f'{date}: {name}').to_csv(date_folder / 'median_deviations.csv')
                         plots.dendrogram(linkage_matrix(z, spec['hierarchical']), sub, date_folder / 'dendrogram.png',
