@@ -345,7 +345,7 @@ def move_panels(move, detail, feature_set, colours, path, model, quality=None):
     detail = detail.set_index('feature').loc[order]
     y = np.arange(len(order))
     source, destination = colours.get(move.from_cluster, GREY), colours.get(move.to_cluster, GREY)
-    fig, (left, right) = plt.subplots(1, 2, figsize=(15, 1.5 + .55 * len(order)), sharey=True,
+    fig, (left, right) = plt.subplots(1, 2, figsize=(17, 2.5 + .55 * len(order)), sharey=True,
                                       gridspec_kw={'width_ratios': [3, 2]})
     left.scatter(detail.source_median_before, y + .18, marker='s', s=70, color=source, edgecolor='black',
                  label=f'Cluster {move.from_cluster} median, {move.before}')
@@ -364,7 +364,7 @@ def move_panels(move, detail, feature_set, colours, path, model, quality=None):
     left.set_xlabel('Scaled value (June 2025 MinMax units)')
     left.set_title('What changed, against the old and new cluster', fontsize=10)
     left.grid(axis='x', alpha=.2)
-    left.legend(fontsize=7, loc='upper center', bbox_to_anchor=(.5, -.09), ncol=3, frameon=False)
+    left.legend(fontsize=7, loc='upper center', bbox_to_anchor=(.5, -.22), ncol=2, frameon=False)
     height = .36
     right.barh(y + height / 2, detail.shap_destination_after, height, color=destination,
                label=f'toward cluster {move.to_cluster}, {move.after}')
@@ -376,7 +376,7 @@ def move_panels(move, detail, feature_set, colours, path, model, quality=None):
                     + (f'out-of-fold fidelity {oof:.2f} at {move.after})' if oof == oof and oof is not None
                        else f'fidelity not estimable at {move.after})'), fontsize=10)
     right.set_xlabel('SHAP contribution (positive pushes toward that cluster)')
-    right.legend(fontsize=7, loc='upper center', bbox_to_anchor=(.5, -.09), ncol=2, frameon=False)
+    right.legend(fontsize=7, loc='upper center', bbox_to_anchor=(.5, -.22), ncol=1, frameon=False)
 
     def share(value):
         return 'n/a' if value is None or value != value else f'{value:.0%}'
@@ -387,7 +387,8 @@ def move_panels(move, detail, feature_set, colours, path, model, quality=None):
                  + (f'; caveat: {move.data_caveat}' if move.data_caveat else '')
                  + (''.join('\n' + f'{date}: {score_line(quality[date])}' for date in [move.before, move.after])
                     if quality else ''), fontsize=11)
-    _tight_below_title(fig, lines=4 if quality else 2)
+    # Keep the multi-line title and legends clear of axes and labels.
+    fig.subplots_adjust(left=.12, right=.985, bottom=.25, top=.72, wspace=.05)
     _save(fig, path)
 
 
