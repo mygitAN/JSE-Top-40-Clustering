@@ -1,0 +1,25 @@
+study_model,decision_date,cluster,n,members,defining_features,shap_top_features,surrogate_oof_accuracy
+baseline,2025-06-30,0,8,"ABG, GRT, INL, INP, NED, NRP, OMU, VAL",high Dividend yield (+0.58); high Earnings yield (+0.11); low Log market cap (-0.11),"Dividend yield, Log turnover, Log market cap",0.6829268292682927
+baseline,2025-06-30,1,7,"ANG, GFI, HAR, IMP, MTN, NPH, SSW",high Volatility (+0.57); high 1Y return (+0.42); low Dividend yield (-0.15),"Volatility, 1Y return, Log revenue / cap",0.6829268292682927
+baseline,2025-06-30,2,4,"AGL, BID, SHP, SOL",high Log revenue / cap (+0.23); low 1Y return (-0.13); low Earnings yield (-0.10),"Log revenue / cap, Log market cap, Dividend yield",0.6829268292682927
+baseline,2025-06-30,3,5,"APN, BVT, MNP, MRP, WHL",low 1Y return (-0.23); low Log market cap (-0.22); high Log revenue / cap (+0.18),"1Y return, Log revenue / cap, Dividend yield",0.6829268292682927
+baseline,2025-06-30,4,6,"CLS, DSY, OUT, PPH, REM, RNI",high 1Y return (+0.20); low Beta (-0.12); low Dividend yield (-0.11),"Log market cap, Dividend yield, 1Y return",0.6829268292682927
+baseline,2025-06-30,5,3,"CPI, NPN, PRX",high Log market cap (+0.43); high 1Y return (+0.33); low Log revenue / cap (-0.33),"Log revenue / cap, Log market cap, 1Y return",0.6829268292682927
+baseline,2025-06-30,6,4,"FSR, SBK, SLM, VOD",high Dividend yield (+0.30); high Log market cap (+0.18); low Log turnover (-0.08),"Dividend yield, Log market cap, Earnings yield",0.6829268292682927
+baseline,2025-06-30,7,4,"ANH, BHG, BTI, CFR",high Log market cap (+0.63); low Log turnover (-0.61); low Beta (-0.26),"Log turnover, Log market cap, Dividend yield",0.6829268292682927
+baseline,2025-12-31,0,6,"GRT, INL, INP, NED, NRP, OMU",high Dividend yield (+0.47); low Log market cap (-0.21); low 1Y return (-0.14),"Dividend yield, Earnings yield, Log market cap",0.5121951219512195
+baseline,2025-12-31,1,7,"ANG, GFI, HAR, IMP, NPH, SSW, VAL",high 1Y return (+1.45); high Volatility (+0.62); high Beta (+0.49),"1Y return, Log turnover, Volatility",0.5121951219512195
+baseline,2025-12-31,2,7,"BID, BVT, CLS, PPH, SHP, SOL, WHL",high Log revenue / cap (+0.27); low 1Y return (-0.23); low Log market cap (-0.18),"Log revenue / cap, Volatility, Log market cap",0.5121951219512195
+baseline,2025-12-31,3,2,"MNP, MRP",low 1Y return (-0.43); high Dividend yield (+0.34); low Log market cap (-0.23),"1Y return, Dividend yield, Earnings yield",0.5121951219512195
+baseline,2025-12-31,4,4,"DSY, OUT, REM, RNI",low Log market cap (-0.11); low Beta (-0.09); low Dividend yield (-0.09),"Log turnover, Log market cap, Dividend yield",0.5121951219512195
+baseline,2025-12-31,5,5,"AGL, CPI, GLN, MTN, NPN",high Log market cap (+0.34); low Dividend yield (-0.14); high Volatility (+0.12),"Earnings yield, Log market cap, Dividend yield",0.5121951219512195
+baseline,2025-12-31,6,5,"ABG, FSR, SBK, SLM, VOD",high Dividend yield (+0.24); high Log market cap (+0.11); low Volatility (-0.09),"Dividend yield, Log market cap, Earnings yield",0.5121951219512195
+baseline,2025-12-31,7,5,"ANH, BHG, BTI, CFR, PRX",low Log turnover (-0.62); high Log market cap (+0.59); low Beta (-0.15),"Log market cap, Log revenue / cap, Earnings yield",0.5121951219512195
+baseline,2026-06-30,0,7,"ABG, GRT, INL, INP, NED, NRP, OMU",high Dividend yield (+0.36); low Log market cap (-0.15); high Earnings yield (+0.08),"Dividend yield, Log market cap, Log turnover",0.7073170731707317
+baseline,2026-06-30,1,8,"ANG, GFI, HAR, IMP, NPH, PAN, SSW, VAL",high Volatility (+0.78); high Beta (+0.73); high Log turnover (+0.15),"Beta, 1Y return, Volatility",0.7073170731707317
+baseline,2026-06-30,2,8,"BID, BVT, CLS, MRP, PPH, RNI, SHP, WHL",high Log revenue / cap (+0.24); low 1Y return (-0.18); low Log market cap (-0.15),"1Y return, Log revenue / cap, Log market cap",0.7073170731707317
+baseline,2026-06-30,4,3,"CPI, DSY, REM",low Dividend yield (-0.24); high 1Y return (+0.11); low Volatility (-0.08),"Volatility, 1Y return, Earnings yield",0.7073170731707317
+baseline,2026-06-30,5,4,"AGL, GLN, MTN, SOL",high 1Y return (+0.41); high Log market cap (+0.32); low Dividend yield (-0.28),"1Y return, Dividend yield, Volatility",0.7073170731707317
+baseline,2026-06-30,6,2,"FSR, SBK",high Log market cap (+0.29); high 1Y return (+0.19); high Dividend yield (+0.16),"Dividend yield, Log market cap, Beta",0.7073170731707317
+baseline,2026-06-30,7,6,"ANH, BHG, BTI, CFR, NPN, PRX",high Log market cap (+0.62); low Log turnover (-0.57); low Dividend yield (-0.25),"Log market cap, 1Y return, Log revenue / cap",0.7073170731707317
+baseline,2026-06-30,8,3,"OUT, SLM, VOD",low Log turnover (-0.12); high Dividend yield (+0.11); low 1Y return (-0.09),"Log turnover, Dividend yield, 1Y return",0.7073170731707317

@@ -1,6 +1,6 @@
 # Three-cross-section study
 
-Run `20261114T133014-31b623e92ad5`. Feature set **invariant8** (pilot-informed candidate): No feature changes under a share subdivision: five scale-free measures, log market cap, log revenue-to-cap and log share turnover.
+Run `20261114T135303-1af915a99076`. Feature set **invariant8** (pilot-informed candidate): No feature changes under a share subdivision: five scale-free measures, log market cap, log revenue-to-cap and log share turnover.
 
 123 instrument-date rows over 3 dates; scaling fitted on 2025-06-30 only; k=8; seeds 42-46. Each date is clustered independently. These are overlapping cross-sections of mostly the same firms, not independent samples, and nothing here is a return prediction.
 
