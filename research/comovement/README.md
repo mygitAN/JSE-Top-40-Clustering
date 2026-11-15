@@ -1,8 +1,17 @@
 # Forward co-movement validation
 
 Do equities in the same cluster move together more than equities in the same
-sector over the following six months? Kept separate from the paper until the
-findings have been assessed.
+sector over the following six months? This is the **primary analysis** reported
+in Section 4.7 of the paper.
+
+`validation/forward_comovement/` is a separately written **sensitivity
+analysis** of the primary comparison. It weights each company equally instead
+of each pair, uses dividend-adjusted closes, and adds matched cross-cluster
+controls. Its sector contrasts, -0.117 (June 2025) and -0.083 (December
+2025), estimate a differently weighted quantity from the pair-averaged -0.129
+and -0.069 here, so the two sets of estimates should not be mixed. It confirms
+that the direction of the primary result does not depend on weighting; it is
+not a test of H2.
 
 ```powershell
 .venv/Scripts/python.exe validation/audit_beta.py            # downloads and caches daily prices
@@ -14,7 +23,7 @@ Outputs are in `output/`.
 
 ## Hypotheses
 
-- **H1, specified before any forward returns were examined:** cluster peers
+- **H1, the primary hypothesis:** cluster peers
   show stronger forward co-movement than sector peers, delta_rho > 0.
   **Result: rejected at both dates** (delta_rho < 0, confidence intervals
   excluding zero).
@@ -24,9 +33,10 @@ Outputs are in `output/`.
   was formulated after observing the H1 result, its retrospective support is
   exploratory.
 
-Both hypotheses, the metrics and the procedures below are now fixed. The
-prospective June 2026 test (below) is their first test with everything
-specified in advance.
+Both hypotheses, the metrics and the procedures below are now fixed for a
+held-out June 2026 evaluation. The protocol was fixed in November 2026, after
+the July--December window began. It is therefore not a fully prospective
+preregistration of that entire window.
 
 ## Design
 
@@ -77,7 +87,7 @@ specified in advance.
    2025 (cluster effect beyond sector 0.089 vs 0.038 raw; delta_rho -0.045 vs
    -0.129).
 
-## Implications for the paper (to discuss before any change)
+## Implications for the paper (now incorporated in Sections 3.9 and 4.7)
 
 - The supported investment claim is that clusters refine sectors into more
   tightly co-moving sub-groups, not that they replace sectors.
@@ -87,11 +97,13 @@ specified in advance.
 - The UMAP justification should acknowledge that the economic test does not
   favour UMAP over t-SNE.
 
-## Prospective test (reserved)
+## Held-out evaluation (reserved)
 
-The June 2026 clusters have not been tested, and no prices for their forward
-window have been downloaded. The window, 1 July to 31 December 2026, closes
-after this protocol was frozen. On or after 5 January 2027, run
+The June 2026 clusters have not been evaluated on the full forward window.
+The existing beta cache may contain the first few July observations, but those
+are not used for forward-peer evaluation here. The full window, 1 July to
+31 December 2026, is incomplete when this November protocol is fixed.
+On or after 5 January 2027, run
 
 ```powershell
 .venv/Scripts/python.exe research/comovement/forward_comovement.py --prospective
@@ -102,3 +114,8 @@ into its own cache, tests H1 and H2 with the same metrics, seeds and
 permutation counts, and writes to `output_prospective/`. The option refuses to
 run before 5 January 2027. Report the result whatever it shows; do not change
 the model, metrics or hypotheses after seeing it.
+
+The `--prospective` flag is retained as the legacy command name. It denotes
+the reserved held-out evaluation; it does not make the full window
+prospectively preregistered. The analytical script and frozen results are
+unchanged by this terminology clarification.
