@@ -1,0 +1,124 @@
+ticker,cluster,sector_label,cluster_size,other_member_majority,sector_divergence,sector_status,decision_date,aligned_cluster
+ABG,1,Financials,8,Financials,False,compared,2025-06-30,1
+AGL,2,Basic Materials,9,Consumer Services,True,compared,2025-06-30,2
+ANG,0,Basic Materials,7,Basic Materials; Financials,,tied majority,2025-06-30,0
+ANH,4,Consumer Goods,4,Basic Materials; Consumer Goods; Technology,,tied majority,2025-06-30,4
+APN,2,Health Care,9,Consumer Services,True,compared,2025-06-30,2
+BHG,4,Basic Materials,4,Consumer Goods,True,compared,2025-06-30,4
+BID,2,Consumer Services,9,Basic Materials; Consumer Services,,tied majority,2025-06-30,2
+BTI,5,Consumer Goods,5,Financials,True,compared,2025-06-30,5
+BVT,2,Industrials,9,Consumer Services,True,compared,2025-06-30,2
+CFR,4,Consumer Goods,4,Basic Materials; Consumer Goods; Technology,,tied majority,2025-06-30,4
+CLS,6,Consumer Services,3,Financials,True,compared,2025-06-30,6
+CPI,7,Financials,2,Technology,True,compared,2025-06-30,7
+DSY,0,Financials,7,Basic Materials,True,compared,2025-06-30,0
+FSR,5,Financials,5,Financials,False,compared,2025-06-30,5
+GFI,0,Basic Materials,7,Basic Materials; Financials,,tied majority,2025-06-30,0
+GRT,1,Financials,8,Financials,False,compared,2025-06-30,1
+HAR,0,Basic Materials,7,Basic Materials; Financials,,tied majority,2025-06-30,0
+IMP,3,Basic Materials,3,Basic Materials,False,compared,2025-06-30,3
+INL,1,Financials,8,Financials,False,compared,2025-06-30,1
+INP,1,Financials,8,Financials,False,compared,2025-06-30,1
+MNP,2,Basic Materials,9,Consumer Services,True,compared,2025-06-30,2
+MRP,2,Consumer Services,9,Basic Materials; Consumer Services,,tied majority,2025-06-30,2
+MTN,0,Telecommunications,7,Basic Materials,True,compared,2025-06-30,0
+NED,1,Financials,8,Financials,False,compared,2025-06-30,1
+NPH,3,Basic Materials,3,Basic Materials,False,compared,2025-06-30,3
+NPN,7,Technology,2,Financials,True,compared,2025-06-30,7
+NRP,1,Financials,8,Financials,False,compared,2025-06-30,1
+OMU,1,Financials,8,Financials,False,compared,2025-06-30,1
+OUT,0,Financials,7,Basic Materials,True,compared,2025-06-30,0
+PPH,0,Consumer Services,7,Basic Materials,True,compared,2025-06-30,0
+PRX,4,Technology,4,Consumer Goods,True,compared,2025-06-30,4
+REM,6,Financials,3,Consumer Services; Financials,,tied majority,2025-06-30,6
+RNI,6,Financials,3,Consumer Services; Financials,,tied majority,2025-06-30,6
+SBK,5,Financials,5,Financials,False,compared,2025-06-30,5
+SHP,2,Consumer Services,9,Basic Materials; Consumer Services,,tied majority,2025-06-30,2
+SLM,5,Financials,5,Financials,False,compared,2025-06-30,5
+SOL,2,Basic Materials,9,Consumer Services,True,compared,2025-06-30,2
+SSW,3,Basic Materials,3,Basic Materials,False,compared,2025-06-30,3
+VAL,1,Basic Materials,8,Financials,True,compared,2025-06-30,1
+VOD,5,Telecommunications,5,Financials,True,compared,2025-06-30,5
+WHL,2,Consumer Services,9,Basic Materials; Consumer Services,,tied majority,2025-06-30,2
+ABG,0,Financials,6,Financials,False,compared,2025-12-31,5
+AGL,2,Basic Materials,8,Financials,True,compared,2025-12-31,7
+ANG,1,Basic Materials,7,Basic Materials,False,compared,2025-12-31,3
+ANH,3,Consumer Goods,5,Consumer Goods,False,compared,2025-12-31,4
+BHG,3,Basic Materials,5,Consumer Goods,True,compared,2025-12-31,4
+BID,5,Consumer Services,8,Consumer Services,False,compared,2025-12-31,2
+BTI,3,Consumer Goods,5,Consumer Goods,False,compared,2025-12-31,4
+BVT,5,Industrials,8,Consumer Services,True,compared,2025-12-31,2
+CFR,3,Consumer Goods,5,Consumer Goods,False,compared,2025-12-31,4
+CLS,5,Consumer Services,8,Consumer Services,False,compared,2025-12-31,2
+CPI,2,Financials,8,Financials,False,compared,2025-12-31,7
+DSY,2,Financials,8,Financials,False,compared,2025-12-31,7
+FSR,0,Financials,6,Financials,False,compared,2025-12-31,5
+GFI,1,Basic Materials,7,Basic Materials,False,compared,2025-12-31,3
+GLN,2,Basic Materials,8,Financials,True,compared,2025-12-31,7
+GRT,4,Financials,5,Financials,False,compared,2025-12-31,1
+HAR,1,Basic Materials,7,Basic Materials,False,compared,2025-12-31,3
+IMP,1,Basic Materials,7,Basic Materials,False,compared,2025-12-31,3
+INL,4,Financials,5,Financials,False,compared,2025-12-31,1
+INP,4,Financials,5,Financials,False,compared,2025-12-31,1
+MNP,7,Basic Materials,1,,,singleton,2025-12-31,8
+MRP,5,Consumer Services,8,Consumer Services,False,compared,2025-12-31,2
+MTN,2,Telecommunications,8,Financials,True,compared,2025-12-31,7
+NED,4,Financials,5,Financials,False,compared,2025-12-31,1
+NPH,1,Basic Materials,7,Basic Materials,False,compared,2025-12-31,3
+NPN,2,Technology,8,Financials,True,compared,2025-12-31,7
+NRP,4,Financials,5,Financials,False,compared,2025-12-31,1
+OMU,0,Financials,6,Financials,False,compared,2025-12-31,5
+OUT,6,Financials,1,,,singleton,2025-12-31,0
+PPH,5,Consumer Services,8,Consumer Services,False,compared,2025-12-31,2
+PRX,3,Technology,5,Consumer Goods,True,compared,2025-12-31,4
+REM,2,Financials,8,Financials,False,compared,2025-12-31,7
+RNI,2,Financials,8,Financials,False,compared,2025-12-31,7
+SBK,0,Financials,6,Financials,False,compared,2025-12-31,5
+SHP,5,Consumer Services,8,Consumer Services,False,compared,2025-12-31,2
+SLM,0,Financials,6,Financials,False,compared,2025-12-31,5
+SOL,5,Basic Materials,8,Consumer Services,True,compared,2025-12-31,2
+SSW,1,Basic Materials,7,Basic Materials,False,compared,2025-12-31,3
+VAL,1,Basic Materials,7,Basic Materials,False,compared,2025-12-31,3
+VOD,0,Telecommunications,6,Financials,True,compared,2025-12-31,5
+WHL,5,Consumer Services,8,Consumer Services,False,compared,2025-12-31,2
+ABG,3,Financials,7,Financials,False,compared,2026-06-30,1
+AGL,6,Basic Materials,4,Basic Materials,False,compared,2026-06-30,7
+ANG,0,Basic Materials,8,Basic Materials,False,compared,2026-06-30,3
+ANH,5,Consumer Goods,4,Consumer Goods,False,compared,2026-06-30,4
+BHG,5,Basic Materials,4,Consumer Goods,True,compared,2026-06-30,4
+BID,1,Consumer Services,8,Consumer Services,False,compared,2026-06-30,2
+BTI,5,Consumer Goods,4,Consumer Goods,False,compared,2026-06-30,4
+BVT,1,Industrials,8,Consumer Services,True,compared,2026-06-30,2
+CFR,5,Consumer Goods,4,Consumer Goods,False,compared,2026-06-30,4
+CLS,1,Consumer Services,8,Consumer Services,False,compared,2026-06-30,2
+CPI,2,Financials,5,Financials,False,compared,2026-06-30,5
+DSY,2,Financials,5,Financials,False,compared,2026-06-30,5
+FSR,2,Financials,5,Financials,False,compared,2026-06-30,5
+GFI,0,Basic Materials,8,Basic Materials,False,compared,2026-06-30,3
+GLN,6,Basic Materials,4,Basic Materials,False,compared,2026-06-30,7
+GRT,3,Financials,7,Financials,False,compared,2026-06-30,1
+HAR,0,Basic Materials,8,Basic Materials,False,compared,2026-06-30,3
+IMP,0,Basic Materials,8,Basic Materials,False,compared,2026-06-30,3
+INL,3,Financials,7,Financials,False,compared,2026-06-30,1
+INP,3,Financials,7,Financials,False,compared,2026-06-30,1
+MRP,1,Consumer Services,8,Consumer Services,False,compared,2026-06-30,2
+MTN,6,Telecommunications,4,Basic Materials,True,compared,2026-06-30,7
+NED,3,Financials,7,Financials,False,compared,2026-06-30,1
+NPH,0,Basic Materials,8,Basic Materials,False,compared,2026-06-30,3
+NPN,4,Technology,2,Technology,False,compared,2026-06-30,9
+NRP,3,Financials,7,Financials,False,compared,2026-06-30,1
+OMU,3,Financials,7,Financials,False,compared,2026-06-30,1
+OUT,7,Financials,3,Financials; Telecommunications,,tied majority,2026-06-30,0
+PAN,0,Basic Materials,8,Basic Materials,False,compared,2026-06-30,3
+PPH,1,Consumer Services,8,Consumer Services,False,compared,2026-06-30,2
+PRX,4,Technology,2,Technology,False,compared,2026-06-30,9
+REM,2,Financials,5,Financials,False,compared,2026-06-30,5
+RNI,1,Financials,8,Consumer Services,True,compared,2026-06-30,2
+SBK,2,Financials,5,Financials,False,compared,2026-06-30,5
+SHP,1,Consumer Services,8,Consumer Services,False,compared,2026-06-30,2
+SLM,7,Financials,3,Financials; Telecommunications,,tied majority,2026-06-30,0
+SOL,6,Basic Materials,4,Basic Materials,False,compared,2026-06-30,7
+SSW,0,Basic Materials,8,Basic Materials,False,compared,2026-06-30,3
+VAL,0,Basic Materials,8,Basic Materials,False,compared,2026-06-30,3
+VOD,7,Telecommunications,3,Financials,True,compared,2026-06-30,0
+WHL,1,Consumer Services,8,Consumer Services,False,compared,2026-06-30,2

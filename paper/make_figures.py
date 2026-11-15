@@ -88,6 +88,48 @@ def cluster_maps(run, dates, histories, quality, colours):
     plt.close(fig)
 
 
+def aligned_cluster_map(run, date, histories, quality, colours):
+    """One date's map in the layout of the study's cluster_map.png, numbered with aligned ids.
+
+    Same representation and partition as the original Python map; only the
+    cluster numbers and colours change, to the Jaccard-aligned ids used in
+    the rest of the paper.
+    """
+    aligned = histories.set_index('ticker')[date]
+    frame = pd.read_csv(run / f'models/{MODEL}/{date}/assignments.csv').set_index('ticker')
+    with np.load(run / f'models/{MODEL}/{date}/arrays.npz', allow_pickle=False) as saved:
+        z, tickers = saved['embedding'], saved['tickers'].astype(str)
+    ids = aligned.loc[tickers].astype(int).to_numpy()
+    fig, (axis, panel) = plt.subplots(1, 2, figsize=(13, 7), gridspec_kw={'width_ratios': [2, 1]})
+    axis.scatter(z[:, 0], z[:, 1], c=[colours[i] for i in ids], s=55, edgecolor='white', linewidth=.5)
+    panel.axis('off')
+    groups = sorted(set(ids))
+    for number, group in enumerate(groups):
+        members = tickers[ids == group]
+        # Label just above the cluster, so it never covers the points.
+        points = z[ids == group]
+        axis.annotate(str(group), (points[:, 0].mean(), points[:, 1].max()), xytext=(0, 7),
+                      textcoords='offset points', ha='center', va='bottom', fontsize=13, fontweight='bold',
+                      color=plots._readable(colours[group]))
+        labels = [t + ('*' if frame.loc[t, 'fundamentals_imputed'] or frame.loc[t, 'volume_imputed'] else '')
+                  for t in sorted(members)]
+        position = .98 - number * .9 / len(groups)
+        panel.text(0, position, f'Cluster {group}, n={len(members)}', fontsize=13, fontweight='bold',
+                   color=plots._readable(colours[group]), va='top')
+        panel.text(0, position - .04, fill(', '.join(labels), width=34), fontsize=12, va='top')
+    panel.text(0, 0, '* imputed input. Cluster numbers are aligned across dates.', fontsize=11)
+    q = quality.loc[date]
+    axis.set_title(f'{date}: UMAP and agglomerative clustering, k=8\n'
+                   f'Feature space: S {q.silhouette_features:.2f}, DB {q.davies_bouldin_features:.2f}   |   '
+                   f'Embedding: S {q.silhouette_embedding:.2f}, DB {q.davies_bouldin_embedding:.2f}', fontsize=14)
+    axis.set_xlabel('UMAP 1', fontsize=13)
+    axis.set_ylabel('UMAP 2', fontsize=13)
+    axis.tick_params(labelsize=11)
+    fig.tight_layout()
+    fig.savefig(OUT / f'cluster_map_{date}.pdf')
+    plt.close(fig)
+
+
 def cluster_profiles(dates, feature_set, quality, colours):
     """Cluster median minus the date median, in scaled units, at each date."""
     table = pd.read_csv(RESULTS / f'longitudinal/{MODEL}/moves/cluster_profiles.csv')
@@ -206,6 +248,8 @@ def main():
     run, config, dates, histories, quality, feature_set = load()
     colours = plots.cluster_colours(histories, dates)
     cluster_maps(run, dates, histories, quality, colours)
+    for date in dates:
+        aligned_cluster_map(run, date, histories, quality, colours)
     cluster_profiles(dates, feature_set, quality, colours)
     movement_cases(feature_set, colours)
     distance_screen(dates)
