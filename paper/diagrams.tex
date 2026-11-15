@@ -1,7 +1,7 @@
 \input{preamble.tex}
 \begin{document}
 \section*{Three cross-sectional study diagram atlas}
-Native TikZ and PGFPlots sources for the revised manuscript. All numerical figures use the saved clean-run tables; schematic diagrams are identified in their captions.
+Native TikZ and PGFPlots figures for the manuscript. The paired cluster maps and dendrograms show the actual seed-42 coordinates and full average-Manhattan hierarchies, with eight-group cuts verified against the saved study partitions.
 \clearpage
 \begin{figure}[p]
 \centering
@@ -35,8 +35,23 @@ Native TikZ and PGFPlots sources for the revised manuscript. All numerical figur
 \clearpage
 \begin{figure}[p]
 \centering
+\diagram{clusters_tree_2025-06-30}
+\caption{30 June 2025 cluster map and corresponding dendrogram for the representative seed-42 fit. All 41 instruments are included. Ticker labels, colours and member lists identify the eight Jaccard-aligned groups. The dashed line marks the eight-group cut of the average-linkage Manhattan tree fitted to these UMAP coordinates. Map units are local to this date; they do not measure movement between dates.}\end{figure}
+\clearpage
+\begin{figure}[p]
+\centering
+\diagram{clusters_tree_2025-12-31}
+\caption{31 December 2025 cluster map and corresponding dendrogram for the representative seed-42 fit. All 41 instruments are included. Ticker labels, colours and member lists identify the eight Jaccard-aligned groups. The dashed line marks the eight-group cut of the average-linkage Manhattan tree fitted to these UMAP coordinates. Map units are local to this date; they do not measure movement between dates.}\end{figure}
+\clearpage
+\begin{figure}[p]
+\centering
+\diagram{clusters_tree_2026-06-30}
+\caption{30 June 2026 cluster map and corresponding dendrogram for the representative seed-42 fit. All 41 instruments are included. Ticker labels, colours and member lists identify the eight Jaccard-aligned groups. The dashed line marks the eight-group cut of the average-linkage Manhattan tree fitted to these UMAP coordinates. Map units are local to this date; they do not measure movement between dates.}\end{figure}
+\clearpage
+\begin{figure}[p]
+\centering
 \diagram{flows}
-\caption{Native LaTeX rendering of all 39 complete instrument histories: 19 stable and 20 shifted. Bold tickers change aligned label at least once. APN, MNP, GLN and PAN are excluded only from this complete-history view. Labels identify aligned groups, not industries; vertical positions are layout.}\end{figure}
+\caption{Cluster membership across the three decision dates for the 39 continuously observed instruments. Bold tickers change aligned group at least once. APN, MNP, GLN and PAN are excluded only from this complete-history view. Colours and labels identify aligned groups, not sectors; vertical positions are layout.}\end{figure}
 \clearpage
 \begin{figure}[p]
 \centering
@@ -66,10 +81,10 @@ Native TikZ and PGFPlots sources for the revised manuscript. All numerical figur
 \begin{figure}[p]
 \centering
 \diagram{cluster_count}
-\caption{Cluster-count sensitivity redrawn from the archived numerical table for the same clean run. Blue evaluates financial features and red evaluates the embedding. Eight groups remain the historical specification, not a validated natural count.}\end{figure}
+\caption{Cluster-count sensitivity from two to twelve groups. Blue lines show financial-feature scores and red lines embedding scores. The numerical results come from the same archived clean run; eight groups remain the reference specification.}\end{figure}
 \clearpage
 \begin{figure}[p]
 \centering
 \diagram{evidence}
-\caption{Interpretation of separate evidence streams. Group movement, feature profiles and distance flags can motivate follow-up, but are not combined into an automatically confirmed anomaly. Stochastic, measurement and surrogate limitations apply to the interpretation.}\end{figure}
+\caption{Interpretation of the screening results. Peer-group changes, financial profiles and multivariate distance provide separate reasons for analyst follow-up. External validation is required before identifying a confirmed economic anomaly.}\end{figure}
 \end{document}

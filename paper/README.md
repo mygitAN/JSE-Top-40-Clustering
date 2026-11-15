@@ -17,10 +17,9 @@ lives in those section files.
 | `sections/06_discussion.tex` | Discussion |
 | `sections/06_limitations_and_future_work.tex` | Limitations and future work |
 | `sections/07_conclusion.tex` | Conclusion |
-| `sections/appendix_reproducibility.tex` | Provenance and reproducibility |
 | `references.tex` | References and citation keys |
 | `preamble.tex` | Packages, typography and shared diagram styles |
-| `figures/*.tex` | Fourteen editable TikZ and PGFPlots diagrams |
+| `figures/*.tex` | Seventeen editable TikZ and PGFPlots diagrams |
 | `diagrams.tex` | Separate atlas containing all diagrams |
 
 ## Build and preview
@@ -59,3 +58,22 @@ numbers and provenance together. `figure_sources.json` records the current sourc
 The existing `make_figures.py` and vector PDFs in `figures/` are retained as a
 separate figure-generation workflow. The current LaTeX manuscript inputs the
 native `.tex` diagrams.
+
+
+## Cluster maps beside dendrograms
+
+The three `figures/clusters_tree_YYYY-MM-DD.tex` files show each date's UMAP
+clusters beside the actual hierarchical tree. Each contains all 41 instrument
+labels, consistent aligned colours, member lists and the eight-group cut.
+Coordinate and full-linkage CSVs are in `data/`. `cluster_tree_sources.json`
+records the checked source arrays, cut heights and memberships.
+
+To regenerate these sources from the archived study run in this repository:
+
+```powershell
+.venv/Scripts/python.exe paper/make_cluster_tree_figures.py
+.\paper\build.ps1 -Target Both
+```
+
+The ZIP includes the generated TikZ sources and CSVs, so normal LaTeX compilation
+does not need Python, the study archive or an additional image renderer.
