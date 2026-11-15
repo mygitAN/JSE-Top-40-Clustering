@@ -1,6 +1,6 @@
 # Three-cross-section study
 
-Run `20261114T135303-1af915a99076`. Feature set **invariant8** (pilot-informed candidate): No feature changes under a share subdivision: five scale-free measures, log market cap, log revenue-to-cap and log share turnover.
+Run `20261115T062631-0c09819ce3c0`. Feature set **invariant8** (pilot-informed candidate): No feature changes under a share subdivision: five scale-free measures, log market cap, log revenue-to-cap and log share turnover.
 
 123 instrument-date rows over 3 dates; scaling fitted on 2025-06-30 only; k=8; seeds 42-46. Each date is clustered independently. These are overlapping cross-sections of mostly the same firms, not independent samples, and nothing here is a return prediction.
 
@@ -27,27 +27,52 @@ Instruments observed at all dates, by whether their aligned cluster ever changed
 
 | feature_set | recipe | stable | shifted | membership gap |
 | --- | --- | --- | --- | --- |
-| original10 | tsne_hierarchical | 21 | 18 | 4 |
+| original10 | umap | 20 | 19 | 4 |
 | original10 | ward_features | 26 | 13 | 4 |
-| logsize10 | tsne_hierarchical | 20 | 19 | 4 |
+| logsize10 | umap | 16 | 23 | 4 |
 | logsize10 | ward_features | 23 | 16 | 4 |
-| invariant8 | tsne_hierarchical | 22 | 17 | 4 |
+| invariant8 | umap | 19 | 20 | 4 |
 | invariant8 | ward_features | 20 | 19 | 4 |
-| market5 | tsne_hierarchical | 17 | 22 | 4 |
+| market5 | umap | 14 | 25 | 4 |
 | market5 | ward_features | 6 | 33 | 4 |
 
 Silhouette and Davies-Bouldin are computed in each feature set's own space and cannot be compared across feature sets. See `feature_audit/quality.csv`, `cross_set_agreement.csv` and `share_basis.csv`.
 
-## Primary models (`models/`)
+## Model specification (`model_specification.csv`)
+
+| step | setting | value | note |
+| --- | --- | --- | --- |
+| Model | description | UMAP to two dimensions, then agglomerative (hierarchical) clustering with average linkage and Manhattan distance into k=8 clusters |  |
+| Inputs | feature set | invariant8 | pilot-informed candidate |
+| Inputs | features | 1Y return, Beta, Volatility, Dividend yield, Earnings yield, Log market cap, Log revenue / cap, Log turnover |  |
+| Inputs | instruments | 41 per date, 123 rows | all index members retained |
+| Scaling | method | MinMaxScaler(clip=False) | fitted on 2025-06-30 only and applied unchanged to later dates |
+| Dimensionality reduction | algorithm | umap.UMAP (umap-learn 0.5.12) |  |
+| Dimensionality reduction | n_components | 2 |  |
+| Dimensionality reduction | n_neighbors | 3 |  |
+| Dimensionality reduction | min_dist | 0.01 |  |
+| Dimensionality reduction | metric | euclidean |  |
+| Dimensionality reduction | n_jobs | 1 |  |
+| Dimensionality reduction | random_state | 42-46 | 5 seeds; 42 is the representative fit |
+| Clustering | algorithm | sklearn.cluster.AgglomerativeClustering (scikit-learn 1.6.1) | hierarchical, bottom-up; fitted on the 2-D reduced coordinates |
+| Clustering | n_clusters | 8 | reference specification from the original paper |
+| Clustering | linkage | average |  |
+| Clustering | metric | manhattan |  |
+| Fitting | dates | 2025-06-30, 2025-12-31, 2026-06-30 | each date fitted independently with identical settings; nothing re-tuned on later dates |
+| Evaluation | silhouette, Davies-Bouldin | Euclidean, in the 2-D embedding and in the scaled feature space |  |
+| Evaluation | stability | pairwise adjusted Rand index between seeds |  |
+| Evaluation | cluster count sensitivity | 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 |  |
+| Explanation | surrogate | xgboost.XGBClassifier (xgboost 2.1.4) | n_estimators=150, max_depth=2, learning_rate=0.05, subsample=1, colsample_bytree=1, n_jobs=1, objective=multi:softprob, eval_metric=mlogloss |
+| Explanation | SHAP | shap.TreeExplainer (shap 0.49.1) | explains the surrogate, not the clustering |
+| Provenance | how the settings were chosen | n_neighbors=3 and min_dist=0.01 were set by the author in an exploratory June 2025 sweep (archived run fixed-umap-001-01). The earlier 36-combination June 2025 grid (user-umap-grid-01) preferred n_neighbors=3 with min_dist=0.1. Average linkage, Manhattan distance and k=8 follow the original paper. All were chosen after the data had been examined; none is pre-registered. |  |
+
+## Primary model (`models/`)
 
 | study_model | decision_date | smallest_cluster | largest_cluster | singleton_clusters | silhouette_features | davies_bouldin_features | silhouette_embedding | davies_bouldin_embedding | mean_seed_ari | in_sample_accuracy | oof_accuracy |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| baseline | 2025-06-30 | 3 | 8 | 0 | 0.195 | 1.307 | 0.532 | 0.561 | 0.658 | 1.000 | 0.683 |
-| baseline | 2025-12-31 | 2 | 7 | 0 | 0.240 | 1.094 | 0.589 | 0.494 | 0.925 | 1.000 | 0.512 |
-| baseline | 2026-06-30 | 2 | 8 | 0 | 0.255 | 1.016 | 0.656 | 0.390 | 0.894 | 1.000 | 0.707 |
-| umap_sensitivity | 2025-06-30 | 2 | 9 | 0 | 0.151 | 1.153 | 0.685 | 0.385 | 0.846 | 1.000 | 0.439 |
-| umap_sensitivity | 2025-12-31 | 1 | 8 | 2 | 0.124 | 1.049 | 0.638 | 0.268 | 0.892 | 1.000 | n/a |
-| umap_sensitivity | 2026-06-30 | 2 | 8 | 0 | 0.267 | 1.059 | 0.721 | 0.355 | 0.738 | 1.000 | 0.707 |
+| umap | 2025-06-30 | 2 | 9 | 0 | 0.151 | 1.153 | 0.685 | 0.385 | 0.846 | 1.000 | 0.439 |
+| umap | 2025-12-31 | 1 | 8 | 2 | 0.124 | 1.049 | 0.638 | 0.268 | 0.892 | 1.000 | n/a |
+| umap | 2026-06-30 | 2 | 8 | 0 | 0.267 | 1.059 | 0.721 | 0.355 | 0.738 | 1.000 | 0.707 |
 
 Surrogate fidelity is agreement with the cluster labels, not predictive validity. Out-of-fold fidelity is not estimable when a cluster has one member.
 
@@ -55,10 +80,8 @@ Surrogate fidelity is agreement with the cluster labels, not predictive validity
 
 | study_model | before | after | continuing | entries | exits | ari | changed |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| baseline | 2025-06-30 | 2025-12-31 | 40 | 1 | 1 | 0.556 | 9 |
-| baseline | 2025-12-31 | 2026-06-30 | 40 | 1 | 1 | 0.660 | 9 |
-| umap_sensitivity | 2025-06-30 | 2025-12-31 | 40 | 1 | 1 | 0.377 | 15 |
-| umap_sensitivity | 2025-12-31 | 2026-06-30 | 40 | 1 | 1 | 0.590 | 11 |
+| umap | 2025-06-30 | 2025-12-31 | 40 | 1 | 1 | 0.377 | 15 |
+| umap | 2025-12-31 | 2026-06-30 | 40 | 1 | 1 | 0.590 | 11 |
 
 A changed label is not yet evidence of a changed firm: compare `changed` with the seed agreement above, which is the only noise reference this run computes.
 
