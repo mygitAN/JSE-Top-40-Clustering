@@ -1,8 +1,8 @@
-\section{Study population and financial inputs}
+\section{Data and methodology}
 
-\subsection{Three decision dates and effective index membership}
+\subsection{Dataset and index membership}
 
-The unit of analysis is a listed instrument at a decision date. We use 30 June 2025, 31 December 2025 and 30 June 2026 as three distinct cross-sections. Each contains 41 security lines because Investec Limited (INL) and Investec plc (INP) are separate listed instruments of one dual-listed economic group. Both are retained. Thus 41 instruments correspond to 40 company groups, rather than an accidental inclusion of a forty-first company.
+The dataset contains three cross-sections of FTSE/JSE Top 40 instruments observed or reconstructed for 30 June 2025, 31 December 2025 and 30 June 2026. Each cross-section contains 41 listed instruments representing 40 company groups. The difference arises because Investec Limited (INL) and Investec plc (INP) are separate listed securities of one dual-listed company. Both instruments were retained because the analysis compares listed security profiles. Table~\ref{tab:1} summarises the population at each decision date.
 
 
 \begin{table}[htbp]
@@ -20,7 +20,7 @@ June 2026 & 41 & 40 & PAN admitted; MNP removed \\
 \end{table}
 
 
-The June 2025 review introduced Northam Platinum and removed Glencore before the first observation. The September review reversed Glencore's absence and removed Aspen. There was no recorded Top 40 change in December 2025. Pan African Resources replaced Mondi in March 2026, with no recorded change in June 2026. These events are stored with their effective dates and evidence in \nolinkurl{index_changes.csv}. The validator checks both the first-date review and subsequent transitions rather than hard-coding a list of expected ticker changes.
+Index membership was reconciled against the effective-dated quarterly reviews. Northam Platinum replaced Glencore before the June 2025 observation. Glencore returned in September 2025, replacing Aspen, while the December review recorded no Top 40 change. Pan African Resources replaced Mondi in March 2026, and no change was recorded in June 2026. These changes are important because an instrument entering or leaving the index should not be treated as an ordinary change in financial peer group. Figure~\ref{fig:population} shows the date-specific populations and the instruments available for comparison.
 
 
 
@@ -31,7 +31,7 @@ The June 2025 review introduced Northam Platinum and removed Glencore before the
 \end{figure}
 
 
-The annual market windows overlap as shown in Figure~\ref{fig:windows}; pooling their rows does not create independent observations.
+The market variables use trailing annual windows, as shown in Figure~\ref{fig:windows}. Adjacent windows overlap by six months.
 
 
 \begin{figure}[htbp]
@@ -41,12 +41,12 @@ The annual market windows overlap as shown in Figure~\ref{fig:windows}; pooling 
 \end{figure}
 
 
-Across dates there are 123 rows and 43 distinct tickers. Each adjacent pair shares 40 instruments, while 39 appear at all three dates. Aspen has only the first observation, Mondi the first two, Glencore the last two and Pan African only the last. A complete-history figure therefore contains 39 instruments; this is not the index size. Adjacent trailing annual market windows overlap by six months, many fundamentals recur, and the instruments themselves repeat. Neither rows nor dates are treated as independent replications.
+Across the three dates, the dataset contains 123 instrument-date records and 43 distinct tickers. Forty instruments continue between each adjacent pair, and 39 are present at all three dates. Aspen is observed only in June 2025, Mondi at the first two dates, Glencore at the last two and Pan African Resources only in June 2026. The full three-date membership diagram therefore contains 39 instruments, while the clustering analysis retains all 41 instruments at each date. Because firms recur, annual windows overlap and some issuer accounts are used more than once, the 123 records do not represent 123 independent companies.
 
 
-\subsection{Financial representation and measurement}
+\subsection{Financial feature representation}
 
-The eight-feature representation is a pilot-informed revision intended to reduce the sensitivity of share-count and EPS inputs to share subdivisions and to reduce skew in size measures. It is not the eleven-variable representation in the original SACJ manuscript, nor a direct replication of its 2023-2024 sample. The archived ten-variable representation is an intermediate reference; it also differs from that original experiment.
+The clustering input contains eight financial and market variables, summarised in Table~\ref{tab:2}. Returns, beta, volatility, dividend yield and earnings yield describe performance, risk and valuation. Log market capitalisation, log revenue relative to market capitalisation and log share turnover describe scale and trading activity. This representation was developed after exploratory analysis to reduce skewness and the effect of share subdivisions. It extends the earlier study but uses a different sample and feature definition from the original eleven-variable SACJ analysis. The archived ten-variable specification is retained as a separate reference.
 
 
 \begin{table}[htbp]
@@ -69,18 +69,18 @@ Log share turnover & Base-10 logarithm of corrected average daily JSE volume / l
 \end{table}
 
 
-For a subdivision factor q, price and EPS divide by q and shares and consistently measured share volume multiply by q. Earnings yield, market capitalisation, revenue/capitalisation and turnover are consequently unchanged under a consistent restatement. This algebraic property motivates the representation; it does not certify historical source consistency. In particular, trailing volume that mixes pre- and post-subdivision units requires a correction before taking the ratio.
+The treatment of share subdivisions is particularly important for comparisons over time. For a subdivision factor $q$, price and EPS are divided by $q$, while shares and consistently measured share volume are multiplied by $q$. Earnings yield, market capitalisation, revenue relative to market capitalisation and share turnover are unchanged when these quantities are measured on a consistent basis. However, a trailing-volume series can contain both old and new share units. Such a series must be corrected before turnover is calculated.
 
 
 \subsection{Corrections and missing observations}
 
-Original source values remain unchanged in the input CSV and provenance workbook. The feature pipeline applies documented corrections from separate reference tables. Naspers began trading on the five-for-one share basis on 1 October 2025; its register date was 6 October. Its December 2025 average daily volume is restated from 800,935 mixed-basis units to 2,140,029 post-subdivision shares, and the June 2026 figure from 1,502,524 to 1,847,639. These are corrections to the trailing-volume units, not additional trading observations.
+The original source values were preserved, and corrections were applied through separate reference tables. Naspers began trading on a five-for-one share basis on 1 October 2025, with the register updated on 6 October. Its trailing average volume contained mixed share units. The December 2025 value was corrected from 800,935 to 2,140,029 post-subdivision shares, and the June 2026 value from 1,502,524 to 1,847,639. These corrections place volume on the same share basis as the corresponding shares outstanding.
 
 
-Both Investec rows originally carry a combined share count. Issuer disclosures from June 2024 and June 2026 allocate that reconstructed total between the two lines. December 2025 uses the midpoint of the disclosed line fractions. Each line has its own market capitalisation and turnover, while revenue relative to market value uses combined issuer revenue and combined market value because each line represents a claim on the group. The December interpolation and the reconstructed combined total remain limitations.
+The Investec observations required a separate adjustment because both rows originally carried the combined share count. Issuer disclosures from June 2024 and June 2026 were used to allocate the reconstructed group total between the two listed lines. The December 2025 allocation uses the midpoint of the disclosed fractions. Each line then has its own market capitalisation and turnover. Revenue relative to market capitalisation uses group totals because each line represents a claim on the dual-listed group. The reconstructed total and the interpolated December allocation remain sources of measurement uncertainty.
 
 
-Reinet has no usable raw revenue or EPS at any date, and Anglo American lacks usable volume at the first two dates. Missing model values use June 2025 medians. A derived feature depending on an imputed source is imputed using the June 2025 median of that derived feature, rather than treating the imputed raw value as observed. No instrument is removed because of these missing inputs. The earnings-yield clipping limits are likewise fitted on June 2025 and then held fixed.
+Missing observations were handled without removing instruments from the sample. Reinet has no usable raw revenue or EPS at any date, while Anglo American lacks usable volume at the first two dates. Model values were imputed using June 2025 medians. Where a derived feature depends on an imputed input, its own June 2025 median was used. Earnings yield was clipped at the June 2025 first and ninety-ninth percentiles. These imputation and clipping values were held constant at the later dates.
 
 
-Market measures are rebuilt from retrospective vendor histories. Dated issuer releases support revenue and diluted EPS for 120 of 123 rows, with dated currency conversions, but shares and market capitalisation are reconstructed. Sector is a legacy eight-category directory label. JSE-only volume understates total liquidity for issuers whose principal market is overseas; revenue is also not defined uniformly across sectors. The data are not certified strict point-in-time observations.
+Market measures were reconstructed from vendor daily histories. Dated issuer releases support revenue and diluted EPS for 120 of the 123 records, with dated currency conversions, while historical shares and market capitalisation remain reconstructed. Sector labels come from a legacy eight-category directory classification and were excluded from model fitting and selection. JSE-only volume may understate total trading activity for firms with major overseas listings, and revenue definitions differ across sectors. These data limitations are considered when interpreting the results.
