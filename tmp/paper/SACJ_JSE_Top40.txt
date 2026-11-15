@@ -1,0 +1,646 @@
+PAGE 1
+SACJVol TBC(Num TBC) MONTH OF PUBLICATION 2026
+Research Article
+Interpretable Unsupervised Learning for Pattern
+and Anomaly Detection in JSE Top 40 Equities
+Anonymous Author
+a
+a Author affiliation removed for anonymous review
+ABSTRACT
+This study investigates interpretable unsupervised machine learning for identifying patterns and sector-divergent
+anomalies among Johannesburg Stock Exchange Top 40 equities. Financial and market variables, including returns,
+volatility, trading volume, market capitalisation, earnings per share (EPS) and price-to-earnings (P/E) ratios, were
+transformed into a single-year snapshot dataset spanning 6 February 2023 to 5 February 2024. Principal component
+analysis, uniform manifold approximation and projection, and t-distributed stochastic neighbour embedding
+were combined with K-Means, DBSCAN and hierarchical clustering. Silhouette Score and Davies-Bouldin Index
+were used to evaluate cluster quality, while official JSE sector labels were held back as an external ground-truth
+benchmark. The strongest result was obtained from t-SNE with hierarchical clustering, achieving a Silhouette
+Score of 0.5023 and a Davies-Bouldin Index of 0.5296. A sector-divergent anomaly is defined as a company that
+should, by sector ground truth, group with one peer set but instead clusters with another because of shared
+financial attributes. SHAP-based surrogate interpretation and Hotelling’s T-squared analysis provide feature-level
+explanations and evidence of multivariate outliers.
+Keywords:unsupervised learning; clustering; anomaly detection; dimensionality reduction; interpretable artificial
+intelligence; JSE Top 40; financial data mining
+Categories:•Computing methodologies∼Cluster analysis•Information systems∼Data mining•Applied
+computing∼Economics
+Email:
+Anonymous Authoranonymous@review.invalid(CORRESPONDING)
+Article history:
+Received:
+Accepted:
+Available online:
+1 INTRODUCTION
+Financial markets generate multivariate data that are difficult to interpret using sector labels
+alone. Equity analysts commonly organise companies by sector classification, but firms within
+the same sector can differ in risk, liquidity, valuation, return behaviour and scale. Conversely,
+companies in different sectors may behave similarly because they share economic drivers, investor
+sentiment, balance-sheet structures or exposure to market cycles. These cross-sector relationships
+can be useful for portfolio screening, risk assessment and deeper analyst investigation.
+Anonymous (2026). Interpretable Unsupervised Learning for Pattern and Anomaly Detection in JSE Top 40
+Equities.South African Computer Journal Vol TBC(Num TBC), 1–16. DOI TBC
+Copyright©the author(s); published under a Creative Commons NonCommercial 4.0 License (CC BY-NC 4.0).
+SACJis a publication of the South African Institute of Computer Scientists and Information Technologists. ISSN
+1015-7999 (print) ISSN 2313-7835 (online).
+
+PAGE 2
+Anonymous: Interpretable unsupervised learning for JSE Top 40 anomalies 2
+Much of the machine learning literature in stock-market analysis focuses on supervised pre-
+diction, especially forecasting prices, returns or buy-sell signals. Such tasks are difficult because
+stock prices are noisy, non-stationary and influenced by macroeconomic news, firm announcements,
+liquidity changes and behavioural factors. A complementary question is not whether a model
+can predict the next price, but whether it can reveal hidden structure in a market at a point in
+time. This question is well suited to unsupervised learning because no outcome labels are required
+during model fitting.
+This article studies the Johannesburg Stock Exchange (JSE) Top 40 as a South African
+emerging-market case. The JSE, established in 1887, is the largest stock exchange in Africa by
+market capitalisation and ranks among the twenty largest exchanges in the world [ 1]. It has also
+been recognised in the World Economic Forum’s Global Competitiveness Report as one of the
+best regulated financial markets globally [ 2]. The JSE Top 40 contains large, liquid companies
+across multiple sectors but remains small enough for detailed post-clustering interpretation. The
+objective is not to produce an automated trading rule. It is to evaluate whether a transparent
+unsupervised learning pipeline can identify coherent equity groupings and flag companies whose
+financial attributes do not align neatly with expected sector groupings. This is important because
+several JSE Top 40 firms have global revenue, commodity, banking, telecommunications or retail
+exposure, making official sectors useful for understanding financial behaviour. However, these
+sector groupings suffer from incomplete descriptions of multivariate financial similarity.
+The approach proposed by the paper is fourfold. First, the study compares combinations of
+dimensionality reduction and clustering algorithms on JSE Top 40 financial data. Second, as its
+first research contribution, the paper uses internal clustering metrics together with official JSE
+sector labels as an external ground-truth benchmark rather than as supervised training labels.
+This allows the model to recover expected sector structure and identify sector-divergent anomalies,
+where a company is expected to group with its official sector but instead clusters with another
+peer group because of shared financial attributes or stock performance. Third, as its second
+research contribution, cluster interpretation is combined with SHAP-based feature importance
+and Hotelling’s T 2 outlier detection to make the findings more actionable for analysts. Fourth,
+the paper explicitly recognises the methodological caveat of clustering on a t-SNE embedding
+and uses stability testing and original-variable explanations to reduce the risk of purely visual
+conclusions. The research question is:Can interpretable unsupervised machine learning identify
+meaningful patterns and sector-divergent anomalies among JSE Top 40 equities?
+The article is positioned as exploratory data mining rather than predictive modelling. It
+does not claim to forecast future returns, determine fair value or generate a trading strategy. Its
+purpose is to show how interpretable unsupervised learning can support analyst attention by
+highlighting similarity patterns, sector divergence and multivariate outliers. The remainder of
+the paper is structured as follows: Section 2 reviews related work, Section 3 describes the dataset
+and methodology, Section 4 presents the results, Section 5 discusses their implications, Section 6
+outlines limitations and future work and Section 7 concludes.
+DOI TBC
+
+PAGE 3
+Anonymous: Interpretable unsupervised learning for JSE Top 40 anomalies 3
+2 RELATED WORK
+2.1 Unsupervised learning in financial markets
+Unsupervised learning is used when the goal is to discover structure rather than predict a known
+target. Clustering groups assets that are similar under a chosen feature representation and distance
+measure. In finance, this allows assets to be compared on returns, volatility, liquidity, valuation
+and fundamentals without assuming that industry labels fully describe behaviour [ 3]. Prior studies
+show that clustering can identify market regimes, volatility conditions and cross-asset relationships.
+Barradas et al. used PCA and K-Means to detect stock-market conditions associated with volatility
+[4]. Chen et al. found that return-based commodity clusters aligned with market categories, while
+volatility-based clusters identified distress periods [ 5]. Leon et al. used agglomerative clustering to
+study how global equity-market structure changed after the global financial crisis [6].
+Clustering also appears in portfolio-management and trading contexts. Lim and Ong used
+shape-based clustering for Singapore stocks and argued that price-pattern groupings can supplement
+industry-based diversification [7]. Cuomo et al. proposed an unsupervised framework for market-
+neutral portfolios [8]. Unlu and Xanthopoulos combined ensemble clustering with modern portfolio
+theory to reduce clustering variance [ 9]. Han et al. used agglomerative clustering for pairs
+trading [10], and Nair et al. clustered stock price time series to produce trading recommendations
+[11]. These studies show that clustering can reveal economically meaningful groupings, but they
+also underline the need for interpretation and validation: useful clusters are not necessarily
+self-explanatory.
+2.2 Anomaly detection, validation and interpretability
+Anomaly detection in finance matters because outlying observations may reflect fraud, instability,
+unusual liquidity, structural change, hidden risk or unusual opportunity [ 12]. Ahmed et al. show
+that local and clustering-based outlier methods can be useful in financial-market datasets [ 13].
+However, an anomaly is not automatically a negative signal; in equity analysis it may reflect sector
+exposure, capital structure, global revenue exposure, growth expectations or recent operational
+stress. Interpretable anomaly-detection methods have therefore been proposed to help explain
+why a firm is flagged [14].
+Cluster validation is difficult because unsupervised learning does not learn from labelled
+outcomes. Internal metrics such as the Silhouette Score and Davies-Bouldin Index are widely
+used because they measure compactness and separation. A higher Silhouette Score implies that
+observations are closer to their assigned cluster than to alternative clusters [ 15]; a lower Davies-
+Bouldin Index implies that the clusters are well separated and compact [ 16]. Comparative studies
+caution that no single validation index is sufficient across all settings, so multiple metrics should
+be used, as different indices capture distinct aspects of quality [ 17, 18]. Desirable results show
+both within-cluster homogeneity and clear separation between clusters, reflected jointly in a high
+Silhouette Score and a low Davies-Bouldin Index. Where a credible external classification exists,
+it can also serve as a post-hoc ground-truth benchmark. Here, official JSE sector classification
+DOI TBC
+
+PAGE 4
+Anonymous: Interpretable unsupervised learning for JSE Top 40 anomalies 4
+plays that role.
+Interpretability is particularly important in financial applications because decision-makers
+need to understand why assets are grouped together. SHAP (SHapley Additive exPlanations)
+values, derived from cooperative game theory, provide consistent feature-attribution scores and
+are widely used to explain complex machine-learning models. [ 19, 20]. In this study, SHAP is
+applied after clustering by training a surrogate classifier to predict cluster membership from the
+original variables. The goal is not only to cluster equities but to explain whether groupings are
+driven by size, liquidity, valuation, volatility, recent return or combinations of these variables.
+The South African equity market remains underrepresented in this literature. Existing studies
+often focus on larger international markets, use a narrow PCA/K-Means pipeline or stop at visual
+cluster explanation [ 21]. The gap addressed here is the need for a compact, interpretable and
+measurable unsupervised learning workflow for a South African equity universe.
+3 DATA AND METHODOLOGY
+3.1 Dataset and feature representation
+The historical stock-price dataset spans 6 February 2023 to 5 February 2024, covering approximately
+one year of daily trading activity for JSE Top 40 constituents. This provides about one trading
+year of observations for calculating one-year price returns, daily returns, annualised volatility
+and related risk metrics. The final dataset contains 40 equities and 14 variables, with no missing
+values. Three variables (company name, ticker and official JSE sector) were used as identifiers or
+external ground-truth information and were excluded from model fitting. The resulting clustering
+input data contained 11 financial and market features: analyst summary rating, one-year return,
+average trading volume, market capitalisation, beta, price-to-earnings ratio, shares outstanding,
+revenue, earnings per share, annualised volatility and dividend yield. The analyst summary rating
+is compiled by financial data aggregators from the collective consensus of sell-side equity research
+analysts at investment banks and brokerage firms, who issue standardised recommendations on
+the expected direction of a stock (Buy, Hold or Sell, or equivalent terms such as Outperform,
+Market Perform or Underperform).
+The data was compiled from public financial sources, primarily Investing.com, with Yahoo
+Finance and listcorp.com used as supplementary references. The equity universe followed the JSE
+Top 40 company list provided by the data source at the time of collection. Subsequent verification
+indicated that one included company, RMB Holdings Limited (RMH, labelled RMB in the dataset
+and figures), a listed investment holding company with property interests, was not an official
+FTSE/JSE Top 40 index constituent during the study window; its treatment is discussed in the
+results and limitations. Time-derived metrics such as one-year return, average trading volume and
+annualised volatility were computed over the window, while fundamental metrics reflect the most
+recent reported values available within it.
+Official JSE sector labels were retained as external ground truth labels for validation and
+interpretation, but deliberately excluded from the clustering input to prevent the model from
+DOI TBC
+
+PAGE 5
+Anonymous: Interpretable unsupervised learning for JSE Top 40 anomalies 5
+simply reproducing known classifications. Table 1 summarises the 11 modelling features by
+analytical role.
+Table 1: Condensed feature groups used to represent each equity before clustering.
+F eature group Analytical role Reason for inclusion
+One-year return Market performance Captures recent price movement and dis-
+tinguishes strong or weak recent perform-
+ers.
+Volatility and beta Risk and market sensitivity Represents price variability and sensitivity
+to broad market movements.
+Average volume and
+shares outstanding
+Liquidity and ownership
+structure
+Identifies firms that are actively traded or
+tightly held.
+Market capitalisation
+and revenue
+Scale Captures company size and operational
+footprint.
+EPS, PE ratio and div-
+idend yield
+Valuation and shareholder
+return
+Indicates profitability, expectations and
+income characteristics.
+Analyst summary rat-
+ing
+Sentiment proxy Converts analyst recommendation into a
+numerical input for exploratory clustering.
+The analysis is a snapshot rather than a long-term buy-and-hold recommendation. In practice,
+the same workflow could be rerun over rolling windows to detect whether relationships and
+anomalies remain stable or change across regimes.
+3.2 Preprocessing, modelling and validation
+Company names, tickers and sector labels were removed before modelling. The analyst summary
+rating was label-encoded on an ordinal scale, with Buy assigned 1, Hold assigned 0 and Sell assigned
+-1. MinMax scaling was applied because variables such as market capitalisation, volume and
+revenue have very different magnitudes. A correlation matrix was examined for multicollinearity;
+no pairwise correlations exceeded common removal thresholds of 0.8 or 0.9, so all selected features
+were retained.
+The pipeline combined three dimensionality-reduction methods, namely PCA, t-SNE and
+UMAP, with three clustering approaches: K-Means, DBSCAN and hierarchical clustering. PCA
+was included as a linear baseline [ 22]. t-SNE and UMAP were included because they can represent
+non-linear structures that may appear in financial data [ 23, 24]. Hierarchical clustering was
+included because it provides a dendrogram and reveals nested relationships; K-Means provided
+a partitional baseline and DBSCAN was tested because it can identify dense regions and noise
+points.
+PCA retained sufficient components to explain 95% of the variance. t-SNE produced a two-
+dimensional embedding and used an automatically managed learning rate. Hierarchical clustering
+used average linkage with Manhattan distance, selected after Ward linkage with Euclidean distance
+DOI TBC
+
+PAGE 6
+Anonymous: Interpretable unsupervised learning for JSE Top 40 anomalies 6
+produced weaker validation results. DBSCAN was tuned through a grid search over its ε and
+minimum-samples parameters.
+Because the dataset contains eight official JSE sectors, eight clusters were used as the target
+configuration for K-Means and hierarchical clustering. This does not mean the model was trained
+on sectors; rather, the cluster count was selected to make the unsupervised structure comparable
+with the external ground-truth sector benchmark. Under the tuned parameters, DBSCAN did not
+consistently produce the required eight-cluster structure.
+Clustering was deliberately performed on the two-dimensional t-SNE embedding because it
+preserved local neighbourhood structure and produced the clearest separation for interpretation.
+It carries a known caveat: distances in t-SNE space are not globally meaningful in the same way as
+distances in the scaled feature space. Three safeguards were therefore applied. First, sector labels
+were withheld from model fitting. Second, random-seed stability was assessed. Third, feature-level
+interpretation was computed from the original variables using a surrogate classifier rather than
+from plotted coordinates alone.
+Figure 1: Modelling workflow from data collection to interpretable insights.
+Cluster quality was evaluated using the Silhouette Score and Davies-Bouldin Index. Since the
+sample contains 40 observations and 11 modelling features, conventional train-test splitting is not
+ideal for clustering: a split could create test clusters that do not correspond to training clusters.
+Stability analysis was therefore used as a form of internal validation. Five clustering runs were
+performed with different random seeds and the consistency of assignments was assessed with the
+Adjusted Rand Index (ARI) and Normalised Mutual Information (NMI). Both scores were 1.0
+under the tested settings. This indicates that the selected configuration was stable across the
+seeds tested, although it does not rule out sensitivity to other hyperparameter choices.
+Official JSE sector labels were then used as an external ground-truth benchmark. A cluster
+matching sector membership confirms known economic structure. The main anomaly concept
+is sector divergence: a company belongs to one JSE sector according to ground truth but is
+placed in a cluster dominated by, or mixed with, companies from another sector because its
+measured attributes are closer to that group. For example, a consumer goods firm appearing in a
+predominantly financial cluster, or a financial firm appearing with telecommunications companies,
+is treated as a sector-divergent signal rather than an automatic modelling error.
+SHAP explanations were generated using a surrogate gradient-boosted tree classifier trained to
+predict cluster membership from the original financial features. The surrogate was used solely
+for interpretation rather than prediction, providing a transparent explanation of which original
+financial variables distinguished one cluster from another. Explanations were obtained for seven
+DOI TBC
+
+PAGE 7
+Anonymous: Interpretable unsupervised learning for JSE Top 40 anomalies 7
+of the eight clusters. The single-member Glencore cluster did not contain sufficient observations
+for meaningful surrogate interpretation and was instead characterised through its singleton-cluster
+status and Hotelling’s T 2 score. Finally, Hotelling’s T 2 was used to flag observations far from the
+multivariate sample centre. These validation layers answer different questions: whether clusters
+are compact, stable, sector-coherent and feature-interpretable, and whether individual firms are
+multivariate outliers.
+4 RESULTS
+4.1 Model comparison
+Table 2 summarises the performance of each dimensionality-reduction and clustering combination.
+The t-SNE and hierarchical clustering combination produced the strongest internal validation
+performance, with the highest Silhouette Score and the lowest Davies-Bouldin Index. DBSCAN
+was less suitable because it did not produce the desired eight-cluster structure under the tested
+parameters. The comparison also shows that representation learning matters: K-Means on PCA
+performed poorly relative to K-Means on t-SNE and UMAP, while hierarchical clustering improved
+substantially when applied to t-SNE.
+Table 2: Clustering evaluation metrics for dimensionality reduction and clustering combinations.
+Reduction Clustering Clusters Silhouette Davies-Bouldin
+PCA Hierarchical 8 0.1531 0.8449
+t-SNE Hierarchical 8 0.5023 0.5296
+UMAP Hierarchical 8 0.3450 0.8175
+PCA DBSCAN 6 0.2367 1.4187
+t-SNE DBSCAN 4 -0.2124 2.5319
+UMAP DBSCAN 0 No clusters No clusters
+PCA K-Means 8 0.1550 1.0888
+t-SNE K-Means 8 0.3658 0.7352
+UMAP K-Means 8 0.3660 0.7652
+Note: For the internal Silhouette calculation, a singleton observation contributes a silhouette value of zero under
+the scikit-learn implementation used.
+DOI TBC
+
+PAGE 8
+Anonymous: Interpretable unsupervised learning for JSE Top 40 anomalies 8
+Figure 2: t-SNE visualisation of the hierarchical clustering solution.
+Figure 2 shows visible separation between several groups while preserving some overlap, which
+is expected in financial data. It should be read together with the metrics and feature interpretation
+because visual separation alone is not sufficient evidence of economic usefulness.
+A caveat applies to Table 2: the internal validation metrics were computed within each reduced
+representation, and metrics calculated in a t-SNE embedding may favour visibly separated local
+neighbourhoods because t-SNE is designed to emphasise local structure. The comparison should
+therefore be read as identifying the most interpretable representation for this dataset rather
+than proving that one pipeline is universally superior. This is why the study also relies on
+sector-ground-truth comparison, stability testing and explanations based on the original variables.
+4.2 Cluster validation against JSE sector ground truth
+The selected clustering solution was compared with official JSE sector classifications after model
+fitting. Under this benchmark, a sector-coherent result would place many financial firms with
+other financial firms, telecommunications firms with telecommunications firms and basic materials
+firms with other basic materials firms. Departures from this expectation are analytically important
+because they highlight companies whose attributes place them closer to a different peer group.
+Agreement between the selected cluster assignments and the official JSE sector labels was
+limited but non-zero, with an Adjusted Rand Index of 0.13 and Normalised Mutual Information of
+0.41. These values indicate that the discovered clusters share some structure with the official sector
+classification without reproducing it. This supports the interpretation that the model recovers
+expected economic groupings while also surfacing cross-sector similarities and sector-divergent
+anomalies.
+Table 3 condenses the cluster interpretation and combines the sector-ground-truth reading
+with feature-level signals. Cluster 5 is the clearest sector-aligned result: it consists entirely of basic
+DOI TBC
+
+PAGE 9
+Anonymous: Interpretable unsupervised learning for JSE Top 40 anomalies 9
+materials firms. This provides a sanity check that the method can recover expected economic
+structure. In contrast, clusters 1, 2, 3 and 4 contain firms from multiple sectors. These mixed
+clusters are the most analytically interesting because they show where the clustering result departs
+from sector ground truth and suggest relationships not visible from sector labels alone.
+Table 3: Cluster interpretation using JSE sector labels as an external ground-truth benchmark.
+Cl. Representative companies Sector-ground-truth reading Key signal
+0 Shoprite, Growthpoint Properties, Bid
+Corp
+Mixed group across retail/property/food
+services.
+High liquidity and valuation, but
+weak recent return.
+1 Mainly financials, with Woolworths, Mr
+Price and Clicks
+Consumer services firms appear with a
+predominantly financial peer group.
+Rating, PE ratio and year return.
+2 Prosus, Naspers, AngloGold Ashanti,
+Gold Fields, MultiChoice
+Cross-sector technology, basic materials
+and consumer services grouping.
+Volatility, scale and return pro-
+file.
+3 Sanlam, Old Mutual, FirstRand, BHP,
+Anheuser Busch Inbev
+Mostly financial/insurance, but includes
+consumer goods and basic materials
+firms.
+Market capitalisation, shares,
+volume, revenue and beta.
+4 MTN, Vodacom, Exxaro, British Ameri-
+can Tobacco, ABSA
+Telecoms core with financial, basic-
+materials and consumer-goods anomalies.
+EPS, revenue and dividend yield.
+5 Anglo American, Anglo American Plat-
+inum, Impala Platinum, Northam Plat-
+inum
+Homogeneous basic materials cluster;
+strongly sector-aligned.
+EPS, volatility and beta.
+6 Sasol and RMB Holdings (RMH) Small mixed cluster across basic materi-
+als and financials.
+Dividend yield, beta, volatility
+and weak recent return.
+7 Glencore Single-company cluster. Strong multivariate outlier be-
+haviour.
+Table 4 makes the anomaly logic explicit. The expected peer group is based on official JSE
+sector membership, while the observed cluster context is produced by the unsupervised model.
+The important cases are not only sector-aligned groups, but also sector-divergent cases where a
+firm is pulled toward a different peer group by measured attributes. These cases are the main
+anomaly-detection output because they show analysts where the data disagrees with the obvious
+sector-based expectation.
+Table 4: Sector-ground-truth anomaly examples for analyst investigation.
+Company or group Official JSE sector Sector-divergent signal and analyst question
+Anheuser Busch Inbev Consumer Goods Appears in a predominantly financial/large-cap cluster. In-
+vestigate whether scale, liquidity, beta, revenue profile or
+valuation explains the similarity.
+British American Tobacco Consumer Goods Appears in a mixed telecommunications-related cluster with
+ABSA and Exxaro. Investigate risk, liquidity, valuation and
+global exposure.
+Woolworths, Mr Price and
+Clicks
+Consumer Services Appear in a cluster dominated by financial names. Investigate
+valuation, analyst rating, return, liquidity and possible credit-
+related exposure.
+ABSA Financials Appears with telecommunications and basic-materials names.
+Investigate which risk, liquidity or valuation attributes pull
+it away from financial peers.
+Sasol and RMB Holdings
+(RMH)
+Basic Materials / Financials Form a small mixed cluster. Investigate dividend yield, beta,
+volatility, weak recent return and revenue-pattern effects.
+Glencore Basic Materials Single-company cluster and highest Hotelling’s T 2 outlier.
+Investigate commodity exposure, global operations, scale and
+liquidity.
+DOI TBC
+
+PAGE 10
+Anonymous: Interpretable unsupervised learning for JSE Top 40 anomalies 10
+For example, Woolworths, Mr Price and Clicks appear in a cluster that is predominantly
+financial. This does not mean that these firms are financial institutions; it means their selected
+financial profile was closer to that cluster than to other groups. Similarly, ABSA appears in a
+cluster with telecommunications and non-financial firms and British American Tobacco appears
+in a telecommunications-related mixed cluster. Such results are screening signals: they tell an
+analyst where to investigate further.
+Figure 3: Dendrogram from the hierarchical clustering solution.
+4.3 Feature explanations and Hotelling’sT 2 outliers
+The SHAP surrogate analysis supports the usefulness of combining clustering with interpretability.
+A cluster label alone provides limited insight. Feature-level explanations show whether a group
+is being formed by profitability, valuation, market size, liquidity, return behaviour or volatility.
+Cluster 3, for example, is characterised by large market capitalisation, shares outstanding, trading
+volume and revenue, pointing to economic scale and liquidity. Cluster 6 is driven by dividend yield,
+revenue, beta and volatility while showing weak recent return, making it more outlier-like. Cluster 5
+is more straightforward: EPS, volatility and beta support the interpretation of a commodity-linked
+DOI TBC
+
+PAGE 11
+Anonymous: Interpretable unsupervised learning for JSE Top 40 anomalies 11
+basic materials group.
+Hotelling’s T 2 analysis, a standard multivariate test for detecting observations far from the
+sample centroid [25], provides a second outlier view. Scores were calculated in the two-dimensional
+reduced representation of the equity dataset. Since the analysis was performed after dimensionality
+reduction, the threshold was computed with n = 40 equities and p = 2 dimensions. At the 5%
+significance level, the resulting critical value was approximately T 2 = 6 .66. Firms above this
+threshold were flagged as multivariate outliers. Outlier status is not a buy or sell signal; it is a
+prompt for further investigation.
+Table 5: Firms flagged as multivariate outliers by Hotelling’sT 2 analysis.
+Outlier companyT 2 score Interpretation
+Glencore 11.15 Diversified commodities exposure; also a single-company cluster.
+RMB Holdings (RMH) 10.66 Property-focused investment holding company; appears in a small mixed cluster with Sasol.
+Anglo American Platinum 10.23 Commodity-linked deviation from the sample centre.
+BHP Group Ltd 9.45 Global exposure and scale likely contribute to deviation.
+Growthpoint Properties 9.31 Property/financials exposure and interest-rate sensitivity.
+Sasol 9.16 Energy/basic-materials profile; clustered with RMH.
+Impala Platinum 7.62 Commodity-linked return and volatility characteristics.
+Anheuser Busch Inbev 7.51 Consumer goods firm with global exposure.
+Gold Fields 7.43 Commodity price and volatility exposure.
+Capitec 6.85 Differentiated growth and risk profile relative to peers.
+A substantial proportion of outliers are basic materials firms, which is reasonable given
+commodity-linked volatility and global pricing cycles. However, the list also includes Capitec,
+Growthpoint Properties, RMH and Anheuser Busch Inbev, showing that outlier behaviour is not
+restricted to mining and resources. The overlap between cluster and outlier evidence is analytically
+useful: Glencore, Sasol and RMH are notable because their cluster positions and T 2 scores both
+suggest unusual behaviour.
+RMH warrants brief discussion because, following the 2020 unbundling of its FirstRand
+shareholding, it transitioned from a large financial holding company to a substantially smaller
+investment holding company with a primary focus on property investments [ 26, 27]. Its placement
+in a two-company cluster together with Sasol, combined with the second-highest Hotelling’s T 2
+score, is consistent with financial characteristics that differ materially from those of the broader
+large-cap equity universe. Rather than indicating an error in the clustering process, this result
+illustrates the intended role of the proposed screening framework: to identify companies whose
+multivariate financial profiles warrant further investigation.
+Because theT 2 scores were computed in the two-dimensional reduced space, they inherit the
+representational limitations of that space. The flagged companies should therefore be interpreted
+as outliers within the learned representation rather than as definitive outliers in the original
+11-dimensional feature space. The agreement between some T 2 results and the cluster structure,
+for example Glencore appearing as both a singleton cluster and the highest-scoring T 2 observation,
+provides supporting evidence within the present analysis.
+DOI TBC
+
+PAGE 12
+Anonymous: Interpretable unsupervised learning for JSE Top 40 anomalies 12
+4.4 Robustness and practical reading
+The selected t-SNE hierarchical solution was stable across the tested random seeds, with ARI
+and NMI equal to 1.0. This does not remove all uncertainty, but it reduces one concern about
+stochastic embeddings: that the grouping is merely a random artefact of initialisation. The results
+should nevertheless be read as exploratory. A different time window, macroeconomic feature set
+or weighting of variables could change the cluster structure. The value of the method lies in
+repeatable screening, where changes in group membership or outlier status can be monitored over
+time.
+5 DISCUSSION
+The results support the view that unsupervised learning can reveal meaningful structure in the
+JSE Top 40. The strongest pipeline was t-SNE combined with hierarchical clustering, which is
+plausible because financial variables often have non-linear relationships and t-SNE is designed to
+preserve local neighbourhood structure. Hierarchical clustering then provides a representation of
+nested similarity between firms.
+The model does not simply reproduce official sector classifications. This is a strength rather
+than a weakness. If clusters matched sectors perfectly, the method would add little beyond existing
+labels. The value lies in identifying where companies behave like sector peers and where they do
+not. Cluster 5 confirms sector structure in basic materials. Cluster 1 shows how some consumer
+services firms can group with financial institutions, while Cluster 4 shows a financial firm and
+consumer-goods firms appearing with telecommunications names. Cluster 6 and Cluster 7 show
+stronger anomaly behaviour, with Sasol and RMH forming a small mixed cluster and Glencore
+standing alone.
+For investment management, the results should be used as a screening layer rather than a final
+decision rule. A sector-divergent anomaly does not prove that a stock is mispriced and does not
+imply a buy or sell signal. It identifies a company whose financial profile does not behave like
+its official sector peer group. This is useful because anomaly detection helps reveal what is not
+obvious from sector labels alone and gives equity analysts a structured reason to dig deeper. If
+British American Tobacco is grouped with a telecommunications-related cluster, the next step is
+not to reclassify the company, but to investigate which attributes such as scale, liquidity, valuation,
+volatility, recent return or analyst rating created the similarity during the selected period.
+The article also demonstrates why interpretability is necessary in unsupervised financial analysis.
+Internal metrics indicate whether clusters are compact and separated, but not what they mean.
+SHAP explanations translate cluster assignments into interpretable feature-level themes, while
+Hotelling’s T 2 identifies firms far from the multivariate centre irrespective of cluster membership.
+Together these components make the output easier to interrogate in an analyst workflow.
+The South African contribution is important because emerging markets can differ from larger
+developed markets in sector concentration, liquidity, index composition, global exposure and
+macroeconomic sensitivity. A method tested only on large international markets may not transfer
+DOI TBC
+
+PAGE 13
+Anonymous: Interpretable unsupervised learning for JSE Top 40 anomalies 13
+directly to the JSE. This compact equity universe still produces meaningful cross-sector and outlier
+structure.
+Three methodological lessons emerge. First, representation matters: the best results came
+from a non-linear embedding combined with hierarchical clustering rather than a linear PCA
+projection. Second, validation must be layered: internal metrics, stability testing, sector ground-
+truth comparison, SHAP interpretation and outlier analysis answer different questions. Third,
+interpretability should be designed into the workflow from the start. Without explanation, cluster
+labels may be difficult for practitioners to trust or use.
+6 LIMITATIONS AND FUTURE WORK
+The study has several limitations. First, the sample is limited to the JSE Top 40, so findings should
+not be generalised to the entire South African equity market without further testing. Mid-cap and
+small-cap companies may display different patterns because they are less liquid and may have
+different risk profiles. In addition, one company in the source-provided universe, RMH, was not
+an official index constituent during the window and its results should be read as those of a smaller
+listed firm within a large-cap peer group rather than an index member. Second, the analysis uses
+a fixed one-year snapshot from 6 February 2023 to 5 February 2024. It does not test temporal
+stability across multiple regimes and one trading year may not capture downturns, bull markets
+or commodity cycles. Third, t-SNE is stochastic and sensitive to parameter choices, even though
+the selected solution was stable under the tested random seeds. Future work should also compare
+cluster-quality and outlier results calculated in the reduced representations with corresponding
+measures calculated in the original scaled feature space.
+Fourth, sector labels are useful as an external ground-truth benchmark but are imperfect.
+Some firms have diversified operations, global exposure or hybrid business models that do not fit
+neatly into one sector. A sector mismatch should therefore be treated as a signal for investigation
+rather than proof that the model is wrong. Fifth, the study does not conduct portfolio backtesting
+and does not claim that identified anomalies produce excess returns. Sixth, the surrogate SHAP
+approach explains a cluster-assignment model rather than the clustering algorithm itself; future
+work should report surrogate fidelity and compare alternative explanation methods. Cluster-level
+explanations covered seven of the eight clusters, while the singleton Glencore cluster was interpreted
+through its cluster structure and Hotelling’s T 2 score. Seventh, macroeconomic variables, sentiment
+data, factor exposures, ESG data or earnings revisions could change the cluster structure.
+Future work should extend the dataset to more equities and longer periods, test rolling-window
+clustering stability, incorporate macroeconomic and sentiment variables, and evaluate whether
+cluster changes have predictive value for risk or return. For portfolio management, the most
+important extension would be to test whether cluster-based diversification improves risk-adjusted
+outcomes compared with sector-based diversification.
+DOI TBC
+
+PAGE 14
+Anonymous: Interpretable unsupervised learning for JSE Top 40 anomalies 14
+7 CONCLUSION
+This article presented an interpretable unsupervised learning pipeline for detecting patterns and
+anomalies among JSE Top 40 equities. The best-performing model combined t-SNE dimensionality
+reduction with hierarchical clustering, achieving a Silhouette Score of 0.5023 and a Davies-Bouldin
+Index of 0.5296. JSE sector labels were used as an external ground-truth benchmark and the
+model identified both expected sector-aligned groupings and non-obvious mixed-sector clusters.
+The main finding is that unsupervised learning can complement traditional sector-based
+analysis by identifying hidden similarities, sector-divergent anomalies and multivariate outliers.
+SHAP-based interpretation and Hotelling’s T 2 analysis make the results more useful by explaining
+influential variables and highlighting firms that deserve further investigation. The practical value is
+not that the model replaces equity analysts, but that it helps them notice unexpected relationships
+and then investigate the financial attributes behind those results. The study contributes a South
+African emerging-market case study and demonstrates a practical framework for interpretable
+financial clustering.
+References
+[1] JSE Limited. “JSE — Leading stock market and exchange in Africa”.https://www.jse.co.za,
+2026. Last accessed: 16 July 2026.
+[2] World Economic Forum. “Johannesburg Stock Exchange: Organisation profile”.https:
+//www.weforum.org/organizations/johannesburg-stock-exchange/, 2026. Last accessed: 16 July
+2026.
+[3] D. Greene, P. Cunningham and R. Mayer. “Unsupervised learning and clustering”. In
+Machine Learning Techniques for Multimedia, pp. 25–71. Springer, 2008. doi:10.1007/978-3-
+540-75171-7 3.
+[4] A. Barradas, R.-M. Canton-Croda and D.-E. Gibaja-Romero. “Identification of patterns in
+the stock market through unsupervised algorithms”.Analytics, vol. 2, no. 3, pp. 592–603,
+2023. doi:10.3390/analytics2030033.
+[5] J. M. Chen, M. U. Rehman and X. V. Vo. “Clustering commodity markets in space and time:
+Clarifying returns volatility and trading regimes through unsupervised machine learning”.
+Resources Policy, vol. 73, p. 102162, 2021. doi:10.1016/j.resourpol.2021.102162.
+[6] C. Le´ on, G.-Y. Kim, C. Mart ´ ınez and D. Lee. “Equity markets clustering and the global
+financial crisis”.Quantitative Finance, vol. 17, no. 12, pp. 1905–1922, 2017. doi:10.1080/
+14697688.2017.1357970.
+[7] T. Lim and C. S. Ong. “Portfolio management: A financial application of unsupervised
+shape-based clustering-driven machine learning method”.International Journal of Computing
+and Digital Systems, vol. 10, no. 1, pp. 257–269, 2021. doi:10.12785/ijcds/100124.
+DOI TBC
+
+PAGE 15
+Anonymous: Interpretable unsupervised learning for JSE Top 40 anomalies 15
+[8] S. Cuomo, F. Gatta, F. Giampaolo, C. Iorio and F. Piccialli. “An unsupervised learning
+framework for market-neutral portfolio”.Expert Systems with Applications, vol. 192, p.
+116308, 2022. doi:10.1016/j.eswa.2021.116308.
+[9] R. ¨Unl¨ u and P. Xanthopoulos. “A reduced variance unsupervised ensemble learning algorithm
+based on modern portfolio theory”.Expert Systems with Applications, vol. 180, p. 115085,
+2021. doi:10.1016/j.eswa.2021.115085.
+[10] C. Han, Z. He and A. J. W. Toh. “Pairs trading via unsupervised learning”.European Journal
+of Operational Research, vol. 307, no. 2, pp. 929–947, 2023. doi:10.1016/j.ejor.2022.09.041.
+[11] B. B. Nair, P. K. S. Kumar, N. R. Sakthivel and U. Vipin. “Clustering stock price time series
+data to generate stock trading recommendations: An empirical study”.Expert Systems with
+Applications, vol. 70, pp. 20–36, 2017. doi:10.1016/j.eswa.2016.11.002.
+[12] M. Ahmed, A. N. Mahmood and M. R. Islam. “A survey of anomaly detection techniques
+in financial domain”.Future Generation Computer Systems, vol. 55, pp. 278–288, 2016.
+doi:10.1016/j.future.2015.01.001.
+[13] M. Ahmed, N. Choudhury and S. Uddin. “Anomaly detection on big data in financial
+markets”. In2017 IEEE/ACM International Conference on Advances in Social Networks
+Analysis and Mining, pp. 998–1005. 2017. doi:10.1145/3110025.3119402.
+[14] M.-S. Cheong, M.-C. Wu and S.-H. Huang. “Interpretable stock anomaly detection based
+on spatio-temporal relation networks with genetic algorithm”.IEEE Access, vol. 9, pp.
+68302–68319, 2021. doi:10.1109/ACCESS.2021.3077067.
+[15] P. J. Rousseeuw. “Silhouettes: A graphical aid to the interpretation and validation of cluster
+analysis”.Journal of Computational and Applied Mathematics, vol. 20, no. 1, pp. 53–65, 1987.
+doi:10.1016/0377-0427(87)90125-7.
+[16] D. L. Davies and D. W. Bouldin. “A cluster separation measure”.IEEE Transactions on
+Pattern Analysis and Machine Intelligence, vol. PAMI-1, no. 2, pp. 224–227, 1979. doi:
+10.1109/TPAMI.1979.4766909.
+[17] O. Arbelaitz, I. Gurrutxaga, J. Muguerza, J. M. P´ erez and I. Perona. “An extensive
+comparative study of cluster validity indices”.Pattern Recognition, vol. 46, no. 1, pp. 243–256,
+2013. doi:10.1016/j.patcog.2012.07.021.
+[18] L. Vendramin, R. J. G. B. Campello and E. R. Hruschka. “Relative clustering validity criteria:
+A comparative overview”.Statistical Analysis and Data Mining, vol. 3, no. 4, pp. 209–235,
+2010. doi:10.1002/sam.10080.
+[19] L. Merrick and A. Taly. “The explanation game: Explaining machine learning models using
+Shapley values”. InMachine Learning and Knowledge Extraction, vol. 12279 ofLecture Notes
+in Computer Science, pp. 17–38. Springer, 2020. doi:10.1007/978-3-030-57321-8 2.
+DOI TBC
+
+PAGE 16
+Anonymous: Interpretable unsupervised learning for JSE Top 40 anomalies 16
+[20] B. Rozemberczki, L. Watson, P. Bayer, H.-T. Yang, O. Kiss, S. Nilsson and R. Sarkar. “The
+Shapley value in machine learning”.arXiv:2202.05594, 2022. doi:10.48550/arXiv.2202.05594.
+[21] M. Nourahmadi, F. Rasti and H. Sadeqi. “A comparative approach to financial clustering
+models: A study of the companies listed on Tehran Stock Exchange”.Iranian Journal of
+Finance, vol. 6, no. 4, pp. 31–55, 2022. doi:10.30699/IJF.2022.303980.1267.
+[22] C. J. C. Burges. “Dimension reduction: A guided tour”.Foundations and Trends in Machine
+Learning, vol. 2, no. 4, pp. 275–365, 2010. doi:10.1561/2200000002.
+[23] L. van der Maaten and G. Hinton. “Visualizing data using t-SNE”.Journal of Machine
+Learning Research, vol. 9, pp. 2579–2605, 2008.
+[24] L. McInnes, J. Healy and J. Melville. “UMAP: Uniform manifold approximation and projection
+for dimension reduction”, 2018. doi:10.48550/arXiv.1802.03426.
+[25] Y.-M. Chou, R. L. Mason and J. C. Young. “Power comparisons for a Hotelling’s T-squared
+statistic”.Communications in Statistics - Simulation and Computation, vol. 28, no. 4, pp.
+1031–1050, 1999. doi:10.1080/03610919908813591.
+[26] FTSE Russell. “RMB Holdings (South Africa): Unbundling of Firstrand Limited”,
+May 2020. URLhttps://research.ftserussell.com/products/index-notices/home/getnotice/?id=
+2596368. FTSE/JSE Africa Index Series Informative Notice.
+[27] RMB Holdings Limited. “Investor Relations”, 2025. URLhttps://rmh.co.za/investor-relation/.
+DOI TBC

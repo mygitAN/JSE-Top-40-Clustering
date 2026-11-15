@@ -1,0 +1,15 @@
+\section{Reproducibility and evidence}
+
+Repository: \url{https://github.com/mygitAN/JSE-Top-40-Clustering}. This manuscript checks the saved numerical archive from run 20261115T062631-0c09819ce3c0, generated from clean implementation commit \nolinkurl{98549c660edd410fd74936a03faecadd01f6067b}. The later repository commit \nolinkurl{28c2ccf7a9eab7121b1c8ea9852bbaf22758bd32} adds stricter index-review validation and its tests; it is not misreported as the implementation commit that generated those numerical results. Every file listed in results/manifest.json was checksum-verified during manuscript preparation.
+
+
+The primary evidence files are \nolinkurl{primary_model_summary.csv}, \nolinkurl{model_comparison.csv}, \nolinkurl{seed_agreement.csv}, \nolinkurl{surrogate_fidelity.csv} and \nolinkurl{temporal_agreement.csv} under results/. Complete and partial histories are in \nolinkurl{longitudinal/umap/cluster_histories.csv}. The financial profiles in Figures~\ref{fig:profile0}--\ref{fig:profile2} come from \nolinkurl{longitudinal/umap/moves/cluster_profiles.csv} and use aligned labels. Exported single-date \nolinkurl{feature_profile.png} files use raw local labels, so those labels must not be substituted directly into longitudinal interpretation.
+
+
+All fourteen diagrams in this revision are drawn natively in LaTeX with TikZ or PGFPlots. Source tables are included in the LaTeX project; the cluster-count table comes from the checksum-verified archive of the same numerical run. The figure-source manifest records each input. Numerical summaries retain all date-specific members; only the complete-history flow restricts the population to 39 instruments. No model rerun or new empirical finding is implied by redrawing the diagrams.
+
+
+Population evidence is recorded in \nolinkurl{data/reference/index_changes.csv}. The June 2025 and December 2025 rows link quarterly review notices; September 2025 and March 2026 link reproduced SENS announcements; June 2026 links a fund factsheet. The supplied revised paper records that not all official notices were directly inspected and that some no-change evidence is secondary. Automated consistency with the recorded reviews does not remove those source-certification limits.
+
+
+The source CSV and workbook preserve the retrospective input evidence. Corporate-action, volume and dual-listed-share corrections remain in separate reference files. Reproduction commands are python -m top40.data; python -m top40.export --check; python -m unittest discover -s tests -t .; and python -m top40. The configuration fixes invariant8, five seeds and k=8. The immutable run archive and its manifest identify the exact data and implementation used.

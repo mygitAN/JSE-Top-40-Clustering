@@ -1,0 +1,13 @@
+\begin{tikzpicture}[]
+
+\node[box] (a) at (0,0) {30 June 2025\\41 instruments\\40 company groups};
+\node[box] (b) at (5,0) {31 December 2025\\41 instruments\\40 company groups};
+\node[box] (c) at (10,0) {30 June 2026\\41 instruments\\40 company groups};
+\draw[arrow] (a)--node[above,font=\scriptsize,align=center]{APN exits\\GLN enters}(b);
+\draw[arrow] (b)--node[above,font=\scriptsize,align=center]{MNP exits\\PAN enters}(c);
+\node[box,text width=11.8cm] (sum) at (5,-2) {123 instrument-date records; 43 distinct securities\\40 continuing per adjacent pair; 39 observed at all three dates};
+\draw[thin,gray] (a.south)--(sum.north west);
+\draw[thin,gray] (b.south)--(sum.north);
+\draw[thin,gray] (c.south)--(sum.north east);
+
+\end{tikzpicture}

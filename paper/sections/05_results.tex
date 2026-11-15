@@ -1,0 +1,211 @@
+\section{Empirical results}
+
+\subsection{Cluster quality and the historical comparator}
+
+\begin{table}[htbp]
+\centering\caption{Representative UMAP partition quality, mean pairwise five-seed ARI and cluster size ranges. S is silhouette; DB is Davies-Bouldin. All 41 instruments are included.}\label{tab:5}
+\footnotesize
+\begin{tabularx}{\linewidth}{@{}>{\hsize=1.610\hsize\linewidth=\hsize\raggedright\arraybackslash}X >{\hsize=0.805\hsize\linewidth=\hsize\raggedright\arraybackslash}X >{\hsize=0.980\hsize\linewidth=\hsize\raggedright\arraybackslash}X >{\hsize=0.805\hsize\linewidth=\hsize\raggedright\arraybackslash}X >{\hsize=0.805\hsize\linewidth=\hsize\raggedright\arraybackslash}X >{\hsize=0.980\hsize\linewidth=\hsize\raggedright\arraybackslash}X >{\hsize=1.015\hsize\linewidth=\hsize\raggedright\arraybackslash}X@{}}
+\toprule
+Date & Feature S & Feature DB & Map S & Map DB & Seed ARI & Size range \\
+\midrule
+June 2025 & 0.151 & 1.153 & 0.685 & 0.385 & 0.846 & 2-9 \\
+December 2025 & 0.124 & 1.049 & 0.638 & 0.268 & 0.892 & 1-8 \\
+June 2026 & 0.267 & 1.059 & 0.721 & 0.355 & 0.738 & 2-8 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+
+The largest quality distinction is between geometries: financial-feature silhouettes range from 0.124 to 0.267, whereas map silhouettes range from 0.638 to 0.721. In December, the representative partition contains two singletons; neither June partition has a singleton. High map compactness is therefore compatible with weak financial separation and small or isolated groups. The mean seed ARI is highest in December (0.892), despite those singletons, and lowest in June 2026 (0.738).
+
+
+The historical t-SNE recipe has map silhouettes 0.532, 0.589 and 0.656. Its financial silhouettes are 0.195, 0.240 and 0.255. Thus UMAP produces the higher map silhouette at every date, while t-SNE scores higher in financial space at the first two dates. UMAP is only slightly higher in financial space in June 2026. This does not support a general claim of superior financial grouping or a direct comparison with the original manuscript's different sample and features.
+
+
+
+\begin{figure}[htbp]
+\centering
+\diagram{quality}
+\caption{The same partitions evaluated in two geometries. UMAP has the stronger embedding silhouette at every date; this advantage does not consistently hold in the underlying financial features.}\label{fig:quality}
+\end{figure}
+
+
+Figure~\ref{fig:seed_variability} shows all ten seed-pair agreements underlying each mean.
+
+
+\begin{figure}[htbp]
+\centering
+\diagram{seed_variability}
+\caption{Ten pairwise adjusted Rand indices from five UMAP seeds at each date. Points are offset horizontally for readability; red segments mark the means. Pairs share fitted partitions and are dependent, so the spread is not a confidence interval or an empirical null for temporal switches.}\label{fig:seed_variability}
+\end{figure}
+
+
+\subsection{Continuing members and complete histories}
+
+\begin{table}[htbp]
+\centering\caption{Temporal comparison among the 40 continuing instruments in each adjacent pair. Entries and exits are excluded from changed and unchanged counts.}\label{tab:6}
+\footnotesize
+\begin{tabularx}{\linewidth}{@{}>{\hsize=1.750\hsize\linewidth=\hsize\raggedright\arraybackslash}X >{\hsize=0.700\hsize\linewidth=\hsize\raggedright\arraybackslash}X >{\hsize=0.910\hsize\linewidth=\hsize\raggedright\arraybackslash}X >{\hsize=1.050\hsize\linewidth=\hsize\raggedright\arraybackslash}X >{\hsize=1.050\hsize\linewidth=\hsize\raggedright\arraybackslash}X >{\hsize=0.770\hsize\linewidth=\hsize\raggedright\arraybackslash}X >{\hsize=0.770\hsize\linewidth=\hsize\raggedright\arraybackslash}X@{}}
+\toprule
+Period & Continue & Entry / exit & Changed & Unchanged & ARI & NMI \\
+\midrule
+Jun-Dec 2025 & 40 & 1 / 1 & 15 (37.5\%) & 25 (62.5\%) & 0.377 & 0.646 \\
+Dec 2025-Jun 2026 & 40 & 1 / 1 & 11 (27.5\%) & 29 (72.5\%) & 0.590 & 0.751 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+
+The second pair is more similar by temporal ARI and has fewer aligned switches, but two transitions are insufficient to establish a trend or a statistically significant reduction in change. Across the 39 complete histories, 19 (48.7\%) keep an aligned label and 20 (51.3\%) change at least once. There are 26 adjacent switch events, rather than 26 distinct changing securities. Five complete-history instruments switch in both periods; 15 switch once. Those histories account for 25 switch events; Mondi contributes the remaining first-period event before its subsequent exit. Membership gaps are neither stability nor change.
+
+
+The 19 stable histories are ANH, BHG, BID, BVT, CFR, FSR, GRT, IMP, INL, INP, MRP, NED, NPH, NRP, OUT, SBK, SHP, SSW, WHL. The 20 shifted histories are ABG, AGL, ANG, BTI, CLS, CPI, DSY, GFI, HAR, MTN, NPN, OMU, PPH, PRX, REM, RNI, SLM, SOL, VAL, VOD. The five instruments changing in both adjacent periods are ABG, DSY, OMU, REM, RNI. These named outcomes allow the counts to be checked against the saved memberships and prevent a single aggregate statistic from concealing different histories.
+
+
+
+\begin{figure}[htbp]
+\centering
+\diagram{flows}
+\caption{Native LaTeX rendering of all 39 complete instrument histories: 19 stable and 20 shifted. Bold tickers change aligned label at least once. APN, MNP, GLN and PAN are excluded only from this complete-history view. Labels identify aligned groups, not industries; vertical positions are layout.}\label{fig:flows}
+\end{figure}
+
+
+\subsection{Overlap structure and interpretation of switches}
+
+
+\begin{figure}[htbp]
+\centering
+\diagram{jaccard}
+\caption{Jaccard overlap among the 40 continuing members in each adjacent comparison. Each cell uses the common eligible universe for that period. Numeric values are given explicitly; a zero denotes no shared continuing member.}\label{fig:jaccard}
+\end{figure}
+
+
+The flow diagram is a compact history summary, whereas the overlap matrices expose continuity strength. For example, a larger first-period matched group has Jaccard overlap about 0.62, while some other matches are substantially weaker. The matching maximises the total across all pairs, so it should not be interpreted as proving that each matched group has strong continuity. Entry, exit, splitting and regrouping are visible in the accompanying member tables.
+
+
+Absa and Old Mutual move from aligned group 1 to group 5 and then return to group 1. Their paths illustrate why two adjacent switch events do not imply persistent movement away from an original peer set. Reinet follows 6 to 7 to 2, with fundamentals imputed at every date. Naspers follows 7 to 7 to 9 after the documented share-basis corrections; its observed path remains conditional on those corrections and the embedding. These cases require different substantive follow-up despite sharing the generic label "shifted".
+
+
+\subsection{Financial profiles at each decision date}
+
+Figures~\ref{fig:profile0}--\ref{fig:profile2} use the aligned labels from the longitudinal outputs, rather than the raw local cluster numbers in independent fits. They report cluster median minus same-date median for all eight inputs. A positive cell identifies a relatively high feature on the frozen scale; it is not a coefficient, effect size in returns or SHAP attribution. The row counts refer to the full date-specific population, including partial histories.
+
+
+
+\begin{figure}[htbp]
+\centering
+\diagram{profile0}
+\caption{June 2025 aligned-cluster median deviations from the same-date median, in June 2025 MinMax units. Counts include all 41 date-specific instruments. Colours use the same range across the three figures; gaps in cluster numbers reflect retired identifiers.}\label{fig:profile0}
+\end{figure}
+
+
+
+\begin{figure}[htbp]
+\centering
+\diagram{profile1}
+\caption{December 2025 aligned-cluster median deviations from the same-date median, in June 2025 MinMax units. Counts include all 41 date-specific instruments. Colours use the same range across the three figures; gaps in cluster numbers reflect retired identifiers.}\label{fig:profile1}
+\end{figure}
+
+
+
+\begin{figure}[htbp]
+\centering
+\diagram{profile2}
+\caption{June 2026 aligned-cluster median deviations from the same-date median, in June 2025 MinMax units. Counts include all 41 date-specific instruments. Colours use the same range across the three figures; gaps in cluster numbers reflect retired identifiers.}\label{fig:profile2}
+\end{figure}
+
+
+A precious-metals grouping illustrates changing composition rather than a fixed sector partition. AngloGold Ashanti, Gold Fields and Harmony join the group containing Impala Platinum, Northam and Sibanye-Stillwater by December 2025, together with Valterra. That December group has relatively high trailing return, beta and volatility. Its main membership persists in June 2026, when newly admitted Pan African Resources is included. This is a description of saved features and memberships, not evidence that commodity prices caused a structural break.
+
+
+ANH, BHG and CFR remain together throughout. BTI joins their aligned group in December 2025, and PRX leaves by June 2026. Their June 2026 profile combines high log market capitalisation with low JSE share turnover. That contrast is consistent with the recorded feature geometry but requires caution for internationally traded firms: low JSE turnover need not mean low total market liquidity. The financial profiles supply hypotheses for analyst investigation without declaring inherited sectors incorrect.
+
+
+\subsection{Representation sensitivity and cluster count}
+
+\begin{table}[htbp]
+\centering\caption{Scale drift in invariant8 and UMAP agreement with the archived original10 representation. An even variance allocation would be 12.5\%. Cross-set ARI compares partitions, not the magnitude of silhouette values across feature spaces.}\label{tab:7}
+\footnotesize
+\begin{tabularx}{\linewidth}{@{}>{\hsize=1.100\hsize\linewidth=\hsize\raggedright\arraybackslash}X >{\hsize=1.250\hsize\linewidth=\hsize\raggedright\arraybackslash}X >{\hsize=0.900\hsize\linewidth=\hsize\raggedright\arraybackslash}X >{\hsize=0.800\hsize\linewidth=\hsize\raggedright\arraybackslash}X >{\hsize=0.950\hsize\linewidth=\hsize\raggedright\arraybackslash}X@{}}
+\toprule
+Date & Dominant feature & Variance share & Max scaled & Cross-set ARI \\
+\midrule
+June 2025 & Dividend yield & 19.8\% & 1.000 & 0.668 \\
+December 2025 & 1Y return & 52.5\% & 2.847 & 0.607 \\
+June 2026 & Volatility & 22.1\% & 1.244 & 0.590 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+
+The representation sensitivity of complete-history counts is shown in Figure~\ref{fig:feature_sensitivity}.
+
+
+\begin{figure}[htbp]
+\centering
+\diagram{feature_sensitivity}
+\caption{Complete-history outcomes under four feature representations using the UMAP recipe. Each bar contains the same 39 continuously observed instruments; four partial histories are outside every bar. The counts are representation-dependent and are not estimates of true economic change.}\label{fig:feature_sensitivity}
+\end{figure}
+
+
+Return accounts for 52.5\% of scaled variance in December 2025, compared with an even eight-variable share of 12.5\%. The maximum scaled value reaches 2.847. The frozen reference preserves temporal comparability of units but does not preserve feature influence. Consequently, the weaker December financial silhouette and changing peer groups can reflect shifts in the relative geometry induced by preprocessing, as well as changes in firms' measured financial attributes.
+
+
+Feature alternatives also affect histories. UMAP yields 20 stable and 19 shifted complete histories under original10, 16 and 23 under logsize10, 19 and 20 under invariant8, and 14 and 25 under market5. Each uses the same 39 complete-history instruments. These are diagnostic alternatives rather than independently validated models. Their silhouette and Davies-Bouldin values are computed in different feature spaces and cannot be ranked as though they shared identical units or inputs.
+
+
+
+\begin{figure}[htbp]
+\centering
+\diagram{cluster_count}
+\caption{Cluster-count sensitivity redrawn from the archived numerical table for the same clean run. Blue evaluates financial features and red evaluates the embedding. Eight groups remain the historical specification, not a validated natural count.}\label{fig:cluster_count}
+\end{figure}
+
+
+\subsection{Surrogate fidelity and descriptive distance flags}
+
+\begin{table}[htbp]
+\centering\caption{Surrogate agreement with representative cluster labels. Where estimated, the minimum group size of two limits stratified cross-validation to two folds.}\label{tab:8}
+\footnotesize
+\begin{tabularx}{\linewidth}{@{}>{\hsize=0.960\hsize\linewidth=\hsize\raggedright\arraybackslash}X >{\hsize=1.000\hsize\linewidth=\hsize\raggedright\arraybackslash}X >{\hsize=1.200\hsize\linewidth=\hsize\raggedright\arraybackslash}X >{\hsize=0.840\hsize\linewidth=\hsize\raggedright\arraybackslash}X@{}}
+\toprule
+Date & Training fidelity & Out-of-fold fidelity & Singleton groups \\
+\midrule
+June 2025 & 1.000 & 0.439 & 0 \\
+December 2025 & 1.000 & Not estimable & 2 \\
+June 2026 & 1.000 & 0.707 & 0 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+
+Perfect reproduction of training labels does not imply reliable explanation. The June 2025 held-out fidelity is only 43.9\%, compared with 70.7\% in June 2026; December cannot be estimated with the implemented stratified scheme because of two singletons. These values justify using the direct median profiles and feature histories as the principal interpretation. SHAP may describe the fitted surrogate but cannot establish why an instrument moved or validate the economic relevance of that movement.
+
+
+\begin{table}[htbp]
+\centering\caption{Separate same-date Mahalanobis distance screen at nominal alpha 0.05. These are descriptive flags, not significant economic anomalies.}\label{tab:9}
+\footnotesize
+\begin{tabularx}{\linewidth}{@{}>{\hsize=0.720\hsize\linewidth=\hsize\raggedright\arraybackslash}X >{\hsize=1.920\hsize\linewidth=\hsize\raggedright\arraybackslash}X >{\hsize=0.360\hsize\linewidth=\hsize\raggedright\arraybackslash}X@{}}
+\toprule
+Date & Flagged instruments & Count \\
+\midrule
+June 2025 & APN, BHG, BTI, SOL, VAL & 5 \\
+December 2025 & AGL, BHG, BTI, SOL, SSW & 5 \\
+June 2026 & GLN, PAN, SOL, SSW & 4 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+
+Fourteen instrument-date observations are flagged, spanning nine distinct tickers. Sasol is flagged at all three dates; BHG and BTI at the first two; SSW at the last two. APN and PAN have incomplete eligibility histories, so their unobserved dates cannot be recorded as an absence of a flag. AGL also carries imputed volume. These differences prevent a simple count of repeated flags from establishing persistence of an economic anomaly. No forecast-return test, external event corroboration or calibrated transition null is available for this run.
+
+
+The evidence streams and their interpretation are summarised in Figure~\ref{fig:evidence}.
+
+
+\begin{figure}[htbp]
+\centering
+\diagram{evidence}
+\caption{Interpretation of separate evidence streams. Group movement, feature profiles and distance flags can motivate follow-up, but are not combined into an automatically confirmed anomaly. Stochastic, measurement and surrogate limitations apply to the interpretation.}\label{fig:evidence}
+\end{figure}

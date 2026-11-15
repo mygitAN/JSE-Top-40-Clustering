@@ -1,0 +1,129 @@
+\section{Repeated cross sectional methods}
+
+
+\begin{figure}[htbp]
+\centering
+\diagram{pipeline}
+\caption{Repeated cross-sectional study workflow. The preprocessing reference carries forward, while each date receives a fresh representation and partition.}\label{fig:pipeline}
+\end{figure}
+
+
+\subsection{Scaling and independent fitting}
+
+For feature j, let a(j) and b(j) be its June 2025 minimum and maximum after the declared imputation and transformations. The scaled value at any date is the difference between the observed value and a(j), divided by b(j) minus a(j). Scaling is not clipped. A later observation can therefore exceed one or fall below zero. This preserves a reference scale and avoids using later observations to estimate preprocessing constants, but does not prevent later variance being dominated by one feature.
+
+
+\begin{equation}
+z_{itj}=\frac{x_{itj}-a_j}{b_j-a_j},\qquad
+a_j=\min_{i\in U_{t_1}}x_{it_1j},\quad b_j=\max_{i\in U_{t_1}}x_{it_1j}.
+\label{eq:scale}\end{equation}
+
+For each date and each seed in 42-46, UMAP \citep{mcinnes2018} learns a new two-dimensional representation using three neighbours, minimum distance 0.01, Euclidean input distance and one computational job. Agglomerative clustering then joins groups bottom-up with average linkage under Manhattan distance on the two coordinates, stopping at eight groups. Seed 42 supplies the representative partition and figures. The five fits quantify stochastic sensitivity; their outputs are not pooled into an enlarged sample or a consensus partition.
+
+
+The linkage between groups $G$ and $H$ of two-dimensional coordinates $u_i$ is
+\begin{equation}
+d_{\mathrm{avg},1}(G,H)=\frac{1}{|G||H|}\sum_{i\in G}\sum_{j\in H}\|u_i-u_j\|_1.
+\label{eq:linkage}\end{equation}
+
+\begin{table}[htbp]
+\centering\caption{The study model is distinct from the generic UMAP comparator, which uses ten neighbours and minimum distance 0.1 in the broader comparison grid.}\label{tab:3}
+\footnotesize
+\begin{tabularx}{\linewidth}{@{}>{\hsize=0.500\hsize\linewidth=\hsize\raggedright\arraybackslash}X >{\hsize=1.500\hsize\linewidth=\hsize\raggedright\arraybackslash}X@{}}
+\toprule
+Stage & Fixed specification \\
+\midrule
+Scaling & MinMax; fitted 30 June 2025; clip=False \\
+UMAP & 2 components; n\_neighbors=3; min\_dist=0.01; Euclidean; n\_jobs=1 \\
+Agglomerative clustering & 8 groups; average linkage; Manhattan metric on UMAP coordinates \\
+Seeds & 42, 43, 44, 45, 46; representative partition 42 \\
+Software & umap-learn 0.5.12; scikit-learn 1.6.1 \\
+Sensitivity & Cluster counts 2-12; alternative feature representations \\
+Historical comparator & t-SNE: perplexity 5; learning rate 10; 300 iterations; random initialisation; average-Manhattan hierarchy, k=8 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+
+Three neighbours and minimum distance 0.01 were author-specified after exploratory June 2025 analysis. An earlier 36-combination grid preferred minimum distance 0.1. Eight groups, average linkage and Manhattan distance follow the original paper. These settings are pilot-informed, not prospectively registered. Later-date fitting holds the recipe fixed but refits the representation and labels, so the results do not measure out-of-sample predictive performance.
+
+
+\subsection{Quality in two geometries and seed agreement}
+
+Each representative partition is evaluated in both the two-dimensional representation and the eight-dimensional scaled financial space. Silhouette uses within-cluster and nearest-other-cluster Euclidean distances; larger values indicate greater separation. Davies-Bouldin compares within-group dispersion with distances between group centres; smaller values indicate more compact separation. The evaluation distance is Euclidean even though the hierarchy uses Manhattan distance. The two geometries answer different questions and are reported together. DBSCAN comparator scores exclude noise and must be read with coverage.
+
+
+Within each date, five seeds give ten pairwise adjusted Rand indices (ARI). ARI is label-invariant and adjusted for chance agreement; it is not an accuracy against a known financial truth. Its mean summarises variability induced by the embedding seed, conditional on the fixed inputs. The five-seed mean is not a confidence interval, bootstrap, or independent null distribution for temporal changes. Cluster size ranges and singleton counts accompany the quality scores.
+
+
+\subsection{Matching clusters between dates}
+
+Let C be the instruments observed at both adjacent dates. For each earlier group A and later group B, restrict both to C and calculate their Jaccard similarity as the size of their intersection divided by the size of their union. A Hungarian assignment chooses a one-to-one matching that maximises the sum of these similarities. An assigned pair with zero intersection is not retained as a match; that later cluster receives a fresh identifier. Retired identifiers are never reused for unrelated groups.
+
+
+Writing $A_a^C=A_a\cap C$ and $B_b^C=B_b\cap C$, the matching objective is
+\begin{align}
+J_{ab}&=\frac{|A_a^C\cap B_b^C|}{|A_a^C\cup B_b^C|},\\
+\pi^*&\in\operatorname*{arg\,max}_{\pi}\sum_a J_{a,\pi(a)}.
+\label{eq:matching}\end{align}
+The implementation sets empty-union similarities to zero and carries labels only for positive intersections.
+
+\begin{table}[htbp]
+\centering\caption{Reproducible cross-date matching procedure implemented in top40/temporal.py.}\label{tab:4}
+\footnotesize
+\begin{tabularx}{\linewidth}{@{}>{\hsize=0.200\hsize\linewidth=\hsize\raggedright\arraybackslash}X >{\hsize=1.800\hsize\linewidth=\hsize\raggedright\arraybackslash}X@{}}
+\toprule
+Step & Operation \\
+\midrule
+1 & Partition each date independently; retain ticker as the stable security key. \\
+2 & Identify continuing members, entries and exits from date-specific populations. \\
+3 & Build the cluster-by-cluster Jaccard matrix using continuing members only. \\
+4 & Maximise total Jaccard overlap with a one-to-one Hungarian assignment. \\
+5 & Transfer earlier labels only for positive-overlap matches; issue new labels otherwise. \\
+6 & Count a switch only when a continuing instrument has different aligned labels. \\
+7 & Chain the matches for complete three-date histories; leave membership gaps missing. \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+
+Figure~\ref{fig:alignment} illustrates the overlap calculation with an observed matched pair.
+
+
+\begin{figure}[htbp]
+\centering
+\diagram{alignment}
+\caption{Matching clusters with an observed overlap example. Five of the eight earlier group-1 members occupy the later group-1 match. This local example illustrates the similarity calculation; the actual assignment optimises all group pairs jointly.}\label{fig:alignment}
+\end{figure}
+
+
+Temporal ARI is computed directly on the two partitions of continuing members and does not depend on the label matching. Switch counts do depend on matching. A global one-to-one assignment cannot fully represent a split or merger, so the overlap matrix and named member histories remain essential. A label that survives a match is a descriptive continuity identifier, not an invariant economic factor. We use "stable" only for a complete history whose aligned label never changes, and "shifted" when it changes at least once. These terms do not imply unchanged or changed business fundamentals.
+
+
+\subsection{Direct profiles and surrogate interpretation}
+
+For each cluster, we subtract the same-date cross-sectional median from the cluster median for each of the eight scaled features. Positive and negative deviations describe the group relative to its contemporaries in June 2025 reference units. For an instrument that changes group, the reporting tables retain its feature changes, old and new peers, peer retention and destination profile. These directly calculated descriptions form the primary interpretation.
+
+
+\begin{equation}
+\Delta_{ctj}=\operatorname{median}_{i\in G_{ct}}z_{itj}-\operatorname{median}_{i\in U_t}z_{itj}.
+\label{eq:profiles}\end{equation}
+
+An XGBoost classifier is fitted to the unscaled engineered features to reproduce the cluster labels: 150 trees, maximum depth two, learning rate 0.05, full row and column sampling, one job and a multiclass probability objective. Tree SHAP explains the surrogate raw class margins using tree-path-dependent perturbation. Saved attributions are checked for additivity with a maximum tolerance of 0.0001. These attributions explain the surrogate, rather than the UMAP or hierarchy directly, and do not establish causes of group membership.
+
+
+Where the smallest cluster contains at least two members, stratified cross-validation uses the smaller of five folds and the minimum cluster size, with shuffling and the representative seed. Singleton clusters make this out-of-fold fidelity estimate unavailable under the implemented procedure. The measured fidelity is agreement with algorithm-generated labels, not accuracy in forecasting a financial outcome. A model that reproduces every training label can still have inadequate fidelity on held-out instruments.
+
+
+\subsection{Separate financial distance screen}
+
+The screen computes squared Mahalanobis distance from the same-date mean in the eight scaled features using the sample covariance matrix. It is not the predictive Hotelling statistic for a new observation. Under independent multivariate normal sampling, an individual internal distance D squared, multiplied by n divided by (n minus one) squared, has a Beta reference with shape parameters p/2 and (n minus p minus one)/2. Here n=41, p=8 and the nominal upper-tail level is 0.05. A singular or excessively ill-conditioned covariance produces an unestimable result rather than a flag.
+
+
+\begin{align}
+D_{it}^2&=(z_{it}-\bar z_t)^{\mathsf T}S_t^{-1}(z_{it}-\bar z_t),\\
+\frac{n}{(n-1)^2}D_{it}^2&\sim\operatorname{Beta}\!\left(\frac p2,\frac{n-p-1}{2}\right)
+\quad\text{under the idealised normal reference}.
+\label{eq:distance}\end{align}
+
+Those assumptions are doubtful for heterogeneous, overlapping equity cross-sections with clipped and imputed financial variables. The threshold therefore provides a descriptive ranking screen, not calibrated significance or a multiple-testing-controlled anomaly discovery procedure. Cluster isolation, sector divergence, aligned membership movement and financial distance are separate observations. No combined score converts them into a confirmed economic anomaly.

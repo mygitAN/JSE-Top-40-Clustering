@@ -1,0 +1,13 @@
+\begin{tikzpicture}[]
+
+\node[widebox,text width=10.4cm] (input) at (0,0) {Financial inputs and dated membership\\Source corrections and missing-value flags};
+\node[box,text width=3.6cm] (group) at (-4.8,-1.9) {Peer groups\\Aligned label changes\\Membership overlaps};
+\node[box,text width=3.6cm] (profile) at (0,-1.9) {Financial profiles\\Feature changes\\Median deviations};
+\node[box,text width=3.6cm] (screen) at (4.8,-1.9) {Distance screen\\Mahalanobis distance\\Beta reference};
+\draw[arrow](input)--(group);\draw[arrow](input)--(profile);\draw[arrow](input)--(screen);
+\node[widebox,text width=12.2cm,font=\footnotesize] (qualify) at (0,-4.0) {Check seeds, feature sensitivity, cluster sizes and surrogate fidelity.\\SHAP explains a surrogate; sectors provide descriptive context.};
+\draw[arrow](group)--(qualify);\draw[arrow](profile)--(qualify);\draw[arrow](screen)--(qualify);
+\node[widebox,text width=12.2cm,font=\footnotesize,fill=orange!9] (out) at (0,-5.6) {Analyst follow-up candidates\\External validation precedes structural-anomaly or predictive claims.};
+\draw[arrow](qualify)--(out);
+
+\end{tikzpicture}

@@ -1,0 +1,37 @@
+{
+  "numerical_run": "20261115T062631-0c09819ce3c0",
+  "implementation_commit": "98549c660edd410fd74936a03faecadd01f6067b",
+  "figure_order": [
+    "population",
+    "windows",
+    "pipeline",
+    "alignment",
+    "quality",
+    "seed_variability",
+    "flows",
+    "jaccard",
+    "profile0",
+    "profile1",
+    "profile2",
+    "feature_sensitivity",
+    "cluster_count",
+    "evidence"
+  ],
+  "sources": {
+    "population": "data/reference/index_changes.csv; results/longitudinal/umap/cluster_histories.csv",
+    "windows": "docs/method.md; three recorded decision dates",
+    "pipeline": "configs/study.json; top40/features.py; top40/study.py; top40/temporal.py",
+    "alignment": "top40/temporal.py; results/longitudinal/umap/cluster_histories.csv",
+    "quality": "results/model_comparison.csv; results/primary_model_summary.csv",
+    "seed_variability": "results/seed_agreement.csv",
+    "flows": "results/longitudinal/umap/cluster_histories.csv",
+    "jaccard": "results/longitudinal/umap/cluster_histories.csv; top40/temporal.py",
+    "profile0": "results/longitudinal/umap/moves/cluster_profiles.csv",
+    "profile1": "results/longitudinal/umap/moves/cluster_profiles.csv",
+    "profile2": "results/longitudinal/umap/moves/cluster_profiles.csv",
+    "feature_sensitivity": "results/feature_audit/shift_counts.csv, recipe=umap only",
+    "cluster_count": "experiments/runs/20261115T062631-0c09819ce3c0/models/umap/cluster_count_sensitivity.csv; archive checksum verified",
+    "evidence": "docs/method.md; top40/explain.py; top40/models.py; current manuscript evidence boundaries"
+  },
+  "archive_sensitivity_sha256": "9d3539a11bc9dab50fa4863ff0fd36d5f25e95a891e535ed08021d41da4d52ae"
+}

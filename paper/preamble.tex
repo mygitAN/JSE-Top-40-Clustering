@@ -1,0 +1,42 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=24mm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs,tabularx,array}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,calc}
+\usepackage{pgfplots}
+\usepgfplotslibrary{groupplots}
+\pgfplotsset{compat=1.18}
+\usepackage[font=small,labelfont=bf]{caption}
+\usepackage{placeins}
+\usepackage{microtype}
+\usepackage{titlesec}
+\titlespacing*{\section}{0pt}{2.5ex plus 1ex}{1.3ex}
+\titlespacing*{\subsection}{0pt}{2ex plus .5ex}{1ex}
+\usepackage[round,authoryear]{natbib}
+\usepackage[hidelinks,breaklinks]{hyperref}
+\usepackage{xurl}
+\definecolor{steel}{HTML}{315D7B}
+\definecolor{rust}{HTML}{AE5939}
+\definecolor{cluster0}{HTML}{347CA8}
+\definecolor{cluster1}{HTML}{BF6D20}
+\definecolor{cluster2}{HTML}{378951}
+\definecolor{cluster3}{HTML}{BE4545}
+\definecolor{cluster4}{HTML}{855AA5}
+\definecolor{cluster5}{HTML}{8B6657}
+\definecolor{cluster6}{HTML}{B85D8B}
+\definecolor{cluster7}{HTML}{64757B}
+\definecolor{cluster8}{HTML}{A39037}
+\definecolor{cluster9}{HTML}{168A94}
+\tikzset{box/.style={draw=steel!70,fill=steel!5,rounded corners=1pt,align=center,text width=3.1cm,minimum height=1.2cm,font=\small,inner sep=6pt},widebox/.style={box,text width=12.4cm,minimum height=1cm},arrow/.style={-{Latex[length=2mm]},thick,draw=steel!80}}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\setlength{\emergencystretch}{2em}
+\renewcommand{\topfraction}{.95}
+\renewcommand{\bottomfraction}{.9}
+\renewcommand{\textfraction}{.05}
+\renewcommand{\floatpagefraction}{.75}
+\newcommand{\diagram}[1]{\resizebox{\linewidth}{!}{\input{figures/#1.tex}}}
