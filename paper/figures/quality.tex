@@ -1,0 +1,6 @@
+\begin{tikzpicture}\begin{axis}[width=.96\linewidth,height=6cm,ybar,bar width=10pt,ymin=0,ymax=.85,ylabel={Mean silhouette},symbolic x coords={Jun25,Dec25,Jun26},xtick=data,xticklabels={June 2025,December 2025,June 2026},legend style={at={(.5,1.02)},anchor=south,legend columns=2,font=\scriptsize},enlarge x limits=.23,nodes near coords,every node near coord/.append style={font=\tiny,/pgf/number format/fixed,/pgf/number format/precision=3},tick label style={font=\small},legend cell align=left]
+\addplot[fill=steel,draw=none] coordinates {(Jun25,0.15133933304897482)(Dec25,0.12415405987895041)(Jun26,0.26651940451976364)};
+\addplot[fill=steel!35,draw=none] coordinates {(Jun25,0.6849985122680664)(Dec25,0.6377832293510437)(Jun26,0.7210139036178589)};
+\addplot[fill=rust,draw=none] coordinates {(Jun25,0.19472383850984754)(Dec25,0.2404887893719181)(Jun26,0.25482197380461025)};
+\addplot[fill=rust!35,draw=none] coordinates {(Jun25,0.5322660803794861)(Dec25,0.5887588262557983)(Jun26,0.6561834812164307)};
+\legend{UMAP financial,UMAP embedding,t-SNE financial,t-SNE embedding}\end{axis}\end{tikzpicture}

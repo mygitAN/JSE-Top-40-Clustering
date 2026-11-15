@@ -1,0 +1,75 @@
+\input{preamble.tex}
+\begin{document}
+\section*{Three cross-sectional study diagram atlas}
+Native TikZ and PGFPlots sources for the revised manuscript. All numerical figures use the saved clean-run tables; schematic diagrams are identified in their captions.
+\clearpage
+\begin{figure}[p]
+\centering
+\diagram{population}
+\caption{Index populations and continuity. The flow population has 39 complete histories; every date-specific fit retains all 41 instruments.}\end{figure}
+\clearpage
+\begin{figure}[p]
+\centering
+\diagram{windows}
+\caption{Dependence across the three cross-sections. Bars depict trailing annual market windows schematically; fundamentals follow their recorded issuer reporting dates, not these uniform windows.}\end{figure}
+\clearpage
+\begin{figure}[p]
+\centering
+\diagram{pipeline}
+\caption{Repeated cross-sectional study workflow. The preprocessing reference carries forward, while each date receives a fresh representation and partition.}\end{figure}
+\clearpage
+\begin{figure}[p]
+\centering
+\diagram{alignment}
+\caption{Matching clusters with an observed overlap example. Five of the eight earlier group-1 members occupy the later group-1 match. This local example illustrates the similarity calculation; the actual assignment optimises all group pairs jointly.}\end{figure}
+\clearpage
+\begin{figure}[p]
+\centering
+\diagram{quality}
+\caption{The same partitions evaluated in two geometries. UMAP has the stronger embedding silhouette at every date; this advantage does not consistently hold in the underlying financial features.}\end{figure}
+\clearpage
+\begin{figure}[p]
+\centering
+\diagram{seed_variability}
+\caption{Ten pairwise adjusted Rand indices from five UMAP seeds at each date. Points are offset horizontally for readability; red segments mark the means. Pairs share fitted partitions and are dependent, so the spread is not a confidence interval or an empirical null for temporal switches.}\end{figure}
+\clearpage
+\begin{figure}[p]
+\centering
+\diagram{flows}
+\caption{Native LaTeX rendering of all 39 complete instrument histories: 19 stable and 20 shifted. Bold tickers change aligned label at least once. APN, MNP, GLN and PAN are excluded only from this complete-history view. Labels identify aligned groups, not industries; vertical positions are layout.}\end{figure}
+\clearpage
+\begin{figure}[p]
+\centering
+\diagram{jaccard}
+\caption{Jaccard overlap among the 40 continuing members in each adjacent comparison. Each cell uses the common eligible universe for that period. Numeric values are given explicitly; a zero denotes no shared continuing member.}\end{figure}
+\clearpage
+\begin{figure}[p]
+\centering
+\diagram{profile0}
+\caption{June 2025 aligned-cluster median deviations from the same-date median, in June 2025 MinMax units. Counts include all 41 date-specific instruments. Colours use the same range across the three figures; gaps in cluster numbers reflect retired identifiers.}\end{figure}
+\clearpage
+\begin{figure}[p]
+\centering
+\diagram{profile1}
+\caption{December 2025 aligned-cluster median deviations from the same-date median, in June 2025 MinMax units. Counts include all 41 date-specific instruments. Colours use the same range across the three figures; gaps in cluster numbers reflect retired identifiers.}\end{figure}
+\clearpage
+\begin{figure}[p]
+\centering
+\diagram{profile2}
+\caption{June 2026 aligned-cluster median deviations from the same-date median, in June 2025 MinMax units. Counts include all 41 date-specific instruments. Colours use the same range across the three figures; gaps in cluster numbers reflect retired identifiers.}\end{figure}
+\clearpage
+\begin{figure}[p]
+\centering
+\diagram{feature_sensitivity}
+\caption{Complete-history outcomes under four feature representations using the UMAP recipe. Each bar contains the same 39 continuously observed instruments; four partial histories are outside every bar. The counts are representation-dependent and are not estimates of true economic change.}\end{figure}
+\clearpage
+\begin{figure}[p]
+\centering
+\diagram{cluster_count}
+\caption{Cluster-count sensitivity redrawn from the archived numerical table for the same clean run. Blue evaluates financial features and red evaluates the embedding. Eight groups remain the historical specification, not a validated natural count.}\end{figure}
+\clearpage
+\begin{figure}[p]
+\centering
+\diagram{evidence}
+\caption{Interpretation of separate evidence streams. Group movement, feature profiles and distance flags can motivate follow-up, but are not combined into an automatically confirmed anomaly. Stochastic, measurement and surrogate limitations apply to the interpretation.}\end{figure}
+\end{document}

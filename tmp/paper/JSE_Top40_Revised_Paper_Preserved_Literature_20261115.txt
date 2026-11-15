@@ -1,0 +1,804 @@
+PAGE 1
+Interpretable Unsupervised Learning for JSE Top 40 Equities:
+A Repeated Cross-Sectional Study of Financial Peer Groups
+A. Nxitywa
+Journal-neutral working manuscript (revision of original SACJ draft)
+15 November 2026
+Evidence snapshot: 39f929e66ac8; archived run20261115T062631-0c09819ce3c0
+Abstract
+This paper investigates whether interpretable unsupervised learning can describe financial
+peer groups and changes in their composition across repeated FTSE/JSE Top 40 cross-
+sections. We examine three decision dates—30 June 2025, 31 December 2025 and 30 June
+2026—with 41 listed instruments (40 economic company groups) at each date. The union
+comprises 43 securities, of which 39 appear at all three dates; hence the study has 123
+instrument-date records but not 123 independent firms. The pilot-informed representation
+comprises eight financial characteristics designed to reduce share-subdivision sensitivity. We
+fit a two-dimensional UMAP embedding followed by average-linkage, Manhattan-distance
+agglomerative clustering into eight groups at each date, using fixed parameters and five random
+seeds. The original paper’s t-SNE/hierarchical specification is retained as a comparator. The
+UMAP clusters have silhouette scores of 0.685, 0.638 and 0.721 in their learned embeddings,
+but only 0.151, 0.124 and 0.267 in the scaled financial features. Jaccard-aligned memberships
+identify 15 and 11 changes among 40 continuing securities in adjacent periods; across the
+39 continuously observed securities, 19 remain in their aligned group throughout and 20
+shift at least once. These changes are descriptive, not independently validated structural or
+economic anomalies. Historical source reconstruction, small cluster sizes, seed sensitivity and
+incomplete external validation constrain inference. The study supplies a transparent workflow
+for repeated equity screening while showing why visually separated maps are insufficient
+evidence of meaningful financial groups.
+Keywords: equity screening; JSE Top 40; clustering; UMAP; temporal membership; Jaccard
+similarity; financial feature engineering; interpretability.Status of this manuscript: journal-
+neutral working draft; derived from an exploratory, retrospective dataset. The text does not
+represent a submission-ready or point-in-time-certified empirical finding.
+1 Introduction
+Financial markets generate multivariate data that are difficult to interpret using sector labels
+alone. Equity analysts commonly organise companies by sector classification, but firms within
+the same sector can differ in risk, liquidity, valuation, return behaviour and scale. Conversely,
+companies in different sectors may behave similarly because they share economic drivers, investor
+sentiment, balance-sheet structures or exposure to market cycles. These cross-sector relationships
+can be useful for portfolio screening, risk assessment and deeper analyst investigation.
+Much of the machine learning literature in stock-market analysis focuses on supervised prediction,
+especially forecasting prices, returns or buy-sell signals. Such tasks are difficult because stock
+prices are noisy, non-stationary and influenced by macroeconomic news, firm announcements,
+1
+
+PAGE 2
+liquidity changes and behavioural factors. A complementary question is not whether a model
+can predict the next price, but whether it can reveal hidden structure in a market at a point
+in time. This question is well suited to unsupervised learning because no outcome labels are
+required during model fitting.
+This article studies the Johannesburg Stock Exchange (JSE) Top 40 as a South African emerging-
+market case. The JSE, established in 1887, is a major African equity exchange. The JSE
+Top 40 contains large, liquid companies across multiple sectors but remains small enough
+for detailed post-clustering interpretation. The objective is not to produce an automated
+trading rule. It is to evaluate whether a transparent unsupervised learning pipeline can identify
+coherent financial peer groupings and describe how those relationships differ across decision
+dates. This is important because several JSE Top 40 firms have global revenue, commodity,
+banking, telecommunications or retail exposure, making sector groupings useful but incomplete
+descriptions of multivariate financial similarity. In this repeated study, sector labels serve as an
+external descriptive comparator, not as verified historical ground truth.
+The approach proposed by the paper is fourfold. First, we examine financial characteristics
+and index membership at three decision dates: 30 June 2025, 31 December 2025 and 30 June
+2026. Second, we apply one pilot-informed UMAP–hierarchical pipeline, retaining the previous
+paper’s t-SNE–hierarchical configuration as a comparator and reporting clustering quality both
+in the original scaled financial-feature space and in the reduced map. Third, we match clusters
+across adjacent dates using continuing-member Jaccard overlap, report the results for all 41
+instruments per date, and trace complete histories for the 39 instruments present throughout.
+Fourth, we examine directly observable cluster profiles and feature differences, with surrogate
+SHAP and a separate multivariate-distance screen treated as qualified descriptive evidence rather
+than causal explanations or confirmed anomalies. The research question is:How consistently can
+interpretable unsupervised learning identify financial peer groups within the JSE Top 40, and
+what descriptive changes in peer-group composition and measured financial characteristics occur
+across repeated cross-sections?
+The article is positioned as exploratory financial data mining rather than predictive modelling. It
+does not claim to forecast future returns, determine fair value or generate a trading strategy. Its
+purpose is to show how a reproducible unsupervised workflow can support analyst attention by
+highlighting financial similarity patterns and changes in peer-group relationships, while acknowl-
+edging the sensitivity of these patterns to feature design, model fitting and data provenance.
+Section 2 reviews related work, Section 3 describes the dated universe and inputs, Section 4 gives
+the method, Section 5 presents the empirical results, Section 6 discusses their implications, and
+Section 7 concludes.
+2 Related Work
+2.1 Unsupervised learning in financial markets
+Unsupervised learning is used when the goal is to discover structure rather than predict a known
+target. Clustering groups assets that are similar under a chosen feature representation and
+distance measure. In finance, this allows assets to be compared on returns, volatility, liquidity,
+valuation and fundamentals without assuming that industry labels fully describe behaviour
+Greene et al. (2008). Prior studies show that clustering can identify market regimes, volatility
+conditions and cross-asset relationships. Barradas et al. used PCA and K-Means to detect
+stock-market conditions associated with volatility Barradas et al. (2023). Chen et al. found that
+return-based commodity clusters aligned with market categories, while volatility-based clusters
+identified distress periods Chen et al. (2021). Leon et al. used agglomerative clustering to study
+how global equity-market structure changed after the global financial crisis León et al. (2017).
+2
+
+PAGE 3
+Clustering also appears in portfolio-management and trading contexts. Lim and Ong used shape-
+based clustering for Singapore stocks and argued that price-pattern groupings can supplement
+industry-based diversification Lim and Ong (2021). Cuomo et al. proposed an unsupervised
+framework for market-neutral portfolios Cuomo et al. (2022). Unlu and Xanthopoulos combined
+ensemble clustering with modern portfolio theory to reduce clustering variance Ünlü and Xan-
+thopoulos (2021). Han et al. used agglomerative clustering for pairs trading Han et al. (2023),
+and Nair et al. clustered stock price time series to produce trading recommendations Nair et al.
+(2017). These studies show that clustering can reveal economically meaningful groupings, but
+they also underline the need for interpretation and validation: useful clusters are not necessarily
+self-explanatory.
+2.2 Anomaly detection, validation and interpretability
+Anomaly detection in finance matters because outlying observations may reflect fraud, instability,
+unusual liquidity, structural change, hidden risk or unusual opportunity Ahmed et al. (2016).
+Ahmed et al. show that local and clustering-based outlier methods can be useful in financial-
+market datasets Ahmed et al. (2017). However, an anomaly is not automatically a negative
+signal; in equity analysis it may reflect sector exposure, capital structure, global revenue exposure,
+growth expectations or recent operational stress. Interpretable anomaly-detection methods have
+therefore been proposed to help explain why a firm is flagged Cheong et al. (2021).
+Cluster validation is difficult because unsupervised learning does not learn from labelled outcomes.
+Internal metrics such as the Silhouette Score and Davies-Bouldin Index are widely used because
+they measure compactness and separation. A higher Silhouette Score implies that observations
+are closer to their assigned cluster than to alternative clusters Rousseeuw (1987); a lower Davies-
+Bouldin Index implies that the clusters are well separated and compact Davies and Bouldin (1979).
+Comparative studies caution that no single validation index is sufficient across all settings, so
+multiple metrics should be used, as different indices capture distinct aspects of quality Arbelaitz
+et al. (2013); Vendramin et al. (2010). Desirable results show both within-cluster homogeneity
+and clear separation between clusters, reflected jointly in a high Silhouette Score and a low
+Davies-Bouldin Index. Where a credible external classification exists, it can also serve as a
+post-hoc ground-truth benchmark. Here, official JSE sector classification plays that role.
+Interpretability is particularly important in financial applications because decision-makers need
+to understand why assets are grouped together. SHAP (SHapley Additive exPlanations) values,
+derived from cooperative game theory, provide consistent feature-attribution scores and are
+widely used to explain complex machine-learning models. Merrick and Taly (2020); Rozemberczki
+et al. (2022). In this study, SHAP is applied after clustering by training a surrogate classifier to
+predict cluster membership from the original variables. The goal is not only to cluster equities
+but to explain whether groupings are driven by size, liquidity, valuation, volatility, recent return
+or combinations of these variables.
+The South African equity market remains underrepresented in this literature. Existing studies
+often focus on larger international markets, use a narrow PCA/K-Means pipeline or stop at
+visual cluster explanation Nourahmadi et al. (2022). The gap addressed here is the need for
+a compact, interpretable and measurable unsupervised learning workflow for a South African
+equity universe.
+3
+
+PAGE 4
+3 Study population, data and provenance
+3.1 Three decision-date populations
+The research uses data observed or reconstructed for 30 June 2025 (t1), 31 December 2025 (t2)
+and 30 June 2026 (t3). Each is adecision date, not a six-month averaging period. The original
+data table contains 123 security-date rows, but securities recur and consecutive trailing annual
+windows overlap. We consequently make no independence claim based on a pooled sample size
+of 123.
+Table 1: Universe reconciliation. Entries and exits are membership events, not ordinary peer-group
+changes.
+Decision date Instruments Economic groups Membership change since prior date
+30 June 2025 41 40 Initial observed cross-section
+31 December 2025 41 40 GLN in; APN out
+30 June 2026 41 40 PAN in; MNP out
+Across all three 43 unique — 39 instruments continuously present
+The two Investec security lines (INL, INP) represent one dual-listed economic group. Both remain
+as distinct instrument observations; group counts and instrument counts are never conflated.
+There are 40 continuing securities between each adjacent pair and 39 securities present atall three
+dates. A full three-date Sankey-style flow therefore illustrates the 39 continuous instruments; a
+separate population accounting retains the four securities with partial membership. Figure 1
+makes the distinction explicit.
+41
+instruments
+40 economic groups
+30 Jun 2025
+41
+instruments
+40 economic groups
+31 Dec 2025
+41
+instruments
+40 economic groups
+30 Jun 2026
+GLN in / APN out PAN in / MNP out
+43 unique tickers overall  |  39 present at all three dates
+Figure 1: Cross-sectional versus continuously observed populations. All three snapshots contain 41
+security lines; the restricted flow population contains 39.
+Membership is reconciled against the June 2025, September 2025, December 2025, March 2026
+and June 2026 FTSE/JSE quarterly reviews, recorded indata/reference/index_changes.csv
+in the versioned study. The June 2025 review added Northam (NPH) and removed Glencore
+before the first observation. The September 2025 review reintroduced Glencore and removed
+Aspen; December 2025 made no reported Top 40 change. The March 2026 review admitted Pan
+African Resources and removed Mondi; June 2026 made no reported Top 40 change. The “no
+change” evidence for December 2025 and June 2026 includes secondary-source corroboration
+rather than fully inspected official review documents, and the June 2025 official notice was not
+directly inspected in the source audit. These evidence limits are maintained rather than silently
+upgraded.
+4
+
+PAGE 5
+3.2 Financial input design and corrections
+The archived original specification used ten quantitative variables. Thecurrent study results
+instead use the explicitly pilot-informed, eight-featureinvariant8 representation (Table 2),
+designed to reduce share-basis dependence and skewness. The five market-related measures are
+retained, while size, revenue-to-capitalisation and trading activity are expressed on transformed
+or ratio scales. The eight-feature study must not be presented as a direct replication of the
+earlier eleven-feature SACJ experiment.
+T able 2: Eight variables in the present pilot-informed financial representation.
+Feature Definition and reporting qualification
+One-year price return Split-adjusted change in price over the trailing twelve months, excluding cash divi-
+dends.
+Beta Estimated slope against daily J203 market returns over the trailing year.
+Annualised volatility Daily-return sample standard deviation multiplied by
+√
+252.
+Dividend yield Trailing cash dividends relative to the security’s close, subject to source and currency
+conventions.
+Earnings yield EPS divided by close and clipped using June-2025 reference percentiles; consistency
+of historical EPS/price share bases remains a source-audit requirement.
+Log market capitalisation log10(market cap) in rand; the two Investec lines use line-specific counts.
+Log revenue/capitalisation log10(revenue/market cap ), subject to sector-specific revenue definitions and dual-
+listed group treatment.
+Log share turnover log10(average daily volume /shares outstanding ) after documented basis corrections;
+JSE-only volume does not measure global turnover.
+The source CSV and provenance workbook are preserved unchanged; corrections are represented
+in dated reference files and derived columns. Naspers’ five-for-one share subdivision during
+2025 required alignment of share, EPS and trailing-volume units. The current feature pipeline
+separately corrects mixed-basis average volume in December 2025 and June 2026. The two
+Investec lines originally inherited a combined share count; issuer disclosures are used to allocate
+the group total between lines, although the December 2025 allocation is interpolated and the
+source total itself remains reconstructed. Reinet fundamentals are model-imputed, and two
+historical Anglo American volume observations use the June-2025 median. These remain explicit
+data-quality limitations, not hidden row exclusions.
+The historical market series, some historical shares/capitalisation and legacy sector categories
+are retrospectively reconstructed, rather than fully certified as values observable to an investor
+on each decision date. The legacy eight-category sector label is reserved for post-hoc comparison,
+never used to fit or choose clusters. In the preserved Related Work section, the phrase “ground
+truth describes the predecessor study’s proposed comparator; in the present empirical study
+these labels are not independently verified historical classifications and must not be interpreted
+as an authoritative truth set. The manuscript’s empirical conclusions remain descriptive and
+conditional on those data.
+4 Research methods
+4.1 Frozen cross-date preprocessing and primary model
+Each variable is scaled using MinMax parameters estimated from the 41 instruments at 30 June
+2025. The same scaling is applied, without clipping, at the later dates; later values can thus
+lie outside [0, 1]. This preserves a common numeric reference but does not guarantee that one
+feature contributes the same share of variance at every date. The source archive reports feature
+dominance and comparison with the original ten-feature, log-size ten-feature and market-only
+5
+
+PAGE 6
+five-feature variants. Scores computed in different feature spaces are not directly compared as
+though their units were common.
+The current study model is UMAP (McInnes et al., 2018) in two dimensions withn_neighbors=3,
+min_dist=0.01, Euclidean input distance, followed by AgglomerativeClustering on those
+coordinates with eight groups, average linkage and Manhattan distance. The implementation
+uses umap-learn 0.5.12 and scikit-learn 1.6.1 . Seeds 42–46 are fitted independently on
+each date, with seed 42 reported as the representative partition. The model parameters do not
+change between dates, but the representation and partition arerefitted to each cross-section, so
+this is not out-of-sample prediction.
+T able 3: Frozen settings for the current study model; historical t-SNE pipeline retained as comparison.
+Stage Study choice
+Input features Eight invariant8 financial variables
+Scaling June 2025 MinMax reference, reused unchanged
+UMAP 2 components; 3 neighbours; minimum distance 0.01; Euclidean; one job
+Clustering Eight groups; average linkage; Manhattan metric
+Stochastic sensitivity Five seeds: 42, 43, 44, 45, 46
+Baseline comparator t-SNE (perplexity 5, learning rate 10, 300 iterations) followed by eight-group
+average-Manhattan hierarchy
+Quality reporting Silhouette and Davies–Bouldin in both 2D embedding and eight-dimensional
+scaled financial space
+The specific UMAP settingmin_dist=0.01 comes from an author-specified exploratory June-2025
+sweep; an earlier 36-combination grid preferred 0.1. Thus the final settings werenot prospectively
+registered or uniquely identified by a comprehensive independent validation. The use of eight
+clusters follows the original paper’s reference design and is not proof that the data contain exactly
+eight natural financial groups.
+4.2 Partition comparison, seed agreement and cross-date alignment
+Let si denote the silhouette of securityi computed under an explicitly named Euclidean distance
+geometry. Both the mean silhouette and the Davies–Bouldin index are calculated (i) on the
+two-dimensional representation and (ii) on the same partition evaluated in the scaled financial-
+feature space. Because UMAP and t-SNE can compress nearby observations and alter global
+geometry, large embedding-space scores are presented as a property of the representation rather
+than direct validation of economic peer structure.
+Five-seed robustness is summarised using all pairwise Adjusted Rand Indices (ARI) between
+partitions within a date. For temporal comparison, only instruments present in both adjacent
+snapshots are eligible. Given an old clusterAi and a new clusterBj, the overlap is
+J(Ai, Bj) = |Ai ∩ Bj||Ai ∪ Bj| , (1)
+where both sets are restricted to securities observed at both dates. A Hungarian assignment
+matches clusters using Jaccard overlap; zero-overlap groups receive new descriptive identifiers.
+This avoids assuming that arbitrary numeric cluster IDs have constant economic meaning. Entry
+and exit events are never interpreted as regular peer-group switches.
+A security is recorded asshifted when it moves to a different Jaccard-aligned cluster. This
+indicator alone cannot distinguish financial change from re-fitting noise. Same-date seed stability
+is the only available run-level sensitivity measure; a dedicated perturbation-based structural
+noise floor and external economic co-movement test remain future validation tasks.
+6
+
+PAGE 7
+4.3 Interpretation and distance screening
+Cluster definitions are summarised by the difference between their median financial features and
+the same-date cross-sectional medians, expressed in the frozen June-2025 scaling. Such profiles
+are descriptive properties of the groups. An XGBoost classifier approximates the cluster labels
+for optional SHAP-based interpretation (Merrick and Taly, 2020); its classification fidelity is
+disclosed out of sample wherever estimable. Low fidelity does not allow strongly worded SHAP
+explanations.
+A separate exploratory financial-feature distance screen uses squared Mahalanobis distance and a
+reference based on the internal individual-distance beta distribution under idealised multivariate
+normal assumptions. Heterogeneous equity cross-sections and imputed or clipped financial data
+do not justify interpreting these flags as calibrated hypothesis-test discoveries. Sector mismatch,
+cluster isolation, peer-group movement and multivariate distance are kept distinct; the present
+paper does not claim confirmed economic outliers from their conjunction.
+5 Results
+5.1 What the clustering metrics establish
+Table 4 reports the current eight-feature study’s representative-seed results. The embedding-space
+silhouette ranges from 0.638 to 0.721, compared with 0.124 to 0.267 when thesame partitions
+are evaluated in their financial-feature space. This is a substantial difference. It means the
+apparent geometric separation in the low-dimensional map cannot be presented as equally strong
+separation among the underlying company characteristics.
+T able 4: Current UMAP–hierarchical study model: two geometries, five-seed agreement and cluster sizes.
+“OOF” denotes surrogate out-of-fold fidelity, not predictive accuracy for financial outcomes.
+Date S8D DB8D S2D DB2D Mean seed ARI Singletons Largest OOF
+Jun 2025 0.151 1.153 0.685 0.385 0.846 0 9 0.439
+Dec 2025 0.124 1.049 0.638 0.268 0.892 2 8 n.e.
+Jun 2026 0.267 1.059 0.721 0.355 0.738 0 8 0.707
+Figure 2 provides the analogous comparison with the earlier paper’s t-SNE/hierarchical recipe,
+run on thesame current input specification. The UMAP pipeline yields higher two-dimensional
+silhouette values on all three dates (0.685 versus 0.532, 0.638 versus 0.589, and 0.721 versus
+0.656). In the original financial geometry, t-SNE is higher in June 2025 (0.195 versus 0.151)
+and December 2025 (0.240 versus 0.124), while UMAP is marginally higher in June 2026 (0.267
+versus 0.255). The comparison therefore does not justify a blanket claim that the UMAP model
+identifies better financial clusters.
+The December 2025 representative UMAP partition contains two single-member clusters, while
+the June 2025 and June 2026 representative partitions contain none. These observations are
+model-conditional, not proof that two companies became economically isolated. The mean
+seed-to-seed ARI is 0.846, 0.892 and 0.738, respectively, so the later partition also shows greater
+sensitivity to random-seed variation. Figure 3 displays both qualifications.
+5.2 Membership continuity and peer-group movement
+There are 40 continuing securities in each adjacent comparison, with one market-index entry and
+one exit. Among these 40, 15 change Jaccard-aligned cluster membership from June to December
+7
+
+PAGE 8
+Jun 2025 Dec 2025 Jun 2026
+0.0
+0.1
+0.2
+0.3
+0.4
+0.5
+0.6
+0.7
+0.8Silhouette score (higher better)
+0.15
+0.19
+0.12
+0.24 0.27 0.25
+Original scaled financial features
+Jun 2025 Dec 2025 Jun 2026
+0.0
+0.1
+0.2
+0.3
+0.4
+0.5
+0.6
+0.7
+0.8Silhouette score (higher better)
+0.68
+0.53
+0.64
+0.59
+0.72
+0.66
+Two-dimensional representation
+UMAP + hierarchy (study) t-SNE + hierarchy (original recipe)
+Figure 2: Comparison of the chosen UMAP/hierarchical pipeline (orange) with the original pa-
+per’s t-SNE/hierarchical recipe (blue). The left panel measures the clusters in the scaled financial
+features, whereas the right measures them in each learned 2D embedding. Original repo diagram:
+results/model_quality_*.png; values fromresults/model_comparison.csv.
+Jun 2025 Dec 2025 Jun 2026
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0Mean pairwise ARI
+0.846
+0.892
+0.738
+Across five random seeds
+Jun 2025 Dec 2025 Jun 2026
+0
+1
+2
+3Singleton clusters
+Representative seed (42)
+Figure 3: Mean pairwise ARI across five UMAP seeds and the number of singleton groups in each
+representative fit. Stability within the fitted model does not substitute for data perturbation or economic
+validation.
+2025, and 11 change between December 2025 and June 2026. The label-invariant temporal ARI
+values are 0.377 and 0.590, respectively (Table 5). Thus the second period is more similar by this
+partition-level measure, but it remains a descriptive difference between refitted cross-sections.
+Figure 4 traces the 39 instruments which appear at all three decision dates: 19 retain a single
+aligned label across the study and 20 change label at least once. Importantly, the chart’s title
+is not evidence that the index contained 39 constituents. Aspen and Mondi are visible in the
+two-date observations during which they were eligible; Glencore and Pan African Resources enter
+at their effective review dates. Full-population statistics and per-date cluster summaries always
+retain all 41 instrument rows.
+Figure 5 depicts the actual membership overlaps underlying the alignment. For example, the
+continuing-member Jaccard of one of the larger June-to-December groups is 0.62, whereas other
+pairs are appreciably lower. These similarities are calculated from the common members only
+and do not assign an artificial change to a firm that entered or exited the index.
+8
+
+PAGE 9
+30 June 2025 31 December 2025 30 June 2026
+39 continuous instruments; 19 stable, 20 shifted (Jaccard/Hungarian aligned)
+ABG
+GRT
+INL
+INP
+NED
+NRP
+OMU
+VAL
+AGL
+BID
+BVT
+MRP
+SHP
+SOL
+WHL
+ANG
+DSY
+GFI
+HAR
+MTN
+OUT
+PPH
+ANH
+BHG
+CFR
+PRX
+BTI
+FSR
+SBK
+SLM
+VOD
+CLS
+REM
+RNI
+CPI
+NPN
+IMP
+NPH
+SSW
+ABG
+FSR
+OMU
+SBK
+SLM
+VOD
+AGL
+CPI
+DSY
+MTN
+NPN
+REM
+RNI
+ANG
+GFI
+HAR
+IMP
+NPH
+SSW
+VAL
+ANH
+BHG
+BTI
+CFR
+PRX
+BID
+BVT
+CLS
+MRP
+PPH
+SHP
+SOL
+WHL
+GRT
+INL
+INP
+NED
+NRP
+OUT
+ABG
+GRT
+INL
+INP
+NED
+NRP
+OMU
+AGL
+MTN
+SOL
+ANG
+GFI
+HAR
+IMP
+NPH
+SSW
+VAL
+ANH
+BHG
+BTI
+CFR
+BID
+BVT
+CLS
+MRP
+PPH
+RNI
+SHP
+WHL
+CPI
+DSY
+FSR
+REM
+SBK
+NPN
+PRX
+OUT
+SLM
+VOD
+Figure 4: Reconstructed manuscript rendering of the repository’s Jaccard-aligned
+UMAP cluster-flow diagram, using the same 39 continuously observed instruments as
+results/longitudinal/umap/cluster_flows.png. Bold tickers change aligned group at least
+once. Colours identify descriptive aligned clusters, not industries; crossing lines are peer-group changes,
+not proof of anomalies. APN, MNP, GLN and PAN are excludedonly from the full three-date flow
+because their membership histories are incomplete.
+9
+
+PAGE 10
+T able 5: Continuing-member comparisons. The flow diagram restricts to 39 complete three-date histories
+and is not the universe size in any snapshot.
+Period Continuing Entries Exits Shifted / temporal ARI
+Jun–Dec 2025 40 1 1 15 / 0.377
+Dec 2025–Jun 2026 40 1 1 11 / 0.590
+0 1 2 3 4 5 7 8
+Later aligned cluster
+0
+1
+2
+3
+4
+5
+6
+7 Earlier aligned cluster
+0.14 0.07 0.27 0.17
+0.62 0.07 0.17
+0.60 0.07 0.12
+0.43
+0.80
+0.11 0.57
+0.10 0.25
+0.29
+June to December 2025
+0 1 2 3 4 5 7 9
+Later aligned cluster
+0
+1
+2
+3
+4
+5
+7 Earlier aligned cluster
+0.33
+0.71
+0.78 0.09
+1.00
+0.80 0.17
+0.29 0.18 0.22
+0.07 0.30 0.33 0.11
+December 2025 to June 2026
+0.0
+0.2
+0.4
+0.6
+0.8
+1.0
+Jaccard overlap among continuing instruments
+Figure 5: Jaccard overlap of aligned peer groups among the 40 continuing instruments in each adja-
+cent comparison. Reconstructed from the archived membership histories; equivalent source diagram:
+results/longitudinal/umap/jaccard.png.
+5.3 What changed in the financial profiles?
+The clustering output includes company names and feature profiles, which allow a limited
+descriptive interpretation. Consider the precious-metals grouping. In June 2025, AngloGold
+Ashanti, Gold Fields and Harmony appeared with a wider set of securities; in December 2025
+they were grouped with Impala Platinum, Northam, Sibanye-Stillwater and Valterra. That
+December group has a relatively high one-year return, beta and volatility in the current scaled
+inputs. Its composition is largely retained in June 2026, and the newly admitted Pan African
+Resources is observed within that group. These statements describe recorded attributes and
+memberships, not a causal effect of commodity prices or evidence of a future return signal.
+A second informative example is the group containing ANH, BHG and CFR, which is present
+together at all three dates. BTI joins this peer group in December 2025, while PRX shifts
+to a different group by June 2026. The June 2026 cluster median profile has high log market
+capitalisation and low log share turnover relative to the cross-sectional medians. It illustrates
+how a repeated financial-screening procedure can nominate cases for further investigation without
+declaring any company’s inherited industry label incorrect.
+Figure 6 reports the underlying eight-variable median deviations for every June-2026 cluster.
+Profile terms are expressed in units of the frozen June-2025 MinMax reference, with both positive
+and negative values. These direct calculations are easier to verify than individual-class SHAP
+explanations when the surrogate is unstable.
+The surrogate classification model achieves 100% in-sample reproduction of the cluster labels at
+every date but only 0.439 out-of-fold accuracy in June 2025 and 0.707 in June 2026. December
+10
+
+PAGE 11
+1Y return Beta Volatility Dividend
+yield
+Earnings
+yield
+Log market
+cap
+Log revenue
+/ cap
+Log turnover
+Cluster 0
+Cluster 1
+Cluster 2
+Cluster 3
+Cluster 4
+Cluster 5
+Cluster 7
+Cluster 9
+-0.09 -0.05 -0.03 +0.11 +0.01 +0.04 +0.05 -0.12
+-0.00 -0.03 -0.04 +0.36 +0.08 -0.15 +0.00 +0.02
+-0.18 -0.04 -0.01 -0.06 -0.01 -0.15 +0.24 +0.07
++0.13 +0.73 +0.78 -0.00 -0.01 -0.00 -0.03 +0.15
++0.05 -0.18 +0.03 -0.15 -0.03 +0.65 -0.12 -0.64
++0.14 -0.00 -0.05 -0.07 -0.01 +0.28 -0.06 -0.07
++0.41 -0.01 +0.21 -0.28 -0.05 +0.32 +0.20 -0.11
+-0.31 +0.08 +0.15 -0.36 +0.08 +0.43 -0.20 -0.20
+30 June 2026: cluster median minus cross-sectional median
+0.8
+0.6
+0.4
+0.2
+0.0
+0.2
+0.4
+0.6
+0.8
+Difference in June-2025-scaled units
+Figure 6: Signed June-2026 cluster-median deviations from the contemporane-
+ous median in the frozen eight-feature reference scale. The source values are
+results/longitudinal/umap/moves/cluster_profiles.csv. These are multivariate descrip-
+tions, not causal feature effects.
+OOF accuracy is not estimable because two clusters contain only one instrument. We therefore
+do not use surrogate SHAP bars to assert the cause of movements; company feature histories
+and matched peer medians are the principal explanatory outputs.
+5.4 Preliminary financial distance screen and absence of external validation
+The saved financial-feature distance screen identifies candidate unusual profiles at each date. Its
+current descriptive flags include five security-date observations in June 2025, five in December
+2025 and four in June 2026. These should not be read as independent discovery events or
+calibrated economic anomalies: the threshold depends on a distributional reference that does
+not automatically hold for these securities, and several inputs have reconstruction or imputation
+caveats. Likewise, the three-date “emerging”, “persistent” and “resolving” vocabulary is available
+as a reporting language but does not itself demonstrate a robust economic phenomenon.
+No forward-return co-movement benchmark, bootstrap-calibrated transition noise floor, or fully
+point-in-time-certified financial source has been established for the current run. These absences
+explicitly constrain the results that can be claimed.
+6 Discussion
+The central methodological finding is a disagreement between attractive two-dimensional maps
+and the considerably weaker geometry of the underlying financial-feature space. This is not
+a failure of plotting: local representation algorithms deliberately trade aspects of the original
+geometry for visibility and local structure. It is, however, a reason to avoid interpreting compact
+coloured islands as validated financial peer groups. The chosen UMAP representation uses only
+three neighbours and a small minimum-distance setting, both of which emphasise fine-grained
+local structure. A reviewer should be shown the original paper’s t-SNE comparator and the
+financial-feature silhouette in the same figure, as in Fig. 2.
+11
+
+PAGE 12
+The study’s longitudinal analysis does provide more than the original single-window evaluation.
+By using effective-dated membership and a reproducible Jaccard assignment, it separates security
+entry/exit from existing-security peer-group movement and avoids mechanically treating unrelated
+integer cluster labels as changes. But the 19 stable and 20 shifted histories are conditional on the
+chosen feature representation, fixedk = 8, UMAP seeds and matching procedure. The observed
+seed ARI provides a warning about fitting variability; it is not a perturbation-based bound on
+the false discovery of a transition. The adjacent periods also share six months of trailing market
+information and often the same issuer accounts.
+Data definitions are consequential. Raw share count and unadjusted EPS can change mechanically
+through subdivisions; the current feature design removes the direct raw share-count input and uses
+corrected scale-free ratios, but residual corporate-action, cross-listing and as-of-data risks remain.
+Notably, JSE-only volume for primarily overseas listings is an incomplete measure of total trading
+liquidity, and the Investec December share allocation contains an interpolation. These concerns
+motivate reporting alternate feature sets and not presenting one observed movement—especially
+where share-count adjustments are large—as unambiguous economic change.
+Several choices are pilot-informed rather than prospectively selected. In particular, the use of
+UMAP with three neighbours and minimum distance 0.01 reflects earlier exploration, and the
+eight-cluster count is retained for comparison with the predecessor study rather than proven by
+an independent count-selection procedure. We avoid calling the legacy sector labels “ground
+truth” because their historical classification basis remains partly reconstructed. A stronger
+contribution would additionally show a null reference for group structure, perturbation stability
+for firm transitions, and external economic relevance, such as subsequent within-cluster return
+co-movement relative to sector-defined and matched random groupings. Those tests have not yet
+been completed and are not claimed here.
+The contribution that survives these qualifications is a transparent, repeatablescreening and
+reporting process: a fixed date-effective universe; declared features and evidence flags; explicit
+double-geometry quality reporting; reproducible peer-group alignment; and company-level profile
+comparisons. Its immediate utility is to prioritise questions for analyst scrutiny, not to automate
+investment decisions. This is the strongest defensible positioning for the present empirical
+evidence.
+7 Conclusion
+We applied an interpretable repeated cross-sectional clustering workflow to three FTSE/JSE Top
+40 decision dates with 41 listed instruments at each date. The full universe comprises 43 ticker
+lines, 39 of which are observed throughout. The Jaccard-aligned UMAP/hierarchical analysis
+describes 19 continuously observed instruments that retain their aligned financial peer group and
+20 that change group at least once. These descriptive movements warrant attention but do not
+establish economically meaningful structural anomalies. Despite high UMAP embedding-space
+silhouettes, financial-feature silhouettes remain modest, and the temporal outputs are sensitive
+to representation and data provenance. The current evidence supports a transparent screening
+methodology, not return predictability or validated persistent anomalies. The next scientific
+milestone is independent point-in-time data verification, a perturbation-based noise floor for
+peer-group changes and an external financial co-movement benchmark. The article remains a
+working, journal-neutral manuscript pending those tests.
+12
+
+PAGE 13
+References
+Mohiuddin Ahmed, Abdun Naser Mahmood, and Md Rafiqul Islam. A survey of anomaly
+detection techniques in financial domain.Future Generation Computer Systems, 55:278–288,
+2016. doi: 10.1016/j.future.2015.01.001.
+Mohiuddin Ahmed, Nazim Choudhury, and Shahadat Uddin. Anomaly detection on big data
+in financial markets. In2017 IEEE/ACM International Conference on Advances in Social
+Networks Analysis and Mining, pages 998–1005, 2017. doi: 10.1145/3110025.3119402.
+Olatz Arbelaitz, Ibai Gurrutxaga, Javier Muguerza, Jesús M. Pérez, and Iñigo Perona. An
+extensive comparative study of cluster validity indices.Pattern Recognition, 46(1):243–256,
+2013. doi: 10.1016/j.patcog.2012.07.021.
+Ana Barradas, Rosa-Maria Canton-Croda, and David-Eduardo Gibaja-Romero. Identification of
+patterns in the stock market through unsupervised algorithms.Analytics, 2(3):592–603, 2023.
+doi: 10.3390/analytics2030033.
+James Ming Chen, Mobeen Ur Rehman, and Xuan Vinh Vo. Clustering commodity markets
+in space and time: Clarifying returns volatility and trading regimes through unsupervised
+machine learning. Resources Policy, 73:102162, 2021. doi: 10.1016/j.resourpol.2021.102162.
+Min-Soo Cheong, Ming-Chang Wu, and Shih-Han Huang. Interpretable stock anomaly detection
+based on spatio-temporal relation networks with genetic algorithm.IEEE Access, 9:68302–
+68319, 2021. doi: 10.1109/ACCESS.2021.3077067.
+Salvatore Cuomo, Francesco Gatta, Fabio Giampaolo, Ciro Iorio, and Francesco Piccialli. An
+unsupervised learning framework for market-neutral portfolio.Expert Systems with Applications,
+192:116308, 2022. doi: 10.1016/j.eswa.2021.116308.
+David L. Davies and Donald W. Bouldin. A cluster separation measure.IEEE Transactions on
+Pattern Analysis and Machine Intelligence, PAMI-1(2):224–227, 1979. doi: 10.1109/TPAMI.
+1979.4766909.
+Derek Greene, Pádraig Cunningham, and Rudolf Mayer. Unsupervised learning and clustering.
+In Machine Learning Techniques for Multimedia, pages 25–71. Springer, 2008. doi: 10.1007/
+978-3-540-75171-7\_3.
+Chao Han, Zhaoyang He, and A. J. W. Toh. Pairs trading via unsupervised learning.European
+Journal of Operational Research, 307(2):929–947, 2023. doi: 10.1016/j.ejor.2022.09.041.
+Carlos León, Gwang-Young Kim, Constanza Martínez, and Dowe Lee. Equity markets clustering
+and the global financial crisis.Quantitative Finance, 17(12):1905–1922, 2017. doi: 10.1080/
+14697688.2017.1357970.
+T. Lim and C. S. Ong. Portfolio management: A financial application of unsupervised shape-
+based clustering-driven machine learning method.International Journal of Computing and
+Digital Systems, 10(1):257–269, 2021. doi: 10.12785/ijcds/100124.
+Leland McInnes, John Healy, and James Melville. UMAP: Uniform manifold approximation and
+projection for dimension reduction, 2018.
+Luke Merrick and Ankur Taly. The explanation game: Explaining machine learning models
+using shapley values. InMachine Learning and Knowledge Extraction, volume 12279 ofLecture
+Notes in Computer Science, pages 17–38. Springer, 2020. doi: 10.1007/978-3-030-57321-8\_2.
+13
+
+PAGE 14
+B. B. Nair, P. K. S. Kumar, N. R. Sakthivel, and U. Vipin. Clustering stock price time series
+data to generate stock trading recommendations: An empirical study.Expert Systems with
+Applications, 70:20–36, 2017. doi: 10.1016/j.eswa.2016.11.002.
+Mohsen Nourahmadi, Fatemeh Rasti, and Hassan Sadeqi. A comparative approach to financial
+clustering models: A study of the companies listed on tehran stock exchange.Iranian Journal
+of Finance, 6(4):31–55, 2022. doi: 10.30699/IJF.2022.303980.1267.
+Peter J. Rousseeuw. Silhouettes: A graphical aid to the interpretation and validation of
+cluster analysis. Journal of Computational and Applied Mathematics, 20(1):53–65, 1987. doi:
+10.1016/0377-0427(87)90125-7.
+Benedek Rozemberczki, Lauren Watson, Peter Bayer, Hao-Ting Yang, Oliver Kiss, Sebastian
+Nilsson, and Rik Sarkar. The shapley value in machine learning.arXiv:2202.05594, 2022. doi:
+10.48550/arXiv.2202.05594.
+R. Ünlü and P. Xanthopoulos. A reduced variance unsupervised ensemble learning algorithm
+based on modern portfolio theory.Expert Systems with Applications, 180:115085, 2021. doi:
+10.1016/j.eswa.2021.115085.
+Lucas Vendramin, Ricardo J. G. B. Campello, and Eduardo R. Hruschka. Relative clustering
+validity criteria: A comparative overview.Statistical Analysis and Data Mining, 3(4):209–235,
+2010. doi: 10.1002/sam.10080.
+A Reproducibility and source-evidence notes
+Source repository: https://github.com/mygitAN/JSE-Top-40-Clustering, branch
+research/reproducible-review, inspected at commit 39f929e66ac87121728b9776c2b76cc1caffb5e7. The
+reported numerical archive isresults/ from run 20261115T062631-0c09819ce3c0. The primary relevant CSV
+files areresults/model_comparison.csv, results/primary_model_summary.csv, results/seed_agreement.csv,
+results/temporal_agreement.csv, results/longitudinal/umap/cluster_histories.csv and results/
+longitudinal/umap/moves/cluster_profiles.csv. The source diagrams were inspected in the repository; the
+graphics in this manuscript have been redrawn from those saved tables for a compact journal-neutral PDF layout.
+They are not bit-identical exports of the original diagram files.
+Population and source status: data/reference/index_changes.csv records the five quarterly-review events
+and linked evidence. December-2025 and June-2026 no-change reviews are not all supported by directly inspected
+official notices; this must remain disclosed. The June-2025 index change was effective before the first observation.
+The four incomplete security histories are APN (first date only), MNP (first two dates), GLN (last two dates) and
+PAN (last date only). No complete three-date label is assigned to any of these instruments.
+Input uncertainty: The historical workbook is a retrospective reconstruction rather than a fully certified
+strict point-in-time extract; original raw values are not rewritten by the derived feature corrections. The
+source repository documents the Naspers subdivision, mixed-volume adjustment, issuer-specific Investec lines
+and remaining interpolation, Reinet fundamentals and Anglo American volume imputations. Sector labels are a
+contextual legacy eight-category comparator.
+Analysis boundary: Seeds 42–46 describe stochastic consistency; they are not independent observations or a
+bootstrap. A pair of cluster labels that differs after matching does not automatically imply economic structural
+change. Surrogate SHAP explanations are conditional on their measured class fidelity and are not causal. The
+pilot-informed December-2026 prospective follow-up is outside this paper’s current measured results.
+14

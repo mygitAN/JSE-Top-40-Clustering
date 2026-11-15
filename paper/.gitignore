@@ -1,0 +1,7 @@
+# Generated LaTeX files. Edit and version the .tex sources instead.
+build/
+*.aux
+*.log
+*.out
+*.xdv
+*.synctex.gz
