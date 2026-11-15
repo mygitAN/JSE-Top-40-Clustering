@@ -15,3 +15,7 @@ outputs/
 
 # Retired duplicate manuscript exports; use paper/ instead.
 output/
+
+# Reviewed primary validation evidence is deliberately versioned.
+!research/comovement/output/
+!research/comovement/output/*.csv

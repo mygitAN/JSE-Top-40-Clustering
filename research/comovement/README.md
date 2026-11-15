@@ -119,3 +119,43 @@ The `--prospective` flag is retained as the legacy command name. It denotes
 the reserved held-out evaluation; it does not make the full window
 prospectively preregistered. The analytical script and frozen results are
 unchanged by this terminology clarification.
+
+## Versioned freeze and offline reproduction
+
+`protocol.json` records H1, the later exploratory H2, both evaluation windows,
+market adjustment, pair exclusions, permutation construction, bootstrap
+construction, seeds, the reserved-window guard and source checksums. It is a
+retrospective record created after the historical results, not evidence of an
+earlier preregistration. `manifest.json` binds the unchanged analytical script,
+protocol, findings, input snapshots and four saved output CSVs byte for byte.
+
+The saved outputs are deliberately committed despite the general `output/`
+ignore rule. December's saved primary interval is [-0.100413, -0.040080],
+rounded to [-0.100, -0.040] in the paper; the earlier quoted interval
+[-0.102, -0.038] is superseded by these saved outputs.
+
+`inputs/` preserves all three formation partitions (including the reserved
+June-2026 labels), five UMAP seeds, the t-SNE comparator, sector labels,
+assignments, membership histories and the prices required for the two completed
+windows. Preserving June-2026 labels does not evaluate their future returns.
+The price snapshot ends on 30 June 2026. There is no reserved-window output
+or full-window price cache at this freeze.
+
+To reproduce the historical outputs without network access or the ignored
+study archive:
+
+```powershell
+.venv/Scripts/python.exe research/comovement/reproduce.py
+```
+
+This adapter calls the unchanged analytical functions using frozen inputs and
+writes to `.runtime/comovement-reproduction/`. It compares all four reproduced
+CSV tables against the committed outputs, preserving the original group order
+and random-number sequence. It accepts no future-window option and never
+modifies `output/`. It does not refit clusters or execute the June-2026 evaluation.
+
+For the reserved evaluation later, use the unchanged original script at the
+frozen repository version, retain its original source data/labels and report
+the outcome regardless of direction. The `--prospective` name remains a legacy
+CLI name; the entire July--December 2026 window was already underway when this
+protocol was fixed in November.

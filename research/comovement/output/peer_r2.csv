@@ -1,0 +1,13 @@
+formation_date,returns,grouping,mean_peer_r2,stocks_with_peers
+2025-06-30,raw,UMAP (study model),0.1853212296282029,41
+2025-06-30,raw,t-SNE comparator,0.22871692643330307,41
+2025-06-30,raw,Sector,0.3329636668983253,39
+2025-06-30,market-adjusted,UMAP (study model),0.11880732860804383,41
+2025-06-30,market-adjusted,t-SNE comparator,0.15235374083755854,41
+2025-06-30,market-adjusted,Sector,0.23863126853567435,39
+2025-12-31,raw,UMAP (study model),0.31916067347827676,39
+2025-12-31,raw,t-SNE comparator,0.3011808594414571,41
+2025-12-31,raw,Sector,0.4432616391880894,40
+2025-12-31,market-adjusted,UMAP (study model),0.14827344581151408,39
+2025-12-31,market-adjusted,t-SNE comparator,0.14323081746344252,41
+2025-12-31,market-adjusted,Sector,0.2576247851842196,40

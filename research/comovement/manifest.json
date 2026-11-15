@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "frozen_on": "2026-11-15",
+  "baseline_commit": "7a860a08f1c5be616ab3a58ef853525fe6123ad2",
+  "study_run": "20261115T062631-0c09819ce3c0",
+  "script_sha256": "f75068ea08c457738e46a1a820aae01b14727cd81804e74bbf6cf3e26e18baeb",
+  "status": "Two 2025 formations completed; June-2026 forward evaluation not executed.",
+  "files_sha256": {
+    "README.md": "100f8d1bc8dbf27699b50a686c5e433aeb30fca4b5ff3cb50013b447439fbe86",
+    "forward_comovement.py": "f75068ea08c457738e46a1a820aae01b14727cd81804e74bbf6cf3e26e18baeb",
+    "inputs/partitions.csv": "aaf89819f154254f55ad2ab57c339438f70ea59eeb290e9f80a4a80248cb382c",
+    "inputs/prices.csv": "ba8ec687f6ef1d7c1c93645faa1f378f4d7309afca9640fd60216a4ff654ae7c",
+    "inputs/results/longitudinal/umap/cluster_histories.csv": "f6515eb1a1a04c32b80c0677bf366ffe051dfee7b9c500c1409ff008ac996772",
+    "inputs/results/manifest.json": "e3d1b0484e4632b30eb62367b8f3000defe5efd0e258e33668842a66aa82a2ce",
+    "inputs/results/models/umap/2025-06-30/assignments.csv": "02369587da2559f69064344398f2fafa043f32f7fd3b3fa1eddd71c3d9a602a5",
+    "inputs/results/models/umap/2025-12-31/assignments.csv": "e9a2cc2839ec2c380094bea0f120c79ff0a6878b23de353a45b6dac4901d5b30",
+    "inputs/results/models/umap/2026-06-30/assignments.csv": "57ff05dbb055fdac334355efd30ed5108f598aee8832bc109bf371aa8337d7ec",
+    "output/comovement_by_cluster.csv": "d2b19c04b0123ff57c67e6fcc95373bc8ca387447f8826aeaaf1ab65c02a4c33",
+    "output/comovement_summary.csv": "32a83a66231c56c82e531daf905d37c486c9f8e06d50da3b2c6930748360a063",
+    "output/incremental_beyond_sector.csv": "cc85699cc6a4a90f5b45a20c58bfc3dd10f979549978174a5a98d2dfa7ccd1f6",
+    "output/peer_r2.csv": "6a32f79fa660703e07b69c8aa9a2244365cfeb1c954b1b0694bff5552b61dbfe",
+    "protocol.json": "dfb7213699f0298e585b974c161fc17d5290da5da0229b90acca6b2dece88a55",
+    "reproduce.py": "12e74126436c50e1df2784cba9eafc813b4a32102edce734412b3cdce3e3d359"
+  }
+}

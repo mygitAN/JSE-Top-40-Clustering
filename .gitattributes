@@ -4,3 +4,5 @@ results/** -text
 validation/forward_comovement/** -text
 # Versioned research-master artifacts and their manifests retain exact bytes.
 research/master/** -text
+# Freeze the primary experiment and its saved evidence byte for byte.
+research/comovement/** -text whitespace=cr-at-eol
