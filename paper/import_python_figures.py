@@ -23,7 +23,7 @@ def main():
     destination.mkdir(parents=True, exist_ok=True)
     sources = {}
     for date in DATES:
-        for kind in ('cluster_map', 'dendrogram'):
+        for kind in ('dendrogram',):
             relative = f'models/umap/{date}/{kind}.png'
             source = run / relative
             digest = hashlib.sha256(source.read_bytes()).hexdigest()
@@ -49,7 +49,7 @@ def main():
         'run_id': manifest['run_id'],
         'implementation_commit': manifest['git_commit'],
         'operation': 'Unmodified copies of original Python-generated PNGs',
-        'labels': 'Cluster-map identifiers are local to each fit; tree leaves carry ticker and sector labels.',
+        'labels': 'Tree leaves carry ticker and sector labels. Cluster maps are drawn by make_figures.py with aligned identifiers.',
         'files': sources,
     }
     (PAPER / 'python_figure_sources.json').write_text(json.dumps(record, indent=2) + '\n')

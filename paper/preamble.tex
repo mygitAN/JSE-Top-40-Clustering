@@ -41,10 +41,11 @@
 \renewcommand{\floatpagefraction}{.75}
 \newcommand{\diagram}[1]{\resizebox{\linewidth}{!}{\input{figures/#1.tex}}}
 
-% Original Python analysis images, placed side by side without redrawing.
-\newcommand{\pythonclusterpair}[1]{%
+% Cluster map with aligned cluster numbers (make_figures.py) beside the
+% original Python dendrogram from the study run (import_python_figures.py).
+\newcommand{\clusterpair}[1]{%
 \begin{minipage}[c]{.58\linewidth}
-\centering\includegraphics[width=\linewidth]{figures/python/cluster_map_#1.png}
+\centering\includegraphics[width=\linewidth]{figures/cluster_map_#1.pdf}
 \end{minipage}\hfill%
 \begin{minipage}[c]{.41\linewidth}
 \centering\includegraphics[width=\linewidth]{figures/python/dendrogram_#1.png}

@@ -20,7 +20,9 @@ lives in those section files.
 | `references.tex` | References and citation keys |
 | `preamble.tex` | Packages, typography and shared diagram styles |
 | `figures/*.tex` | Thirteen editable TikZ and PGFPlots diagrams |
-| `figures/python/*.png` | Seven original Python figures: maps, dendrograms and Jaccard overlap |
+| `figures/cluster_map_*.pdf` | Cluster maps with aligned cluster numbers, from `make_figures.py` |
+| `figures/python/*.png` | Four original Python figures: dendrograms and Jaccard overlap |
+| `tables/*.tex` | Data-driven tables written by `make_tables.py` |
 | `diagrams.tex` | Complete atlas retaining all seventeen figures |
 
 ## Build and preview
@@ -60,31 +62,42 @@ numbers and provenance together. `figure_sources.json` records the current sourc
 
 ## Cluster maps beside dendrograms
 
-The manuscript includes the original Python-generated `cluster_map.png` and
-`dendrogram.png` for each date, copied unchanged from the archived clean run.
-They appear side by side at reduced size on standard portrait pages. No model is rerun and these images are not recreated in TikZ. `python_figure_sources.json` records their
-archive paths and verified SHA-256 checksums.
+Each date's figure pairs a cluster map with the original Python dendrogram.
 
-The Jaccard overlap figure is also copied unchanged from
-`results/longitudinal/umap/jaccard.png`, checked against its export and archive
-checksums.
+The maps are drawn by `make_figures.py` from the archived clean run. They show
+the same UMAP coordinates and partition as the run's own `cluster_map.png`,
+but numbered and coloured with the Jaccard-aligned cluster ids used in the rest
+of the paper, so a cluster keeps its number and colour across dates. Each map
+reports silhouette and Davies-Bouldin in both the financial features and the
+map; asterisks flag imputed inputs.
 
-Cluster numbers in these original maps are local to each fit. The member lists
-define the groups; asterisks flag imputed inputs. Dendrogram leaves carry ticker
-and sector labels, and branch colours are independent of map colours. Use the
-aligned identifiers in the longitudinal figures for comparisons between dates.
+The dendrograms and the Jaccard overlap figure are unchanged copies of the
+run's PNGs. `import_python_figures.py` copies them after checking their
+SHA-256 checksums against the run, and records them in
+`python_figure_sources.json`. Dendrogram leaves carry ticker and sector labels;
+branch colours are independent of cluster colours.
 
-To refresh the copies from the archived run named by `results/manifest.json`:
+To refresh both from the run named by `results/manifest.json`:
 
 ```powershell
+.venv/Scripts/python.exe paper/make_figures.py
 .venv/Scripts/python.exe paper/import_python_figures.py
-.\paper\build.ps1 -Target Both
+.\paperuild.ps1 -Target Both
 ```
 
-Overleaf compilation needs only the committed files in `paper/`, including the
-seven PNGs. Python and the local run archive are needed only for refreshing them.
-The older `make_figures.py` remains an optional separate plotting workflow; its
-vector PDFs are not used for these cluster maps or dendrograms.
+`make_figures.py` also writes other vector figures that the paper does not use.
+Overleaf compilation needs only the committed files in `paper/`.
+
+## Data-driven tables
+
+`make_tables.py` writes the complete model comparison (`tables/model_comparison.tex`)
+and the sector-agreement table (`tables/sector_agreement.tex`) from `results/`
+and the source run, and saves `data/sector_context.csv`. Rerun it after a new run
+is exported:
+
+```powershell
+.venv/Scripts/python.exe paper/make_tables.py
+```
 
 ## UMAP and t-SNE comparison
 

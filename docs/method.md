@@ -183,6 +183,17 @@ Every date is fitted independently. No setting is tuned on a later date.
   it only as far as out-of-fold fidelity allows, and prefer the cluster median
   profiles, which need no surrogate.
 
+## Internal validation
+
+`validation/audit_beta.py` recomputes every one-year beta from Yahoo daily
+prices against the All Share (J203) and Top 40 (J200) indices. After removing
+bad prints (Yahoo's J203 series is corrupted on 23 and 24 July 2025, and a few
+stock series have isolated errors), all 123 workbook betas are reproduced
+against J203 within 0.023. Sasol's negative June 2026 beta is genuine: its
+beta against the Top 40 is +1.02 from July to December 2025 and -0.74 from
+January to June 2026. These checks support the inputs and are not reported in
+the paper.
+
 ## Known limits
 
 - Inputs are reconstructed, not verified point-in-time.

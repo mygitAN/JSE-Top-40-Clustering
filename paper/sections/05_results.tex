@@ -19,6 +19,14 @@ June 2026 & 0.267 & 1.059 & 0.721 & 0.355 & 0.738 & 2-8 \\
 
 Table~\ref{tab:5} summarises the performance of the UMAP hierarchical model at each decision date. The Silhouette Score in the reduced representation was 0.685 in June 2025, 0.638 in December 2025 and 0.721 in June 2026. The corresponding scores in the scaled financial features were 0.151, 0.124 and 0.267. These results show clear separation in the UMAP maps but weaker separation in the underlying financial variables. The December partition contained two single-member clusters, while neither June partition contained a singleton. Mean seed ARI was 0.846, 0.892 and 0.738, respectively.
 
+Table~\ref{tab:model_comparison} reports the complete comparison of dimensionality-reduction and clustering combinations at each date. PCA, t-SNE and UMAP with default parameters (ten neighbours and a minimum distance of 0.1) are each combined with hierarchical clustering, K-Means and DBSCAN; the study model is shown first. Hierarchical clustering and K-Means use eight groups, whereas DBSCAN determines its own number of groups and excludes noise observations, so its scores are reported with their coverage. No combination dominates on every measure. DBSCAN sometimes achieves higher scores, but with two to five groups and, for PCA, without covering every instrument.
+
+\begin{table}[htbp]
+\centering\caption{Complete comparison of dimensionality-reduction and clustering combinations at the representative seed. Coverage is the share of the 41 instruments assigned to a group; DBSCAN scores exclude noise observations. Map scores use the reduced representation and feature scores the eight scaled financial features.}\label{tab:model_comparison}
+\footnotesize
+\input{tables/model_comparison.tex}
+\end{table}
+
 
 Figure~\ref{fig:quality} compares this result with a t-SNE hierarchical comparator fitted to the same eight-feature dataset. Its embedding Silhouette Scores were 0.532, 0.589 and 0.656, compared with financial-feature scores of 0.195, 0.240 and 0.255. UMAP therefore produced the higher embedding score at all three dates, while t-SNE produced the higher financial-feature score at the first two. The comparison shows why the reduced map and the original financial features should be read together. The comparison evaluates the two representations within this study and does not establish that UMAP is universally superior. Section~\ref{sec:method_comparison} compares the groups and membership changes that the two representations identify.
 
@@ -47,28 +55,26 @@ Figure~\ref{fig:seed_variability} shows the ten seed-pair comparisons at each da
 \FloatBarrier
 \subsection{Cluster maps and hierarchical structure}
 
-Figures~\ref{fig:clusters_tree_2025-06-30}--\ref{fig:clusters_tree_2026-06-30} show the UMAP cluster maps and dendrograms for the representative seed-42 partitions. Each map includes all 41 instruments and lists the members of its eight clusters. An asterisk in the map's member list marks an imputed input.
+Figures~\ref{fig:clusters_tree_2025-06-30}--\ref{fig:clusters_tree_2026-06-30} show the UMAP cluster maps and dendrograms for the representative seed-42 partitions. Each map includes all 41 instruments, lists the members of its eight clusters and reports the Silhouette Score and Davies-Bouldin Index in both the financial features and the map. An asterisk in a member list marks an imputed input. Cluster numbers and colours are the aligned identifiers used throughout the paper, so a cluster can be followed across the three dates and into the membership histories and financial profiles. Gaps in the numbering reflect identifiers that are not present at a date. Because UMAP is fitted independently at each date, positions and axes do not form a common coordinate system across the maps.
 
-The dendrogram beside each map shows the average-linkage, Manhattan-distance hierarchy in the same fitted UMAP representation. Leaf labels identify tickers and their recorded sector labels. Branch heights measure linkage distance within this representation, rather than statistical significance. Sector labels provide descriptive context and are not independently verified historical ground truth.
-
-Cluster numbers and colours in these maps are local to each fit. They must not be read as the Jaccard-aligned identifiers used in the membership histories and financial profiles in Figures~\ref{fig:profile0}--\ref{fig:profile2}. The dendrogram's branch colours are plotting conventions and do not define the eight-group partition. Membership is defined by the map's member lists and the saved eight-cluster assignments. Because UMAP is fitted independently at each date, positions and axes across maps do not form a common coordinate system for temporal movement.
+The dendrogram beside each map shows the average-linkage, Manhattan-distance hierarchy in the same fitted UMAP representation. Leaf labels identify tickers and their recorded sector labels. Branch heights measure linkage distance within this representation, rather than statistical significance, and branch colours are plotting conventions that do not define the eight-group partition.
 
 \begin{figure}[htbp]
 \centering
-\pythonclusterpair{2025-06-30}
-\caption{30 June 2025: UMAP cluster map (left) and dendrogram (right) for the representative seed-42 partition. All 41 instruments are included. Map cluster numbers are local to this date; an asterisk marks an imputed input. Tree leaves show tickers and recorded sectors; branch colours are independent of map cluster colours.}\label{fig:clusters_tree_2025-06-30}
+\clusterpair{2025-06-30}
+\caption{30 June 2025: UMAP cluster map (left) and dendrogram (right) for the representative seed-42 partition. All 41 instruments are included. Cluster numbers are aligned across dates; an asterisk marks an imputed input. Tree leaves show tickers and recorded sectors; branch colours are independent of cluster colours.}\label{fig:clusters_tree_2025-06-30}
 \end{figure}
 
 \begin{figure}[htbp]
 \centering
-\pythonclusterpair{2025-12-31}
-\caption{31 December 2025: UMAP cluster map (left) and dendrogram (right) for the representative seed-42 partition. All 41 instruments are included. Map cluster numbers are local to this date; an asterisk marks an imputed input. Tree leaves show tickers and recorded sectors; branch colours are independent of map cluster colours.}\label{fig:clusters_tree_2025-12-31}
+\clusterpair{2025-12-31}
+\caption{31 December 2025: UMAP cluster map (left) and dendrogram (right) for the representative seed-42 partition. All 41 instruments are included. Cluster numbers are aligned across dates; an asterisk marks an imputed input. Tree leaves show tickers and recorded sectors; branch colours are independent of cluster colours.}\label{fig:clusters_tree_2025-12-31}
 \end{figure}
 
 \begin{figure}[htbp]
 \centering
-\pythonclusterpair{2026-06-30}
-\caption{30 June 2026: UMAP cluster map (left) and dendrogram (right) for the representative seed-42 partition. All 41 instruments are included. Map cluster numbers are local to this date; an asterisk marks an imputed input. Tree leaves show tickers and recorded sectors; branch colours are independent of map cluster colours.}\label{fig:clusters_tree_2026-06-30}
+\clusterpair{2026-06-30}
+\caption{30 June 2026: UMAP cluster map (left) and dendrogram (right) for the representative seed-42 partition. All 41 instruments are included. Cluster numbers are aligned across dates; an asterisk marks an imputed input. Tree leaves show tickers and recorded sectors; branch colours are independent of cluster colours.}\label{fig:clusters_tree_2026-06-30}
 \end{figure}
 
 \FloatBarrier
@@ -174,11 +180,23 @@ Figures~\ref{fig:profile0}--\ref{fig:profile2} summarise the financial character
 
 \FloatBarrier
 
-The precious-metals grouping is one of the clearer examples of membership continuity accompanied by an interpretable financial profile. Impala Platinum, Northam Platinum and Sibanye-Stillwater form aligned group 3 in June 2025 and remain together at all three dates. By December, AngloGold Ashanti, Gold Fields, Harmony and Valterra join them, increasing the group from three to seven instruments. Pan African Resources joins on entering the observed index universe in June 2026, giving eight members. The t-SNE comparator places all seven continuing members together in December in every seed. In its representative June 2025 fit, however, AngloGold Ashanti, Gold Fields and Harmony already share a group with the platinum core, an association found in only two of five seeds. Under t-SNE, Valterra's arrival is therefore the only switch into the group. These memberships can be followed in Figure~\ref{fig:flows} for the continuing firms and checked against the complete member lists in the original Python maps. In those maps, this aligned group appears as local cluster 3, 1 and 0 at the successive dates; local numbers should not be read as cross-date identifiers.
+The precious-metals grouping is one of the clearer examples of membership continuity accompanied by an interpretable financial profile. Impala Platinum, Northam Platinum and Sibanye-Stillwater form aligned group 3 in June 2025 and remain together at all three dates. By December, AngloGold Ashanti, Gold Fields, Harmony and Valterra join them, increasing the group from three to seven instruments. Pan African Resources joins on entering the observed index universe in June 2026, giving eight members. The t-SNE comparator places all seven continuing members together in December in every seed. In its representative June 2025 fit, however, AngloGold Ashanti, Gold Fields and Harmony already share a group with the platinum core, an association found in only two of five seeds. Under t-SNE, Valterra's arrival is therefore the only switch into the group. These memberships can be followed in the cluster maps and in Figure~\ref{fig:flows}.
 
 Figure~\ref{fig:profile0} shows relatively high volatility, beta and return for the initial three-member group. In December, its cluster-median return is 1.45 reference-scaled units above the same-date median, accompanied by elevated volatility and beta in Figure~\ref{fig:profile1}. AngloGold Ashanti, Gold Fields and Valterra record return increases of 1.342, 1.143 and 0.940 reference-scaled units over the first interval. These instrument changes are consistent with the destination's measured return profile. By June 2026, high volatility and beta remain prominent in Figure~\ref{fig:profile2}. The diagrams support a description of a continuing precious-metals peer core with changing membership; they do not establish that commodity prices caused the clustering or that the group predicts future returns.
 
-Anheuser-Busch InBev, BHP and Richemont provide a second persistent core. They remain in aligned group 4 throughout; Prosus is also present at the first two dates, British American Tobacco joins in December and Prosus leaves by June 2026. Figures~\ref{fig:profile0}--\ref{fig:profile2} consistently associate the group with relatively high log market capitalisation and low JSE share turnover. In June 2026, the deviations are approximately $+0.65$ and $-0.64$ reference-scaled units, respectively. The original Python maps list this aligned group as local cluster 4, 3 and 5. Its members span different recorded sectors, so the financial interpretation concerns measured scale and local trading activity. JSE turnover does not capture all trading in internationally listed firms, and low measured JSE turnover is insufficient evidence of low global liquidity.
+Anheuser-Busch InBev, BHP and Richemont provide a second persistent core. They remain in aligned group 4 throughout; Prosus is also present at the first two dates, British American Tobacco joins in December and Prosus leaves by June 2026. Figures~\ref{fig:profile0}--\ref{fig:profile2} consistently associate the group with relatively high log market capitalisation and low JSE share turnover. In June 2026, the deviations are approximately $+0.65$ and $-0.64$ reference-scaled units, respectively. Its members span different recorded sectors, so the financial interpretation concerns measured scale and local trading activity. JSE turnover does not capture all trading in internationally listed firms, and low measured JSE turnover is insufficient evidence of low global liquidity.
+
+\subsection{Agreement with sector labels}
+
+Table~\ref{tab:sector} compares the fitted clusters with the recorded sector labels. Agreement increases over the three dates: the Adjusted Rand Index rises from 0.152 to 0.318 and 0.472, and Normalised Mutual Information from 0.447 to 0.719. An instrument is described as sector-divergent when its recorded sector differs from the most common sector among the other members of its cluster; instruments in single-member clusters or clusters with a tied majority are not classified. The number of divergent instruments falls from 17 in June 2025 to 9 in December 2025 and 5 in June 2026. Much of this change reflects the consolidation of the precious-metals group, which contains only basic-materials companies by June 2026.
+
+\begin{table}[htbp]
+\centering\caption{Agreement between the UMAP clusters and the recorded sector labels, and the sector-divergent instruments at each date.}\label{tab:sector}
+\footnotesize
+\input{tables/sector_agreement.tex}
+\end{table}
+
+BHP, Bidvest, MTN and Vodacom are sector-divergent at all three dates. BHP groups with consumer-goods and technology companies in the large-capitalisation, low-turnover group rather than with other basic-materials companies. Bidvest, an industrial company, groups with consumer-services retailers. MTN and Vodacom, the two telecommunications companies, never share a cluster: MTN groups with basic-materials and financial companies, and Vodacom with financial companies. These persistent divergences identify where measured financial characteristics consistently place a company outside its recorded sector.
 
 \subsection{Sensitivity to the choice of representation}\label{sec:method_comparison}
 
@@ -294,7 +312,7 @@ Table~\ref{tab:8} reports the surrogate fidelity. The classifier reproduced all 
 
 
 \begin{table}[htbp]
-\centering\caption{Separate same-date Mahalanobis distance screen at nominal alpha 0.05. These are descriptive flags, not significant economic anomalies.}\label{tab:9}
+\centering\caption{Separate same-date Mahalanobis distance screen at nominal alpha 0.05. The reference value is 14.03 at each date ($n=41$, $p=8$). These are descriptive flags, not significant economic anomalies.}\label{tab:9}
 \footnotesize
 \begin{tabularx}{\linewidth}{@{}>{\hsize=0.720\hsize\linewidth=\hsize\raggedright\arraybackslash}X >{\hsize=1.920\hsize\linewidth=\hsize\raggedright\arraybackslash}X >{\hsize=0.360\hsize\linewidth=\hsize\raggedright\arraybackslash}X@{}}
 \toprule
@@ -308,8 +326,35 @@ June 2026 & GLN, PAN, SOL, SSW & 4 \\
 \end{table}
 
 
-The Mahalanobis distance screen flagged five observations in June 2025, five in December 2025 and four in June 2026, as shown in Table~\ref{tab:9}. These 14 observations cover nine distinct tickers. Sasol was flagged at all three dates, BHP and British American Tobacco at the first two, and Sibanye-Stillwater at the last two. Such repeated flags are useful for follow-up, but their meaning depends on the observation history. Aspen and Pan African Resources were not index members at every date, so missing dates cannot be counted as an absence of unusual behaviour. Anglo American also carries an imputed volume value. The flags remain descriptive because no external event test, forward-return test or calibrated transition null was applied.
+The Mahalanobis distance screen flagged five observations in June 2025, five in December 2025 and four in June 2026, as shown in Table~\ref{tab:9}. These 14 observations cover nine distinct tickers. Sasol was flagged at all three dates, BHP and British American Tobacco at the first two, and Sibanye-Stillwater at the last two. Such repeated flags are useful for follow-up, but their meaning depends on the observation history. Aspen, Glencore and Pan African Resources were not index members at every date, so missing dates cannot be counted as an absence of unusual behaviour. Anglo American also carries an imputed volume value. The flags remain descriptive because no external event test, forward-return test or calibrated transition null was applied.
 
+
+\subsection{Companies for analyst investigation}
+
+Table~\ref{tab:analyst} brings the screening signals together. Three signals are counted for each company: a change of aligned group under both the UMAP and t-SNE representations, a Mahalanobis distance flag at any date, and sector divergence at two or more dates. The signals answer different questions. The distance flag identifies a multivariate outlier: an instrument far from the centre of the whole cross-section. Sector divergence identifies an instrument whose financial profile differs from that of its recorded sector peers, which does not make it an outlier. A change of group under both representations identifies a change in peer relationships. The eight companies with at least two signals are shown, with Naspers and Prosus, and MTN and Vodacom, combined where their evidence is closely related. Sasol, Anglo American, BHP and Valterra are distance-flagged and are therefore multivariate outliers at one or more dates. MTN, Vodacom, Naspers and Prosus are not flagged by the distance screen; their signals concern sector divergence and changing peers rather than unusual overall profiles. Each row reports what the data show and the question an equity analyst would need to answer. The table is a screening output: it identifies where further investigation is warranted, not a conclusion about value or future returns.
+
+\begin{table}[htbp]
+\centering
+\caption{Companies with at least two screening signals. Values are from the model inputs at the three decision dates; returns and yields are in percent.}\label{tab:analyst}
+\scriptsize
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{2.0cm}>{\raggedright\arraybackslash}p{2.3cm}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X@{}}
+\toprule
+Company & Signals & What the data show & Question for analysts \\
+\midrule
+Sasol (Basic Materials) & Moved under both representations; distance flag at all three dates; sector-divergent at two dates & One-year return rises from $-43$ to $+28$ and $+105$; beta falls from 1.30 to $-0.31$ in the final six months; no dividend at any date; the highest revenue relative to market value in June and December 2025. Joins Anglo American, Glencore and MTN in June 2026. & What explains the reversal in Sasol's sensitivity to the market and its recovery without a dividend, and is its June 2026 grouping a durable peer relationship? \\
+\addlinespace
+Anglo American (Basic Materials) & Moved under both representations; distance flag in December 2025; sector-divergent at two dates & Return rises from $-7$ to $+54$, while dividend yield falls from 2.5 to 0.5 and revenue relative to market value from 0.86 to 0.35; earnings yield is negative at every date. Volume is imputed at the first two dates. & What explains the rising return alongside falling dividend yield and revenue relative to market value, and how much of the move depends on the imputed volume? \\
+\addlinespace
+BHP (Basic Materials) & Distance flag at two dates; sector-divergent at all three dates & Remains in the large-capitalisation, low-turnover group with consumer-goods companies; the largest market capitalisation in the sample at the last two dates and daily JSE turnover of about 0.01\% of shares. & Is BHP's JSE peer group defined by scale and limited local trading rather than by mining fundamentals, and is its JSE line a suitable comparator for local mining companies? \\
+\addlinespace
+Valterra Platinum (Basic Materials) & Moved under both representations; distance flag in June 2025; sector-divergent in June 2025 & Groups with banks and property companies in June 2025, when its dividend yield of 9.1 is the highest in the sample, then joins the precious-metals group as its return rises to $+148$ and its dividend yield halves. & Was the June 2025 placement driven by a temporarily high trailing dividend, and do its return and volatility now make the platinum producers its natural peers? \\
+\addlinespace
+MTN and Vodacom (Telecommunications) & Both moved under both representations; both sector-divergent at all three dates & Never in the same cluster. MTN's returns of $+62$ to $+84$ place it with resource companies by June 2026; Vodacom's dividend yield of 4.5 to 4.8 and falling beta place it with financial companies. & Why do the two operators consistently separate, and which peers should be used to compare each? \\
+\addlinespace
+Naspers and Prosus (Technology) & Both moved under both representations; both sector-divergent at two dates & Form their own group in June 2026 as returns fall from $+32$ and $+37$ to $-26$ and $-29$; both have dividend yields below 1 and earnings yields of about 12. & Does the joint move reflect their shared ownership structure and common holdings, and is a two-company group informative about either company? \\
+\bottomrule
+\end{tabularx}
+\end{table}
 
 The evidence streams and their interpretation are summarised in Figure~\ref{fig:evidence}.
 

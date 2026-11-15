@@ -35,9 +35,9 @@
     "feature_sensitivity": "results/feature_audit/shift_counts.csv, recipe=umap only",
     "cluster_count": "experiments/runs/20261115T062631-0c09819ce3c0/models/umap/cluster_count_sensitivity.csv; archive checksum verified",
     "evidence": "docs/method.md; top40/explain.py; top40/models.py; current manuscript evidence boundaries",
-    "clusters_tree_2025-06-30": "Unmodified original Python cluster_map.png and dendrogram.png from archived models/umap/2025-06-30/; copied by paper/import_python_figures.py after checksum verification. See python_figure_sources.json. Local cluster-map identifiers.",
-    "clusters_tree_2025-12-31": "Unmodified original Python cluster_map.png and dendrogram.png from archived models/umap/2025-12-31/; copied by paper/import_python_figures.py after checksum verification. See python_figure_sources.json. Local cluster-map identifiers.",
-    "clusters_tree_2026-06-30": "Unmodified original Python cluster_map.png and dendrogram.png from archived models/umap/2026-06-30/; copied by paper/import_python_figures.py after checksum verification. See python_figure_sources.json. Local cluster-map identifiers."
+    "clusters_tree_2025-06-30": "Map: figures/cluster_map_2025-06-30.pdf, drawn by paper/make_figures.py from archived models/umap/2025-06-30/arrays.npz with aligned cluster ids from results/longitudinal/umap/cluster_histories.csv. Dendrogram: unmodified dendrogram.png from archived models/umap/2025-06-30/, copied by paper/import_python_figures.py after checksum verification; see python_figure_sources.json.",
+    "clusters_tree_2025-12-31": "Map: figures/cluster_map_2025-12-31.pdf, drawn by paper/make_figures.py from archived models/umap/2025-12-31/arrays.npz with aligned cluster ids from results/longitudinal/umap/cluster_histories.csv. Dendrogram: unmodified dendrogram.png from archived models/umap/2025-12-31/, copied by paper/import_python_figures.py after checksum verification; see python_figure_sources.json.",
+    "clusters_tree_2026-06-30": "Map: figures/cluster_map_2026-06-30.pdf, drawn by paper/make_figures.py from archived models/umap/2026-06-30/arrays.npz with aligned cluster ids from results/longitudinal/umap/cluster_histories.csv. Dendrogram: unmodified dendrogram.png from archived models/umap/2026-06-30/, copied by paper/import_python_figures.py after checksum verification; see python_figure_sources.json."
   },
   "archive_sensitivity_sha256": "9d3539a11bc9dab50fa4863ff0fd36d5f25e95a891e535ed08021d41da4d52ae",
   "main_figure_order": [
