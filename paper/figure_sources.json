@@ -41,23 +41,21 @@
   },
   "archive_sensitivity_sha256": "9d3539a11bc9dab50fa4863ff0fd36d5f25e95a891e535ed08021d41da4d52ae",
   "main_figure_order": [
-    "population",
-    "windows",
     "pipeline",
-    "alignment",
-    "quality",
-    "seed_variability",
     "clusters_tree_2025-06-30",
     "clusters_tree_2025-12-31",
     "clusters_tree_2026-06-30",
     "flows",
     "jaccard",
-    "profile0",
-    "profile1",
-    "profile2",
-    "feature_sensitivity",
-    "cluster_count",
-    "evidence"
+    "profiles",
+    "cluster_count"
   ],
-  "figure_order_note": "All seventeen figures appear in the main manuscript; the optional atlas uses the same order."
+  "figure_order_note": "The condensed main manuscript has eight numbered figures; profiles combines the three dated heatmaps. figure_order preserves the seventeen-source development atlas and archived research master.",
+  "main_figure_panels": {
+    "profiles": [
+      "profile0",
+      "profile1",
+      "profile2"
+    ]
+  }
 }

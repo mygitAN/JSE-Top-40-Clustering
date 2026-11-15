@@ -122,17 +122,21 @@ SHAP tensors, using each date's raw-to-aligned membership mapping. Table values
 are rounded raw-margin contributions from the fitted surrogate, not financial
 changes or probabilities.
 
-## One manuscript with all diagrams
+## Condensed working manuscript
 
-All seventeen figures are included in `main.tex` through the section files,
-near the methods and results they explain. There is no separate supplement.
-The concise limitations text, UMAP rationale and clarified SHAP attributions
-remain in the paper. Grouped SHAP rows contain identical individual values
-before rounding, not averages.
+`main.tex` is the condensed manuscript, with eight numbered figures. It retains
+all three cluster-map/dendrogram pairs, the membership flow, the original Python
+Jaccard plot, the workflow and cluster-count sensitivity. The three financial
+profile heatmaps share one figure and a common colour scale. Redundant
+illustrations are replaced by their numerical summaries in the text; the full
+model comparison is arranged in two compact panels without dropping scores.
+Forward co-movement, sector analysis and company-investigation results remain.
+Grouped SHAP rows contain identical individual values before rounding, not averages.
 
 Compile `paper/main.tex` in the linked Overleaf repository. The optional
-`diagrams.tex` atlas is only a development preview of the same figures;
-it is not a separate part of the manuscript.
+`diagrams.tex` atlas preserves the seventeen original illustrations for development;
+it is not a separate part of the manuscript. The complete research master and
+its source archive remain under `research/master/`.
 
 ## Economic-validation evidence
 
