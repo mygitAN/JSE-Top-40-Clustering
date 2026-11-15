@@ -32,20 +32,30 @@ def number(value, digits=3):
 
 
 def model_comparison():
+    """One row per combination, dates as column groups; silhouette and Davies-Bouldin panels.
+
+    Group counts and coverage that differ from eight groups and 100% are given
+    beside the method name, so every number of the long-format CSV is shown.
+    """
     table = pd.read_csv(RESULTS / 'model_comparison.csv').set_index(['model', 'decision_date'])
-    lines = [r'\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}X l l r r r r r r@{}}', r'\toprule',
-             r'Reduction & Clustering & Date & Groups & Coverage & Map S & Map DB & Feature S & Feature DB \\',
-             r'\midrule']
-    for i, (model, reduction, method) in enumerate(MODELS):
-        for j, date in enumerate(DATE_LABEL):
-            row = table.loc[(model, date)]
-            first = j == 0
-            lines.append(' & '.join([reduction if first else '', method if first else '', DATE_LABEL[date],
-                                     str(int(row.n_clusters)), f'{row.coverage:.0%}'.replace('%', r'\%'),
-                                     number(row.silhouette_embedding), number(row.davies_bouldin_embedding),
-                                     number(row.silhouette_features), number(row.davies_bouldin_features)]) + r' \\')
-        if i < len(MODELS) - 1:
-            lines.append(r'\addlinespace[2pt]')
+    dates = list(DATE_LABEL)
+    lines = [r'\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}X rr rr rr@{}}', r'\toprule',
+             ' & ' + ' & '.join(rf'\multicolumn{{2}}{{c}}{{{DATE_LABEL[d]}}}' for d in dates) + r' \\',
+             ''.join(rf'\cmidrule(lr){{{2 + 2 * i}-{3 + 2 * i}}}' for i in range(3)),
+             'Reduction and clustering' + ' & Map & Feature' * 3 + r' \\']
+    for title, metric in [('Silhouette (higher is better)', 'silhouette'),
+                          ('Davies--Bouldin (lower is better)', 'davies_bouldin')]:
+        lines += [r'\midrule', rf'\multicolumn{{7}}{{@{{}}l}}{{\textit{{{title}}}}} \\']
+        for model, reduction, method in MODELS:
+            rows = [table.loc[(model, d)] for d in dates]
+            label = f'{reduction} + {method}'
+            if any(r.n_clusters != 8 for r in rows):
+                label += ' (' + ', '.join(str(int(r.n_clusters)) for r in rows) + ' groups'
+                if any(r.coverage < 1 for r in rows):
+                    label += '; ' + ', '.join(f'{r.coverage:.0%}' for r in rows).replace('%', r'\%') + ' coverage'
+                label += ')'
+            cells = [number(getattr(r, f'{metric}_{space}')) for r in rows for space in ('embedding', 'features')]
+            lines.append(' & '.join([label] + cells) + r' \\')
     lines += [r'\bottomrule', r'\end{tabularx}']
     (TABLES / 'model_comparison.tex').write_text('\n'.join(lines) + '\n', encoding='utf-8')
 

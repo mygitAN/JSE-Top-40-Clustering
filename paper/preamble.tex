@@ -40,6 +40,8 @@
 \renewcommand{\textfraction}{.05}
 \renewcommand{\floatpagefraction}{.75}
 \newcommand{\diagram}[1]{\resizebox{\linewidth}{!}{\input{figures/#1.tex}}}
+% One panel of the combined financial-profile figure: a heading above a heatmap.
+\newcommand{\profilepanel}[2]{{\small\textbf{#1}}\\[2pt]\resizebox{.82\linewidth}{!}{\input{figures/#2.tex}}}
 
 % Cluster map with aligned cluster numbers (make_figures.py) beside the
 % original Python dendrogram from the study run (import_python_figures.py).
