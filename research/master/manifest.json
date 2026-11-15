@@ -1,0 +1,27 @@
+{
+  "date": "2026-11-15",
+  "compiler": "Tectonic 0.17.0",
+  "note": "Historical versions of one complete manuscript, not separate manuscript parts or supplements. Page counts reflect rebuilt PDFs; no page count was forced.",
+  "baseline_used_by_forward_experiment": "7a860a08f1c5be616ab3a58ef853525fe6123ad2",
+  "study_run": "20261115T062631-0c09819ce3c0",
+  "versions": [
+    {
+      "kind": "pre_validation",
+      "source_commit": "7a860a08f1c5be616ab3a58ef853525fe6123ad2",
+      "pdf": "pre_validation_master_7a860a0.pdf",
+      "pages": 29,
+      "source_zip": "pre_validation_source_7a860a0.zip",
+      "pdf_sha256": "7f99ca8fefe4539dc81b70afb99f580699e3bf22fca9fbf74f517a42189bdc9e",
+      "source_sha256": "977c9ad6491da281558f73c446aae411334b5ade65414b836c9ed6c53bfe4c38"
+    },
+    {
+      "kind": "current_master",
+      "source_commit": "e1b393a5bd0b0bd822d4adf326939dfe97ef6fcc",
+      "pdf": "research_master_e1b393a.pdf",
+      "pages": 32,
+      "source_zip": "research_master_source_e1b393a.zip",
+      "pdf_sha256": "62f0d79c7fc8a3e9f7de1df0237bfc5044b927b9ebf9cf5b355dd78fdc636af7",
+      "source_sha256": "9bb9a8ec5416c84615dfac65d63ed218c50ebc2a136b8db87247432da9e3ccfd"
+    }
+  ]
+}

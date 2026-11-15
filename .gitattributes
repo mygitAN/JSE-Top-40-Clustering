@@ -2,3 +2,5 @@
 results/** -text
 # The validation snapshot and manifests also bind exact file bytes.
 validation/forward_comovement/** -text
+# Versioned research-master artifacts and their manifests retain exact bytes.
+research/master/** -text
