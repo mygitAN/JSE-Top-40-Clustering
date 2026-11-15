@@ -20,7 +20,7 @@ June 2026 & 0.267 & 1.059 & 0.721 & 0.355 & 0.738 & 2-8 \\
 Table~\ref{tab:5} summarises the performance of the UMAP hierarchical model at each decision date. The Silhouette Score in the reduced representation was 0.685 in June 2025, 0.638 in December 2025 and 0.721 in June 2026. The corresponding scores in the scaled financial features were 0.151, 0.124 and 0.267. These results show clear separation in the UMAP maps but weaker separation in the underlying financial variables. The December partition contained two single-member clusters, while neither June partition contained a singleton. Mean seed ARI was 0.846, 0.892 and 0.738, respectively.
 
 
-Figure~\ref{fig:quality} compares this result with the earlier t-SNE hierarchical specification applied to the current eight-feature dataset. Its embedding Silhouette Scores were 0.532, 0.589 and 0.656, compared with financial-feature scores of 0.195, 0.240 and 0.255. UMAP therefore produced the higher embedding score at all three dates, while t-SNE produced the higher financial-feature score at the first two. The comparison shows why the reduced map and the original financial features should be read together. It does not establish that UMAP is universally superior, and these results are not directly comparable with the earlier paper's different sample and feature set.
+Figure~\ref{fig:quality} compares this result with a t-SNE hierarchical comparator fitted to the same eight-feature dataset. Its embedding Silhouette Scores were 0.532, 0.589 and 0.656, compared with financial-feature scores of 0.195, 0.240 and 0.255. UMAP therefore produced the higher embedding score at all three dates, while t-SNE produced the higher financial-feature score at the first two. The comparison shows why the reduced map and the original financial features should be read together. The comparison evaluates the two representations within this study and does not establish that UMAP is universally superior.
 
 
 
@@ -45,28 +45,28 @@ Figure~\ref{fig:seed_variability} shows the ten seed-pair comparisons at each da
 \FloatBarrier
 \subsection{Cluster maps and hierarchical structure}
 
-Figures~\ref{fig:clusters_tree_2025-06-30}--\ref{fig:clusters_tree_2026-06-30} reproduce the original Python-generated cluster maps and dendrograms from the saved representative seed-42 analysis. Each map includes all 41 instruments and lists the members of its eight clusters. An asterisk in the map's member list marks an imputed input.
+Figures~\ref{fig:clusters_tree_2025-06-30}--\ref{fig:clusters_tree_2026-06-30} show the UMAP cluster maps and dendrograms for the representative seed-42 partitions. Each map includes all 41 instruments and lists the members of its eight clusters. An asterisk in the map's member list marks an imputed input.
 
 The dendrogram beside each map shows the average-linkage, Manhattan-distance hierarchy in the same fitted UMAP representation. Leaf labels identify tickers and their recorded sector labels. Branch heights measure linkage distance within this representation, rather than statistical significance. Sector labels provide descriptive context and are not independently verified historical ground truth.
 
-Cluster numbers and colours in these original maps are local to each fit. They must not be read as the Jaccard-aligned identifiers used in the membership histories and financial profiles in Figures~\ref{fig:profile0}--\ref{fig:profile2}. The dendrogram's branch colours are plotting conventions and do not define the eight-group partition. Membership is defined by the map's member lists and the saved eight-cluster assignments. Because UMAP is fitted independently at each date, positions and axes across maps do not form a common coordinate system for temporal movement.
+Cluster numbers and colours in these maps are local to each fit. They must not be read as the Jaccard-aligned identifiers used in the membership histories and financial profiles in Figures~\ref{fig:profile0}--\ref{fig:profile2}. The dendrogram's branch colours are plotting conventions and do not define the eight-group partition. Membership is defined by the map's member lists and the saved eight-cluster assignments. Because UMAP is fitted independently at each date, positions and axes across maps do not form a common coordinate system for temporal movement.
 
 \begin{figure}[htbp]
 \centering
 \pythonclusterpair{2025-06-30}
-\caption{30 June 2025: original Python cluster map (left) and dendrogram (right), reproduced unchanged from the saved seed-42 UMAP analysis. All 41 instruments are included. Map cluster numbers are local to this date; an asterisk marks an imputed input. Tree leaves show tickers and recorded sectors; branch colours are independent of map cluster colours.}\label{fig:clusters_tree_2025-06-30}
+\caption{30 June 2025: UMAP cluster map (left) and dendrogram (right) for the representative seed-42 partition. All 41 instruments are included. Map cluster numbers are local to this date; an asterisk marks an imputed input. Tree leaves show tickers and recorded sectors; branch colours are independent of map cluster colours.}\label{fig:clusters_tree_2025-06-30}
 \end{figure}
 
 \begin{figure}[htbp]
 \centering
 \pythonclusterpair{2025-12-31}
-\caption{31 December 2025: original Python cluster map (left) and dendrogram (right), reproduced unchanged from the saved seed-42 UMAP analysis. All 41 instruments are included. Map cluster numbers are local to this date; an asterisk marks an imputed input. Tree leaves show tickers and recorded sectors; branch colours are independent of map cluster colours.}\label{fig:clusters_tree_2025-12-31}
+\caption{31 December 2025: UMAP cluster map (left) and dendrogram (right) for the representative seed-42 partition. All 41 instruments are included. Map cluster numbers are local to this date; an asterisk marks an imputed input. Tree leaves show tickers and recorded sectors; branch colours are independent of map cluster colours.}\label{fig:clusters_tree_2025-12-31}
 \end{figure}
 
 \begin{figure}[htbp]
 \centering
 \pythonclusterpair{2026-06-30}
-\caption{30 June 2026: original Python cluster map (left) and dendrogram (right), reproduced unchanged from the saved seed-42 UMAP analysis. All 41 instruments are included. Map cluster numbers are local to this date; an asterisk marks an imputed input. Tree leaves show tickers and recorded sectors; branch colours are independent of map cluster colours.}\label{fig:clusters_tree_2026-06-30}
+\caption{30 June 2026: UMAP cluster map (left) and dendrogram (right) for the representative seed-42 partition. All 41 instruments are included. Map cluster numbers are local to this date; an asterisk marks an imputed input. Tree leaves show tickers and recorded sectors; branch colours are independent of map cluster colours.}\label{fig:clusters_tree_2026-06-30}
 \end{figure}
 
 \FloatBarrier
@@ -107,7 +107,7 @@ The stable histories were ANH, BHG, BID, BVT, CFR, FSR, GRT, IMP, INL, INP, MRP,
 
 \begin{figure}[htbp]
 \centering
-\diagram{jaccard}
+\includegraphics[width=\linewidth]{figures/python/jaccard.png}
 \caption{Jaccard overlap among the 40 continuing members in each adjacent comparison. Each cell uses the common eligible universe for that period. Numeric values are given explicitly; a zero denotes no shared continuing member.}\label{fig:jaccard}
 \end{figure}
 
@@ -120,6 +120,26 @@ The membership paths in Figure~\ref{fig:flows} show how a group can disperse des
 Absa and Old Mutual illustrate a different pattern. Both follow aligned groups $1\rightarrow5\rightarrow1$. In the first interval, Absa's dividend yield decreases by 0.196 June 2025 reference-scaled units, while Old Mutual's one-year return increases by 0.175. In the second interval, beta falls by 0.137 and 0.186 units, respectively. Their June 2026 destination has relatively high dividend and earnings yields in Figure~\ref{fig:profile2}. The return to an earlier group therefore describes renewed similarity to those peers under the fitted representation; it does not establish a reversal of every financial variable.
 
 Naspers and Prosus converge in aligned group 9 in June 2026 after occupying groups 7 and 4, respectively. Their one-year returns decrease by 0.468 and 0.527 reference-scaled units between December and June. Figure~\ref{fig:profile2} characterises their destination by relatively high market capitalisation and low return and dividend yield. Sasol instead moves from group 2 to group 7 as beta decreases by 0.642 and one-year return increases by 0.627 units. Reinet follows groups $6\rightarrow7\rightarrow2$, although its imputed fundamentals limit interpretation. These feature differences are calculated from the saved instrument records using the fixed June 2025 scale. They describe observed changes and are not causal effects or SHAP attributions; no single feature is asserted to determine membership.
+
+Table~\ref{tab:move_shap} adds the surrogate's feature attributions for selected destination assignments. Return supports the December precious-metals assignments, consistent with the measured return increases for ANG, GFI and VAL. For Absa and Old Mutual in June, dividend yield and earnings yield support group 1, although beta is among their larger measured changes. For Naspers and Prosus, return, earnings yield and dividend yield support group 9; Sasol's group-7 assignment is supported most strongly by return. These comparisons distinguish a variable that changed substantially from a variable the surrogate uses to reproduce the destination label.
+
+\begin{table}[htbp]
+\centering
+\caption{Selected positive Tree SHAP contributions to destination-cluster raw margins. Values are for each listed instrument, from the fully fitted date-specific surrogate; they are neither probabilities nor changes in financial units. Destination groups use aligned labels.}\label{tab:move_shap}
+\footnotesize
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{2.0cm}>{\raggedright\arraybackslash}p{2.0cm}p{1.1cm}X@{}}
+\toprule
+Date & Instruments & Group & Feature contributions \\
+\midrule
+Dec 2025 & ANG, GFI, VAL & 3 & Return $+2.933$ \\
+Jun 2026 & ABG, OMU & 1 & Dividend yield $+2.863$; earnings yield $+0.054$ \\
+Jun 2026 & NPN, PRX & 9 & Return $+1.435$; earnings yield $+0.685$; dividend yield $+0.468$ \\
+Jun 2026 & SOL & 7 & Return $+2.016$; dividend yield $+0.686$; volatility $+0.225$ \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+Positive values increase the specified class margin relative to that surrogate's expected margin. Margins have date- and class-specific baselines, so their magnitudes do not provide a common financial scale across groups or dates. December out-of-fold fidelity is not estimable because of singleton groups; June 2026 fidelity is 0.707 (Table~\ref{tab:8}). December attributions therefore describe the fitted classifier without a held-out fidelity estimate, and June attributions remain supplementary to the direct profiles. They are explanations of reproduced cluster labels, not causal explanations of financial change.
 
 \subsection{Financial feature profiles}
 
@@ -160,7 +180,7 @@ Anheuser-Busch InBev, BHP and Richemont provide a second persistent core. They r
 \subsection{Robustness and practical reading}
 
 \begin{table}[htbp]
-\centering\caption{Scale drift in invariant8 and UMAP agreement with the archived original10 representation. An even variance allocation would be 12.5\%. Cross-set ARI compares partitions, not the magnitude of silhouette values across feature spaces.}\label{tab:7}
+\centering\caption{Scale drift in the eight-feature representation and UMAP agreement with the untransformed ten-feature alternative (original10). An even variance allocation would be 12.5\%. Cross-set ARI compares partitions, not the magnitude of silhouette values across feature spaces.}\label{tab:7}
 \footnotesize
 \begin{tabularx}{\linewidth}{@{}>{\hsize=1.100\hsize\linewidth=\hsize\raggedright\arraybackslash}X >{\hsize=1.250\hsize\linewidth=\hsize\raggedright\arraybackslash}X >{\hsize=0.900\hsize\linewidth=\hsize\raggedright\arraybackslash}X >{\hsize=0.800\hsize\linewidth=\hsize\raggedright\arraybackslash}X >{\hsize=0.950\hsize\linewidth=\hsize\raggedright\arraybackslash}X@{}}
 \toprule
@@ -194,7 +214,7 @@ The feature alternatives also produce different membership histories. The UMAP m
 \begin{figure}[htbp]
 \centering
 \diagram{cluster_count}
-\caption{Cluster-count sensitivity from two to twelve groups. Blue lines show financial-feature scores and red lines embedding scores. The numerical results come from the same archived clean run; eight groups remain the reference specification.}\label{fig:cluster_count}
+\caption{Cluster-count sensitivity from two to twelve groups. Blue lines show financial-feature scores and red lines embedding scores. Eight groups remain the reference specification.}\label{fig:cluster_count}
 \end{figure}
 
 

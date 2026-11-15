@@ -27,6 +27,11 @@
     "figures/python/dendrogram_2026-06-30.png": {
       "archive_path": "models/umap/2026-06-30/dendrogram.png",
       "sha256": "6fc8a54d097d9e00223bca67a2ab9c9522169b3cd35d3454fd339eba7fe60f19"
+    },
+    "figures/python/jaccard.png": {
+      "archive_path": "longitudinal/umap/jaccard.png",
+      "sha256": "39834e9b7d3cae57929832b11236d4873a998d9db8f944da199acf91e10afbbe",
+      "export_path": "results/longitudinal/umap/jaccard.png"
     }
   }
 }
