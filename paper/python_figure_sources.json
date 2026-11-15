@@ -1,0 +1,32 @@
+{
+  "run_id": "20261115T062631-0c09819ce3c0",
+  "implementation_commit": "98549c660edd410fd74936a03faecadd01f6067b",
+  "operation": "Unmodified copies of original Python-generated PNGs",
+  "labels": "Cluster-map identifiers are local to each fit; tree leaves carry ticker and sector labels.",
+  "files": {
+    "figures/python/cluster_map_2025-06-30.png": {
+      "archive_path": "models/umap/2025-06-30/cluster_map.png",
+      "sha256": "7b6b667d6f7a64b2c9ee0d4da626ae31fc4d64c85dc2b4b3b7ec5dc165444c9f"
+    },
+    "figures/python/dendrogram_2025-06-30.png": {
+      "archive_path": "models/umap/2025-06-30/dendrogram.png",
+      "sha256": "66ec1aa0d80ba0d79b7935e18f490611972e3a07abdd938fcae560f69fec78b4"
+    },
+    "figures/python/cluster_map_2025-12-31.png": {
+      "archive_path": "models/umap/2025-12-31/cluster_map.png",
+      "sha256": "a7244c9a09bf54fcfe46c02359192312523f50989a999bca4aeb3b507a52a882"
+    },
+    "figures/python/dendrogram_2025-12-31.png": {
+      "archive_path": "models/umap/2025-12-31/dendrogram.png",
+      "sha256": "53ff99f2144bc715ab7d30847791f2c299a7c8218b806c2630dd6f4154d4b791"
+    },
+    "figures/python/cluster_map_2026-06-30.png": {
+      "archive_path": "models/umap/2026-06-30/cluster_map.png",
+      "sha256": "3895f13ea7f3a3b131e57ba976e919be1c080182003387fc78181a8a45cdf49c"
+    },
+    "figures/python/dendrogram_2026-06-30.png": {
+      "archive_path": "models/umap/2026-06-30/dendrogram.png",
+      "sha256": "6fc8a54d097d9e00223bca67a2ab9c9522169b3cd35d3454fd339eba7fe60f19"
+    }
+  }
+}

@@ -8,6 +8,14 @@ This repository extends an earlier single-date clustering study to three dates:
 instruments (40 company groups; Investec has two lines), giving 123 rows and 43
 distinct tickers.
 
+## Manuscript
+
+Edit [paper/main.tex](paper/main.tex) and its section files. In the GitHub-linked
+Overleaf project, select `paper/main.tex` as the main document. The original
+Python cluster maps and dendrograms are included in `paper/figures/python/`.
+See [paper/README.md](paper/README.md) for building and updating figures.
+The duplicate `output/paper/` manuscript export has been retired.
+
 ## Status
 
 The work is exploratory. The pipeline is reproducible, but the evidence that the
