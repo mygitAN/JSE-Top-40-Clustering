@@ -14,12 +14,17 @@ from .features import get_feature_set
 from .models import cluster, embed, feature_matrix, prepare, scores, seed_agreement
 from .temporal import aligned_histories
 
-# Two recipes: the stochastic baseline, and a deterministic one with no
-# embedding, so that feature effects can be separated from embedding noise.
-RECIPES = {
-    'tsne_hierarchical': dict(representation='tsne', hierarchical='baseline'),
-    'ward_features': dict(representation='none', hierarchical={'linkage': 'ward', 'metric': 'euclidean'}),
-}
+# Two recipes: the study's primary model (stochastic, through an embedding), and
+# a deterministic one with no embedding, so that feature effects can be separated
+# from embedding noise.
+WARD_FEATURES = dict(representation='none', representation_params={},
+                     hierarchical={'linkage': 'ward', 'metric': 'euclidean'})
+
+
+def recipes(config):
+    """The first primary model under its own name, plus Ward clustering on the scaled features."""
+    name, spec = next(iter(config['primary_models'].items()))
+    return {name: spec, 'ward_features': WARD_FEATURES}
 
 
 def feature_dominance(frame, feature_set, config):
@@ -43,15 +48,14 @@ def run_ablation(frame, config, feature_sets=None, seeds=None):
     names = feature_sets or config['ablation_feature_sets']
     seeds = seeds or list(range(config['seed'], config['seed'] + config['stability_runs']))
     dates, k = config['dates'], config['k']
-    baseline = config['primary_models']['baseline']
+    all_recipes = recipes(config)
     dominance, quality, partitions, temporal, histories = [], [], {}, [], {}
     for name in names:
         feature_set = get_feature_set(name)
         dominance += feature_dominance(frame, feature_set, config)
         scaler, snapshots = prepare(frame, feature_set.columns, dates, config['fit_date'])
-        for recipe, spec in RECIPES.items():
-            params = baseline['representation_params'] if spec['representation'] == 'tsne' else {}
-            linkage = baseline['hierarchical'] if spec['hierarchical'] == 'baseline' else spec['hierarchical']
+        for recipe, spec in all_recipes.items():
+            params, linkage = spec['representation_params'], spec['hierarchical']
             stochastic = spec['representation'] != 'none'
             labelled = {}
             for date, sub in snapshots.items():
@@ -74,7 +78,7 @@ def run_ablation(frame, config, feature_sets=None, seeds=None):
     from sklearn.metrics import adjusted_rand_score
     cross = [dict(recipe=recipe, decision_date=date, feature_set_a=a, feature_set_b=b,
                   ari=float(adjusted_rand_score(partitions[a, recipe, date], partitions[b, recipe, date])))
-             for recipe in RECIPES for date in dates for a, b in combinations(names, 2)]
+             for recipe in all_recipes for date in dates for a, b in combinations(names, 2)]
     status = pd.DataFrame(histories)
     status.columns = [f'{name}|{recipe}' for name, recipe in status.columns]
     shifts = pd.DataFrame([dict(feature_set=name, recipe=recipe, **histories[name, recipe].value_counts().to_dict())

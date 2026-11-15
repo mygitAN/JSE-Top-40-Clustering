@@ -90,13 +90,31 @@ examined. They are pilot-informed, not pre-registered.
 | 1. Load | | Validate the inputs against the source workbook; fit scaling on June 2025 only |
 | 2. Explore | `eda/` | Population, imputed cases, distributions, rank correlations |
 | 3. Audit features | `feature_audit/` | Share-basis changes, feature dominance, the same recipe on every feature set |
-| 4. Fit models | `comparison/`, `models/` | PCA, t-SNE and UMAP with hierarchical, K-Means and DBSCAN; two primary models over five seeds |
+| 4. Fit models | `comparison/`, `models/` | PCA, t-SNE and UMAP with hierarchical, K-Means and DBSCAN at one seed; the study model over five seeds |
 | 5. Explain | `models/` | Cluster profiles, and a gradient-boosted surrogate explained with SHAP |
 | 6. Compare dates | `longitudinal/` | Jaccard-aligned cluster histories, entries and exits kept separate, a feature-space distance screen |
 | 7. Finish | | Check every expected output, write `summary.md`, mark the run completed |
 
-The primary models use k=8, the original paper's choice (it matched eight sector
-labels). It is a reference specification, not evidence of eight natural groups.
+## The study model
+
+UMAP followed by agglomerative clustering, fitted separately at each date with
+the same settings:
+
+| Step | Setting |
+| --- | --- |
+| Scaling | MinMax, fitted on 30 June 2025 only |
+| Dimensionality reduction | `umap.UMAP`: 2 components, 3 neighbours, min_dist 0.01, Euclidean |
+| Clustering | `sklearn.cluster.AgglomerativeClustering` on the UMAP coordinates: 8 clusters, average linkage, Manhattan distance |
+| Seeds | 42 to 46; seed 42 is the representative fit |
+
+Each run writes the full specification, with package versions, to
+`model_specification.csv` and `summary.md`. The settings were chosen after
+exploring the June 2025 data, and k=8 is the original paper's choice (it matched
+eight sector labels); neither is pre-registered or evidence of eight natural
+groups.
+
+The original paper's recipe (t-SNE, perplexity 5, then the same clustering) stays
+in the model comparison as the `tsne_hierarchical` row, for reference.
 
 ## Layout
 

@@ -190,8 +190,11 @@ class StudySession:
             self.comparison.to_csv(self.out / 'model_comparison.csv', index=False)
             self.seed_scores.to_csv(self.out / 'seed_scores.csv', index=False)
             self.seed_agreement.to_csv(self.out / 'seed_agreement.csv', index=False)
-            highlight = {spec.get('comparison_row', name): colour for (name, spec), colour in
-                         zip(config['primary_models'].items(), [plots.BLUE, plots.ORANGE, '#2e765e'])}
+            self.model_specification().to_csv(self.out / 'model_specification.csv', index=False)
+            # Orange: the study's model(s). Blue: the original paper's t-SNE recipe, kept as the reference row.
+            highlight = {'tsne_hierarchical': plots.BLUE,
+                         **{spec.get('comparison_row', name): plots.ORANGE
+                            for name, spec in config['primary_models'].items()}}
             for date in config['dates']:
                 plots.quality_comparison(self.comparison[self.comparison.decision_date == date],
                                          self.out / f'model_quality_{date}.png', date, highlight)
@@ -308,6 +311,50 @@ class StudySession:
         return result
 
     # --- notebook helpers --------------------------------------------------------------------
+
+    def model_specification(self):
+        """Every setting of the primary model(s), one row each, in report-ready form."""
+        import importlib.metadata
+        import pandas as pd
+
+        config, rows = self.config, []
+        versions = {p: importlib.metadata.version(p) for p in ['umap-learn', 'scikit-learn', 'xgboost', 'shap']}
+        for name, spec in config['primary_models'].items():
+            add = lambda step, setting, value, note='': rows.append(
+                dict(model=name, step=step, setting=setting, value=str(value), note=note))
+            add('Model', 'description', spec['description'])
+            add('Inputs', 'feature set', self.feature_set.name, self.feature_set.status)
+            add('Inputs', 'features', ', '.join(self.feature_set.labels))
+            add('Inputs', 'instruments', '41 per date, 123 rows', 'all index members retained')
+            add('Scaling', 'method', 'MinMaxScaler(clip=False)',
+                f'fitted on {config["fit_date"]} only and applied unchanged to later dates')
+            implementation = {'umap': f'umap.UMAP (umap-learn {versions["umap-learn"]})',
+                              'tsne': f'sklearn.manifold.TSNE (scikit-learn {versions["scikit-learn"]})',
+                              'pca': f'sklearn.decomposition.PCA (scikit-learn {versions["scikit-learn"]})'}
+            add('Dimensionality reduction', 'algorithm', implementation.get(spec['representation'],
+                                                                            spec['representation']))
+            for key, value in spec['representation_params'].items():
+                add('Dimensionality reduction', key, value)
+            add('Dimensionality reduction', 'random_state',
+                f'{self.seeds[0]}-{self.seeds[-1]}', f'{len(self.seeds)} seeds; {config["seed"]} is the representative fit')
+            add('Clustering', 'algorithm',
+                f'sklearn.cluster.AgglomerativeClustering (scikit-learn {versions["scikit-learn"]})',
+                'hierarchical, bottom-up; fitted on the 2-D reduced coordinates')
+            add('Clustering', 'n_clusters', config['k'], 'reference specification from the original paper')
+            for key, value in spec['hierarchical'].items():
+                add('Clustering', key, value)
+            add('Fitting', 'dates', ', '.join(config['dates']),
+                'each date fitted independently with identical settings; nothing re-tuned on later dates')
+            add('Evaluation', 'silhouette, Davies-Bouldin',
+                'Euclidean, in the 2-D embedding and in the scaled feature space')
+            add('Evaluation', 'stability', 'pairwise adjusted Rand index between seeds')
+            add('Evaluation', 'cluster count sensitivity', ', '.join(map(str, config['k_sensitivity'])))
+            add('Explanation', 'surrogate', f'xgboost.XGBClassifier (xgboost {versions["xgboost"]})',
+                ', '.join(f'{k}={v}' for k, v in config['surrogate'].items()))
+            add('Explanation', 'SHAP', f'shap.TreeExplainer (shap {versions["shap"]})',
+                'explains the surrogate, not the clustering')
+            add('Provenance', 'how the settings were chosen', spec.get('provenance', ''))
+        return pd.DataFrame(rows)
 
     def table(self, relative_path):
         import pandas as pd

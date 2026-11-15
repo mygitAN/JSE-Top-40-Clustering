@@ -128,9 +128,14 @@ which is also why both lines report the same group EPS and dividends.
    10, 300 iterations, random initialisation) and UMAP (10 neighbours).
 3. **Clustering.** Average-linkage Manhattan hierarchy and K-Means at k=8;
    DBSCAN on standardised coordinates with its own cluster count.
-4. **Primary models.** `baseline` is t-SNE plus the hierarchy, the recovered
-   recipe of the original paper. `umap_sensitivity` uses UMAP with 3 neighbours
-   and min_dist 0.01. Both are refitted over five seeds.
+4. **Study model.** UMAP (2 components, 3 neighbours, min_dist 0.01,
+   Euclidean), then `AgglomerativeClustering` on the UMAP coordinates with
+   k=8, average linkage and Manhattan distance, refitted over seeds 42 to 46.
+   The settings came from exploring June 2025: an author-specified sweep fixed
+   3 neighbours and min_dist 0.01, while an earlier 36-combination grid had
+   preferred min_dist 0.1. k=8, average linkage and Manhattan distance follow the
+   original paper. The paper's own recipe (t-SNE, perplexity 5, the same
+   clustering) remains in the comparison table as `tsne_hierarchical`.
 5. **Scores.** Silhouette and Davies-Bouldin in both the representation and the
    scaled feature space, with cluster sizes and singleton counts. DBSCAN noise is
    excluded from scores and reported as coverage.
@@ -140,7 +145,9 @@ Every date is fitted independently. No setting is tuned on a later date.
 ## Reading the results
 
 - **Feature-space scores before embedding scores.** t-SNE and UMAP compress
-  neighbours, so embedding scores are high even for unstructured data.
+  neighbours, so embedding scores are high even for unstructured data. With
+  min_dist 0.01 UMAP packs points especially tightly: its clusters look
+  sharper on the map than they are in the financial features.
 - **Seed agreement is the noise reference.** Pairwise adjusted Rand index
   between seeds shows how much a partition moves when only the random seed
   changes. Date-to-date change should be read against it.
