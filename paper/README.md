@@ -124,6 +124,10 @@ changes or probabilities.
 
 ## Condensed working manuscript
 
+The current PDF is 25 pages following a plain-language edit of the 26-page
+version. The edit simplifies explanations and leads with financial findings;
+equations, tables, figures, references and numerical evidence are retained.
+
 `main.tex` is the condensed manuscript, with eight numbered figures. It retains
 all three cluster-map/dendrogram pairs, the membership flow, the original Python
 Jaccard plot, the workflow and cluster-count sensitivity. The three financial
