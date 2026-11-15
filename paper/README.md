@@ -15,7 +15,7 @@ lives in those section files.
 | `sections/04_methods.tex` | Methods, equations and matching procedure |
 | `sections/05_results.tex` | Results, tables, figure captions and figure placement |
 | `sections/06_discussion.tex` | Discussion |
-| `sections/06_limitations_and_future_work.tex` | Limitations and future work |
+| `sections/06_limitations_and_future_work.tex` | Limitations and future research |
 | `sections/07_conclusion.tex` | Conclusion |
 | `references.tex` | References and citation keys |
 | `preamble.tex` | Packages, typography and shared diagram styles |
