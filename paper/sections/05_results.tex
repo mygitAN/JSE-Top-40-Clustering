@@ -41,6 +41,37 @@ Figure~\ref{fig:seed_variability} shows the ten seed-pair comparisons at each da
 \end{figure}
 
 
+% BEGIN CLUSTER MAPS AND TREES
+\FloatBarrier
+\subsection{Cluster maps and hierarchical structure}
+
+Figures~\ref{fig:clusters_tree_2025-06-30}--\ref{fig:clusters_tree_2026-06-30} show the fitted clusters and their corresponding dendrograms at the three decision dates. Each point in the left panel represents an instrument, with ticker labels and colours identifying its aligned group. The member list below the map defines the composition of each cluster. All 41 instruments are shown at each date, including companies that enter or leave the index during the study.
+
+The right panel shows the full average-linkage, Manhattan-distance hierarchy fitted to the same UMAP coordinates. The dashed line identifies the cut that gives eight groups. Branch heights measure linkage distance within that representation, rather than statistical significance. Colours and aligned group identifiers are consistent with the map, the membership histories and the financial profiles in Figures~\ref{fig:profile0}--\ref{fig:profile2}. The tree cuts reproduce the saved representative partitions exactly.
+
+These paired diagrams distinguish the location of companies in the reduced representation from the hierarchical grouping used to assign membership. The financial meaning of each group is assessed using its median feature profile. Because UMAP is fitted independently at each date, the positions and axes of separate maps should not be interpreted as a common coordinate system for temporal movement.
+
+\begin{figure}[p]
+\centering
+\diagram{clusters_tree_2025-06-30}
+\caption{30 June 2025 cluster map and corresponding dendrogram for the representative seed-42 fit. All 41 instruments are included. Ticker labels, colours and member lists identify the eight Jaccard-aligned groups. The dashed line marks the eight-group cut of the average-linkage Manhattan tree fitted to these UMAP coordinates. Map units are local to this date; they do not measure movement between dates.}\label{fig:clusters_tree_2025-06-30}
+\end{figure}
+
+\begin{figure}[p]
+\centering
+\diagram{clusters_tree_2025-12-31}
+\caption{31 December 2025 cluster map and corresponding dendrogram for the representative seed-42 fit. All 41 instruments are included. Ticker labels, colours and member lists identify the eight Jaccard-aligned groups. The dashed line marks the eight-group cut of the average-linkage Manhattan tree fitted to these UMAP coordinates. Map units are local to this date; they do not measure movement between dates.}\label{fig:clusters_tree_2025-12-31}
+\end{figure}
+
+\begin{figure}[p]
+\centering
+\diagram{clusters_tree_2026-06-30}
+\caption{30 June 2026 cluster map and corresponding dendrogram for the representative seed-42 fit. All 41 instruments are included. Ticker labels, colours and member lists identify the eight Jaccard-aligned groups. The dashed line marks the eight-group cut of the average-linkage Manhattan tree fitted to these UMAP coordinates. Map units are local to this date; they do not measure movement between dates.}\label{fig:clusters_tree_2026-06-30}
+\end{figure}
+
+\FloatBarrier
+% END CLUSTER MAPS AND TREES
+
 \subsection{Cluster membership over time}
 
 \begin{table}[htbp]
