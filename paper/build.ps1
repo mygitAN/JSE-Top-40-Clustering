@@ -1,5 +1,5 @@
 param(
-    [ValidateSet('Paper', 'Diagrams', 'Both')]
+    [ValidateSet('Paper', 'Supplement', 'Diagrams', 'Both', 'All')]
     [string]$Target = 'Paper'
 )
 
@@ -13,6 +13,8 @@ $latexmkCommand = Get-Command latexmk -ErrorAction SilentlyContinue
 $pdflatexCommand = Get-Command pdflatex -ErrorAction SilentlyContinue
 $documents = switch ($Target) {
     'Paper' { @('main.tex') }
+    'Supplement' { @('supplementary.tex') }
+    'All' { @('main.tex', 'supplementary.tex', 'diagrams.tex') }
     'Diagrams' { @('diagrams.tex') }
     'Both' { @('main.tex', 'diagrams.tex') }
 }

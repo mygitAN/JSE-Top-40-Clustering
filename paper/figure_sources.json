@@ -39,5 +39,27 @@
     "clusters_tree_2025-12-31": "Unmodified original Python cluster_map.png and dendrogram.png from archived models/umap/2025-12-31/; copied by paper/import_python_figures.py after checksum verification. See python_figure_sources.json. Local cluster-map identifiers.",
     "clusters_tree_2026-06-30": "Unmodified original Python cluster_map.png and dendrogram.png from archived models/umap/2026-06-30/; copied by paper/import_python_figures.py after checksum verification. See python_figure_sources.json. Local cluster-map identifiers."
   },
-  "archive_sensitivity_sha256": "9d3539a11bc9dab50fa4863ff0fd36d5f25e95a891e535ed08021d41da4d52ae"
+  "archive_sensitivity_sha256": "9d3539a11bc9dab50fa4863ff0fd36d5f25e95a891e535ed08021d41da4d52ae",
+  "main_figure_order": [
+    "population",
+    "pipeline",
+    "quality",
+    "clusters_tree_2025-06-30",
+    "clusters_tree_2025-12-31",
+    "clusters_tree_2026-06-30",
+    "flows",
+    "jaccard",
+    "profile0",
+    "profile1",
+    "profile2"
+  ],
+  "supplementary_figure_order": {
+    "S1": "windows",
+    "S2": "alignment",
+    "S3": "seed_variability",
+    "S4": "feature_sensitivity",
+    "S5": "cluster_count",
+    "S6": "evidence"
+  },
+  "figure_order_note": "figure_order retains the complete atlas order; main and supplementary placement are recorded separately."
 }
