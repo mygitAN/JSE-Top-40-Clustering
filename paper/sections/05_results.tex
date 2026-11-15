@@ -1,6 +1,6 @@
 \section{Results}
 
-\subsection{Model comparison}
+\subsection{Model quality in the map and financial features}
 
 \begin{table}[htbp]
 \centering\caption{Representative UMAP partition quality, mean pairwise five-seed ARI and cluster size ranges. S is silhouette; DB is Davies-Bouldin. All 41 instruments are included.}\label{tab:5}
@@ -102,7 +102,7 @@ The stable histories were ANH, BHG, BID, BVT, CFR, FSR, GRT, IMP, INL, INP, MRP,
 \end{figure}
 
 
-\subsection{Interpretation of cluster changes}
+\subsection{Interpretation of cluster changes}\label{sec:cluster_changes}
 
 
 \begin{figure}[htbp]
@@ -115,8 +115,11 @@ The stable histories were ANH, BHG, BID, BVT, CFR, FSR, GRT, IMP, INL, INP, MRP,
 Figure~\ref{fig:jaccard} shows the membership overlaps used to match groups across dates. For example, the larger first-period group illustrated in Figure~\ref{fig:alignment} has a matched Jaccard similarity of 0.625. Other matches have lower overlap. The diagram is useful because a retained label can describe a group whose membership has changed substantially. The assignment maximises total overlap across all matched pairs, so each match must also be considered in relation to its actual members.
 
 
-ABSA and Old Mutual provide an example of a temporary change in peer group: both move from aligned group 1 to group 5 and then return to group 1. Reinet follows groups 6, 7 and 2, although its imputed fundamentals require caution. Naspers remains in group 7 at the first two dates and moves to group 9 in June 2026 after the share-basis corrections. These paths do not have the same financial interpretation. They identify cases for further investigation, where the next step is to examine the company's measured feature changes and the composition of its new peer group.
+The membership paths in Figure~\ref{fig:flows} show how a group can disperse despite retaining an aligned label. June 2025 group 0 contains ANG, DSY, GFI, HAR, MTN, OUT and PPH. By December, ANG, GFI and HAR belong to group 3, DSY and MTN to group 7 and PPH to group 2. OUT alone retains group 0. Thus the original seven-member association separates into four destinations. June group 6 also disperses: CLS joins group 2, while REM and RNI join group 7. Its aligned identifier is retired. Figure~\ref{fig:jaccard} shows these weaker overlaps alongside more persistent matches; a one-to-one label assignment cannot by itself describe such fragmentation.
 
+Absa and Old Mutual illustrate a different pattern. Both follow aligned groups $1\rightarrow5\rightarrow1$. In the first interval, Absa's dividend yield decreases by 0.196 June 2025 reference-scaled units, while Old Mutual's one-year return increases by 0.175. In the second interval, beta falls by 0.137 and 0.186 units, respectively. Their June 2026 destination has relatively high dividend and earnings yields in Figure~\ref{fig:profile2}. The return to an earlier group therefore describes renewed similarity to those peers under the fitted representation; it does not establish a reversal of every financial variable.
+
+Naspers and Prosus converge in aligned group 9 in June 2026 after occupying groups 7 and 4, respectively. Their one-year returns decrease by 0.468 and 0.527 reference-scaled units between December and June. Figure~\ref{fig:profile2} characterises their destination by relatively high market capitalisation and low return and dividend yield. Sasol instead moves from group 2 to group 7 as beta decreases by 0.642 and one-year return increases by 0.627 units. Reinet follows groups $6\rightarrow7\rightarrow2$, although its imputed fundamentals limit interpretation. These feature differences are calculated from the saved instrument records using the fixed June 2025 scale. They describe observed changes and are not causal effects or SHAP attributions; no single feature is asserted to determine membership.
 
 \subsection{Financial feature profiles}
 
@@ -146,12 +149,13 @@ Figures~\ref{fig:profile0}--\ref{fig:profile2} summarise the financial character
 \caption{June 2026 aligned-cluster median deviations from the same-date median, in June 2025 MinMax units. Counts include all 41 date-specific instruments. Colours use the same range across the three figures; gaps in cluster numbers reflect retired identifiers.}\label{fig:profile2}
 \end{figure}
 
+\FloatBarrier
 
-The precious-metals grouping is one of the clearer examples. By December 2025, AngloGold Ashanti, Gold Fields and Harmony are grouped with Impala Platinum, Northam Platinum, Sibanye-Stillwater and Valterra. The group has relatively high one-year return, beta and volatility. Its main membership is retained in June 2026, when Pan African Resources enters the index and joins the group. This provides a financial explanation for the observed similarity, although the analysis does not establish that commodity prices caused the change or that the grouping predicts future returns.
+The precious-metals grouping is one of the clearer examples of membership continuity accompanied by an interpretable financial profile. Impala Platinum, Northam Platinum and Sibanye-Stillwater form aligned group 3 in June 2025 and remain together at all three dates. By December, AngloGold Ashanti, Gold Fields, Harmony and Valterra join them, increasing the group from three to seven instruments. Pan African Resources joins on entering the observed index universe in June 2026, giving eight members. These memberships can be followed in Figure~\ref{fig:flows} for the continuing firms and checked against the complete member lists in the original Python maps. In those maps, this aligned group appears as local cluster 3, 1 and 0 at the successive dates; local numbers should not be read as cross-date identifiers.
 
+Figure~\ref{fig:profile0} shows relatively high volatility, beta and return for the initial three-member group. In December, its cluster-median return is 1.45 reference-scaled units above the same-date median, accompanied by elevated volatility and beta in Figure~\ref{fig:profile1}. AngloGold Ashanti, Gold Fields and Valterra record return increases of 1.342, 1.143 and 0.940 reference-scaled units over the first interval. These instrument changes are consistent with the destination's measured return profile. By June 2026, high volatility and beta remain prominent in Figure~\ref{fig:profile2}. The diagrams support a description of a continuing precious-metals peer core with changing membership; they do not establish that commodity prices caused the clustering or that the group predicts future returns.
 
-Anheuser-Busch InBev, BHP and Richemont remain together at all three dates. British American Tobacco joins their group in December 2025, while Prosus leaves by June 2026. The June 2026 group is characterised by high log market capitalisation and low JSE share turnover. This points to similarities in recorded scale and trading activity across firms with different sector labels. However, JSE turnover does not capture all trading in internationally listed firms. The result therefore provides a reason to investigate their financial profiles, rather than to reclassify their businesses.
-
+Anheuser-Busch InBev, BHP and Richemont provide a second persistent core. They remain in aligned group 4 throughout; Prosus is also present at the first two dates, British American Tobacco joins in December and Prosus leaves by June 2026. Figures~\ref{fig:profile0}--\ref{fig:profile2} consistently associate the group with relatively high log market capitalisation and low JSE share turnover. In June 2026, the deviations are approximately $+0.65$ and $-0.64$ reference-scaled units, respectively. The original Python maps list this aligned group as local cluster 4, 3 and 5. Its members span different recorded sectors, so the financial interpretation concerns measured scale and local trading activity. JSE turnover does not capture all trading in internationally listed firms, and low measured JSE turnover is insufficient evidence of low global liquidity.
 
 \subsection{Robustness and practical reading}
 
