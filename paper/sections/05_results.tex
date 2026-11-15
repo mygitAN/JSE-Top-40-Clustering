@@ -20,7 +20,7 @@ June 2026 & 0.267 & 1.059 & 0.721 & 0.355 & 0.738 & 2-8 \\
 Table~\ref{tab:5} summarises the performance of the UMAP hierarchical model at each decision date. The Silhouette Score in the reduced representation was 0.685 in June 2025, 0.638 in December 2025 and 0.721 in June 2026. The corresponding scores in the scaled financial features were 0.151, 0.124 and 0.267. These results show clear separation in the UMAP maps but weaker separation in the underlying financial variables. The December partition contained two single-member clusters, while neither June partition contained a singleton. Mean seed ARI was 0.846, 0.892 and 0.738, respectively.
 
 
-Figure~\ref{fig:quality} compares this result with a t-SNE hierarchical comparator fitted to the same eight-feature dataset. Its embedding Silhouette Scores were 0.532, 0.589 and 0.656, compared with financial-feature scores of 0.195, 0.240 and 0.255. UMAP therefore produced the higher embedding score at all three dates, while t-SNE produced the higher financial-feature score at the first two. The comparison shows why the reduced map and the original financial features should be read together. The comparison evaluates the two representations within this study and does not establish that UMAP is universally superior.
+Figure~\ref{fig:quality} compares this result with a t-SNE hierarchical comparator fitted to the same eight-feature dataset. Its embedding Silhouette Scores were 0.532, 0.589 and 0.656, compared with financial-feature scores of 0.195, 0.240 and 0.255. UMAP therefore produced the higher embedding score at all three dates, while t-SNE produced the higher financial-feature score at the first two. The comparison shows why the reduced map and the original financial features should be read together. The comparison evaluates the two representations within this study and does not establish that UMAP is universally superior. Section~\ref{sec:method_comparison} compares the groups and membership changes that the two representations identify.
 
 
 
@@ -119,11 +119,11 @@ Figure~\ref{fig:jaccard} shows the membership overlaps used to match groups acro
 
 The membership paths in Figure~\ref{fig:flows} show how a group can disperse despite retaining an aligned label. June 2025 group 0 contains ANG, DSY, GFI, HAR, MTN, OUT and PPH. By December, ANG, GFI and HAR belong to group 3, DSY and MTN to group 7 and PPH to group 2. OUT alone retains group 0. Thus the original seven-member association separates into four destinations. June group 6 also disperses: CLS joins group 2, while REM and RNI join group 7. Its aligned identifier is retired. Figure~\ref{fig:jaccard} shows these weaker overlaps alongside more persistent matches; a one-to-one label assignment cannot by itself describe such fragmentation.
 
-Absa and Old Mutual illustrate a different pattern. Both follow aligned groups $1\rightarrow5\rightarrow1$. In the first interval, Absa's dividend yield decreases by 0.196 June 2025 reference-scaled units, while Old Mutual's one-year return increases by 0.175. In the second interval, beta falls by 0.137 and 0.186 units, respectively. Their June 2026 destination has relatively high dividend and earnings yields in Figure~\ref{fig:profile2}. The return to an earlier group therefore describes renewed similarity to those peers under the fitted representation; it does not establish a reversal of every financial variable.
+Absa and Old Mutual illustrate a different pattern. Both follow aligned groups $1\rightarrow5\rightarrow1$. Absa is also classified as shifting under the t-SNE comparator, whereas Old Mutual is not, so the Old Mutual round trip is specific to the UMAP representation (Section~\ref{sec:method_comparison}). In the first interval, Absa's dividend yield decreases by 0.196 June 2025 reference-scaled units, while Old Mutual's one-year return increases by 0.175. In the second interval, beta falls by 0.137 and 0.186 units, respectively. Their June 2026 destination has relatively high dividend and earnings yields in Figure~\ref{fig:profile2}. The return to an earlier group therefore describes renewed similarity to those peers under the fitted representation; it does not establish a reversal of every financial variable.
 
 Naspers and Prosus converge in aligned group 9 in June 2026 after occupying groups 7 and 4, respectively. Their one-year returns decrease by 0.468 and 0.527 reference-scaled units between December and June. Figure~\ref{fig:profile2} characterises their destination by relatively high market capitalisation and low return and dividend yield. Sasol instead moves from group 2 to group 7 as beta decreases by 0.642 and one-year return increases by 0.627 units. Reinet follows groups $6\rightarrow7\rightarrow2$, although its imputed fundamentals limit interpretation. These feature differences are calculated from the saved instrument records using the fixed June 2025 scale. They describe observed changes and are not causal effects or SHAP attributions; no single feature is asserted to determine membership.
 
-Table~\ref{tab:move_shap} adds the surrogate's feature attributions for selected destination assignments. Equities are grouped only where every feature contribution shown in that row is identical before rounding; no row represents an average or a selected representative equity. Return supports the December precious-metals assignments, consistent with the measured return increases for ANG, GFI and VAL. For Absa and Old Mutual in June, dividend yield and earnings yield support group 1, although beta is among their larger measured changes. For Naspers and Prosus, return, earnings yield and dividend yield support group 9; Sasol's group-7 assignment is supported most strongly by return. These comparisons distinguish a variable that changed substantially from a variable the surrogate uses to reproduce the destination label.
+Table~\ref{tab:move_shap} adds the surrogate's feature attributions for selected destination assignments. Equities are grouped only where every feature contribution shown in that row is identical before rounding; no row represents an average or a selected representative equity. Return supports the December precious-metals assignments, consistent with the measured return increases for ANG, GFI and VAL. The December grouping is recovered under both representations, but the switches of ANG and GFI into it are specific to UMAP (Section~\ref{sec:method_comparison}). For Absa and Old Mutual in June, dividend yield and earnings yield support group 1, although beta is among their larger measured changes. For Naspers and Prosus, return, earnings yield and dividend yield support group 9; Sasol's group-7 assignment is supported most strongly by return. These comparisons distinguish a variable that changed substantially from a variable the surrogate uses to reproduce the destination label.
 
 \begin{table}[htbp]
 \centering
@@ -174,11 +174,59 @@ Figures~\ref{fig:profile0}--\ref{fig:profile2} summarise the financial character
 
 \FloatBarrier
 
-The precious-metals grouping is one of the clearer examples of membership continuity accompanied by an interpretable financial profile. Impala Platinum, Northam Platinum and Sibanye-Stillwater form aligned group 3 in June 2025 and remain together at all three dates. By December, AngloGold Ashanti, Gold Fields, Harmony and Valterra join them, increasing the group from three to seven instruments. Pan African Resources joins on entering the observed index universe in June 2026, giving eight members. These memberships can be followed in Figure~\ref{fig:flows} for the continuing firms and checked against the complete member lists in the original Python maps. In those maps, this aligned group appears as local cluster 3, 1 and 0 at the successive dates; local numbers should not be read as cross-date identifiers.
+The precious-metals grouping is one of the clearer examples of membership continuity accompanied by an interpretable financial profile. Impala Platinum, Northam Platinum and Sibanye-Stillwater form aligned group 3 in June 2025 and remain together at all three dates. By December, AngloGold Ashanti, Gold Fields, Harmony and Valterra join them, increasing the group from three to seven instruments. Pan African Resources joins on entering the observed index universe in June 2026, giving eight members. The t-SNE comparator places all seven continuing members together in December in every seed. In its representative June 2025 fit, however, AngloGold Ashanti, Gold Fields and Harmony already share a group with the platinum core, an association found in only two of five seeds. Under t-SNE, Valterra's arrival is therefore the only switch into the group. These memberships can be followed in Figure~\ref{fig:flows} for the continuing firms and checked against the complete member lists in the original Python maps. In those maps, this aligned group appears as local cluster 3, 1 and 0 at the successive dates; local numbers should not be read as cross-date identifiers.
 
 Figure~\ref{fig:profile0} shows relatively high volatility, beta and return for the initial three-member group. In December, its cluster-median return is 1.45 reference-scaled units above the same-date median, accompanied by elevated volatility and beta in Figure~\ref{fig:profile1}. AngloGold Ashanti, Gold Fields and Valterra record return increases of 1.342, 1.143 and 0.940 reference-scaled units over the first interval. These instrument changes are consistent with the destination's measured return profile. By June 2026, high volatility and beta remain prominent in Figure~\ref{fig:profile2}. The diagrams support a description of a continuing precious-metals peer core with changing membership; they do not establish that commodity prices caused the clustering or that the group predicts future returns.
 
 Anheuser-Busch InBev, BHP and Richemont provide a second persistent core. They remain in aligned group 4 throughout; Prosus is also present at the first two dates, British American Tobacco joins in December and Prosus leaves by June 2026. Figures~\ref{fig:profile0}--\ref{fig:profile2} consistently associate the group with relatively high log market capitalisation and low JSE share turnover. In June 2026, the deviations are approximately $+0.65$ and $-0.64$ reference-scaled units, respectively. The original Python maps list this aligned group as local cluster 4, 3 and 5. Its members span different recorded sectors, so the financial interpretation concerns measured scale and local trading activity. JSE turnover does not capture all trading in internationally listed firms, and low measured JSE turnover is insufficient evidence of low global liquidity.
+
+\subsection{Sensitivity to the choice of representation}\label{sec:method_comparison}
+
+Table~\ref{tab:method_quality} compares the UMAP model with the t-SNE comparator fitted through the identical pipeline. UMAP produced the higher Silhouette Score in the reduced representation at all three dates. t-SNE produced the higher financial-feature Silhouette Score in June and December 2025, contained no single-member clusters and showed greater seed agreement in December 2025 and June 2026. It also recorded fewer membership changes: 9 in each interval, compared with 15 and 11 under UMAP. The two partitions agree substantially at each date, with an Adjusted Rand Index of 0.635 in June 2025, 0.800 in December 2025 and 0.923 in June 2026.
+
+\begin{table}[htbp]
+\centering\caption{UMAP and t-SNE fitted through the same pipeline. Scores describe the representative seed-42 partition; seed ARI is the mean of ten pairwise comparisons; sector ARI compares the partition with the recorded sector labels.}\label{tab:method_quality}
+\footnotesize
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}X l r r r r r r r@{}}
+\toprule
+Date & Method & Feature S & Feature DB & Map S & Map DB & Singletons & Seed ARI & Sector ARI \\
+\midrule
+June 2025 & UMAP & 0.151 & 1.153 & 0.685 & 0.385 & 0 & 0.846 & 0.152 \\
+ & t-SNE & 0.195 & 1.307 & 0.532 & 0.561 & 0 & 0.658 & 0.276 \\
+December 2025 & UMAP & 0.124 & 1.049 & 0.638 & 0.268 & 2 & 0.892 & 0.318 \\
+ & t-SNE & 0.240 & 1.094 & 0.589 & 0.494 & 0 & 0.925 & 0.333 \\
+June 2026 & UMAP & 0.267 & 1.059 & 0.721 & 0.355 & 0 & 0.738 & 0.472 \\
+ & t-SNE & 0.255 & 1.016 & 0.656 & 0.390 & 0 & 0.894 & 0.417 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+These scores do not favour UMAP on every criterion. The more important question for this study is whether the two representations describe the same financial peer relationships. Table~\ref{tab:method_groups} reports how often selected groups of equities are assigned to the same cluster across the five seeds.
+
+\begin{table}[htbp]
+\centering\caption{Number of the five seeds in which every listed equity is assigned to the same cluster.}\label{tab:method_groups}
+\footnotesize
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}X ccc ccc@{}}
+\toprule
+ & \multicolumn{3}{c}{UMAP} & \multicolumn{3}{c}{t-SNE} \\
+\cmidrule(lr){2-4}\cmidrule(l){5-7}
+Group & Jun 2025 & Dec 2025 & Jun 2026 & Jun 2025 & Dec 2025 & Jun 2026 \\
+\midrule
+Platinum core: IMP, NPH, SSW & 5 & 5 & 4 & 5 & 5 & 5 \\
+Platinum core with ANG, GFI, HAR & 0 & 5 & 4 & 2 & 5 & 5 \\
+Platinum core with ANG, GFI, HAR, VAL & 0 & 5 & 4 & 0 & 5 & 5 \\
+Scale core: ANH, BHG, CFR & 5 & 5 & 5 & 5 & 5 & 5 \\
+Naspers and Prosus & 1 & 0 & 5 & 2 & 0 & 5 \\
+Absa and Old Mutual & 5 & 5 & 4 & 5 & 0 & 5 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+The substantive findings are largely retained. Both representations keep the platinum core and the large-capitalisation, low-turnover core together throughout. Both bring the gold miners and Valterra into the precious-metals group in December 2025, and both join Naspers and Prosus in June 2026 in every seed. The main difference concerns the gold miners in June 2025: t-SNE groups them with the platinum core in two of five seeds, whereas UMAP never does. Absa and Old Mutual separate in December 2025 under t-SNE but remain together under UMAP.
+
+The two representations give the same stable or shifted classification for 28 of the 39 complete histories. Thirteen equities change aligned group under both: ABG, AGL, CLS, CPI, MTN, NPN, PPH, PRX, RNI, SLM, SOL, VAL and VOD. Fifteen remain stable under both: ANH, BHG, BID, CFR, FSR, GRT, IMP, INL, INP, NED, NPH, NRP, SBK, SHP and SSW. Seven changes occur under UMAP only (ANG, BTI, DSY, GFI, HAR, OMU and REM), and four under t-SNE only (BVT, MRP, OUT and WHL). The changes recorded under both representations are the more robust candidates for analyst investigation. Changes recorded under one representation remain informative, but depend partly on the modelling choice.
+
+The comparison therefore supports UMAP as a defensible primary representation rather than a superior one. Its stronger separation in the reduced representation makes the fitted groups easier to inspect, while the persistent groups and most of the membership changes are recovered when the representation is changed.
 
 \subsection{Robustness and practical reading}
 
