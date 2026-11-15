@@ -53,7 +53,7 @@ specified in advance.
 
 1. **Sectors co-move more than clusters.** delta_rho is negative at both dates,
    for raw and market-adjusted returns, for every UMAP seed and for t-SNE.
-   Study model: -0.129 (95% CI -0.171 to -0.096) and -0.069 (-0.102 to -0.038)
+   Study model: -0.129 (95% CI -0.171 to -0.096) and -0.069 (-0.100 to -0.040)
    for raw returns. Clusters as a replacement for sectors are not supported.
 2. **Clusters beat random groups** of the same sizes (permutation p < 0.001 at
    both dates), so they do capture real co-movement.
