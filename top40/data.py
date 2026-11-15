@@ -13,7 +13,7 @@ import zipfile
 from collections import Counter
 from pathlib import Path
 
-from . import DATA_POLICY, INPUTS, WORKBOOK
+from . import DATA_POLICY, INDEX_CHANGES, INPUTS, WORKBOOK
 
 DATES = ['2025-06-30', '2025-12-31', '2026-06-30']
 NUMERIC = ['return_1y', 'average_daily_volume_1y_model', 'market_cap_zar', 'beta_1y',
@@ -84,6 +84,35 @@ def derive_constants(rows):
                 lower=_percentile(yields, .01), upper=_percentile(yields, .99))
 
 
+def index_changes(path=None):
+    """Published FTSE/JSE Top 40 reviews: effective date, tickers added and removed."""
+    with Path(path or INDEX_CHANGES).open(newline='', encoding='utf-8') as stream:
+        return [dict(row, added=set(filter(None, row['added'].split(';'))),
+                     removed=set(filter(None, row['removed'].split(';')))) for row in csv.DictReader(stream)]
+
+
+def check_index_changes(members, changes=None):
+    """Each date's membership must follow from the previous date and the reviews in between.
+
+    The review just before the first date must also be reflected: its additions
+    present and its removals absent.
+    """
+    changes = index_changes() if changes is None else changes
+    before_first = [c for c in changes if c['effective_date'] <= DATES[0]]
+    require(before_first, 'No published review before the first decision date')
+    latest = max(before_first, key=lambda c: c['effective_date'])
+    require(latest['added'] <= members[DATES[0]] and not latest['removed'] & members[DATES[0]],
+            f'{DATES[0]} membership does not reflect the {latest["review"]} review')
+    for before, after in zip(DATES, DATES[1:]):
+        between = [c for c in changes if before < c['effective_date'] <= after]
+        expected = set(members[before])
+        for change in sorted(between, key=lambda c: c['effective_date']):
+            expected = (expected - change['removed']) | change['added']
+        require(members[after] == expected,
+                f'{after} membership differs from {before} plus the published reviews in between '
+                f'(missing {sorted(expected - members[after])}, unexpected {sorted(members[after] - expected)})')
+
+
 def validate(data=None, policy=None):
     """Raise AssertionError unless the model inputs match the policy and workbook."""
     with Path(data or INPUTS).open(newline='', encoding='utf-8') as stream:
@@ -105,8 +134,7 @@ def validate(data=None, policy=None):
     require(len({(r['decision_date'], r['ticker']) for r in rows}) == 123, 'Duplicate date/ticker key')
     require(len({r['ticker'] for r in rows}) == 43, 'Expected 43 distinct tickers')
     members = {d: {r['ticker'] for r in rows if r['decision_date'] == d} for d in DATES}
-    require(members[DATES[1]] == (members[DATES[0]] - {'APN'}) | {'GLN'}, 'Unexpected December 2025 membership')
-    require(members[DATES[2]] == (members[DATES[1]] - {'MNP'}) | {'PAN'}, 'Unexpected June 2026 membership')
+    check_index_changes(members)
     flagged = lambda flag: {(r['decision_date'], r['ticker']) for r in rows if r[flag] == 'true'}
     require(flagged('volume_imputed') == {(DATES[0], 'AGL'), (DATES[1], 'AGL')}, 'Unexpected volume imputations')
     require(flagged('fundamentals_imputed') == {(d, 'RNI') for d in DATES}, 'Unexpected fundamental imputations')

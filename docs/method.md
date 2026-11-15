@@ -19,6 +19,24 @@ Investec Limited (INL) and Investec plc (INP) are two securities of one
 dual-listed company, so 41 instruments represent 40 groups. Both stay in the
 analysis as separate rows.
 
+Membership is checked against every published FTSE/JSE quarterly review in the
+period, recorded with sources in `data/reference/index_changes.csv`.
+`python -m top40.data` fails if any date's membership is not the previous date's
+membership plus the reviews in between.
+
+| Review | Effective | Top 40 change |
+| --- | --- | --- |
+| June 2025 | 23 Jun 2025 | Northam Platinum (NPH) in, Glencore (GLN) out; before the first date |
+| September 2025 | 22 Sep 2025 | Glencore in, Aspen out |
+| December 2025 | 22 Dec 2025 | none |
+| March 2026 | 23 Mar 2026 | Pan African Resources in, Mondi out |
+| June 2026 | 22 Jun 2026 | none |
+
+So 39 instruments are members at all three dates and 43 at one or more. The
+cluster-flow diagram shows the 39, because a three-date history needs all three
+observations; Aspen, Glencore, Mondi and Pan African appear only at the dates
+they were members.
+
 There are 123 rows and 43 distinct tickers. 40 instruments continue between each
 pair of adjacent dates and 39 are present at all three. The trailing one-year
 windows of adjacent dates overlap by six months, and annual fundamentals are
