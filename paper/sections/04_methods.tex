@@ -1,4 +1,4 @@
-\section{Repeated cross sectional methods}
+% Method subsections continue Section 3 Data and methodology.
 
 
 \begin{figure}[htbp]
@@ -10,7 +10,7 @@
 
 \subsection{Scaling and independent fitting}
 
-For feature j, let a(j) and b(j) be its June 2025 minimum and maximum after the declared imputation and transformations. The scaled value at any date is the difference between the observed value and a(j), divided by b(j) minus a(j). Scaling is not clipped. A later observation can therefore exceed one or fall below zero. This preserves a reference scale and avoids using later observations to estimate preprocessing constants, but does not prevent later variance being dominated by one feature.
+MinMax scaling was applied because the financial variables have different magnitudes. The scaling parameters were estimated from June 2025 and applied unchanged to December 2025 and June 2026. This provides a common reference for comparing financial profiles over time. Let $x_{itj}$ denote feature $j$ for instrument $i$ at date $t$, and let $U_{t_1}$ be the June 2025 population. The scaled value is given by Equation~\ref{eq:scale}. Scaling was not clipped, so later observations may fall outside $[0,1]$.
 
 
 \begin{equation}
@@ -18,7 +18,7 @@ z_{itj}=\frac{x_{itj}-a_j}{b_j-a_j},\qquad
 a_j=\min_{i\in U_{t_1}}x_{it_1j},\quad b_j=\max_{i\in U_{t_1}}x_{it_1j}.
 \label{eq:scale}\end{equation}
 
-For each date and each seed in 42-46, UMAP \citep{mcinnes2018} learns a new two-dimensional representation using three neighbours, minimum distance 0.01, Euclidean input distance and one computational job. Agglomerative clustering then joins groups bottom-up with average linkage under Manhattan distance on the two coordinates, stopping at eight groups. Seed 42 supplies the representative partition and figures. The five fits quantify stochastic sensitivity; their outputs are not pooled into an enlarged sample or a consensus partition.
+UMAP was used to produce a two-dimensional representation of each cross-section \citep{mcinnes2018}. The model used three neighbours, a minimum distance of 0.01, Euclidean input distance and one computational job. Hierarchical clustering was then applied to the UMAP coordinates using average linkage and Manhattan distance, with eight clusters as the reference configuration. Each date was fitted independently using seeds 42--46. Seed 42 provides the representative partition, while the remaining fits support stability analysis. Figure~\ref{fig:pipeline} summarises the modelling workflow.
 
 
 The linkage between groups $G$ and $H$ of two-dimensional coordinates $u_i$ is
@@ -45,23 +45,23 @@ Historical comparator & t-SNE: perplexity 5; learning rate 10; 300 iterations; r
 \end{table}
 
 
-Three neighbours and minimum distance 0.01 were author-specified after exploratory June 2025 analysis. An earlier 36-combination grid preferred minimum distance 0.1. Eight groups, average linkage and Manhattan distance follow the original paper. These settings are pilot-informed, not prospectively registered. Later-date fitting holds the recipe fixed but refits the representation and labels, so the results do not measure out-of-sample predictive performance.
+The settings were selected after exploratory analysis of June 2025 and held constant at the later dates. Three neighbours and a minimum distance of 0.01 were author-specified in that exploration; an earlier 36-combination grid preferred a minimum distance of 0.1. Eight clusters, average linkage and Manhattan distance were retained from the earlier paper. The specification is therefore exploratory rather than prospectively registered. Holding the settings constant supports comparison across dates, but each representation and partition is refitted, so the later results are not an out-of-sample prediction test.
 
 
 \subsection{Quality in two geometries and seed agreement}
 
-Each representative partition is evaluated in both the two-dimensional representation and the eight-dimensional scaled financial space. Silhouette uses within-cluster and nearest-other-cluster Euclidean distances; larger values indicate greater separation. Davies-Bouldin compares within-group dispersion with distances between group centres; smaller values indicate more compact separation. The evaluation distance is Euclidean even though the hierarchy uses Manhattan distance. The two geometries answer different questions and are reported together. DBSCAN comparator scores exclude noise and must be read with coverage.
+Cluster quality was evaluated using the Silhouette Score and Davies-Bouldin Index. Both measures were calculated for the same partition in two spaces: the two-dimensional representation and the eight-dimensional scaled financial features. A higher Silhouette Score indicates greater separation, while a lower Davies-Bouldin Index indicates more compact clusters. Euclidean distance was used for evaluation, although the hierarchy used Manhattan distance. This distinction is important because an embedding can produce visibly separated groups without equivalent separation in the underlying financial variables. DBSCAN comparator scores exclude noise observations and are reported with coverage.
 
 
-Within each date, five seeds give ten pairwise adjusted Rand indices (ARI). ARI is label-invariant and adjusted for chance agreement; it is not an accuracy against a known financial truth. Its mean summarises variability induced by the embedding seed, conditional on the fixed inputs. The five-seed mean is not a confidence interval, bootstrap, or independent null distribution for temporal changes. Cluster size ranges and singleton counts accompany the quality scores.
+Stability was assessed using the Adjusted Rand Index (ARI) between partitions fitted with different seeds. Five seeds produce ten pairwise comparisons at each date. ARI is unaffected by arbitrary cluster numbering and measures agreement between partitions after allowing for chance. The mean pairwise score summarises consistency under the tested initialisations. Cluster sizes and singleton counts were also examined because a high agreement score can coexist with very small groups. The seed comparisons assess one source of fitting variability; they do not provide independent observations or a confidence interval for changes over time.
 
 
 \subsection{Matching clusters between dates}
 
-Let C be the instruments observed at both adjacent dates. For each earlier group A and later group B, restrict both to C and calculate their Jaccard similarity as the size of their intersection divided by the size of their union. A Hungarian assignment chooses a one-to-one matching that maximises the sum of these similarities. An assigned pair with zero intersection is not retained as a match; that later cluster receives a fresh identifier. Retired identifiers are never reused for unrelated groups.
+Cluster numbers from independent fits cannot be compared directly because their labels are arbitrary. Clusters were therefore matched between adjacent dates using the instruments present at both dates. For an earlier group $A_a$ and a later group $B_b$, Jaccard similarity measures shared continuing members relative to their union. A Hungarian assignment selects the one-to-one matching with the highest total similarity. Positive-overlap matches retain the earlier label, while groups with no overlap receive a new label. Labels that have disappeared are not reused for unrelated groups.
 
 
-Writing $A_a^C=A_a\cap C$ and $B_b^C=B_b\cap C$, the matching objective is
+Let $C$ be the set of instruments observed at both dates. Writing $A_a^C=A_a\cap C$ and $B_b^C=B_b\cap C$, the matching objective is
 \begin{align}
 J_{ab}&=\frac{|A_a^C\cap B_b^C|}{|A_a^C\cup B_b^C|},\\
 \pi^*&\in\operatorname*{arg\,max}_{\pi}\sum_a J_{a,\pi(a)}.
@@ -97,27 +97,27 @@ Figure~\ref{fig:alignment} illustrates the overlap calculation with an observed 
 \end{figure}
 
 
-Temporal ARI is computed directly on the two partitions of continuing members and does not depend on the label matching. Switch counts do depend on matching. A global one-to-one assignment cannot fully represent a split or merger, so the overlap matrix and named member histories remain essential. A label that survives a match is a descriptive continuity identifier, not an invariant economic factor. We use "stable" only for a complete history whose aligned label never changes, and "shifted" when it changes at least once. These terms do not imply unchanged or changed business fundamentals.
+Two forms of temporal comparison were then used. Temporal ARI measures agreement between the partitions of continuing instruments without depending on label matching. The switch count records instruments assigned to different groups after matching. A complete three-date history is described as stable when its aligned label is unchanged and shifted when the label changes at least once. Entries, exits and missing membership are recorded separately. A one-to-one assignment can simplify a split or merger, so the overlap matrices and named member histories are examined alongside the switch counts. Stability in this sense refers to group membership, not unchanged company fundamentals.
 
 
 \subsection{Direct profiles and surrogate interpretation}
 
-For each cluster, we subtract the same-date cross-sectional median from the cluster median for each of the eight scaled features. Positive and negative deviations describe the group relative to its contemporaries in June 2025 reference units. For an instrument that changes group, the reporting tables retain its feature changes, old and new peers, peer retention and destination profile. These directly calculated descriptions form the primary interpretation.
+Cluster interpretation was based first on the original financial characteristics. For each feature, the cluster median was compared with the same-date cross-sectional median in the June 2025 scaled units. Positive deviations indicate relatively high values and negative deviations relatively low values. Equation~\ref{eq:profiles} defines the deviation for cluster $G_{ct}$ within the date-specific population $U_t$. For companies that changed group, their feature changes, previous and new peers, peer retention and destination profiles were also examined. These comparisons show which measured attributes accompany a change in peer relationships.
 
 
 \begin{equation}
 \Delta_{ctj}=\operatorname{median}_{i\in G_{ct}}z_{itj}-\operatorname{median}_{i\in U_t}z_{itj}.
 \label{eq:profiles}\end{equation}
 
-An XGBoost classifier is fitted to the unscaled engineered features to reproduce the cluster labels: 150 trees, maximum depth two, learning rate 0.05, full row and column sampling, one job and a multiclass probability objective. Tree SHAP explains the surrogate raw class margins using tree-path-dependent perturbation. Saved attributions are checked for additivity with a maximum tolerance of 0.0001. These attributions explain the surrogate, rather than the UMAP or hierarchy directly, and do not establish causes of group membership.
+SHAP explanations were generated using an XGBoost surrogate classifier trained to reproduce the cluster labels from the unscaled engineered features. The classifier used 150 trees, a maximum depth of two, a learning rate of 0.05, full row and column sampling, one computational job and a multiclass probability objective. Tree SHAP was applied to its raw class margins using tree-path-dependent perturbation. Additivity was checked with a tolerance of 0.0001. The surrogate was used for interpretation rather than return prediction, and its attributions explain the label-assignment model rather than the clustering algorithm directly.
 
 
-Where the smallest cluster contains at least two members, stratified cross-validation uses the smaller of five folds and the minimum cluster size, with shuffling and the representative seed. Singleton clusters make this out-of-fold fidelity estimate unavailable under the implemented procedure. The measured fidelity is agreement with algorithm-generated labels, not accuracy in forecasting a financial outcome. A model that reproduces every training label can still have inadequate fidelity on held-out instruments.
+Surrogate fidelity was assessed using stratified cross-validation where the smallest cluster contained at least two instruments. The number of folds was the smaller of five and the minimum cluster size, with shuffling and the representative seed. Out-of-fold fidelity could not be estimated under this procedure when a cluster contained only one instrument. Reporting fidelity is important because a classifier may reproduce its training labels while providing weaker explanations for held-out instruments. Fidelity measures agreement with cluster labels, not predictive accuracy for financial outcomes.
 
 
-\subsection{Separate financial distance screen}
+\subsection{Multivariate distance screening}
 
-The screen computes squared Mahalanobis distance from the same-date mean in the eight scaled features using the sample covariance matrix. It is not the predictive Hotelling statistic for a new observation. Under independent multivariate normal sampling, an individual internal distance D squared, multiplied by n divided by (n minus one) squared, has a Beta reference with shape parameters p/2 and (n minus p minus one)/2. Here n=41, p=8 and the nominal upper-tail level is 0.05. A singular or excessively ill-conditioned covariance produces an unestimable result rather than a flag.
+A separate Mahalanobis distance analysis was used to identify instruments far from the multivariate sample centre. Squared distances were calculated from the same-date mean and sample covariance in the eight scaled financial features. The calculation uses an internal individual-distance reference, rather than the predictive Hotelling statistic for a new observation. Under independent multivariate normal sampling, the scaled internal distance has the Beta reference in Equation~\ref{eq:distance}. The calculation uses $n=41$ instruments, $p=8$ features and a nominal upper-tail level of 0.05. A singular or excessively ill-conditioned covariance is reported as unestimable.
 
 
 \begin{align}
@@ -126,4 +126,4 @@ D_{it}^2&=(z_{it}-\bar z_t)^{\mathsf T}S_t^{-1}(z_{it}-\bar z_t),\\
 \quad\text{under the idealised normal reference}.
 \label{eq:distance}\end{align}
 
-Those assumptions are doubtful for heterogeneous, overlapping equity cross-sections with clipped and imputed financial variables. The threshold therefore provides a descriptive ranking screen, not calibrated significance or a multiple-testing-controlled anomaly discovery procedure. Cluster isolation, sector divergence, aligned membership movement and financial distance are separate observations. No combined score converts them into a confirmed economic anomaly.
+The distance analysis provides a second view of unusual financial profiles, independently of cluster membership. However, equity cross-sections with heterogeneous, clipped and imputed inputs do not satisfy the normal reference automatically. The resulting flags are therefore descriptive screening signals rather than calibrated significance tests, and no multiple-testing correction establishes them as economic anomalies. Cluster isolation, sector divergence, membership changes and multivariate distance answer different questions and are interpreted separately.
