@@ -1,0 +1,3 @@
+decision_date,ticker,average_daily_volume,share_basis,trading_days,window_start,window_end,workbook_value,source,check
+2025-12-31,NPN,2140028.5,post-subdivision,250,2025-01-01,2025-12-31,800934.676,"Yahoo Finance NPN.JO daily volume (split-adjusted to post-subdivision units), retrieved 2026-11-14","Dividing volumes before 2025-10-01 by 5 reproduces the workbook value exactly, so this is the same series on one share basis"
+2026-06-30,NPN,1847638.6653386455,post-subdivision,251,2025-07-01,2026-06-30,1502524.131474104,"Yahoo Finance NPN.JO daily volume (split-adjusted to post-subdivision units), retrieved 2026-11-14","Dividing volumes before 2025-10-01 by 5 reproduces the workbook value to 3e-16 relative error"

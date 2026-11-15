@@ -1,0 +1,44 @@
+ticker,original10|umap,original10|ward_features,logsize10|umap,logsize10|ward_features,invariant8|umap,invariant8|ward_features,market5|umap,market5|ward_features
+ABG,shifted,stable,shifted,shifted,shifted,shifted,stable,shifted
+AGL,shifted,shifted,stable,shifted,shifted,shifted,stable,shifted
+ANG,stable,stable,shifted,stable,shifted,shifted,shifted,stable
+ANH,stable,stable,stable,stable,stable,stable,shifted,shifted
+APN,membership gap,membership gap,membership gap,membership gap,membership gap,membership gap,membership gap,membership gap
+BHG,stable,stable,stable,shifted,stable,stable,shifted,shifted
+BID,stable,stable,shifted,stable,stable,stable,stable,shifted
+BTI,stable,stable,stable,stable,shifted,stable,shifted,shifted
+BVT,stable,stable,shifted,stable,stable,shifted,shifted,shifted
+CFR,stable,shifted,stable,stable,stable,stable,stable,shifted
+CLS,shifted,stable,shifted,stable,shifted,stable,shifted,shifted
+CPI,shifted,stable,stable,stable,shifted,shifted,stable,shifted
+DSY,shifted,shifted,shifted,shifted,shifted,shifted,stable,shifted
+FSR,stable,stable,stable,stable,stable,stable,shifted,shifted
+GFI,stable,stable,shifted,stable,shifted,shifted,shifted,stable
+GLN,membership gap,membership gap,membership gap,membership gap,membership gap,membership gap,membership gap,membership gap
+GRT,shifted,shifted,shifted,stable,stable,shifted,shifted,stable
+HAR,stable,stable,stable,stable,shifted,shifted,shifted,shifted
+IMP,shifted,stable,stable,shifted,stable,stable,stable,shifted
+INL,stable,stable,shifted,stable,stable,stable,stable,shifted
+INP,stable,stable,shifted,stable,stable,stable,stable,shifted
+MNP,membership gap,membership gap,membership gap,membership gap,membership gap,membership gap,membership gap,membership gap
+MRP,shifted,shifted,shifted,shifted,stable,shifted,shifted,shifted
+MTN,stable,shifted,shifted,shifted,shifted,shifted,shifted,shifted
+NED,stable,stable,stable,stable,stable,stable,shifted,shifted
+NPH,shifted,stable,stable,shifted,stable,stable,stable,shifted
+NPN,stable,shifted,shifted,shifted,shifted,shifted,shifted,shifted
+NRP,stable,stable,shifted,stable,stable,shifted,shifted,stable
+OMU,stable,stable,shifted,stable,shifted,stable,shifted,shifted
+OUT,stable,shifted,shifted,shifted,stable,shifted,shifted,shifted
+PAN,membership gap,membership gap,membership gap,membership gap,membership gap,membership gap,membership gap,membership gap
+PPH,shifted,shifted,shifted,shifted,shifted,stable,shifted,shifted
+PRX,shifted,shifted,shifted,shifted,shifted,shifted,shifted,shifted
+REM,shifted,stable,shifted,stable,shifted,shifted,shifted,shifted
+RNI,shifted,stable,shifted,stable,shifted,shifted,shifted,shifted
+SBK,shifted,shifted,stable,stable,stable,stable,stable,shifted
+SHP,stable,stable,shifted,stable,stable,stable,stable,shifted
+SLM,shifted,stable,stable,stable,shifted,stable,shifted,shifted
+SOL,shifted,stable,stable,shifted,shifted,stable,stable,stable
+SSW,shifted,shifted,stable,shifted,stable,stable,stable,stable
+VAL,shifted,stable,shifted,shifted,shifted,shifted,shifted,shifted
+VOD,stable,stable,stable,stable,shifted,stable,shifted,shifted
+WHL,shifted,shifted,shifted,shifted,stable,shifted,shifted,shifted

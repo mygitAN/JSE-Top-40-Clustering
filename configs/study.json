@@ -1,0 +1,94 @@
+{
+  "experiment": "three-cross-section-study",
+  "dates": [
+    "2025-06-30",
+    "2025-12-31",
+    "2026-06-30"
+  ],
+  "fit_date": "2025-06-30",
+  "feature_set": "invariant8",
+  "ablation_feature_sets": [
+    "original10",
+    "logsize10",
+    "invariant8",
+    "market5"
+  ],
+  "seed": 42,
+  "stability_runs": 5,
+  "k": 8,
+  "k_sensitivity": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "screen_alpha": 0.05,
+  "representations": {
+    "pca": {
+      "n_components": 2,
+      "svd_solver": "full"
+    },
+    "tsne": {
+      "n_components": 2,
+      "perplexity": 5,
+      "learning_rate": 10,
+      "max_iter": 300,
+      "init": "random",
+      "n_jobs": 1
+    },
+    "umap": {
+      "n_components": 2,
+      "n_neighbors": 10,
+      "min_dist": 0.1,
+      "n_jobs": 1
+    }
+  },
+  "clusterers": {
+    "hierarchical": {
+      "linkage": "average",
+      "metric": "manhattan"
+    },
+    "kmeans": {
+      "n_init": 20
+    },
+    "dbscan": {
+      "eps": 0.5,
+      "min_samples": 3
+    }
+  },
+  "primary_models": {
+    "umap": {
+      "description": "UMAP to two dimensions, then agglomerative (hierarchical) clustering with average linkage and Manhattan distance into k=8 clusters",
+      "representation": "umap",
+      "representation_params": {
+        "n_components": 2,
+        "n_neighbors": 3,
+        "min_dist": 0.01,
+        "metric": "euclidean",
+        "n_jobs": 1
+      },
+      "hierarchical": {
+        "linkage": "average",
+        "metric": "manhattan"
+      },
+      "provenance": "n_neighbors=3 and min_dist=0.01 were set by the author in an exploratory June 2025 sweep (archived run fixed-umap-001-01). The earlier 36-combination June 2025 grid (user-umap-grid-01) preferred n_neighbors=3 with min_dist=0.1. Average linkage, Manhattan distance and k=8 follow the original paper. All were chosen after the data had been examined; none is pre-registered."
+    }
+  },
+  "surrogate": {
+    "n_estimators": 150,
+    "max_depth": 2,
+    "learning_rate": 0.05,
+    "subsample": 1,
+    "colsample_bytree": 1,
+    "n_jobs": 1,
+    "objective": "multi:softprob",
+    "eval_metric": "mlogloss"
+  }
+}

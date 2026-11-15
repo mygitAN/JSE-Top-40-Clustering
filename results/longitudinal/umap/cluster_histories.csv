@@ -1,0 +1,44 @@
+ticker,2025-06-30,2025-12-31,2026-06-30,observed_all_dates,stability_status,data_caveat
+ABG,1.0,5.0,1.0,True,shifted,False
+AGL,2.0,7.0,7.0,True,shifted,True
+ANG,0.0,3.0,3.0,True,shifted,False
+ANH,4.0,4.0,4.0,True,stable,False
+APN,2.0,,,False,membership gap,False
+BHG,4.0,4.0,4.0,True,stable,False
+BID,2.0,2.0,2.0,True,stable,False
+BTI,5.0,4.0,4.0,True,shifted,False
+BVT,2.0,2.0,2.0,True,stable,False
+CFR,4.0,4.0,4.0,True,stable,False
+CLS,6.0,2.0,2.0,True,shifted,False
+CPI,7.0,7.0,5.0,True,shifted,False
+DSY,0.0,7.0,5.0,True,shifted,False
+FSR,5.0,5.0,5.0,True,stable,False
+GFI,0.0,3.0,3.0,True,shifted,False
+GLN,,7.0,7.0,False,membership gap,False
+GRT,1.0,1.0,1.0,True,stable,False
+HAR,0.0,3.0,3.0,True,shifted,False
+IMP,3.0,3.0,3.0,True,stable,False
+INL,1.0,1.0,1.0,True,stable,False
+INP,1.0,1.0,1.0,True,stable,False
+MNP,2.0,8.0,,False,membership gap,False
+MRP,2.0,2.0,2.0,True,stable,False
+MTN,0.0,7.0,7.0,True,shifted,False
+NED,1.0,1.0,1.0,True,stable,False
+NPH,3.0,3.0,3.0,True,stable,False
+NPN,7.0,7.0,9.0,True,shifted,False
+NRP,1.0,1.0,1.0,True,stable,False
+OMU,1.0,5.0,1.0,True,shifted,False
+OUT,0.0,0.0,0.0,True,stable,False
+PAN,,,3.0,False,membership gap,False
+PPH,0.0,2.0,2.0,True,shifted,False
+PRX,4.0,4.0,9.0,True,shifted,False
+REM,6.0,7.0,5.0,True,shifted,False
+RNI,6.0,7.0,2.0,True,shifted,True
+SBK,5.0,5.0,5.0,True,stable,False
+SHP,2.0,2.0,2.0,True,stable,False
+SLM,5.0,5.0,0.0,True,shifted,False
+SOL,2.0,2.0,7.0,True,shifted,False
+SSW,3.0,3.0,3.0,True,stable,False
+VAL,1.0,3.0,3.0,True,shifted,False
+VOD,5.0,5.0,0.0,True,shifted,False
+WHL,2.0,2.0,2.0,True,stable,False
