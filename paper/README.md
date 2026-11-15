@@ -92,7 +92,9 @@ Overleaf compilation needs only the committed files in `paper/`.
 
 `make_tables.py` writes the complete model comparison (`tables/model_comparison.tex`)
 and the sector-agreement table (`tables/sector_agreement.tex`) from `results/`
-and the source run, and saves `data/sector_context.csv`. Rerun it after a new run
+and the source run, and saves `data/sector_context.csv`. It also writes the
+forward co-movement tables (`tables/comovement.tex`, `tables/comovement_pairs.tex`)
+from the frozen outputs in `research/comovement/output/`. Rerun it after a new run
 is exported:
 
 ```powershell
