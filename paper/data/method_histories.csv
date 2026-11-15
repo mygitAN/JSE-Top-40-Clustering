@@ -1,0 +1,40 @@
+ticker,UMAP,t-SNE,agreement
+ABG,shifted,shifted,shifted under both
+AGL,shifted,shifted,shifted under both
+ANG,shifted,stable,shifted under UMAP only
+ANH,stable,stable,stable under both
+BHG,stable,stable,stable under both
+BID,stable,stable,stable under both
+BTI,shifted,stable,shifted under UMAP only
+BVT,stable,shifted,shifted under t-SNE only
+CFR,stable,stable,stable under both
+CLS,shifted,shifted,shifted under both
+CPI,shifted,shifted,shifted under both
+DSY,shifted,stable,shifted under UMAP only
+FSR,stable,stable,stable under both
+GFI,shifted,stable,shifted under UMAP only
+GRT,stable,stable,stable under both
+HAR,shifted,stable,shifted under UMAP only
+IMP,stable,stable,stable under both
+INL,stable,stable,stable under both
+INP,stable,stable,stable under both
+MRP,stable,shifted,shifted under t-SNE only
+MTN,shifted,shifted,shifted under both
+NED,stable,stable,stable under both
+NPH,stable,stable,stable under both
+NPN,shifted,shifted,shifted under both
+NRP,stable,stable,stable under both
+OMU,shifted,stable,shifted under UMAP only
+OUT,stable,shifted,shifted under t-SNE only
+PPH,shifted,shifted,shifted under both
+PRX,shifted,shifted,shifted under both
+REM,shifted,stable,shifted under UMAP only
+RNI,shifted,shifted,shifted under both
+SBK,stable,stable,stable under both
+SHP,stable,stable,stable under both
+SLM,shifted,shifted,shifted under both
+SOL,shifted,shifted,shifted under both
+SSW,stable,stable,stable under both
+VAL,shifted,shifted,shifted under both
+VOD,shifted,shifted,shifted under both
+WHL,stable,shifted,shifted under t-SNE only

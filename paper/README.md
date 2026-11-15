@@ -86,6 +86,18 @@ seven PNGs. Python and the local run archive are needed only for refreshing them
 The older `make_figures.py` remains an optional separate plotting workflow; its
 vector PDFs are not used for these cluster maps or dendrograms.
 
+## UMAP and t-SNE comparison
+
+Section 4.6 and Tables 8 and 9 come from `compare_methods.py`, which fits the
+UMAP model and the t-SNE comparator through the same pipeline (features,
+scaling, clustering, five seeds and cross-date matching) and writes
+`data/method_quality.csv`, `data/method_groups.csv`,
+`data/method_histories.csv` and `data/method_switches.csv`. Regenerate with:
+
+```powershell
+.venv/Scripts/python.exe paper/compare_methods.py
+```
+
 ## Selected movement attributions
 
 Table source `data/selected_move_attributions.csv` is a subset of

@@ -1,0 +1,13 @@
+group,method,2025-06-30,2025-12-31,2026-06-30
+"Platinum core (IMP, NPH, SSW)",UMAP,1.0,1.0,0.8
+"Platinum core (IMP, NPH, SSW)",t-SNE,1.0,1.0,1.0
+"Platinum core with gold miners (ANG, GFI, HAR)",UMAP,0.0,1.0,0.8
+"Platinum core with gold miners (ANG, GFI, HAR)",t-SNE,0.4,1.0,1.0
+"Platinum core, gold miners and Valterra (VAL)",UMAP,0.0,1.0,0.8
+"Platinum core, gold miners and Valterra (VAL)",t-SNE,0.0,1.0,1.0
+"Scale core (ANH, BHG, CFR)",UMAP,1.0,1.0,1.0
+"Scale core (ANH, BHG, CFR)",t-SNE,1.0,1.0,1.0
+"Naspers and Prosus (NPN, PRX)",UMAP,0.2,0.0,1.0
+"Naspers and Prosus (NPN, PRX)",t-SNE,0.4,0.0,1.0
+"Absa and Old Mutual (ABG, OMU)",UMAP,1.0,1.0,0.8
+"Absa and Old Mutual (ABG, OMU)",t-SNE,1.0,0.0,1.0
