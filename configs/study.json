@@ -64,25 +64,8 @@
     }
   },
   "primary_models": {
-    "baseline": {
-      "description": "Recovered SACJ baseline: t-SNE then average-linkage Manhattan hierarchy",
-      "comparison_row": "tsne_hierarchical",
-      "representation": "tsne",
-      "representation_params": {
-        "n_components": 2,
-        "perplexity": 5,
-        "learning_rate": 10,
-        "max_iter": 300,
-        "init": "random",
-        "n_jobs": 1
-      },
-      "hierarchical": {
-        "linkage": "average",
-        "metric": "manhattan"
-      }
-    },
-    "umap_sensitivity": {
-      "description": "Frozen UMAP sensitivity (3 neighbours, min_dist 0.01); not a promoted model",
+    "umap": {
+      "description": "UMAP to two dimensions, then agglomerative (hierarchical) clustering with average linkage and Manhattan distance into k=8 clusters",
       "representation": "umap",
       "representation_params": {
         "n_components": 2,
@@ -94,7 +77,8 @@
       "hierarchical": {
         "linkage": "average",
         "metric": "manhattan"
-      }
+      },
+      "provenance": "n_neighbors=3 and min_dist=0.01 were set by the author in an exploratory June 2025 sweep (archived run fixed-umap-001-01). The earlier 36-combination June 2025 grid (user-umap-grid-01) preferred n_neighbors=3 with min_dist=0.1. Average linkage, Manhattan distance and k=8 follow the original paper. All were chosen after the data had been examined; none is pre-registered."
     }
   },
   "surrogate": {

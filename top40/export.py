@@ -23,6 +23,7 @@ SELECTION = [
     'summary.md',
     'primary_model_summary.csv',
     'model_comparison.csv',
+    'model_specification.csv',
     'seed_agreement.csv',
     'surrogate_fidelity.csv',
     'temporal_agreement.csv',

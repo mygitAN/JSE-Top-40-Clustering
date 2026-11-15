@@ -50,7 +50,9 @@ def write_summary(study):
         'Silhouette and Davies-Bouldin are computed in each feature set\'s own space and cannot be compared '
         'across feature sets. See `feature_audit/quality.csv`, `cross_set_agreement.csv` and '
         '`share_basis.csv`.', '',
-        '## Primary models (`models/`)', '',
+        '## Model specification (`model_specification.csv`)', '',
+        *_markdown(study.model_specification()[['step', 'setting', 'value', 'note']]), '',
+        '## Primary model (`models/`)', '',
         *_markdown(summary), '',
         'Surrogate fidelity is agreement with the cluster labels, not predictive validity. Out-of-fold '
         'fidelity is not estimable when a cluster has one member.', '',
@@ -75,7 +77,7 @@ def check_outputs(study):
     """Raise unless every expected artifact exists and the tables have the expected shape."""
     out, config = study.out, study.config
     dates, models = config['dates'], list(config['primary_models'])
-    required = ['summary.md', 'preprocessing.json', 'model_comparison.csv', 'primary_model_summary.csv',
+    required = ['summary.md', 'preprocessing.json', 'model_comparison.csv', 'model_specification.csv', 'primary_model_summary.csv',
                 'seed_agreement.csv', 'surrogate_fidelity.csv', 'temporal_agreement.csv',
                 'longitudinal_summary.csv', 'longitudinal/feature_space_screen.csv',
                 'eda/population.csv', 'eda/feature_distributions.png', 'feature_audit/dominance.csv',

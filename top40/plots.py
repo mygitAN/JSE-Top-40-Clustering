@@ -188,7 +188,8 @@ def quality_comparison(table, path, date, highlight):
         axis.set_title(title)
         axis.tick_params(axis='y', labelsize=8)
         axis.grid(axis='x', alpha=.2)
-    fig.suptitle(f'{date}: representative-seed comparison; brackets show non-noise coverage', fontsize=12)
+    fig.suptitle(f'{date}: representative-seed comparison; brackets show non-noise coverage. '
+                 'Orange: the study model. Blue: the original paper t-SNE recipe.', fontsize=12)
     fig.tight_layout(rect=(0, 0, 1, .96))
     _save(fig, path)
 
