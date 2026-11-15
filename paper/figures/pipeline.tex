@@ -1,12 +1,14 @@
-\begin{tikzpicture}[]
+\begin{tikzpicture}[stage/.style={box,text width=3.2cm,minimum height=1.25cm,font=\footnotesize,inner sep=4pt}]
 
-\node[widebox] (data) {Effective-dated index population and provenance workbook\\41 instruments at each date};
-\node[widebox,below=5mm of data] (features) {Documented corrections and eight engineered features\\Imputation and clipping constants estimated in June 2025};
-\node[widebox,below=5mm of features] (scale) {June 2025 MinMax reference applied to all three dates\\Later values are allowed outside $[0,1]$};
-\node[widebox,below=5mm of scale] (fit) {Independent UMAP and hierarchical fits at each date\\2D; 3 neighbours; $\mathrm{min\_dist}=0.01$; average Manhattan; $k=8$};
-\node[widebox,below=5mm of fit] (evaluate) {Financial-space and embedding-space quality; sizes and singletons\\Five seeds per date; ten pairwise seed ARIs};
-\node[widebox,below=5mm of evaluate] (align) {Continuing-member Jaccard matrix and Hungarian matching\\Separate index entries and exits from aligned group switches};
-\node[widebox,below=5mm of align] (report) {Named histories and direct financial profiles\\Fidelity-qualified surrogate explanation and separate distance screen};
-\foreach \a/\b in {data/features,features/scale,scale/fit,fit/evaluate,evaluate/align,align/report}{\draw[arrow](\a)--(\b);}
+\node[stage] (data) at (0,0) {Dated index population\\41 instruments per date};
+\node[stage] (features) at (4.1,0) {Corrections and eight features\\June 2025 imputation};
+\node[stage] (scale) at (8.2,0) {MinMax scaling\\June 2025 reference for all dates};
+\node[stage] (fit) at (12.3,0) {UMAP and average-Manhattan hierarchy, $k=8$, per date};
+\node[stage] (evaluate) at (0,-2.1) {Quality in two geometries\\five seeds; pairwise ARI};
+\node[stage] (align) at (4.1,-2.1) {Jaccard--Hungarian matching\\entries and exits separated};
+\node[stage] (report) at (8.2,-2.1) {Histories, profiles, SHAP surrogate and distance screen};
+\node[stage] (comove) at (12.3,-2.1) {Forward co-movement\\clusters against sectors};
+\foreach \a/\b in {data/features,features/scale,scale/fit,evaluate/align,align/report,report/comove}{\draw[arrow](\a)--(\b);}
+\draw[arrow] (fit.south) -- ++(0,-.4) -| (evaluate.north);
 
 \end{tikzpicture}

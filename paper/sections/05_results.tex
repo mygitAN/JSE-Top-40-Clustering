@@ -3,53 +3,35 @@
 \subsection{Model quality in the map and financial features}
 
 \begin{table}[htbp]
-\centering\caption{Representative UMAP partition quality, mean pairwise five-seed ARI and cluster size ranges. S is silhouette; DB is Davies-Bouldin. All 41 instruments are included.}\label{tab:5}
+\centering\caption{UMAP and t-SNE fitted through the same pipeline. Scores describe the representative seed-42 partition, which includes all 41 instruments; S is silhouette and DB Davies-Bouldin; seed ARI is the mean of ten pairwise comparisons; sector ARI compares the partition with the recorded sector labels.}\label{tab:method_quality}
 \footnotesize
-\begin{tabularx}{\linewidth}{@{}>{\hsize=1.610\hsize\linewidth=\hsize\raggedright\arraybackslash}X >{\hsize=0.805\hsize\linewidth=\hsize\raggedright\arraybackslash}X >{\hsize=0.980\hsize\linewidth=\hsize\raggedright\arraybackslash}X >{\hsize=0.805\hsize\linewidth=\hsize\raggedright\arraybackslash}X >{\hsize=0.805\hsize\linewidth=\hsize\raggedright\arraybackslash}X >{\hsize=0.980\hsize\linewidth=\hsize\raggedright\arraybackslash}X >{\hsize=1.015\hsize\linewidth=\hsize\raggedright\arraybackslash}X@{}}
+\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}X l r r r r r r r@{}}
 \toprule
-Date & Feature S & Feature DB & Map S & Map DB & Seed ARI & Size range \\
+Date & Method & Feature S & Feature DB & Map S & Map DB & Singletons & Seed ARI & Sector ARI \\
 \midrule
-June 2025 & 0.151 & 1.153 & 0.685 & 0.385 & 0.846 & 2-9 \\
-December 2025 & 0.124 & 1.049 & 0.638 & 0.268 & 0.892 & 1-8 \\
-June 2026 & 0.267 & 1.059 & 0.721 & 0.355 & 0.738 & 2-8 \\
+June 2025 & UMAP & 0.151 & 1.153 & 0.685 & 0.385 & 0 & 0.846 & 0.152 \\
+ & t-SNE & 0.195 & 1.307 & 0.532 & 0.561 & 0 & 0.658 & 0.276 \\
+December 2025 & UMAP & 0.124 & 1.049 & 0.638 & 0.268 & 2 & 0.892 & 0.318 \\
+ & t-SNE & 0.240 & 1.094 & 0.589 & 0.494 & 0 & 0.925 & 0.333 \\
+June 2026 & UMAP & 0.267 & 1.059 & 0.721 & 0.355 & 0 & 0.738 & 0.472 \\
+ & t-SNE & 0.255 & 1.016 & 0.656 & 0.390 & 0 & 0.894 & 0.417 \\
 \bottomrule
 \end{tabularx}
 \end{table}
 
+Table~\ref{tab:method_quality} summarises the UMAP hierarchical model at each decision date, alongside the t-SNE comparator fitted through the same pipeline. The UMAP Silhouette Score in the reduced representation was 0.685 in June 2025, 0.638 in December 2025 and 0.721 in June 2026. The corresponding scores in the scaled financial features were 0.151, 0.124 and 0.267. The maps therefore show clear separation that is much weaker in the underlying financial variables. UMAP produced the higher map score at all three dates, whereas t-SNE produced the higher financial-feature score in June and December 2025, so the reduced map and the original features must be read together. UMAP cluster sizes ranged from two to nine instruments in June 2025, one to eight in December 2025 and two to eight in June 2026; only the December partition contained single-member clusters.
 
-Table~\ref{tab:5} summarises the performance of the UMAP hierarchical model at each decision date. The Silhouette Score in the reduced representation was 0.685 in June 2025, 0.638 in December 2025 and 0.721 in June 2026. The corresponding scores in the scaled financial features were 0.151, 0.124 and 0.267. These results show clear separation in the UMAP maps but weaker separation in the underlying financial variables. The December partition contained two single-member clusters, while neither June partition contained a singleton. Mean seed ARI was 0.846, 0.892 and 0.738, respectively.
+Mean pairwise seed ARI for UMAP was 0.846, 0.892 and 0.738. The ten pairwise values ranged from 0.71 to 1.00 in June 2025, 0.81 to 0.96 in December 2025 and 0.60 to 0.90 in June 2026. The December model was therefore the most consistent under the tested seeds despite its two singletons, and June 2026 the least, so cluster size and seed stability provide different information about the fitted groups. The seed pairs share fitted partitions and are dependent, so their spread is not a confidence interval for changes over time.
 
 Table~\ref{tab:model_comparison} reports the complete comparison of dimensionality-reduction and clustering combinations at each date. PCA, t-SNE and UMAP with default parameters (ten neighbours and a minimum distance of 0.1) are each combined with hierarchical clustering, K-Means and DBSCAN; the study model is shown first. Hierarchical clustering and K-Means use eight groups, whereas DBSCAN determines its own number of groups and excludes noise observations, so its scores are reported with their coverage. No combination dominates on every measure. DBSCAN sometimes achieves higher scores, but with two to five groups and, for PCA, without covering every instrument.
 
 \begin{table}[htbp]
-\centering\caption{Complete comparison of dimensionality-reduction and clustering combinations at the representative seed. Coverage is the share of the 41 instruments assigned to a group; DBSCAN scores exclude noise observations. Map scores use the reduced representation and feature scores the eight scaled financial features.}\label{tab:model_comparison}
+\centering\caption{Complete comparison of dimensionality-reduction and clustering combinations at the representative seed. Map scores use the reduced representation and feature scores the eight scaled financial features. Combinations without a stated group count use eight groups and assign all 41 instruments; DBSCAN chooses its own number of groups, and its scores exclude noise observations.}\label{tab:model_comparison}
 \footnotesize
 \input{tables/model_comparison.tex}
 \end{table}
 
-
-Figure~\ref{fig:quality} compares this result with a t-SNE hierarchical comparator fitted to the same eight-feature dataset. Its embedding Silhouette Scores were 0.532, 0.589 and 0.656, compared with financial-feature scores of 0.195, 0.240 and 0.255. UMAP therefore produced the higher embedding score at all three dates, while t-SNE produced the higher financial-feature score at the first two. The comparison shows why the reduced map and the original financial features should be read together. The comparison evaluates the two representations within this study and does not establish that UMAP is universally superior. Section~\ref{sec:method_comparison} compares the groups and membership changes that the two representations identify.
-
-
-
-\begin{figure}[htbp]
-\centering
-\diagram{quality}
-\caption{The same partitions evaluated in two geometries. UMAP has the stronger embedding silhouette at every date; this advantage does not consistently hold in the underlying financial features.}\label{fig:quality}
-\end{figure}
-
-
-Figure~\ref{fig:seed_variability} shows the ten seed-pair comparisons at each date. The December model was the most consistent under the tested seeds, despite containing two singletons. June 2026 showed the greatest seed variation. This indicates that cluster size and seed stability provide different information about the fitted groups.
-
-\begin{figure}[htbp]
-\centering
-\diagram{seed_variability}
-\caption{Ten pairwise adjusted Rand indices from five UMAP seeds at each date. Points are offset horizontally for readability; red segments mark the means. Pairs share fitted partitions and are dependent, so the spread is not a confidence interval or an empirical null for temporal switches.}\label{fig:seed_variability}
-\end{figure}
-
-
-
-
+These comparisons evaluate the representations within this study and do not establish that UMAP is universally superior. Section~\ref{sec:method_comparison} compares the groups and membership changes that UMAP and t-SNE identify.
 
 % BEGIN CLUSTER MAPS AND TREES
 \FloatBarrier
@@ -68,13 +50,13 @@ The dendrogram beside each map shows the average-linkage, Manhattan-distance hie
 \begin{figure}[htbp]
 \centering
 \clusterpair{2025-12-31}
-\caption{31 December 2025: UMAP cluster map (left) and dendrogram (right) for the representative seed-42 partition. All 41 instruments are included. Cluster numbers are aligned across dates; an asterisk marks an imputed input. Tree leaves show tickers and recorded sectors; branch colours are independent of cluster colours.}\label{fig:clusters_tree_2025-12-31}
+\caption{31 December 2025: UMAP cluster map and dendrogram, as in Figure~\ref{fig:clusters_tree_2025-06-30}.}\label{fig:clusters_tree_2025-12-31}
 \end{figure}
 
 \begin{figure}[htbp]
 \centering
 \clusterpair{2026-06-30}
-\caption{30 June 2026: UMAP cluster map (left) and dendrogram (right) for the representative seed-42 partition. All 41 instruments are included. Cluster numbers are aligned across dates; an asterisk marks an imputed input. Tree leaves show tickers and recorded sectors; branch colours are independent of cluster colours.}\label{fig:clusters_tree_2026-06-30}
+\caption{30 June 2026: UMAP cluster map and dendrogram, as in Figure~\ref{fig:clusters_tree_2025-06-30}.}\label{fig:clusters_tree_2026-06-30}
 \end{figure}
 
 \FloatBarrier
@@ -120,14 +102,14 @@ The stable histories were ANH, BHG, BID, BVT, CFR, FSR, GRT, IMP, INL, INP, MRP,
 \end{figure}
 
 
-Figure~\ref{fig:jaccard} shows the membership overlaps used to match groups across dates. For example, the larger first-period group illustrated in Figure~\ref{fig:alignment} has a matched Jaccard similarity of 0.625. Other matches have lower overlap. The diagram is useful because a retained label can describe a group whose membership has changed substantially. The assignment maximises total overlap across all matched pairs, so each match must also be considered in relation to its actual members.
+Figure~\ref{fig:jaccard} shows the membership overlaps used to match groups across dates. For example, five of the eight continuing members of June 2025 group 1 (ABG, GRT, INL, INP, NED, NRP, OMU and VAL) remain in December group 1, a Jaccard similarity of 0.625. Other matches have lower overlap. The diagram is useful because a retained label can describe a group whose membership has changed substantially. The assignment maximises total overlap across all matched pairs, so each match must also be considered in relation to its actual members.
 
 
 The membership paths in Figure~\ref{fig:flows} show how a group can disperse despite retaining an aligned label. June 2025 group 0 contains ANG, DSY, GFI, HAR, MTN, OUT and PPH. By December, ANG, GFI and HAR belong to group 3, DSY and MTN to group 7 and PPH to group 2. OUT alone retains group 0. Thus the original seven-member association separates into four destinations. June group 6 also disperses: CLS joins group 2, while REM and RNI join group 7. Its aligned identifier is retired. Figure~\ref{fig:jaccard} shows these weaker overlaps alongside more persistent matches; a one-to-one label assignment cannot by itself describe such fragmentation.
 
-Absa and Old Mutual illustrate a different pattern. Both follow aligned groups $1\rightarrow5\rightarrow1$. Absa is also classified as shifting under the t-SNE comparator, whereas Old Mutual is not, so the Old Mutual round trip is specific to the UMAP representation (Section~\ref{sec:method_comparison}). In the first interval, Absa's dividend yield decreases by 0.196 June 2025 reference-scaled units, while Old Mutual's one-year return increases by 0.175. In the second interval, beta falls by 0.137 and 0.186 units, respectively. Their June 2026 destination has relatively high dividend and earnings yields in Figure~\ref{fig:profile2}. The return to an earlier group therefore describes renewed similarity to those peers under the fitted representation; it does not establish a reversal of every financial variable.
+Absa and Old Mutual illustrate a different pattern. Both follow aligned groups $1\rightarrow5\rightarrow1$. Absa is also classified as shifting under the t-SNE comparator, whereas Old Mutual is not, so the Old Mutual round trip is specific to the UMAP representation (Section~\ref{sec:method_comparison}). In the first interval, Absa's dividend yield decreases by 0.196 June 2025 reference-scaled units, while Old Mutual's one-year return increases by 0.175. In the second interval, beta falls by 0.137 and 0.186 units, respectively. Their June 2026 destination has relatively high dividend and earnings yields in Figure~\ref{fig:profiles}(c). The return to an earlier group therefore describes renewed similarity to those peers under the fitted representation; it does not establish a reversal of every financial variable.
 
-Naspers and Prosus converge in aligned group 9 in June 2026 after occupying groups 7 and 4, respectively. Their one-year returns decrease by 0.468 and 0.527 reference-scaled units between December and June. Figure~\ref{fig:profile2} characterises their destination by relatively high market capitalisation and low return and dividend yield. Sasol instead moves from group 2 to group 7 as beta decreases by 0.642 and one-year return increases by 0.627 units. Reinet follows groups $6\rightarrow7\rightarrow2$, although its imputed fundamentals limit interpretation. These feature differences are calculated from the saved instrument records using the fixed June 2025 scale. They describe observed changes and are not causal effects or SHAP attributions; no single feature is asserted to determine membership.
+Naspers and Prosus converge in aligned group 9 in June 2026 after occupying groups 7 and 4, respectively. Their one-year returns decrease by 0.468 and 0.527 reference-scaled units between December and June. Figure~\ref{fig:profiles}(c) characterises their destination by relatively high market capitalisation and low return and dividend yield. Sasol instead moves from group 2 to group 7 as beta decreases by 0.642 and one-year return increases by 0.627 units. Reinet follows groups $6\rightarrow7\rightarrow2$, although its imputed fundamentals limit interpretation. These feature differences are calculated from the saved instrument records using the fixed June 2025 scale. They describe observed changes and are not causal effects or SHAP attributions; no single feature is asserted to determine membership.
 
 Table~\ref{tab:move_shap} adds the surrogate's feature attributions for selected destination assignments. Equities are grouped only where every feature contribution shown in that row is identical before rounding; no row represents an average or a selected representative equity. Return supports the December precious-metals assignments, consistent with the measured return increases for ANG, GFI and VAL. The December grouping is recovered under both representations, but the switches of ANG and GFI into it are specific to UMAP (Section~\ref{sec:method_comparison}). For Absa and Old Mutual in June, dividend yield and earnings yield support group 1, although beta is among their larger measured changes. For Naspers and Prosus, return, earnings yield and dividend yield support group 9; Sasol's group-7 assignment is supported most strongly by return. These comparisons distinguish a variable that changed substantially from a variable the surrogate uses to reproduce the destination label.
 
@@ -148,43 +130,27 @@ Jun 2026 & SOL & 7 & Return $+2.016$; dividend yield $+0.686$; volatility $+0.22
 \end{table}
 \FloatBarrier
 
-Positive values increase the specified class margin relative to that surrogate's expected margin. Margins have date- and class-specific baselines, so their magnitudes do not provide a common financial scale across groups or dates. December out-of-fold fidelity is not estimable because of singleton groups; June 2026 fidelity is 0.707 (Table~\ref{tab:8}). December attributions therefore describe the fitted classifier without a held-out fidelity estimate, and June attributions remain supplementary to the direct profiles. They are explanations of reproduced cluster labels, not causal explanations of financial change.
+Positive values increase the specified class margin relative to that surrogate's expected margin. Margins have date- and class-specific baselines, so their magnitudes do not provide a common financial scale across groups or dates. December out-of-fold fidelity is not estimable because of singleton groups; June 2026 fidelity is 0.707 (Section~\ref{sec:surrogate}). December attributions therefore describe the fitted classifier without a held-out fidelity estimate, and June attributions remain supplementary to the direct profiles. They are explanations of reproduced cluster labels, not causal explanations of financial change.
 
 \subsection{Financial feature profiles}
 
-Figures~\ref{fig:profile0}--\ref{fig:profile2} summarise the financial characteristics of each aligned cluster. The values are cluster-median deviations from the same-date median, measured using the fixed June 2025 scale. Positive values indicate relatively high features and negative values relatively low features. All 41 instruments are included in the date-specific profiles. The aligned labels are used consistently across the figures so changes can be read alongside the membership histories.
-
-
+Figure~\ref{fig:profiles} summarises the financial characteristics of each aligned cluster. The values are cluster-median deviations from the same-date median, measured using the fixed June 2025 scale. Positive values indicate relatively high features and negative values relatively low features. All 41 instruments are included in the date-specific profiles. The aligned labels are used consistently across the three panels so changes can be read alongside the membership histories.
 
 \begin{figure}[htbp]
 \centering
-\diagram{profile0}
-\caption{June 2025 aligned-cluster median deviations from the same-date median, in June 2025 MinMax units. Counts include all 41 date-specific instruments. Colours use the same range across the three figures; gaps in cluster numbers reflect retired identifiers.}\label{fig:profile0}
-\end{figure}
-
-
-
-\begin{figure}[htbp]
-\centering
-\diagram{profile1}
-\caption{December 2025 aligned-cluster median deviations from the same-date median, in June 2025 MinMax units. Counts include all 41 date-specific instruments. Colours use the same range across the three figures; gaps in cluster numbers reflect retired identifiers.}\label{fig:profile1}
-\end{figure}
-
-
-
-\begin{figure}[htbp]
-\centering
-\diagram{profile2}
-\caption{June 2026 aligned-cluster median deviations from the same-date median, in June 2025 MinMax units. Counts include all 41 date-specific instruments. Colours use the same range across the three figures; gaps in cluster numbers reflect retired identifiers.}\label{fig:profile2}
+\profilepanel{(a) 30 June 2025}{profile0}\par\medskip
+\profilepanel{(b) 31 December 2025}{profile1}\par\medskip
+\profilepanel{(c) 30 June 2026}{profile2}
+\caption{Aligned-cluster median deviations from the same-date median, in June 2025 MinMax units. Counts include all 41 date-specific instruments. All panels use one colour scale from $-1.5$ (blue) to $+1.5$ (red), with zero at the same-date median; gaps in cluster numbers reflect retired identifiers.}\label{fig:profiles}
 \end{figure}
 
 \FloatBarrier
 
 The precious-metals grouping is one of the clearer examples of membership continuity accompanied by an interpretable financial profile. Impala Platinum, Northam Platinum and Sibanye-Stillwater form aligned group 3 in June 2025 and remain together at all three dates. By December, AngloGold Ashanti, Gold Fields, Harmony and Valterra join them, increasing the group from three to seven instruments. Pan African Resources joins on entering the observed index universe in June 2026, giving eight members. The t-SNE comparator places all seven continuing members together in December in every seed. In its representative June 2025 fit, however, AngloGold Ashanti, Gold Fields and Harmony already share a group with the platinum core, an association found in only two of five seeds. Under t-SNE, Valterra's arrival is therefore the only switch into the group. These memberships can be followed in the cluster maps and in Figure~\ref{fig:flows}.
 
-Figure~\ref{fig:profile0} shows relatively high volatility, beta and return for the initial three-member group. In December, its cluster-median return is 1.45 reference-scaled units above the same-date median, accompanied by elevated volatility and beta in Figure~\ref{fig:profile1}. AngloGold Ashanti, Gold Fields and Valterra record return increases of 1.342, 1.143 and 0.940 reference-scaled units over the first interval. These instrument changes are consistent with the destination's measured return profile. By June 2026, high volatility and beta remain prominent in Figure~\ref{fig:profile2}. The diagrams support a description of a continuing precious-metals peer core with changing membership; they do not establish that commodity prices caused the clustering or that the group predicts future returns.
+Figure~\ref{fig:profiles}(a) shows relatively high volatility, beta and return for the initial three-member group. In December, its cluster-median return is 1.45 reference-scaled units above the same-date median, accompanied by elevated volatility and beta in Figure~\ref{fig:profiles}(b). AngloGold Ashanti, Gold Fields and Valterra record return increases of 1.342, 1.143 and 0.940 reference-scaled units over the first interval. These instrument changes are consistent with the destination's measured return profile. By June 2026, high volatility and beta remain prominent in Figure~\ref{fig:profiles}(c). The diagrams support a description of a continuing precious-metals peer core with changing membership; they do not establish that commodity prices caused the clustering or that the group predicts future returns.
 
-Anheuser-Busch InBev, BHP and Richemont provide a second persistent core. They remain in aligned group 4 throughout; Prosus is also present at the first two dates, British American Tobacco joins in December and Prosus leaves by June 2026. Figures~\ref{fig:profile0}--\ref{fig:profile2} consistently associate the group with relatively high log market capitalisation and low JSE share turnover. In June 2026, the deviations are approximately $+0.65$ and $-0.64$ reference-scaled units, respectively. Its members span different recorded sectors, so the financial interpretation concerns measured scale and local trading activity. JSE turnover does not capture all trading in internationally listed firms, and low measured JSE turnover is insufficient evidence of low global liquidity.
+Anheuser-Busch InBev, BHP and Richemont provide a second persistent core. They remain in aligned group 4 throughout; Prosus is also present at the first two dates, British American Tobacco joins in December and Prosus leaves by June 2026. Figure~\ref{fig:profiles} consistently associates the group with relatively high log market capitalisation and low JSE share turnover. In June 2026, the deviations are approximately $+0.65$ and $-0.64$ reference-scaled units, respectively. Its members span different recorded sectors, so the financial interpretation concerns measured scale and local trading activity. JSE turnover does not capture all trading in internationally listed firms, and low measured JSE turnover is insufficient evidence of low global liquidity.
 
 \subsection{Agreement with sector labels}
 
@@ -198,7 +164,7 @@ Table~\ref{tab:sector} compares the fitted clusters with the recorded sector lab
 
 BHP, Bidvest, MTN and Vodacom are sector-divergent at all three dates. BHP groups with consumer-goods and technology companies in the large-capitalisation, low-turnover group rather than with other basic-materials companies. Bidvest, an industrial company, groups with consumer-services retailers. MTN and Vodacom, the two telecommunications companies, never share a cluster: MTN groups with basic-materials and financial companies, and Vodacom with financial companies. These persistent divergences identify where measured financial characteristics consistently place a company outside its recorded sector.
 
-\subsection{Forward co-movement}\label{sec:comovement}
+\subsection{Economic validation through forward co-movement}\label{sec:comovement}
 
 Table~\ref{tab:comovement} reports the forward co-movement of cluster peers and sector peers. Sector peers co-moved more strongly than cluster peers after both formation dates. For raw returns, $\Delta\rho$ was $-0.129$ in the six months after June 2025 and $-0.069$ after December 2025, and both 95\% intervals exclude zero. Market adjustment lowers every correlation but leaves the differences similar, at $-0.112$ and $-0.068$. The same result holds for each of the five UMAP seeds and for the t-SNE comparator. The hypothesis that cluster peers co-move more strongly than sector peers is therefore rejected. The clusters nevertheless co-moved more strongly than random groups of the same sizes, with permutation $p<0.001$ at both dates.
 
@@ -210,7 +176,7 @@ As a sensitivity check, the comparison was repeated with each company weighted e
 \input{tables/comovement.tex}
 \end{table}
 
-Table~\ref{tab:comovement_pairs} reports the exploratory conditional analysis, which was formulated after the primary hypothesis had been rejected. It separates the pairs according to whether they share a sector, a cluster or both. Once sector is taken into account, sharing a cluster raises forward correlation: the cluster coefficient is positive at both dates, for raw and market-adjusted returns, with permutation $p$ values between 0.001 and 0.019. The increase comes from within sectors. Pairs in the same sector and the same cluster co-moved more strongly than pairs in the same sector but different clusters, 0.391 against 0.329 for raw returns after June 2025 and 0.552 against 0.396 after December 2025. Pairs that share a cluster but not a sector co-moved little more than unrelated pairs. After market adjustment their correlations were 0.007 and 0.021, against $-0.034$ and $-0.037$ for unrelated pairs, and for raw returns after December 2025 they were lower than unrelated pairs.
+Table~\ref{tab:comovement_pairs} reports the exploratory conditional analysis, which was formulated after the primary hypothesis had been rejected. It separates the pairs according to whether they share a sector, a cluster or both. With shared-sector status included as a regressor, shared cluster membership is associated with higher forward correlation: the cluster coefficient is positive at both dates, for raw and market-adjusted returns, with permutation $p$ values between 0.001 and 0.019. The increase comes from within sectors. Pairs in the same sector and the same cluster co-moved more strongly than pairs in the same sector but different clusters, 0.391 against 0.329 for raw returns after June 2025 and 0.552 against 0.396 after December 2025. Pairs that share a cluster but not a sector co-moved little more than unrelated pairs. After market adjustment their correlations were 0.007 and 0.021, against $-0.034$ and $-0.037$ for unrelated pairs, and for raw returns after December 2025 they were lower than unrelated pairs.
 
 \begin{table}[htbp]
 \centering\caption{Mean forward correlation by type of pair, with the number of pairs after June and December 2025. The cluster coefficient is from a regression of pairwise correlation on shared-sector and shared-cluster indicators; $p$ is from 5,000 permutations of the cluster labels.}\label{tab:comovement_pairs}
@@ -222,26 +188,7 @@ The individual clusters show where this information lies. The precious-metals cl
 
 \subsection{Sensitivity to the choice of representation}\label{sec:method_comparison}
 
-Table~\ref{tab:method_quality} compares the UMAP model with the t-SNE comparator fitted through the identical pipeline. UMAP produced the higher Silhouette Score in the reduced representation at all three dates. t-SNE produced the higher financial-feature Silhouette Score in June and December 2025, contained no single-member clusters and showed greater seed agreement in December 2025 and June 2026. It also recorded fewer membership changes: 9 in each interval, compared with 15 and 11 under UMAP. The two partitions agree substantially at each date, with an Adjusted Rand Index of 0.635 in June 2025, 0.800 in December 2025 and 0.923 in June 2026.
-
-\begin{table}[htbp]
-\centering\caption{UMAP and t-SNE fitted through the same pipeline. Scores describe the representative seed-42 partition; seed ARI is the mean of ten pairwise comparisons; sector ARI compares the partition with the recorded sector labels.}\label{tab:method_quality}
-\footnotesize
-\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}X l r r r r r r r@{}}
-\toprule
-Date & Method & Feature S & Feature DB & Map S & Map DB & Singletons & Seed ARI & Sector ARI \\
-\midrule
-June 2025 & UMAP & 0.151 & 1.153 & 0.685 & 0.385 & 0 & 0.846 & 0.152 \\
- & t-SNE & 0.195 & 1.307 & 0.532 & 0.561 & 0 & 0.658 & 0.276 \\
-December 2025 & UMAP & 0.124 & 1.049 & 0.638 & 0.268 & 2 & 0.892 & 0.318 \\
- & t-SNE & 0.240 & 1.094 & 0.589 & 0.494 & 0 & 0.925 & 0.333 \\
-June 2026 & UMAP & 0.267 & 1.059 & 0.721 & 0.355 & 0 & 0.738 & 0.472 \\
- & t-SNE & 0.255 & 1.016 & 0.656 & 0.390 & 0 & 0.894 & 0.417 \\
-\bottomrule
-\end{tabularx}
-\end{table}
-
-These scores do not favour UMAP on every criterion. The more important question for this study is whether the two representations describe the same financial peer relationships. Table~\ref{tab:method_groups} reports how often selected groups of equities are assigned to the same cluster across the five seeds.
+Table~\ref{tab:method_quality} shows that the internal scores do not favour UMAP on every criterion. Besides its higher financial-feature Silhouette Score in June and December 2025, t-SNE contained no single-member clusters and showed greater seed agreement in December 2025 and June 2026. It also recorded fewer membership changes: 9 in each interval, compared with 15 and 11 under UMAP. The two partitions agree substantially at each date, with an Adjusted Rand Index of 0.635 in June 2025, 0.800 in December 2025 and 0.923 in June 2026. The more important question for this study is whether the two representations describe the same financial peer relationships. Table~\ref{tab:method_groups} reports how often selected groups of equities are assigned to the same cluster across the five seeds.
 
 \begin{table}[htbp]
 \centering\caption{Number of the five seeds in which every listed equity is assigned to the same cluster.}\label{tab:method_groups}
@@ -270,37 +217,11 @@ The comparison therefore supports UMAP as a defensible primary representation ra
 
 \subsection{Robustness and practical reading}
 
-\begin{table}[htbp]
-\centering\caption{Scale drift in the eight-feature representation and UMAP agreement with the untransformed ten-feature alternative (original10). An even variance allocation would be 12.5\%. Cross-set ARI compares partitions, not the magnitude of silhouette values across feature spaces.}\label{tab:7}
-\footnotesize
-\begin{tabularx}{\linewidth}{@{}>{\hsize=1.100\hsize\linewidth=\hsize\raggedright\arraybackslash}X >{\hsize=1.250\hsize\linewidth=\hsize\raggedright\arraybackslash}X >{\hsize=0.900\hsize\linewidth=\hsize\raggedright\arraybackslash}X >{\hsize=0.800\hsize\linewidth=\hsize\raggedright\arraybackslash}X >{\hsize=0.950\hsize\linewidth=\hsize\raggedright\arraybackslash}X@{}}
-\toprule
-Date & Dominant feature & Variance share & Max scaled & Cross-set ARI \\
-\midrule
-June 2025 & Dividend yield & 19.8\% & 1.000 & 0.668 \\
-December 2025 & 1Y return & 52.5\% & 2.847 & 0.607 \\
-June 2026 & Volatility & 22.1\% & 1.244 & 0.590 \\
-\bottomrule
-\end{tabularx}
-\end{table}
+The fixed June 2025 scale keeps the units constant without keeping each feature's influence constant. In December 2025, one-year return accounts for 52.5\% of scaled variance, compared with 12.5\% under an even eight-variable allocation, and the maximum scaled value is 2.847. The dominant features at the other dates are less concentrated: dividend yield with 19.8\% in June 2025 and volatility with 22.1\% in June 2026, with maximum scaled values of 1.000 and 1.244. The December grouping should be interpreted in light of this concentration, because changes in the geometry can reflect both company attributes and the relative weight of those attributes after scaling.
 
+The feature alternatives test whether the same broad membership interpretation is retained when size, liquidity and share-basis effects are represented differently. The UMAP partitions agree with those from the untransformed ten-feature alternative (original10) at an Adjusted Rand Index of 0.668, 0.607 and 0.590 at the three dates. The alternatives nevertheless produce different membership histories: among the same 39 continuously observed instruments, the UMAP model gives 20 stable and 19 shifted histories under original10, 16 and 23 under logsize10, 19 and 20 under invariant8, and 14 and 25 under market5. These counts are representation-dependent and are not estimates of true economic change. Internal scores calculated in different feature spaces are not directly comparable as a single ranking of feature sets.
 
-Figure~\ref{fig:feature_sensitivity} compares the complete-history results under the four feature representations. This tests whether the same broad membership interpretation is retained when size, liquidity and share-basis effects are represented differently.
-
-\begin{figure}[htbp]
-\centering
-\diagram{feature_sensitivity}
-\caption{Complete-history outcomes under four feature representations using the UMAP recipe. Each bar contains the same 39 continuously observed instruments; four partial histories are outside every bar. The counts are representation-dependent and are not estimates of true economic change.}\label{fig:feature_sensitivity}
-\end{figure}
-
-
-
-
-
-Table~\ref{tab:7} shows that one-year return accounts for 52.5\% of scaled variance in December 2025, compared with 12.5\% under an even eight-variable allocation. The maximum scaled value is 2.847. Thus the June 2025 reference keeps the units constant without keeping each feature's influence constant. The December grouping should be interpreted in light of this concentration, because changes in the geometry can reflect both company attributes and the relative weight of those attributes after scaling.
-
-
-The feature alternatives also produce different membership histories. The UMAP model gives 20 stable and 19 shifted histories under original10, 16 and 23 under logsize10, 19 and 20 under invariant8, and 14 and 25 under market5. Each comparison uses the same 39 continuously observed instruments. Figure~\ref{fig:cluster_count} provides the corresponding cluster-count sensitivity from two to twelve groups. These results show that the selected representation and the choice of eight groups influence the financial relationships reported. Internal scores calculated in different feature spaces are not directly comparable as a single ranking of feature sets.
+Figure~\ref{fig:cluster_count} reports the cluster-count sensitivity from two to twelve groups. No number of groups is best on every measure or at every date. The financial-feature Silhouette Score is highest at two groups in both 2025 cross-sections and at seven groups in June 2026, while the embedding Silhouette Score is highest at nine, six and six groups. Eight groups is therefore a reference specification rather than a uniquely optimal solution, and together with the feature alternatives these results show that the selected representation and the number of groups influence the financial relationships reported.
 
 \begin{figure}[htbp]
 \centering
@@ -308,30 +229,9 @@ The feature alternatives also produce different membership histories. The UMAP m
 \caption{Cluster-count sensitivity from two to twelve groups. Blue lines show financial-feature scores and red lines embedding scores. Eight groups remain the reference specification.}\label{fig:cluster_count}
 \end{figure}
 
+\subsection{Surrogate interpretation and multivariate outliers}\label{sec:surrogate}
 
-
-
-
-
-\subsection{Surrogate interpretation and multivariate outliers}
-
-\begin{table}[htbp]
-\centering\caption{Surrogate agreement with representative cluster labels. Where estimated, the minimum group size of two limits stratified cross-validation to two folds.}\label{tab:8}
-\footnotesize
-\begin{tabularx}{\linewidth}{@{}>{\hsize=0.960\hsize\linewidth=\hsize\raggedright\arraybackslash}X >{\hsize=1.000\hsize\linewidth=\hsize\raggedright\arraybackslash}X >{\hsize=1.200\hsize\linewidth=\hsize\raggedright\arraybackslash}X >{\hsize=0.840\hsize\linewidth=\hsize\raggedright\arraybackslash}X@{}}
-\toprule
-Date & Training fidelity & Out-of-fold fidelity & Singleton groups \\
-\midrule
-June 2025 & 1.000 & 0.439 & 0 \\
-December 2025 & 1.000 & Not estimable & 2 \\
-June 2026 & 1.000 & 0.707 & 0 \\
-\bottomrule
-\end{tabularx}
-\end{table}
-
-
-Table~\ref{tab:8} reports the surrogate fidelity. The classifier reproduced all training labels, but out-of-fold agreement was 43.9\% in June 2025 and 70.7\% in June 2026. It could not be estimated for December 2025 under the implemented stratified procedure because two clusters contained only one instrument. These results limit the strength of the SHAP interpretation, particularly at the first two dates. Cluster medians and observed feature histories therefore provide the main explanation, while SHAP describes which variables the fitted surrogate uses to distinguish its assigned labels.
-
+The surrogate classifier reproduced all training labels at every date, but its out-of-fold agreement with the representative cluster labels was 43.9\% in June 2025 and 70.7\% in June 2026; the minimum group size of two limited stratified cross-validation to two folds at these dates. Out-of-fold fidelity could not be estimated for December 2025 under the implemented stratified procedure because two clusters contained only one instrument. These results limit the strength of the SHAP interpretation, particularly at the first two dates. Cluster medians and observed feature histories therefore provide the main explanation, while SHAP describes which variables the fitted surrogate uses to distinguish its assigned labels.
 
 \begin{table}[htbp]
 \centering\caption{Separate same-date Mahalanobis distance screen at nominal alpha 0.05. The reference value is 14.03 at each date ($n=41$, $p=8$). These are descriptive flags, not significant economic anomalies.}\label{tab:9}
@@ -348,7 +248,7 @@ June 2026 & GLN, PAN, SOL, SSW & 4 \\
 \end{table}
 
 
-The Mahalanobis distance screen flagged five observations in June 2025, five in December 2025 and four in June 2026, as shown in Table~\ref{tab:9}. These 14 observations cover nine distinct tickers. Sasol was flagged at all three dates, BHP and British American Tobacco at the first two, and Sibanye-Stillwater at the last two. Such repeated flags are useful for follow-up, but their meaning depends on the observation history. Aspen, Glencore and Pan African Resources were not index members at every date, so missing dates cannot be counted as an absence of unusual behaviour. Anglo American also carries an imputed volume value. The flags remain descriptive because no external event test, forward-return test or calibrated transition null was applied.
+The Mahalanobis distance screen flagged five observations in June 2025, five in December 2025 and four in June 2026, as shown in Table~\ref{tab:9}. These 14 observations cover nine distinct tickers. Sasol was flagged at all three dates, BHP and British American Tobacco at the first two, and Sibanye-Stillwater at the last two. Such repeated flags are useful for follow-up, but their meaning depends on the observation history. Aspen, Glencore and Pan African Resources were not index members at every date, so missing dates cannot be counted as an absence of unusual behaviour. Anglo American also carries an imputed volume value. These distance flags remain descriptive: the forward co-movement analysis evaluates peer groups rather than validating individual outlier events, and no external event test or calibrated transition null was applied.
 
 
 \subsection{Companies for analyst investigation}
@@ -357,7 +257,7 @@ Table~\ref{tab:analyst} brings the screening signals together. Three signals are
 
 \begin{table}[htbp]
 \centering
-\caption{Companies with at least two screening signals. Values are from the model inputs at the three decision dates; returns and yields are in percent.}\label{tab:analyst}
+\caption{Companies with at least two screening signals, for characteristics-based investigation rather than established risk or diversification peers. Values are from the model inputs at the three decision dates; returns and yields are in percent.}\label{tab:analyst}
 \scriptsize
 \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{2.0cm}>{\raggedright\arraybackslash}p{2.3cm}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}X@{}}
 \toprule
@@ -377,12 +277,3 @@ Naspers and Prosus (Technology) & Both moved under both representations; both se
 \bottomrule
 \end{tabularx}
 \end{table}
-
-The evidence streams and their interpretation are summarised in Figure~\ref{fig:evidence}.
-
-
-\begin{figure}[htbp]
-\centering
-\diagram{evidence}
-\caption{Interpretation of the screening results. Peer-group changes, financial profiles and multivariate distance provide separate reasons for analyst follow-up. External validation is required before identifying a confirmed economic anomaly.}\label{fig:evidence}
-\end{figure}

@@ -133,3 +133,24 @@ before rounding, not averages.
 Compile `paper/main.tex` in the linked Overleaf repository. The optional
 `diagrams.tex` atlas is only a development preview of the same figures;
 it is not a separate part of the manuscript.
+
+## Economic-validation evidence
+
+Results Section 4.7 reports economic validation through forward co-movement,
+after sector agreement and before the analyst-investigation table. It preserves
+the negative cluster-minus-sector differences, distinguishes the exploratory
+within-sector analysis and qualifies cross-sector groups as characteristics-based
+screening candidates. UMAP remains exploratory; t-SNE does at least as well
+on the forward co-movement measures.
+
+The primary evidence was frozen separately in commit `8cf0e7b` under
+`research/comovement/`: protocol, unchanged analytical script, saved output
+CSVs, input snapshots and a checksum manifest. Offline reproduction is:
+
+```powershell
+.venv/Scripts/python.exe research/comovement/reproduce.py
+```
+
+The adapter reproduces only the completed June/December 2025 formations and
+writes to `.runtime/comovement-reproduction/`. It does not execute the reserved
+June-2026 evaluation, refit models or replace the saved evidence.

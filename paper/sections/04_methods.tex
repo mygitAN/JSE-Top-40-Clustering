@@ -18,10 +18,9 @@ z_{itj}=\frac{x_{itj}-a_j}{b_j-a_j},\qquad
 a_j=\min_{i\in U_{t_1}}x_{it_1j},\quad b_j=\max_{i\in U_{t_1}}x_{it_1j}.
 \label{eq:scale}\end{equation}
 
-UMAP was used to produce a two-dimensional representation of each cross-section \citep{mcinnes2018}. The model used three neighbours, a minimum distance of 0.01, Euclidean input distance and one computational job. Hierarchical clustering was then applied to the UMAP coordinates using average linkage and Manhattan distance, with eight clusters as the reference configuration. Each date was fitted independently using seeds 42--46. Seed 42 provides the representative partition, while the remaining fits support stability analysis. Figure~\ref{fig:pipeline} summarises the modelling workflow.
+UMAP was used to produce a two-dimensional representation of each cross-section \citep{mcinnes2018}, and hierarchical clustering was applied to the UMAP coordinates using average linkage and Manhattan distance, with eight clusters as the reference configuration (Table~\ref{tab:3}). Each date was fitted independently using seeds 42--46. Seed 42 provides the representative partition, while the remaining fits support stability analysis. Figure~\ref{fig:pipeline} summarises the workflow.
 
-
-The specification emphasises local financial peer relationships in a cross-section small enough for instrument-level inspection. UMAP can represent nonlinear neighbourhood structure, while two dimensions allow the fitted groups to be examined alongside their members. Using three neighbours emphasises nearby profiles rather than broad market structure, and a minimum distance of 0.01 permits compact local representations \citep{umapdocs}. Average linkage then combines groups using the mean of their pairwise Manhattan distances, with each distance equal to the sum of absolute coordinate differences. This gives an explicit hierarchy of the fitted representation. The settings are an exploratory choice, not an established optimum for small samples: compact maps can also accentuate fine structure. Their usefulness is assessed through financial-feature scores, the comparator and stability analyses rather than embedding separation alone.
+UMAP was chosen because it can represent nonlinear neighbourhood structure among equities with different risk, return, valuation and liquidity characteristics, while two dimensions allow the fitted groups to be examined alongside their members. Using three neighbours emphasises nearby profiles rather than broad market structure, and a minimum distance of 0.01 permits compact local representations \citep{umapdocs}. Average linkage combines groups using the mean of their pairwise Manhattan distances, giving an explicit hierarchy of the fitted representation. The settings were selected during exploratory analysis of June 2025 and held constant at later dates. They are an exploratory choice rather than an established optimum or a claim that UMAP is superior to t-SNE: compact maps can accentuate fine structure, and greater separation in a reduced representation does not necessarily imply stronger financial similarity. The fitted clusters were therefore also evaluated in the scaled financial features, under different random seeds, cluster counts from two to twelve and alternative feature representations, and through their membership over time. Because each date is refitted independently, comparisons concern observed peer structure rather than out-of-sample prediction.
 
 The linkage between groups $G$ and $H$ of two-dimensional coordinates $u_i$ is
 \begin{equation}
@@ -47,11 +46,7 @@ Comparator & t-SNE: perplexity 5; learning rate 10; 300 iterations; random initi
 \end{table}
 
 
-The settings were selected during exploratory analysis of June 2025 and held constant at subsequent dates. Eight groups provide the reference partition, with feature alternatives, cluster counts from two to twelve and five random seeds used to assess sensitivity. Each date is refitted independently; comparison therefore concerns observed peer structure rather than out-of-sample prediction.
-
-UMAP was selected as the primary representation because it can represent nonlinear relationships among financial observations while preserving local neighbourhood structure. This is relevant to the present study, which seeks financial peer groups among equities with different risk, return, valuation and liquidity characteristics. The choice is an exploratory modelling decision rather than a claim that UMAP is superior to t-SNE. Greater separation in a reduced representation does not necessarily imply stronger financial similarity, and the selected parameters emphasise local structure strongly. The fitted clusters were therefore also evaluated in the scaled financial features, under different random seeds and through their membership over time.
-
-Because UMAP is fitted independently at each date, it does not provide a common coordinate system across dates; the matching procedure described below makes memberships comparable. To test whether the substantive findings depend on the representation, the t-SNE comparator in Table~\ref{tab:3} was fitted through the identical pipeline: the same features and June 2025 scaling, the same average-linkage Manhattan clustering into eight groups, the same five seeds and the same cross-date matching. Section~\ref{sec:method_comparison} reports whether the two representations identify the same persistent groups and the same changes in membership, and Section~\ref{sec:comovement} compares them on subsequent return co-movement.
+To test whether the substantive findings depend on the representation, the t-SNE comparator in Table~\ref{tab:3} was fitted through the identical pipeline: the same features and June 2025 scaling, the same average-linkage Manhattan clustering into eight groups, the same five seeds and the same cross-date matching. Section~\ref{sec:method_comparison} reports whether the two representations identify the same persistent groups and the same changes in membership, and Section~\ref{sec:comovement} compares them on subsequent return co-movement.
 
 \subsection{Quality in two geometries and seed agreement}
 
@@ -63,7 +58,7 @@ Stability was assessed using the Adjusted Rand Index (ARI) between partitions fi
 
 \subsection{Matching clusters between dates}
 
-Cluster numbers from independent fits cannot be compared directly because their labels are arbitrary. Clusters were therefore matched between adjacent dates using the instruments present at both dates. For an earlier group $A_a$ and a later group $B_b$, Jaccard similarity measures shared continuing members relative to their union. A Hungarian assignment selects the one-to-one matching with the highest total similarity. Positive-overlap matches retain the earlier label, while groups with no overlap receive a new label. Labels that have disappeared are not reused for unrelated groups.
+Because each date is fitted independently, neither the UMAP coordinates nor the cluster numbers are comparable across dates. Clusters were therefore matched between adjacent dates using the instruments present at both dates. For an earlier group $A_a$ and a later group $B_b$, Jaccard similarity measures shared continuing members relative to their union. A Hungarian assignment selects the one-to-one matching with the highest total similarity. Positive-overlap matches retain the earlier label, while groups with no overlap receive a new label. Labels that have disappeared are not reused for unrelated groups.
 
 
 Let $C$ be the set of instruments observed at both dates. Writing $A_a^C=A_a\cap C$ and $B_b^C=B_b\cap C$, the matching objective is
@@ -71,40 +66,9 @@ Let $C$ be the set of instruments observed at both dates. Writing $A_a^C=A_a\cap
 J_{ab}&=\frac{|A_a^C\cap B_b^C|}{|A_a^C\cup B_b^C|},\\
 \pi^*&\in\operatorname*{arg\,max}_{\pi}\sum_a J_{a,\pi(a)}.
 \label{eq:matching}\end{align}
-The implementation sets empty-union similarities to zero and carries labels only for positive intersections.
+The implementation sets empty-union similarities to zero and carries labels only for positive intersections. Instruments are keyed by ticker. Entries and exits are identified from the date-specific populations and excluded from the matrix, so a switch is counted only when a continuing instrument has different aligned labels. The two sets of matches are chained to form complete three-date histories, with membership gaps left missing.
 
-\begin{table}[htbp]
-\centering\caption{Cross-date cluster matching using continuing instruments.}\label{tab:4}
-\footnotesize
-\begin{tabularx}{\linewidth}{@{}>{\hsize=0.200\hsize\linewidth=\hsize\raggedright\arraybackslash}X >{\hsize=1.800\hsize\linewidth=\hsize\raggedright\arraybackslash}X@{}}
-\toprule
-Step & Operation \\
-\midrule
-1 & Partition each date independently; retain ticker as the stable security key. \\
-2 & Identify continuing members, entries and exits from date-specific populations. \\
-3 & Build the cluster-by-cluster Jaccard matrix using continuing members only. \\
-4 & Maximise total Jaccard overlap with a one-to-one Hungarian assignment. \\
-5 & Transfer earlier labels only for positive-overlap matches; issue new labels otherwise. \\
-6 & Count a switch only when a continuing instrument has different aligned labels. \\
-7 & Chain the matches for complete three-date histories; leave membership gaps missing. \\
-\bottomrule
-\end{tabularx}
-\end{table}
-
-
-Figure~\ref{fig:alignment} illustrates the overlap calculation with an observed matched pair.
-
-\begin{figure}[htbp]
-\centering
-\diagram{alignment}
-\caption{Matching clusters with an observed overlap example. Five of the eight earlier group-1 members occupy the later group-1 match. This local example illustrates the similarity calculation; the actual assignment optimises all group pairs jointly.}\label{fig:alignment}
-\end{figure}
-
-
-
-
-
-Two forms of temporal comparison were then used. Temporal ARI measures agreement between the partitions of continuing instruments without depending on label matching. The switch count records instruments assigned to different groups after matching. A complete three-date history is described as stable when its aligned label is unchanged and shifted when the label changes at least once. Entries, exits and missing membership are recorded separately. A one-to-one assignment can simplify a split or merger, so the overlap matrices and named member histories are examined alongside the switch counts. Stability in this sense refers to group membership, not unchanged company fundamentals.
+Two forms of temporal comparison were then used. Temporal ARI measures agreement between the partitions of continuing instruments without depending on label matching. The switch count records instruments assigned to different groups after matching. A complete three-date history is described as stable when its aligned label is unchanged and shifted when the label changes at least once. A one-to-one assignment can simplify a split or merger, so the overlap matrices and named member histories are examined alongside the switch counts. Stability in this sense refers to group membership, not unchanged company fundamentals.
 
 
 \subsection{Direct profiles and surrogate interpretation}
@@ -143,6 +107,6 @@ For a grouping $G$, let $\bar\rho_G$ denote the mean forward correlation over pa
 \begin{equation}
 \Delta\rho=\bar\rho_{\mathrm{cluster}}-\bar\rho_{\mathrm{sector}}.
 \label{eq:delta_rho}\end{equation}
-The Investec Limited and Investec plc pair, two listings of one company, is excluded. A bootstrap that resamples ten-day blocks of the forward window gives a 95\% interval for $\Delta\rho$ while preserving the dependence between pairs that share an instrument. A permutation test that reassigns cluster labels, preserving the cluster sizes, compares the clusters with random groups.
+The Investec Limited and Investec plc pair, two listings of one company, is excluded. A bootstrap that resamples the same ten-day blocks of trading dates for all instruments gives a 95\% interval for $\Delta\rho$ while preserving the dependence between pairs that share an instrument. A permutation test that reassigns cluster labels, preserving the cluster sizes, compares the clusters with random groups.
 
-The primary hypothesis was that cluster peers co-move more strongly than sector peers, $\Delta\rho>0$. After this hypothesis was rejected, a second test asked whether cluster membership adds information beyond sector. Pairwise forward correlations were regressed on indicators for a shared sector and a shared cluster, and the cluster coefficient was tested by permuting cluster labels across instruments, which preserves the dependence among pairs that share an instrument. Because the second test was formulated after the first result had been seen, its retrospective evidence is exploratory. The procedures are now fixed for a held-out evaluation of the clusters formed on 30 June 2026, whose forward window closes on 31 December 2026. Because this protocol was fixed in November 2026, after that window began, the full July--December evaluation is held out rather than prospectively preregistered.
+The primary hypothesis was that cluster peers co-move more strongly than sector peers, $\Delta\rho>0$. After this hypothesis was rejected, a second test asked whether cluster membership adds information beyond sector. Pairwise forward correlations were regressed on indicators for a shared sector and a shared cluster, and the cluster coefficient was tested by permuting cluster labels across instruments, which preserves the dependence among pairs that share an instrument. The permutation comparison depends on exchangeability of instrument labels under the null. Because the second test was formulated after the first result had been seen, its retrospective evidence is exploratory. The procedures are now fixed for a held-out evaluation of the clusters formed on 30 June 2026, whose forward window closes on 31 December 2026. Because this protocol was fixed in November 2026, after that window began, the full July--December evaluation is held out rather than prospectively preregistered.
