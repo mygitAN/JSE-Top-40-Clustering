@@ -1,0 +1,7 @@
+decision_date,group,ticker,line_outstanding,group_outstanding,disclosure_date,method,source
+2025-06-30,INVESTEC_DLC,INP,645162307,902774603,2024-06-19,disclosed,"Investec 2024 notices of AGMs, notes 9-11 (https://data.fca.org.uk/artefacts/NSM/Portal/NI-000099829/NI-000099829.pdf). Investec plc voting rights were still 645162307 at the 2025-08-07 AGM results, so the plc count is unchanged at this date."
+2025-06-30,INVESTEC_DLC,INL,257612296,902774603,2024-06-19,disclosed,"Same notice: Investec Limited voting rights 257612296 (issued 295125806 less treasury). Issued count still 295125806 at the 2025-08-07 AGM results."
+2025-12-31,INVESTEC_DLC,INP,,,,midpoint,"No per-issuer disclosure near this date. Fraction is the mean of the 2025-06-30 and 2026-06-30 fractions (0.7146 and 0.7109)."
+2025-12-31,INVESTEC_DLC,INL,,,,midpoint,"As for INP."
+2026-06-30,INVESTEC_DLC,INP,630541464,886938062,2026-06-10,disclosed,"Investec 2026 notices of AGMs, notes 9-11 (https://apis.bse.co.bw/storage/disclosures/06/2026/6951.pdf). Unchanged at the 2026-08-06 AGM results."
+2026-06-30,INVESTEC_DLC,INL,256396598,886938062,2026-06-10,disclosed,"Same notice: issued 290464999 less 34068401 treasury. The notice prints 34068401 as Investec Limited's voting rights; the combined total 886938062 shows it is the treasury holding."

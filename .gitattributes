@@ -1,0 +1,2 @@
+# results/ files are checksummed in results/manifest.json; keep their exact bytes.
+results/** -text

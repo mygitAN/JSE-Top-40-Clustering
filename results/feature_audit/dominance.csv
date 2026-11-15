@@ -1,0 +1,13 @@
+feature_set,decision_date,top_feature,top_feature_label,top_variance_share,even_share,max_scaled_value,min_scaled_value,widest_feature
+original10,2025-06-30,dividend_yield,Dividend yield,0.1587023760304596,0.1,1.0000000000000002,0.0,annualised_volatility_1y
+original10,2025-12-31,return_1y,1Y return,0.327188673990624,0.1,3.6314128835913007,-0.0029399366232884527,revenue_zar_model
+original10,2026-06-30,revenue_zar_model,Revenue,0.3472356123948052,0.1,3.8517558220034274,-0.07459776751938421,revenue_zar_model
+logsize10,2025-06-30,dividend_yield,Dividend yield,0.15896314505498593,0.1,1.0000000000000002,0.0,annualised_volatility_1y
+logsize10,2025-12-31,return_1y,1Y return,0.4666876697564779,0.1,2.8468579010528243,-0.029114830307205075,return_1y
+logsize10,2026-06-30,annualised_volatility_1y,Volatility,0.1815240856501251,0.1,1.3111661851124872,-0.1134151201690381,log_revenue
+invariant8,2025-06-30,dividend_yield,Dividend yield,0.19789547369247912,0.125,1.0000000000000002,0.0,annualised_volatility_1y
+invariant8,2025-12-31,return_1y,1Y return,0.5249665527460741,0.125,2.8468579010528243,-0.019290188247287787,return_1y
+invariant8,2026-06-30,annualised_volatility_1y,Volatility,0.2209779233156285,0.125,1.2435148286466058,-0.07459776751938421,return_1y
+market5,2025-06-30,dividend_yield,Dividend yield,0.3036184303789292,0.2,1.0000000000000002,0.0,annualised_volatility_1y
+market5,2025-12-31,return_1y,1Y return,0.6764558038499991,0.2,2.8468579010528243,-0.0029399366232884527,return_1y
+market5,2026-06-30,annualised_volatility_1y,Volatility,0.33505606323782144,0.2,1.2435148286466058,-0.07459776751938421,return_1y

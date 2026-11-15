@@ -1,0 +1,4 @@
+study_model,decision_date,in_sample_accuracy,oof_accuracy,oof_status,minimum_cluster_size
+umap,2025-06-30,1.0,0.43902439024390244,estimated,2
+umap,2025-12-31,1.0,,not estimable: singleton cluster,1
+umap,2026-06-30,1.0,0.7073170731707317,estimated,2
