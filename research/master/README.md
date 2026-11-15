@@ -1,8 +1,15 @@
 # Preserved research master and validation baseline
 
 These are historical versions of **one complete paper**, not a main paper and
-supplement. The editable manuscript remains `paper/main.tex`. All seventeen
-research figures are retained; no version was shortened to impose a page limit.
+supplement. All seventeen research figures are retained in both archived
+versions; neither was shortened to impose a page limit.
+
+The editable manuscript remains `paper/main.tex`. Since commit `85c9137` it is
+a condensed 26-page version of the research master: figures and tables that
+repeated evidence given elsewhere were removed or merged, with their values
+kept in the text. No analysis was rerun and no reported number changed. The
+removed diagrams remain in `paper/figures/` and in the `paper/diagrams.tex`
+atlas.
 
 | Version | Exact manuscript source | Rebuilt pages | Archive |
 |---|---|---:|---|
@@ -35,9 +42,9 @@ copies for the article:
   checksummed provenance.
 
 The primary metric is the proposed difference between mean within-cluster and
-mean within-sector forward correlations. Its raw-price estimates are **âˆ’0.129**
-and **âˆ’0.069** for the June and December 2025 formations. The company-balanced
-estimates (**âˆ’0.117**, **âˆ’0.083**) use a different weighting scheme and are labelled
+mean within-sector forward correlations. Its raw-price estimates are **−0.129**
+and **−0.069** for the June and December 2025 formations. The company-balanced
+estimates (**−0.117**, **−0.083**) use a different weighting scheme and are labelled
 as sensitivities rather than substituted into the primary table.
 
 These results do not support replacing sector peers to obtain stronger overall
@@ -49,21 +56,21 @@ outperformance, risk reduction or a causal investment effect.
 
 ## Agreed journal and research roadmap
 
-1. **Preserve the full research version â€” done.** Aligned maps, full model
+1. **Preserve the full research version — done.** Aligned maps, full model
    comparison, sector divergence and the analyst-investigation table are retained.
-2. **Forward co-movement â€” done.** Frozen June and December 2025 assignments
-   are evaluated in Julyâ€“December 2025 and Januaryâ€“June 2026 without refitting.
-3. **Financial significance and robustness â€” assessed for these two windows.**
+2. **Forward co-movement — done.** Frozen June and December 2025 assignments
+   are evaluated in July–December 2025 and January–June 2026 without refitting.
+3. **Financial significance and robustness — assessed for these two windows.**
    Results are reported against sectors and matched alternatives with uncertainty
    and sensitivity checks that do not assume equity pairs are independent.
-4. **Transparent integration â€” retained in the current master.** Negative overall
+4. **Transparent integration — retained in the current master.** Negative overall
    findings and exploratory within-sector evidence are distinguished throughout.
-5. **Submission preparation â€” next stage.** Investment Analysts Journal is the
+5. **Submission preparation — next stage.** Investment Analysts Journal is the
    primary target; ORiON is the fallback. A later submission copy can be edited
    to verified journal requirements while this complete master remains preserved.
 
 No seven-date extension has been fabricated or initiated. It requires four
-additional dated input universes and financial statements. The Julyâ€“December
+additional dated input universes and financial statements. The July–December
 2026 window remains incomplete when the protocol is fixed in November; a later
 evaluation is held out, not a fully prospective preregistration of that entire
 window. The legacy `--prospective` option name does not alter this distinction.
