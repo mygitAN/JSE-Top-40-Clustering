@@ -1,2 +1,4 @@
 # results/ files are checksummed in results/manifest.json; keep their exact bytes.
 results/** -text
+# The validation snapshot and manifests also bind exact file bytes.
+validation/forward_comovement/** -text
