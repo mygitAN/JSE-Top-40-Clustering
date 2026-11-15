@@ -305,15 +305,3 @@ Benedek Rozemberczki, Lauren Watson, Peter Bayer, Hao-Ting Yang, Oliver Kiss, Se
 R. Ünlü and P. Xanthopoulos. A reduced variance unsupervised ensemble learning algorithm based on modern portfolio theory. Expert Systems with Applications, 180:115085, 2021. doi: 10.1016/j.eswa.2021.115085.
 
 Lucas Vendramin, Ricardo J. G. B. Campello, and Eduardo R. Hruschka. Relative clustering validity criteria: A comparative overview. Statistical Analysis and Data Mining, 3(4):209–235, 2010. doi: 10.1002/sam.10080.
-
-## Appendix A Reproducibility and evidence
-
-Repository: https://github.com/mygitAN/JSE-Top-40-Clustering. This manuscript checks the saved numerical archive from run 20261115T062631-0c09819ce3c0, generated from clean implementation commit 98549c660edd410fd74936a03faecadd01f6067b. The later repository commit 28c2ccf7a9eab7121b1c8ea9852bbaf22758bd32 adds stricter index-review validation and its tests; it is not misreported as the implementation commit that generated those numerical results. Every file listed in results/manifest.json was checksum-verified during manuscript preparation.
-
-The primary evidence files are primary_model_summary.csv, model_comparison.csv, seed_agreement.csv, surrogate_fidelity.csv and temporal_agreement.csv under results/. Complete and partial histories are in longitudinal/umap/cluster_histories.csv. The financial profiles in Figures 6-8 come from longitudinal/umap/moves/cluster_profiles.csv and use aligned labels. Exported single-date feature_profile.png files use raw local labels, so those labels must not be substituted directly into longitudinal interpretation.
-
-Figures 1-3 and 6-8 are manuscript drawings derived from the declared configuration and saved tables. Figures 4, 5 and 9 reproduce existing repository diagrams without changing their numerical content. The figure provenance file records each source. Numerical summaries retain all date-specific members; only Figure 4 restricts the population to complete histories. No model rerun or new empirical claim is implied by redrawing a figure.
-
-Population evidence is recorded in data/reference/index_changes.csv. The June 2025 and December 2025 rows link quarterly review notices; September 2025 and March 2026 link reproduced SENS announcements; June 2026 links a fund factsheet. The supplied revised paper records that not all official notices were directly inspected and that some no-change evidence is secondary. Automated consistency with the recorded reviews does not remove those source-certification limits.
-
-The source CSV and workbook preserve the retrospective input evidence. Corporate-action, volume and dual-listed-share corrections remain in separate reference files. Reproduction commands are python -m top40.data; python -m top40.export --check; python -m unittest discover -s tests -t .; and python -m top40. The configuration fixes invariant8, five seeds and k=8. The immutable run archive and its manifest identify the exact data and implementation used.
