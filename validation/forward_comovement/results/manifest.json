@@ -1,0 +1,18 @@
+{
+  "protocol_sha256": "85e960a1d2fde30947e162c806f0a4f16922d00aed0a8ca9644e273a3d08ddf1",
+  "script_sha256": "10ce344cc7d993fb32a19260231bb2b926ef0a4d4e827db3422c66944556ed11",
+  "data_manifest_sha256": "0872427d008a144f08ea53a7b6bda7d8110426d4c9c315703fc2c9f688490a99",
+  "study_run": "20261115T062631-0c09819ce3c0",
+  "base_manuscript_commit": "7a860a08f1c5be616ab3a58ef853525fe6123ad2",
+  "python": "3.11.14 (main, Feb 12 2026, 00:37:49) [MSC v.1944 64 bit (AMD64)]",
+  "numpy": "2.3.5",
+  "pandas": "2.2.3",
+  "output_sha256": {
+    "summary.csv": "6d27f2ebf3486aed212d8afbe537f7262dfe36d267e921034ba7a9ac0a4c1cb5",
+    "conditional_block_intervals.csv": "aab35cbd24032f4b3d0f0151ac2f700d1f61297575bca05497eca65a60b2b279",
+    "company_contrasts.csv": "96a7db114b2203effeac40f4530fe708cd120ab08146c043ad7c01f5804f5ff6",
+    "delete_company.csv": "740a980c5062129d5b4d94a4597749367a5663dc5bc190b4c97b01b10bff3bfc",
+    "matched_pairs.csv": "893ad03e89b2d632e68857baa93809675560b9102c86f6093bf7932aff1e3f60",
+    "coverage.csv": "f6a55de0943db39102a96a37016196ade825f7180363f1be2ab609d3ee840bdb"
+  }
+}
