@@ -81,7 +81,7 @@ Dec 2025-Jun 2026 & 40 & 1 / 1 & 11 (27.5\%) & 29 (72.5\%) & 0.590 & 0.751 \\
 Fewer continuing instruments changed groups in the second interval than in the first (Table~\ref{tab:6}). Fifteen of 40 changed between June and December 2025, compared with 11 between December 2025 and June 2026. Temporal ARI increased from 0.377 to 0.590, also indicating greater agreement in the second comparison. Among the 39 instruments observed throughout, 19 retained their matched group and 20 changed at least once. Five changed twice and 15 changed once, accounting for 25 switch events. Mondi contributes the remaining first-period switch before leaving the index. These two comparisons do not establish a statistically significant trend.
 
 
-The stable histories were ANH, BHG, BID, BVT, CFR, FSR, GRT, IMP, INL, INP, MRP, NED, NPH, NRP, OUT, SBK, SHP, SSW and WHL. The shifted histories were ABG, AGL, ANG, BTI, CLS, CPI, DSY, GFI, HAR, MTN, NPN, OMU, PPH, PRX, REM, RNI, SLM, SOL, VAL and VOD. ABG, DSY, OMU, REM and RNI changed in both periods. Figure~\ref{fig:flows} shows these histories, with index entries and exits excluded only from the complete three-date diagram.
+Figure~\ref{fig:flows} shows all 39 complete membership histories. Absa, Discovery, Old Mutual, Remgro and Reinet changed groups in both periods. The examples below contrast persistent peer groups with fragmented groups and individual transitions. Index entries and exits are excluded only from the complete three-date diagram.
 
 
 
@@ -168,7 +168,7 @@ BHP, Bidvest, MTN and Vodacom differed from their cluster peers' sectors at all 
 
 Cluster peers did not have more similar subsequent returns than sector peers. Sector peers moved together more strongly in both evaluation periods (Table~\ref{tab:comovement}). For raw returns, $\Delta\rho$ was $-0.129$ after June 2025 and $-0.069$ after December 2025. Both 95\% intervals excluded zero, rejecting the primary hypothesis. Market adjustment lowered every correlation but left similar differences of $-0.112$ and $-0.068$. The result held for every UMAP seed and for t-SNE. Clusters nevertheless co-moved more strongly than random groups of the same sizes, with permutation $p<0.001$ at both dates.
 
-Giving every company equal weight did not change the conclusion. We first averaged each instrument's cluster-minus-sector contrast within its company and then across companies, rather than averaging over pairs. The differences were $-0.117$ and $-0.083$, compared with pair-averaged estimates of $-0.129$ and $-0.069$. Sector superiority therefore did not depend on companies with many peers contributing more pairs. This check concerns the primary comparison, not the follow-up analysis below.
+Giving every company equal weight did not change the conclusion. We first averaged each instrument's cluster-minus-sector contrast within its company and then across companies, rather than averaging over pairs. The differences were $-0.117$ and $-0.083$, compared with pair-averaged estimates of $-0.129$ and $-0.069$. The difference remained negative when companies were weighted equally. This check concerns the primary comparison, not the follow-up analysis below.
 
 \begin{table}[htbp]
 \centering\caption{Mean forward correlation of daily returns between peers over the six months after each formation date. $\Delta\rho$ is cluster peers minus sector peers; the interval is from a ten-day block bootstrap. Market-adjusted returns are residuals from a regression on the Top 40 Index.}\label{tab:comovement}
@@ -176,7 +176,7 @@ Giving every company equal weight did not change the conclusion. We first averag
 \input{tables/comovement.tex}
 \end{table}
 
-Clustering did identify additional information within sectors. This follow-up analysis was developed after seeing the primary result, so its evidence is exploratory. Pairs sharing both a sector and a cluster had stronger subsequent co-movement than pairs sharing a sector alone (Table~\ref{tab:comovement_pairs}). Raw correlations were 0.391 against 0.329 after June 2025, and 0.552 against 0.396 after December 2025.
+In an exploratory analysis, companies sharing both a sector and a cluster had more similar subsequent returns than companies sharing a sector alone (Table~\ref{tab:comovement_pairs}). This follow-up analysis was developed after seeing the primary result. Raw correlations were 0.391 against 0.329 after June 2025, and 0.552 against 0.396 after December 2025.
 
 A regression accounting for shared sector membership also gave a positive cluster coefficient at both dates, for raw and market-adjusted returns. Permutation $p$ values ranged from 0.001 to 0.019. The additional information came from within sectors. Pairs sharing a cluster across sectors co-moved little more than unrelated pairs. Their market-adjusted correlations were 0.007 and 0.021, compared with $-0.034$ and $-0.037$ for unrelated pairs. For raw returns after December 2025, they co-moved less than unrelated pairs.
 
@@ -213,7 +213,7 @@ Absa and Old Mutual & 5 & 5 & 4 & 5 & 0 & 5 \\
 
 Both methods produced similar main findings. They retained the platinum core and the large-capitalisation, low-turnover core throughout. Both placed the gold miners and Valterra with the precious-metals group in December 2025. Both joined Naspers and Prosus in June 2026 in every seed. The main difference concerned June 2025: t-SNE grouped the gold miners with the platinum core in two of five seeds, while UMAP never did. Absa and Old Mutual also separated in December under t-SNE but remained together under UMAP.
 
-The two representations give the same stable or shifted classification for 28 of the 39 complete histories. Thirteen equities change aligned group under both: ABG, AGL, CLS, CPI, MTN, NPN, PPH, PRX, RNI, SLM, SOL, VAL and VOD. Fifteen remain stable under both: ANH, BHG, BID, CFR, FSR, GRT, IMP, INL, INP, NED, NPH, NRP, SBK, SHP and SSW. Seven changes occur under UMAP only (ANG, BTI, DSY, GFI, HAR, OMU and REM), and four under t-SNE only (BVT, MRP, OUT and WHL). The changes recorded under both representations are the more robust candidates for analyst investigation. Changes recorded under one representation remain informative, but depend partly on the modelling choice.
+The two representations give the same stable or shifted classification for 28 of the 39 complete histories. Thirteen equities change group under both methods, and fifteen remain stable under both. Seven changes occur under UMAP only, and four under t-SNE only. Shared changes, including those of Sasol, Valterra, Naspers and Prosus, provide more robust candidates for analyst investigation. Method-specific changes, such as Old Mutual's under UMAP, remain informative but depend partly on the modelling choice.
 
 UMAP remains useful for inspecting financial peer groups, but its clearer map separation does not establish greater investment relevance. The comparison recovers persistent groups and many membership changes under t-SNE. The forward test also finds that t-SNE performs at least as well (Section~\ref{sec:comovement}).
 
