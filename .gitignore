@@ -12,3 +12,6 @@ __pycache__/
 # paper cites are copied into the tracked results/ folder by `python -m top40.export`.
 experiments/
 outputs/
+
+# Retired duplicate manuscript exports; use paper/ instead.
+output/

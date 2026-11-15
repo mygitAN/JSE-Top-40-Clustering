@@ -5,6 +5,7 @@
 \usepackage{amsmath,amssymb}
 \usepackage{booktabs,tabularx,array}
 \usepackage{graphicx}
+\usepackage{pdflscape}
 \usepackage{tikz}
 \usetikzlibrary{arrows.meta,positioning,calc}
 \usepackage{pgfplots}
@@ -40,3 +41,12 @@
 \renewcommand{\textfraction}{.05}
 \renewcommand{\floatpagefraction}{.75}
 \newcommand{\diagram}[1]{\resizebox{\linewidth}{!}{\input{figures/#1.tex}}}
+
+% Original Python analysis images, placed side by side without redrawing.
+\newcommand{\pythonclusterpair}[1]{%
+\begin{minipage}[c]{.58\linewidth}
+\centering\includegraphics[width=\linewidth]{figures/python/cluster_map_#1.png}
+\end{minipage}\hfill%
+\begin{minipage}[c]{.41\linewidth}
+\centering\includegraphics[width=\linewidth]{figures/python/dendrogram_#1.png}
+\end{minipage}}
