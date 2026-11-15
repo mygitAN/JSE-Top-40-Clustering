@@ -2,7 +2,7 @@
 
 \subsection{Dataset and index membership}
 
-The dataset contains three cross-sections of FTSE/JSE Top 40 instruments observed or reconstructed for 30 June 2025, 31 December 2025 and 30 June 2026. Each cross-section contains 41 listed instruments representing 40 company groups. The difference arises because Investec Limited (INL) and Investec plc (INP) are separate listed securities of one dual-listed company. Both instruments were retained because the analysis compares listed security profiles. Table~\ref{tab:1} summarises the population at each decision date.
+The dataset contains three cross-sections of FTSE/JSE Top 40 instruments compiled for 30 June 2025, 31 December 2025 and 30 June 2026. Each cross-section contains 41 listed instruments representing 40 company groups. The difference arises because Investec Limited (INL) and Investec plc (INP) are separate listed securities of one dual-listed company. Both instruments were retained because the analysis compares listed security profiles. Table~\ref{tab:1} summarises the population at each decision date.
 
 
 \begin{table}[htbp]
@@ -46,7 +46,7 @@ Across the three dates, the dataset contains 123 instrument-date records and 43 
 
 \subsection{Financial feature representation}
 
-The clustering input contains eight financial and market variables, summarised in Table~\ref{tab:2}. Returns, beta, volatility, dividend yield and earnings yield describe performance, risk and valuation. Log market capitalisation, log revenue relative to market capitalisation and log share turnover describe scale and trading activity. This representation was developed after exploratory analysis to reduce skewness and the effect of share subdivisions. It extends the earlier study but uses a different sample and feature definition from the original eleven-variable SACJ analysis. The archived ten-variable specification is retained as a separate reference.
+The clustering input contains eight financial and market variables, summarised in Table~\ref{tab:2}. Returns, beta, volatility, dividend yield and earnings yield describe performance, risk and valuation. Log market capitalisation, log revenue relative to market capitalisation and log share turnover describe scale and trading activity. The representation reduces skewness and the effect of share subdivisions. Alternative ten-variable and market-only representations are used to assess sensitivity to feature construction.
 
 
 \begin{table}[htbp]
@@ -74,13 +74,8 @@ The treatment of share subdivisions is particularly important for comparisons ov
 
 \subsection{Corrections and missing observations}
 
-The original source values were preserved, and corrections were applied through separate reference tables. Naspers began trading on a five-for-one share basis on 1 October 2025, with the register updated on 6 October. Its trailing average volume contained mixed share units. The December 2025 value was corrected from 800,935 to 2,140,029 post-subdivision shares, and the June 2026 value from 1,502,524 to 1,847,639. These corrections place volume on the same share basis as the corresponding shares outstanding.
+Share units were harmonised before calculating turnover. Following the Naspers five-for-one subdivision in October 2025, mixed-unit trailing volume was corrected to 2,140,029 post-subdivision shares for December 2025 and 1,847,639 for June 2026. For Investec, issuer-disclosed fractions allocate the group share count between INL and INP; the December 2025 allocation interpolates between June 2024 and June 2026 disclosures. Market capitalisation and turnover use line-specific shares, while revenue relative to market capitalisation uses group totals.
 
+Reinet revenue and EPS and Anglo American volume at the first two dates were unavailable. Missing model values, including derived features with missing inputs, use the corresponding June 2025 medians. Earnings yield was clipped at the June 2025 first and ninety-ninth percentiles. These imputation and clipping parameters were held fixed at later dates, and affected instruments remain identified in the figures.
 
-The Investec observations required a separate adjustment because both rows originally carried the combined share count. Issuer disclosures from June 2024 and June 2026 were used to allocate the reconstructed group total between the two listed lines. The December 2025 allocation uses the midpoint of the disclosed fractions. Each line then has its own market capitalisation and turnover. Revenue relative to market capitalisation uses group totals because each line represents a claim on the dual-listed group. The reconstructed total and the interpolated December allocation remain sources of measurement uncertainty.
-
-
-Missing observations were handled without removing instruments from the sample. Reinet has no usable raw revenue or EPS at any date, while Anglo American lacks usable volume at the first two dates. Model values were imputed using June 2025 medians. Where a derived feature depends on an imputed input, its own June 2025 median was used. Earnings yield was clipped at the June 2025 first and ninety-ninth percentiles. These imputation and clipping values were held constant at the later dates.
-
-
-Market measures were reconstructed from vendor daily histories. Dated issuer releases support revenue and diluted EPS for 120 of the 123 records, with dated currency conversions, while historical shares and market capitalisation remain reconstructed. Sector labels come from a legacy eight-category directory classification and were excluded from model fitting and selection. JSE-only volume may understate total trading activity for firms with major overseas listings, and revenue definitions differ across sectors. These data limitations are considered when interpreting the results.
+Market measures use vendor daily histories. Dated issuer releases and currency conversions support revenue and diluted EPS for 120 of the 123 records; historical shares and market capitalisation are reconstructed, including the interpolated Investec allocation. Sector labels use an eight-category directory classification and are excluded from fitting and selection. Turnover measures JSE trading rather than global liquidity, and revenue definitions differ across sectors. The retrospective dataset supports descriptive comparisons rather than a certified point-in-time investment backtest.

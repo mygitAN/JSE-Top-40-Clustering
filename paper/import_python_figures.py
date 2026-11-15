@@ -34,6 +34,17 @@ def main():
             sources[target.relative_to(PAPER).as_posix()] = {
                 'archive_path': relative, 'sha256': digest,
             }
+    relative = 'longitudinal/umap/jaccard.png'
+    source = ROOT / 'results' / relative
+    digest = hashlib.sha256(source.read_bytes()).hexdigest()
+    if digest != manifest['files'][relative] or digest != checksums[relative]:
+        raise ValueError(f'Export/archive checksum mismatch: {relative}')
+    target = destination / 'jaccard.png'
+    shutil.copyfile(source, target)
+    sources[target.relative_to(PAPER).as_posix()] = {
+        'archive_path': relative, 'sha256': digest,
+        'export_path': f'results/{relative}',
+    }
     record = {
         'run_id': manifest['run_id'],
         'implementation_commit': manifest['git_commit'],

@@ -27,7 +27,7 @@ d_{\mathrm{avg},1}(G,H)=\frac{1}{|G||H|}\sum_{i\in G}\sum_{j\in H}\|u_i-u_j\|_1.
 \label{eq:linkage}\end{equation}
 
 \begin{table}[htbp]
-\centering\caption{The study model is distinct from the generic UMAP comparator, which uses ten neighbours and minimum distance 0.1 in the broader comparison grid.}\label{tab:3}
+\centering\caption{Fixed modelling specification and t-SNE comparator.}\label{tab:3}
 \footnotesize
 \begin{tabularx}{\linewidth}{@{}>{\hsize=0.500\hsize\linewidth=\hsize\raggedright\arraybackslash}X >{\hsize=1.500\hsize\linewidth=\hsize\raggedright\arraybackslash}X@{}}
 \toprule
@@ -39,14 +39,13 @@ Agglomerative clustering & 8 groups; average linkage; Manhattan metric on UMAP c
 Seeds & 42, 43, 44, 45, 46; representative partition 42 \\
 Software & umap-learn 0.5.12; scikit-learn 1.6.1 \\
 Sensitivity & Cluster counts 2-12; alternative feature representations \\
-Historical comparator & t-SNE: perplexity 5; learning rate 10; 300 iterations; random initialisation; average-Manhattan hierarchy, k=8 \\
+Comparator & t-SNE: perplexity 5; learning rate 10; 300 iterations; random initialisation; average-Manhattan hierarchy, k=8 \\
 \bottomrule
 \end{tabularx}
 \end{table}
 
 
-The settings were selected after exploratory analysis of June 2025 and held constant at the later dates. Three neighbours and a minimum distance of 0.01 were author-specified in that exploration; an earlier 36-combination grid preferred a minimum distance of 0.1. Eight clusters, average linkage and Manhattan distance were retained from the earlier paper. The specification is therefore exploratory rather than prospectively registered. Holding the settings constant supports comparison across dates, but each representation and partition is refitted, so the later results are not an out-of-sample prediction test.
-
+The settings were selected during exploratory analysis of June 2025 and held constant at subsequent dates. Eight groups provide the reference partition, with feature alternatives, cluster counts from two to twelve and five random seeds used to assess sensitivity. Each date is refitted independently; comparison therefore concerns observed peer structure rather than out-of-sample prediction.
 
 \subsection{Quality in two geometries and seed agreement}
 
@@ -69,7 +68,7 @@ J_{ab}&=\frac{|A_a^C\cap B_b^C|}{|A_a^C\cup B_b^C|},\\
 The implementation sets empty-union similarities to zero and carries labels only for positive intersections.
 
 \begin{table}[htbp]
-\centering\caption{Reproducible cross-date matching procedure implemented in top40/temporal.py.}\label{tab:4}
+\centering\caption{Cross-date cluster matching using continuing instruments.}\label{tab:4}
 \footnotesize
 \begin{tabularx}{\linewidth}{@{}>{\hsize=0.200\hsize\linewidth=\hsize\raggedright\arraybackslash}X >{\hsize=1.800\hsize\linewidth=\hsize\raggedright\arraybackslash}X@{}}
 \toprule

@@ -19,8 +19,8 @@ lives in those section files.
 | `sections/07_conclusion.tex` | Conclusion |
 | `references.tex` | References and citation keys |
 | `preamble.tex` | Packages, typography and shared diagram styles |
-| `figures/*.tex` | Fourteen editable TikZ and PGFPlots diagrams |
-| `figures/python/*.png` | Six original Python cluster maps and dendrograms |
+| `figures/*.tex` | Thirteen editable TikZ and PGFPlots diagrams |
+| `figures/python/*.png` | Seven original Python figures: maps, dendrograms and Jaccard overlap |
 | `diagrams.tex` | Separate atlas containing all diagrams |
 
 ## Build and preview
@@ -62,9 +62,12 @@ numbers and provenance together. `figure_sources.json` records the current sourc
 
 The manuscript includes the original Python-generated `cluster_map.png` and
 `dendrogram.png` for each date, copied unchanged from the archived clean run.
-They appear side by side at reduced size on standard portrait pages. No model is rerun and these six
-images are not recreated in TikZ. `python_figure_sources.json` records their
+They appear side by side at reduced size on standard portrait pages. No model is rerun and these images are not recreated in TikZ. `python_figure_sources.json` records their
 archive paths and verified SHA-256 checksums.
+
+The Jaccard overlap figure is also copied unchanged from
+`results/longitudinal/umap/jaccard.png`, checked against its export and archive
+checksums.
 
 Cluster numbers in these original maps are local to each fit. The member lists
 define the groups; asterisks flag imputed inputs. Dendrogram leaves carry ticker
@@ -79,6 +82,15 @@ To refresh the copies from the archived run named by `results/manifest.json`:
 ```
 
 Overleaf compilation needs only the committed files in `paper/`, including the
-six PNGs. Python and the local run archive are needed only for refreshing them.
+seven PNGs. Python and the local run archive are needed only for refreshing them.
 The older `make_figures.py` remains an optional separate plotting workflow; its
 vector PDFs are not used for these cluster maps or dendrograms.
+
+## Selected movement attributions
+
+Table source `data/selected_move_attributions.csv` is a subset of
+`results/longitudinal/umap/moves/move_features.csv`. The export checksum and
+all 16 selected values were checked against the archived destination-class
+SHAP tensors, using each date's raw-to-aligned membership mapping. Table values
+are rounded raw-margin contributions from the fitted surrogate, not financial
+changes or probabilities.

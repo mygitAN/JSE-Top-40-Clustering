@@ -28,7 +28,7 @@
     "quality": "results/model_comparison.csv; results/primary_model_summary.csv",
     "seed_variability": "results/seed_agreement.csv",
     "flows": "results/longitudinal/umap/cluster_histories.csv",
-    "jaccard": "results/longitudinal/umap/cluster_histories.csv; top40/temporal.py",
+    "jaccard": "Unmodified results/longitudinal/umap/jaccard.png; export and archive checksums verified by paper/import_python_figures.py. See python_figure_sources.json.",
     "profile0": "results/longitudinal/umap/moves/cluster_profiles.csv",
     "profile1": "results/longitudinal/umap/moves/cluster_profiles.csv",
     "profile2": "results/longitudinal/umap/moves/cluster_profiles.csv",
