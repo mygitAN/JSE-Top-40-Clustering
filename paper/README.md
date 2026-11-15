@@ -21,7 +21,6 @@ lives in those section files.
 | `preamble.tex` | Packages, typography and shared diagram styles |
 | `figures/*.tex` | Thirteen editable TikZ and PGFPlots diagrams |
 | `figures/python/*.png` | Seven original Python figures: maps, dendrograms and Jaccard overlap |
-| `supplementary.tex` | Six supporting figures, numbered S1--S6 |
 | `diagrams.tex` | Complete atlas retaining all seventeen figures |
 
 ## Build and preview
@@ -96,23 +95,14 @@ SHAP tensors, using each date's raw-to-aligned membership mapping. Table values
 are rounded raw-margin contributions from the fitted surrogate, not financial
 changes or probabilities.
 
-## Main paper and supplement
+## One manuscript with all diagrams
 
-The main paper retains eleven figures: population, workflow, model quality,
-three Python cluster-map/dendrogram pairs, complete-history flows, Python
-Jaccard overlap and three financial profiles. Supporting figures are compiled
-separately from `supplementary.tex`: S1 market windows, S2 alignment example,
-S3 seed stability, S4 feature sensitivity, S5 cluster-count sensitivity and
-S6 interpretation framework. The original concise limitations text is unchanged.
+All seventeen figures are included in `main.tex` through the section files,
+near the methods and results they explain. There is no separate supplement.
+The concise limitations text, UMAP rationale and clarified SHAP attributions
+remain in the paper. Grouped SHAP rows contain identical individual values
+before rounding, not averages.
 
-```powershell
-.\paper\build.ps1 -Target Supplement
-.\paper\build.ps1 -Target All
-```
-
-On Overleaf, compile `paper/main.tex` for the manuscript, or select
-`paper/supplementary.tex` to compile the supplement. Figure references S1--S6
-in the manuscript refer to that separate document. `figure_sources.json`
-records both orders; `diagrams.tex` continues to show the complete atlas.
-Grouped SHAP rows contain identical individual values before rounding,
-not averages; all displayed features were checked within each group.
+Compile `paper/main.tex` in the linked Overleaf repository. The optional
+`diagrams.tex` atlas is only a development preview of the same figures;
+it is not a separate part of the manuscript.
