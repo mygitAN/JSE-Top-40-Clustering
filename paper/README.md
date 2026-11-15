@@ -62,7 +62,7 @@ numbers and provenance together. `figure_sources.json` records the current sourc
 
 The manuscript includes the original Python-generated `cluster_map.png` and
 `dendrogram.png` for each date, copied unchanged from the archived clean run.
-They appear side by side on landscape pages. No model is rerun and these six
+They appear side by side at reduced size on standard portrait pages. No model is rerun and these six
 images are not recreated in TikZ. `python_figure_sources.json` records their
 archive paths and verified SHA-256 checksums.
 
