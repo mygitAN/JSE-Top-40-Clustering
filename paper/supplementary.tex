@@ -1,0 +1,46 @@
+\input{preamble.tex}
+\begin{document}
+\renewcommand{\thefigure}{S\arabic{figure}}
+\renewcommand{\figurename}{Supplementary Figure}
+\renewcommand{\thepage}{S\arabic{page}}
+\section*{Supplementary figures}
+\textbf{Interpretable Unsupervised Learning for JSE Top 40 Equities}
+
+Supporting diagrams and sensitivity analyses for the three-cross-section study. All figures use the same study data and specifications as the main manuscript.
+
+\begin{figure}[htbp]
+\centering
+\diagram{windows}
+\caption{Dependence across the three cross-sections. Bars depict trailing annual market windows schematically; fundamentals follow their recorded issuer reporting dates, not these uniform windows.}\label{fig:windows}
+\end{figure}
+\clearpage
+\begin{figure}[htbp]
+\centering
+\diagram{alignment}
+\caption{Matching clusters with an observed overlap example. Five of the eight earlier group-1 members occupy the later group-1 match. This local example illustrates the similarity calculation; the actual assignment optimises all group pairs jointly.}\label{fig:alignment}
+\end{figure}
+\clearpage
+\begin{figure}[htbp]
+\centering
+\diagram{seed_variability}
+\caption{Ten pairwise adjusted Rand indices from five UMAP seeds at each date. Points are offset horizontally for readability; red segments mark the means. Pairs share fitted partitions and are dependent, so the spread is not a confidence interval or an empirical null for temporal switches.}\label{fig:seed_variability}
+\end{figure}
+\clearpage
+\begin{figure}[htbp]
+\centering
+\diagram{feature_sensitivity}
+\caption{Complete-history outcomes under four feature representations using the UMAP recipe. Each bar contains the same 39 continuously observed instruments; four partial histories are outside every bar. The counts are representation-dependent and are not estimates of true economic change.}\label{fig:feature_sensitivity}
+\end{figure}
+\clearpage
+\begin{figure}[htbp]
+\centering
+\diagram{cluster_count}
+\caption{Cluster-count sensitivity from two to twelve groups. Blue lines show financial-feature scores and red lines embedding scores. Eight groups remain the reference specification.}\label{fig:cluster_count}
+\end{figure}
+\clearpage
+\begin{figure}[htbp]
+\centering
+\diagram{evidence}
+\caption{Interpretation of the screening results. Peer-group changes, financial profiles and multivariate distance provide separate reasons for analyst follow-up. External validation is required before identifying a confirmed economic anomaly.}\label{fig:evidence}
+\end{figure}
+\end{document}

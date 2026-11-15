@@ -21,6 +21,8 @@ a_j=\min_{i\in U_{t_1}}x_{it_1j},\quad b_j=\max_{i\in U_{t_1}}x_{it_1j}.
 UMAP was used to produce a two-dimensional representation of each cross-section \citep{mcinnes2018}. The model used three neighbours, a minimum distance of 0.01, Euclidean input distance and one computational job. Hierarchical clustering was then applied to the UMAP coordinates using average linkage and Manhattan distance, with eight clusters as the reference configuration. Each date was fitted independently using seeds 42--46. Seed 42 provides the representative partition, while the remaining fits support stability analysis. Figure~\ref{fig:pipeline} summarises the modelling workflow.
 
 
+The specification emphasises local financial peer relationships in a cross-section small enough for instrument-level inspection. UMAP can represent nonlinear neighbourhood structure, while two dimensions allow the fitted groups to be examined alongside their members. Using three neighbours emphasises nearby profiles rather than broad market structure, and a minimum distance of 0.01 permits compact local representations \citep{umapdocs}. Average linkage then combines groups using the mean of their pairwise Manhattan distances, with each distance equal to the sum of absolute coordinate differences. This gives an explicit hierarchy of the fitted representation. The settings are an exploratory choice, not an established optimum for small samples: compact maps can also accentuate fine structure. Their usefulness is assessed through financial-feature scores, the comparator and stability analyses rather than embedding separation alone.
+
 The linkage between groups $G$ and $H$ of two-dimensional coordinates $u_i$ is
 \begin{equation}
 d_{\mathrm{avg},1}(G,H)=\frac{1}{|G||H|}\sum_{i\in G}\sum_{j\in H}\|u_i-u_j\|_1.
@@ -86,14 +88,10 @@ Step & Operation \\
 \end{table}
 
 
-Figure~\ref{fig:alignment} illustrates the overlap calculation with an observed matched pair.
+Supplementary Figure~S2 illustrates the overlap calculation with an observed matched pair.
 
 
-\begin{figure}[htbp]
-\centering
-\diagram{alignment}
-\caption{Matching clusters with an observed overlap example. Five of the eight earlier group-1 members occupy the later group-1 match. This local example illustrates the similarity calculation; the actual assignment optimises all group pairs jointly.}\label{fig:alignment}
-\end{figure}
+
 
 
 Two forms of temporal comparison were then used. Temporal ARI measures agreement between the partitions of continuing instruments without depending on label matching. The switch count records instruments assigned to different groups after matching. A complete three-date history is described as stable when its aligned label is unchanged and shifted when the label changes at least once. Entries, exits and missing membership are recorded separately. A one-to-one assignment can simplify a split or merger, so the overlap matrices and named member histories are examined alongside the switch counts. Stability in this sense refers to group membership, not unchanged company fundamentals.

@@ -31,14 +31,10 @@ Figure~\ref{fig:quality} compares this result with a t-SNE hierarchical comparat
 \end{figure}
 
 
-Figure~\ref{fig:seed_variability} shows the ten seed-pair comparisons at each date. The December model was the most consistent under the tested seeds, despite containing two singletons. June 2026 showed the greatest seed variation. This indicates that cluster size and seed stability provide different information about the fitted groups.
+Supplementary Figure~S3 shows the ten seed-pair comparisons at each date. The December model was the most consistent under the tested seeds, despite containing two singletons. June 2026 showed the greatest seed variation. This indicates that cluster size and seed stability provide different information about the fitted groups.
 
 
-\begin{figure}[htbp]
-\centering
-\diagram{seed_variability}
-\caption{Ten pairwise adjusted Rand indices from five UMAP seeds at each date. Points are offset horizontally for readability; red segments mark the means. Pairs share fitted partitions and are dependent, so the spread is not a confidence interval or an empirical null for temporal switches.}\label{fig:seed_variability}
-\end{figure}
+
 
 
 % BEGIN CLUSTER MAPS AND TREES
@@ -112,7 +108,7 @@ The stable histories were ANH, BHG, BID, BVT, CFR, FSR, GRT, IMP, INL, INP, MRP,
 \end{figure}
 
 
-Figure~\ref{fig:jaccard} shows the membership overlaps used to match groups across dates. For example, the larger first-period group illustrated in Figure~\ref{fig:alignment} has a matched Jaccard similarity of 0.625. Other matches have lower overlap. The diagram is useful because a retained label can describe a group whose membership has changed substantially. The assignment maximises total overlap across all matched pairs, so each match must also be considered in relation to its actual members.
+Figure~\ref{fig:jaccard} shows the membership overlaps used to match groups across dates. For example, the larger first-period group illustrated in Supplementary Figure~S2 has a matched Jaccard similarity of 0.625. Other matches have lower overlap. The diagram is useful because a retained label can describe a group whose membership has changed substantially. The assignment maximises total overlap across all matched pairs, so each match must also be considered in relation to its actual members.
 
 
 The membership paths in Figure~\ref{fig:flows} show how a group can disperse despite retaining an aligned label. June 2025 group 0 contains ANG, DSY, GFI, HAR, MTN, OUT and PPH. By December, ANG, GFI and HAR belong to group 3, DSY and MTN to group 7 and PPH to group 2. OUT alone retains group 0. Thus the original seven-member association separates into four destinations. June group 6 also disperses: CLS joins group 2, while REM and RNI join group 7. Its aligned identifier is retired. Figure~\ref{fig:jaccard} shows these weaker overlaps alongside more persistent matches; a one-to-one label assignment cannot by itself describe such fragmentation.
@@ -121,11 +117,11 @@ Absa and Old Mutual illustrate a different pattern. Both follow aligned groups $
 
 Naspers and Prosus converge in aligned group 9 in June 2026 after occupying groups 7 and 4, respectively. Their one-year returns decrease by 0.468 and 0.527 reference-scaled units between December and June. Figure~\ref{fig:profile2} characterises their destination by relatively high market capitalisation and low return and dividend yield. Sasol instead moves from group 2 to group 7 as beta decreases by 0.642 and one-year return increases by 0.627 units. Reinet follows groups $6\rightarrow7\rightarrow2$, although its imputed fundamentals limit interpretation. These feature differences are calculated from the saved instrument records using the fixed June 2025 scale. They describe observed changes and are not causal effects or SHAP attributions; no single feature is asserted to determine membership.
 
-Table~\ref{tab:move_shap} adds the surrogate's feature attributions for selected destination assignments. Return supports the December precious-metals assignments, consistent with the measured return increases for ANG, GFI and VAL. For Absa and Old Mutual in June, dividend yield and earnings yield support group 1, although beta is among their larger measured changes. For Naspers and Prosus, return, earnings yield and dividend yield support group 9; Sasol's group-7 assignment is supported most strongly by return. These comparisons distinguish a variable that changed substantially from a variable the surrogate uses to reproduce the destination label.
+Table~\ref{tab:move_shap} adds the surrogate's feature attributions for selected destination assignments. Equities are grouped only where every feature contribution shown in that row is identical before rounding; no row represents an average or a selected representative equity. Return supports the December precious-metals assignments, consistent with the measured return increases for ANG, GFI and VAL. For Absa and Old Mutual in June, dividend yield and earnings yield support group 1, although beta is among their larger measured changes. For Naspers and Prosus, return, earnings yield and dividend yield support group 9; Sasol's group-7 assignment is supported most strongly by return. These comparisons distinguish a variable that changed substantially from a variable the surrogate uses to reproduce the destination label.
 
 \begin{table}[htbp]
 \centering
-\caption{Selected positive Tree SHAP contributions to destination-cluster raw margins. Values are for each listed instrument, from the fully fitted date-specific surrogate; they are neither probabilities nor changes in financial units. Destination groups use aligned labels.}\label{tab:move_shap}
+\caption{Selected positive Tree SHAP contributions to destination-cluster raw margins. Each value applies individually to every equity in its row: contributions are identical before rounding, not averages. Values from the fully fitted date-specific surrogate are raw margins, not probabilities or changes in financial units. Destination groups use aligned labels.}\label{tab:move_shap}
 \footnotesize
 \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}p{2.0cm}>{\raggedright\arraybackslash}p{2.0cm}p{1.1cm}X@{}}
 \toprule
@@ -138,6 +134,7 @@ Jun 2026 & SOL & 7 & Return $+2.016$; dividend yield $+0.686$; volatility $+0.22
 \bottomrule
 \end{tabularx}
 \end{table}
+\FloatBarrier
 
 Positive values increase the specified class margin relative to that surrogate's expected margin. Margins have date- and class-specific baselines, so their magnitudes do not provide a common financial scale across groups or dates. December out-of-fold fidelity is not estimable because of singleton groups; June 2026 fidelity is 0.707 (Table~\ref{tab:8}). December attributions therefore describe the fitted classifier without a held-out fidelity estimate, and June attributions remain supplementary to the direct profiles. They are explanations of reproduced cluster labels, not causal explanations of financial change.
 
@@ -194,28 +191,20 @@ June 2026 & Volatility & 22.1\% & 1.244 & 0.590 \\
 \end{table}
 
 
-Figure~\ref{fig:feature_sensitivity} compares the complete-history results under the four feature representations. This tests whether the same broad membership interpretation is retained when size, liquidity and share-basis effects are represented differently.
+Supplementary Figure~S4 compares the complete-history results under the four feature representations. This tests whether the same broad membership interpretation is retained when size, liquidity and share-basis effects are represented differently.
 
 
-\begin{figure}[htbp]
-\centering
-\diagram{feature_sensitivity}
-\caption{Complete-history outcomes under four feature representations using the UMAP recipe. Each bar contains the same 39 continuously observed instruments; four partial histories are outside every bar. The counts are representation-dependent and are not estimates of true economic change.}\label{fig:feature_sensitivity}
-\end{figure}
+
 
 
 Table~\ref{tab:7} shows that one-year return accounts for 52.5\% of scaled variance in December 2025, compared with 12.5\% under an even eight-variable allocation. The maximum scaled value is 2.847. Thus the June 2025 reference keeps the units constant without keeping each feature's influence constant. The December grouping should be interpreted in light of this concentration, because changes in the geometry can reflect both company attributes and the relative weight of those attributes after scaling.
 
 
-The feature alternatives also produce different membership histories. The UMAP model gives 20 stable and 19 shifted histories under original10, 16 and 23 under logsize10, 19 and 20 under invariant8, and 14 and 25 under market5. Each comparison uses the same 39 continuously observed instruments. Figure~\ref{fig:cluster_count} provides the corresponding cluster-count sensitivity from two to twelve groups. These results show that the selected representation and the choice of eight groups influence the financial relationships reported. Internal scores calculated in different feature spaces are not directly comparable as a single ranking of feature sets.
+The feature alternatives also produce different membership histories. The UMAP model gives 20 stable and 19 shifted histories under original10, 16 and 23 under logsize10, 19 and 20 under invariant8, and 14 and 25 under market5. Each comparison uses the same 39 continuously observed instruments. Supplementary Figure~S5 provides the corresponding cluster-count sensitivity from two to twelve groups. These results show that the selected representation and the choice of eight groups influence the financial relationships reported. Internal scores calculated in different feature spaces are not directly comparable as a single ranking of feature sets.
 
 
 
-\begin{figure}[htbp]
-\centering
-\diagram{cluster_count}
-\caption{Cluster-count sensitivity from two to twelve groups. Blue lines show financial-feature scores and red lines embedding scores. Eight groups remain the reference specification.}\label{fig:cluster_count}
-\end{figure}
+
 
 
 \subsection{Surrogate interpretation and multivariate outliers}
@@ -256,11 +245,4 @@ June 2026 & GLN, PAN, SOL, SSW & 4 \\
 The Mahalanobis distance screen flagged five observations in June 2025, five in December 2025 and four in June 2026, as shown in Table~\ref{tab:9}. These 14 observations cover nine distinct tickers. Sasol was flagged at all three dates, BHP and British American Tobacco at the first two, and Sibanye-Stillwater at the last two. Such repeated flags are useful for follow-up, but their meaning depends on the observation history. Aspen and Pan African Resources were not index members at every date, so missing dates cannot be counted as an absence of unusual behaviour. Anglo American also carries an imputed volume value. The flags remain descriptive because no external event test, forward-return test or calibrated transition null was applied.
 
 
-The evidence streams and their interpretation are summarised in Figure~\ref{fig:evidence}.
-
-
-\begin{figure}[htbp]
-\centering
-\diagram{evidence}
-\caption{Interpretation of the screening results. Peer-group changes, financial profiles and multivariate distance provide separate reasons for analyst follow-up. External validation is required before identifying a confirmed economic anomaly.}\label{fig:evidence}
-\end{figure}
+The evidence streams and their interpretation are summarised in Supplementary Figure~S6.
