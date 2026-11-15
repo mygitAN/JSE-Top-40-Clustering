@@ -1,0 +1,96 @@
+{
+  "version": 1,
+  "frozen_on": "2026-11-15",
+  "baseline_commit": "7a860a08f1c5be616ab3a58ef853525fe6123ad2",
+  "study_run": "20261115T062631-0c09819ce3c0",
+  "status": "Retrospective documentation of completed analysis plus a frozen reserved evaluation; this file was created after observing the 2025-formation results and is not an earlier preregistration.",
+  "H1": {
+    "hypothesis": "Mean cluster-peer forward correlation exceeds mean sector-peer forward correlation (delta_rho > 0).",
+    "role": "Primary question; keep negative findings."
+  },
+  "H2": {
+    "hypothesis": "A shared-cluster indicator has a positive coefficient in pairwise forward correlation regressed on shared-sector and shared-cluster indicators, with an intercept.",
+    "role": "Formulated after the primary result; retrospective evidence is explicitly exploratory."
+  },
+  "formation_windows": {
+    "2025-06-30": [
+      "2025-07-01",
+      "2025-12-31"
+    ],
+    "2025-12-31": [
+      "2026-01-01",
+      "2026-06-30"
+    ]
+  },
+  "return_basis": "Daily vendor close price returns; first forward daily return includes the formation close. No future index-membership filter or cluster refitting.",
+  "market_adjustment": "Separate OLS of each instrument daily return on J200 return with an intercept within each evaluation window; analyse residual correlations.",
+  "primary_weighting": "Equal weight per unique within-group instrument pair; exclude the INL/INP mutual pair. Company-balanced estimates are a separate sensitivity, not substituted here.",
+  "bad_print_rule": "The original script masks absolute daily returns above 0.4. Complete constituent/J200 forward data used here contain no such moves; no rule was tuned to improve outcomes.",
+  "random_group_test": {
+    "permutations": 10000,
+    "procedure": "Shuffle cluster labels across instrument nodes, preserving cluster sizes; compare mean within-cluster correlation. One-sided p=(1+number(null>=observed))/(1+B)."
+  },
+  "interval": {
+    "replicates": 2000,
+    "block_trading_days": 10,
+    "procedure": "Resample contiguous ten-day blocks synchronously across the entire return panel, with replacement; allowed starts are 0 through T-10. Concatenate blocks and truncate to T; report 2.5th/97.5th percentiles of delta_rho. No independent-pair standard errors."
+  },
+  "incremental_test": {
+    "permutations": 5000,
+    "procedure": "Keep return correlations and sector indicators fixed, shuffle cluster labels across instrument nodes, refit OLS, and compare cluster coefficients using the same plus-one one-sided p formula. Preserves node-induced pair structure; interpretation depends on label exchangeability and is exploratory, not causal."
+  },
+  "random_seed": 20261115,
+  "robustness": [
+    "t-SNE comparator",
+    "UMAP seeds 42 through 46",
+    "per-cluster correlations",
+    "remove precious-metals group",
+    "peer-return R-squared",
+    "raw and J200-residual returns"
+  ],
+  "reserved_evaluation": {
+    "formation_date": "2026-06-30",
+    "window": [
+      "2026-07-01",
+      "2026-12-31"
+    ],
+    "earliest_legacy_execution_date": "2027-01-05",
+    "status_at_freeze": "Not executed; no output_prospective/ or full-window cache present. Existing beta cache may include early-July prices, but they are excluded from these frozen inputs.",
+    "timing": "Protocol fixed after this window began, so the complete July-December evaluation is held out, not fully prospectively preregistered. Legacy --prospective command name does not change that fact.",
+    "frozen_labels": "June-2026 labels, all five UMAP seeds and the t-SNE comparator are preserved in inputs/partitions.csv. No post-June-2026 prices are included; this is a label freeze, not an evaluation."
+  },
+  "source_sha256": {
+    "experiments/runs/20261115T062631-0c09819ce3c0/comparison/2025-06-30_tsne_hierarchical.csv": "30469359d9d3c40937317f7720000f72f4e8387521330aa0d4ec03a811c1d0b9",
+    "experiments/runs/20261115T062631-0c09819ce3c0/models/umap/2025-06-30/seed_42.npz": "54f48d53fa002a6c8a2b725e8809dab59192dbab3993f4a0cf1ad23fea748e72",
+    "experiments/runs/20261115T062631-0c09819ce3c0/models/umap/2025-06-30/seed_43.npz": "20845c11df5b2ae08b01ff041f34c030b81f5ecb824c5f56540668f43f65e0f7",
+    "experiments/runs/20261115T062631-0c09819ce3c0/models/umap/2025-06-30/seed_44.npz": "1e746accd10589df3c4dfd75059969095b42e276fbcde0f2452747bf94e671fd",
+    "experiments/runs/20261115T062631-0c09819ce3c0/models/umap/2025-06-30/seed_45.npz": "bce85d723cf87a2525f0449a9a05f5f42c6024277d9861b906ae5a678070a8ba",
+    "experiments/runs/20261115T062631-0c09819ce3c0/models/umap/2025-06-30/seed_46.npz": "140d5f74c48996958d86336e9f36263ebea9c5f26cfcec32596068b7233e63cf",
+    "experiments/runs/20261115T062631-0c09819ce3c0/comparison/2025-12-31_tsne_hierarchical.csv": "02c857065fc24adf3f8a8c6df4899af1e975b4f2aba525f64aa1852f1005e665",
+    "experiments/runs/20261115T062631-0c09819ce3c0/models/umap/2025-12-31/seed_42.npz": "54975d51a19f272cfe977fe4b744e5146975e9beac28565e4cdd13d623591342",
+    "experiments/runs/20261115T062631-0c09819ce3c0/models/umap/2025-12-31/seed_43.npz": "8c827f070d763143325e9e282153653e0b4b4698ed43567c7f582395a59af1d6",
+    "experiments/runs/20261115T062631-0c09819ce3c0/models/umap/2025-12-31/seed_44.npz": "a243711e6ef7537ee8f6d609910466b7987e53c9f468bac57117a30263da876a",
+    "experiments/runs/20261115T062631-0c09819ce3c0/models/umap/2025-12-31/seed_45.npz": "a4141f0ced9a956efe2687d53216717435f9c928a0d8776b6ed1a1f228773cfc",
+    "experiments/runs/20261115T062631-0c09819ce3c0/models/umap/2025-12-31/seed_46.npz": "16dad8abe9b97e900b9ae138661d8d21b7764d9234e5fc46f65caf68909ba863",
+    "results/manifest.json": "e3d1b0484e4632b30eb62367b8f3000defe5efd0e258e33668842a66aa82a2ce",
+    "results/longitudinal/umap/cluster_histories.csv": "f6515eb1a1a04c32b80c0677bf366ffe051dfee7b9c500c1409ff008ac996772",
+    "results/models/umap/2025-06-30/assignments.csv": "02369587da2559f69064344398f2fafa043f32f7fd3b3fa1eddd71c3d9a602a5",
+    "results/models/umap/2025-12-31/assignments.csv": "e9a2cc2839ec2c380094bea0f120c79ff0a6878b23de353a45b6dac4901d5b30",
+    "experiments/runs/20261115T062631-0c09819ce3c0/comparison/2026-06-30_tsne_hierarchical.csv": "9cc48cd20a8aef1fdf5352ee78585846eb815f78cce7192f282d345bfa522ad0",
+    "experiments/runs/20261115T062631-0c09819ce3c0/models/umap/2026-06-30/seed_42.npz": "ccf21fa833d44560a93c049d2b734379b0b54f32aa632c76fc60ce894e58f129",
+    "experiments/runs/20261115T062631-0c09819ce3c0/models/umap/2026-06-30/seed_43.npz": "0c80b927d0812c0530219ad3bbcd918e0beaaf27ed427f18755cb5cb1328cfb9",
+    "experiments/runs/20261115T062631-0c09819ce3c0/models/umap/2026-06-30/seed_44.npz": "986fba9a0ca171bc0f710499687cb10dddf41aaa5d7534cbbf1672c7201d83ed",
+    "experiments/runs/20261115T062631-0c09819ce3c0/models/umap/2026-06-30/seed_45.npz": "bc45034b549827a627a05ad99fd552f6425dd7e9d0154c7c31604aaec4d03937",
+    "experiments/runs/20261115T062631-0c09819ce3c0/models/umap/2026-06-30/seed_46.npz": "73437927dbbda80d072b09132c8952aef2497ea086353e222bf389c4af10359e",
+    "results/models/umap/2026-06-30/assignments.csv": "57ff05dbb055fdac334355efd30ed5108f598aee8832bc109bf371aa8337d7ec",
+    "validation/forward_comovement/data/prices.csv": "ba8ec687f6ef1d7c1c93645faa1f378f4d7309afca9640fd60216a4ff654ae7c",
+    "validation/forward_comovement/data/manifest.json": "0872427d008a144f08ea53a7b6bda7d8110426d4c9c315703fc2c9f688490a99"
+  },
+  "frozen_script_sha256": "f75068ea08c457738e46a1a820aae01b14727cd81804e74bbf6cf3e26e18baeb",
+  "reproduction": "reproduce.py reuses unchanged analytical functions and reads frozen inputs; writes only to .runtime/comovement-reproduction and compares all saved outputs.",
+  "frozen_partition_dates": [
+    "2025-06-30",
+    "2025-12-31",
+    "2026-06-30"
+  ]
+}
