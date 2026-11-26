@@ -1,0 +1,17 @@
+{
+  "analysis": "Post-hoc sector-conditioned sensitivity, 2026-11-26",
+  "files_sha256": {
+    "research/sector_conditioned_comovement/protocol.json": "a35ee5f081cf585ca83beeff702e1ee4e4c44881996b6375208737c753558c6a",
+    "research/sector_conditioned_comovement/run.py": "6c44f63141b00a34adee9a3d9bebcae1525c50da1e9c1d4417ab771f73d44fd7",
+    "research/sector_conditioned_comovement/results.csv": "7f68f14b86f61f86c009af455f1a0f972e4b30e8b29838aa2dbccab51dfc3dda",
+    "research/sector_conditioned_comovement/README.md": "a1c84eaa1cb6402c121b14d85c0a8bb87f583f4ca6e9a5258eb5db184be5c5fd",
+    "tests/test_sector_conditioned_comovement.py": "94496e56326b662a71b74428bbd10d7b2893b4d99de5468ca32c9615cccdb174",
+    "research/comovement/manifest.json": "68aea5a9fc4539791d8908323a570a63a45fa46b3b3eff92afc0548c87a285fb",
+    "research/comovement/inputs/prices.csv": "ba8ec687f6ef1d7c1c93645faa1f378f4d7309afca9640fd60216a4ff654ae7c",
+    "research/comovement/inputs/partitions.csv": "aaf89819f154254f55ad2ab57c339438f70ea59eeb290e9f80a4a80248cb382c"
+  },
+  "versions": {
+    "numpy": "2.3.5",
+    "pandas": "2.2.3"
+  }
+}

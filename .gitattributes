@@ -6,3 +6,6 @@ validation/forward_comovement/** -text
 research/master/** -text
 # Freeze the primary experiment and its saved evidence byte for byte.
 research/comovement/** -text whitespace=cr-at-eol
+# Retrospective sector-conditioned sensitivity has its own byte-level manifest.
+research/sector_conditioned_comovement/** -text whitespace=cr-at-eol
+tests/test_sector_conditioned_comovement.py -text whitespace=cr-at-eol
