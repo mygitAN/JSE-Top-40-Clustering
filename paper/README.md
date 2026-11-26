@@ -162,3 +162,19 @@ CSVs, input snapshots and a checksum manifest. Offline reproduction is:
 The adapter reproduces only the completed June/December 2025 formations and
 writes to `.runtime/comovement-reproduction/`. It does not execute the reserved
 June-2026 evaluation, refit models or replace the saved evidence.
+
+## Sector-conditioned retrospective sensitivity
+
+The 26 November audit confirmed that the original coefficient test permutes
+cluster labels globally, not within sectors. Methods and the Table 9 caption
+now state that null explicitly. `research/sector_conditioned_comovement/`
+contains a separate protocol, offline script, results, findings and checksums
+for permutations within sectors, preserving each sector's cluster-label counts.
+It distinguishes the direct within-sector contrast from the additive coefficient
+and reports Holm adjustment across all 16 sensitivity tests.
+
+The UMAP raw-return direct contrasts remain positive, but adjusted p-values are
+0.059 after June 2025 and 0.006 after December. The manuscript reports this
+qualified outcome. This is a new retrospective extension, not a change to the
+original freeze or the reserved June-2026 evaluation protocol. Neither the
+original saved outputs nor its analysis script was modified.
