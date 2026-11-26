@@ -1,0 +1,127 @@
+{
+  "verified_on": "2026-11-26",
+  "baseline_commit": "16c5f865218d7508468d27a6467c9b6896b8d37c",
+  "scope": "Ten corrected or improved bibliography entries, one added reference, and targeted source-to-claim refinements. Remaining bibliography entries were retained; this is not certification of every full text.",
+  "entries": {
+    "barradas2023": {
+      "fields_verified": [
+        "authors",
+        "journal",
+        "year",
+        "volume",
+        "issue",
+        "pages",
+        "doi"
+      ],
+      "source": "https://www.mdpi.com/2813-2203/2/3/33"
+    },
+    "leon2017": {
+      "fields_verified": [
+        "authors",
+        "pages",
+        "doi",
+        "unit_of_analysis"
+      ],
+      "source": "https://doi.org/10.1080/14697688.2017.1357970",
+      "original_text": "https://www.banrep.gov.co/sites/default/files/publicaciones/archivos/be_937.pdf",
+      "claim_scope": "National equity-market indices, not individual company equities."
+    },
+    "greene2008": {
+      "fields_verified": [
+        "authors",
+        "chapter_page_range",
+        "doi"
+      ],
+      "source": "https://link.springer.com/chapter/10.1007/978-3-540-75171-7_3"
+    },
+    "cuomo2022": {
+      "fields_verified": [
+        "authors",
+        "article_identity"
+      ],
+      "source": "https://www.sciencedirect.com/science/article/abs/pii/S0957417421016109"
+    },
+    "han2023": {
+      "fields_verified": [
+        "authors",
+        "journal",
+        "volume",
+        "issue",
+        "pages",
+        "doi"
+      ],
+      "source": "https://www.sciencedirect.com/science/article/pii/S037722172200769X"
+    },
+    "lim2021": {
+      "fields_verified": [
+        "authors",
+        "journal",
+        "volume",
+        "issue",
+        "pages",
+        "doi"
+      ],
+      "source": "https://pdfs.semanticscholar.org/3196/e0040e813375f5ebc3b143892e1105ce3965.pdf",
+      "source_type": "Original published article, mirrored PDF; journal page headers show 235-243."
+    },
+    "nair2017": {
+      "fields_verified": [
+        "authors",
+        "journal",
+        "volume",
+        "pages",
+        "doi"
+      ],
+      "source": "https://www.sciencedirect.com/science/article/pii/S0957417416306200"
+    },
+    "ahmed2017": {
+      "fields_verified": [
+        "authors",
+        "conference",
+        "pages",
+        "doi"
+      ],
+      "source": "https://doi.org/10.1145/3110025.3119402"
+    },
+    "cheong2021": {
+      "fields_verified": [
+        "authors",
+        "journal",
+        "volume",
+        "pages",
+        "doi",
+        "anomaly_task"
+      ],
+      "source": "https://scholar.nycu.edu.tw/zh/publications/interpretable-stock-anomaly-detection-based-on-spatio-temporal-re/",
+      "source_type": "Authors' institutional publication record; published PDF uses hyphenated given names.",
+      "original_text": "https://thuvienso.hoasen.edu.vn/bitstream/handle/123456789/14192/2021_Interpretable_Stock_Anomaly_Detection_Based_on_Spatio-Temporal_Relation_Networks_With_Genetic_Algorithm.pdf?isAllowed=y&sequence=1"
+    },
+    "rozemberczki2022": {
+      "fields_verified": [
+        "authors",
+        "published_proceedings",
+        "pages",
+        "year",
+        "doi"
+      ],
+      "source": "https://www.ijcai.org/proceedings/2022/778",
+      "change": "Replace arXiv-only metadata with the published IJCAI 2022 Survey Track version; preserve citation key."
+    },
+    "dimson1979": {
+      "fields_verified": [
+        "author",
+        "title",
+        "year",
+        "pages",
+        "doi",
+        "claim_scope"
+      ],
+      "source": "https://www.sciencedirect.com/science/article/pii/0304405X79900138",
+      "claim_scope": "Infrequent trading can bias market-beta estimates; not evidence that this study measured clustering-noise reduction."
+    }
+  },
+  "additional_claim_source": {
+    "ahmed2016": "https://www.sciencedirect.com/science/article/pii/S0167739X15000023",
+    "claim_scope": "Financial anomaly literature includes fraud detection; these tasks do not validate the present cross-sectional profile flags."
+  }
+}
