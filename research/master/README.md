@@ -22,6 +22,11 @@ counts come from recompiling with Tectonic 0.17.0; no padding or trimming was us
 `manifest.json` records full commit identifiers and SHA-256 hashes of both PDFs
 and both source archives. Each ZIP contains the complete tracked `paper/` project.
 
+Commit identifiers written in this repository's files and archive names were
+recorded before 26 November 2026, when commit messages were edited. File
+contents and dates are unchanged; [COMMIT_MAP.md](COMMIT_MAP.md) maps each
+recorded identifier to its current one.
+
 ## What was frozen before validation
 
 The empirical source is run `20261115T062631-0c09819ce3c0`, with its numerical
