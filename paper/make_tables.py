@@ -6,6 +6,8 @@ Reads results/ and the source run named in results/manifest.json, writes
 CSVs to paper/data/ and LaTeX tables to paper/tables/. Rerun after a new
 study run is exported so the tables and their numbers stay in step.
 """
+import argparse
+import hashlib
 import json
 import sys
 from pathlib import Path
@@ -126,12 +128,50 @@ def comovement():
     (TABLES / 'comovement_pairs.tex').write_text('\n'.join(lines) + '\n', encoding='utf-8')
 
 
+def sector_conditioned():
+    """Supplementary direct contrasts from the byte-verified retrospective sensitivity."""
+    folder = ROOT / 'research' / 'sector_conditioned_comovement'
+    source = folder / 'results.csv'
+    manifest = json.loads((folder / 'manifest.json').read_text(encoding='utf-8'))
+    expected_hash = manifest['files_sha256']['research/sector_conditioned_comovement/results.csv']
+    if hashlib.sha256(source.read_bytes()).hexdigest() != expected_hash:
+        raise ValueError('Sector-conditioned sensitivity results do not match their manifest.')
+    frame = pd.read_csv(source)
+    expected = {(date, basis, method) for date in list(DATE_LABEL)[:2]
+                for basis in ('raw', 'market-adjusted')
+                for method in ('UMAP (study model)', 't-SNE comparator')}
+    keys = list(zip(frame.formation_date, frame.returns, frame.grouping))
+    if len(keys) != 8 or set(keys) != expected:
+        raise ValueError('Expected exactly the eight completed sensitivity combinations.')
+    lines = [r'\begin{tabularx}{\linewidth}{@{}l >{\raggedright\arraybackslash}X l r r r r@{}}',
+             r'\toprule',
+             r'Formed & Returns & Map & $D_{\mathrm{within}}$ & 95\% interval & \shortstack{Restricted\\$p$} & \shortstack{Holm-adjusted\\$p$} \\',
+             r'\midrule']
+    for row in frame.itertuples():
+        method = 'UMAP' if row.grouping == 'UMAP (study model)' else 't-SNE'
+        basis = 'Raw' if row.returns == 'raw' else 'Market-adjusted'
+        lines.append(f'{DATE_LABEL[row.formation_date]} & {basis} & {method} & '
+                     f'{row.within_sector_difference:+.3f} & '
+                     f'[{row.difference_ci_low:+.3f}, {row.difference_ci_high:+.3f}] & '
+                     f'{row.within_sector_p:.4f} & {row.within_sector_p_holm:.4f}' + r' \\')
+    lines += [r'\bottomrule', r'\end{tabularx}']
+    (TABLES / 'sector_conditioned_sensitivity.tex').write_text('\n'.join(lines) + '\n', encoding='utf-8')
+
+
 def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--sector-conditioned-only', action='store_true',
+                        help='Generate only Table S1, using committed sensitivity evidence offline.')
+    args = parser.parse_args()
     TABLES.mkdir(parents=True, exist_ok=True)
-    model_comparison()
-    sector_divergence()
-    comovement()
-    print(f'Wrote {", ".join(p.name for p in sorted(TABLES.glob("*.tex")))} to {TABLES}')
+    if not args.sector_conditioned_only:
+        model_comparison()
+        sector_divergence()
+        comovement()
+    sector_conditioned()
+    written = ['sector_conditioned_sensitivity.tex'] if args.sector_conditioned_only else [
+        p.name for p in sorted(TABLES.glob('*.tex'))]
+    print(f'Wrote {", ".join(written)} to {TABLES}')
 
 
 if __name__ == '__main__':

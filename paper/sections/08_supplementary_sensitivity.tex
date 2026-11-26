@@ -1,0 +1,24 @@
+\appendix
+\section{Supplementary sensitivity results}\label{sec:supplementary_sensitivity}
+
+Table~\ref{tab:sector_conditioned_sensitivity} reports every direct within-sector contrast from the retrospective sector-conditioned sensitivity. The additive-coefficient tests are distinct statistics; both sets enter the 16-test Holm family.
+
+\setcounter{table}{0}
+\renewcommand{\thetable}{S\arabic{table}}
+\renewcommand{\theHtable}{supplement.\arabic{table}}
+\begin{table}[htbp]
+\centering
+\caption{Complete direct within-sector contrasts for the two completed forward windows. $D_{\mathrm{within}}$ is mean return correlation for same-sector/same-cluster pairs minus that for same-sector/different-cluster pairs. Positive values favour peers sharing both labels. This differs from the primary cluster-minus-sector $\Delta\rho$.}\label{tab:sector_conditioned_sensitivity}
+\footnotesize
+\setlength{\tabcolsep}{4pt}
+\input{tables/sector_conditioned_sensitivity.tex}
+
+\smallskip
+\begin{minipage}{\linewidth}
+\footnotesize
+Intervals use 2,000 synchronous ten-trading-day block resamples, conditional on the observed universe and memberships. Restricted p-values use 5,000 within-sector label permutations. Holm adjustment covers all 16 tests: two dates, two mappings, two return bases and two statistics (direct contrasts and additive coefficients). Intervals are not simultaneous and answer a different question from the permutation tests. Values are rounded from the saved results.
+\end{minipage}
+\end{table}
+
+The randomisation conditions on recorded sectors and each sector's cluster-label counts. It assumes exchangeability within those strata; it does not control for every difference in size, market exposure, liquidity or other company characteristics. The results do not establish a causal effect of clustering on returns. This retrospective extension leaves the original analysis and reserved June 2026 evaluation protocol unchanged.
+\FloatBarrier

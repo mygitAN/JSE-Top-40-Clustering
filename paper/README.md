@@ -178,3 +178,16 @@ The UMAP raw-return direct contrasts remain positive, but adjusted p-values are
 qualified outcome. This is a new retrospective extension, not a change to the
 original freeze or the reserved June-2026 evaluation protocol. Neither the
 original saved outputs nor its analysis script was modified.
+
+Table S1 appears in Appendix A of the same `main.pdf`; no separate supplement
+is required. It reports all eight direct within-sector contrasts, conditional
+95% intervals, restricted-permutation p-values and Holm-adjusted p-values.
+The Holm family still includes the eight distinct additive-coefficient tests.
+The appendix states that sector-conditioned exchangeability does not control
+for all company characteristics and does not establish causality.
+
+Regenerate only Table S1 offline from the checksum-verified saved CSV with:
+
+```powershell
+.venv/Scripts/python.exe paper/make_tables.py --sector-conditioned-only
+```
